@@ -1,0 +1,847 @@
+/**
+ * enso-explorer.css — Shared design tokens and UI primitives for ENSO Explorer v3
+ * 
+ * Implements the design contract specified in Section 5 of the ENSO v3 Backlog:
+ * - §5.1 Design Tokens (spacing, radii, colors, typography)
+ * - §5.2 9-Point Figure Anatomy (.enso-figure-card, .enso-figure-header, .enso-figure-number, etc.)
+ * - §5.4 Control Vocabulary & Tooltip Pattern (.enso-control-bar, .enso-tooltip-*)
+ * - §5.5 Ergonomic Control Layout
+ * - Empty / Loading / Error async state primitives
+ */
+
+:root {
+  /* §5.1 Design Tokens */
+  --enso-space-1: 0.25rem;
+  --enso-space-2: 0.5rem;
+  --enso-space-3: 0.75rem;
+  --enso-space-4: 1rem;
+  --enso-space-6: 1.5rem;
+
+  --enso-radius-sm: 4px;
+  --enso-radius-md: 8px;
+
+  --enso-border: #e2e8f0;
+  --enso-border-muted: #f1f5f9;
+  --enso-border-strong: #cbd5e1;
+
+  --enso-surface: #ffffff;
+  --enso-surface-muted: #f8fafc;
+  --enso-surface-hover: #f1f5f9;
+
+  --enso-text: #0f172a;
+  --enso-text-muted: #64748b;
+  --enso-text-subtle: #94a3b8;
+
+  --enso-control-height: 34px;
+  --enso-sticky-offset: 73px;
+
+  --enso-figure-title-size: 1.05rem;
+  --enso-section-title-size: 1.35rem;
+
+  /* Brand Accents */
+  --enso-brand-primary: var(--atlas-color-primary, #2e7636);
+  --enso-brand-accent: var(--atlas-color-accent, #d4a017);
+  --enso-brand-blue: #0284c7;
+}
+
+/* ==========================================================================
+   Section Headers (§5.3)
+   ========================================================================== */
+
+.enso-section-header {
+  margin-bottom: var(--enso-space-4);
+}
+
+.enso-section-eyebrow {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0369a1;
+  background: #e0f2fe;
+  padding: 2px 8px;
+  border-radius: var(--enso-radius-sm);
+  margin-bottom: var(--enso-space-2);
+}
+
+.enso-section-title {
+  font-size: var(--enso-section-title-size);
+  font-weight: 700;
+  color: var(--enso-text);
+  margin: 0 0 var(--enso-space-1);
+  line-height: 1.3;
+}
+
+.enso-section-intro {
+  font-size: 0.88rem;
+  color: var(--enso-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Figure Anatomy (§5.2)
+   ========================================================================== */
+
+/* 1. Figure Card Container */
+.enso-figure-card {
+  background: var(--enso-surface);
+  border: 1px solid var(--enso-border);
+  border-radius: var(--enso-radius-md);
+  padding: var(--enso-space-4);
+  margin-bottom: var(--enso-space-6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+/* 2. Figure Header Row */
+.enso-figure-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--enso-space-3);
+  margin-bottom: var(--enso-space-3);
+  flex-wrap: wrap;
+}
+
+.enso-figure-header-main {
+  flex: 1 1 320px;
+}
+
+.enso-figure-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--enso-space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--enso-space-1);
+}
+
+/* Figure label chip (Point 1) */
+.enso-figure-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--enso-radius-sm);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.25;
+}
+
+/* Plain-language title (Point 2) */
+.enso-figure-title {
+  font-size: var(--enso-figure-title-size);
+  font-weight: 700;
+  color: var(--enso-text);
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Purpose sentence (Point 3) */
+.enso-figure-purpose {
+  font-size: 0.84rem;
+  color: var(--enso-text-muted);
+  margin: 0.15rem 0 0;
+  line-height: 1.45;
+}
+
+/* Compact Control Bar (Point 4) */
+.enso-control-bar {
+  background: var(--enso-surface-muted);
+  border: 1px solid var(--enso-border);
+  border-radius: var(--enso-radius-sm);
+  padding: var(--enso-space-2) var(--enso-space-3);
+  margin-bottom: var(--enso-space-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--enso-space-3);
+}
+
+.enso-control-group {
+  display: flex;
+  align-items: center;
+  gap: var(--enso-space-2);
+  flex-wrap: wrap;
+}
+
+.enso-control-item {
+  display: flex;
+  align-items: center;
+  gap: var(--enso-space-2);
+  font-size: 0.82rem;
+}
+
+.enso-control-label {
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Key interpretation or insight (Point 6) */
+.enso-insight {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 3.5px solid #16a34a;
+  border-radius: var(--enso-radius-sm);
+  padding: var(--enso-space-2) var(--enso-space-3);
+  margin-top: var(--enso-space-3);
+  margin-bottom: var(--enso-space-2);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #166534;
+}
+
+.enso-insight.info {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+  border-left-color: #0284c7;
+  color: #0369a1;
+}
+
+.enso-insight.warning {
+  background: #fffbeb;
+  border-color: #fde68a;
+  border-left-color: #d97706;
+  color: #92400e;
+}
+
+/* Standard Figure Footer (Point 7) */
+.enso-figure-footer {
+  margin-top: var(--enso-space-3);
+  border-top: 1px solid var(--enso-border-muted);
+  padding-top: var(--enso-space-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--enso-space-4);
+  flex-wrap: wrap;
+}
+
+.enso-figure-footer-note {
+  flex: 1 1 240px;
+  font-size: 0.8rem;
+  color: var(--enso-text-muted);
+  line-height: 1.45;
+}
+
+.enso-figure-footer-actions {
+  flex-shrink: 0;
+}
+
+/* Standard Details Fold (Point 8) */
+details.enso-more-details {
+  background: var(--enso-surface-muted);
+  border: 1px solid var(--enso-border);
+  border-radius: var(--enso-radius-sm);
+  margin-top: var(--enso-space-3);
+  font-size: 0.84rem;
+  color: #334155;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+details.enso-more-details[open] {
+  background: var(--enso-surface);
+  border-color: var(--enso-border-strong);
+}
+
+details.enso-more-details > summary {
+  padding: var(--enso-space-2) var(--enso-space-3);
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  color: var(--enso-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--enso-space-2);
+}
+
+details.enso-more-details > summary:hover {
+  background: var(--enso-surface-hover);
+}
+
+details.enso-more-details > summary span.enso-more-details-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Sources & Methods Button (Point 9) */
+.enso-source-method-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0284c7;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--enso-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.enso-source-method-button:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-color: #93c5fd;
+}
+
+/* ==========================================================================
+   Tooltips (§5.4)
+   ========================================================================== */
+
+.enso-tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.enso-tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #64748b;
+  font-size: 0.68rem;
+  font-weight: 700;
+  cursor: help;
+  user-select: none;
+  line-height: 1;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.enso-tooltip-icon:hover,
+.enso-tooltip-icon:focus {
+  background: #cbd5e1;
+  color: #0f172a;
+}
+
+.enso-tooltip-bubble {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f172a;
+  color: #ffffff;
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--enso-radius-sm);
+  font-size: 0.74rem;
+  font-weight: normal;
+  line-height: 1.35;
+  white-space: normal;
+  width: max-content;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  z-index: 1000;
+  text-align: left;
+}
+
+.enso-tooltip-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: #0f172a transparent transparent transparent;
+}
+
+.enso-tooltip-wrap:hover .enso-tooltip-bubble,
+.enso-tooltip-wrap:focus-within .enso-tooltip-bubble {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==========================================================================
+   Empty / Loading / Error States
+   ========================================================================== */
+
+.enso-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--enso-space-6) var(--enso-space-4);
+  border-radius: var(--enso-radius-sm);
+  min-height: 160px;
+  width: 100%;
+}
+
+.enso-loading-state {
+  background: var(--enso-surface-muted);
+  border: 1px dashed var(--enso-border);
+  color: var(--enso-text-muted);
+  font-size: 0.86rem;
+}
+
+.enso-loading-spinner {
+  width: 26px;
+  height: 26px;
+  border: 3px solid #e2e8f0;
+  border-top-color: var(--enso-brand-primary);
+  border-radius: 50%;
+  animation: enso-spin 0.8s linear infinite;
+  margin-bottom: var(--enso-space-2);
+}
+
+@keyframes enso-spin {
+  to { transform: rotate(360deg); }
+}
+
+.enso-empty-state {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  color: #64748b;
+  font-size: 0.86rem;
+  padding: 2rem 1rem;
+}
+
+.enso-empty-state strong {
+  color: #334155;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.enso-error-state {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  font-size: 0.86rem;
+  padding: 1.25rem;
+}
+
+.enso-error-state strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+/* ==========================================================================
+   Backwards Compatibility Layer
+   ========================================================================== */
+
+.card.enso-adapted {
+  background: var(--enso-surface);
+  border: 1px solid var(--enso-border);
+  border-radius: var(--enso-radius-md);
+  padding: var(--enso-space-4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.figure-number-badge {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: var(--enso-radius-sm);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Compact Sticky Navigation Shell (§5.5, §5.6, WP-03)
+   ========================================================================== */
+
+.ke-sticky-shell {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1.5px solid var(--enso-border-strong);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  margin: 0 0 var(--enso-space-4) 0;
+  padding: 0.3rem 0.75rem 0 0.75rem;
+}
+
+.ke-sticky-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--enso-space-2);
+  flex-wrap: nowrap;
+  padding-bottom: 0.25rem;
+}
+
+.ke-sticky-controls-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  flex-wrap: nowrap !important;
+  flex: 0 1 auto !important;
+}
+
+.ke-sticky-controls-group .cell {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+}
+
+.ke-sticky-controls-group .cell-output,
+.ke-sticky-controls-group .cell-output-display {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.ke-sticky-shell form[class^="oi-"] {
+  margin: 0 !important;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+}
+
+.ke-sticky-shell form[class^="oi-"] > label {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  color: var(--enso-text) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  border-bottom: none !important;
+  width: auto !important;
+  min-width: auto !important;
+  flex: 0 0 auto !important;
+}
+
+.ke-sticky-shell form[class^="oi-"] > div,
+.ke-sticky-shell form[class^="oi-"] [class*="-input"] {
+  width: auto !important;
+  min-width: auto !important;
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+}
+
+.ke-sticky-shell form[class^="oi-"] select {
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  color: var(--enso-text) !important;
+  background: var(--enso-surface-muted) !important;
+  border: 1px solid var(--enso-border) !important;
+  border-radius: var(--enso-radius-sm) !important;
+  padding: 0.1rem 0.35rem !important;
+  height: 26px !important;
+  outline: none !important;
+}
+
+.ke-sticky-shell .ke-sticky-outlook-row {
+  margin: 0 !important;
+  padding: 0.2rem 0.65rem !important;
+  font-size: 0.76rem !important;
+  border-radius: var(--enso-radius-sm) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 1 1 100% !important;
+}
+
+/* Compact Tab Navigation */
+.ke-sticky-shell .ke-tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.ke-sticky-shell .ke-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--enso-text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  min-width: auto;
+}
+
+.ke-sticky-shell .ke-tab-btn:hover {
+  color: var(--enso-text);
+  background: #f1f5f9;
+}
+
+.ke-sticky-shell .ke-tab-btn.active {
+  color: var(--enso-brand-primary-dark);
+  background: #ffffff;
+  font-weight: 700;
+  border-bottom-color: var(--enso-brand-primary);
+}
+
+.ke-sticky-shell .tab-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: var(--enso-text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.ke-sticky-shell .ke-tab-btn.active .tab-num {
+  background: var(--enso-brand-primary);
+  color: #ffffff;
+}
+
+/* Section scroll margins so sticky nav never overlaps headings */
+.tab-pane {
+  scroll-margin-top: 95px;
+}
+
+@media (max-width: 900px) {
+  .ke-sticky-top-row {
+    flex-wrap: wrap;
+  }
+  .ke-sticky-controls-group {
+    flex-wrap: wrap !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ke-sticky-shell {
+    padding: 0.25rem 0.5rem 0 0.5rem;
+    max-height: 28vh;
+    overflow-y: auto;
+  }
+  .ke-sticky-top-row {
+    gap: 0.3rem;
+    padding-bottom: 0.2rem;
+  }
+  .ke-sticky-controls-group {
+    flex-wrap: wrap !important;
+    gap: 0.25rem !important;
+    width: 100%;
+  }
+  .ke-sticky-controls-group .cell {
+    flex: 1 1 30% !important;
+  }
+  .ke-sticky-shell form[class^="oi-"] select {
+    width: 100%;
+    min-width: 65px;
+  }
+  .ke-sticky-shell .ke-sticky-outlook-row {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    font-size: 0.72rem !important;
+    padding: 0.15rem 0.35rem !important;
+  }
+  .ke-sticky-shell .ke-tab-nav {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+  .ke-sticky-shell .ke-tab-btn {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.74rem;
+    flex-shrink: 0;
+  }
+}
+
+/* ==========================================================================
+   Section 0: Start Here Components (§5, ENSO-V3-010)
+   ========================================================================== */
+
+.start-step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--enso-space-3);
+  margin-bottom: var(--enso-space-4);
+}
+
+.start-step-card {
+  background: var(--enso-surface);
+  border: 1px solid var(--enso-border);
+  border-radius: var(--enso-radius-md);
+  padding: var(--enso-space-3) var(--enso-space-4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.start-step-card .step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.start-step-card .step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--enso-brand-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.start-step-card .step-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--enso-text);
+  margin: 0;
+}
+
+.start-step-card p {
+  font-size: 0.84rem;
+  color: var(--enso-text-muted);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.45;
+}
+
+.driver-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--enso-space-3);
+  margin-bottom: var(--enso-space-4);
+}
+
+.driver-card {
+  border-radius: var(--enso-radius-md);
+  padding: var(--enso-space-3) var(--enso-space-4);
+  border: 1px solid var(--enso-border);
+  background: var(--enso-surface);
+}
+
+.driver-card.enso-card {
+  border-left: 4px solid #0284c7;
+}
+
+.driver-card.iod-card {
+  border-left: 4px solid #d97706;
+}
+
+.driver-card.wnp-card {
+  border-left: 4px solid #059669;
+}
+
+.citation-box {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--enso-radius-md);
+  padding: 0.85rem 1rem;
+  margin-top: 0.75rem;
+  position: relative;
+}
+
+.citation-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  color: #1e293b;
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+  word-break: break-word;
+}
+
+/* ==========================================================================
+   Section 2: Seasonal Outlook & Preparedness Components
+   ========================================================================== */
+
+.sample-size-warning {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-left: 3.5px solid #d97706;
+  border-radius: var(--enso-radius-sm);
+  padding: 0.55rem 0.85rem;
+  font-size: 0.78rem;
+  color: #92400e;
+  line-height: 1.45;
+  margin: 0.75rem auto;
+  max-width: 680px;
+  text-align: left;
+}
+
+.planning-scenario-banner {
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-left: 3.5px solid #2563eb;
+  border-radius: var(--enso-radius-sm);
+  padding: 0.65rem 0.95rem;
+  font-size: 0.82rem;
+  color: #1e40af;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.tool-card-top-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.tool-card-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tool-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.35rem 0.75rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.76rem;
+  color: #475569;
+  margin-bottom: 0.65rem;
+}
+
+.tool-meta-item strong {
+  color: #0f172a;
+}

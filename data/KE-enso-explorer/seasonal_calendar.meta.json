@@ -1,0 +1,26 @@
+{
+  "dataset": "seasonal_calendar",
+  "title": "Sub-national crop calendar (planting & harvest month windows), Kenya",
+  "source": "JRC ASAP — Anomaly Hotspots of Agricultural Production, sub-national crop calendar",
+  "source_url": "https://agricultural-production-hotspots.ec.europa.eu/download.php",
+  "source_file": "crop_calendar_gaul1.zip -> crop_calendar_gaul1.csv",
+  "doi": "10.2905/JRC.PXQH3Q0",
+  "pid": "http://data.europa.eu/89h/jrc-10112-10003",
+  "license": "JRC open data (European Commission reuse policy, Decision 2011/833/EU)",
+  "fetched_on": "2026-07-15",
+  "method": "Deterministic CSV parse (_sources/parse_seasonal_calendar.py). No LLM/transcription: dekad (36/yr) -> month arithmetic, wrapped harvest windows split into contiguous month segments. Joined to the canonical 47 counties via county_key.parquet; ASAP short names Keiyo-Marakwet/Tharaka aliased to Elgeyo Marakwet/Tharaka Nithi; 'Malindi' dropped (inside Kilifi county, which ASAP carries separately) and 'Unit unavailable' dropped.",
+  "grain": "county x crop x season x stage -> one row per contiguous month segment",
+  "columns": {
+    "county": "canonical county name",
+    "gaul1_code": "GAUL24 admin1 code (matches CHIRPS gaul1_code / shared topojson)",
+    "crop": "Maize | Beans | Millet | Sorghum | Barley",
+    "season": "Long rains | Short rains",
+    "stage": "Planting | Harvest",
+    "m_start": "first calendar month of the segment (1-12)",
+    "m_end": "last calendar month of the segment (1-12)",
+    "dekad_start": "source ASAP dekad (unmodified, for audit)",
+    "dekad_end": "source ASAP dekad (unmodified, for audit)"
+  },
+  "coverage": "38 of 47 counties. The 9 without an ASAP crop calendar are the 8 arid/semi-arid pastoralist counties (Garissa, Isiolo, Mandera, Marsabit, Samburu, Tana River, Turkana, Wajir) plus Mombasa (urban). This is an honest gap, not missing data: those economies have no rainfed crop season — their seasonality is the rains themselves (CHIRPS, Block 2) and pasture greenness (NDVI, forthcoming task #11).",
+  "used_by": "notebook.qmd Block 2 (per-county planting/harvest strip; grounds the OND/MAM season windows and the Block 3 harvest lag)"
+}

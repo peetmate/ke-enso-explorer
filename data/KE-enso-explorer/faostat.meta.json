@@ -1,0 +1,23 @@
+{
+  "dataset": "faostat",
+  "title": "FAOSTAT national crop production, Kenya",
+  "source": "FAO FAOSTAT (Crops and livestock products, QCL)",
+  "url": "https://www.fao.org/faostat/en/#data/QCL",
+  "citation": "FAO. FAOSTAT. Rome.",
+  "license": "CC-BY (FAO).",
+  "fetched_on": "2026-07-10",
+  "method": "Machine-readable FAOSTAT bulk download (no transcription); staged via the D409 pipeline.",
+  "coverage": "National production, 1961-2024.",
+  "used_by": "notebook §4 (national production × driver)",
+  "grain": "3288 rows",
+  "columns": [
+    "crop",
+    "year",
+    "exposure",
+    "unit",
+    "value",
+    "iso3",
+    "source",
+    "stat"
+  ]
+}

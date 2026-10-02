@@ -1,0 +1,229 @@
+@import url("toc.css");
+@import url("hero.css");
+@import url("observable-inputs.css");
+@import url("admin-selectors.css");
+@import url("atlas-table.css");
+@import url("ui-components.css");
+@import url("citation.css");
+@import url("enso-explorer.css");
+
+/* hides error messages - good for Production, bad for development */
+/* .observablehq--error {
+  display: none;
+} */
+
+/* Main Styling */
+
+:root {
+  /* Brand colours */
+  --atlas-color-primary: #2e7636;
+  --atlas-color-focus: #d66b44;
+  --atlas-color-accent: #d4a017;
+
+  /* Text, borders, and surfaces */
+  --atlas-color-text: #111;
+  --atlas-color-text-strong: #000;
+  --atlas-color-text-muted: #4a5568;
+  --atlas-color-border: #c9c9c9;
+  --atlas-color-control-border: #d1d5db;
+  --atlas-color-divider: #e5e7eb;
+  --atlas-color-surface: #fff;
+  --atlas-color-surface-muted: #f9fafb;
+  --atlas-color-surface-hover: #f3f4f6;
+  --atlas-color-danger-surface: #ffe5e5;
+  --atlas-color-check: rgba(0, 0, 0, 0.8);
+
+  /* Shared component geometry and motion */
+  --atlas-radius-control: 8px;
+  --atlas-radius-control-small: 6px;
+  --atlas-radius-action: 4px;
+  --atlas-shadow-popover: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --atlas-transition-control: border-color 200ms ease,
+    background-color 200ms ease, color 200ms ease;
+  --atlas-transition-action: border-color 150ms ease,
+    background-color 150ms ease, color 150ms ease;
+
+  /* Backwards-compatible aliases used by existing notebooks and helpers. */
+  --atlasGreen: var(--atlas-color-primary);
+  --atlasOrange: var(--atlas-color-focus);
+  --atlasGold: var(--atlas-color-accent);
+  --atlasDarkGray: var(--atlas-color-text-muted);
+  --atlasLightGray: var(--atlas-color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#nav-lang-selector {
+  margin-left: 10px;
+  padding: 0.15rem 0.3rem;
+  font: inherit;
+  color: #000;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  transition: color 0.15s;
+}
+
+#nav-lang-selector:hover,
+#nav-lang-selector:focus-visible {
+  color: var(--atlas-color-primary);
+}
+
+#nav-lang-selector option {
+  color: initial;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.cell-output, .cell-output-display {
+  overflow: visible !important;
+}
+
+figure {
+  padding-top: 20px;
+}
+
+.nb-details {
+  max-width: 900px;
+  padding: 0;
+  background: none;
+  border-radius: 5px;
+}
+
+.nb-details > summary {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nb-details__body {
+  padding-top: 0.5em;
+  margin: 0.5em 0;
+  border-top: 1px dashed #888;
+}
+
+/* body text and headings */
+body {
+  line-height: 1.6;
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+h1.title {
+  text-align: center;
+  font-size: 2.25em;
+}
+
+h2.key-insights {
+  text-align: center;
+  padding: 1.5em;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* The `title` cmsContent.lua sets for the search index also makes Pandoc emit an
+   <h1 class="title"> that title-block-style: none does not suppress — a duplicate
+   of the hero's own <h1 id="notebook-title">. */
+#title-block-header {
+  display: none;
+}
+
+/* Inline code inherits white-space: pre, which vetoes the overflow-wrap Quarto
+   already sets, so a long formula in prose widens the whole page on phones. */
+:not(pre) > code {
+  white-space: pre-wrap;
+}
+
+.atlas-footer-brand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Quarto wraps footer markdown in a <p>, which would otherwise be the only flex
+   item; display: contents hands the links back to the row. */
+.atlas-footer-brand > p {
+  display: contents;
+}
+
+/* Heights are per-mark, not shared: both lockups embed their own type at
+   different scales, so matching their box heights makes one of them unreadable. */
+.atlas-footer-brand img {
+  width: auto;
+  height: 58px;
+}
+
+.atlas-footer-brand img.atlas-footer-brand__casp {
+  height: 48px;
+}
+
+.navbar-logo {
+  max-height: 4rem;
+  max-width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-left: 10px;
+}
+
+/* Style links */
+main a[href] {
+  color: var(--atlas-color-primary);
+  text-decoration: none;
+}
+
+a[href]:hover,
+a[href]:active {
+  color: var(--atlas-color-primary);
+  text-decoration: underline;
+}
+
+.hero_image {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Print Styles */
+
+@media print {
+  #source-code,
+  .observablehq button {
+    display: none !important;
+  }
+}
+
+/* Show the build-time bilingual content matching <html lang>. */
+html[lang="fr"] .nb-i18n[lang="en"] {
+  display: none;
+}
+html:not([lang="fr"]) .nb-i18n[lang="fr"] {
+  display: none;
+}

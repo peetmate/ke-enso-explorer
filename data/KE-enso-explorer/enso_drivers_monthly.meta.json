@@ -1,0 +1,19 @@
+{
+  "dataset": "enso_drivers_monthly",
+  "title": "ENSO/IOD driver indices, monthly",
+  "source": "NOAA CPC (SOI) + NOAA PSL (DMI/IOD, HadISST)",
+  "url": "https://www.cpc.ncep.noaa.gov/data/indices/soi ; https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/dmi.had.long.data",
+  "citation": "NOAA Climate Prediction Center; NOAA Physical Sciences Laboratory.",
+  "license": "US Government public domain.",
+  "fetched_on": "2026-07-23",
+  "method": "Self-fetching build (_sources/enso_drivers_build.py). Rerun to refresh.",
+  "coverage": "SOI + DMI monthly, 1870/1951-2026.",
+  "used_by": "notebook §7 driver time-series",
+  "grain": "2770 rows",
+  "columns": [
+    "index",
+    "year",
+    "month",
+    "value"
+  ]
+}

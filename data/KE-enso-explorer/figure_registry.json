@@ -1,0 +1,215 @@
+{
+  "version": "3.0.0",
+  "figures": [
+    {
+      "id": "table_1_0",
+      "currentNumber": "Table 1.1",
+      "targetNumber": "Table 1.1",
+      "currentSection": "1.0",
+      "title": "Sub-county Baseline Geography & Rainfall Climatology",
+      "question": "What are the baseline geographic dimensions, population, and rainfall patterns across sub-counties?",
+      "downloadFilename": "subcounty_baseline_climatology",
+      "type": "table"
+    },
+    {
+      "id": "fig_1_1",
+      "currentNumber": "Figure 1.1",
+      "targetNumber": "Figure 1.1",
+      "currentSection": "1.1",
+      "title": "County Agricultural & Livestock Production Time Series (2019\u20132024)",
+      "question": "How has crop and livestock production varied over recent statutory reporting years?",
+      "downloadFilename": "county_produce_knbs_napr",
+      "type": "chart"
+    },
+    {
+      "id": "fig_1_2",
+      "currentNumber": "Figure 1.2",
+      "targetNumber": "Figure 1.2",
+      "currentSection": "1.2",
+      "title": "Modeled Value of Production Portfolio (MapSPAM & GLW4)",
+      "question": "What agricultural and livestock capital assets are at economic risk across the county?",
+      "downloadFilename": "exposure_vop_portfolio",
+      "type": "chart"
+    },
+    {
+      "id": "fig_1_3",
+      "currentNumber": "Figure 1.3",
+      "targetNumber": "Figure 1.3",
+      "currentSection": "1.3",
+      "title": "Socio-Economic & Gender Vulnerability Profile",
+      "question": "How does the county compare against the national benchmark across key social and economic vulnerability indicators?",
+      "downloadFilename": "county_gesi_vulnerability",
+      "type": "chart"
+    },
+    {
+      "id": "fig_2_1",
+      "currentNumber": "Figure 3.1",
+      "targetNumber": "Figure 3.1",
+      "currentSection": "3",
+      "title": "Multi-Decadal Precipitation Climatology & Standardized Anomalies",
+      "question": "How unusual was seasonal rainfall or drought across the historical satellite record?",
+      "downloadFilename": "chirps_precipitation_climatology",
+      "type": "chart"
+    },
+    {
+      "id": "fig_2_2",
+      "currentNumber": "Figure 3.2",
+      "targetNumber": "Figure 3.2",
+      "currentSection": "3",
+      "title": "Empirical Contingency Probability Matrix",
+      "question": "What is the empirical probability of a wet, near-normal, or dry season given ocean driver phase?",
+      "downloadFilename": "driver_contingency_probabilities",
+      "type": "chart"
+    },
+    {
+      "id": "fig_2_3",
+      "currentNumber": "Figure 3.3",
+      "targetNumber": "Figure 3.3",
+      "currentSection": "3",
+      "title": "Oceanic Driver Teleconnection Relationships (OLS Regression)",
+      "question": "What is the continuous sensitivity of county precipitation to Pacific and Indian Ocean warming?",
+      "downloadFilename": "teleconnection_scatter_regression",
+      "type": "chart"
+    },
+    {
+      "id": "fig_2_4",
+      "currentNumber": "Figure 3.4",
+      "targetNumber": "Figure 3.4",
+      "currentSection": "3",
+      "title": "Multi-Decadal Gridded Field History & Spatial Patterns",
+      "question": "Where within the county did historical rainfall, vegetation, or drought anomalies concentrate?",
+      "downloadFilename": "raster_field_history_grid",
+      "type": "map"
+    },
+    {
+      "id": "fig_2_5",
+      "currentNumber": "Figure 3.5",
+      "targetNumber": "Figure 3.5",
+      "currentSection": "3",
+      "title": "Subcounty Flood Hazard & Infrastructure Exposure Breakdown",
+      "question": "Which subcounties, populations, and public infrastructure assets face extreme flood inundation?",
+      "downloadFilename": "flood_hazard_asset_exposure",
+      "type": "map"
+    },
+    {
+      "id": "fig_3_1",
+      "currentNumber": "Figure 4.1",
+      "targetNumber": "Figure 4.1",
+      "currentSection": "4",
+      "title": "Dual-Season Teleconnection Drivers vs KNBS Annual Output",
+      "question": "How do consecutive MAM and OND climate shocks translate into annual crop and livestock output shocks?",
+      "downloadFilename": "production_vs_ocean_drivers",
+      "type": "chart"
+    },
+    {
+      "id": "fig_3_1b",
+      "currentNumber": "Figure 4.2",
+      "targetNumber": "Figure 4.2",
+      "currentSection": "4",
+      "title": "Empirical Ocean Driver Phase Response vs Mean Output",
+      "question": "What is the historical average production anomaly during El Ni\u00f1o, La Ni\u00f1a, or IOD phases?",
+      "downloadFilename": "driver_phase_production_response",
+      "type": "chart"
+    },
+    {
+      "id": "fig_3_2",
+      "currentNumber": "Figure 4.3",
+      "targetNumber": "Figure 4.3",
+      "currentSection": "4",
+      "title": "Continuous MODIS Dekadal NDVI Pasture Biomass Dynamics",
+      "question": "When did historical rangeland vegetation collapse into severe pasture deficits?",
+      "downloadFilename": "modis_pasture_ndvi_timeseries",
+      "type": "chart"
+    },
+    {
+      "id": "fig_3_2b",
+      "currentNumber": "Figure 4.4",
+      "targetNumber": "Figure 4.4",
+      "currentSection": "4",
+      "title": "Pastoral Market Prices & Terms of Trade Monthly Purchasing Power",
+      "question": "How severely did food prices surge and pastoral purchasing power collapse during climate shocks?",
+      "downloadFilename": "market_prices_terms_of_trade",
+      "type": "chart"
+    },
+    {
+      "id": "fig_3_3",
+      "currentNumber": "Figure 4.5",
+      "targetNumber": "Figure 4.5",
+      "currentSection": "4",
+      "title": "Subcounty Sentinel-1 SAR Flood Inundation & Asset Exposure",
+      "question": "What was the observed satellite footprint of extreme flood events and what assets were exposed?",
+      "downloadFilename": "sar_flood_inundation_exposure",
+      "type": "map"
+    },
+    {
+      "id": "fig_3_4",
+      "currentNumber": "Figure 4.6",
+      "targetNumber": "Figure 4.6",
+      "currentSection": "4",
+      "title": "Humanitarian Emergency Chronology & Situation Reports",
+      "question": "What humanitarian crisis reports were filed by UN OCHA and government agencies across historical disasters?",
+      "downloadFilename": "reliefweb_disaster_chronology",
+      "type": "chart"
+    },
+    {
+      "id": "fig_4_1",
+      "currentNumber": "Figure 2.1",
+      "targetNumber": "Figure 2.1",
+      "currentSection": "2",
+      "title": "Empirical Tercile Probability Distribution & Forecast Plume",
+      "question": "What is the empirical probability of a wetter, near-normal, or drier season based on nearest historical ocean analogues, and how is the Pacific ENSO state projected to evolve over the next 9 months?",
+      "downloadFilename": "analogue_tercile_probabilities",
+      "type": "chart"
+    },
+    {
+      "id": "fig_4_2",
+      "currentNumber": "Figure 2.2",
+      "targetNumber": "Figure 2.2",
+      "currentSection": "2",
+      "title": "Historical Analogue Scenario Multi-Hazard Diagnostics",
+      "question": "What multi-hazard impacts occurred when this specific analogue ocean condition was observed in the past, and how did compound climate shocks propagate through crop production, rangeland pasture, and market purchasing power?",
+      "downloadFilename": "analogue_scenario_diagnostics",
+      "type": "chart"
+    },
+    {
+      "id": "table_2_1",
+      "currentNumber": "Table 2.1",
+      "targetNumber": "Table 2.1",
+      "currentSection": "2",
+      "title": "Two-Season Compound Agricultural & Livelihood Outcome Matrix",
+      "question": "How did consecutive MAM and OND seasons compound agricultural and livelihood shocks in the selected analogue year?",
+      "downloadFilename": "two_season_analogue_synthesis",
+      "type": "table"
+    },
+    {
+      "id": "table_2_2",
+      "currentNumber": "Table 2.2",
+      "targetNumber": "Table 2.2",
+      "currentSection": "2",
+      "title": "Official KMSA Seasonal Sectoral Advisory Matrix",
+      "question": "What anticipatory actions are recommended across agriculture, livestock, water, and disaster management sectors?",
+      "downloadFilename": "kmsa_sectoral_advisories",
+      "type": "table"
+    },
+    {
+      "id": "table_2_3",
+      "currentNumber": "Table 2.3",
+      "targetNumber": "Table 2.3",
+      "currentSection": "2",
+      "title": "Official Forecast, Early Warning & Advisory Directory for Kenya",
+      "question": "Where can county planners access official operational warnings and seasonal forecasts?",
+      "downloadFilename": "official_warning_portals",
+      "type": "table"
+    },
+    {
+      "id": "fig_5_1",
+      "currentNumber": "Figure 5.1",
+      "targetNumber": "Figure 5.1",
+      "currentSection": "5.1",
+      "title": "Physical Teleconnection Mechanics: Pacific-to-Kenya Teleconnection",
+      "question": "What physical atmospheric wave dynamics connect equatorial Pacific warming to East African rainfall?",
+      "downloadFilename": "teleconnection_mechanics_framework",
+      "type": "diagram"
+    }
+  ]
+}

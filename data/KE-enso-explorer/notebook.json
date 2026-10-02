@@ -1,0 +1,35 @@
+{
+  "$schema": "../shared/notebook.schema.json",
+  "id": "KE-enso-explorer",
+  "title": {
+    "en": "ENSO Explorer — Kenya",
+    "fr": "Explorateur ENSO — Kenya"
+  },
+  "image": "/images/default_crop.webp",
+  "imageAlt": {
+    "en": "",
+    "fr": ""
+  },
+  "description": "Explore how El Niño / La Niña, the Indian Ocean Dipole and the Western-V drive Kenya's rains, harvests, food security and pastoralist conflict, county by county.",
+  "keywords": [
+    "ENSO",
+    "El Niño",
+    "La Niña",
+    "Indian Ocean Dipole",
+    "rainfall",
+    "food security",
+    "agriculture",
+    "Kenya",
+    "counties",
+    "adaptation"
+  ],
+  "textDir": "data/KE-enso-explorer",
+  "contributors": {
+    "authors": [
+      { "type": "common", "id": "psteward" }
+    ],
+    "developers": [
+      { "type": "common", "id": "psteward" }
+    ]
+  }
+}

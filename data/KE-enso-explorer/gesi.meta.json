@@ -1,0 +1,27 @@
+{
+  "dataset": "gesi",
+  "title": "GESI indicators, Kenya counties (SUPERSEDED original extraction)",
+  "source": "KNBS County Gender Data Sheets (2025)",
+  "url": "https://www.knbs.or.ke/",
+  "citation": "KNBS / State Department for Gender. County Gender Data Sheets, 2025.",
+  "license": "KNBS official statistics — public; cite KNBS.",
+  "fetched_on": "2026-07-10",
+  "method": "STATUS: SUPERSEDED by gesi_v2. Original label-keyed extraction fragmented one indicator into many near-duplicate labels (142 variants, only 9 reaching all 47 counties). Replaced by the code-keyed, Kenya-value-consistency-gated gesi_v2. Retained for provenance only.",
+  "coverage": "Not served — see gesi_v2.",
+  "used_by": "not served; superseded by gesi_v2",
+  "grain": "2037 rows",
+  "columns": [
+    "iso3",
+    "county",
+    "code",
+    "title",
+    "row",
+    "county_value",
+    "kenya_value",
+    "consensus_frac",
+    "dual_ok",
+    "source_file",
+    "exposure",
+    "llm_touched"
+  ]
+}

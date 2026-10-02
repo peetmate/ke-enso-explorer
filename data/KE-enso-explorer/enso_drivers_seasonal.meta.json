@@ -1,0 +1,19 @@
+{
+  "dataset": "enso_drivers_seasonal",
+  "title": "ENSO/IOD driver indices, seasonal",
+  "source": "NOAA CPC (RONI, SOI) + NOAA PSL (DMI/IOD, HadISST)",
+  "url": "https://www.cpc.ncep.noaa.gov/data/indices/ ; https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/dmi.had.long.data",
+  "citation": "NOAA Climate Prediction Center; NOAA Physical Sciences Laboratory (HadISST, Met Office Hadley Centre).",
+  "license": "US Government public domain.",
+  "fetched_on": "2026-07-23",
+  "method": "Self-fetching build (_sources/enso_drivers_build.py): parses the source ASCII; SOI/DMI seasonalised to 3-month overlapping seasons; RONI native seasonal. Spot-checked vs source. Rerun to refresh.",
+  "coverage": "RONI 1950-2026, SOI 1951-2026, DMI 1870-2025; 12 seasons.",
+  "used_by": "notebook §7 outlook analogue matching + driver context",
+  "grain": "3683 rows",
+  "columns": [
+    "index",
+    "season",
+    "year",
+    "value"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "dataset": "ndvi_county",
+  "title": "Per-county dekadal NDVI vegetation-condition series, Kenya",
+  "source": "WFP VAM — Kenya: NDVI at Subnational Level (MODIS collection 6.1, Terra+Aqua)",
+  "source_url": "https://data.humdata.org/dataset/ken-ndvi-subnational",
+  "source_file": "ken-ndvi-subnat-full.csv",
+  "crosswalk_source": "OCHA Kenya Common Operational Dataset - admin boundaries (cod-ab-ken), ken_admin_boundaries.xlsx (admin1 p-code -> county name)",
+  "license": "Creative Commons Attribution (CC BY) — WFP VAM; OCHA COD",
+  "fetched_on": "2026-07-15",
+  "method": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization).",
+  "grain": "one row per county x dekad (10-day)",
+  "columns": {
+    "county": "canonical county name",
+    "gaul1_code": "GAUL24 admin1 code (matches CHIRPS / shared topojson)",
+    "date": "dekad start date (YYYY-MM-DD)",
+    "year": "calendar year",
+    "month": "calendar month",
+    "ndvi": "pixel-weighted mean NDVI for the dekad (WFP vim)",
+    "ndvi_mean": "long-term mean NDVI for that dekad-of-year (WFP vim_avg baseline)",
+    "ndvi_pct_normal": "ndvi / ndvi_mean * 100 -> % of normal; <100 = vegetation deficit / drought stress",
+    "n_pixels": "total MODIS pixels aggregated for the county-dekad"
+  },
+  "coverage": "All 47 counties, 864 dekads 2002-07-01 to 2026-06-21. Unlike the crop calendar, this covers the 8 pastoralist ASAL counties - it is the pasture/rangeland-condition layer for the drought->food-security pathway there.",
+  "validation": "Signal sanity-checked against known droughts: Marsabit 2022 (peak Horn drought) mean 81% of normal (min 63%); 2018 recovery 124%. Below-100 in drought years, above-100 in wet recovery years - physically consistent.",
+  "used_by": "notebook.qmd Block 4 (vegetation-condition NDVI chart)"
+}

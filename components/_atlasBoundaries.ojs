@@ -1,0 +1,75 @@
+ADMIN_CONFIG = new Object({
+  0: {
+    file: FileAttachment(
+      "/data/shared/atlas_gaul24_a0_africa_simple-vlowres.topojson",
+    ),
+    object: "atlas_gaul24_a0_africa",
+  },
+  1: {
+    file: FileAttachment(
+      "/data/shared/atlas_gaul24_a1_africa_simple-vlowres.topojson",
+    ),
+    object: "atlas_gaul24_a1_africa",
+  },
+  2: {
+    // GAUL24 includes gaul*_code properties, avoiding fragile name-based joins.
+    // Legacy notebooks still use the older file in data/shared.
+    file: FileAttachment(
+      "/data/shared/atlas_gaul24_a2_africa_simple-lowres.topojson",
+    ),
+    object: "atlas_gaul24_a2_africa",
+  },
+});
+
+// Match helpers/adminSelectors.ojs so maps never draw unselectable countries.
+EXCLUDED_ISO3 = new Set(["SDN"])
+
+admin_json = {
+  const country_list = await FileAttachment(
+    "/data/shared/atlas_countries.json",
+  ).json();
+
+  return country_list
+    .filter((d) => d.include && !EXCLUDED_ISO3.has(d.iso3c))
+    .map(({ include, ...rest }) => rest);
+};
+
+iso3Set = new Set(admin_json.map(d => d.iso3c));
+
+_loadAdminBoundaries = async (level = 0, iso3Set = null) => {
+  const { file, object } = ADMIN_CONFIG[level];
+  const bounds = await file.json();
+
+  const geometries = iso3Set
+    ? bounds.objects[object].geometries.filter((g) =>
+        iso3Set.has(g.properties.iso3),
+      )
+    : bounds.objects[object].geometries;
+
+  return topojson.feature(bounds, {
+    type: "GeometryCollection",
+    geometries,
+  });
+};
+
+
+/** Load one or more admin levels (0–2) as keyed GeoJSON collections. */
+getAdminBoundaries = async (levels) => {
+  const validLevels = new Set(Object.keys(ADMIN_CONFIG).map(Number));
+  const levelsArray = Array.isArray(levels) ? levels : [levels];
+
+  if (!levelsArray.every((level) => validLevels.has(level))) {
+    throw new Error(
+      `Invalid level(s). Valid levels are: ${[...validLevels].join(", ")}`,
+    );
+  }
+
+  // Normalize scalar input before mapping.
+  const results = await Promise.all(
+    levelsArray.map((l) => _loadAdminBoundaries(l, iso3Set)),
+  );
+
+  return Object.fromEntries(
+    levelsArray.map((l, i) => ["admin" + l, results[i]]),
+  );
+};

@@ -1,0 +1,28 @@
+{
+  "dataset": "market_prices",
+  "title": "FEWS NET retail market prices, Kenya",
+  "source": "FEWS NET Data Warehouse (FDW), marketpricefacts",
+  "url": "https://fdw.fews.net/",
+  "citation": "FEWS NET Data Warehouse (FDW).",
+  "license": "FEWS NET — reading and display unencumbered. REDISTRIBUTION CAVEAT: FEWS NET states that third-party series held in the warehouse may not be redistributed without the originating provider's consent, and market prices are usually collected by national agencies. Display is fine; identify the originating agency for a given series before republishing it.",
+  "fetched_on": "2026-07-15",
+  "method": "Machine-readable FEWS FDW retail prices; staged via the D409 pipeline. Terms of trade is NOT in this file and is NOT sourced — the notebook derives it client-side as median goat price (KES/head) / median maize-grain price (KES/kg) per county-month. It is a ratio: a fall can mean cheaper livestock or dearer grain, which carry opposite implications, so it must be read against both price legs.",
+  "coverage": "County x market x product monthly prices (KES), retail + wholesale, 42 counties, 2000-2026.",
+  "used_by": "notebook §5.3 market prices + derived terms of trade",
+  "grain": "27406 rows",
+  "columns": [
+    "county",
+    "admin_2",
+    "market",
+    "product",
+    "price_type",
+    "year",
+    "month",
+    "period_date",
+    "value_kes",
+    "unit",
+    "currency",
+    "iso3",
+    "source"
+  ]
+}

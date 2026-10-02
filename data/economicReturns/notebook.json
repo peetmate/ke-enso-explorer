@@ -1,0 +1,37 @@
+{
+  "$schema": "../shared/notebook.schema.json",
+  "id": "roi",
+  "title": {
+    "en": "Estimate Economic Returns on Adaptation",
+    "fr": "Estimer les retours sur économiques l'adaptation"
+  },
+  "image": "/images/notebooks/roi.webp",
+  "imageAlt": {
+    "en": "",
+    "fr": ""
+  },
+  "description": "Explore the potential economic returns of agricultural adaptation investments in sub-Saharan Africa through projected IRR, NPV, and benefit-cost indicators.",
+  "keywords": [
+    "adaptation",
+    "agriculture",
+    "investment",
+    "economic returns",
+    "ROI",
+    "Africa"
+  ],
+  "textDir": "data/economicReturns/text",
+  "contributors": {
+    "authors": [
+      { "type": "common", "id": "psteward" },
+      { "type": "common", "id": "trosenstock" },
+      { "type": "common", "id": "pthornton" },
+      { "type": "common", "id": "byoungberg" },
+      { "type": "common", "id": "lmuller" }
+    ],
+    "developers": [
+      { "type": "common", "id": "zbogart" },
+      { "type": "common", "id": "byoungberg" },
+      { "type": "common", "id": "psteward" }
+    ]
+  }
+}

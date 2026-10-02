@@ -1,0 +1,192 @@
+{
+  "ui": {
+    "download": "Télécharger les données",
+    "downloadFigure": "Télécharger la figure",
+    "indicator": "Indicateur",
+    "vopPlotTitle": "Total VoP pour les régions et les cultures sélectionnées dans chaque pays",
+    "commodityLegend": "Culture"
+  },
+  "words": {
+    "crop": {
+      "singular": "récolte",
+      "plural": "récoltes"
+    },
+    "country": {
+      "singular": "pays",
+      "plural": "des pays"
+    },
+    "region": {
+      "singular": "région",
+      "plural": "régions"
+    },
+    "commodity": {
+      "singular": "produit",
+      "plural": "produits"
+    }
+  },
+  "indicators": {
+    "irr": {
+      "label": "IRR",
+      "labelLong": "Taux de rendement interne",
+      "labelFull": "Taux de rendement interne (TRI)",
+      "tooltip": "Taux de rendement interne - taux de croissance qu'un projet est censé générer, les valeurs les plus élevées indiquent un projet plus souhaitable",
+      "info": {
+        "what": "Le TRI est le taux d'actualisation qui rend la valeur actuelle nette (VAN) de tous les flux de trésorerie (positifs et négatifs) d'un projet donné égale à zéro. En termes plus simples, il s'agit du taux de croissance qu'un projet est censé générer.",
+        "interpret": "Le TRI est utilisé pour évaluer l'attractivité d'un projet ou d'un investissement. Si le TRI d'un nouveau projet dépasse le taux de rendement exigé par l'entreprise, ce projet est considéré comme souhaitable. Plus le TRI est élevé, plus le projet est souhaitable. Dans les contextes de développement ou d'adaptation, un TRI supérieur à **10–12 %** est considéré comme solide. Des valeurs inférieures à **6 %** suggèrent souvent une performance financière faible, sauf si des co-bénéfices importants (résilience, équité, durabilité) sont présents. Un TRI supérieur au taux d'actualisation, combiné à une VAN positive et un ratio bénéfice-coût supérieur à 1, indique une viabilité robuste du projet.",
+        "tell": "Le TRI se concentre sur le taux de rendement qu'un projet génère. Il est unique en ce sens qu'il fournit un pourcentage unique qui permet de comparer facilement l'efficacité de différents investissements. Cependant, il ne donne pas la valeur monétaire réelle du rendement de l'investissement."
+      }
+    },
+    "mirr": {
+      "label": "MIRR",
+      "labelLong": "Taux de rendement interne modifié",
+      "labelFull": "Taux de rendement interne modifié (MIRR)",
+      "tooltip": "Taux de rendement interne modifié — tient compte à la fois des coûts de financement et du taux de réinvestissement, offrant une mesure de rentabilité plus réaliste que le TRI.",
+      "info": {
+        "what": "Le MIRR ajuste le TRI en tenant compte du coût de l'emprunt (taux de financement) et du taux de réinvestissement des flux de trésorerie intermédiaires, offrant une mesure plus précise de la rentabilité du projet.",
+        "interpret": "Le MIRR est utile lorsque le réinvestissement des flux de trésorerie est prévu ou nécessaire, car il suppose un taux de réinvestissement plus réaliste que celui utilisé dans le calcul du TRI. Un MIRR plus élevé indique un projet plus rentable et financièrement viable. Dans la plupart des contextes d'investissement public, un MIRR supérieur à **10%** reflète une performance solide, tandis que des valeurs inférieures à **6%** peuvent indiquer une viabilité limitée, sauf en cas de co-bénéfices importants.",
+        "tell": "Le MIRR fournit une mesure de rendement plus prudente et réaliste, en particulier lorsque les hypothèses de réinvestissement sont importantes. Contrairement au TRI, le MIRR évite les taux multiples ou trompeurs."
+      }
+    },
+    "npv": {
+      "label": "NPV",
+      "labelLong": "Valeur actuelle nette",
+      "labelFull": "Valeur actuelle nette (VAN)",
+      "tooltip": "Valeur actuelle nette - valeur globale d'un investissement après soustraction des coûts et prise en compte de l'actualisation, les valeurs positives indiquant un investissement rentable",
+      "info": {
+        "what": "La VAN est la somme des valeurs actuelles des flux de trésorerie entrants et sortants sur une période donnée. Elle permet d'évaluer et de comparer des projets dont les flux de trésorerie s'étalent sur plusieurs années, en tenant compte de la valeur temporelle de l'argent.",
+        "interpret": "La VAN représente la valeur nette (en valeur actuelle) de tous les flux de trésorerie futurs du projet. Une valeur supérieure à 0 signifie que l'investissement crée de la valeur ; une valeur inférieure à 0 indique une perte nette. Plus la VAN est élevée, plus le bénéfice net du projet est important. Cependant, la VAN est exprimée en termes monétaires absolus, donc elle doit être interprétée en fonction de la taille du projet — une VAN de 1 million USD sur un projet de 2 millions est plus forte que sur un projet de 50 millions. Il est recommandé de toujours interpréter la VAN avec d'autres indicateurs comme le TRI ou le MIRR pour une évaluation complète.",
+        "tell": "La VAN donne une valeur monétaire qui représente la différence entre la valeur actuelle des entrées et des sorties de fonds. Contrairement au TRI, elle peut vous aider à comprendre l'ampleur de la valeur d'un investissement, ce qui est crucial pour déterminer la rentabilité réelle de grands projets."
+      }
+    },
+    "bcr": {
+      "label": "RCA",
+      "labelLong": "Ratio avantages-coûts",
+      "labelFull": "Rapport coûts-avantages (RCA)",
+      "tooltip": "Rapport coûts-avantages - les avantages d'un projet par rapport à ses coûts, les valeurs supérieures à 1,0 suggérant que les avantages l'emportent sur les coûts",
+      "info": {
+        "what": "Le RCA est un ratio financier qui compare les coûts et les bénéfices relatifs d'un projet. Il est calculé en divisant la valeur actuelle des bénéfices par la valeur actuelle des coûts.",
+        "interpret": "Le RCA actualisé compare la valeur actuelle des avantages à la valeur actuelle des coûts dans le temps. Une valeur supérieure à 1,0 signifie que le projet génère plus de valeur qu'il n'en coûte, après prise en compte de la valeur temporelle de l'argent. C'est un indicateur utile pour comparer les options d'investissement lorsque les budgets sont limités.",
+        "tell": "Le RCA simplifie les résultats de l'investissement sous la forme d'un ratio, ce qui est particulièrement utile pour effectuer des comparaisons rapides et prendre des décisions lors de l'évaluation de plusieurs projets. Il indique si le projet vaut l'investissement mais, comme le TRI, il ne fournit pas la valeur du projet en termes de devises."
+      }
+    }
+  },
+  "projectSetup": {
+    "locations": {
+      "inputs": {
+        "countryDropdown": {
+          "tooltip": "Sélectionnez les pays à inclure"
+        },
+        "regionDropdown": {
+          "tooltip": "Affiner la sélection des pays par région"
+        },
+        "commodityDropdown": {
+          "tooltip": "Choisir les produits à inclure"
+        }
+      }
+    },
+    "costs": {
+      "inputs": {
+        "costInput": {
+          "label": "Coût du projet",
+          "tooltip": "Le coût total du projet en USD"
+        },
+        "projectYearDropdown": {
+          "label": "Années du projet",
+          "tooltip": "Le nombre d'années au cours desquelles les fonds du projet sont dispersés",
+          "terms": {
+            "year": {
+              "singular": "année",
+              "plural": "années"
+            }
+          }
+        }
+      },
+      "advancedControls": {
+        "modelUncertainty": "Incertitude du modèle",
+        "inputs": {
+          "discountRate": {
+            "label": "Taux d'actualisation",
+            "tooltip": "Le taux annuel utilisé pour actualiser les bénéfices et coûts futurs en valeur présente."
+          },
+          "roi": {
+            "label": "ROI",
+            "tooltip": "Ratio de rendement attendu utilisé pour traduire les pertes évitées en bénéfices du projet."
+          },
+          "benefitScaleLow": {
+            "label": "Échelle des bénéfices faible",
+            "tooltip": "Borne inférieure de l'incertitude des bénéfices projetés du projet."
+          },
+          "benefitScaleHigh": {
+            "label": "Échelle des bénéfices élevée",
+            "tooltip": "Borne supérieure de l'incertitude des bénéfices projetés du projet."
+          },
+          "costScaleLow": {
+            "label": "Échelle des coûts faible",
+            "tooltip": "Borne inférieure de l'incertitude des coûts projetés du projet."
+          },
+          "costScaleHigh": {
+            "label": "Échelle des coûts élevée",
+            "tooltip": "Borne supérieure de l'incertitude des coûts projetés du projet."
+          }
+        }
+      },
+      "calloutTemplate": "**:::money:::** sur **:::time:::**"
+    },
+    "impacts": {
+      "terms": {
+        "none": "aucun",
+        "high": "élevé",
+        "incremental": "incrémental",
+        "low": "faible",
+        "moderate": "modéré",
+        "transformative": "transformative"
+      },
+      "inputs": {
+        "prodImpactDropdown": {
+          "label": "Impact sur la production",
+          "tooltip": "Dans quelle mesure l'adoption d'une innovation améliore-t-elle le rendement des cultures ou du bétail sélectionnés?"
+        },
+        "adoptionRateDropdown": {
+          "label": "Taux d'Adoption Annuel",
+          "tooltip": "Quel est le taux annuel d'adoption de l'innovation parmi ceux qui ne l'ont pas adoptée?"
+        },
+        "cisImpactDropdown": {
+          "label": "Réduction des Impacts Climatiques",
+          "tooltip": "Dans quelle mesure l'innovation réduit-elle les effets négatifs de la variabilité climatique?"
+        }
+      }
+    }
+  },
+  "investmentReturns": {
+    "insightReview": {
+      "setupBlock": {
+        "missingMessage": "_Région et/ou sélections de cultures manquantes, veuillez mettre à jour les sélections_",
+        "template": "Vous étudiez une intervention portant sur :::crop_string::: à travers **:::region_string:::** dans :::country_string:::. Le coût de votre projet est estimé à  **:::cost_string:::**, répartis en paiements égaux sur **:::year_string:::**."
+      },
+      "indicatorBlock": "Avec un **impact sur la production de :::prod_impact_label:::**, un **taux d'adoption annuel de :::adoption_rate_label:::** et une **réduction des impacts climatiques de :::cis_impact_label:::**, après **:::year_string:::** vous devriez voir"
+    },
+    "exploreIndicators": {
+      "projectYear": "Année du projet",
+      "tableHeaders": {
+        "year": "Année",
+        "benefit": "Bénéfice",
+        "cost": "Coût",
+        "cashflow": "Flux de trésorerie",
+        "discountedBenefitCum": "Bénéfice actualisé (cumulé)",
+        "discountedCostCum": "Coût actualisé (cumulé)",
+        "discountedNpvCum": "VAN actualisée (cumulée)",
+        "discountedBcr": "RCA actualisé",
+        "irr": "IRR",
+        "mirr": "MIRR"
+      }
+    },
+    "infoListHeaders": {
+      "what": "Qu'est-ce que c'est",
+      "interpret": "Interprétation",
+      "tell": "Ce qu'il nous apprend"
+    }
+  },
+  "summary": {
+    "assumptionsTemplate": "De nombreux facteurs doivent être pris en compte pour calculer le rendement d'un investissement, et les calculs ci-dessus reposent sur plusieurs hypothèses, telles qu'un taux d'actualisation fixe de la VAN (:::npvDisountRate:::) et un RCA de l'exploitation (:::farmBcr:::). De plus amples informations sur les méthodes sont disponibles dans la section Méthodes & Sources ci-dessous."
+  }
+}

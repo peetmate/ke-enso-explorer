@@ -1,0 +1,11 @@
+---
+title: "Définitions"
+---
+
+**Taux de rendement interne (TRI)** — Le taux de rendement interne (TRI) est une mesure financière utilisée pour évaluer la rentabilité d'un investissement ou d'un projet. Il représente le taux de rendement annuel auquel la valeur actuelle nette (VAN) de tous les flux de trésorerie (actualisés) de l'investissement est égale à zéro. Un projet est généralement considéré comme un bon investissement si son TRI dépasse le taux de rendement pouvant être obtenu ailleurs à un niveau de risque similaire (le coût d'opportunité du capital).
+
+**Taux de rendement interne modifié (MIRR)** — Le MIRR améliore le TRI en supposant un réinvestissement des flux de trésorerie à un taux réaliste et en intégrant les coûts de financement. Il fournit une image plus claire de la rentabilité d’un projet dans des scénarios d’investissement concrets.
+
+**Valeur actuelle nette (VAN)** — La VAN mesure la rentabilité d'un investissement pour les projets de développement en comparant l'argent entrant et l'argent sortant, en tenant compte de la valeur temporelle de l'argent. Elle tient compte des variations de la valeur de l'argent dans le temps dues à l'inflation ou aux taux d'intérêt. Une VAN positive indique que les bénéfices du projet sont supérieurs à ses coûts, ce qui en fait un investissement favorable.
+
+**Rapport coûts-avantages (RCA)** — Cet indicateur compare simplement les avantages (ou le rendement) d'un projet à ses coûts, les deux valeurs étant ajustées au jour le jour pour tenir compte de la valeur temporelle de l'argent. Un RCA supérieur à 1 indique que les bénéfices d'un projet dépassent ses coûts, ce qui suggère que l'investissement est susceptible d'être rentable et bénéfique. Pour les projets axés sur le soutien aux agriculteurs, un RCA supérieur à 1 signifie que pour chaque dollar dépensé, le projet devrait rapporter plus d'un dollar de bénéfices, ce qui en fait un bon investissement susceptible d'améliorer la productivité et les moyens de subsistance des agriculteurs. À l'inverse, un RCA inférieur à 1 signifie que les coûts l'emportent sur les bénéfices, ce qui indique que le projet n'apporte peut-être pas une valeur suffisante pour justifier l'investissement.

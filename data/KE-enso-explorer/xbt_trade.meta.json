@@ -1,0 +1,28 @@
+{
+  "dataset": "xbt_trade",
+  "title": "FEWS NET cross-border trade (XBT), Kenya — national context layer",
+  "source": "FEWS NET East Africa Cross-Border Trade (XBT) monitoring",
+  "source_url": "https://fews.net/data/markets-and-trade",
+  "source_file": "fews_xbt_kenya_BANKED.csv (D409 project store)",
+  "license": "FEWS NET public",
+  "fetched_on": "2026-07-15",
+  "method": "Deterministic pass-through (_sources/parse_xbt.py): keeps Kenya-touching flows only (destination=Kenya -> Import, source=Kenya -> Export; transit/non-Kenya dropped). No LLM/transcription — the numeric qty is the banked value verbatim. partner_iso3 is a fixed reference code map (country ISO3, not data) so the notebook joins partners to the admin0 topojson and places flow arrows at d3.geoCentroid positions — no coordinates are typed by hand.",
+  "resolution": "NATIONAL / border-point — NOT county. A country-level supply/trade context layer for Block 4, identical for every county selection.",
+  "grain": "one row per partner x direction x trade_type x product x month",
+  "columns": {
+    "partner": "the non-Kenya country in the flow",
+    "partner_iso3": "ISO3 (joins the admin0 topojson iso3)",
+    "direction": "Import (into Kenya) | Export (from Kenya)",
+    "trade_type": "Formal | Informal (informal = field aggregation)",
+    "product": "traded commodity (FEWS product name)",
+    "border_point": "Kenyan crossing the flow was observed at (Moyale, Malaba, Namanga, ...)",
+    "period_date": "month-end date (YYYY-MM-DD)",
+    "year": "calendar year",
+    "month": "calendar month",
+    "qty": "quantity in qty_unit (banked value, not derived)",
+    "qty_unit": "kg | ea (head, livestock) | L"
+  },
+  "coverage": "24272 Kenya-touching rows, 2010-2024, 99 products, partners Ethiopia/Uganda/Tanzania/Somalia/South Sudan/Sudan/Rwanda/Malawi/Zambia/DRC/Congo. Imports dominate (Kenya is a maize-deficit importer; ASAL livestock trade is cross-border).",
+  "caveats": ["country/border-point resolution, not county", "informal trade = field aggregations", "context/supply layer only"],
+  "used_by": "notebook.qmd Block 4 (national-context trade-flow map + imports-by-partner chart)"
+}

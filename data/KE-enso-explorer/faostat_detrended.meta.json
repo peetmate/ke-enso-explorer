@@ -1,0 +1,27 @@
+{
+  "dataset": "faostat_detrended",
+  "title": "FAOSTAT national production, detrended anomalies",
+  "source": "FAO FAOSTAT (QCL), detrended",
+  "url": "https://www.fao.org/faostat/en/#data/QCL",
+  "citation": "FAO. FAOSTAT. Rome.",
+  "license": "CC-BY (FAO).",
+  "fetched_on": "2026-07-10",
+  "method": "FAOSTAT production detrended (trend removed) to compare stationary anomalies against the driver indices.",
+  "coverage": "1961-2024; trend, anomaly, pct_anom, trend_slope columns.",
+  "used_by": "notebook §4 detrended production × driver",
+  "grain": "1096 rows",
+  "columns": [
+    "crop",
+    "year",
+    "exposure",
+    "unit",
+    "value",
+    "iso3",
+    "source",
+    "stat",
+    "trend",
+    "anomaly",
+    "pct_anom",
+    "trend_slope"
+  ]
+}

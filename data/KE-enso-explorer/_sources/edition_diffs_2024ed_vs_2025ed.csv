@@ -1,0 +1,87 @@
+crop,county,year,prod_2024edition,prod_2025edition,pct_change
+Maize,Trans Nzoia,2021,400402.0,407913.0,1.88
+Sweet potato,Baringo,2022,302.0,355.0,17.55
+Sweet potato,Baringo,2023,4004.0,4088.0,2.1
+Sweet potato,Bomet,2022,23152.0,27253.0,17.71
+Sweet potato,Bomet,2023,4152.0,4240.0,2.12
+Sweet potato,Bungoma,2022,28808.0,33911.0,17.71
+Sweet potato,Bungoma,2023,21612.0,22068.0,2.11
+Sweet potato,Busia,2022,46485.0,54720.0,17.72
+Sweet potato,Busia,2023,59325.0,60576.0,2.11
+Sweet potato,Elgeyo Marakwet,2022,997.0,1174.0,17.75
+Sweet potato,Elgeyo Marakwet,2023,1671.0,1706.0,2.09
+Sweet potato,Embu,2022,1239.0,1458.0,17.68
+Sweet potato,Embu,2023,4247.0,4337.0,2.12
+Sweet potato,Homa Bay,2022,169767.0,199842.0,17.72
+Sweet potato,Homa Bay,2023,164545.0,168015.0,2.11
+Sweet potato,Isiolo,2022,87.0,103.0,18.39
+Sweet potato,Isiolo,2023,253.0,258.0,1.98
+Sweet potato,Kajiado,2022,49.0,58.0,18.37
+Sweet potato,Kajiado,2023,88.0,90.0,2.27
+Sweet potato,Kakamega,2022,22138.0,26060.0,17.72
+Sweet potato,Kakamega,2023,20729.0,21166.0,2.11
+Sweet potato,Kericho,2022,4710.0,5544.0,17.71
+Sweet potato,Kericho,2023,3958.0,4041.0,2.1
+Sweet potato,Kiambu,2022,8348.0,9827.0,17.72
+Sweet potato,Kiambu,2023,9919.0,10128.0,2.11
+Sweet potato,Kilifi,2022,332.0,391.0,17.77
+Sweet potato,Kilifi,2023,491.0,501.0,2.04
+Sweet potato,Kirinyaga,2022,2641.0,3109.0,17.72
+Sweet potato,Kirinyaga,2023,5117.0,5225.0,2.11
+Sweet potato,Kisii,2022,5795.0,6822.0,17.72
+Sweet potato,Kisii,2023,6046.0,6174.0,2.12
+Sweet potato,Kisumu,2022,22597.0,26600.0,17.71
+Sweet potato,Kisumu,2023,28969.0,29580.0,2.11
+Sweet potato,Kitui,2022,326.0,384.0,17.79
+Sweet potato,Kitui,2023,2062.0,2105.0,2.09
+Sweet potato,Kwale,2022,4918.0,5789.0,17.71
+Sweet potato,Kwale,2023,4358.0,4450.0,2.11
+Sweet potato,Laikipia,2022,149.0,175.0,17.45
+Sweet potato,Laikipia,2023,313.0,320.0,2.24
+Sweet potato,Lamu,2022,7722.0,9090.0,17.72
+Sweet potato,Lamu,2023,8961.0,9150.0,2.11
+Sweet potato,Machakos,2022,663.0,781.0,17.8
+Sweet potato,Machakos,2023,3426.0,3498.0,2.1
+Sweet potato,Makueni,2022,3787.0,4458.0,17.72
+Sweet potato,Makueni,2023,1380.0,1409.0,2.1
+Sweet potato,Meru,2022,14386.0,16935.0,17.72
+Sweet potato,Meru,2023,18099.0,18481.0,2.11
+Sweet potato,Migori,2022,126705.0,149152.0,17.72
+Sweet potato,Migori,2023,152024.0,155230.0,2.11
+Sweet potato,Mombasa,2022,195.0,230.0,17.95
+Sweet potato,Mombasa,2023,331.0,338.0,2.11
+Sweet potato,Murang'a,2022,3574.0,4207.0,17.71
+Sweet potato,Murang'a,2023,6063.0,6191.0,2.11
+Sweet potato,Nairobi,2022,130.0,153.0,17.69
+Sweet potato,Nairobi,2023,223.0,228.0,2.24
+Sweet potato,Nakuru,2022,416.0,490.0,17.79
+Sweet potato,Nakuru,2023,529.0,540.0,2.08
+Sweet potato,Nandi,2022,2447.0,2880.0,17.7
+Sweet potato,Nandi,2023,2389.0,2439.0,2.09
+Sweet potato,Narok,2022,17900.0,21071.0,17.72
+Sweet potato,Narok,2023,14069.0,14366.0,2.11
+Sweet potato,Nyamira,2022,2995.0,3526.0,17.73
+Sweet potato,Nyamira,2023,3410.0,3482.0,2.11
+Sweet potato,Nyandarua,2022,34.0,40.0,17.65
+Sweet potato,Nyeri,2022,1068.0,1257.0,17.7
+Sweet potato,Nyeri,2023,4286.0,4376.0,2.1
+Sweet potato,Samburu,2022,143.0,168.0,17.48
+Sweet potato,Samburu,2023,693.0,708.0,2.16
+Sweet potato,Siaya,2022,59070.0,69534.0,17.71
+Sweet potato,Siaya,2023,82794.0,84540.0,2.11
+Sweet potato,Taita Taveta,2022,3510.0,4132.0,17.72
+Sweet potato,Taita Taveta,2023,6191.0,6322.0,2.12
+Sweet potato,Tana River,2022,1241.0,1461.0,17.73
+Sweet potato,Tana River,2023,2801.0,2860.0,2.11
+Sweet potato,Tharaka Nithi,2022,390.0,459.0,17.69
+Sweet potato,Tharaka Nithi,2023,1032.0,1054.0,2.13
+Sweet potato,Trans Nzoia,2022,4997.0,5882.0,17.71
+Sweet potato,Trans Nzoia,2023,5362.0,5475.0,2.11
+Sweet potato,Turkana,2022,85.0,100.0,17.65
+Sweet potato,Turkana,2023,2281.0,2329.0,2.1
+Sweet potato,Uasin Gishu,2022,319.0,376.0,17.87
+Sweet potato,Uasin Gishu,2023,646.0,660.0,2.17
+Sweet potato,Vihiga,2022,3267.0,3846.0,17.72
+Sweet potato,Vihiga,2023,4300.0,4391.0,2.12
+Sweet potato,West Pokot,2022,15.0,18.0,20.0
+Sweet potato,West Pokot,2023,5903.0,6028.0,2.12

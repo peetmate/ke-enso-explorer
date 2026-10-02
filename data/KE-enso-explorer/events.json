@@ -1,0 +1,147 @@
+{
+  "_comment": "Curated named climate events for the KE-ENSO Explorer v2 annotation layer. Editorial metadata only — names, date windows and qualitative one-liners. No numeric data claims; event windows align with driver-index thresholds computed in the notebook (deterministic), never typed values. EN only for now (fr falls back to en).",
+  "events": [
+    {
+      "id": "elnino-1982",
+      "label": {
+        "en": "1982–83 El Niño",
+        "fr": null
+      },
+      "start": "1982-09",
+      "end": "1983-06",
+      "phase": "elnino",
+      "seasons": [
+        "OND-1982"
+      ],
+      "blurb": {
+        "en": "A major El Niño; unusually wet short rains in much of Kenya.",
+        "fr": null
+      }
+    },
+    {
+      "id": "elnino-1997",
+      "label": {
+        "en": "1997–98 El Niño floods",
+        "fr": null
+      },
+      "start": "1997-09",
+      "end": "1998-02",
+      "phase": "elnino",
+      "seasons": [
+        "OND-1997"
+      ],
+      "blurb": {
+        "en": "The strongest El Niño on record with a strongly positive Indian Ocean Dipole — extreme short rains and widespread flooding that Kenyans still reference.",
+        "fr": null
+      }
+    },
+    {
+      "id": "drought-2005",
+      "label": {
+        "en": "2005–06 drought",
+        "fr": null
+      },
+      "start": "2005-09",
+      "end": "2006-03",
+      "phase": "lanina",
+      "seasons": [
+        "OND-2005"
+      ],
+      "blurb": {
+        "en": "Failed short rains under borderline-weak La Niña conditions with a cool western Indian Ocean; severe pasture loss in the arid north.",
+        "fr": null
+      }
+    },
+    {
+      "id": "drought-2010",
+      "label": {
+        "en": "2010–11 Horn of Africa drought",
+        "fr": null
+      },
+      "start": "2010-09",
+      "end": "2011-09",
+      "phase": "lanina",
+      "seasons": [
+        "OND-2010",
+        "MAM-2011"
+      ],
+      "blurb": {
+        "en": "Back-to-back failed seasons under La Niña — one of the region's worst droughts, with famine declared in parts of the Horn.",
+        "fr": null
+      }
+    },
+    {
+      "id": "drought-2016",
+      "label": {
+        "en": "2016–17 drought",
+        "fr": null
+      },
+      "start": "2016-09",
+      "end": "2017-10",
+      "phase": "lanina",
+      "seasons": [
+        "OND-2016",
+        "MAM-2017"
+      ],
+      "blurb": {
+        "en": "Failed short rains under a weak La Niña with a cool western Indian Ocean, followed by poor long rains — a national drought emergency was declared.",
+        "fr": null
+      }
+    },
+    {
+      "id": "iod-2019",
+      "label": {
+        "en": "2019 positive-IOD floods",
+        "fr": null
+      },
+      "start": "2019-09",
+      "end": "2020-01",
+      "phase": "iodpos",
+      "seasons": [
+        "OND-2019"
+      ],
+      "blurb": {
+        "en": "An exceptionally positive Indian Ocean Dipole — without a strong El Niño — brought extreme short rains, floods and, in their wake, the desert-locust upsurge. The clearest case that the IOD, not ENSO alone, carries Kenya's short rains.",
+        "fr": null
+      }
+    },
+    {
+      "id": "lanina-2020",
+      "label": {
+        "en": "2020–23 triple-dip La Niña drought",
+        "fr": null
+      },
+      "start": "2020-09",
+      "end": "2023-02",
+      "phase": "lanina",
+      "seasons": [
+        "OND-2020",
+        "MAM-2021",
+        "OND-2021",
+        "MAM-2022",
+        "OND-2022"
+      ],
+      "blurb": {
+        "en": "Three consecutive La Niña years — five failed rainy seasons in a row. Pasture and harvests collapsed across the arid and semi-arid counties in Kenya's longest drought in decades.",
+        "fr": null
+      }
+    },
+    {
+      "id": "elnino-2023",
+      "label": {
+        "en": "2023–24 El Niño",
+        "fr": null
+      },
+      "start": "2023-06",
+      "end": "2024-05",
+      "phase": "elnino",
+      "seasons": [
+        "OND-2023"
+      ],
+      "blurb": {
+        "en": "El Niño with a positive IOD ended the long drought: heavy short rains (with serious flooding in November 2023) and a broad harvest recovery into 2024.",
+        "fr": null
+      }
+    }
+  ]
+}

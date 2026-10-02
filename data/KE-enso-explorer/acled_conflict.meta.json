@@ -1,0 +1,24 @@
+{
+  "dataset": "acled_conflict",
+  "title": "ACLED conflict events, Kenya counties",
+  "source": "ACLED — Armed Conflict Location & Event Data",
+  "url": "https://acleddata.com/",
+  "citation": "Raleigh et al. ACLED. acleddata.com.",
+  "license": "ACLED attribution licence (registration + attribution; not fully open).",
+  "fetched_on": "2026-07-10",
+  "method": "ACLED API (registration); staged via the D409 pipeline (D409-only acquisition).",
+  "coverage": "County-week events + fatalities by event/disorder type.",
+  "used_by": "notebook §5.2 conflict (climate-conflict signal is exploratory)",
+  "grain": "16674 rows",
+  "columns": [
+    "iso3",
+    "county",
+    "week",
+    "event_type",
+    "sub_event_type",
+    "disorder_type",
+    "events",
+    "fatalities",
+    "population_exposure"
+  ]
+}

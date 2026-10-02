@@ -1,0 +1,25 @@
+{
+  "dataset": "afa_rice",
+  "title": "AFA county rice production & area, Kenya",
+  "source": "Agriculture & Food Authority (AFA), Kenya — county crop returns (Rice only)",
+  "url": "https://www.afa.go.ke/",
+  "citation": "Agriculture & Food Authority (AFA), Kenya. County crop production returns.",
+  "license": "AFA — public.",
+  "fetched_on": "2026-07-24",
+  "method": "Deterministic build (_sources/afa_rice_build.py). Only Rice is folded in — the one crop the KNBS NAPR county tables omit; every other AFA crop is identical to the NAPR (233/234 maize county-years matched) and is not double-counted.",
+  "coverage": "Rice, 17 counties, 2020-2024, area (ha) + production (t).",
+  "used_by": "notebook §1.1 produce (folded into the KNBS crop set)",
+  "grain": "70 rows",
+  "columns": [
+    "crop",
+    "county",
+    "gaul1_code",
+    "year",
+    "area_ha",
+    "production_t",
+    "value_ksh",
+    "source_file",
+    "pdf_page",
+    "dual_ok"
+  ]
+}

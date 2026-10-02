@@ -1,0 +1,990 @@
+{
+  "sections": {
+    "hero": {
+      "eyebrow": {
+        "en": "Africa Agriculture Adaptation Atlas · Kenya",
+        "fr": null
+      },
+      "title": {
+        "en": "ENSO Explorer — Kenya",
+        "fr": null
+      },
+      "subtitle": {
+        "en": "What El Niño and La Niña mean for your county's rains, harvests, pastures, prices and food security — and what the coming season is likely to bring.",
+        "fr": null
+      }
+    },
+    "intro": {
+      "en": "Kenya's rains are steered from the ocean. Pick your county to see what a season puts at stake, what past El Niño and La Niña years did to its rains, pastures, prices and hunger — and what the coming season is likely to bring.",
+      "fr": null
+    },
+    "controls": {
+      "county": {
+        "en": "County",
+        "fr": null
+      },
+      "season": {
+        "en": "Season",
+        "fr": null
+      },
+      "metric": {
+        "en": "Colour counties by",
+        "fr": null
+      },
+      "climateVar": {
+        "en": "Show",
+        "fr": null
+      },
+      "rainView": {
+        "en": "As",
+        "fr": null
+      },
+      "rainTimeRes": {
+        "en": "View",
+        "fr": null
+      },
+      "prodCommodity": {
+        "en": "Show",
+        "fr": null
+      },
+      "prodViewType": {
+        "en": "View",
+        "fr": null
+      },
+      "prodMode": {
+        "en": "Units",
+        "fr": null
+      },
+      "prodPick": {
+        "en": "Filter",
+        "fr": null
+      },
+      "product": {
+        "en": "Product",
+        "fr": null
+      },
+      "priceView": {
+        "en": "Price view",
+        "fr": null
+      },
+      "crop": {
+        "en": "Crop",
+        "fr": null
+      },
+      "compareCounties": {
+        "en": "Counties to compare",
+        "fr": null
+      },
+      "driverTimeRes": {
+        "en": "View",
+        "fr": null
+      },
+      "corrSeason": {
+        "en": "Season",
+        "fr": null
+      },
+      "showSpread": {
+        "en": "Show county spread (±1 sd)",
+        "fr": null
+      },
+      "stripMode": {
+        "en": "Ocean strips",
+        "fr": null
+      },
+      "contOndDriver": {
+        "en": "Short-rains driver",
+        "fr": null
+      },
+      "contMamDriver": {
+        "en": "Long-rains driver",
+        "fr": null
+      },
+      "yearFrom": {
+        "en": "From year",
+        "fr": null
+      },
+      "yearTo": {
+        "en": "To year",
+        "fr": null
+      },
+      "showMam": {
+        "en": "Also show the long rains (MAM)",
+        "fr": null
+      },
+      "gesiFilter": {
+        "en": "Show",
+        "fr": null
+      },
+      "variable": {
+        "en": "Variable",
+        "fr": null
+      },
+      "spread": {
+        "en": "County spread",
+        "fr": null
+      },
+      "contDetail": {
+        "en": "Split moderate / strong",
+        "fr": null
+      },
+      "lensSeason": {
+        "en": "Season",
+        "fr": null
+      },
+      "seasonLens": {
+        "en": "Season type",
+        "fr": null
+      },
+      "driver": {
+        "en": "Ocean driver",
+        "fr": null
+      },
+      "background": {
+        "en": "Chart background",
+        "fr": null
+      },
+      "speiIndex": {
+        "en": "Drought index",
+        "fr": null
+      },
+      "markets": {
+        "en": "Markets",
+        "fr": null
+      },
+      "aggregate": {
+        "en": "Aggregate",
+        "fr": null
+      },
+      "era": {
+        "en": "Records",
+        "fr": null
+      },
+      "rowShape": {
+        "en": "Row height",
+        "fr": null
+      }
+    },
+    "b1": {
+      "title": {
+        "en": "1. What's At Stake In My County?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Click your county on the map (or use the dropdown above). This first section shows what its farms and herds are worth, what it grows, and who a bad season puts at risk.*",
+        "fr": null
+      },
+      "mapTitle": {
+        "en": "Pick a county — Kenya at a glance",
+        "fr": null
+      },
+      "mapIntro": {
+        "en": "*Click any county to make it the focus of every chart on this page. Recolour the map to browse counties by agricultural value, current vegetation, food insecurity or seasonal rainfall.*",
+        "fr": null
+      },
+      "metrics": {
+        "vop": {
+          "en": "Agricultural value (I$)",
+          "fr": null
+        },
+        "ndvi": {
+          "en": "Latest vegetation (% of normal)",
+          "fr": null
+        },
+        "ipc": {
+          "en": "Latest food insecurity (IPC)",
+          "fr": null
+        },
+        "rainOND": {
+          "en": "Mean short rains, Oct–Dec (mm)",
+          "fr": null
+        },
+        "rainMAM": {
+          "en": "Mean long rains, Mar–May (mm)",
+          "fr": null
+        }
+      },
+      "mapCaption": {
+        "en": "Counties shaded by the chosen metric. Agricultural value is the Atlas exposure snapshot (MapSPAM 2020 crops + GLW4 livestock, constant international dollars); vegetation and food insecurity are the latest available readings; rainfall is the long-term seasonal mean. Click a county to select it; hover for its value.",
+        "fr": null
+      },
+      "mapAbout": {
+        "en": "Value of production comes from the Atlas exposure layer: MapSPAM 2020 crop production and Gridded Livestock of the World 4 herd sizes, valued in constant international dollars so counties are comparable. Vegetation is the most recent 10-day NDVI reading as a percentage of its long-term normal (WFP VAM / MODIS). Food insecurity is the latest IPC phase classification for the county's worst area (FEWS NET). Rainfall means use CHIRPS v3, 1991–2020.\n\n**Data:** IFPRI MapSPAM + FAO GLW4 · WFP VAM · FEWS NET IPC · UCSB CHC CHIRPS v3. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "vopTitle": {
+        "en": "what agriculture is worth here",
+        "fr": null
+      },
+      "vopIntro": {
+        "en": "*The economic stakes: the value of what this county produces, crops (green) and livestock (brown), in constant international dollars so counties are comparable. In the arid and semi-arid north and east this is overwhelmingly livestock — which is why a drought that fails pasture hits those counties hardest.*",
+        "fr": null
+      },
+      "vopCaption": {
+        "en": "Gross value of agricultural production by commodity (MapSPAM 2020 crops + GLW4 livestock, constant international dollars — a 2020 snapshot). Top 14 commodities shown; the full list is in the data table. What a bad season puts at economic risk here.",
+        "fr": null
+      },
+      "vopAbout": {
+        "en": "Value of production (VoP) is the Atlas's standard exposure measure: physical production × international commodity prices, expressed in constant 2015 international dollars (purchasing-power comparable). Crops are from IFPRI's MapSPAM 2020 disaggregation; livestock from FAO's Gridded Livestock of the World 4. It is a snapshot of exposure, not a time series.\n\n**Data:** IFPRI (MapSPAM) & FAO (GLW4), via the Atlas exposure layer. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "produceHeading": {
+        "en": "What does my county produce?",
+        "fr": null
+      },
+      "produceIntro": {
+        "en": "*Official county figures from the **KNBS National Agriculture Production Report**: crops (2019–2024), livestock (2021–2023) and livestock products (2021–2022) — the year coverage differs by commodity type because KNBS publishes them in different annexes. Blank means **not reported — never zero**. Pick commodity types, filter items, set the year range, and switch views (bars / lines / treemap / table). Views reset to the county's defaults when you switch county.*",
+        "fr": null
+      },
+      "produceCaption": {
+        "en": "What the county grows and herds (KNBS National Agriculture Production Report; rice from AFA). Bars show years side by side; the treemap shows the end year of the selected range (or the latest reported before it). Blanks are county-years KNBS did not report — not zero.",
+        "fr": null
+      },
+      "produceAbout": {
+        "en": "**How KNBS compiles this data — and what a blank means.** Kenya's crop and livestock figures are administrative data, not a sample survey: county field extension officers estimate area, production and value per season, aggregated ward → sub-county → county; state corporations supply the value-chain crops. KNBS reconciles these returns into the annual National Agriculture Production Report. Because the source is administrative expert-estimate, coverage has gaps: **a blank county-year means KNBS did not report it — it does not mean zero production.** We leave such cells empty rather than impute 0.\n\n**How we extracted it.** Every number was parsed from the report PDFs by a deterministic engine — no value was read or typed by a language model. Extraction is orientation-aware (landscape annexes are de-rotated by word position) and column-binned by coordinate so a blank stays blank. The primary validation is **additivity**: each crop's county figures must reconcile to the report's own printed national total; each table also passes a completeness check, and on ~90% of tables two independent PDF engines agree cell-by-cell. Tables that fail are held back, not served. For the food crops present in both editions, 2020–2024 use the latest (2024–25) edition — it folds in KNBS's prior-year revisions — and 2019 the previous one; **2024 is provisional**. Livestock annexes print no national total, so they are validated by dual-engine agreement plus cross-year plausibility. The full per-table source list is below; the validation log ships with the repository.\n\n**Data:** KNBS National Agriculture Production Report (2023–24 + 2024–25 editions); rice from the Agriculture & Food Authority. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "produceNote": {
+        "en": "**Blank means not reported — never zero.** Coverage varies by crop, county and year; missing county-years are marked ∅ on the charts.",
+        "fr": null
+      },
+      "gesiTitle": {
+        "en": "who a bad season puts at risk",
+        "fr": null
+      },
+      "gesiIntro": {
+        "en": "*Who a bad season puts at risk: gender and equity indicators from the county's official KNBS data sheet, compared with all 47 counties. The default view shows only the indicators where this county **stands out** (top/bottom 10 of 47) — switch to \"All indicators\" for the full sheet. Rank 1 = highest raw value; which direction is \"better\" depends on the indicator. Some labels arrive truncated from the source sheets — a data-pipeline fix is queued.*",
+        "fr": null
+      },
+      "gesiCaption": {
+        "en": "Indicators from the county's KNBS Gender Data Sheet against all 47 counties. **Rank-chip colours mark extremity only — never good or bad**: dark orange = county in the top/bottom 5 of 47, amber = top/bottom 10, grey = mid-range. Which direction is desirable varies by indicator (some, like maternal mortality, are clearly adverse; many are neutral) — this figure deliberately does not judge. Per-indicator definitions are being sourced from KNBS; labels appear exactly as extracted.",
+        "fr": null
+      },
+      "gesiAbout": {
+        "en": "Each value was read from the county's official gender data sheet by a deterministic, code-keyed parser and passed a 47-county consensus gate (the national benchmark printed on every sheet must be identical across all 47 — the extraction's built-in proof). Indicator labels are served exactly as extracted. Switch this figure to \"All indicators\" for the complete sheet with every county's distribution.\n\n**Data:** KNBS County Gender Data Sheets (2025). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "insight": {
+        "en": "{county}'s agriculture is worth about I$ {vop} a year — {livePct}% of it livestock. Top commodity: {top}.",
+        "fr": null
+      },
+      "produceCaptionBars": {
+        "en": "What the county grows and herds (KNBS National Agriculture Production Report; rice from AFA). Bars show the selected years side by side within each commodity; one panel per commodity type because units differ (tonnes / head / KSh). Blanks are county-years KNBS did not report — not zero.",
+        "fr": null
+      },
+      "produceCaptionLines": {
+        "en": "Trends over the selected years (KNBS NAPR; rice from AFA), one panel per commodity type. A ∅ at the top of a year marks a county-year KNBS did not report — **not zero**; items with fewer than three reported years are shown as dots only, never joined into a line. Note the year coverage differs by type: crops 2019–2024, livestock 2021–2023, products 2021–2022.",
+        "fr": null
+      },
+      "produceCaptionTree": {
+        "en": "Snapshot for the END year of the selected range (or each item's latest reported year before it — the year is printed in every tooltip). **Cell area = the item's absolute value as a share of the shown items in its commodity-type panel** (the tooltip prints that percentage), whatever the Units toggle shows elsewhere. Blank ≠ zero: unreported items are simply absent.",
+        "fr": null
+      },
+      "produceCaptionTable": {
+        "en": "All selected rows as a searchable table (type in the box to filter). Values as reported by KNBS/AFA; blank means not reported — never zero. Blank means not reported — never zero.",
+        "fr": null
+      }
+    },
+    "b2": {
+      "title": {
+        "en": "2. How Does The Ocean Steer My County's Rains?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Kenya has two rainy seasons, and the ocean steers each differently. The **short rains (Oct–Dec)** follow El Niño / La Niña (together, “ENSO”) and the **Indian Ocean Dipole** — a warm-or-cool seesaw in the Indian Ocean that moves together with ENSO and carries much of the signal. The **long rains (Mar–May)** answer mostly to a separate Pacific pattern called the **Western-V**, which moves largely on its own — El Niño tells you little about the long rains. Below, each year's season is coloured by whether it was wetter or drier than normal, with the ocean state shown underneath.*",
+        "fr": null
+      },
+      "rainTitle": {
+        "en": "season by season — wetter or drier than normal",
+        "fr": null
+      },
+      "rainCaption": {
+        "en": "Each bar is one year's season, coloured by its departure from the county's 1991–2020 normal (teal = wetter, brown = drier). Optional whiskers show the spread across the county's pixels (±1 or ±2 standard deviations, \"sd\"). **The strips under the chart read the ocean's state behind each season** — one row per ocean signal, one cell per year (hover any cell for the raw index value and its strength); switch them between discrete phases and continuous strength, where each row is shaded to its own historical range. With several counties selected the figure switches to per-season line panels.",
+        "fr": null
+      },
+      "rainAbout": {
+        "en": "Rainfall is CHIRPS v3, aggregated to the county. The anomaly view (default) plots each season's departure from the county's own 1991–2020 mean; toggle to absolute values or a drought index (SPEI-3, a standardised measure of how unusually dry or wet the season was, accounting for temperature). Phase strips: El Niño / La Niña for the short rains are classified from the relative Niño index (RONI, ±0.5) — the same classification the outlook section uses; IOD positive/negative from the DMI (±0.4, HadISST extended with ERSST to reach the present); Western-V high/low from its standardised Mar–May index (±0.5). One caution: the climate baseline itself is shifting — the long rains have declined over recent decades — so \"normal\" is a moving target.\n\n**Data:** CHIRPS v3 rainfall + CHIRTS temperature + SPEI (UCSB Climate Hazards Center, via the Atlas hub); drivers NOAA CPC / HadISST. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "phaseChipsNote": {
+        "en": "Season averages by ocean state (computed live from the data above):",
+        "fr": null
+      },
+      "calendarTitle": {
+        "en": "when does my county plant and harvest?",
+        "fr": null
+      },
+      "calendarIntro": {
+        "en": "*The crop calendar links the ocean signal to the field: planting follows the rains, harvest comes months later — so a failed season shows up in food and markets with a lag.*",
+        "fr": null
+      },
+      "calendarCaption": {
+        "en": "Planting (light) and harvest (dark) windows per crop and season (JRC ASAP crop calendar), against the short-rains and long-rains windows. Covers 38 of 47 counties.",
+        "fr": null
+      },
+      "calendarNoData": {
+        "en": "*No rainfed crop calendar exists for this county — it is a pastoralist (arid/semi-arid) or urban county with no main cropping season. Its seasonality is the rains themselves and pasture greenness — see the vegetation chart in [section 3](#events), which covers all 47 counties. Crop-calendar coverage: 38 of 47 counties.*",
+        "fr": null
+      },
+      "contingencyTitle": {
+        "en": "how often did each ocean state bring wet or dry seasons here?",
+        "fr": null
+      },
+      "contingencyIntro": {
+        "en": "*The county's own record, season by season: for each state of the chosen ocean driver, the share of past seasons that ended wetter, near-normal or drier than usual. Short rains on the left, long rains on the right — each with its own driver selector; \"All years\" is the county's base rate to compare against. Bands: neutral/weak (below 1 sd), moderate (1–1.5 sd), strong (1.5 sd or more). Rows marked \\* rest on fewer than 4 seasons — read them as anecdote, not evidence.*",
+        "fr": null
+      },
+      "contingencyCaption": {
+        "en": "Shares of the county's past seasons by outcome (wetter / near-normal / drier than the 1991–2020 normal), grouped by the selected driver's state that season — neutral/weak (<1 sd), moderate (1–1.5 sd), strong (≥1.5 sd from the 1991–2020 mean). Percentages are printed on segments; hover for counts; \\* marks groups with fewer than 4 seasons. Compare each row against the county's \"All years\" base rate. Shares of history, not a forecast. Both panels use the same strength bands and the same overall height, but each panel reads its OWN driver — named in the heading above it — so a matching row means the same **strength**, not the same ocean condition. **Row height** changes how the bands are drawn. With **equal rows** every band gets the same thickness and the two panels line up vertically. With **mosaic** each band is as tall as the number of seasons behind it, so visual weight matches evidence; rows then reflect each panel's own counts and no longer line up across panels, and the all-years base rate becomes the dashed vertical rules you read each row against. A band with no seasons says so rather than showing an empty bar.",
+        "fr": null
+      },
+      "mapsComing": {
+        "en": "*🗺️ The **rainfall map views** — season-by-season county and subcounty CHIRPS v3 maps through time, and the El Niño / La Niña **phase-composite maps** — are being developed separately and will slot in here.*",
+        "fr": null
+      },
+      "canCannot": {
+        "can": {
+          "en": "**This section can tell you:** which ocean states have historically leaned your county's seasons wetter or drier, and how consistently.",
+          "fr": null
+        },
+        "cannot": {
+          "en": "**It cannot tell you:** what any single coming season will do — an ocean state shifts the odds; it never guarantees an outcome.",
+          "fr": null
+        }
+      },
+      "annexPointer": {
+        "en": "→ *How strong are these links statistically — correlations, driver mechanics, uncertainty? See the [technical annex](#annex-drivers).*",
+        "fr": null
+      },
+      "monthlyCaption": {
+        "en": "Mean rainfall by calendar month for the county (CHIRPS v3, 1981–present) — when the long rains (Mar–May) and short rains (Oct–Dec) fall. This view always shows rainfall, whatever the variable toggle above is set to.",
+        "fr": null
+      },
+      "insight": {
+        "en": "In {county}, {k} of {n} past El Niño short-rains seasons ended wetter than normal; {kl} of {nl} La Niña seasons ended drier.",
+        "fr": null
+      },
+      "contingencyAbout": {
+        "en": "Groups are defined on each driver's standardised seasonal value: neutral/weak below 1 sd from the 1991–2020 mean, moderate 1–1.5 sd, strong 1.5 sd or more (untick the split toggle to pool moderate+strong). One sd corresponds to a different raw index value for each driver — hover the strips in Figure 2.1 to read raw values against strengths. Rows resting on fewer than 5 seasons are faded; \\* marks fewer than 4. The percentages are shares of the seasons in that group; hover any segment for the counts.\n\n**Data:** CHIRPS v3 county terciles + NOAA driver indices. [Methods & sources →](#methods) **Row height:** in mosaic mode a season is the same height in both panels (both are drawn on the larger of the two extents), so heights are comparable within and between panels for a given year window — but not between different year windows, since the scale is refit each time. Bands with no seasons take a thin fixed sliver, not a season-sized slot. Rows too thin to carry a label keep their name in the hover.",
+        "fr": null
+      }
+    },
+    "b3": {
+      "title": {
+        "en": "3. What Do Drier And Wetter Seasons Mean Here?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*A KMD seasonal forecast speaks in rainfall — “below average”, “above average” — not in El Niño or the IOD. This section asks the matching question of the county's own history: **when a season came in drier or wetter than usual here, what followed** — in pastures, food security, markets and harvests? Every driver-shaded chart carries the same linked controls: the **season lens** (pick a season and a season type, and matching past years are outlined), and the **driver background** (shade every season by ENSO, the IOD, their combined state or the Western-V — switch it off, or choose discrete season blocks vs a month-by-month measured view). Change the controls at any chart and every chart follows. (The seasonal-harvest figure, 3.6-B, is the one exception: it colours each bar by its planting season's rainfall tercile — season and harvest line up by construction, so it needs no background.) (The ocean drivers themselves — the events Kenyans remember, from the 1997–98 El Niño floods to the 2020–23 triple-dip La Niña — are Section 2.)*",
+        "fr": null
+      },
+      "timelineTitle": {
+        "en": "the events, at a glance",
+        "fr": null
+      },
+      "timelineCaption": {
+        "en": "Eight named events Kenyans remember, 1982–2024, one lane each; a bar spans the event's months, and colour is the phase the list assigns — El Niño, La Niña, positive IOD. Hover a band for its one-line story. **Only these eight are named — an unmarked year is not a calm one.** National: the county and shared controls do not change it.",
+        "fr": null
+      },
+      "ndviTitle": {
+        "en": "pasture and vegetation in wet and dry seasons",
+        "fr": null
+      },
+      "ndviIntro": {
+        "en": "*The clearest bridge from a failed season to people — especially in pastoralist counties, where livelihoods ride on pasture. The line is 10-day vegetation greenness (NDVI) as a percentage of its normal: below 100 (orange) = drought stress; above (green) = greener than usual.*",
+        "fr": null
+      },
+      "ndviCaption": {
+        "en": "Ten-day NDVI as a percentage of that dekad's long-term normal (WFP VAM, 2002–present): below 100 (orange) is a vegetation deficit, above 100 (green) greener than usual. Each selected county gets its own panel and y-axis — compare shape, not height. Background shades the chosen driver's strength, blank where no window is measured; it and the dashed outlines follow the page's county.",
+        "fr": null
+      },
+      "ndviPhaseTitle": {
+        "en": "short-rains greenness, year by year, grouped by ocean state",
+        "fr": null
+      },
+      "ndviPhaseCaption": {
+        "en": "Each dot is one year's season-mean greenness (NDVI) for the county, as a percentage of normal, grouped by that season's driver — OND (short rains) by ENSO + IOD, MAM (long rains) by the Western-V — at 1 and 1.5 standard deviations. Black ticks are group medians. **Groups can rest on as few as two years.** A toggle hides the MAM panel.",
+        "fr": null
+      },
+      "ipcTitle": {
+        "en": "food insecurity (IPC phase)",
+        "fr": null
+      },
+      "ipcCaption": {
+        "en": "IPC food-insecurity phase for the county's **worst-classified area** (FEWS NET Current Situation, 2011–2026); phase 3 is Crisis, 4 Emergency. In Steps the phase holds until reclassified — steps, not slopes — and IPC colour bands show only when the background is Off. Yearly bars give each year's worst; rounds are irregular (one in 2025). Controls set the view and background.",
+        "fr": null
+      },
+      "pricesTitle": {
+        "en": "staple food prices",
+        "fr": null
+      },
+      "pricesIntro": {
+        "en": "*Monthly retail prices in the county's monitored markets (FEWS NET). Raw prices mix inflation with scarcity — switch to the **change vs a year earlier** or **seasonal anomaly** view to see the climate signal.*",
+        "fr": null
+      },
+      "pricesCaption": {
+        "en": "Monthly retail price by market for the selected product; filter the markets shown with the Markets control. Dots are actual observations; lines break across gaps longer than ~3 months. The anomaly views are computed from the same series: % change vs the same month a year earlier, or the departure from that market's usual level for that calendar month. Quarterly/Yearly bars average the selected view across the chosen markets. Background shading by the chosen driver's strength: Discrete paints the OND / MAM season blocks; Continuous paints every month with its own **measured** rolling 3-month window — nothing is interpolated, and nothing is painted beyond the last measured month. (Nuance: the season blocks classify OND ENSO with RONI; the monthly view uses the plain Niño3.4 window. The two can disagree outright in recent warm years — OND 2024 is a weak La Niña by RONI but reads Neutral in the monthly view. Western-V, a MAM-only control, always shows discrete season blocks.) Dashed outlines mark the seasons matching the lens. Controls sit above each chart and are linked — changing one changes them all.",
+        "fr": null
+      },
+      "pricesAbout": {
+        "en": "Retail-only series from FEWS NET's price database, so the unit stays consistent within a product. Nominal Kenyan shillings over long periods mostly show inflation — the two anomaly views isolate the unusual part: **vs year earlier** is the 12-month percent change; **seasonal anomaly** compares each month to that market's typical level for that calendar month, in standard deviations. Both are computed directly from the plotted series.\n\n**Data:** FEWS NET (FDW retail market prices). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "pricesNoData": {
+        "en": "*No FEWS NET market price series is available for this county (coverage: 42 of 47 counties).*",
+        "fr": null
+      },
+      "totTitle": {
+        "en": "the pastoral squeeze — what a goat buys",
+        "fr": null
+      },
+      "totIntro": {
+        "en": "*The classic drought signal in pastoral economies: how many kilograms of maize one goat buys. In a drought, herders sell weakened animals cheap exactly when cereal prices spike — the ratio collapses.*",
+        "fr": null
+      },
+      "totCaption": {
+        "en": "Kilograms of maize one goat buys each month: the county's median goat price divided by its median maize price. The dashed line is the county's long-term median; **a gap in the line means months with no price report, never a fall to zero.** Quarterly and Yearly bars average the monthly ratios, and the background controls above are linked.",
+        "fr": null
+      },
+      "totNoData": {
+        "en": "*No goat price series is monitored in this county (goat prices cover ~20 of 47 counties) — the terms-of-trade view needs both a goat and a maize series.*",
+        "fr": null
+      },
+      "prodTitle": {
+        "en": "county harvests after wet and dry seasons",
+        "fr": null
+      },
+      "prodIntro": {
+        "en": "*The county production record is short — six years — but it happens to span Kenya's longest drought in decades (2020–23 La Niña) and the 2023–24 El Niño recovery. Six years is far too short for statistics, so read this as event history: what happened, not a rule. ← The county's full production profile is [Figure 1.2](#stakes).*",
+        "fr": null
+      },
+      "prodCaption": {
+        "en": "The county's harvests, 2019–2024 (KNBS NAPR; rice from AFA), grouped by harvest year — one bar per crop within each year. **The background is lag-shifted**: behind a year-Y harvest sit the seasons that GREW it — OND(Y−1) as the year's wash and MAM(Y) as the thin top band (Bars view), or half-slots left/right of each year (Lines view) — never year Y's own short rains. Hover any band for its source season. ∅ marks county-years KNBS did not report — **not zero**. Six data points allow no correlation claims; the “Vs rainfall” view is a pattern check, not a statistic.",
+        "fr": null
+      },
+      "rwTitle": {
+        "en": "humanitarian reports",
+        "fr": null
+      },
+      "rwIntro": {
+        "en": "*County-tagged humanitarian and disaster reports (ReliefWeb, 2010–present). Report volume reflects attention as well as severity — a context layer, not an impact measure.*",
+        "fr": null
+      },
+      "rwCaption": {
+        "en": "County-tagged humanitarian reports per year, stacked by hazard. Bars count **reports filed, not impact** — reporting follows attention as much as severity, and the last two years are thinly harvested. Multi-hazard reports count once, under the first match drought → flood → epidemic → other. Background = driver strength in each year's MAM/OND half-slots; dashed outlines = the lens seasons; controls are linked.",
+        "fr": null
+      },
+      "rwRecent": {
+        "en": "Most recent reports",
+        "fr": null
+      },
+      "canCannot": {
+        "can": {
+          "en": "**This section can tell you:** what drier and wetter seasons — the exact categories a KMD outlook uses — have meant in this county's pastures, food security, prices and harvests, as recorded history.",
+          "fr": null
+        },
+        "cannot": {
+          "en": "**It cannot tell you:** that any one season *caused* an impact by itself (conflict, prices and hunger have many drivers), what the coming season will bring (that is KMD's job, Section 4), nor anything statistical about six years of county harvests.",
+          "fr": null
+        }
+      },
+      "annexPointer": {
+        "en": "→ *Conflict data, the national production–climate statistics, and the full trade detail are in the [technical annex](#annex).*",
+        "fr": null
+      },
+      "seasonStripTitle": {
+        "en": "the drought index, season by season",
+        "fr": null
+      },
+      "seasonStripIntro": {
+        "en": "*The slow-building water deficit that turns failed seasons into drought: the drought index (SPEI), at your choice of 3-, 6- or 12-month window — shorter windows track single seasons, the 12-month window shows entrenched multi-season drought. (Season-by-season rainfall is Figure 2.1.)*",
+        "fr": null
+      },
+      "seasonStripCaption": {
+        "en": "The county's drought index (SPEI) at the window you choose — 3, 6 or 12 months. Sustained values below −1 mark entrenched drought, below −2 exceptional drought. **The line breaks every December: that window is quarantined, not dry.** Background shading tracks the driver control above in standard deviations, not SPEI units; dashed outlines mark the seasons matching the lens.",
+        "fr": null
+      },
+      "ndviPhaseIntro": {
+        "en": "*Grouping the same greenness record by the ocean state shows the ENSO link directly — each dot is one year's short-rains season.*",
+        "fr": null
+      },
+      "ipcIntro": {
+        "en": "*Food-security classifications for the county's worst-affected area. Phase 3 (Crisis) and above call for response.*",
+        "fr": null
+      },
+      "prodLegend": {
+        "en": "Bars = crops, grouped by harvest year (see colour legend). Background = the chosen driver in the **seasons that grew each harvest** (OND of the year before + MAM of the harvest year — harvests lag the rains). ∅ = not reported — not zero.",
+        "fr": null
+      },
+      "insight": {
+        "en": "In the 2020–23 drought, {county}'s vegetation fell to {ndviMin}% of normal ({ndviWhen}) and food insecurity peaked at IPC phase {ipcMax}.",
+        "fr": null
+      },
+      "prodAbout": {
+        "en": "Official county production from the KNBS National Agriculture Production Report (rice from AFA), 2019–2024 — six harvest years. **Detrending is deliberately not offered**: six points cannot separate a trend from the climate signal, so this figure shows aligned history, never a fitted relationship. Bars are grouped by harvest year, one per crop. The driver background is **lag-shifted** to the growing seasons (OND of the year before + MAM of the harvest year); tooltips also give the preceding short rains as the county's own rainfall tercile. The “Vs rainfall” view plots each harvest against the preceding short rains' rainfall anomaly — the same language a KMD outlook speaks.\n\n**Data:** KNBS NAPR + AFA; rainfall CHIRPS county series; drivers NOAA/HadISST/derived. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "prodVsDriverNote": {
+        "en": "Each labelled dot is one harvest year: x = the county's PRECEDING short rains (OND of the year before, % vs the 1991–2020 normal), y = that year's value. Six points — a pattern check, never a fitted relationship.",
+        "fr": null
+      },
+      "hsATitle": {
+        "en": "the official county picture (KNBS, 2019–2024)",
+        "fr": null
+      },
+      "hsBTitle": {
+        "en": "the long seasonal record (HarvestStat, 1990–2024)",
+        "fr": null
+      },
+      "twoRulers": {
+        "en": "::: {.callout-important}\n## Two rulers, one field\nThe figure above (KNBS NAPR) and the one below (HarvestStat, built from Kenya Ministry of Agriculture archives) measure the same county with **different rulers**: different vintages, different revision histories, sometimes twice the other's estimate for the same crop-year. Read each against **its own past only** — never compare a bar above with a bar below. That is why they are two figures and not one.\n:::",
+        "fr": null
+      },
+      "hsIntro": {
+        "en": "*This is the county's longest harvest record — back to 1990, and split by **season**: the long-rains crop (planted around March) and the short-rains crop (planted around October, harvested the following March). Because each harvest is tied to the season that grew it, wet and dry seasons can be read directly against outcomes. **By default the figure shows the 2015–2024 county records** — the seasonal record has an honest gap (no seasonal county reporting for planting years 2002–2014 long rains / 2001–2014 short rains — a statistics-system gap, not failed harvests), so the recent era reads cleanest; switch the Records control to see the full series back to 1990. Older records were kept by district and are remapped to today's counties — the era labels and tooltips say which ruler applies; in the dot views, lighter dots are district-era.*",
+        "fr": null
+      },
+      "hsCaption": {
+        "en": "Seasonal harvests from HarvestStat Africa (Kenya Ministry of Agriculture → FEWS NET). **Bars sit on the planting year** and are coloured by that planting season's county rainfall tercile — wet, near-normal, dry — so bar and season line up by construction. The Records control switches between the 2015–2024 county era (default) and the full 1990–2024 record, where the hatched band marks the reporting gap (planting years 2002–2014 long rains / 2001–2014 short rains — **not zero harvests**); ∅ = a season not reported outside the gap. Red-dashed outline = flagged upstream by HarvestStat quality control — shown but excluded from all summaries. “% of a usual year” compares each season with the **median of its own era** (1990–2001 district records, or 2015–2024 county records) — never across the gap.",
+        "fr": null
+      },
+      "hsAbout": {
+        "en": "**Data:** HarvestStat Africa v1.2 (Lee, Anderson et al. 2025, *Scientific Data*) — harmonized subnational crop statistics compiled by FEWS NET's Data Warehouse from Kenya Ministry of Agriculture / MoALD reports; CC-BY-4.0. Kenya seasonal series: long rains + short rains 1990–2024, with **no seasonal county reporting for planting years 2002–2014 (long rains) and 2001–2014 (short rains)**; pre-2013 records were kept for the old districts and are remapped to today's 47 counties (per-county provenance in the download). **Season anchoring:** every season is plotted on its **planting year**; the short-rains crop planted Oct Y is harvested ~Mar Y+1 but belongs to Y — that is what aligns it with OND(Y) rains. **Terciles:** county season rainfall (CHIRPS) ranked within 1991–2020 — driest third / middle / wettest third. **Era medians:** “% of a usual year” divides by the median of the same era (1990–2001 or 2015–2024), computed per variable and only where an era has ≥7 qc-clean seasons for that variable; QC-flagged rows (HarvestStat's own flags) are drawn hollow/dashed and excluded from medians and summaries. **The CSV download follows the Records selection** (2015–2024 by default; switch to the full record before downloading if you want 1990–2024). **This series and the KNBS figure above are different vintages — absolute values are not comparable.**",
+        "fr": null
+      },
+      "timelineAbout": {
+        "en": "**This is an editorial layer, not a data series.** The eight events come from `events.json`, a small file authored for this notebook — no upstream dataset, no `.meta.json`, no licence to cite. Each entry carries a name, a start and an end month, a phase label, a one-line story, and the seasons it claims. Nothing here is computed, and no number should be read off it: the measured driver values live in Figure 2.1 (hover its strips for the raw index value) and the season counts in Figure 2.2.\n\nOne row per event, oldest at the top, so no two labels collide. A bar runs from the event's start month to its end month, so **its length is the window someone drew around the event, not its severity**; the colour is the file's `phase` field — El Niño, La Niña, positive IOD — not an intensity, and the figure carries no colour key (the phase is spelled out in the event's name or story, and is a column in the download). The x-axis is fixed from January 1981 to January 2027 whatever the events cover — the earliest band starts September 1982, the latest ends May 2024. Hovering gives the event name and its blurb; the download gives event, start, end, phase and story.\n\n**The phase labels are editorial judgements and can disagree with the notebook's own classification.** The file's note says the windows were drawn against the driver-index thresholds the notebook computes rather than typed-in values, but the fit is loose at the margins: OND 2005 sits exactly on the −0.50 RONI threshold, so the page-wide classifier reads it Neutral while this figure paints the 2005–06 band La Niña; MAM 2017, inside the 2016–17 band, is ENSO-neutral (RONI −0.09); and 1997–98 was both a record El Niño and a strongly positive IOD (DMI +1.01) yet carries a single colour. Where the two differ, the computed classification on Figures 2.1 and 2.2 is the one to trust.\n\nCoverage is deliberately thin: **four La Niña droughts, three El Niños and one positive-IOD event — the ones people name, not the only bad seasons Kenya has had.** Read a blank stretch as \"no named event\", never as a settled or calm period. Each event also tags the seasons it claims (14 in all — 10 OND and 4 MAM, OND-1982 through OND-2023); those tags are what put an event name beside a year on the season-lens chips and the outlook analogue chips, and whether a named La Niña event ended within about three years of the data edge switches one line of the outlook's \"leaning wetter\" advice. **The driver shading on every other chart is computed from the indices, not taken from this list.**\n\n**Data:** curated named-event list (`data/KE-enso-explorer/events.json`), editorial — no licence. The indices the names refer to are NOAA CPC (Niño 3.4 / RONI), Met Office HadISST extended with NOAA PSL ERSST (DMI/IOD) and the derived Western-V. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "ndviPhaseAbout": {
+        "en": "Vegetation condition is WFP VAM's *Kenya: NDVI at Subnational Level* (MODIS collection 6.1, Terra+Aqua) from HDX, CC-BY, joined to the 47 counties through the OCHA admin boundaries. WFP publishes on sub-county units, so the county value is a pixel-weighted roll-up and % of normal is recomputed from the rolled-up values (NDVI ÷ WFP's long-term mean for that 10-day period × 100), never averaged from the sub-units. A dot is the plain mean of that season's nine 10-day values for the county you have selected — a mean of ratios, not a season-total ratio. The record starts July 2002, so each panel holds 24 seasons: OND 2002–2025, MAM 2003–2026, the same seasons for every county.\n\nEach panel keeps its season's driver whatever the driver selectors elsewhere in the notebook are set to. OND uses the combined ENSO + IOD state: the relative Niño index (RONI) for the concurrent OND season and the Dipole Mode Index (HadISST, coalesced with ERSST so recent seasons are not left blank — HadISST stops in April 2025, so OND 2025's DMI is ERSST throughout), each standardised on 1991–2020, averaged, then re-standardised on 1991–2020; the DMI season needs all three of October–December or the year is dropped. MAM uses the standardised Western-V (WNP) index for Mar–May, again with all three months required — no partial seasons. A season is strong at 1.5 sd or more, moderate from 1 to 1.5, otherwise neutral/weak; the hover label goes one step finer, separating weak from neutral at 0.5 sd. Dot colour is the same ±2 sd strength ramp used for the chart backgrounds. Because the drivers are ocean indices and the NDVI record covers all 47 counties identically, the grouping is the same for every county — changing county moves the dots up and down, never between bands. A year whose driver index is incomplete is dropped from the panel and kept in the CSV as \"no index\"; a panel with fewer than five usable years is replaced by a note instead of a chart.\n\nLimits. Bands holding no seasons are not drawn, so an absent band means the record holds no season of that strength — it is never a low value: as it stands OND has two strong El Niño/+IOD seasons (2015, 2023) and no strong La Niña/−IOD season, and MAM has two strong high-Western-V seasons (2021, 2025) and no low-Western-V band at all — not one of the 24 long rains reached −1 sd. **A median drawn on two or three dots describes those years, not a relationship** — and unlike Figure 2.2 this figure does not fade or star thin groups, so read the year labels. Greenness also answers temperature, grazing pressure, land use and the previous season's carry-over, and it follows rain with a lag of weeks, so the grouping shows association, never attribution.\n\n**Data:** WFP VAM subnational NDVI (MODIS, via HDX; CC-BY) on OCHA COD admin boundaries; drivers NOAA CPC (RONI), HadISST via NOAA PSL coalesced with ERSST (DMI), Western-V derived from ERSSTv5 after Funk et al. (2018). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "seasonStripAbout": {
+        "en": "County drought index (SPEI), pre-extracted as admin1 zonal means via the Atlas climate hub and served in `chirps_county.parquet`. It arrives already standardised from the producer and the notebook re-fits nothing, so the curve is raw SPEI and 0 is that window's 1991–2020 normal.\n\n**What is plotted.** The parquet serves twelve overlapping 3-month windows per year, each labelled by the year it *ends* in (DJF 2024 = Dec 2023 – Feb 2024). Annual rows are dropped and each window is drawn at its centre month — DJF at January, MAM at April, OND at November — one point per month, December excepted, with dashed rules at −1 and −2 and the negative area filled. SPEI-3 and SPEI-6 start in 1981 (first complete windows centred April and July), SPEI-12 in January 1982; all three run to the most recent served window, centred March 2026.\n\n**December is quarantined.** The NDJ window is served, but the producer builds it from Nov(Y) + Dec(Y−1) + Jan(Y) — a year-label shift applied to December only, mixing two different short-rains seasons (checked against the monthly county file: that recipe reproduces the served NDJ exactly, the correct end-labelled one does not). Its 1991–2020 spread is deflated to match — a median of 0.59 sd on SPEI-3 across counties against 0.82 for the other eleven windows, and the narrowest window in 40 of the 48 admin-1 units served. The chart therefore excludes NDJ outright and cuts the line wherever consecutive points fall more than 45 days apart; with a county driver the December background is unpainted for the same reason. **The December gap is a withheld measurement, not a dry month.** A producer-side fix is pending.\n\n**Backgrounds.** These come from the shared §3 driver controls — linked across every §3 figure, so changing one changes them all — not from SPEI. Continuous paints every month with its own **measured** rolling 3-month window, standardised per calendar month over 1991–2020: nothing is interpolated, and nothing is painted where a window is missing or beyond the last measured month. Discrete paints only the measured OND/MAM season windows, binned into classes (untinted below 1 sd, then moderate and strong). County drivers are re-standardised against their own 1991–2020 record, because a county-mean SPEI is variance-compressed by spatial averaging (0.49–0.94 sd per window, not 1) — so shade depth and curve depth are different scales, and the ramp saturates at ±2 sd. The county SPEI-3 driver with the 3-month window selected just repeats the curve behind itself; pick an ocean driver to read drought against ENSO/IOD state. Discrete OND blocks classify ENSO with RONI, the monthly view with the plain Niño 3.4 window, and the two can disagree: OND 2024 is a weak La Niña by RONI (−0.80 sd) but reads Neutral month by month (−0.25 to −0.43 sd). Western-V is a long-rains (MAM) control and always shows discrete season blocks.\n\n**Limits.** County averaging smooths sub-county extremes, so −1 here can hide worse locally. SPEI is a standardised water balance — rainfall minus evaporative demand — so a hot year deepens the deficit with no change in rain. The windows are not interchangeable: −1 on SPEI-3 is one failed season, −1 on SPEI-12 a year of accumulated deficit. Nothing here is a forecast.\n\n**Data:** CHIRPS v3 precipitation + CHIRTS-ERA5 temperature → SPEI (UCSB Climate Hazards Center, CC-BY; admin1 zonal via the Atlas climate hub); background drivers NOAA Niño 3.4 / RONI and HadISST–ERSST DMI. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "ndviAbout": {
+        "en": "WFP VAM \"Kenya: NDVI at Subnational Level\" (MODIS collection 6.1, Terra+Aqua) from HDX, CC-BY; county names from the OCHA Kenya Common Operational Dataset. WFP publishes on the legacy sub-county grid, where the admin2 p-code's first five characters are the county, so no name matching is guessed. A county-dekad is the **pixel-weighted** (n_pixels) rollup of its sub-units' NDVI and of WFP's own long-term mean for that dekad-of-year, and the anomaly is then recomputed as NDVI ÷ long-term mean × 100 — **never an average of sub-unit percentages**. The baseline is WFP's, not refitted here, so this figure shows condition against normal, not any long-term greening or browning trend. Coverage is complete: all 47 counties × 864 dekads, 2002-07-01 to 2026-06-21 (40,608 rows, no county-dekad unreported), and the pixel count behind each county is identical in every dekad, so no sub-unit is ever silently dropped. 2002 and 2026 are part-years, 18 dekads each.\n\nEach selected county gets its own panel. Panels share one time axis, but every panel's y-axis is fitted to that county's own range (always at least 90–110), so a deep-looking trough in a stable county is not the same fall as in a volatile one. The CSV download carries only the counties currently selected.\n\nBackground and outlines are the section's linked controls — change them at any figure in Section 3 and every figure follows. Everything is standardised against **1991–2020**. The strength words in the tooltips are neutral below 0.5 sd, weak 0.5–1, moderate 1–1.5, strong 1.5 sd or more, but the shading is not banded that way: *Continuous* is a smooth ramp saturating at ±2 sd, while *Discrete* deliberately leaves anything below 1 sd untinted (the evidence bins of Figure 2.2), so a season the tooltip calls \"weak\" shows as blank there. *Discrete* paints only the measured OND / MAM three-month windows and nothing between them; *Continuous* paints each month with a measured, centred three-month window standardised per calendar month, so a December is only compared with other Decembers. Nothing is interpolated and nothing is painted where a window is incomplete — the centred windows stop one month short of the last monthly index (last complete window May 2026, index data to June 2026), so the most recent dekads of NDVI sit over blank background.\n\nTwo documented deviations. With the ENSO (Niño 3.4) driver the OND season blocks classify with RONI while the monthly view uses plain Niño 3.4 — no monthly RONI is served — and the two can disagree outright: OND 2024 is −0.80 sd on RONI (weak La Niña) but −0.25, −0.33 and −0.43 sd for October, November and December (Neutral). Under the default ENSO + IOD driver the gap is smaller (−0.90 sd for the season against −0.35 / −0.63 / −0.86 sd monthly). And Western-V is a long-rains-only control, so it always falls back to discrete MAM blocks.\n\nDashed outlines mark seasons whose CHIRPS rainfall fell in the chosen tercile of 1991–2020 **for the county selected at the top of the page**; in multi-county mode the identical outlines are drawn over every panel, so read them against that county, not each panel's. The same applies to the background when the driver is one of the two county drivers (season rainfall, SPEI-3); the four ocean drivers are national and identical for every county.\n\nLimits: NDVI is greenness, not biomass, forage quality or livestock condition, and a county mean blends rangeland, cropland and forest in one number — a large county's average can hide a local failure. County means also rest on very unequal pixel counts, from about 2,300 for Marsabit down to 10 for Mombasa and 19 for Vihiga, so the smallest counties are the least robust. Dekadal MODIS composites remain sensitive to cloud and aerosol contamination.\n\n**Data:** WFP VAM NDVI (MODIS 6.1) via HDX, CC-BY; county boundaries OCHA Kenya COD; rainfall CHIRPS county series; drivers NOAA/HadISST/derived. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "ipcAbout": {
+        "en": "FEWS NET / IPC area classifications, staged as `ipc_county` (FEWS NET, public; fetched July 2026). The figure plots **only the Current Situation scenario** — the file's Near Term and Medium Term projections are neither drawn nor downloaded. Each point is `max_phase`: **the worst phase among the mapped IPC areas making up the county**, not a county-wide phase, so a Crisis step means at least one area was classified Crisis, not the whole county. 49 Current Situation rounds cover all 47 counties from Jan 2011 to Feb 2026 — four a year to 2015, three a year 2016–2024, then **one round in 2025 (October) and one so far in 2026 (February)**. The record's one long hole — **no assessment between Oct 2024 and Oct 2025** — can only be drawn in Steps as a flat twelve-month run, and the last two yearly bars each rest on a single assessment. The number of areas per county follows FEWS NET's own geography and changes over the record (1–3 areas in the two 2011 rounds, 4–27 from Jul 2011, 4–47 from Jun 2016), so early and late years are not strictly like-for-like.\n\n**Steps** draws step-after between assessments: the phase holds at its last classification until the next round, and nothing is drawn before the first or after the last assessment — a flat run is a classification carried forward, not a measurement. **Yearly bars** take the maximum over the assessments in a calendar year, so a year with one bad round reads the same as a year with three. The dashed rule sits at phase 3, the Crisis threshold. Phase 5 (Famine) has never been classified in this record — nor in the unplotted projections; the worst observed is phase 4 (Emergency), reached in 10 of the 47 counties, while 24 counties have reached phase 3 or worse at least once.\n\nTwo shadings on one panel would multiply into unreadable colour, so in Steps the horizontal IPC phase bands are drawn **only when Background is Off**; switch a driver background on and the phase reading moves to the axis labels and the tooltip. Yearly bars keep their IPC bar colours either way — the driver sits behind them. Backgrounds standardise the chosen driver over **1991–2020**: Discrete paints the measured OND (short rains) / MAM (long rains) 3-month windows; Continuous paints each month that has a complete measured centred 3-month window — nothing is interpolated, nothing is painted beyond the last measured month, and **an unpainted month means no measured window, not a neutral one** (the county rainfall and SPEI-3 drivers have no December window, so Decembers stay blank). Yearly bars have no month axis, so there Continuous still paints OND/MAM half-slots, only with the full colour ramp instead of binned strength classes. Western-V is a MAM-only control and always shows season blocks. One nuance: OND ENSO season blocks classify with RONI while the monthly view uses the plain Niño 3.4 window, and the two can disagree — with ENSO (Niño 3.4) selected, OND 2024 is a weak La Niña at −0.8 sd by RONI but reads Neutral month by month (−0.25 to −0.43 sd). Dashed outlines mark the seasons matching the season lens (only once a lens tercile is chosen), and the lens and background controls are the section's linked set — changing them here changes every driver-shaded figure; the Steps / Yearly bars radio is local to this figure.\n\nIPC phase is an assessed consensus classification, not a measurement, and it responds to conflict, markets and displacement as well as to rainfall — a Crisis step over a shaded La Niña season is alignment, not attribution. The CSV download is this county's Current Situation series only (reporting date + worst phase).\n\n**Data:** FEWS NET / IPC (`ipc_county`); drivers NOAA Niño 3.4 + RONI, HadISST/ERSST DMI, derived Western-V; county rainfall and SPEI-3 from CHIRPS. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "totAbout": {
+        "en": "Both series are FEWS NET Data Warehouse (FDW) retail prices, public data. For each month the code takes the **county median across every monitored market** of the goat price (Goats, local quality, per head) and of the maize price (Maize grain, white, per kg), then divides one by the other; a month is plotted only where both series report. Goats are monitored in a single market in 19 of the 20 counties that carry the series (Isiolo has two) and maize in up to six, so on the goat side one market effectively stands for the whole county — and only 20 of Kenya's 47 counties carry a goat series at all. The plotted record runs January 2008 to May 2026, and earlier in three counties — back to January 2000 in Garissa and Turkana, January 2001 in Isiolo; 16 of the 20 counties are missing May–July 2020 entirely. Gaps of one or two months are still bridged by a straight segment — the line breaks only where consecutive reported months are more than 100 days apart, that is three or more missing months. Quarterly and Yearly bars are the mean of the monthly ratios in the bucket — **not a ratio of averaged prices** — with the month count in the tooltip; a bucket running past the last reported month is drawn faded and labelled incomplete. The dashed line is the median of every monthly ratio in that county's own record, not a fixed baseline, and it stays the monthly median under the bar views. Background shading is the chosen driver's strength standardised over 1991–2020, and nothing is interpolated or painted beyond the last measured month: Discrete paints the OND (short rains) / MAM (long rains) season blocks and, for the ENSO drivers, classifies OND with RONI; Continuous paints every month with its own measured rolling 3-month window on the plain Niño3.4 index. The two can disagree in what they name — OND 2024 is a weak La Niña by RONI (−0.8 sd) but its months read Neutral (−0.25 to −0.43 sd) — though discrete blocks only take colour from 1 sd, so a weak season stays untinted in either view. Western-V, a MAM-only control, always shows season blocks, and dashed outlines mark the seasons matching the season lens. Both prices are nominal, so inflation largely cancels in the ratio, but animal condition is not recorded: in a drought a falling ratio mixes thinner animals with dearer cereal, and this figure cannot separate the two.\n\n**Data:** FEWS NET (FDW retail market prices); drivers NOAA / HadISST / derived. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "rwAbout": {
+        "en": "County-tagged humanitarian and situation reports from **UN OCHA ReliefWeb**, harvested through the ReliefWeb API under a registered project appname (`steward-cgiar-aaa-atlas-enso-…`; OCHA terms of use). One banked snapshot, fetched 9 July 2026: 15,736 report–county rows from 6,715 reports by 408 publishing organisations, all 47 counties, 3 Jan 2010 – 24 Jun 2026. The chart starts at 2010 because the harvest does — nothing earlier is being hidden.\n\nRows are matched to your county on a normalised name (case, hyphens and apostrophes ignored; all 47 spellings match, so no county is silently empty), counted by the calendar year of the report date, and each report gets **one colour, by first match: Drought → Flood (which also catches Flash Flood) → Epidemic → Other**. That rule hides a lot: 6,956 rows carry more than one hazard tag (up to 12 on one report), 2,297 tagged Drought *and* Flood stack as Drought, and of the 3,249 rows tagged Epidemic only 308 are drawn as Epidemic — the rest are absorbed, mostly by Drought. Read the drought band as a ceiling, the flood and epidemic bands as floors. Across all 15,736 rows the rule gives 75.7% Drought, 13.3% Other, 9.1% Flood, 2.0% Epidemic; Other is 1,757 rows with no hazard tag at all plus 330 whose only tags have no colour here (308 of them insect infestation — most insect, landslide and mudslide tags vanish into Drought or Flood instead, not into Other). A report attaches to every county it is tagged to — 2.34 counties on average, 39 at most — so one national drought report lifts many counties' bars at once, though within a county each report appears exactly once. County attachment happens upstream in `impacts/reliefweb_pipeline.py`, not yet in this repo (open action 2 in DATA.md), so it cannot be re-derived from the served file. The \"Most recent reports\" expander lists the county's five newest, linked to the originals on reliefweb.int.\n\nLimits: **report volume measures reporting, not impact** — it follows appeals, media cycles and agency presence, so counts are not a severity ranking between counties (Nairobi carries the most rows, 1,558, ahead of Turkana 1,272 and Marsabit 1,114; Murang'a has 9 — too few to read a shape into). The recent end is thin: 2025 is a complete year but holds 94 reports (285 rows) against 403 (1,008) in 2024, and 2026 stops at the 24 June snapshot with 42 (191). Treat the last two bars as a floor, not a fall in hazard. Background strengths are standardised on 1991–2020 (Discrete bins the intensity classes, Continuous uses the full colour ramp; a single-season driver such as Western-V shades only its MAM half-slot) — the shading and the dashed outlines line reports up against driver state, they attribute nothing.\n\n**Data:** UN OCHA ReliefWeb (ReliefWeb API, county-tagged reports); driver indices NOAA/HadISST/derived. [Methods & sources →](#methods)",
+        "fr": null
+      }
+    },
+    "b4": {
+      "title": {
+        "en": "4. What Is The Coming Season Likely To Bring?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Two different things, kept apart: **where the ocean is right now** (measured, below) and **what the coming season may bring** (a question for forecasters — principally the **Kenya Meteorological Department**, linked throughout). This notebook adds one history-based aid: what past seasons that looked like the forecast state did in this county. It is not a forecast, and this section deliberately stays thin — the mandated sources do the forecasting.*\n\n*Working the other way: when a KMD outlook says the coming season is likely **drier or wetter than usual**, go back to [Section 3](#events), set the lens to that season and season type, and read what the matching past seasons did in this county — pastures, food security, prices, harvests.*",
+        "fr": null
+      },
+      "statusTitle": {
+        "en": "the ocean right now",
+        "fr": null
+      },
+      "recentTitle": {
+        "en": "the three ocean signals, recent years",
+        "fr": null
+      },
+      "recentCaption": {
+        "en": "Each signal on its own scale: Niño 3.4 (°C, El Niño above the dashed threshold, La Niña below), the Indian Ocean Dipole (DMI), and the Western-V (standardised — interpret it for the Mar–May long rains only; no long-rains outlook is offered). The shaded band marks each signal's neutral zone.",
+        "fr": null
+      },
+      "recentAbout": {
+        "en": "Niño 3.4 sea-surface temperature anomaly from NOAA CPC; DMI from HadISST (coalesced with ERSST to reach the present); Western-V computed from ERSSTv5 following Funk et al. 2018 (validated against the published series). The three are plotted on separate scales because their units differ — a shared axis would misleadingly make the standardised Western-V look permanently extreme.\n\n**Data:** NOAA CPC · NOAA PSL / Met Office Hadley Centre · derived Western-V. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "ondTitle": {
+        "en": "short rains (Oct–Dec) — the analogue outlook",
+        "fr": null
+      },
+      "ondIntro": {
+        "en": "*The official ENSO-state forecast (NOAA CPC) says which phase is coming. History says what that phase has meant here: the map colours every county by what its short rains **usually did** in the past seasons most like the one forecast. An analogue of similar past years — **not a rainfall forecast**.*",
+        "fr": null
+      },
+      "outlookMapNote": {
+        "en": "Strong colour = most similar years mostly agreed; pale = they leaned that way but disagreed more. Hover any county for its counts. The selected county is outlined.",
+        "fr": null
+      },
+      "outlookCaption": {
+        "en": "Each county's most common short-rains outcome (wetter / near-normal / drier than the 1991–2020 normal) across the analogue years — the past ENSO seasons most similar to the current forecast state. Colour strength encodes how consistently the analogues agreed. An analogue composite, not a forecast.",
+        "fr": null
+      },
+      "outlookAbout": {
+        "en": "Analogue years are the past October–December seasons whose ENSO state (relative Niño index, RONI) matched the forecast phase — all of them, not a hand-picked subset; the number used is printed under the map. Each county is coloured by its most common rainfall tercile across those years, saturated where the agreement is strong and pale where it is weak; areas with no baseline are hatched. Small samples shift odds only: the card compares the count against what chance alone would produce.\n\n**Data:** CHIRPS v3 county rainfall + NOAA CPC ENSO-state probabilities and relative Niño index. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "offDiagonalWarn": {
+        "en": "⚠️ **The two short-rains signals currently disagree.** ENSO and the Indian Ocean Dipole usually move together in Oct–Dec — right now they do not, and the historical record contains almost no season with this combination, so the analogue guidance below carries **extra uncertainty**. The IOD-based reading (where the record allows one) is shown alongside for comparison.",
+        "fr": null
+      },
+      "mamTitle": {
+        "en": "long rains (Mar–May) — history only, no outlook",
+        "fr": null
+      },
+      "mamIntro": {
+        "en": "*The long rains cannot be skilfully forecast from ENSO — they answer mostly to the Western-V, which has no official forecast. So for Mar–May we show **history only**: how this county's long rains behaved in past Western-V states. No skilful long-rains outlook exists in this notebook; the Kenya Meteorological Department's seasonal forecast is the place to look.*",
+        "fr": null
+      },
+      "mamCaption": {
+        "en": "The county's past long-rains outcomes grouped by the Western-V state in those years (1981–2025) — a historical relationship, explicitly **not an outlook**. The dashed line is the one-third share expected by chance.",
+        "fr": null
+      },
+      "watch": {
+        "en": "**What to watch, and where.** The official Kenyan seasonal forecast and weather warnings are the **Kenya Meteorological Department**'s: [seasonal outlook](https://meteo.go.ke/forecast/seasonal-forecast) and [current warnings](https://meteo.go.ke/warnings) (meteo.go.ke). For the global ENSO state itself, the [NOAA CPC ENSO advisory](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml) updates monthly. The short rains are the forecastable season (the IOD gives usable lead time); the long rains are not — treat any Mar–May guidance as low-confidence.",
+        "fr": null
+      },
+      "canCannot": {
+        "can": {
+          "en": "**This section can tell you:** which way history leans for the coming short rains given the forecast ocean state, and how consistent that lean has been.",
+          "fr": null
+        },
+        "cannot": {
+          "en": "**It cannot tell you:** the actual rainfall forecast (that is KMD's), anything skilful about the long rains, or an outcome — a handful of similar past years shifts odds, nothing more.",
+          "fr": null
+        }
+      }
+    },
+    "explore": {
+      "title": {
+        "en": "5. National Context: Cross-Border Trade",
+        "fr": null
+      },
+      "intro": {
+        "en": "*National, not county: Kenya is a structural maize importer (Uganda, Tanzania), and imports surge when seasons fail — as in the 2021–22 drought. Measured at national border points (FEWS NET); the flow map is in the [technical annex](#annex-county-detail). County comparison now lives inside the vegetation figure in [section 3](#events); no cross-border price series is served yet (import/export prices are a planned data addition).*",
+        "fr": null
+      },
+      "compareIntro": {
+        "en": "*Each line is one county; the season follows the control at the top of the page.*",
+        "fr": null
+      },
+      "rainTitle": {
+        "en": "seasonal rainfall by county",
+        "fr": null
+      },
+      "rainCaption": {
+        "en": "Seasonal rainfall (CHIRPS v3) for each selected county; labels sit at the line ends. When \"Both seasons\" is selected the value is the OND + MAM combined total.",
+        "fr": null
+      },
+      "ndviTitle": {
+        "en": "vegetation condition by county",
+        "fr": null
+      },
+      "ndviCaption": {
+        "en": "Annual-mean NDVI as % of normal for each selected county; the dashed line at 100 is the long-term normal.",
+        "fr": null
+      },
+      "tradeTitle": {
+        "en": "national context — Kenya's cross-border food trade",
+        "fr": null
+      },
+      "tradeIntro": {
+        "en": "*Arrow-map detail by border point and product is in the [technical annex](#annex-county-detail).*",
+        "fr": null
+      },
+      "importsTitle": {
+        "en": "imports into Kenya, by partner",
+        "fr": null
+      },
+      "importsCaption": {
+        "en": "Quantity of the selected product imported into Kenya per year, stacked by partner country, in the product's unit (FEWS NET border monitoring; informal flows are field estimates, summed with formal). **A missing bar can be a recorded zero or no monitoring — the chart cannot tell them apart**; years with no records are skipped. National data — the same for every county.",
+        "fr": null
+      },
+      "importsAbout": {
+        "en": "FEWS NET's East Africa Cross-Border Trade (XBT) monitoring banks a monthly quantity per partner, direction, trade type and product for consignments seen at **8 Kenyan border posts** (Taveta, Moyale, Namanga, Isebania, Malaba, Lunga Lunga, Lwakhaka, Loitoktok), so **this is a national / border-post layer, not a county one** — changing the county selection does nothing to it. The staging script (`_sources/parse_xbt.py`) keeps Kenya-touching flows only (destination Kenya → Import, source Kenya → Export; transit dropped, as are rows with an unmapped partner or an unparsable quantity) and passes the banked quantity through verbatim — nothing is modelled, rescaled or gap-filled. This figure sums the Import rows for the product you pick by partner and calendar year, formal and informal together.\n\n**Units are never mixed.** 8 of the 99 products are banked in more than one unit (refined vegetable oil in both litres and kilograms), so the chart keeps only the unit with the largest total quantity for that product — counting exports too — and drops every other row: 18 import rows in all, and for watermelon every import row, which leaves that product's chart empty. Kilograms are drawn as kilotonnes (1 kt = 1,000,000 kg); livestock stay in head (the axis prints the raw code, \"ea\"), oils in litres.\n\n**Why a gap is ambiguous.** Two-thirds of the record — 15,966 of 24,272 rows — is an explicit zero, so a partner-year that sums to zero draws a zero-height, invisible bar: for Maize Grain (White), Uganda is a recorded zero in 2013–15 and 2018–21. Years with no rows at all get no slot on the axis rather than an empty one; 22 of the 94 products with imports have a missing year inside their own span.\n\nKnown limits: 24,272 Kenya-touching rows, 2010–2024, 99 products, 10 partners; only 20,802 rows are imports, and they arrive from five partners — Tanzania, Ethiopia and Uganda carry all but 50 rows, Malawi and Zambia the remainder. 5 products are export-only, so picking one draws nothing. Coverage is thin at the ends and uneven between: 2010 is 11 rows of Ethiopian cattle at Moyale alone, 2024 stops in September, Taveta reports only from 2012, Lunga Lunga only 2022–24, Loitoktok only 2011–12 — **a bar that falls can mean less monitoring, not less trade.** Informal volumes are field aggregations, not customs records. The source carries no price or value column, so this is quantity only and cannot be read as the value of trade.\n\n**Data:** FEWS NET East Africa Cross-Border Trade (XBT) monitoring (FEWS NET public licence). [Methods & sources →](#methods)",
+        "fr": null
+      }
+    },
+    "annex": {
+      "title": {
+        "en": "6. Technical Annexes",
+        "fr": null
+      },
+      "intro": {
+        "en": "*The full technical record behind the story above: driver mechanics, the statistical strength of the teleconnections, the national production analysis, the crop calendar, conflict data, trade detail, and per-dataset methods. Written for analysts. (The full GESI table lives in [Figure 1.4](#stakes) via its \"All indicators\" switch.)*",
+        "fr": null
+      },
+      "a1Title": {
+        "en": "Driver mechanics",
+        "fr": null
+      },
+      "a1Intro": {
+        "en": "*The ocean indices themselves and how they interact. ENSO and the IOD are one coupled Indo-Pacific system in the short rains; the Western-V is a partly-separate control on the long rains (Niño 3.4 ↔ Western-V correlation ≈ 0 — computed live below).*",
+        "fr": null
+      },
+      "driverTitle": {
+        "en": "the selected index, season by season",
+        "fr": null
+      },
+      "driverCaption": {
+        "en": "The selected ocean index as a per-year seasonal mean; points coloured by ENSO phase. The Western-V index is defined and standardised for Mar–May — other windows are shown for context only.",
+        "fr": null
+      },
+      "interactTitle": {
+        "en": "ENSO vs IOD, short-rains season",
+        "fr": null
+      },
+      "interactCaption": {
+        "en": "Each point is one Oct–Dec season: ENSO (Niño 3.4) against the IOD (DMI), coloured by the IOD's sign that year, with the fitted line and live correlation in the heading. The two behave as one coupled system in the short rains.",
+        "fr": null
+      },
+      "combinedTitle": {
+        "en": "combined driver state (z-scores)",
+        "fr": null
+      },
+      "combinedCaption": {
+        "en": "All three drivers standardised against 1991–2020 so they share one axis. Read as the ocean regime: all positive = strong wet signal for the short rains; ENSO/IOD negative = drought risk.",
+        "fr": null
+      },
+      "a2Title": {
+        "en": "How strong are the links, really?",
+        "fr": null
+      },
+      "a2Intro": {
+        "en": "*The statistical evidence behind section 2, computed live in the browser from the served data. Correlations use the full 1981–2025 county record; production comparisons acknowledge their six-year limit.*",
+        "fr": null
+      },
+      "corrTitle": {
+        "en": "county correlation map — seasonal rainfall vs driver",
+        "fr": null
+      },
+      "corrCaption": {
+        "en": "Pearson correlation between each county's seasonal rainfall anomaly and the driver index for that season, 1981–2025. Counties where the correlation is not significant (p > 0.05) are greyed. With 47 counties tested at once, a few would pass by chance — treat the spatial pattern, not any single county, as the finding (no multiple-testing correction applied).",
+        "fr": null
+      },
+      "dotTitle": {
+        "en": "county harvests vs season rainfall — six years, a pattern check",
+        "fr": null
+      },
+      "dotCaption": {
+        "en": "Each labelled dot is one year (2019–2024): the growing-season rainfall percentile (vs the county's 1981–2025 record) against that year's production relative to the county's own median. **Six seasons — a pattern check, not a statistic.** Season windows follow the county's crop calendar where available.",
+        "fr": null
+      },
+      "a3Title": {
+        "en": "National production vs drivers (the honest statistics)",
+        "fr": null
+      },
+      "a3Intro": {
+        "en": "*Kenya has no long county production series yet, so the statistical production–climate test uses **national FAOSTAT**, detrended (the strong upward production trend would otherwise swamp the climate signal). The relationship is weak and mostly not significant — shown as such. National maize is long-rains dominated, so the short-rains signal is diluted here; the county-level effect awaits a longer county series. One caution: trying many crops until one looks significant is itself a statistical trap — read the ensemble of results, not the best one.*",
+        "fr": null
+      },
+      "scatterTitle": {
+        "en": "production anomaly (national, detrended) vs driver",
+        "fr": null
+      },
+      "scatterCaption": {
+        "en": "National detrended production anomaly against the driver averaged over the season selected at the top of the page; live correlation, sample size and significance in the heading. The regression line is dashed and faint when not significant — a weak relationship is not dressed up as a signal.",
+        "fr": null
+      },
+      "trendTitle": {
+        "en": "the trend that was removed",
+        "fr": null
+      },
+      "trendCaption": {
+        "en": "The raw national production series and its fitted linear trend — what is subtracted to form the detrended anomaly above (FAOSTAT, 1961–present).",
+        "fr": null
+      },
+      "a5Title": {
+        "en": "County detail: crop calendar, conflict, trade flows",
+        "fr": null
+      },
+      "acledTitle": {
+        "en": "conflict events (context layer)",
+        "fr": null
+      },
+      "acledIntro": {
+        "en": "*Conflict fatalities recorded for the county (ACLED). Kept in the annex deliberately: conflict has many drivers, and the climate–conflict association in this data is **suggestive only** (a permutation test does not reach significance) — it must never be read as a county ranking or a causal claim.*",
+        "fr": null
+      },
+      "acledCaption": {
+        "en": "Conflict fatalities per year recorded for the county (ACLED). Context for the impacts pathway; the climate–conflict link is exploratory and not statistically established.",
+        "fr": null
+      },
+      "tradeMapTitle": {
+        "en": "cross-border trade flows",
+        "fr": null
+      },
+      "tradeMapCaption": {
+        "en": "Total recorded flows by partner for the selected product (FEWS NET XBT, 2010–2024). Arrow width is scaled by quantity (legend below); arrows connect country centres, not actual crossings. National border-point data.",
+        "fr": null
+      },
+      "a6Title": {
+        "en": "Methods, data & citation",
+        "fr": null
+      },
+      "a4Title": {
+        "en": "Subcounty rainfall maps & weather-station validation",
+        "fr": null
+      },
+      "a4Note": {
+        "en": "*In preparation: subcounty CHIRPS v3 seasonal rainfall (new admin-2 zonal build) and open weather-station validation of CHIRPS (NOAA GHCN-Daily / GSOD). Both are approved data builds; they will appear here.*",
+        "fr": null
+      }
+    },
+    "methods": {
+      "title": {
+        "en": "Methods & data sources",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Every dataset behind this page, how it was processed, and how to verify it. The full acquisition manifest — source URLs, licences, build scripts and per-file metadata — is versioned with this notebook in [`data/KE-enso-explorer/DATA.md`](https://github.com/AdaptationAtlas/atlas_notebooks/blob/notebooks/KE-enso-explorer-dev/data/KE-enso-explorer/DATA.md).*",
+        "fr": null
+      },
+      "drivers": {
+        "en": "**Ocean drivers.** Niño 3.4 / ONI / RONI from NOAA CPC (validated r=0.998 against NOAA's published series); Indian Ocean Dipole (DMI) from HadISST via NOAA PSL, coalesced with ERSST to reach the present; Western-V computed from ERSSTv5 following Funk et al. 2018 (reproduces the published post-1997 long-rains sign). ENSO-state probabilities from NOAA CPC's official RONI forecast table.",
+        "fr": null
+      },
+      "rainfall": {
+        "en": "**Rainfall, temperature and drought index.** CHIRPS v3 precipitation, CHIRTS-ERA5 temperature and SPEI, zonally aggregated to Kenya's 47 counties (GAUL 2024 boundaries) in the Atlas data pipeline. Seasonal values are the county mean over the season window; anomalies use the 1991–2020 reference. Note the reference period sits inside a warming, drying-long-rains record — the baseline itself is not stationary.",
+        "fr": null
+      },
+      "production": {
+        "en": "**Production.** County crops: KNBS National Agriculture Production Report, both current editions, extracted by a deterministic engine with additivity-to-printed-total as the primary gate (details in the produce panel's About). Rice from the Agriculture & Food Authority. National staples for the statistical test: FAOSTAT, linearly detrended per crop before relating to drivers. Livestock population and products: KNBS NAPR annexes, dual-engine validated.",
+        "fr": null
+      },
+      "impacts": {
+        "en": "**Impacts.** IPC food-security phase (FEWS NET, worst-area Current Situation); retail market prices (FEWS NET FDW; anomaly views computed from the served series); NDVI vegetation condition (MODIS via WFP VAM, % of dekadal normal, pixel-weighted to county); humanitarian reports (UN OCHA ReliefWeb, county-tagged); conflict (ACLED, aggregated weekly county counts — annex only); cross-border trade (FEWS NET XBT, national border points).",
+        "fr": null
+      },
+      "outlook": {
+        "en": "**Outlook method.** The short-rains analogue outlook takes every past OND season whose ENSO state (relative Niño index, RONI, ±0.5 threshold) matched the CPC forecast phase, and reports each county's tercile outcomes across those years, with agreement encoded as colour strength and the modal count benchmarked against its chance expectation. (A nearest-neighbour refinement on index magnitude awaits a served current-RONI value.) It is a historical analogue, not a rainfall forecast; the official Kenyan seasonal forecast is KMD's. No long-rains outlook is offered — the long rains are not skilfully forecastable from ENSO, and the Western-V has no operational forecast.",
+        "fr": null
+      },
+      "honesty": {
+        "en": "**Anti-hallucination rule.** No numeric value on this page was produced by a language model reading and typing it: every number is either parsed by deterministic code with a validation gate (dual-engine / additivity / cross-edition / consensus) or computed live in the browser from the served data. Tables that fail their gate are held back, not served. Missing KNBS county-years are gaps, never zeros.",
+        "fr": null
+      },
+      "ackTitle": {
+        "en": "Data sources & acknowledgements",
+        "fr": null
+      },
+      "acknowledgements": {
+        "en": "**This notebook stands on data freely shared by many institutions. We gratefully thank:**\n\n- **KNBS — Kenya National Bureau of Statistics** — National Agriculture Production Report (county crops, livestock, products) and the County Gender Data Sheets 2025.\n- **Agriculture & Food Authority (AFA), Kenya** — rice county production.\n- **Kenya Meteorological Department** — the official national seasonal forecast and weather warnings this notebook points to.\n- **UCSB Climate Hazards Center** — CHIRPS v3 rainfall, CHIRTS temperature, SPEI.\n- **NOAA Climate Prediction Center** — Niño 3.4 / ONI / RONI and the ENSO-state probability forecast.\n- **NOAA Physical Sciences Laboratory & the Met Office Hadley Centre** — Indian Ocean Dipole (HadISST DMI).\n- **FAO** — FAOSTAT national production and GAUL 2024 administrative boundaries.\n- **FEWS NET** — IPC food-security phase, FDW market prices, cross-border trade flows.\n- **ACLED** — Armed Conflict Location & Event Data. Data courtesy of ACLED (acleddata.com); used here as aggregated county counts.\n- **WFP VAM** — MODIS-derived NDVI vegetation condition.\n- **IFPRI (MapSPAM) & FAO (GLW4)** — crop & livestock exposure surfaces.\n- **UN OCHA ReliefWeb** — situation reports.\n- **JRC ASAP** — crop-calendar seasonal timing.\n\nOutlook design drew on IWMI's ENSO Outlook. **If you reuse figures derived from these data, please cite the original providers** — each figure's *Data* line names them. Any errors in the derived products are ours, not the providers'.",
+        "fr": null
+      },
+      "citation": {
+        "en": "**Citing this notebook:** Africa Agriculture Adaptation Atlas (2026). *ENSO Explorer — Kenya* (v2). Alliance of Bioversity International & CIAT / CGIAR. adaptationatlas.cgiar.org. Please also cite the original data providers named on each figure.",
+        "fr": null
+      }
+    },
+    "glance": {
+      "statusEl": {
+        "en": "El Niño conditions are present",
+        "fr": null
+      },
+      "statusLa": {
+        "en": "La Niña conditions are present",
+        "fr": null
+      },
+      "statusNeutral": {
+        "en": "The Pacific is in a neutral state",
+        "fr": null
+      },
+      "iodPos": {
+        "en": "the Indian Ocean Dipole is positive",
+        "fr": null
+      },
+      "iodNeg": {
+        "en": "the Indian Ocean Dipole is negative",
+        "fr": null
+      },
+      "iodNeu": {
+        "en": "the Indian Ocean Dipole is near neutral",
+        "fr": null
+      },
+      "mixedFlag": {
+        "en": "⚠ mixed signals — see the outlook section",
+        "fr": null
+      },
+      "tileOutlook": {
+        "en": "Short rains outlook",
+        "fr": null
+      },
+      "tileLast": {
+        "en": "Last short rains",
+        "fr": null
+      },
+      "tileVop": {
+        "en": "Agriculture at stake",
+        "fr": null
+      },
+      "tileState": {
+        "en": "Ocean now",
+        "fr": null
+      },
+      "dataThrough": {
+        "en": "data through",
+        "fr": null
+      },
+      "staleNote": {
+        "en": "check KMD / NOAA for the current state",
+        "fr": null
+      }
+    },
+    "consequence": {
+      "wetAfterDrought": {
+        "en": "Good for pasture recovery and planting — but after drought, heavy short rains bring flash-flood and livestock-disease risk, as in 1997 and 2023.",
+        "fr": null
+      },
+      "wet": {
+        "en": "Historically good for planting and pasture — but heavy seasons carry flood risk in low-lying areas.",
+        "fr": null
+      },
+      "dry": {
+        "en": "Plan for pasture and water stress: past seasons like this leaned dry here — early destocking and water planning beat late response.",
+        "fr": null
+      },
+      "near": {
+        "en": "No strong lean either way in past similar seasons — watch the KMD updates as the season approaches.",
+        "fr": null
+      }
+    },
+    "general": {
+      "quickInsight": {
+        "en": "Quick insight",
+        "fr": null
+      },
+      "canCannotTitle": {
+        "en": "What this can and cannot tell you",
+        "fr": null
+      },
+      "notReported": {
+        "en": "not reported — not zero",
+        "fr": null
+      },
+      "dataAsOf": {
+        "en": "Data as of",
+        "fr": null
+      }
+    },
+    "downloads": {
+      "title": {
+        "en": "Data downloads",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Every dataset behind this notebook, downloadable as served. **Please use both citations** — the original provider did the hard work; the Atlas did the county harmonisation and validation. These files will move to the CGIAR Climate Data Hub; the links here will keep working until then.*",
+        "fr": null
+      },
+      "atlasCite": {
+        "en": "Africa Agriculture Adaptation Atlas (2026), ENSO Explorer — Kenya (v2), Alliance of Bioversity International & CIAT / CGIAR, adaptationatlas.cgiar.org.",
+        "fr": null
+      },
+      "hubNote": {
+        "en": "*Derived/intermediate products (county aggregations, detrended series, tercile tables) carry both citations above: the original dataset citation and the Atlas derivation citation.*",
+        "fr": null
+      }
+    }
+  }
+}

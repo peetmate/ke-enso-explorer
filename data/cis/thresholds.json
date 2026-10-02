@@ -1,0 +1,373 @@
+{
+  "admin0": {
+    "indicators": {
+      "OpticalAvailability_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.409532537
+        },
+        {
+          "category": "Moderate",
+          "min": 0.409532537,
+          "max": 0.576937735
+        },
+        {
+          "category": "High",
+          "min": 0.576937735,
+          "max": 1
+        }
+      ],
+      "WeatherStation_idx": [
+        {
+          "category": "Weak",
+          "min": 0,
+          "max": 0.048611201
+        },
+        {
+          "category": "Moderate",
+          "min": 0.048611201,
+          "max": 0.089257525
+        },
+        {
+          "category": "Strong",
+          "min": 0.089257525,
+          "max": 1
+        }
+      ],
+      "Precipitation variability agreement": [
+        {
+          "category": "No agreement (0 sources)",
+          "value": 0
+        },
+        {
+          "category": "Low agreement (1 sources)",
+          "value": 1
+        },
+        {
+          "category": "Moderate agreement (2 sources)",
+          "value": 2
+        },
+        {
+          "category": "High agreement (3 sources)",
+          "value": 3
+        },
+        {
+          "category": "Full agreement (4 sources)",
+          "value": 4
+        }
+      ],
+      "ShortTerm_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.259651954
+        },
+        {
+          "category": "Moderate",
+          "min": 0.259651954,
+          "max": 0.308293154
+        },
+        {
+          "category": "High",
+          "min": 0.308293154,
+          "max": 1
+        }
+      ],
+      "LongTerm_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.204930007
+        },
+        {
+          "category": "Moderate",
+          "min": 0.204930007,
+          "max": 0.350835979
+        },
+        {
+          "category": "High",
+          "min": 0.350835979,
+          "max": 1
+        }
+      ],
+      "cis_dfci": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.209791889
+        },
+        {
+          "category": "Moderate",
+          "min": 0.209791889,
+          "max": 0.283191021
+        },
+        {
+          "category": "High",
+          "min": 0.283191021,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "admin1": {
+    "indicators": {
+      "OpticalAvailability_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.353165741
+        },
+        {
+          "category": "Moderate",
+          "min": 0.353165741,
+          "max": 0.527069122
+        },
+        {
+          "category": "High",
+          "min": 0.527069122,
+          "max": 1
+        }
+      ],
+      "WeatherStation_idx": [
+        {
+          "category": "Weak",
+          "min": 0,
+          "max": 0.048611201
+        },
+        {
+          "category": "Moderate",
+          "min": 0.048611201,
+          "max": 0.089257525
+        },
+        {
+          "category": "Strong",
+          "min": 0.089257525,
+          "max": 1
+        }
+      ],
+      "Precipitation variability agreement": [
+        {
+          "category": "No agreement (0 sources)",
+          "value": 0
+        },
+        {
+          "category": "Low agreement (1 sources)",
+          "value": 1
+        },
+        {
+          "category": "Moderate agreement (2 sources)",
+          "value": 2
+        },
+        {
+          "category": "High agreement (3 sources)",
+          "value": 3
+        },
+        {
+          "category": "Full agreement (4 sources)",
+          "value": 4
+        }
+      ],
+      "ShortTerm_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.25018317
+        },
+        {
+          "category": "Moderate",
+          "min": 0.25018317,
+          "max": 0.357411007
+        },
+        {
+          "category": "High",
+          "min": 0.357411007,
+          "max": 1
+        }
+      ],
+      "LongTerm_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.208522633
+        },
+        {
+          "category": "Moderate",
+          "min": 0.208522633,
+          "max": 0.383316408
+        },
+        {
+          "category": "High",
+          "min": 0.383316408,
+          "max": 1
+        }
+      ],
+      "cis_dfci": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.123045322
+        },
+        {
+          "category": "Moderate",
+          "min": 0.123045322,
+          "max": 0.172921871
+        },
+        {
+          "category": "High",
+          "min": 0.172921871,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "admin2": {
+    "indicators": {
+      "OpticalAvailability_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.331835896
+        },
+        {
+          "category": "Moderate",
+          "min": 0.331835896,
+          "max": 0.516153405
+        },
+        {
+          "category": "High",
+          "min": 0.516153405,
+          "max": 1
+        }
+      ],
+      "WeatherStation_idx": [
+        {
+          "category": "Weak",
+          "min": 0,
+          "max": 0.048611201
+        },
+        {
+          "category": "Moderate",
+          "min": 0.048611201,
+          "max": 0.089257525
+        },
+        {
+          "category": "Strong",
+          "min": 0.089257525,
+          "max": 1
+        }
+      ],
+      "Precipitation variability agreement": [
+        {
+          "category": "No agreement (0 sources)",
+          "value": 0
+        },
+        {
+          "category": "Low agreement (1 sources)",
+          "value": 1
+        },
+        {
+          "category": "Moderate agreement (2 sources)",
+          "value": 2
+        },
+        {
+          "category": "High agreement (3 sources)",
+          "value": 3
+        },
+        {
+          "category": "Full agreement (4 sources)",
+          "value": 4
+        }
+      ],
+      "ShortTerm_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.240350949
+        },
+        {
+          "category": "Moderate",
+          "min": 0.240350949,
+          "max": 0.346221815
+        },
+        {
+          "category": "High",
+          "min": 0.346221815,
+          "max": 1
+        }
+      ],
+      "LongTerm_idx": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.199197114
+        },
+        {
+          "category": "Moderate",
+          "min": 0.199197114,
+          "max": 0.362914165
+        },
+        {
+          "category": "High",
+          "min": 0.362914165,
+          "max": 1
+        }
+      ],
+      "cis_dfci": [
+        {
+          "category": "Low",
+          "min": 0,
+          "max": 0.073178813
+        },
+        {
+          "category": "Moderate",
+          "min": 0.073178813,
+          "max": 0.112444305
+        },
+        {
+          "category": "High",
+          "min": 0.112444305,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "bivariatePriority": {
+    "High × High": {
+      "rank": 3,
+      "textKey": "s2PriorityHigh"
+    },
+    "High × Moderate": {
+      "rank": 2,
+      "textKey": "s2PriorityModerate"
+    },
+    "High × Low": {
+      "rank": 2,
+      "textKey": "s2PriorityModerate"
+    },
+    "Moderate × High": {
+      "rank": 2,
+      "textKey": "s2PriorityModerate"
+    },
+    "Low × High": {
+      "rank": 2,
+      "textKey": "s2PriorityModerate"
+    },
+    "Moderate × Moderate": {
+      "rank": 1,
+      "textKey": "s2PriorityLow"
+    },
+    "Moderate × Low": {
+      "rank": 1,
+      "textKey": "s2PriorityLow"
+    },
+    "Low × Moderate": {
+      "rank": 1,
+      "textKey": "s2PriorityLow"
+    },
+    "Low × Low": {
+      "rank": 1,
+      "textKey": "s2PriorityLow"
+    }
+  }
+}

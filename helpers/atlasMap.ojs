@@ -1,0 +1,263 @@
+// Shared Atlas map utilities.
+
+/** Normalize a FeatureCollection or feature array to a FeatureCollection. */
+function _atlasFeatureCollection(features) {
+  if (Array.isArray(features)) {
+    return { type: "FeatureCollection", features };
+  }
+
+  if (
+    features?.type === "FeatureCollection" &&
+    Array.isArray(features.features)
+  ) {
+    return features;
+  }
+
+  throw new TypeError(
+    "features must be a GeoJSON FeatureCollection or an array of features",
+  );
+}
+
+/** Render an Atlas choropleth with optional filtered boundary highlights. */
+function makeChoropleth({
+  features,
+  width,
+  height = 550,
+  caption,
+  fill,
+  color,
+  adminHighlight,
+  channels,
+  tooltip,
+  projection = "azimuthal-equal-area",
+  noDataColor = "#e0e0e0",
+  baseMarkOptions = {},
+  hoverMarkOptions = {},
+  extraMarks = [],
+} = {}) {
+  const featureCollection = _atlasFeatureCollection(features);
+  const hasData = fill !== undefined && fill !== null;
+  const colorConfig = color ? { legend: true, ...color } : undefined;
+  const hasNestedTooltip =
+    tooltip && typeof tooltip === "object" && "channels" in tooltip;
+  const { channels: nestedChannels, ...nestedTooltipOptions } =
+    hasNestedTooltip ? tooltip : {};
+  const resolvedChannels = channels || nestedChannels || {};
+  const resolvedTooltip = hasNestedTooltip ? nestedTooltipOptions : tooltip;
+
+  const projectionConfig =
+    typeof projection === "string"
+      ? { type: projection, domain: featureCollection }
+      : typeof projection === "function"
+        ? projection
+        : {
+            ...projection,
+            domain: projection?.domain ?? featureCollection,
+          };
+
+  const highlights = adminHighlight
+    ? Array.isArray(adminHighlight)
+      ? adminHighlight.filter(Boolean)
+      : [adminHighlight]
+    : [];
+
+  const highlightMarks = highlights.map((highlight) => {
+    const { filter, ...markOptions } = highlight;
+
+    if (typeof filter !== "function") {
+      throw new TypeError("Each adminHighlight requires a filter function");
+    }
+
+    return Plot.geo(
+      {
+        type: "FeatureCollection",
+        features: featureCollection.features.filter(filter),
+      },
+      {
+        fill: null,
+        stroke: "#333",
+        strokeWidth: 1.5,
+        ...markOptions,
+      },
+    );
+  });
+
+  const additionalMarks =
+    extraMarks === null || extraMarks === undefined
+      ? []
+      : Array.isArray(extraMarks)
+        ? extraMarks.filter(Boolean)
+        : [extraMarks];
+
+  return Plot.plot({
+    caption,
+    width,
+    height,
+    marginBottom: 10,
+    style: { overflow: "visible", fontSize: "13px" }, // let hover tips escape the svg edge
+
+    projection: projectionConfig,
+    color: colorConfig,
+    marks: [
+      Plot.geo(featureCollection, {
+        fill: hasData ? fill : noDataColor,
+        stroke: "#fff",
+        strokeWidth: 0.5,
+        ...baseMarkOptions,
+      }),
+      ...highlightMarks,
+      ...additionalMarks,
+      Plot.geo(
+        featureCollection,
+        Plot.pointer(
+          Plot.centroid({
+            stroke: "#333",
+            strokeWidth: 1.5,
+            channels: resolvedChannels,
+            tip: resolvedTooltip,
+            ...hoverMarkOptions,
+          }),
+        ),
+      ),
+    ],
+  });
+}
+
+/** Join rows into feature properties without mutating either input. */
+function mergeDataToBoundaries({
+  boundaries,
+  data,
+  boundaryKey,
+  dataKey,
+  dataProp = "data",
+  defaultValue = null,
+} = {}) {
+  const featureCollection = _atlasFeatureCollection(boundaries);
+  const getBoundaryKey =
+    typeof boundaryKey === "function"
+      ? boundaryKey
+      : (feature) => feature?.properties?.[boundaryKey];
+  const getDataKey =
+    typeof dataKey === "function" ? dataKey : (row) => row?.[dataKey];
+
+  if (
+    !(typeof boundaryKey === "function" || typeof boundaryKey === "string") ||
+    !(typeof dataKey === "function" || typeof dataKey === "string")
+  ) {
+    throw new TypeError("boundaryKey and dataKey must be functions or strings");
+  }
+
+  if (!Array.isArray(data)) {
+    throw new TypeError("data must be an array");
+  }
+
+  const index = new Map();
+  for (const row of data) {
+    const key = getDataKey(row);
+    if (key !== null && key !== undefined) index.set(key, row);
+  }
+
+  return {
+    ...featureCollection,
+    features: featureCollection.features.map((feature) => {
+      const key = getBoundaryKey(feature);
+      const match =
+        key === null || key === undefined ? undefined : index.get(key);
+
+      return {
+        ...feature,
+        properties: {
+          ...feature.properties,
+          [dataProp]: match ?? defaultValue,
+        },
+      };
+    }),
+  };
+}
+
+/** Render the rotated 3×3 legend used by Atlas bivariate maps. */
+function makeBivariateLegend({
+  colors,
+  xLabel,
+  yLabel,
+  width = 305,
+  height = 290,
+  classes = ["High", "Moderate", "Low"],
+  fontSize = 18,
+  missingColor = "#ccc",
+} = {}) {
+  const colorFor = (key) =>
+    (colors instanceof Map ? colors.get(key) : colors?.[key]) ?? missingColor;
+
+  const data = classes.flatMap((yClass, row) =>
+    classes.map((xClass, column) => ({
+      x: xClass,
+      y: yClass,
+      key: `${xClass} × ${yClass}`,
+      fill: colorFor(`${xClass} × ${yClass}`),
+      row,
+      column,
+    })),
+  );
+
+  const legend = Plot.plot({
+    width,
+    height,
+    marginTop: 15,
+    style: {
+      fontSize: `${fontSize}px`,
+    },
+    x: {
+      axis: "bottom",
+      domain: [...classes].reverse(),
+      label: null,
+      ticks: [],
+      tickSize: 0,
+    },
+    y: {
+      axis: "left",
+      domain: classes,
+      label: null,
+      ticks: [],
+      tickSize: 0,
+    },
+    color: {
+      type: "categorical",
+      domain: data.map((d) => d.key),
+      range: data.map((d) => d.fill),
+      legend: false,
+    },
+    marks: [
+      Plot.cell(data, {
+        x: "x",
+        y: "y",
+        fill: "key",
+        inset: -5,
+        tip: false,
+        title: (d) => `${d.y} ${yLabel} × ${d.x} ${xLabel}`,
+      }),
+      Plot.text([`${xLabel} →`], {
+        frameAnchor: "bottom",
+        dy: 20,
+        lineAnchor: "middle",
+        textAnchor: "middle",
+      }),
+      Plot.text([`← ${yLabel}`], {
+        frameAnchor: "left",
+        rotate: 90,
+        dx: -20,
+        lineAnchor: "middle",
+        textAnchor: "middle",
+      }),
+    ],
+  });
+
+  legend.style.display = "block";
+  legend.style.transform = "rotate(-45deg)";
+  legend.style.transformOrigin = "center center";
+  legend.style.overflow = "visible";
+
+  return htl.html`<div style="display:grid;place-items:center;padding:28px 20px 20px 40px;overflow:visible;">
+    ${legend}
+  </div>`;
+}

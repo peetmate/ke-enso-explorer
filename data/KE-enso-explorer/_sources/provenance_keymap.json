@@ -1,0 +1,240 @@
+{
+  "_comment": [
+    "Notebook-owned routing table for the provenance projection. IDs AND UI ROUTING ONLY.",
+    "Hard rule (HANDOVER_2026-09-18_provenance-drawer-and-metadata-gaps.md §1a/§1e): this file",
+    "must never carry a licence, citation, attribution string, caveat or coverage statement.",
+    "Those live in hazards_prototype/metadata/cdh/*.yaml (authoritative) and",
+    "hazards_prototype/metadata/catalogue/*.json (host inventory) and are read by",
+    "provenance_build.py. A string of prose added here is the third copy the contract forbids.",
+    "",
+    "'label' is the notebook's own display name and is used ONLY when no record supplies a title;",
+    "the projection marks it title_source='notebook-label' so the drawer can say the title is not",
+    "from a metadata record.",
+    "",
+    "'key' is the CDH id wherever a CDH record exists (contract §1b). Legacy notebook handles stay",
+    "in 'aliases' so existing openMethodDrawer()/jumpToDataset() call sites keep resolving."
+  ],
+  "hazards_prototype_root": "../../../../hazards_prototype",
+  "entries": [
+    {
+      "key": "enso-driver-indices",
+      "aliases": ["driver_indices", "teleconnections"],
+      "label": "Ocean climate teleconnection drivers (ENSO, IOD & Western-V)",
+      "category": "climate",
+      "cdh": "enso-driver-indices",
+      "catalogue": null,
+      "notebook_files": ["data/KE-enso-explorer/driver_indices.parquet",
+                         "data/KE-enso-explorer/enso_drivers_monthly.parquet",
+                         "data/KE-enso-explorer/enso_drivers_seasonal.parquet"],
+      "built_by": "data/KE-enso-explorer/_sources/enso_drivers_build.py",
+      "search_terms": "ocean climate teleconnection drivers enso roni dmi western-v noaa cpc hadisst sst pacific indian ocean el nino la nina"
+    },
+    {
+      "key": "africa-precipitation-monthly-seasonal",
+      "aliases": ["chirps_seasonal"],
+      "category": "climate",
+      "cdh": "africa-precipitation-monthly-seasonal",
+      "catalogue": "obs-chirps-chirts",
+      "notebook_files": ["data/KE-enso-explorer/chirps_county.parquet",
+                         "data/KE-enso-explorer/chirps_county_monthly.parquet"],
+      "search_terms": "chirps v3 seasonal rainfall precipitation climatology anomaly ptot drought flood ucsb satellite gauge mm"
+    },
+    {
+      "key": "africa-spei-drought",
+      "aliases": ["spei_seasonal"],
+      "category": "climate",
+      "cdh": "africa-spei-drought",
+      "catalogue": "obs-spei",
+      "notebook_files": ["data/KE-enso-explorer/spei_county.parquet"],
+      "search_terms": "spei standardised precipitation evapotranspiration index drought hargreaves pet water balance"
+    },
+    {
+      "key": "eastafrica-flood-jrc",
+      "aliases": ["jrc_flood_hazard"],
+      "category": "satellite",
+      "cdh": "eastafrica-flood-jrc",
+      "catalogue": "eastafrica-flood-jrc",
+      "search_terms": "jrc glofas riverine flood hazard return period inundation depth hydrodynamic model rp"
+    },
+    {
+      "key": "kenya-flood-gfm",
+      "aliases": ["gfm_flood"],
+      "category": "satellite",
+      "cdh": "kenya-flood-gfm",
+      "catalogue": "kenya-flood-gfm",
+      "search_terms": "copernicus gfm sentinel-1 sar observed flood extent inundation cems eodc nobs"
+    },
+    {
+      "key": "eastafrica-ndvi-modis",
+      "aliases": ["modis_ndvi"],
+      "category": "satellite",
+      "cdh": "eastafrica-ndvi-modis",
+      "catalogue": "eastafrica-ndvi-modis",
+      "notebook_files": ["data/KE-enso-explorer/ndvi_county.parquet"],
+      "search_terms": "modis mod13q1 ndvi vegetation index pasture biomass rangeland greenness terra lp daac"
+    },
+    {
+      "key": "eastafrica-wrsi-fews",
+      "aliases": ["wrsi"],
+      "category": "satellite",
+      "cdh": "eastafrica-wrsi-fews",
+      "catalogue": "eastafrica-wrsi-fews",
+      "search_terms": "wrsi water requirement satisfaction index fews net cropland rangeland crop water deficit"
+    },
+    {
+      "key": "kenya-flood-exposure-intersect",
+      "aliases": ["exposure_intersect", "exposure_jrc_rp"],
+      "category": "satellite",
+      "cdh": "kenya-flood-exposure-intersect",
+      "catalogue": "kenya-flood-exposure-intersect",
+      "notebook_files": ["data/KE-enso-explorer/exposure_gfm_seasonal.parquet",
+                         "data/KE-enso-explorer/exposure_jrc_rp.parquet",
+                         "data/KE-enso-explorer/exposure_totals.parquet"],
+      "related": ["kenya-flood-gfm", "eastafrica-flood-jrc", "kenya-population-knbs-census",
+                  "kenya-population-knbs-projections", "kenya-population-worldpop",
+                  "kenya-roads-osm", "kenya-facilities-hotosm", "kenya-power-grid-kplc",
+                  "kenya-admin-codab"],
+      "search_terms": "subcounty flood asset exposure intersect population roads health schools grid built-up analysis ready parquet"
+    },
+    {
+      "key": "kenya-population-knbs-census",
+      "aliases": ["knbs_census"],
+      "category": "demographics",
+      "cdh": "kenya-population-knbs-census",
+      "catalogue": "kenya-population-knbs-census",
+      "search_terms": "knbs 2019 kenya population housing census counts adm2 sub-county age sex"
+    },
+    {
+      "key": "kenya-population-knbs-projections",
+      "aliases": ["knbs_projections"],
+      "category": "demographics",
+      "cdh": "kenya-population-knbs-projections",
+      "catalogue": "kenya-population-knbs-projections",
+      "search_terms": "knbs volume xvi county population projections 2020 2045 growth"
+    },
+    {
+      "key": "kenya-population-worldpop",
+      "aliases": ["worldpop"],
+      "category": "demographics",
+      "cdh": "kenya-population-worldpop",
+      "catalogue": "kenya-population-worldpop",
+      "search_terms": "worldpop constrained 2020 100m gridded population building footprints"
+    },
+    {
+      "key": "kenya-roads-osm",
+      "aliases": ["roads_osm"],
+      "category": "spatial",
+      "cdh": "kenya-roads-osm",
+      "catalogue": "kenya-roads-osm",
+      "search_terms": "openstreetmap osm roads highways classified network"
+    },
+    {
+      "key": "kenya-facilities-hotosm",
+      "aliases": ["facilities_hotosm"],
+      "category": "spatial",
+      "cdh": "kenya-facilities-hotosm",
+      "catalogue": "kenya-facilities-hotosm",
+      "search_terms": "hotosm health facilities schools points humanitarian openstreetmap"
+    },
+    {
+      "key": "kenya-power-grid-kplc",
+      "aliases": ["power_grid"],
+      "category": "spatial",
+      "cdh": "kenya-power-grid-kplc",
+      "catalogue": "kenya-power-grid-kplc",
+      "search_terms": "kplc power transmission grid high voltage lines energydata"
+    },
+    {
+      "key": "kenya-admin-codab",
+      "aliases": ["county_boundaries"],
+      "category": "spatial",
+      "cdh": "kenya-admin-codab",
+      "catalogue": "kenya-admin-codab",
+      "notebook_files": ["data/KE-enso-explorer/ken_adm1_iebc_simple.topojson",
+                         "data/KE-enso-explorer/ken_adm2_iebc_simple.topojson"],
+      "search_terms": "kenya administrative boundaries county sub-county iebc cod-ab ocha adm1 adm2 pcode"
+    },
+    {
+      "key": "crop-vop-intld15",
+      "aliases": ["exposure_vop", "vop_crop"],
+      "category": "agri",
+      "cdh": "mapspam2020-adaptation-atlas-ssa",
+      "catalogue": "crop-vop-intld15",
+      "notebook_files": ["data/KE-enso-explorer/exposure_vop.parquet"],
+      "related": ["livestock-vop"],
+      "search_terms": "mapspam crop value of production vop international dollars faostat gross production value"
+    },
+    {
+      "key": "livestock-vop",
+      "aliases": ["vop_livestock"],
+      "category": "agri",
+      "cdh": "livestock-vop",
+      "catalogue": "livestock-vop",
+      "notebook_files": ["data/KE-enso-explorer/exposure_vop.parquet"],
+      "related": ["crop-vop-intld15"],
+      "search_terms": "glw4 gridded livestock of the world value of production herd faostat cattle shoats"
+    },
+    {
+      "key": "knbs-napr",
+      "aliases": ["knbs_napr"],
+      "label": "KNBS National Agriculture Production Reports (crops, livestock, products)",
+      "category": "agri",
+      "cdh": "knbs-napr",
+      "catalogue": null,
+      "notebook_files": ["data/KE-enso-explorer/knbs_napr_county_production.parquet",
+                         "data/KE-enso-explorer/knbs_napr_livestock.parquet"],
+      "built_by": "data/KE-enso-explorer/_sources/napr_build.py",
+      "search_terms": "knbs national agriculture production report napr county crops livestock area production"
+    },
+    {
+      "key": "harveststat-crop-production",
+      "aliases": ["harveststat_crop", "harveststat"],
+      "label": "HarvestStat subnational crop statistics",
+      "category": "agri",
+      "cdh": "harveststat-crop-production",
+      "catalogue": null,
+      "notebook_files": ["data/KE-enso-explorer/harveststat_county_production.parquet"],
+      "built_by": "data/KE-enso-explorer/_sources/harveststat_build.py",
+      "search_terms": "harveststat ifpri fews net subnational crop statistics county seasonal maize"
+    },
+    {
+      "key": "kenya-market-prices-fews",
+      "aliases": ["market_prices"],
+      "label": "FEWS NET staple market prices (terms of trade derived)",
+      "category": "markets",
+      "cdh": "kenya-market-prices-fews",
+      "catalogue": null,
+      "notebook_files": ["data/KE-enso-explorer/market_prices.parquet"],
+      "search_terms": "fews net fdw marketpricefacts market prices retail wholesale kes terms of trade pastoral staple maize goat"
+    },
+    {
+      "key": "kenya-food-insecurity-ipc",
+      "aliases": ["ipc_insecurity", "ipc-kfssg-phases"],
+      "label": "IPC / KFSSG acute food insecurity phases",
+      "category": "markets",
+      "cdh": "kenya-food-insecurity-ipc",
+      "catalogue": null,
+      "notebook_files": ["data/KE-enso-explorer/ipc_county.parquet"],
+      "search_terms": "ipc kfssg acute food insecurity phase classification caseload malnutrition"
+    },
+    {
+      "key": "kenya-county-gender-datasheets",
+      "aliases": ["knbs_gesi", "kenya-gesi-knbs"],
+      "label": "KNBS County Gender Data Sheets (GESI)",
+      "category": "demographics",
+      "cdh": "kenya-county-gender-datasheets",
+      "catalogue": null,
+      "notebook_files": ["data/KE-enso-explorer/gesi_v2.parquet"],
+      "built_by": "data/KE-enso-explorer/_sources/gesi_extract.py",
+      "search_terms": "knbs county gender data sheets gesi poverty female headed households water access indicators"
+    }
+  ],
+  "categories": [
+    { "id": "climate",      "label": "Climate & teleconnections" },
+    { "id": "satellite",    "label": "Earth observation & floods" },
+    { "id": "agri",         "label": "Agriculture & livestock" },
+    { "id": "markets",      "label": "Markets & food security" },
+    { "id": "demographics", "label": "Demographics & GESI" },
+    { "id": "spatial",      "label": "Boundaries & infrastructure" }
+  ]
+}

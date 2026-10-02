@@ -1,0 +1,22 @@
+{
+  "dataset": "afa_production",
+  "title": "AFA raw crop production extract, Kenya (raw — superseded except Rice)",
+  "source": "Agriculture & Food Authority (AFA), Kenya — county crop returns",
+  "url": "https://www.afa.go.ke/",
+  "citation": "Agriculture & Food Authority (AFA), Kenya.",
+  "license": "AFA — public.",
+  "fetched_on": "2026-07-10",
+  "method": "Raw AFA extract. STATUS: retained for provenance only. All crops except Rice are identical to the KNBS NAPR (verified) and are NOT served; only Rice is folded in via afa_rice.parquet.",
+  "coverage": "15 crops, area/production/value, 2019-2024 (+ some crop-year splits). Only Rice served.",
+  "used_by": "not served directly; see afa_rice",
+  "grain": "4268 rows",
+  "columns": [
+    "Crop",
+    "County",
+    "Year",
+    "Category",
+    "Metric",
+    "Value",
+    "Unit"
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/notebooks/cis/notebook.html",
+      "/notebooks/lossDamage/notebook.html",
+      "/notebooks/gender/notebook.html",
+      "/notebooks/roi/notebook.html"
+    ]
+  }
+]

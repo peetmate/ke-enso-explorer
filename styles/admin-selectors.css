@@ -1,0 +1,1 @@
+.atlas-admin-selectors{display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-start;width:100%}.atlas-admin-selector{flex:1 1 240px;min-width:min(240px,100%);max-width:400px}.atlas-admin-selector>form,.atlas-admin-selector .enhanced-multiselect{width:100%}

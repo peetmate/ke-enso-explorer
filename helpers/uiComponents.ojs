@@ -1,0 +1,206 @@
+// Must remain OJS because it uses Observable built-ins such as Inputs and html.
+
+CSV_BOM = "\uFEFF";
+
+function csvColumns(data, columns) {
+  if (columns !== undefined && !Array.isArray(columns)) {
+    throw new TypeError("CSV columns must be an array");
+  }
+
+  return columns ?? Object.keys(data[0] ?? {});
+}
+
+function escapeCsvField(value) {
+  if (value == null) return "";
+
+  const text = String(value).replace(/\r\n?|\n/g, "\r\n");
+  return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+
+/** Serialize rows as RFC 4180 CSV with a BOM for spreadsheet Unicode support. */
+function serializeCsv(data, { columns } = {}) {
+  const rows = Array.isArray(data) ? data : [];
+  const selectedColumns = csvColumns(rows, columns);
+  if (!selectedColumns.length) return CSV_BOM;
+
+  const records = [
+    selectedColumns.map(escapeCsvField).join(","),
+    ...rows.map((row) =>
+      selectedColumns.map((column) => escapeCsvField(row?.[column])).join(","),
+    ),
+  ];
+
+  return `${CSV_BOM}${records.join("\r\n")}\r\n`;
+}
+
+function downloadName(filename, extension, fallback) {
+  const name = String(filename || fallback).trim() || fallback;
+  return name.toLowerCase().endsWith(extension) ? name : `${name}${extension}`;
+}
+
+function downloadBlob(blob, filename) {
+  const url = window.URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = filename;
+  link.hidden = true;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+
+  window.setTimeout(() => window.URL.revokeObjectURL(url), 0);
+}
+
+function downloadCsv(data, { filename = "atlas-data", columns } = {}) {
+  downloadBlob(
+    new Blob([serializeCsv(data, { columns })], {
+      type: "text/csv;charset=utf-8",
+    }),
+    downloadName(filename, ".csv", "atlas-data"),
+  );
+}
+
+// Plot returns a bare <svg>, or a <figure> once a legend or caption is configured,
+// and atlasMap hands back a div holding the map svg beside a legend svg. Nest every
+// svg found at the position it occupies on screen, so an export carries the whole
+// composition rather than just the first plot. Each svg keeps its own Plot <style>,
+// and the generated class names are per-plot, so nesting cannot cross-contaminate.
+// A categorical legend is the exception: Plot draws each swatch as a tiny svg but
+// leaves the label as HTML text, so cloning svgs alone keeps the colours and loses
+// every word. Those labels are re-emitted below as real <text>.
+SVG_NS = "http://www.w3.org/2000/svg";
+
+// Plot draws with overflow: visible, so ticks and legend text can sit outside the
+// box layout reports. A file's root svg clips to its viewport, unlike the one on the
+// page, so that overflow needs room reserved or it comes out shaved off.
+FIGURE_PADDING = 12;
+
+// Position from a Range rather than the element: a label is a text node inside a
+// span that may be wider than the words themselves.
+function htmlLabels(chart, box) {
+  const walker = document.createTreeWalker(chart, NodeFilter.SHOW_TEXT);
+  const labels = [];
+
+  for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+    const text = node.textContent.trim();
+    if (!text || node.parentElement.closest("svg")) continue;
+
+    const range = document.createRange();
+    range.selectNodeContents(node);
+    const rect = range.getBoundingClientRect();
+    if (!rect.width) continue;
+
+    const style = window.getComputedStyle(node.parentElement);
+    const label = document.createElementNS(SVG_NS, "text");
+    label.setAttribute("x", rect.left - box.left + FIGURE_PADDING);
+    label.setAttribute("y", rect.bottom - box.top + FIGURE_PADDING);
+    label.setAttribute("dy", `-${parseFloat(style.fontSize) * 0.22}`);
+    label.setAttribute("font-family", style.fontFamily);
+    label.setAttribute("font-size", style.fontSize);
+    label.setAttribute("font-weight", style.fontWeight);
+    label.setAttribute("fill", style.color);
+    label.textContent = text;
+    labels.push(label);
+  }
+
+  return labels;
+}
+
+function chartSvgSource(chart) {
+  const svgs = chart?.tagName?.toLowerCase() === "svg"
+    ? [chart]
+    : [...(chart?.querySelectorAll?.("svg") ?? [])];
+  if (!svgs.length) {
+    throw new TypeError("figure downloads need a Plot figure or an svg element");
+  }
+
+  const box = chart.getBoundingClientRect();
+  const outer = document.createElementNS(SVG_NS, "svg");
+  outer.setAttribute("xmlns", SVG_NS);
+  outer.setAttribute("width", box.width + FIGURE_PADDING * 2);
+  outer.setAttribute("height", box.height + FIGURE_PADDING * 2);
+
+  for (const svg of svgs) {
+    const rect = svg.getBoundingClientRect();
+    const clone = svg.cloneNode(true);
+    clone.setAttribute("x", rect.left - box.left + FIGURE_PADDING);
+    clone.setAttribute("y", rect.top - box.top + FIGURE_PADDING);
+    clone.setAttribute("width", rect.width);
+    clone.setAttribute("height", rect.height);
+    // Each nested svg is its own viewport and would otherwise clip the same
+    // overflow the padding just made room for.
+    clone.setAttribute("overflow", "visible");
+    outer.append(clone);
+  }
+
+  // After the svgs so a label is never hidden behind a plot background.
+  for (const label of htmlLabels(chart, box)) outer.append(label);
+
+  return new XMLSerializer().serializeToString(outer);
+}
+
+function downloadSvg(chart, { filename = "atlas-figure" } = {}) {
+  downloadBlob(
+    new Blob([chartSvgSource(chart)], { type: "image/svg+xml;charset=utf-8" }),
+    downloadName(filename, ".svg", "atlas-figure"),
+  );
+}
+
+/** Create a button that downloads object rows as CSV. */
+function downloadCsvButton(
+  data,
+  {
+    filename = "atlas-data",
+    label = "Download CSV",
+    columns,
+  } = {},
+) {
+  return Inputs.button(label, {
+    reduce: () => downloadCsv(data, { filename, columns }),
+  });
+}
+
+/** Create a button that downloads a Plot figure as SVG. */
+function downloadSvgButton(
+  chart,
+  {
+    filename = "atlas-figure",
+    label = "Download figure",
+  } = {},
+) {
+  return Inputs.button(label, {
+    reduce: () => downloadSvg(chart, { filename }),
+  });
+}
+
+/** Create a collapsible <details> section from Observable content blocks. */
+dropdown_section = (title, initiallyOpen, ...contents) => {
+  return html`
+    <details ${initiallyOpen ? "open" : ""} style="border-radius:5px; background:none; max-width:900px; padding:0;">
+      <summary style="cursor:pointer; font-weight:bold; font-size:1.5rem;">
+        ${title}
+      </summary>
+      ${contents.map(c => html`
+        <div style="margin:0.5em 0; border-top:1px dashed #888; padding-top:0.5em;">
+          ${c}
+        </div>
+      `)}
+    </details>
+  `;
+};
+
+/** Create an Atlas label with a keyboard-accessible CSS tooltip. */
+function makeTooltipLabel({
+  labelText = "Dropdown label",
+  tooltipText = "Tooltip text",
+} = {}) {
+  return htl.html`
+    <span
+      class="atlas-tooltip-label"
+      data-atlas-tooltip="${tooltipText}"
+      aria-label="${`${labelText}: ${tooltipText}`}"
+      tabindex="0"
+    >${labelText}</span>
+  `;
+}

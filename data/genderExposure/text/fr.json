@@ -1,0 +1,205 @@
+{
+  "GenderedAfriAG": {
+    "afsEmployment": {
+      "selectors": {
+        "sex": {
+          "title": "Afficher",
+          "options": {
+            "F": "Femmes",
+            "M": "Hommes",
+            "diff": "Écart (femmes − hommes)"
+          }
+        }
+      },
+      "segments": {
+        "onFarm": "Agriculture (à la ferme)",
+        "offFarm": "Agroalimentaire hors exploitation"
+      },
+      "axis": "Part de l'emploi (%)",
+      "axisDiff": "Écart de part d'emploi (points de pourcentage, femmes − hommes)",
+      "diffHints": {
+        "men": "← part plus élevée chez les hommes",
+        "women": "part plus élevée chez les femmes →"
+      },
+      "tooltip": {
+        "employed": "Emplois (milliers)"
+      },
+      "caption": "Source : FAOSTAT, Genre dans les systèmes agroalimentaires (estimations modélisées de l'OIT), dernière année disponible par pays."
+    },
+    "livestockControl": {
+      "legend": "Part des femmes dans le revenu des ventes (%)",
+      "average": "Moyenne",
+      "species": { "cattle": "Bovins", "sheep": "Ovins", "goats": "Caprins", "chicken": "Volaille", "pigs": "Porcs" },
+      "tooltip": { "n": "Ménages" },
+      "caption": "Source : enquêtes ménages RHoMIS, 2015 à 2023 (Gorman et al. 2024). Part moyenne des femmes dans le revenu tiré de la vente de chaque type de bétail, parmi les ménages enquêtés. Les enquêtes couvrent des sites de projets et ne sont pas représentatives au niveau national. Les cellules avec moins de 30 ménages sont vides."
+    },
+    "FemaleParticipationCrops": {
+      "title": "Participation féminine dans la production de cultures",
+      "legend": "Part du travail des femmes (%)",
+      "average": "Moyenne",
+      "caption": "Source : Palacios-Lopez, Christiaensen et Kilic (2017). Cellules vides : pas de données.",
+      "plot": {
+        "crops": {
+          "Cereals": "Céréales",
+          "Legumes": "Légumineuses",
+          "Roots & Tubers": "Racines et tubercules",
+          "Fruits & Vegetables": "Fruits et légumes",
+          "Non-edible crops": "Cultures non comestibles"
+        }
+      }
+    }
+  },
+  "GenderInvestments": {
+    "adaptiveCapacity": {
+      "selectors": {
+        "country": {
+          "title": "Pays"
+        },
+        "indicator": {
+          "title": "Indicateur"
+        }
+      },
+      "axisY": "Capacité d'adaptation (faible → élevée), % de personnes",
+      "sexes": {
+        "F": "Femmes",
+        "M": "Hommes"
+      },
+      "map": {
+        "viewTitle": "Vue de la carte",
+        "views": {
+          "F": "Femmes",
+          "M": "Hommes",
+          "gap": "Écart (femmes − hommes)"
+        },
+        "legendGap": "Écart (points de pourcentage, femmes − hommes)"
+      },
+      "indicators": {
+        "education": "A achevé l'enseignement primaire (rural)",
+        "formalEmployment": "Emploi formel dans les systèmes agroalimentaires",
+        "landRights": "Droits fonciers agricoles sûrs",
+        "account": "Possède un compte bancaire",
+        "agPayments": "A reçu des paiements pour des ventes agricoles",
+        "internet": "A utilisé Internet (3 derniers mois)",
+        "foodSecurity": "En sécurité alimentaire (ni modérée ni grave insécurité)"
+      },
+      "caption": "Source : FAOSTAT, Genre dans les systèmes agroalimentaires (ODD 5.a.1 et 2.1.2, Global Findex, OIT, UNESCO); dernière année disponible par pays et indicateur."
+    }
+  },
+  "GlobalHotspots": {
+    "selectorTitle": "Indicateur",
+    "rankLabel": "Rang en Afrique",
+    "indicators": {
+      "riskIndex": {
+        "label": "Indice des points chauds (risque global)",
+        "legend": "Indice des points chauds (standardisé)"
+      },
+      "hazard": {
+        "label": "Aléa climatique",
+        "legend": "Score d'aléa climatique"
+      },
+      "exposure": {
+        "label": "Exposition des femmes (travail agricole)",
+        "legend": "Score d'exposition"
+      },
+      "socialGender": {
+        "label": "Inégalités de genre (SIGI)",
+        "legend": "Score d'inégalité fondé sur le SIGI"
+      }
+    }
+  },
+  "GenderHotspots": {
+    "wbgtMap": {
+      "selectors": {
+        "threshold": {
+          "title": "Seuil de chaleur"
+        },
+        "timeframe": {
+          "title": "Période",
+          "options": {
+            "historic": "Historique (années 2000)",
+            "2030": "Années 2030",
+            "2050": "Années 2050"
+          }
+        },
+        "scenario": {
+          "title": "Scénario",
+          "options": {
+            "ssp245": "SSP2-4.5 (émissions moyennes)",
+            "ssp585": "SSP5-8.5 (émissions élevées)"
+          },
+          "note": "S'applique uniquement aux périodes futures"
+        }
+      },
+      "legend": {
+        "heat": "Stress thermique",
+        "women": "Femmes dans l'agriculture"
+      },
+      "tooltip": {
+        "heat": "Jours au-dessus de :::threshold:::°C WBGT par an",
+        "women": "Femmes travaillant dans l'agriculture (%)"
+      }
+    }
+  },
+  "BridgeGap": {
+    "matrix": {
+      "legend": "Résultat de genre prédominant",
+      "caption": "Source : Roy, Prakash, Some et al. (2022), études codées sur l'agriculture en Afrique. Les nombres indiquent le nombre d'études codées; la couleur montre le résultat de genre prédominant. Cellules vides : pas de données."
+    },
+    "selector": {
+      "title": "Option d'adaptation",
+      "options": {
+        "Financial mechanisms and knowldege management": "Mécanismes financiers et gestion des connaissances",
+        "Migration": "Migration",
+        "Natural resource management": "Gestion des ressources naturelles",
+        "Biodiversity conversation": "Conservation de la biodiversité",
+        "Livelihood diversification": "Diversification des moyens de subsistance"
+      }
+    },
+    "table": {
+      "headings": {
+        "Sector": "Secteur",
+        "Gender Outcome Score": "Le Score de Résultat en Matière de Genre",
+        "Geography": "La Géographie",
+        "Confidence in Result": "Confiance dans le résultat",
+        "Risk": "Risque"
+      },
+      "values": {
+        "low": "Faible",
+        "medium": "Modéré",
+        "high": "Élevé",
+        "crop": "Cultures",
+        "livestock": "Bétail",
+        "agriculture": "Agriculture",
+        "enabling": "Facilitant",
+        "counteracting": "Contrebalançant",
+        "reinforcing": "Renforçant",
+        "constraining": "Contraignant"
+      },
+      "tooltip": {
+        "enable": "Crée des conditions qui favorise un objectif de genre",
+        "reinforce": "Aide à atteindre les objectifs de genre",
+        "constrain": "Limite les options au succès d'un objectif de genre",
+        "counteract": "Inhibe l'atteinte des objectifs de genre",
+        "climate change": "Changement Climatique",
+        "drought": "Sécheresse",
+        "heat stress": "Stress Thermique",
+        "extreme weather events": "Événements Climaiques Extrêmes",
+        "rainfall variability": "Variabilité des précipitations",
+        "multiple risks": "Risques Multiples",
+        "flood": "Innondation"
+      }
+    }
+  },
+  "General": {
+    "adminNames": {
+      "Tanzania": "Tanzanie",
+      "Malawi": "Malawi",
+      "Niger": "Niger",
+      "Uganda": "Ouganda",
+      "Nigeria": "Nigéria",
+      "Ethiopia": "Éthiopie"
+    },
+    "download": "Télécharger les Données",
+    "downloadFigure": "Télécharger la figure"
+  }
+}

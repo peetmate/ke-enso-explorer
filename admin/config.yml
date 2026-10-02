@@ -1,0 +1,225 @@
+# Sveltia CMS configuration — https://sveltiacms.app/en/docs
+# Narrative uses data/<notebook>/text/<id>.<locale>.md; CI validates fixed block IDs.
+# Every block is one entry with the same two fields; a collapsed note is just a block
+# the .qmd places with `details=true`, so nothing is nested here.
+
+# Page settings and contributors are editable below; widget strings in
+# <locale>.json remain developer-reviewed.
+
+# Add a notebook to both Notebook Settings and the prose collections below.
+
+backend:
+  name: github
+  repo: AdaptationAtlas/atlas_notebooks
+  # CMS commits directly here; promotion to main provides the review step.
+  branch: develop
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+i18n:
+  structure: multiple_files
+  locales: [en, fr]
+  default_locale: en
+
+collections:
+  # Build-time FAQ/glossary JSON keeps both locales together and preserves order.
+  - name: docs
+    label: Site Pages
+    icon: help
+    files:
+      - name: faq
+        label: FAQ
+        file: data/docs/faq.json
+        fields:
+          - name: entries
+            label: Questions
+            label_singular: Question
+            widget: list
+            summary: "{{fields.question_en}}"
+            fields:
+              - { name: section_en, label: Section (EN), widget: string }
+              - { name: section_fr, label: Section (FR), widget: string }
+              - { name: question_en, label: Question (EN), widget: string }
+              - { name: question_fr, label: Question (FR), widget: string }
+              - { name: answer_en, label: Answer (EN), widget: markdown }
+              - { name: answer_fr, label: Answer (FR), widget: markdown }
+      - name: glossary
+        label: Glossary
+        file: data/docs/glossary.json
+        fields:
+          - name: entries
+            label: Terms
+            label_singular: Term
+            widget: list
+            summary: "{{fields.term}}"
+            fields:
+              - { name: term, label: Term, widget: string }
+              - { name: acronym, label: Acronym, widget: string, required: false }
+              - { name: section, label: Section, widget: string }
+              - { name: definition_en, label: Definition (EN), widget: text }
+              - { name: definition_fr, label: Definition (FR), widget: text }
+              - { name: tooltip_en, label: Tooltip (EN), widget: text, required: false }
+              - { name: tooltip_fr, label: Tooltip (FR), widget: text, required: false }
+
+  # Page-level copy and contributors are editable; runtime structure stays hidden.
+  - name: notebookSettings
+    label: Notebook Settings
+    icon: settings
+    files:
+      - name: contributors
+        label: Contributor Directory
+        file: data/shared/contributors.json
+        format: json
+        fields:
+          - name: contributors
+            label: Common contributors
+            label_singular: Contributor
+            widget: list
+            summary: "{{name}}"
+            collapsed: auto
+            fields:
+              - { name: id, label: ID, widget: string, hint: "A short, stable identifier such as jsmith." }
+              - { name: name, label: Name, widget: string }
+              - name: org
+                label: Affiliations
+                label_singular: Affiliation
+                widget: list
+                min: 1
+                field: { name: affiliation, label: Affiliation, widget: string }
+              - { name: url, label: Profile URL, widget: string, required: false }
+      - name: cis
+        label: Climate Information Readiness
+        file: data/cis/notebook.json
+        format: json
+        fields: &notebook_settings_fields
+          - { name: "$schema", widget: hidden }
+          - { name: id, widget: hidden }
+          - name: title
+            label: Page title
+            widget: object
+            fields:
+              - { name: en, label: English, widget: string }
+              - { name: fr, label: French, widget: string }
+          - { name: image, label: Hero image, widget: image }
+          - name: imageAlt
+            label: Hero image description
+            widget: object
+            fields:
+              - { name: en, label: English, widget: string, required: false }
+              - { name: fr, label: French, widget: string, required: false }
+          - { name: description, label: Page description, widget: text }
+          - name: keywords
+            label: Search keywords
+            widget: list
+            field: { name: keyword, label: Keyword, widget: string }
+          - { name: textDir, widget: hidden }
+          - name: contributors
+            label: Contributors
+            widget: object
+            fields:
+              - name: authors
+                label: Authors
+                label_singular: Author
+                widget: list
+                min: 1
+                collapsed: auto
+                types: &contributor_types
+                  - name: common
+                    label: Common contributor
+                    fields:
+                      - name: id
+                        label: Person
+                        widget: relation
+                        collection: notebookSettings
+                        file: contributors
+                        value_field: "{{contributors.*.id}}"
+                        display_fields: ["{{contributors.*.name}} ({{contributors.*.id}})"]
+                        search_fields: ["{{contributors.*.name}}", "{{contributors.*.id}}"]
+                  - name: custom
+                    label: Custom contributor
+                    fields:
+                      - { name: name, label: Name, widget: string }
+                      - name: org
+                        label: Affiliations
+                        label_singular: Affiliation
+                        widget: list
+                        min: 1
+                        field: { name: affiliation, label: Affiliation, widget: string }
+                      - { name: url, label: Profile URL, widget: string, required: false }
+              - name: developers
+                label: Technical development
+                label_singular: Developer
+                widget: list
+                min: 1
+                collapsed: auto
+                types: *contributor_types
+      - name: roi
+        label: Economic Returns
+        file: data/economicReturns/notebook.json
+        format: json
+        fields: *notebook_settings_fields
+      - name: gender
+        label: Women's Climate Exposure
+        file: data/genderExposure/notebook.json
+        format: json
+        fields: *notebook_settings_fields
+      - name: lossDamage
+        label: Climate Payouts to Smallholders
+        file: data/lossDamage/notebook.json
+        format: json
+        fields: *notebook_settings_fields
+
+  - name: roi
+    label: Economic Returns
+    icon: article
+    folder: data/economicReturns/text
+    extension: md
+    format: yaml-frontmatter
+    i18n: true
+    create: false
+    delete: false
+    duplicate: false
+    identifier_field: title
+    fields: &prose_fields
+      - { name: title, label: Heading, widget: string, i18n: true }
+      - { name: body, label: Content, widget: markdown, i18n: true }
+
+  - name: cis
+    label: Climate Information Readiness
+    icon: article
+    folder: data/cis/text
+    extension: md
+    format: yaml-frontmatter
+    i18n: true
+    create: false
+    delete: false
+    duplicate: false
+    identifier_field: title
+    fields: *prose_fields
+
+  - name: gender
+    label: Women's Climate Exposure
+    icon: article
+    folder: data/genderExposure/text
+    extension: md
+    format: yaml-frontmatter
+    i18n: true
+    create: false
+    delete: false
+    duplicate: false
+    identifier_field: title
+    fields: *prose_fields
+
+  - name: lossDamage
+    label: Climate Payouts to Smallholders
+    icon: article
+    folder: data/lossDamage/text
+    extension: md
+    format: yaml-frontmatter
+    i18n: true
+    create: false
+    delete: false
+    duplicate: false
+    identifier_field: title
+    fields: *prose_fields

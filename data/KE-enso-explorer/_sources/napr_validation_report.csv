@@ -1,0 +1,54 @@
+crop,edition,pages,rotated,counties,dual_engine,dual_shared,prod_additivity,missed,validation,served
+Maize,2024,"[114, 115]",True,47,1.0,46,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Maize,2025,"[186, 187]",True,46,1.0,45,"{2020: 98.3, 2021: 98.5, 2022: 98.5, 2023: 98.7, 2024: 98.6}",,dual-engine + additivity,True
+Sorghum,2024,[116],False,43,1.0,42,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Sorghum,2025,"[189, 190]",True,43,1.0,42,"{2020: 100.0, 2021: 100.0, 2022: 100.2, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Finger millet,2024,[117],False,29,1.0,29,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Pearl millet,2024,[118],False,5,0.0,5,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,additivity + completeness (single-engine; pdfplumber unreliable on page),True
+Millet (combined),2025,[188],True,32,1.0,31,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Dry beans,2024,[119],False,41,1.0,41,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Dry beans,2025,"[191, 192]",True,44,1.0,43,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Cowpeas,2024,[120],False,39,1.0,38,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Cowpeas,2025,[193],True,39,1.0,38,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Green grams,2024,[121],False,35,1.0,35,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Green grams,2025,[194],True,35,1.0,34,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Pigeon peas,2024,[122],False,19,0.0,14,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,additivity + completeness (single-engine; pdfplumber unreliable on page),True
+Pigeon peas,2025,[195],True,19,1.0,18,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Irish potato,2024,[123],False,30,1.0,30,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Irish potato,2025,[196],True,28,1.0,28,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Sweet potato,2024,[124],False,43,1.0,43,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Sweet potato,2025,"[197, 198]",True,43,1.0,42,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Cassava,2025,"[199, 200]",True,36,1.0,35,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Wheat,2024,[28],False,14,1.0,14,{},,dual-engine + additivity,True
+Barley,2024,[35],False,6,0.0,3,{},,"manual-verify (Pete vs PDF p35 (2024 ed, Table 3.12), 2026-07-20)",True
+Cotton (seed),2024,[56],True,25,1.0,25,"{2019: 99.2, 2020: 99.1, 2021: 100.1, 2022: 99.3, 2023: 98.2}",,dual-engine + additivity,True
+Coffee,2024,[125],True,32,1.0,32,"{2019: 91.0, 2020: 87.3, 2021: 91.0, 2022: 89.3, 2023: 89.5}",,dual-engine + additivity,True
+Lint,2024,[128],True,25,1.0,24,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Macadamia,2024,[82],False,15,0.0,1,"{2019: 71.7, 2020: 71.8, 2021: 72.0, 2022: 72.3, 2023: 74.0}",,additivity + completeness (single-engine; pdfplumber unreliable on page),False
+Groundnut,2024,[85],False,19,1.0,19,"{2019: 99.6, 2020: 99.7, 2021: 99.5, 2022: 99.3, 2023: 99.3}",,dual-engine + additivity,True
+Sunflower,2024,[89],False,20,1.0,18,{2023: 98.9},,dual-engine + additivity,True
+Coconut,2024,[83],False,6,0.0,1,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,additivity + completeness (single-engine; pdfplumber unreliable on page),True
+Coconut,2025,[127],False,6,1.0,6,"{2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Cashew nut,2025,[128],False,8,1.0,8,"{2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Castor,2024,[90],False,11,1.0,11,{2023: 100.0},,dual-engine + additivity,True
+Macadamia,2025,[129],False,15,1.0,15,"{2023: 74.0, 2024: 78.3}",,dual-engine + additivity,True
+Groundnut,2025,[130],False,20,1.0,20,{2024: 98.6},,dual-engine + additivity,True
+Sesame,2025,[133],False,8,1.0,8,"{2023: 94.3, 2024: 96.8}",,dual-engine + additivity,True
+Canola,2025,[133],False,12,1.0,12,"{2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Sunflower,2025,[135],False,33,1.0,33,{2024: 100.0},,dual-engine + additivity,True
+Cotton (seed),2025,[115],True,20,1.0,18,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Tea (green leaf),2024,"[73, 74]",False,16,0.231,16,"{2019: 99.1, 2020: 99.1, 2021: 99.2, 2022: 99.2, 2023: 99.2}",,additivity + completeness (single-engine; pdfplumber unreliable on page),True
+Tea (green leaf),2025,[89],False,16,1.0,16,"{2020: 99.1, 2021: 99.2, 2022: 99.2, 2023: 99.2, 2024: 99.2}",,dual-engine + additivity,True
+Sugarcane,2024,[47],False,15,1.0,15,{},,dual-engine + additivity,True
+Sugarcane,2025,[99],False,16,1.0,16,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Sisal,2025,[104],False,6,1.0,6,"{2021: 96.1, 2022: 95.7, 2023: 95.8, 2024: 96.0}",,dual-engine + additivity,True
+Pyrethrum,2024,[65],False,18,1.0,18,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Pyrethrum,2025,[120],False,18,1.0,18,"{2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Sesame,2024,[87],False,6,1.0,6,"{2019: 100.3, 2020: 97.7, 2021: 104.9, 2022: 95.7, 2023: 95.8}",,dual-engine + additivity,False
+Bambara nut,2024,[86],False,6,1.0,6,"{2019: 100.0, 2020: 100.0, 2021: 100.0, 2022: 100.0, 2023: 100.0}",,dual-engine + additivity,True
+Bambara nut,2025,[132],False,6,1.0,6,"{2023: 100.0, 2024: 100.0}",,dual-engine + additivity,True
+Tea (green leaf),2024,[75],False,14,1.0,14,{},,dual-engine + additivity,True
+Tea (green leaf),2025,[92],False,14,1.0,14,{},,dual-engine + additivity,True
+Pyrethrum,2024,[64],False,18,1.0,18,{},,dual-engine + additivity,True
+Pyrethrum,2025,[118],False,18,1.0,18,{},,dual-engine + additivity,True
+Bixa,2025,[122],False,8,1.0,8,{},,dual-engine + additivity,True

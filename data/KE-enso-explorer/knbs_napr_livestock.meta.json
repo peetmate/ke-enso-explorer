@@ -1,0 +1,22 @@
+{
+  "dataset": "knbs_napr_livestock",
+  "title": "KNBS county livestock population, Kenya",
+  "source": "KNBS National Agriculture Production Report (2023-24 + 2024-25 editions), livestock annexes",
+  "url": "https://www.knbs.or.ke/",
+  "citation": "KNBS. National Agriculture Production Report. Nairobi, Kenya.",
+  "license": "KNBS official statistics — public; cite KNBS.",
+  "fetched_on": "2026-07-20",
+  "method": "Deterministic extraction (_sources/napr_build_livestock.py) via the napr_extract engine; dual-engine + cross-year plausibility (±50%) gate. No number typed by a model.",
+  "coverage": "13 species, head, 2021-2023.",
+  "used_by": "notebook §1.1 produce (Livestock view)",
+  "grain": "1537 rows",
+  "columns": [
+    "species",
+    "county",
+    "gaul1_code",
+    "year",
+    "head",
+    "source_file",
+    "pdf_page"
+  ]
+}

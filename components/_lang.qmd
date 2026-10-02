@@ -1,0 +1,29 @@
+<!-- Shared language include; defines Lang, translations, language state, and _lang.
+Quarto expands shortcodes inside comments, so the include syntax is omitted here. -->
+
+```{=html}
+<script src="/components/langSwitcher.js"></script>
+```
+
+```{ojs}
+import { lang as Lang } from "/helpers/lang.js"
+
+general_translations = await FileAttachment("/data/shared/generalTranslations.json").json()
+
+languages = [
+  { key: "en", label: "English", locale: "en-US" },
+  { key: "fr", label: "Français", locale: "fr-FR" },
+]
+
+// Language state lives in the navbar switcher; this cell just subscribes.
+langKey = Generators.observe((notify) => {
+  notify(window.atlasLang ?? "en");
+  const onChange = (e) => notify(e.detail);
+  window.addEventListener("atlas:lang", onChange);
+  return () => window.removeEventListener("atlas:lang", onChange);
+})
+
+language = languages.find((l) => l.key === langKey) ?? languages[0]
+
+_lang = Lang.lg(language.key)
+```

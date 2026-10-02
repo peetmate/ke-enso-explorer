@@ -1,0 +1,38 @@
+{
+  "$schema": "../shared/notebook.schema.json",
+  "id": "lossDamage",
+  "title": {
+    "en": "Climate Payouts to Smallholders",
+    "fr": "Indemnisations climatiques pour les petits exploitants"
+  },
+  "image": "/images/default_crop.webp",
+  "imageAlt": {
+    "en": "",
+    "fr": ""
+  },
+  "description": "Estimate how many African farms will face losses or lost revenue from droughts and floods, by farm size class, under historical and future climate scenarios.",
+  "keywords": [
+    "loss and damage",
+    "climate payouts",
+    "farm size",
+    "smallholders",
+    "drought",
+    "flood",
+    "SPEI",
+    "Africa",
+    "adaptation"
+  ],
+  "textDir": "data/lossDamage/text",
+  "contributors": {
+    "authors": [
+      { "type": "common", "id": "zmehrabi" },
+      {
+        "type": "custom",
+        "name": "Ginni Braich",
+        "org": ["Better Planet Laboratory"]
+      },
+      { "type": "common", "id": "byoungberg" }
+    ],
+    "developers": [{ "type": "common", "id": "byoungberg" }]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dataset": "chirps_county",
+  "title": "CHIRPS county rainfall & climate (seasonal), Kenya",
+  "source": "UCSB Climate Hazards Center — CHIRPS v3 precip + CHIRTS-ERA5 temp + SPEI (admin1 zonal, via the Atlas climate hub)",
+  "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/ ; Atlas hub digital-atlas S3 admin-periods",
+  "citation": "Funk et al., CHIRPS v3 + CHIRTS-ERA5, UCSB Climate Hazards Center.",
+  "license": "CC-BY (UCSB Climate Hazards Center).",
+  "fetched_on": "2026-07-10",
+  "method": "Pre-extracted admin1 zonal from the Atlas climate hub (no raster work); staged via the D409 pipeline.",
+  "coverage": "County x year x period (seasons + annual) x variable: PTOT (mm), TAVG/TMAX/TMIN (C), SPEI-01/03/06/12/24. 1980-2026.",
+  "used_by": "notebook §3 rainfall by season + §7 outlook base",
+  "grain": "255024 rows",
+  "columns": [
+    "iso3",
+    "admin0_name",
+    "admin1_name",
+    "admin2_name",
+    "gaul0_code",
+    "gaul1_code",
+    "gaul2_code",
+    "year",
+    "period",
+    "variable",
+    "value_mean",
+    "value_sd"
+  ]
+}

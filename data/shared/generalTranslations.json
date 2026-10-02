@@ -1,0 +1,100 @@
+{
+  "language": {
+    "en": "language",
+    "fr": "langue"
+  },
+  "overview": {
+    "en": "Overview",
+    "fr": "Vue d'Ensemble"
+  },
+  "contributors": {
+    "en": "Contributors",
+    "fr": "Contributeurs"
+  },
+  "high": {
+    "en": "High",
+    "fr": "Élevée"
+  },
+  "low": {
+    "en": "Low",
+    "fr": "Faible"
+  },
+  "more": {
+    "en": "more",
+    "fr": "plus"
+  },
+  "less": {
+    "en": "less",
+    "fr": "moins"
+  },
+  "mean": {
+    "en": "Average",
+    "fr": "moyenne"
+  },
+  "regional_avg": {
+    "en": "Regional Average",
+    "fr": "Moyenne Régionale"
+  },
+  "national_avg": {
+    "en": "Country Average",
+    "fr": "Moyenne Nationale"
+  },
+  "country": {
+    "en": "Country",
+    "fr": "Pays"
+  },
+  "region": {
+    "en": "Region",
+    "fr": "Région"
+  },
+  "scenario": {
+    "en": "Scenario",
+    "fr": "Scénario"
+  },
+  "historic": {
+    "en": "Historic",
+    "fr": "Historique"
+  },
+  "noDataAvailable": {
+    "en": "No Data Available",
+    "fr": "Aucune donnée disponible"
+  },
+  "appendix": {
+    "en": "Appendix",
+    "fr": "Annexe"
+  },
+  "license": {
+    "en": "License",
+    "fr": "Licence"
+  },
+  "download": {
+    "en": "Download Data",
+    "fr": "Télécharger les Données"
+  },
+  "advancedControls": {
+    "en": "Advanced Controls",
+    "fr": "Contrôles avancés"
+  },
+  "commodity": {
+    "en": "Commodity",
+    "fr": "Produit"
+  },
+  "vizType": {
+    "title": {
+      "en": "Visualization Type",
+      "fr": "Type de Visualisation"
+    },
+    "plot": {
+      "en": "Plot",
+      "fr": "Graphique"
+    },
+    "table": {
+      "en": "Table",
+      "fr": "Tableau"
+    },
+    "map": {
+      "en": "Map",
+      "fr": "Carte"
+    }
+  }
+}

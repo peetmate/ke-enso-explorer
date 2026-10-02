@@ -1,0 +1,24 @@
+{
+  "dataset": "ipc_county",
+  "title": "IPC food-security phase, Kenya counties",
+  "source": "IPC via FEWS NET",
+  "url": "https://fews.net/",
+  "citation": "FEWS NET / IPC.",
+  "license": "FEWS NET — public.",
+  "fetched_on": "2026-07-10",
+  "method": "Machine-readable FEWS/IPC source; staged via the D409 pipeline (D409-only acquisition).",
+  "coverage": "County IPC phase (max/mean), multiple reporting dates.",
+  "used_by": "notebook §5.1 food-security phase",
+  "grain": "12361 rows",
+  "columns": [
+    "county",
+    "reporting_date",
+    "scenario_name",
+    "max_phase",
+    "mean_phase",
+    "n_units",
+    "iso3",
+    "source",
+    "exposure"
+  ]
+}

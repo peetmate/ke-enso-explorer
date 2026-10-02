@@ -1,0 +1,21 @@
+{
+  "dataset": "gesi_v2",
+  "title": "Gender & equity indicators (GESI), Kenya counties",
+  "source": "KNBS County Gender Data Sheets (2025) — 47 per-county PDFs (State Dept for Gender + KNBS + UN Women 'Women Count')",
+  "url": "https://www.knbs.or.ke/wp-content/uploads/2026/0{4,5}/NN-County-...pdf",
+  "citation": "KNBS / State Department for Gender. County Gender Data Sheets, 2025. Nairobi, Kenya.",
+  "license": "UNRESOLVED — do not assert. The sheets carry six parties (County Government, Council of Governors, State Dept for Gender & Affirmative Action, KNBS, SDGs Kenya Forum, UN Women 'Women Count'), no copyright notice, no ISBN. Absence of a notice is NOT a licence grant. The KNBS Open License Agreement is scoped to the Open Data Platform (kenya.opendataforafrica.org) and these are PDFs on knbs.or.ke, so it almost certainly does not reach them — same gap as Census Volume XVI. Not published to S3; settle with UN Women before any redistribution.",
+  "fetched_on": "2026-07-24",
+  "method": "Code-keyed deterministic extraction (_sources/gesi_extract.py): keys on the sheet's stable indicator code (not label text). Validation gate = the Kenya national value is identical on all 47 sheets per indicator; a series is served only if >=40/47 counties match the modal Kenya value. No number typed by a model.",
+  "coverage": "35 indicator series across 24 codes, county level (adm1). Coverage is NOT uniform: the gate serves a series at >=40/47, so only 10 of 35 series reach all 47 counties (10 at 46, 3 at 45, 5 at 44, 3 at 43, 2 at 42, 2 at 40; worst is B6 households-with-elderly at 40/47). Per-county rows run 22-35. A missing county-series is a gate/parse drop, NEVER an observed zero. D7 is sex-asymmetric (Male 47, Female 46) - check both before any sex ratio. Chart-style indicators (ANC-visit/vaccination charts, internet-usage) dropped by the gate. Reference year is NOT retained: clean_label() strips trailing years, and the sheets mix vintages (KDHS 2022, 2019 census-derived), so the table must not be read as uniformly 2022.",
+  "used_by": "notebook §2.1 GESI 47-county distribution",
+  "grain": "1578 rows",
+  "columns": [
+    "county",
+    "code",
+    "sub",
+    "label",
+    "kenya",
+    "county_value"
+  ]
+}

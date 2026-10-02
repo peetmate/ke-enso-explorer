@@ -1,0 +1,130 @@
+{
+  "General": {
+    "country": "Pays",
+    "region": "Région",
+    "iso3": "iso3",
+    "farmSize": "Taille de l'exploitation",
+    "numFarms": "Nombre d'exploitations",
+    "noEvents": "Aucun événement extrême",
+    "downloadFigure": "Télécharger la figure",
+    "quickInsights": "Aperçus rapides pour :::subject:::",
+    "farmSizeClasses": {
+      "All Farms": "Toutes les exploitations",
+      "Under 1 HA": "Moins de 1 ha",
+      "1-2 HA": "1-2 ha",
+      "2-5 HA": "2-5 ha",
+      "5-10 HA": "5-10 ha",
+      "10-20 HA": "10-20 ha",
+      "20+ HA": "Plus de 20 ha"
+    },
+    "events": {
+      "Very Dry": "Très sec",
+      "Very Wet": "Très humide"
+    }
+  },
+  "FarmSize": {
+    "selectors": {
+      "time": {
+        "title": "Période",
+        "options": {
+          "Current Farms": "Exploitations actuelles",
+          "Farms 2050": "Exploitations en 2050"
+        }
+      }
+    },
+    "insight": {
+      "baseline": "**:::country:::** compte au total **:::farms:::** exploitations dans la classe de taille **:::size:::** pour l'année de référence, aux alentours de 2020.",
+      "projection": "Le nombre total d'exploitations devrait atteindre **:::future:::** d'ici 2050, sous SSP 245.",
+      "change": "Cela représente **:::trend:::** de **:::pct:::%**.",
+      "trend": {
+        "increase": "une augmentation",
+        "decrease": "une diminution"
+      }
+    }
+  },
+  "LossFunctions": {
+    "selectors": {
+      "eventType": {
+        "title": "Type d'événement",
+        "options": {
+          "Drought": "Sécheresse",
+          "Flood": "Inondation"
+        }
+      },
+      "loss": {
+        "title": "Perte",
+        "options": {
+          "Predicted Probabilities of Loss": "Probabilités prédites de perte",
+          "Predicted Proportion of Lost Revenue": "Proportion prédite de revenus perdus"
+        }
+      }
+    },
+    "axis": {
+      "x": "Taille de l'exploitation (log)",
+      "y": {
+        "Loss": "Perte",
+        "Lost Revenue": "Revenus perdus"
+      }
+    },
+    "insight": {
+      "template": "La **:::loss:::** due à **:::event:::** **:::trend:::** à mesure que la taille des exploitations augmente.",
+      "trend": {
+        "increases": "augmente",
+        "decreases": "diminue"
+      }
+    }
+  },
+  "Ensembles": {
+    "axis": {
+      "x": "Nombre d'événements"
+    },
+    "tooltip": {
+      "scenario": "Scénario",
+      "hazard": "Aléa"
+    },
+    "scenarios": {
+      "Historical (1995-2014)": "Historique (1995-2014)",
+      "SSP245 (2040-2060)": "SSP245 (2040-2060)",
+      "SSP585 (2040-2060)": "SSP585 (2040-2060)"
+    }
+  },
+  "LossByFarmType": {
+    "selectors": {
+      "event": {
+        "title": "Événement"
+      },
+      "model": {
+        "title": "Modèle",
+        "options": {
+          "baseline": "Référence",
+          "SSP245": "SSP245",
+          "SSP585": "SSP585"
+        }
+      }
+    },
+    "axis": {
+      "x": "Année",
+      "y": "Nombre d'exploitations"
+    },
+    "legend": {
+      "title": "Seuil",
+      "options": {
+        "Farms Likely Impacted": "Exploitations probablement touchées",
+        "30% lost revenue": "30 % de revenus perdus",
+        "40% lost revenue": "40 % de revenus perdus",
+        "50% lost revenue": "50 % de revenus perdus"
+      }
+    },
+    "tooltip": {
+      "lossType": "Type de perte",
+      "lossTypes": {
+        "Loss": "Perte",
+        "Revenue": "Revenus"
+      }
+    },
+    "insight": {
+      "losses": "Entre :::minYear::: et :::maxYear:::, on estime que **:::farms:::** exploitations au total (classe de taille :::size:::) subiront probablement des pertes en raison de conditions **:::event:::** en/au **:::country:::** selon le modèle :::model:::. Cela représente un besoin potentiel d'**indemnisation** de **:::payout:::** exploitations par an en moyenne.",
+      "revenue": "Parmi les exploitations probablement touchées, **:::minFarms:::** au total pourraient perdre plus de **:::minPct:::%** de leurs revenus et environ **:::maxFarms:::** exploitations au total pourraient perdre plus de **:::maxPct:::%** de leurs revenus en raison de conditions **:::event:::** en/au **:::country:::** selon le modèle :::model:::."
+    }
+  }
+}

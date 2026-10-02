@@ -1,0 +1,23 @@
+{
+  "dataset": "knbs_production_national",
+  "title": "KNBS national agricultural production, Kenya",
+  "source": "KNBS National Agriculture Production Report (national totals)",
+  "url": "https://www.knbs.or.ke/",
+  "citation": "KNBS. National Agriculture Production Report. Nairobi, Kenya.",
+  "license": "KNBS official statistics — public; cite KNBS.",
+  "fetched_on": "2026-07-17",
+  "method": "Deterministic extraction of the report's printed national totals (napr engine).",
+  "coverage": "National production series.",
+  "used_by": "notebook — national context / additivity reference",
+  "grain": "163 rows",
+  "columns": [
+    "crop",
+    "year",
+    "value_kt",
+    "unit",
+    "edition",
+    "source_file",
+    "pdf_page",
+    "dual_validated"
+  ]
+}

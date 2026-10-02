@@ -1,0 +1,83 @@
+/** Render an Atlas-styled Observable table with optional search and zebra rows. */
+function atlasTable(
+  data,
+  {
+    searchable = true,
+    height = "400px",
+    zebra = false,
+    rows = 25,
+    width,
+    columns,
+    format,
+    ...tableOptions
+  } = {},
+) {
+  const options = {
+    height,
+    rows,
+    width,
+    select: false,
+    ...tableOptions,
+  };
+  if (columns !== undefined) options.columns = columns;
+  if (format !== undefined) options.format = format;
+
+  const renderTable = (rowsToRender) => {
+    const table = Inputs.table(rowsToRender, options);
+    table.classList.add("atlas-table", "atlasDataTable");
+    table.classList.toggle("atlas-table--zebra", zebra);
+    return table;
+  };
+
+  if (!searchable) return renderTable(data);
+
+  const filter = Inputs.search(data);
+  const tableHost = html`<div class="atlas-table__host"></div>`;
+  const container = html`<div class="atlas-table-shell"></div>`;
+
+  const render = () => {
+    tableHost.replaceChildren(renderTable(filter.value));
+  };
+
+  filter.addEventListener("input", render);
+  container.append(filter, tableHost);
+  render();
+  return container;
+}
+
+/** Compatibility wrapper for the previous unfiltered table API. */
+function dataTable(data, options = {}) {
+  return atlasTable(data, { ...options, searchable: false });
+}
+
+/** Compatibility wrapper for the previous searchable table API. */
+function filterableDataTable(data, options = {}) {
+  return atlasTable(data, { ...options, searchable: true });
+}
+
+function sparkbar({
+  max,
+  background = "#ddd",
+  color = "white",
+  formatter = (x) => x.toLocaleString(),
+  align = "right", // "right" | "left"
+} = {}) {
+  return (x) => {
+    const width = Math.max(0, Math.min(100, (x / max) * 100));
+
+    return htl.html`
+    <div
+      class="atlas-sparkbar ${
+        align === "right" ? "atlas-sparkbar--right" : ""
+      }"
+      style="
+        --atlas-sparkbar-width: ${width}%;
+        --atlas-sparkbar-background: ${background};
+        --atlas-sparkbar-color: ${color};
+      "
+    >
+      ${formatter(x)}
+    </div>
+  `;
+  };
+}

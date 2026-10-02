@@ -1,0 +1,112 @@
+generateDB = async (data_obj) => {
+  let data = data_obj;
+  const _db = await DuckDBClient.of();
+
+  for (const d of data) {
+    if (!d.key || d.key.trim() === "") continue;
+    let path = d.s3_path;
+    let view = d.sql.table ? "TABLE" : "VIEW";
+    let query = d.sql.query;
+    if (!query) {
+      query = `CREATE ${view} "${d.key}" AS SELECT * FROM read_parquet("${path}");`;
+    } else {
+      query = `
+        CREATE ${view} "${d.key}" AS
+          SELECT ${query.select}
+          FROM read_parquet("${path}")
+          WHERE ${query.where.join(" AND ")};`;
+    }
+    await _db.query(query);
+  }
+  return await _db;
+};
+
+/** Bust DuckDB-wasm's stale parquet cache on Windows (duckdb-wasm#1658). */
+function patchWindowsCache(url) {
+  let isWindows = false;
+  if (navigator.userAgentData) {
+    // Firefox lacks userAgentData; the reported issue is Chromium-specific.
+    isWindows = navigator.userAgentData.platform === "Windows";
+  } else {
+    isWindows = navigator.userAgent.toLowerCase().includes("windows");
+  }
+
+  return isWindows ? `${url}?t=${Date.now()}` : url;
+}
+
+// Escape admin names for legacy SQL interpolation.
+cleanAdminInput_SQL = (name) => {
+  return !name ? null : name.replace(/'/g, "''");
+}
+
+formatNumCompactShort = ({ locale = "en-US" } = {}) =>
+  new Intl.NumberFormat(locale, {
+    notation: "compact",
+    compactDisplay: "short",
+  }).format;
+
+formatNumCompactSigFigs = ({ locale = "en-US", sigFigs = 3 } = {}) => {
+  return (number) => {
+    const formattedNumber = Number(number).toLocaleString(locale, {
+      maximumSignificantDigits: sigFigs,
+      notation: "compact",
+      compactDisplay: "short",
+    });
+
+    return formattedNumber;
+  };
+};
+
+function formatUSD({ locale = "en-US" } = {}) {
+  const formatter = formatNumCompactShort({ locale });
+  return (number) => {
+    const formattedNum = formatter(number);
+    return "$" + formattedNum;
+  };
+}
+
+// Let Plot hover tips escape the SVG edge.
+chartStyle = ({ overflow: "visible", fontSize: "13px" });
+
+inputTemplate = ({ gap = "2em" } = {}) => {
+  return (inputs) => {
+    const renderedInputs =
+      inputs && typeof inputs === "object" && !Array.isArray(inputs)
+        ? Object.values(inputs)
+        : inputs;
+    return html`<div style="display: flex; flex-wrap: wrap; gap: ${gap};">${renderedInputs}</div>`;
+  };
+};
+
+function loaderDiv(id) {
+  return html`
+  <div id="${id}" class="atlas-loader">
+    <div class="atlas-loader__stage">
+      <div
+        class="atlas-loader__spinner"
+        role="status"
+        aria-label="Loading"
+      ></div>
+    </div>
+  </div>
+  `;
+}
+
+function wrapTickLabel(label, maxWidth = 10) {
+  const words = label.split(" ");
+  const lines = [];
+  let line = "";
+
+  for (const word of words) {
+    const test = line ? `${line} ${word}` : word;
+    if (test.length <= maxWidth) {
+      line = test;
+    } else {
+      if (line) lines.push(line);
+      line = word;
+    }
+  }
+  if (line) lines.push(line);
+
+  return lines.join("\n");
+}

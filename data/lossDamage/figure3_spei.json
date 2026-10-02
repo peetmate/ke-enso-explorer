@@ -1,0 +1,218 @@
+[
+  {
+    "count": 3468,
+    "variable": "Very Dry",
+    "gcm": "EC-Earth3",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 704,
+    "variable": "Very Dry",
+    "gcm": "Ensemble Average",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3275,
+    "variable": "Very Dry",
+    "gcm": "GFDL-ESM4",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3299,
+    "variable": "Very Dry",
+    "gcm": "MPI-ESM1-2-HR",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3617,
+    "variable": "Very Dry",
+    "gcm": "MRI-ESM2-0",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3468,
+    "variable": "Very Dry",
+    "gcm": "NorESM2-LM",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3640,
+    "variable": "Very Dry",
+    "gcm": "EC-Earth3",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 2676,
+    "variable": "Very Dry",
+    "gcm": "Ensemble Average",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 6144,
+    "variable": "Very Dry",
+    "gcm": "GFDL-ESM4",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 4519,
+    "variable": "Very Dry",
+    "gcm": "MPI-ESM1-2-HR",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 4779,
+    "variable": "Very Dry",
+    "gcm": "MRI-ESM2-0",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 4590,
+    "variable": "Very Dry",
+    "gcm": "NorESM2-LM",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 3747,
+    "variable": "Very Dry",
+    "gcm": "EC-Earth3",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 3423,
+    "variable": "Very Dry",
+    "gcm": "Ensemble Average",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 6276,
+    "variable": "Very Dry",
+    "gcm": "GFDL-ESM4",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 3924,
+    "variable": "Very Dry",
+    "gcm": "MPI-ESM1-2-HR",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 5827,
+    "variable": "Very Dry",
+    "gcm": "MRI-ESM2-0",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 5124,
+    "variable": "Very Dry",
+    "gcm": "NorESM2-LM",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 3563,
+    "variable": "Very Wet",
+    "gcm": "EC-Earth3",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 1131,
+    "variable": "Very Wet",
+    "gcm": "Ensemble Average",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3541,
+    "variable": "Very Wet",
+    "gcm": "GFDL-ESM4",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3293,
+    "variable": "Very Wet",
+    "gcm": "MPI-ESM1-2-HR",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3465,
+    "variable": "Very Wet",
+    "gcm": "MRI-ESM2-0",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 3563,
+    "variable": "Very Wet",
+    "gcm": "NorESM2-LM",
+    "model": "Historical (1995-2014)"
+  },
+  {
+    "count": 4083,
+    "variable": "Very Wet",
+    "gcm": "EC-Earth3",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 599,
+    "variable": "Very Wet",
+    "gcm": "Ensemble Average",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 1742,
+    "variable": "Very Wet",
+    "gcm": "GFDL-ESM4",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 2362,
+    "variable": "Very Wet",
+    "gcm": "MPI-ESM1-2-HR",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 2469,
+    "variable": "Very Wet",
+    "gcm": "MRI-ESM2-0",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 2880,
+    "variable": "Very Wet",
+    "gcm": "NorESM2-LM",
+    "model": "SSP245 (2040-2060)"
+  },
+  {
+    "count": 4321,
+    "variable": "Very Wet",
+    "gcm": "EC-Earth3",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 1062,
+    "variable": "Very Wet",
+    "gcm": "Ensemble Average",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 1581,
+    "variable": "Very Wet",
+    "gcm": "GFDL-ESM4",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 3291,
+    "variable": "Very Wet",
+    "gcm": "MPI-ESM1-2-HR",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 2209,
+    "variable": "Very Wet",
+    "gcm": "MRI-ESM2-0",
+    "model": "SSP585 (2040-2060)"
+  },
+  {
+    "count": 2565,
+    "variable": "Very Wet",
+    "gcm": "NorESM2-LM",
+    "model": "SSP585 (2040-2060)"
+  }
+]

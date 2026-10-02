@@ -1,0 +1,70 @@
+edition,page,table,county_rows,status,reason
+2024,26,Table 3.3 Maize Top-20,20,duplicate,ranked subset; Annex 1 serves all 47 maize counties
+2024,28,Table 3.4 Wheat P&V,15,SERVED,new crop (area+prod 2019-23) dual=1.0
+2024,33,Table 3.8 Sorghum P&V,20,duplicate,"area+prod subset of the annex (identical data, fewer counties); per-county VALUE not in source — value is national-only in the narrative prose"
+2024,34,Table 3.10 Millet P&V,20,duplicate,"area+prod subset of the annex (identical data, fewer counties); per-county VALUE not in source — value is national-only in the narrative prose"
+2024,35,Table 3.12 Barley P&V,6,held-unvalidatable,new crop but single-engine (dual=0, pdfplumber garble) and no Total row -> no deterministic gate passes
+2024,36,Table 3.15 Beans Top-20,20,duplicate,ranked subset; Dry beans annex serves all counties
+2024,38,Table 3.16 Cowpeas P&V,18,duplicate,"area+prod subset of the annex (identical data, fewer counties); per-county VALUE not in source — value is national-only in the narrative prose"
+2024,39,Table 3.18 Green grams P&V,19,duplicate,"area+prod subset of the annex (identical data, fewer counties); per-county VALUE not in source — value is national-only in the narrative prose"
+2024,40,Table 3.20 Pigeon peas P&V,17,duplicate,"area+prod subset of the annex (identical data, fewer counties); per-county VALUE not in source — value is national-only in the narrative prose"
+2024,41,Table 3.22 Irish potato P&V,19,duplicate,"area+prod subset of the annex (identical data, fewer counties); per-county VALUE not in source — value is national-only in the narrative prose"
+2024,42,Table 3.24 Sweet potato P&V,19,duplicate,"area+prod subset of the annex (identical data, fewer counties); per-county VALUE not in source — value is national-only in the narrative prose"
+2024,47,Table 4.2 Sugarcane,14,SERVED,sugarcane production 2019-23
+2024,50,Annex 12 Sisal Marketing,5,held-minor,marketing/sales figures (not production); 5 counties
+2024,52,Table 4.7 Seed Support,19,excluded,seed distribution not production
+2024,54,Table 4.9 Lint,5,duplicate,lint served from Annex 14
+2024,56,Table 4.12 Seed Cotton,25,SERVED,cotton area+prod+value 2019-23
+2024,60,Table 4.15 Coffee area crop-yr,32,secondary,coffee PRODUCTION served (Annex 11); area is a secondary metric
+2024,64,Table 4.21 Pyrethrum area,18,secondary,pyrethrum PRODUCTION served (p65); area secondary
+2024,65,Table 4.22 Pyrethrum production,18,SERVED,pyrethrum dry-flower production 2019-23
+2024,67,Table 4.25 Bixa,8,held-minor,"unit is acres (ambiguous), 8 counties, annatto minor"
+2024,71,Table 4.30 Made Tea,14,secondary,green-leaf tea production served (p73); made-tea is processed
+2024,73,Table 4.32 Green leaf Tea,12,SERVED,tea green-leaf production 2019-23
+2024,75,Table 4.33 Tea area,14,secondary,tea production served; area secondary
+2024,82,Table 5.1 Macadamia,15,superseded,served from 2025 edition (2024 held: Murang'a wrap 72%)
+2024,84,Table 5.3 Cashew,5,superseded,cashew served from 2025 edition (2024 dual=0)
+2024,85,Table 5.4 Groundnut,19,SERVED,groundnut area+prod+value 2019-23
+2024,86,Table 5.6 Sesame,6,held-oversum,additivity 104.9% in 2021 (double-count); 2025 also flawed (Canola)
+2024,85b,Table 5.5 Bambara nut,6,SERVED,bambara area+prod+value 2019-23
+2024,88,Table 5.8 Sunflower,20,SERVED,sunflower area+prod+value 2023
+2024,89,Table 5.9 Castor,11,SERVED,"area+prod 2023 (both reconcile to Total 100%); value dropped (Ksh-Million label doesn't reconcile)"
+2024,113-124,Annex 1-10 food annexes,27-47,SERVED,maize/sorghum/millet/beans/cowpeas/greengrams/pigeon/irish/sweet
+2024,125,Annex 11 Coffee,32,SERVED,coffee production (crop-year Total) 2019-23
+2024,126,Annex 12 Sugar comparative,15,duplicate,sugarcane production served from p47/p99 (this is factory-comparative)
+2024,127,Annex 13 Sisal,6,duplicate,sisal served from 2025 Table 5.4(b)
+2024,128,Annex 14 Lint,25,SERVED,lint production+value 2019-23
+2024,129-140,Annex 15-26 livestock population,45-47,SERVED,cattle/sheep/goats/donkeys/camels/pigs/rabbits/chickens/turkeys/ducks/geese 2021-23
+2024,141-142,Annex 27 products 5-summary,45,duplicate,products served from p143-156 (honey/wax/eggs/hides/skins covered)
+2024,143-156,Annex 27 products,35-46,SERVED,milk/beef/mutton/pork/goat-meat/camel-meat/honey/wax/eggs/hides/skins 2021-22
+2025,42,Table 3.10 Beans P&V,7,excluded,nc=2 national/top-N summary not full county table
+2025,48,Table 3.14 Irish potato,4,excluded,nc=1 chart/summary
+2025,52,Table 3.16,4,excluded,nc=1 chart/summary
+2025,82,Table 5.1.1 Coffee area,32,secondary,coffee production served; area secondary
+2025,87,Table 5.2.1 Made Tea,14,secondary,green-leaf tea served; made-tea processed
+2025,88,Table 5.2.1c Green leaf Tea,16,SERVED,tea green-leaf production 2020-24
+2025,92,Table 5.2.2 Tea area,14,secondary,tea production served; area secondary
+2025,98,Table 5.3.2 Sugarcane,15,SERVED,sugarcane production 2020-24
+2025,99,Table 5.3.3 Sugar by county,15,SERVED,(same sugarcane series)
+2025,103,Table 5.4b Sisal,6,SERVED,sisal quantity+value 2021-24
+2025,114,Table 5.5d Seed Cotton,20,SERVED,cotton area+prod+value 2020-24
+2025,118,Table 5.6.1 Pyrethrum area,18,secondary,pyrethrum production served; area secondary
+2025,119,Table 5.6.3 Pyrethrum production,18,SERVED,pyrethrum production 2020-24
+2025,122,Table 5.7.1 Bixa,8,held-minor,unit acres ambiguous; minor
+2025,126,Table 6.1 Coconut,6,SERVED,coconut area+prod+value 2023-24
+2025,127,Table 6.2 Cashew nut,8,SERVED,cashew area+prod+value 2023-24
+2025,128,Table 6.3 Macadamia,15,SERVED,macadamia area+prod+value 2023-24
+2025,129,Table 6.4 Groundnut,20,SERVED,"2024 column served (masked the double-counted 2023 block; 2023 from 2024 edition)"
+2025,131,Table 6.5 Bambara,6,SERVED,bambara area+prod+value 2023-24
+2025,132,Table 6.6 Sesame,8,SERVED,"y-range isolated from the Canola table on the same page (8 sesame counties, 2023-24)"
+2025,134,Table 6.8 Sunflower,33,SERVED,"2024 column served (masked double-counted 2023; sunflower now 33 cty 2023-24)"
+2025,135,Table 6.8 Sunflower,33,SERVED,"2024 column served (masked double-counted 2023; sunflower now 33 cty 2023-24)"
+2025,139-166,Figures / Table 7.x livestock,4-15,excluded,"2025 presents these as CHARTS (nc=1, single value per county), not multi-column tables; 2025 livestock is chart-only (2024-edition annex tables serve 2021-23)"
+2025,181,Table 8.7 Fish,5,out-of-scope,fisheries (not crops/livestock)
+2025,186-200,Annex 1-10 food annexes,12-39,SERVED,maize/millet/sorghum/beans/cowpeas/greengrams/pigeon/irish/sweet/cassava 2020-24
+2025,133,Table 6.7 Canola,12,SERVED,"NEW crop; y-range isolated from Sesame table on p133 (12 counties, 2023-24, value)"
+2024,75/2025,92,Tea area,14,SERVED,area_ha added to Tea (green leaf)
+2024,64/2025,118,Pyrethrum area,18,SERVED,area_ha added to Pyrethrum
+2025,122,Table 5.7.1 Bixa,8,SERVED,"area only (acres->ha), 2022-24; new crop"
+2024,74,Green leaf Tea (cont.),4,SERVED,"p74 is the continuation of the p73 tea green-leaf table (Meru/Nyeri/Kirinyaga/Embu) — tea 2024 now spans p73-74"
+2024,83,Table 5.2 Coconut,6,SERVED,"coconut area/prod/value 2019-23 (found in final sweep); extends coconut back from the 2025-only 2023-24"

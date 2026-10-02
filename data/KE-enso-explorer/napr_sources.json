@@ -1,0 +1,479 @@
+[
+ {
+  "commodity": "Bambara nut",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2023-24 edition",
+  "table": "Table 5.5: Area under Bambara nut Production and the Value",
+  "page": 86,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Bambara nut",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 6.5: Area under Bambara nuts, Production and Value by County",
+  "page": 132,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Barley",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Table 3.12: Barley Production and Value",
+  "page": 35,
+  "validation": "manual-verify (Pete vs PDF p35 (2024 ed, Table 3.12), 2026-07-20)"
+ },
+ {
+  "commodity": "Bixa",
+  "category": "crop",
+  "variables": "area (ha)",
+  "edition": "2024-25 edition",
+  "table": "Table 5.7.1: Area under Bixa by County",
+  "page": 122,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Canola",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 6.7: Area under Canola, Production and Value",
+  "page": 133,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Cashew nut",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 6.2: Area under Cashew nut, Production and Value by County in",
+  "page": 128,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Cassava",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 10: Area and Production of Cassava by County",
+  "page": 199,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Castor",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Table 5.9: Area under Castor bean, Production and Value",
+  "page": 90,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Coconut",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2023-24 edition",
+  "table": "Table 5.2: Area under coconut, Production and Value",
+  "page": 83,
+  "validation": "additivity + completeness (single-engine; pdfplumber unreliable on page)"
+ },
+ {
+  "commodity": "Coconut",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 6.1: Area under Coconut, Production and Value by County in",
+  "page": 127,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Coffee",
+  "category": "crop",
+  "variables": "production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 11: Clean Coffee Production by County, Crop Year",
+  "page": 125,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Cotton (seed)",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2023-24 edition",
+  "table": "p56",
+  "page": 56,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Cotton (seed)",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 5.5 (d): Seed Cotton Area, Production and Value by County",
+  "page": 115,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Cowpeas",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 6: Area and Production of Cowpeas by County",
+  "page": 120,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Cowpeas",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 5: Area and Production of Cowpeas by County",
+  "page": 193,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Dry beans",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 5: Area and Production of Dry Beans by County",
+  "page": 119,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Dry beans",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 4:Area and Production of Beans by County",
+  "page": 191,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Finger millet",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 3: Area and Production of Finger Millet by County",
+  "page": 117,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Green grams",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 7: Area and Production of Green grams by County",
+  "page": 121,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Green grams",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 6: Area and Production of Green Grams by County",
+  "page": 194,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Groundnut",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2023-24 edition",
+  "table": "Table 5.4: Area under peanuts Production and the Value",
+  "page": 85,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Groundnut",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 6.4: Area under Ground Nuts, Production and Value by County",
+  "page": 130,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Irish potato",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 9: Area and Production of Irish Potatoes by County",
+  "page": 123,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Irish potato",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 8: Area and Production of Irish Potatoes by County",
+  "page": 196,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Lint",
+  "category": "crop",
+  "variables": "production (t), value (KSh)",
+  "edition": "2023-24 edition",
+  "table": "Annex 14: Lint Production and Value by County",
+  "page": 128,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Macadamia",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 6.3: Area under Macadamia, Production and Value by County",
+  "page": 129,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Maize",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 1: Area and Production of Maize by County",
+  "page": 114,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Maize",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 1: Area and Production of Maize by County",
+  "page": 186,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Millet (combined)",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 2: Area and Production of Millet by County",
+  "page": 188,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Pearl millet",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 4: Area and Production of Pearl Millet by County",
+  "page": 118,
+  "validation": "additivity + completeness (single-engine; pdfplumber unreliable on page)"
+ },
+ {
+  "commodity": "Pigeon peas",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 8: Area and Production of Pigeon peas by County",
+  "page": 122,
+  "validation": "additivity + completeness (single-engine; pdfplumber unreliable on page)"
+ },
+ {
+  "commodity": "Pigeon peas",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 7: Area and Production of Pigeon Peas by County",
+  "page": 195,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Pyrethrum",
+  "category": "crop",
+  "variables": "production (t)",
+  "edition": "2023-24 edition",
+  "table": "Table 4.22: Dry Pyrethrum Flower Production in Kilograms",
+  "page": 65,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Pyrethrum",
+  "category": "crop",
+  "variables": "production (t)",
+  "edition": "2024-25 edition",
+  "table": "Table 5.6.3: Pyrethrum Dry Flower Production by County",
+  "page": 120,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Pyrethrum",
+  "category": "crop",
+  "variables": "area (ha)",
+  "edition": "2023-24 edition",
+  "table": "Table 4.21: Area under pyrethrum in acres by county",
+  "page": 64,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Pyrethrum",
+  "category": "crop",
+  "variables": "area (ha)",
+  "edition": "2024-25 edition",
+  "table": "Table 5.6.1: Area under Pyrethrum",
+  "page": 118,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sesame",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 6.6: Area under Sesame, Production and Value by County",
+  "page": 133,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sisal",
+  "category": "crop",
+  "variables": "production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 5.4(b): Quantity and Value of Sisal Production by County",
+  "page": 104,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sorghum",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 2: Area and Production of Sorghum by County",
+  "page": 116,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sorghum",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 3: Area and Production of Sorghum by County",
+  "page": 189,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sugarcane",
+  "category": "crop",
+  "variables": "production (t)",
+  "edition": "2023-24 edition",
+  "table": "Table 4.2: Area under Sugarcane, Area Harvested, Production, Average",
+  "page": 47,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sugarcane",
+  "category": "crop",
+  "variables": "production (t)",
+  "edition": "2024-25 edition",
+  "table": "Table 5.3.3: Sugar Production by County",
+  "page": 99,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sunflower",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2023-24 edition",
+  "table": "Table 5.8: Area under Sunflower, Production, and Value",
+  "page": 89,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sunflower",
+  "category": "crop",
+  "variables": "area (ha), production (t), value (KSh)",
+  "edition": "2024-25 edition",
+  "table": "Table 6.8: Area under Sunflower, Production and Value",
+  "page": 135,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sweet potato",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Annex 10: Area and Production of Sweet Potatoes by County",
+  "page": 124,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sweet potato",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2024-25 edition",
+  "table": "Annex 9: Area and Production of Sweet Potatoes by County",
+  "page": 197,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Tea (green leaf)",
+  "category": "crop",
+  "variables": "production (t)",
+  "edition": "2023-24 edition",
+  "table": "Table 4.32: Green leaf Tea Production by county in Kenya",
+  "page": 73,
+  "validation": "additivity + completeness (single-engine; pdfplumber unreliable on page)"
+ },
+ {
+  "commodity": "Tea (green leaf)",
+  "category": "crop",
+  "variables": "production (t)",
+  "edition": "2024-25 edition",
+  "table": "Table 5.2.1 (c): Production of Green leaf Tea by County",
+  "page": 89,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Tea (green leaf)",
+  "category": "crop",
+  "variables": "area (ha)",
+  "edition": "2023-24 edition",
+  "table": "Table 4.33: Area under tea per county in Kenya (",
+  "page": 75,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Tea (green leaf)",
+  "category": "crop",
+  "variables": "area (ha)",
+  "edition": "2024-25 edition",
+  "table": "Table 5.2.2: Area Under Tea Per County in Kenya",
+  "page": 92,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Wheat",
+  "category": "crop",
+  "variables": "area (ha), production (t)",
+  "edition": "2023-24 edition",
+  "table": "Table 3.4: Production and Value of Wheat",
+  "page": 28,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Livestock population (13 species)",
+  "category": "livestock",
+  "variables": "head",
+  "edition": "2023-24 edition",
+  "table": "Annex 15-26: Population by county",
+  "page": 129,
+  "validation": "dual-engine (per page) + cross-year plausibility"
+ },
+ {
+  "commodity": "Livestock products (11)",
+  "category": "product",
+  "variables": "quantity, value (KSh)",
+  "edition": "2023-24 edition",
+  "table": "Annex 27: Livestock products by county",
+  "page": 143,
+  "validation": "value = quantity x unit-price + cross-year"
+ }
+]

@@ -1,0 +1,20 @@
+{
+  "dataset": "subcounty_rainfall_climatology",
+  "description": "1991\u20132020 WMO baseline seasonal precipitation climatology (MAM and OND) per subcounty across Kenya",
+  "source": "CHIRPS v3 (UCSB Climate Hazards Center) 0.05\u00b0 observational rainfall gridded blending",
+  "spatial_resolution": "IEBC 2019 Sub-county Boundaries (290 units)",
+  "temporal_baseline": "1991\u20132020 WMO Climatological Normal",
+  "columns": {
+    "adm1_name": "County name",
+    "adm1_pcode": "Official county pcode",
+    "adm2_name": "Sub-county name",
+    "adm2_pcode": "Official sub-county pcode",
+    "area_sqkm": "Sub-county land area (km\u00b2)",
+    "mam_mean_mm": "Long Rains (MAM) 1991-2020 climatological mean rainfall (mm)",
+    "ond_mean_mm": "Short Rains (OND) 1991-2020 climatological mean rainfall (mm)",
+    "bimodal_total_mm": "Combined bimodal rainfall total (MAM + OND mm)",
+    "mam_pct": "Percentage share of bimodal total occurring during MAM (%)",
+    "ond_pct": "Percentage share of bimodal total occurring during OND (%)",
+    "dominant_season": "Dominant seasonal rainfall peak (MAM vs OND)"
+  }
+}

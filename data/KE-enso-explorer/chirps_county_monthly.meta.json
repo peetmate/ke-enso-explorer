@@ -1,0 +1,20 @@
+{
+  "dataset": "chirps_county_monthly",
+  "title": "CHIRPS monthly county rainfall, Kenya",
+  "source": "UCSB Climate Hazards Center — CHIRPS v3 (admin1 zonal, via the Atlas climate hub)",
+  "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/ ; Atlas hub digital-atlas S3 admin-monthly",
+  "citation": "Funk et al., CHIRPS v3, UCSB Climate Hazards Center.",
+  "license": "CC-BY (UCSB Climate Hazards Center).",
+  "fetched_on": "2026-07-27",
+  "method": "Pre-extracted admin1 zonal mean from the Atlas climate hub (no raster work); PTOT filtered + renamed to the notebook schema.",
+  "coverage": "Monthly precipitation (mm), 47 counties, 1981-2026.",
+  "used_by": "notebook §3.1 monthly rainfall climatology",
+  "grain": "26112 rows",
+  "columns": [
+    "county",
+    "gaul1_code",
+    "year",
+    "month",
+    "ptot"
+  ]
+}

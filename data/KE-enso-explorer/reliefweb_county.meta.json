@@ -1,0 +1,25 @@
+{
+  "dataset": "reliefweb_county",
+  "title": "ReliefWeb humanitarian reports, Kenya counties",
+  "source": "UN OCHA ReliefWeb",
+  "url": "https://reliefweb.int/",
+  "citation": "UN OCHA ReliefWeb.",
+  "license": "UN OCHA ReliefWeb terms of use.",
+  "fetched_on": "2026-07-15",
+  "method": "ReliefWeb API (registered appname); pipeline impacts/reliefweb_pipeline.py on D409 OneDrive.",
+  "coverage": "County-tagged situation reports (id, date, title, disaster type, url).",
+  "used_by": "notebook §5.4 humanitarian reports",
+  "grain": "15736 rows",
+  "columns": [
+    "county",
+    "iso3",
+    "report_id",
+    "date",
+    "title",
+    "source",
+    "disaster_type",
+    "themes",
+    "url",
+    "fetched_on"
+  ]
+}

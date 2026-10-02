@@ -1,0 +1,2 @@
+category_id,category,series,items_reported,pages_reported,pages_fetched,rows_parsed,uuids_unique,keys_unique,pages_with_zero_rows,first_uuid_repeats,page_echo_mismatches,uuid_malformed,uploaded_before_ref,ref_period_unparsed,county_unresolved,served,validation,tls_verified,harvested_at,delay_s,cache_hits,network_requests
+7,National Drought Early Warning Bulletins,dew_national,107,11,11,107,107,107,0,0,0,0,0,0,0,True,pager item-count reconciled + uuid/key uniqueness + server-echoed page number per page,TLS-OK,2026-09-23T13:47:43+00:00,2.0,2,9

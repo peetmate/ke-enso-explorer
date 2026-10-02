@@ -1,0 +1,20 @@
+{
+  "dataset": "exposure_vop",
+  "title": "Per-county value of production by commodity (Atlas exposure), Kenya",
+  "source": "Africa Agriculture Adaptation Atlas combined exposure — MapSPAM 2020 v1r2 (crops) + GLW4 (livestock)",
+  "source_hub": "digital-atlas S3: domain=exposure/type=combined/source=glw4+spam2020v1r2_ssa/region=ssa/processing=aggregated/gaul24_adm0-1-2_exposure.parquet",
+  "source_file": "D409 _master/harmonized/atlas_exposure.csv (Kenya subset of the hub snapshot, pulled 2026-07-09)",
+  "license": "Atlas / MapSPAM (CC-BY) + GLW4 (CC-BY)",
+  "fetched_on": "2026-07-15",
+  "method": "Deterministic filter + label (_sources/parse_exposure.py), no LLM/transcription. Kept exposure='vop', unit='intld15' (constant international dollars), adm1 (gaul2_code blank); crops via tech='all' (all-technology aggregate), livestock via tech='' (GLW4 has no technology dimension), excluding 'total-*' livestock roll-ups. Livestock species merged across highland/tropical agro-zones to one commodity (Cattle, Goats, ...). VoP values are the hub's own, passed through verbatim.",
+  "grain": "one row per county x commodity",
+  "columns": {
+    "county": "canonical county name",
+    "gaul1_code": "GAUL24 admin1 code",
+    "commodity": "crop (MapSPAM) or livestock species (GLW4), display label",
+    "kind": "Crop | Livestock",
+    "vop_intld15": "gross value of production, constant 2015 international dollars (I$)"
+  },
+  "coverage": "1156 rows, 47 counties, 34 commodities. Snapshot (SPAM 2020 / GLW4) - no year dimension. In the arid/semi-arid counties livestock dominates VoP (Marsabit/Turkana: cattle+goats+sheep), grounding the pastoralist framing.",
+  "used_by": "notebook.qmd Block 1 (value-of-production bar + livestock-share insight)"
+}

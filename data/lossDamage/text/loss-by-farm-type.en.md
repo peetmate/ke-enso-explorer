@@ -1,0 +1,5 @@
+---
+title: "Loss by Farm Type: Historical and Future"
+---
+
+As we have outlined above, agriculture in critical to Africa and there is diversity in terms of the number of farms by farm size class across the country. Extreme weather such as droughts and floods, which are exacerbated by climate change as we show above, can cause losses on farms which in turn results in lost revenue, and both of these vary by farm size class. Below the map illusrates the average number of farms that experience extreme events (very wet or very dry) over the time period. We can also explore the number of farms that have likely been affected by losses due to extreme events such as very dry and very wet conditions in our baseline period (1995-2014) and could be potentially be impacted under future climate scenarios (SSP245 or SSP585). Furthermore, you can also explore the amount of revenue that could potentially be lost on these farms under either the baseline period or future climate scenarios for very dry and very wet events without additional adaptation.

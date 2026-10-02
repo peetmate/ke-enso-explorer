@@ -1,0 +1,43 @@
+{
+  "$schema": "../shared/notebook.schema.json",
+  "id": "cis",
+  "title": {
+    "en": "Identifying Climate Information Readiness",
+    "fr": "Évaluer la préparation aux services d'information climatique"
+  },
+  "image": "/images/default_crop.webp",
+  "imageAlt": {
+    "en": "",
+    "fr": ""
+  },
+  "description": "See where climate information services are backed by reliable observation, data agreement and forecast skill across Africa, where those capabilities meet the highest climate hazard, and where they can actually reach users.",
+  "keywords": [
+    "climate information services",
+    "CIS",
+    "readiness",
+    "forecast skill",
+    "weather stations",
+    "drought",
+    "waterlogging",
+    "Africa",
+    "adaptation"
+  ],
+  "textDir": "data/cis/text",
+  "contributors": {
+    "authors": [
+      { "type": "common", "id": "byoungberg" },
+      { "type": "common", "id": "psteward" },
+      { "type": "common", "id": "svyas" },
+      { "type": "common", "id": "hachicanoy" }
+    ],
+    "developers": [
+      {
+        "type": "custom",
+        "name": "Johnson Mwakazi",
+        "org": ["Snapp Africa"],
+        "url": "https://www.linkedin.com/in/johnson-mwakazi/"
+      },
+      { "type": "common", "id": "byoungberg" }
+    ]
+  }
+}

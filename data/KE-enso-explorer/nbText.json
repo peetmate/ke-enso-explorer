@@ -1,0 +1,536 @@
+{
+  "sections": {
+    "hero": {
+      "eyebrow": {
+        "en": "Africa Agriculture Adaptation Atlas · Kenya",
+        "fr": null
+      },
+      "title": {
+        "en": "ENSO Explorer — Kenya",
+        "fr": null
+      },
+      "subtitle": {
+        "en": "How El Niño / La Niña, the Indian Ocean Dipole and the Western-V steer Kenya's rains, harvests, food security and conflict — county by county.",
+        "fr": null
+      }
+    },
+    "intro": {
+      "en": "El Niño and La Niña are the ocean signals decision-makers act on. This notebook follows how that signal reaches each Kenyan county — through the Indian Ocean Dipole (short rains) and a partly-independent Western-V Pacific pattern (long rains) — and on to harvests, market prices, food insecurity and conflict. Pick a county to begin.",
+      "fr": null
+    },
+    "controls": {
+      "county": {
+        "en": "County",
+        "fr": null
+      },
+      "season": {
+        "en": "Climate season",
+        "fr": null
+      },
+      "driver": {
+        "en": "Ocean driver",
+        "fr": null
+      },
+      "crop": {
+        "en": "Crop",
+        "fr": null
+      },
+      "product": {
+        "en": "Product",
+        "fr": null
+      },
+      "mapMetric": {
+        "en": "Colour counties by",
+        "fr": null
+      },
+      "mapPalette": {
+        "en": "Map palette",
+        "fr": null
+      },
+      "mapLabels": {
+        "en": "Show county names",
+        "fr": null
+      },
+      "compareCounties": {
+        "en": "Counties to compare",
+        "fr": null
+      },
+      "rainView": {
+        "en": "Rainfall view",
+        "fr": null
+      },
+      "prodView": {
+        "en": "Units",
+        "fr": null
+      },
+      "prodViewType": {
+        "en": "View",
+        "fr": null
+      },
+      "prodCommodity": {
+        "en": "Show",
+        "fr": null
+      },
+      "prodPick": {
+        "en": "Filter",
+        "fr": null
+      },
+      "outlookSeason": {
+        "en": "Outlook season",
+        "fr": null
+      },
+      "maizeSource": {
+        "en": "Maize source",
+        "fr": null
+      },
+      "rainTimeRes": {
+        "en": "View",
+        "fr": null
+      },
+      "driverTimeRes": {
+        "en": "View",
+        "fr": null
+      }
+    },
+    "keyfacts": {
+      "title": {
+        "en": "1. Where Do Things Stand Right Now?",
+        "fr": null
+      },
+      "insight": {
+        "en": "Kenya's rains are steered by ocean patterns — the **IOD** for the Oct–Dec short rains, a **Western-V** Pacific pattern for the Mar–May long rains. Pick a county and follow how the climate signal reaches its harvests, prices, food security and conflict.",
+        "fr": null
+      },
+      "mapHeading": {
+        "en": "Pick a county — Kenya at a glance",
+        "fr": null
+      },
+      "mapIntro": {
+        "en": "*Click any county to explore it through the story below; the selected county is outlined. Recolour the map to compare counties on what they grow, how green they are right now, food insecurity, or seasonal rainfall.*",
+        "fr": null
+      },
+      "metrics": {
+        "vop": {
+          "en": "Agricultural value (VoP, I$)",
+          "fr": null
+        },
+        "ndvi": {
+          "en": "Latest vegetation (NDVI % of normal)",
+          "fr": null
+        },
+        "ipc": {
+          "en": "Latest food insecurity (IPC phase)",
+          "fr": null
+        },
+        "rainOND": {
+          "en": "Mean OND short-rains (mm)",
+          "fr": null
+        },
+        "rainMAM": {
+          "en": "Mean MAM long-rains (mm)",
+          "fr": null
+        }
+      },
+      "mapCaption": {
+        "en": "Each county is shaded by the metric you choose. Value of production is the Atlas exposure snapshot (MapSPAM 2020 crops + GLW4 livestock, constant international dollars); NDVI and IPC are the latest available reading; rainfall is the long-term seasonal mean (CHIRPS). Click a county to make it the focus of every chart below; hover for its value. The colour scale rescales to the values on screen.",
+        "fr": null
+      },
+      "produceHeading": {
+        "en": "1.1 What does my county produce?",
+        "fr": null
+      },
+      "produceIntro": {
+        "en": "*What a county grows and herds, from the **KNBS National Agriculture Production Report** — the national statistics office's own subnational figures, collected by county officers across all 47 counties. Toggle **Crops** (31 crops, 2019–2024) or **Livestock** (13 species — cattle, sheep, goats, camels, donkeys, pigs, rabbits, broiler / layer / indigenous chicken, turkeys, ducks, geese — head, 2021–2023), pick a **view** (table / bars / treemap / trend), and switch to **% of national** for the county's share of Kenya's total. In the arid north and east, livestock dwarfs crops — which is why an ENSO drought that fails pasture hits those counties hardest.*",
+        "fr": null
+      },
+      "afaPanelTitle": {
+        "en": "food-crop production (AFA county returns, avg 2020–24)",
+        "fr": null
+      },
+      "knbsPanelTitle": {
+        "en": "Kenya — marketed production (KNBS Statistical Abstract)",
+        "fr": null
+      },
+      "produceCaption": {
+        "en": "Figure 1.1 — Source: **KNBS National Agriculture Production Report** (2023–24 and 2024–25 editions). **31 crops**, extracted by one deterministic engine over every county table in both PDFs. For the food crops in both editions (maize, sorghum, combined millet, dry beans, cowpeas, green grams, pigeon peas, Irish & sweet potato, cassava), **2020–2024 come from the 2024–25 edition** (the latest — it folds in KNBS's prior-year revisions, e.g. a sweet-potato uplift for 2022–23) and **2019 from the 2023–24 edition**; 2024 is provisional. Finger & pearl millet, coffee, cotton and lint are 2019–2023 (2023–24 edition only). Extraction is **orientation-aware** (landscape annexes are rotated 90° on the page — de-rotated by word position; the engine auto-detects rotated vs upright per table), **column-binned by coordinate** so a blank or dash cell stays null in place (this recovered the 7 cotton counties an earlier positional parse had dropped), and it **re-attaches wrapped county names** whose figures land on a nameless line between the two halves of the name (e.g. Elgeyo / Marakwet — this lifted Irish potato, finger millet, cowpeas, green grams and pigeon peas to a clean 100%). The **primary validation is additivity**: the county figures reconcile to the report's own printed national Total (the report checking itself). Each served table also passes a **completeness** check (no capitalised numeric row left unattributed) and, on the ~90% of tables a second PDF engine can read, **two engines agree cell-by-cell**; a handful of pages carry a duplicated / x-shifted text layer that defeats the second engine, so those are validated by additivity + completeness alone (flagged as such in the report). A shortfall (county-sum < Total, e.g. coffee's crop-year Total) is served only when dual-engine-corroborated; otherwise the table is held back (macadamia is currently held back — its top county wraps in a way that still drops). **No value is read or typed by the model**; each row keeps its source page, and the per-table method + additivity is logged in `_sources/napr_validation_report.csv`. **% of national** = county ÷ sum of counties. Coffee = 32 counties (≈89% of national, crop-year Total); cotton, lint, groundnut, sunflower, coconut, cashew nut, macadamia, sisal and bambara nut carry tonnes and KSh value; tea (green leaf), sugarcane, pyrethrum and wheat add production (in the download). **Livestock** (population annexes, 2021–2023): 13 species — cattle, sheep, goats (each = the report's dairy+beef / wool+hair / dairy+meat sub-columns), camels, donkeys, pigs, rabbits and broiler / layer / indigenous chicken, turkeys, ducks and geese. These annexes print no national Total, so each year is validated by dual-engine agreement where the second PDF engine can read the page, and the remaining years by cross-year plausibility against the dual-confirmed years (plus, for 2021, an exact match to the prior extraction); values failing that check are dropped rather than shown. · **Data:** KNBS National Agriculture Production Report. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "produceNote": {
+        "en": "*Each crop shown for the counties KNBS reports it in. 31 crops from both NAPR editions via one deterministic engine (additivity to the printed national Total + completeness + dual-engine where readable; no number read by the model). Food-crop years **2020–2024 use the latest (2024–25) KNBS edition**, 2019 the previous one; **2024 is provisional**. Finger & pearl millet, coffee, cotton and lint are 2019–2023 only. See Methods for the edition/rebase and validation details.* **These are KNBS's own county figures and may be incomplete:** a county–crop the report does not list shows **blank, not zero** — “not reported” is not the same as “not produced”, and coverage varies by crop, county and year. **Rice** is the one crop sourced from the **Agriculture & Food Authority (AFA)** — the KNBS NAPR county tables omit it; every other AFA crop duplicates the NAPR and is not double-counted.",
+        "fr": null
+      },
+      "produceMethodology": {
+        "en": "**How KNBS compiles this data — and what a blank means.** Kenya's crop and livestock figures are **administrative data**, not a sample survey: county field extension officers estimate the area, production and value of each crop per season (long + short rains), aggregated ward → sub-county → county under the County Government Act (2012); state corporations and regulators supply the value-chain crops (coffee, tea, sugar, cotton, pyrethrum). KNBS and the ANES technical committee clean, de-outlier and reconcile these returns into the annual **National Agriculture Production Report**. Because the source is administrative expert-estimate, **coverage has gaps.** ⚠️ **A blank / absent county-year means KNBS did not report it — it does NOT mean zero production.** We leave such cells empty rather than impute 0; only a figure the report itself prints as 0 is shown as 0. Livestock population annexes give county head-counts; Annex 27 gives product quantities and values. Every served table is listed below with its exact report table/page and how it was validated. Rice is added from the Agriculture & Food Authority (AFA) county returns, the only crop the NAPR county tables omit; AFA's other crops are identical to the NAPR (verified) and are not duplicated.",
+        "fr": null
+      }
+    },
+    "compare": {
+      "title": {
+        "en": "5. How Do Counties Compare?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Pick several counties to see their climate and vegetation side by side — a fast way to contrast, say, an arid pastoralist county with a highland breadbasket. Rainfall uses the season selected at the top; each line is one county.*",
+        "fr": null
+      },
+      "rainTitle": {
+        "en": "seasonal rainfall by county (CHIRPS)",
+        "fr": null
+      },
+      "ndviTitle": {
+        "en": "5.2 vegetation condition by county (annual mean NDVI % of normal)",
+        "fr": null
+      },
+      "rainCaption": {
+        "en": "Figure 5.1 — Seasonal rainfall (CHIRPS) for each selected county, one line each, using the season chosen at the top of the page. A fast way to contrast, say, an arid pastoralist county with a highland breadbasket. · **Data:** CHIRPS v2 rainfall (UCSB Climate Hazards Center). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "ndviCaption": {
+        "en": "Figure 5.2 — Annual-mean NDVI as a percentage of normal for each selected county — vegetation condition side by side. The dashed line at 100 is the long-term normal. · **Data:** NDVI vegetation condition (WFP VAM, MODIS-derived). [Methods & sources →](#methods)",
+        "fr": null
+      }
+    },
+    "b1": {
+      "title": {
+        "en": "2. What Does My County Look Like?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*County profile: the gender & equity (GESI) context and recent crop production — who a bad season puts at risk. (What the county grows is up top, under \"What does my county produce?\".)*",
+        "fr": null
+      },
+      "vopTitle": {
+        "en": "what agriculture is worth here — value of production by commodity",
+        "fr": null
+      },
+      "vopIntro": {
+        "en": "*The economic stakes: gross value of production by commodity, in constant international dollars (I$, purchasing-power comparable). Crops from MapSPAM 2020, livestock from GLW4 — the Atlas exposure layer. In the arid and semi-arid north and east this is overwhelmingly **livestock**, which is why a drought that fails pasture (see the NDVI chart in Block 4) hits those counties hardest.*",
+        "fr": null
+      },
+      "gesiTitle": {
+        "en": "gender & equity indicators (GESI, county vs Kenya)",
+        "fr": null
+      },
+      "maizeTitle": {
+        "en": "dry maize production (AFA, 2020–24)",
+        "fr": null
+      },
+      "vopCaption": {
+        "en": "Gross value of agricultural production by commodity, in constant international dollars (purchasing-power comparable, so counties are comparable). Crops are MapSPAM 2020, livestock GLW4 — the Atlas exposure layer, a 2020 snapshot. Green = crops, brown = livestock. Shows what a bad season puts at economic risk here.",
+        "fr": null
+      },
+      "gesiCaption": {
+        "en": "Figure 2.1 — Gender & equity indicators for the county beside the national figure, from the KNBS County Gender Data Sheets. Each value was read by a deterministic parser and passed a 47-county consensus gate — no figure was transcribed by hand. · **Data:** KNBS County Gender Data Sheets (2025). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "maizeCaption": {
+        "en": "Figure 2.2 — County maize production over time (KNBS NAPR). The Agriculture & Food Authority (AFA) reports the same figures (folded into the NAPR — 233/234 county-years matched exactly), so maize is shown once. · **Data:** KNBS National Agriculture Production Report. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "maizeSources": {
+        "en": "*Two Kenyan agencies report county maize production. **KNBS** (Kenya National Bureau of Statistics) compiles the National Agriculture Production Report — the official multi-crop statistical series for all 47 counties (also behind §1.1). **AFA** (Agriculture & Food Authority) is the crop-sector regulator and reports the crops it licenses from operational returns. Their collection methods differ, so the same county-year can differ between them — toggle the source to compare. Neither is 'wrong'; they are different lenses on the same crop.*",
+        "fr": null
+      }
+    },
+    "b2": {
+      "title": {
+        "en": "3. ENSO, The IOD And The Western-V: What Drives My County's Rains?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*El Niño / La Niña is the signal you act on. But it doesn't act alone: in the **OND short rains** ENSO and the **Indian Ocean Dipole** move together (tightly coupled — see below), while the **MAM long rains** are governed mostly by a **partly-independent Western-V Pacific pattern** that ENSO explains little of. So below, county rainfall is coloured by the phase of the driver that governs each season — ENSO for OND (with the IOD marked ▲ positive / ▼ negative), the Western-V for MAM — and picking OND+MAM shows both side by side. Toggle the anomaly view to see each year's departure from normal.*",
+        "fr": null
+      },
+      "rainTitle": {
+        "en": "rainfall (CHIRPS), by ocean-driver phase",
+        "fr": null
+      },
+      "driverTitle": {
+        "en": "(points = ENSO phase)",
+        "fr": null
+      },
+      "insight1": {
+        "en": "ENSO is the familiar trigger, but for Kenya's **OND** rains the **IOD** carries more signal (r≈0.67 vs ENSO ≈0.45) — and the two are coupled, so read them together. For the **MAM** long rains a **partly-independent Western-V** pattern matters most; **ENSO alone explains little of MAM** (Niño 3.4 ↔ Western-V r≈0.08). Switch the driver above to see it. El Niño / positive-IOD years tend wetter, La Niña / negative-IOD drier — strongest in the arid north and east.",
+        "fr": null
+      },
+      "interactHeading": {
+        "en": "7.1 How the drivers interact",
+        "fr": null
+      },
+      "interactIntro": {
+        "en": "*They are not independent levers — ENSO and the IOD are one coupled Indo-Pacific system in OND; the Western-V is a partly-separate control in MAM.*",
+        "fr": null
+      },
+      "interactTitle": {
+        "en": "ENSO vs IOD, OND season",
+        "fr": null
+      },
+      "combinedHeading": {
+        "en": "7.2 Combined state of all three drivers",
+        "fr": null
+      },
+      "combinedIntro": {
+        "en": "*Standardized (z-score) so they share one axis — read the coordinated regime at a glance.*",
+        "fr": null
+      },
+      "combinedTitle": {
+        "en": "Combined driver state (standardized z-scores, 2010–present)",
+        "fr": null
+      },
+      "insight2": {
+        "en": "ENSO and IOD track together in OND (r ≈ 0.6) — El Niño tends to force a positive IOD, both pushing wetter short rains. The Western-V moves more independently (≈ 0 with ENSO), so it adds information ENSO alone misses for the MAM long rains. Read the combined-state chart as the ocean \"regime\": all three positive = strong wet signal; ENSO/IOD negative = drought risk.",
+        "fr": null
+      },
+      "calendarHeading": {
+        "en": "When does my county plant and harvest?",
+        "fr": null
+      },
+      "calendarIntro": {
+        "en": "*The crop calendar links the ocean signal to the field: **planting** follows the rains, **harvest** comes months later. Read it against the rainfall bars above — a county's long-rains (MAM) crop is planted around Mar–Apr and harvested mid-year; its short-rains (OND) crop is planted around Oct and harvested early the next year. That harvest lag is why Block 3 relates production to the season-window driver, not the calendar-year mean.*",
+        "fr": null
+      },
+      "calendarTitle": {
+        "en": "planting & harvest windows (JRC ASAP crop calendar)",
+        "fr": null
+      },
+      "calendarNoData": {
+        "en": "*No rainfed crop calendar exists for this county — it is a pastoralist (arid/semi-arid) or urban county with no main cropping season. Its seasonality is the rains themselves (the rainfall chart above) and pasture greenness — see the **vegetation condition (NDVI)** chart in Block 4, which covers all 47 counties. Crop-calendar coverage: 38 of 47 counties.*",
+        "fr": null
+      },
+      "rainCaption": {
+        "en": "Figure 3.1 — County seasonal rainfall (CHIRPS), one bar per year, coloured by the phase of the driver that governs THAT season: the **OND** short rains by ENSO phase (El Niño / La Niña), with the **IOD** overlaid as a ▲ (positive) / ▼ (negative) marker since the two are coupled in OND; the **MAM** long rains by the **Western-V** (WNP) phase, because ENSO explains little of MAM. Selecting OND+MAM shows both panels side by side. Toggle **Anomaly** to plot each year's departure from the 1991–2020 mean instead of absolute mm. · **Data:** CHIRPS v2 rainfall (UCSB Climate Hazards Center). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "driverCaption": {
+        "en": "Figure 3.2 — The selected ocean driver as a per-year seasonal-mean anomaly; points coloured by ENSO phase. Switch the driver (top control) between ENSO, the IOD and the Western-V to compare what each signal was doing. · **Data:** Niño 3.4 (NOAA CPC); IOD/DMI (HadISST, Met Office Hadley Centre via NOAA PSL); Western-V (derived). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "interactCaption": {
+        "en": "Figure 7.1 — Each point is one OND season — ENSO (Niño 3.4) on the x-axis against the IOD on the y-axis — with the fitted line and the live correlation shown in the title. It shows the two behave as one coupled Indo-Pacific system in the short rains, not independent levers. · **Data:** CHIRPS v2 (UCSB CHC) + ENSO/IOD drivers (NOAA CPC, HadISST). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "combinedCaption": {
+        "en": "Figure 7.2 — All three drivers standardized to z-scores against the 1991–2020 reference window so they share one axis. Read it as the ocean 'regime': all positive = strong wet signal; ENSO/IOD negative = drought risk. · **Data:** CHIRPS v2 (UCSB CHC) + ENSO/IOD/Western-V drivers (NOAA CPC, HadISST). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "supplink": {
+        "en": "→ *Technical detail — the ENSO × IOD interaction and combined driver-state — is in [§7 Supplemental analysis](#supplemental).*",
+        "fr": null
+      }
+    },
+    "b3": {
+      "title": {
+        "en": "4. How Does Climate Move Kenya's Harvests?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*⚠️ **National, not county** — Kenya has no long county-level production series yet (KNBS county data is only 2020–24), so this uses **national FAOStat**. Production is **detrended** (raw production has a strong upward trend that would swamp the climate signal) and related to the season-window driver. Staples (maize/wheat) use FAOStat; cash crops can use KNBS. **Caveat:** national maize is long-rains-dominated, so the OND/IOD signal is diluted here — the county-level short-rains signal (strongest in the arid east/north) awaits a longer county series.*",
+        "fr": null
+      },
+      "scatterTitle": {
+        "en": "production anomaly (national, detrended) vs",
+        "fr": null
+      },
+      "trendTitle": {
+        "en": "production + fitted trend (FAOStat, 1961–2024)",
+        "fr": null
+      },
+      "insight": {
+        "en": "Uses the **detrended anomaly** (production minus its long-term trend) to isolate climate-driven variability (raw maize-IOD r=0.34 is trend-inflated). **The national relationship is weak and not statistically significant** — e.g. maize vs OND-IOD r≈0.21, p≈0.09. That is expected: national maize is dominated by the *long* rains, while the IOD drives the *short* rains, and the strongest short-rains signal is a *county-level* eastern-Kenya effect this national view can't resolve. A longer county production series is needed to show it properly.",
+        "fr": null
+      },
+      "scatterCaption": {
+        "en": "Figure 7.3 — National detrended production anomaly against the season-window driver, with the live correlation, sample size and significance in the title. The regression line is solid if significant, dashed and faint if not — so a weak relationship is not dressed up as a signal. National FAOStat, not county. · **Data:** FAOSTAT (FAO) national production + ENSO drivers (NOAA CPC). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "trendCaption": {
+        "en": "Figure 7.4 — The production series (blue) and its fitted linear trend (dashed) — what is removed to make the detrended anomaly in the scatter above. FAOStat, 1961–present. · **Data:** FAOSTAT (FAO) national production. [Methods & sources →](#methods)",
+        "fr": null
+      }
+    },
+    "b4": {
+      "title": {
+        "en": "4. How Does A Bad Season Reach People?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Food insecurity (IPC), conflict, and market prices, for the selected county.*",
+        "fr": null
+      },
+      "ipcTitle": {
+        "en": "IPC phase (worst area, Current Situation)",
+        "fr": null
+      },
+      "acledTitle": {
+        "en": "conflict fatalities per year (ACLED)",
+        "fr": null
+      },
+      "pricesTitle": {
+        "en": "retail market price (FEWS NET)",
+        "fr": null
+      },
+      "pricesIntro": {
+        "en": "*Monthly retail prices in the county's monitored markets (FEWS NET FDW; the axis shows KES per the unit the product is traded in). Price spikes often follow failed seasons — read alongside the IPC line above.*",
+        "fr": null
+      },
+      "pricesNoData": {
+        "en": "*No FEWS NET market price series is available for this county (coverage: 42 of 47 counties).*",
+        "fr": null
+      },
+      "rwTitle": {
+        "en": "humanitarian & disaster reports per year (ReliefWeb)",
+        "fr": null
+      },
+      "rwIntro": {
+        "en": "*County-tagged humanitarian reports from ReliefWeb (2010–present). A report tagged with several hazards counts once, under its first match: drought → flood → epidemic → other. Titles below link to the source documents.*",
+        "fr": null
+      },
+      "rwRecent": {
+        "en": "Most recent reports",
+        "fr": null
+      },
+      "ndviTitle": {
+        "en": "vegetation condition — NDVI vs the long-term normal",
+        "fr": null
+      },
+      "ndviIntro": {
+        "en": "*The clearest bridge from a failed rain season to people — especially in the pastoralist ASAL, where livelihoods ride on pasture, not crops. The line is dekadal (10-day) NDVI as a **percentage of that dekad's long-term normal**: below 100 (orange) = vegetation deficit / drought stress, above 100 (green) = greener than usual. MODIS via WFP VAM, 2002–present, aggregated to the county. Watch the deep, sustained deficits — 2011, 2017 and 2021–22 are Kenya's major droughts.*",
+        "fr": null
+      },
+      "tradeHeading": {
+        "en": "4.6 National context: cross-border trade",
+        "fr": null
+      },
+      "tradeIntro": {
+        "en": "*⚠️ **National, not your county** — cross-border trade is measured at national border points, so this is a country-level supply layer, the same for every county. It matters because Kenya is a structural **maize-deficit importer** (Uganda, Tanzania) and the ASAL pastoralist economy runs on **cross-border livestock** trade (Ethiopia, Somalia). When a drought hits, import reliance and prices rise together — read this beside the market-price and NDVI charts above. FEWS NET XBT, 2010–2024; informal flows are field estimates.*",
+        "fr": null
+      },
+      "mapTitle": {
+        "en": "trade flows with neighbours",
+        "fr": null
+      },
+      "mapNote": {
+        "en": "*Arrow width = total traded quantity over the record; orange = imports into Kenya, green = exports from Kenya. Flows are drawn between country centres, not exact border crossings.*",
+        "fr": null
+      },
+      "importsTitle": {
+        "en": "imports into Kenya, by partner (per year)",
+        "fr": null
+      },
+      "ipcCaption": {
+        "en": "Figure 4.1 — IPC food-insecurity phase for the county (worst-area, Current Situation). Phase 3 (the dashed line) is Crisis; higher is worse. · **Data:** Integrated Food Security Phase Classification (IPC, CC-BY-NC-SA-3.0-IGO via KFSSG). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "acledCaption": {
+        "en": "Figure 7.5 — Conflict fatalities per year for the county, from ACLED. Context for the impacts pathway; the climate–conflict link is exploratory (small sample) and is never presented as a headline figure. · **Data:** ACLED (Armed Conflict Location & Event Data). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "pricesCaption": {
+        "en": "**Figure 4.3** — Monthly retail price by monitored market for the selected county's product. Dots mark actual observations; a line breaks across gaps longer than ~3 months instead of interpolating.",
+        "fr": null
+      },
+      "rwCaption": {
+        "en": "Figure 4.4 — County-tagged humanitarian reports per year from ReliefWeb (2010–present), stacked by hazard. A report tagged with several hazards is counted once, under its first match (drought → flood → epidemic → other). The table lists the most recent reports with links to the source documents. · **Data:** ReliefWeb (UN OCHA). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "ndviCaption": {
+        "en": "Figure 4.5 — Dekadal NDVI as a percentage of that dekad's long-term normal (MODIS via WFP VAM, pixel-weighted to the county). Below 100 (orange) = vegetation deficit / drought stress; above 100 (green) = greener than usual. The clearest bridge from a failed rain season to pasture and people. · **Data:** NDVI vegetation condition (WFP VAM, MODIS-derived). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "mapCaptionXbt": {
+        "en": "Figure 4.6a — National cross-border trade for the selected product (FEWS NET XBT, 2010–2024). Arrows run between country centres — orange into Kenya (imports), green out (exports) — with width scaled by total traded quantity. National / border-point data, the same for every county. · **Data:** FEWS NET cross-border trade; boundaries FAO GAUL 2024. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "importsCaption": {
+        "en": "Figure 4.6b — Imports into Kenya per year by partner country for the selected product (FEWS NET XBT). Grounds Kenya's structural maize deficit (Uganda, Tanzania) and the ASAL cross-border livestock trade (Ethiopia). · **Data:** FEWS NET cross-border trade. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "pricesAbout": {
+        "en": "Retail-only series from FEWS NET FDW, so the price unit stays consistent within a product. Each market is a separate line; a gap of more than ~100 days starts a new segment rather than drawing a straight line across missing months. Price spikes often follow failed seasons — read this beside the IPC phase line above.\n\n**Data:** FEWS NET (FDW retail market-price facts). [Methods & sources →](#methods)",
+        "fr": null
+      }
+    },
+    "b5": {
+      "title": {
+        "en": "6. Where Are We Now, What's Coming?",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Recent state of the three ocean drivers. ENSO is the signal to act on; the IOD leads the OND short rains; the Western-V is a partly-independent control on the MAM long rains.*",
+        "fr": null
+      },
+      "recentTitle": {
+        "en": "6.1 ENSO / IOD / Western-V — recent state (2015–present)",
+        "fr": null
+      },
+      "watch": {
+        "en": "**What to watch.** OND short-rains outlook is skilfully forecastable (IOD); MAM long rains are not. For the live forecast see the [NOAA CPC ENSO advisory](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml) and [FEWS NET East Africa seasonal monitor](https://fews.net/east-africa).",
+        "fr": null
+      },
+      "recentCaption": {
+        "en": "Figure 6.1 — The three ocean drivers over recent years on one axis: Niño 3.4 (°C), the IOD DMI (HadISST coalesced with ERSST to reach the present), and the Western-V (WNP z-score). The forecast context for the outlook. · **Data:** Niño 3.4 (NOAA CPC); IOD/DMI (HadISST via NOAA PSL); Western-V (derived). [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "outlookTitle": {
+        "en": "6.2 Given the Forecast, What Are the Coming Rains Likely to Do?",
+        "fr": null
+      },
+      "outlookIntro": {
+        "en": "*The official ENSO-state forecast (NOAA CPC) tells us which phase is coming; history tells us what that phase has meant for each county's rains. This map colours every county by what it **usually did** in the past seasons most like the one forecast — an analogue, not a rainfall forecast. Pick the season below.*",
+        "fr": null
+      },
+      "outlookMapNote": {
+        "en": "**Likely outcome by county** — each county coloured by its most common tercile (drier / near-normal / wetter than the 1991–2020 normal) across the analogue years. The selected county is outlined. Hover for the share and number of analogues.",
+        "fr": null
+      },
+      "outlookCaption": {
+        "en": "Figure 6.2 — County likely-outcome for the selected season, from an analogue composite: past seasons whose ENSO phase matches the current NOAA CPC forecast, and what each county's CHIRPS rainfall did then (drier/near/wetter vs 1991–2020). Analogue, not a forecast; blank = no baseline. · **Data:** CHIRPS v2 (UCSB CHC) rainfall + NOAA CPC ENSO forecast/RONI; boundaries FAO GAUL 2024. [Methods & sources →](#methods)",
+        "fr": null
+      },
+      "outlookMamCaveat": {
+        "en": "⚠️ **Low confidence for MAM.** The long rains are only weakly tied to ENSO — the partly-independent Western-V is a stronger control — and MAM is outside the current CPC forecast window (nearest season used as a proxy). Treat the MAM analogue as indicative only. The OND short rains carry the reliable ENSO/IOD signal.",
+        "fr": null
+      }
+    },
+    "methods": {
+      "title": {
+        "en": "8. Methods & Data Sources",
+        "fr": null
+      },
+      "text": {
+        "en": "Drivers: NOAA ONI/Niño 3.4 + HadISST DMI + Western-V/WNP computed from ERSSTv5 (Funk et al. 2018 boxes; Niño 3.4 validated r=0.998 vs NOAA, WNP reproduces Funk's post-1997 MAM sign). Rainfall: CHIRPS v3 (Atlas hub, county). Production: FAOStat (physical, staples) + KNBS Statistical Abstract (marketed value/volume, dual-engine validated) + AFA/NAPR (county recent). GESI: KNBS County Gender Data Sheets (47-way Kenya-benchmark consensus). Impacts: FEWS NET IPC + ACLED conflict + FEWS NET FDW market prices (retail, county markets) + ReliefWeb county-tagged humanitarian reports (API, first live run 2026-07-09) + vegetation condition (NDVI as % of the 2002+ dekadal normal, MODIS 6.1 via WFP VAM, pixel-weighted to county). Cross-border trade (Block 4, national context): FEWS NET East Africa Cross-Border Trade (XBT) monitoring, 2010–2024 — national/border-point resolution (not county); informal flows are field aggregations. **Detrending (Block 3):** production series are linearly detrended per crop before relating to climate drivers — the driver indices are stationary anomalies, so raw levels would be trend-confounded (e.g. maize-IOD raw r=0.34 vs detrended r=0.21). Block 3 uses the residual anomaly. Full catalog + provenance: `_master/DATA_CATALOG.md` (D409 project store). Every value validated by an LLM-independent gate (dual-engine / additivity / cross-edition / consensus); no numbers transcribed by AI. See `METHODOLOGY_extraction_QA.md`. **County crop production (KNBS NAPR).** County-level Area and Production come from the KNBS National Agriculture Production Report. Many annexes are landscape tables rotated 90° on the page; we de-rotate them by word position and validate two ways — two independent PDF engines (pdfplumber + PyMuPDF) must agree cell-by-cell, and each crop's county figures must sum to the report's printed national total (additivity). KNBS revises prior-year figures between editions, so for the eight food crops we use the **latest edition (2024–25) for 2020–2024** and the 2023–24 edition only for 2019 (2024 is provisional); this rebases the overlap years onto the most recent official figures (notably a sweet-potato revision for 2022–23; the full edition diff is banked). Finger & pearl millet, coffee and cotton are taken from the 2023–24 edition (2019–2023) as the 2024–25 edition reports them differently (millet combined) or in separate industrial annexes. Maize's full-county annex is cross-checked against the report's clean Top-20 table (exact). Livestock population (cattle/sheep/goats/camels/donkeys) is the 2021 county census from the same report.",
+        "fr": null
+      },
+      "ackTitle": {
+        "en": "8.1 Data sources & acknowledgements",
+        "fr": null
+      },
+      "acknowledgements": {
+        "en": "**This notebook stands on data freely shared by many institutions. We gratefully thank:**\n\n- **KNBS — Kenya National Bureau of Statistics** — National Agriculture Production Report (county crops, livestock, products) and the County Gender Data Sheets 2025 (gender & equity indicators).\n- **Agriculture & Food Authority (AFA), Kenya** — Rice county production (the one crop the KNBS NAPR county tables omit; AFA's other crops duplicate the NAPR).\n- **UCSB Climate Hazards Center** — CHIRPS rainfall.\n- **NOAA Climate Prediction Center (CPC)** — Niño 3.4 / ONI / RONI and the official ENSO-state probability forecast.\n- **NOAA Physical Sciences Laboratory & the Met Office Hadley Centre** — Indian Ocean Dipole (HadISST DMI).\n- **FAO** — FAOSTAT national production statistics and GAUL 2024 administrative boundaries.\n- **FEWS NET** — IPC food-security phase, FDW market prices, and cross-border trade flows.\n- **ACLED** — Armed Conflict Location & Event Data.\n- **WFP VAM** — MODIS-derived NDVI vegetation condition.\n- **IFPRI (MapSPAM) & FAO (Gridded Livestock of the World)** — crop & livestock exposure surfaces used for weighting.\n- **UN OCHA ReliefWeb** — situation reports.\n- **JRC ASAP** — crop-calendar seasonal timing.\n\nOutlook design drew on **IWMI's ENSO Outlook**; seasonal-forecast provenance follows the **Kenya Meteorological Department**. **If you reuse figures derived from these data, please cite the original providers** — each figure's *Data* line names them, and per-table KNBS citations are in the produce panel's source list. Any errors in the derived products are ours, not the providers'.",
+        "fr": null
+      }
+    },
+    "appendix": {
+      "title": {
+        "en": "9. Appendix",
+        "fr": null
+      }
+    },
+    "supplemental": {
+      "title": {
+        "en": "7. Supplemental analysis (for analysts)",
+        "fr": null
+      },
+      "intro": {
+        "en": "*Technical figures kept out of the main story: the ENSO × IOD interaction and combined driver-state (§7.1–7.2), and the national, weak / non-significant production-vs-driver relationship (§7.3–7.4). Here for analysts; not needed to follow the county story above.*",
+        "fr": null
+      }
+    }
+  },
+  "general": {
+    "quickInsight": {
+      "en": "Quick insight",
+      "fr": null
+    }
+  }
+}

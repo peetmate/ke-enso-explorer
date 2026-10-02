@@ -1,0 +1,25 @@
+{
+  "dataset": "knbs_napr_livestock_products",
+  "title": "KNBS county livestock products (quantity + value), Kenya",
+  "source": "KNBS National Agriculture Production Report, livestock-products annexes",
+  "url": "https://www.knbs.or.ke/",
+  "citation": "KNBS. National Agriculture Production Report. Nairobi, Kenya.",
+  "license": "KNBS official statistics — public; cite KNBS.",
+  "fetched_on": "2026-07-20",
+  "method": "Deterministic extraction (_sources/napr_build_products.py); gated on the value = quantity x unit-price identity + cross-year plausibility. No number typed by a model.",
+  "coverage": "11 products, quantity + value, 2021-2022.",
+  "used_by": "notebook §1.1 produce (Products view)",
+  "grain": "858 rows",
+  "columns": [
+    "product",
+    "county",
+    "gaul1_code",
+    "year",
+    "quantity",
+    "unit",
+    "unit_price_ksh",
+    "value_ksh",
+    "source_file",
+    "pdf_page"
+  ]
+}

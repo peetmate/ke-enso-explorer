@@ -1,0 +1,17 @@
+{
+  "dataset": "county_key",
+  "title": "County to GAUL24 admin1 lookup, Kenya",
+  "source": "FAO GAUL 2024 administrative boundaries (Atlas shared)",
+  "url": "/data/shared/atlas_gaul24_a1_africa_simple-vlowres.topojson",
+  "citation": "FAO GAUL 2024.",
+  "license": "FAO GAUL (licence unstated in-repo).",
+  "fetched_on": "2026-07-10",
+  "method": "Canonical county name to gaul1_code join key. Reference table, not a standalone dataset.",
+  "coverage": "47 counties + gaul1_code.",
+  "used_by": "notebook — join key for every county dataset",
+  "grain": "47 rows",
+  "columns": [
+    "county",
+    "gaul1_code"
+  ]
+}

@@ -1,0 +1,747 @@
+{
+  "metadata": {
+    "source": "CCSR/IRI Model Predictions of ENSO (IRI / Columbia Climate School, with NOAA CPC)",
+    "api_origin": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/8",
+    "pageUrl": "https://iri.columbia.edu/our-expertise/climate/forecasts/enso/current/",
+    "figureUrl": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/8",
+    "sourceKind": "figure-svg",
+    "parser": "scripts/fetch_iri_plume.py (vector geometry of the official plume figure; no typed values)",
+    "issueYear": 2026,
+    "issueMonth": 9,
+    "issueMonthIsOneBased": true,
+    "issueLabel": "September 2026",
+    "releaseDate": "2026-09-21",
+    "releaseMonth": 9,
+    "releaseYear": 2026,
+    "discussion": "The mid-September 2026 intensity assessment provides a striking indication of the exceptional strength of the ongoing El Ni\u00f1o event. The model ensemble points to an exceptionally strong 2026-27 El Ni\u00f1o, with all 22 models forecasting a \u201cvery strong\u201d El Ni\u00f1o (Ni\u00f1o 3.4 \u2265 +2.0 \u00b0C) from SON 2026 through DJF 2026\u201327. Our current intensity classification is capped at +2.0\u00b0C, yet a majority of models in the plume\u2014including both dynamical and statistical models\u2014project Ni\u00f1o3.4 values that could reach or exceed +3.0\u00b0C, well beyond our highest defined category. This is more than a high-probability El Ni\u00f1o: the ensemble shows an unusually strong and consistent signal for an event of exceptional intensity. Although the forecast shifts toward weaker categories in early 2027, strong-to-moderate El Ni\u00f1o conditions remain through MAM 2027, underscoring the unusual magnitude and persistence of the 2026 event. Taken together, the mid-September objective ENSO outlook points to an exceptionally strong El Ni\u00f1o that will remain firmly established through the end of 2026 and persist into spring 2027.\n\nENSO Forecast CCSR/IRI ENSO Predictions Plume Published: September 21, 2026 Note on interpreting model forecasts The following graph and table show forecasts made by dynamical and statistical models for SST in the Nino 3.4 region for nine overlapping 3-month periods. Note that the expected skills of the models, based on historical performance, are not equal to one another. The skills also generally decrease as the lead time increases. Thirdly, forecasts made at some times of the year generally have higher skill than forecasts made at other times of the year--namely, they are better when made between June and December than when they are made between February and May. Differences among the forecasts of the models reflect both differences in model design, and actual uncertainty in the forecast of the possible future SST scenario.\n\nThe mid-September 2026 CCSR/IRI ENSO prediction plume has been updated with the latest model forecasts. The outlook shows close agreement among the 22 participating models (13 dynamical and 9 statistical) that El Ni\u00f1o conditions will strengthen further during 2026 and continue into early 2027.",
+    "fetchedAt": "2026-10-02T11:21:45+00:00",
+    "calibration": {
+      "y_slope": -0.015782828282828277,
+      "y_intercept": 5.590228456439392,
+      "y_resid": 1.7763568394002505e-15,
+      "x_spacing": 60.45,
+      "n_yticks": 15
+    }
+  },
+  "current": {
+    "issueYear": 2026,
+    "issueMonth": 9,
+    "issueLabel": "September 2026",
+    "seasons": [
+      "ASO",
+      "SON",
+      "OND",
+      "NDJ",
+      "DJF",
+      "JFM",
+      "FMA",
+      "MAM",
+      "AMJ",
+      "MJJ"
+    ],
+    "seasonYears": [
+      2026,
+      2026,
+      2026,
+      2026,
+      2027,
+      2027,
+      2027,
+      2027,
+      2027,
+      2027
+    ],
+    "observedSeasons": [
+      {
+        "label": "JJA-OBS",
+        "period": "JJA",
+        "value": 2.0333
+      },
+      {
+        "label": "Aug-OBS",
+        "period": "Aug",
+        "value": 2.52
+      }
+    ],
+    "averages": {
+      "dynamical": [
+        null,
+        3.33,
+        3.54,
+        3.52,
+        3.25,
+        2.61,
+        2.11,
+        1.75,
+        1.37,
+        1.02
+      ],
+      "statistical": [
+        null,
+        3.0,
+        3.16,
+        3.19,
+        3.03,
+        2.63,
+        2.07,
+        1.48,
+        0.95,
+        0.5
+      ],
+      "total": [
+        null,
+        3.16,
+        3.37,
+        3.39,
+        3.18,
+        2.62,
+        2.08,
+        1.55,
+        1.01,
+        0.57
+      ]
+    },
+    "models": [
+      {
+        "model": "AUS-ACCESS",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.9,
+          4.1333,
+          4.1,
+          3.8,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "color": "#4477aa",
+        "symbol": "m1cb9e83702"
+      },
+      {
+        "model": "CMC CANSIP",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.8,
+          4.08,
+          4.04,
+          3.72,
+          3.17,
+          2.59,
+          2.01,
+          1.29,
+          0.59
+        ],
+        "color": "#228833",
+        "symbol": "mc05d8bdc39"
+      },
+      {
+        "model": "CMCC SPS4",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.68,
+          4.2,
+          4.58,
+          4.66,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "color": "#228833",
+        "symbol": "m543784ef4a"
+      },
+      {
+        "model": "COLA CCSM4",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.249,
+          3.356,
+          3.183,
+          2.839,
+          2.417,
+          2.05,
+          1.817,
+          1.65,
+          1.492
+        ],
+        "color": "#ccbb44",
+        "symbol": "mc2e38656cd"
+      },
+      {
+        "model": "CS-IRI-MM",
+        "type": "Dynamical",
+        "data": [
+          null,
+          2.92,
+          3.26,
+          3.29,
+          3.06,
+          2.65,
+          2.08,
+          null,
+          null,
+          null
+        ],
+        "color": "#ee6677",
+        "symbol": "m3c5492de9e"
+      },
+      {
+        "model": "IOCAS ICM",
+        "type": "Dynamical",
+        "data": [
+          null,
+          2.66,
+          2.66,
+          2.64,
+          2.6,
+          2.36,
+          1.91,
+          1.28,
+          0.68,
+          0.17
+        ],
+        "color": "#4477aa",
+        "symbol": "m654a77cfb4"
+      },
+      {
+        "model": "JMA",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.61,
+          4.0,
+          4.0533,
+          3.75,
+          3.0833,
+          null,
+          null,
+          null,
+          null
+        ],
+        "color": "#66ccee",
+        "symbol": "m5755e75319"
+      },
+      {
+        "model": "KMA",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.49,
+          3.6,
+          3.51,
+          3.15,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "color": "#228833",
+        "symbol": "m5eb3386982"
+      },
+      {
+        "model": "LDEO",
+        "type": "Dynamical",
+        "data": [
+          null,
+          2.3343,
+          2.4297,
+          2.3723,
+          2.0903,
+          1.7313,
+          1.5477,
+          1.6067,
+          1.7503,
+          1.803
+        ],
+        "color": "#ccbb44",
+        "symbol": "m9ebe718b04"
+      },
+      {
+        "model": "MetFRANCE",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.7801,
+          3.9566,
+          3.8486,
+          3.3229,
+          2.5122,
+          null,
+          null,
+          null,
+          null
+        ],
+        "color": "#ee6677",
+        "symbol": "m289db460dc"
+      },
+      {
+        "model": "NASA GMAOv3",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.373,
+          3.511,
+          3.56,
+          3.455,
+          3.13,
+          2.757,
+          2.408,
+          null,
+          null
+        ],
+        "color": "#aa3377",
+        "symbol": "m61d8209fde"
+      },
+      {
+        "model": "NCEP CFSv2",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.36,
+          3.59,
+          3.43,
+          2.94,
+          2.36,
+          1.82,
+          1.27,
+          null,
+          null
+        ],
+        "color": "#bbbbbb",
+        "symbol": "mde5ffc8226"
+      },
+      {
+        "model": "SINTEX-F",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.379,
+          3.5087,
+          3.4609,
+          3.1377,
+          2.6506,
+          2.1535,
+          1.8277,
+          1.4687,
+          1.0263
+        ],
+        "color": "#66ccee",
+        "symbol": "m1fc0e2c106"
+      },
+      {
+        "model": "UKMO",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.13,
+          3.27,
+          3.23,
+          2.98,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "color": "#228833",
+        "symbol": "m5f16e24c57"
+      },
+      {
+        "model": "BCC_RZDM",
+        "type": "Statistical",
+        "data": [
+          null,
+          3.13,
+          3.4,
+          3.41,
+          3.06,
+          2.57,
+          1.93,
+          1.24,
+          0.59,
+          0.03
+        ],
+        "color": "#ccbb44",
+        "symbol": "m71bd2c6ec3"
+      },
+      {
+        "model": "CPC MRKOV",
+        "type": "Statistical",
+        "data": [
+          null,
+          3.19,
+          3.36,
+          3.41,
+          3.27,
+          2.91,
+          2.43,
+          1.94,
+          1.49,
+          1.08
+        ],
+        "color": "#aa3377",
+        "symbol": "mdd76010cef"
+      },
+      {
+        "model": "CSU CLIPR",
+        "type": "Statistical",
+        "data": [
+          null,
+          2.81,
+          2.86,
+          2.91,
+          2.96,
+          2.2633,
+          1.5667,
+          0.87,
+          0.5533,
+          0.2367
+        ],
+        "color": "#bbbbbb",
+        "symbol": "m9281f44abf"
+      },
+      {
+        "model": "IAP-NN",
+        "type": "Statistical",
+        "data": [
+          null,
+          2.71,
+          2.706,
+          2.568,
+          2.285,
+          1.854,
+          1.344,
+          0.827,
+          0.341,
+          -0.074
+        ],
+        "color": "#4477aa",
+        "symbol": "mc5e34a5148"
+      },
+      {
+        "model": "TONGJI-ML",
+        "type": "Statistical",
+        "data": [
+          null,
+          2.0096,
+          2.0126,
+          2.1934,
+          2.313,
+          2.3392,
+          1.9375,
+          1.5465,
+          1.1897,
+          1.095
+        ],
+        "color": "#bbbbbb",
+        "symbol": "mbb47896788"
+      },
+      {
+        "model": "UCLA-TCD",
+        "type": "Statistical",
+        "data": [
+          null,
+          3.25,
+          3.47,
+          3.48,
+          3.22,
+          2.76,
+          2.18,
+          1.63,
+          1.17,
+          0.84
+        ],
+        "color": "#228833",
+        "symbol": "m16ce3fe7cc"
+      },
+      {
+        "model": "UW PSL-CSLIM",
+        "type": "Statistical",
+        "data": [
+          null,
+          3.15,
+          3.39,
+          3.42,
+          3.19,
+          2.72,
+          2.12,
+          1.48,
+          0.86,
+          0.29
+        ],
+        "color": "#ccbb44",
+        "symbol": "m1b97e22877"
+      },
+      {
+        "model": "UW PSL-LIM",
+        "type": "Statistical",
+        "data": [
+          null,
+          2.8,
+          2.82,
+          2.74,
+          2.54,
+          2.25,
+          1.85,
+          1.43,
+          1.03,
+          0.66
+        ],
+        "color": "#ee6677",
+        "symbol": "m7b7ba1cd8a"
+      },
+      {
+        "model": "Wyrtki-CSLIM",
+        "type": "Statistical",
+        "data": [
+          null,
+          3.1356,
+          3.3887,
+          3.4875,
+          3.2767,
+          2.8065,
+          2.1511,
+          1.4948,
+          0.8337,
+          0.2756
+        ],
+        "color": "#bbbbbb",
+        "symbol": "m9281f44abf"
+      },
+      {
+        "model": "XRO",
+        "type": "Statistical",
+        "data": [
+          null,
+          3.8063,
+          4.1827,
+          4.2843,
+          4.1817,
+          3.839,
+          3.2057,
+          2.345,
+          1.4097,
+          0.5583
+        ],
+        "color": "#aa3377",
+        "symbol": "ma0490e4dcb"
+      }
+    ],
+    "discussion": "The mid-September 2026 intensity assessment provides a striking indication of the exceptional strength of the ongoing El Ni\u00f1o event. The model ensemble points to an exceptionally strong 2026-27 El Ni\u00f1o, with all 22 models forecasting a \u201cvery strong\u201d El Ni\u00f1o (Ni\u00f1o 3.4 \u2265 +2.0 \u00b0C) from SON 2026 through DJF 2026\u201327. Our current intensity classification is capped at +2.0\u00b0C, yet a majority of models in the plume\u2014including both dynamical and statistical models\u2014project Ni\u00f1o3.4 values that could reach or exceed +3.0\u00b0C, well beyond our highest defined category. This is more than a high-probability El Ni\u00f1o: the ensemble shows an unusually strong and consistent signal for an event of exceptional intensity. Although the forecast shifts toward weaker categories in early 2027, strong-to-moderate El Ni\u00f1o conditions remain through MAM 2027, underscoring the unusual magnitude and persistence of the 2026 event. Taken together, the mid-September objective ENSO outlook points to an exceptionally strong El Ni\u00f1o that will remain firmly established through the end of 2026 and persist into spring 2027.\n\nENSO Forecast CCSR/IRI ENSO Predictions Plume Published: September 21, 2026 Note on interpreting model forecasts The following graph and table show forecasts made by dynamical and statistical models for SST in the Nino 3.4 region for nine overlapping 3-month periods. Note that the expected skills of the models, based on historical performance, are not equal to one another. The skills also generally decrease as the lead time increases. Thirdly, forecasts made at some times of the year generally have higher skill than forecasts made at other times of the year--namely, they are better when made between June and December than when they are made between February and May. Differences among the forecasts of the models reflect both differences in model design, and actual uncertainty in the forecast of the possible future SST scenario.\n\nThe mid-September 2026 CCSR/IRI ENSO prediction plume has been updated with the latest model forecasts. The outlook shows close agreement among the 22 participating models (13 dynamical and 9 statistical) that El Ni\u00f1o conditions will strengthen further during 2026 and continue into early 2027.",
+    "source": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/8",
+    "sourceKind": "figure-svg",
+    "fetchedAt": "2026-10-02T11:21:45+00:00",
+    "observed": [
+      {
+        "month": "JJA",
+        "data": 2.0333
+      },
+      {
+        "month": "Aug",
+        "data": 2.52
+      }
+    ]
+  },
+  "models": [
+    {
+      "name": "AUS-ACCESS",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#4477aa",
+      "symbol": "m1cb9e83702",
+      "active": true
+    },
+    {
+      "name": "CMC CANSIP",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#228833",
+      "symbol": "mc05d8bdc39",
+      "active": true
+    },
+    {
+      "name": "CMCC SPS4",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#228833",
+      "symbol": "m543784ef4a",
+      "active": true
+    },
+    {
+      "name": "COLA CCSM4",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#ccbb44",
+      "symbol": "mc2e38656cd",
+      "active": true
+    },
+    {
+      "name": "CS-IRI-MM",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#ee6677",
+      "symbol": "m3c5492de9e",
+      "active": true
+    },
+    {
+      "name": "IOCAS ICM",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#4477aa",
+      "symbol": "m654a77cfb4",
+      "active": true
+    },
+    {
+      "name": "JMA",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#66ccee",
+      "symbol": "m5755e75319",
+      "active": true
+    },
+    {
+      "name": "KMA",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#228833",
+      "symbol": "m5eb3386982",
+      "active": true
+    },
+    {
+      "name": "LDEO",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#ccbb44",
+      "symbol": "m9ebe718b04",
+      "active": true
+    },
+    {
+      "name": "MetFRANCE",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#ee6677",
+      "symbol": "m289db460dc",
+      "active": true
+    },
+    {
+      "name": "NASA GMAOv3",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#aa3377",
+      "symbol": "m61d8209fde",
+      "active": true
+    },
+    {
+      "name": "NCEP CFSv2",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#bbbbbb",
+      "symbol": "mde5ffc8226",
+      "active": true
+    },
+    {
+      "name": "SINTEX-F",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#66ccee",
+      "symbol": "m1fc0e2c106",
+      "active": true
+    },
+    {
+      "name": "UKMO",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#228833",
+      "symbol": "m5f16e24c57",
+      "active": true
+    },
+    {
+      "name": "BCC_RZDM",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#ccbb44",
+      "symbol": "m71bd2c6ec3",
+      "active": true
+    },
+    {
+      "name": "CPC MRKOV",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#aa3377",
+      "symbol": "mdd76010cef",
+      "active": true
+    },
+    {
+      "name": "CSU CLIPR",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#bbbbbb",
+      "symbol": "m9281f44abf",
+      "active": true
+    },
+    {
+      "name": "IAP-NN",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#4477aa",
+      "symbol": "mc5e34a5148",
+      "active": true
+    },
+    {
+      "name": "TONGJI-ML",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#bbbbbb",
+      "symbol": "mbb47896788",
+      "active": true
+    },
+    {
+      "name": "UCLA-TCD",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#228833",
+      "symbol": "m16ce3fe7cc",
+      "active": true
+    },
+    {
+      "name": "UW PSL-CSLIM",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#ccbb44",
+      "symbol": "m1b97e22877",
+      "active": true
+    },
+    {
+      "name": "UW PSL-LIM",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#ee6677",
+      "symbol": "m7b7ba1cd8a",
+      "active": true
+    },
+    {
+      "name": "Wyrtki-CSLIM",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#bbbbbb",
+      "symbol": "m9281f44abf",
+      "active": true
+    },
+    {
+      "name": "XRO",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#aa3377",
+      "symbol": "ma0490e4dcb",
+      "active": true
+    }
+  ]
+}

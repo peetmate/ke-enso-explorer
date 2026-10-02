@@ -1,0 +1,5 @@
+---
+title: "Climate-Agriculture-Gender Hotspot Index"
+---
+
+Building on the Intergovernmental Panel on Climate Change's risk framework, climate–agriculture–gender inequality hotspots are defined as geographical areas where high levels of climate hazards converge with high levels of women's (labor) participation in agriculture and climate hazard (exposure) and high levels of women's vulnerability due to prevailing gender inequalities. The hazards are measured by the share of rural population likely to face specific climate hazard types, using data from the CGIAR Research Program on Climate Change, Agriculture and Food Security. Women's exposure is measured based on their labor participation and hours worked in agriculture, including the relative importance of the crop or commodity, using Labor Force Survey (LFS) data. Women's vulnerability due to gender inequalities is proxied by five discriminatory social institutions captured in the Social Institutions and Gender Index (SIGI) 2014. Principal component analysis is used to construct an ordinal hotspot index based on the above data. Among the African countries covered, Somalia, Sudan and The Gambia rank highest.

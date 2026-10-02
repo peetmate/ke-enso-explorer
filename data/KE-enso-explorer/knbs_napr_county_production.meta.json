@@ -1,0 +1,25 @@
+{
+  "dataset": "knbs_napr_county_production",
+  "title": "KNBS county crop production (Area + Production), Kenya",
+  "source": "KNBS National Agriculture Production Report — 2023-24 edition (2019-2023) + 2024-25 edition (2024, provisional)",
+  "url": "https://www.knbs.or.ke/ (Agriculture Production Report series)",
+  "citation": "KNBS. National Agriculture Production Report. Nairobi, Kenya.",
+  "license": "KNBS official statistics — public; cite KNBS.",
+  "fetched_on": "2026-07-22",
+  "method": "Deterministic dual-engine extraction (_sources/napr_extract.py + napr_build.py): pymupdf-authoritative + pdfplumber cross-check, coordinate column-binning, orientation auto-detect, wrapped-name merge. A crop-county-year is served only if the county sum reconciles to the annex's printed national Total (additivity) and, where the 2nd engine reads the page, the two agree cell-by-cell. Cross-edition rebase to the latest edition. No number read/typed by a model.",
+  "coverage": "31 crops, 2019-2024 (2024 provisional from the 2025 edition). Cross-edition overlap rebased to the 2025 edition; edition diffs in _sources/edition_diffs_2024ed_vs_2025ed.csv.",
+  "used_by": "notebook §1.1 'What does my county produce?' (Crops view)",
+  "grain": "3442 rows",
+  "columns": [
+    "crop",
+    "county",
+    "gaul1_code",
+    "year",
+    "area_ha",
+    "production_t",
+    "value_ksh",
+    "source_file",
+    "pdf_page",
+    "dual_ok"
+  ]
+}

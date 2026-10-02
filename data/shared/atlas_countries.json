@@ -1,0 +1,497 @@
+[
+  {
+    "admin0_name": "Algeria",
+    "iso3c": "DZA",
+    "translation": {
+      "en": "Algeria",
+      "fr": "Algérie"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Angola",
+    "iso3c": "AGO",
+    "translation": {
+      "en": "Angola",
+      "fr": "Angola"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Benin",
+    "iso3c": "BEN",
+    "translation": {
+      "en": "Benin",
+      "fr": "Bénin"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Botswana",
+    "iso3c": "BWA",
+    "translation": {
+      "en": "Botswana",
+      "fr": "Botswana"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Burkina Faso",
+    "iso3c": "BFA",
+    "translation": {
+      "en": "Burkina Faso",
+      "fr": "Burkina Faso"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Burundi",
+    "iso3c": "BDI",
+    "translation": {
+      "en": "Burundi",
+      "fr": "Burundi"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Cabo Verde",
+    "iso3c": "CPV",
+    "translation": {
+      "en": "Cabo Verde",
+      "fr": "Cap-Vert"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Cameroon",
+    "iso3c": "CMR",
+    "translation": {
+      "en": "Cameroon",
+      "fr": "Cameroun"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Central African Republic",
+    "iso3c": "CAF",
+    "translation": {
+      "en": "Central African Republic",
+      "fr": "République centrafricaine"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Chad",
+    "iso3c": "TCD",
+    "translation": {
+      "en": "Chad",
+      "fr": "Tchad"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Comoros",
+    "iso3c": "COM",
+    "translation": {
+      "en": "Comoros",
+      "fr": "Comores"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Congo",
+    "iso3c": "COG",
+    "translation": {
+      "en": "Congo",
+      "fr": "Congo"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Côte D'Ivoire",
+    "iso3c": "CIV",
+    "translation": {
+      "en": "Côte D'Ivoire",
+      "fr": "Côte d'Ivoire"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Democratic Republic of the Congo",
+    "iso3c": "COD",
+    "translation": {
+      "en": "Democratic Republic of the Congo",
+      "fr": "République démocratique du Congo"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Djibouti",
+    "iso3c": "DJI",
+    "translation": {
+      "en": "Djibouti",
+      "fr": "Djibouti"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Egypt",
+    "iso3c": "EGY",
+    "translation": {
+      "en": "Egypt",
+      "fr": "Égypte"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Equatorial Guinea",
+    "iso3c": "GNQ",
+    "translation": {
+      "en": "Equatorial Guinea",
+      "fr": "Guinée équatoriale"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Eritrea",
+    "iso3c": "ERI",
+    "translation": {
+      "en": "Eritrea",
+      "fr": "Érythrée"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Eswatini",
+    "iso3c": "SWZ",
+    "translation": {
+      "en": "Eswatini",
+      "fr": "Eswatini"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Ethiopia",
+    "iso3c": "ETH",
+    "translation": {
+      "en": "Ethiopia",
+      "fr": "Éthiopie"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Gabon",
+    "iso3c": "GAB",
+    "translation": {
+      "en": "Gabon",
+      "fr": "Gabon"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Gambia",
+    "iso3c": "GMB",
+    "translation": {
+      "en": "Gambia",
+      "fr": "Gambie"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Ghana",
+    "iso3c": "GHA",
+    "translation": {
+      "en": "Ghana",
+      "fr": "Ghana"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Guinea",
+    "iso3c": "GIN",
+    "translation": {
+      "en": "Guinea",
+      "fr": "Guinée"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Guinea-Bissau",
+    "iso3c": "GNB",
+    "translation": {
+      "en": "Guinea-Bissau",
+      "fr": "Guinée-Bissau"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Kenya",
+    "iso3c": "KEN",
+    "translation": {
+      "en": "Kenya",
+      "fr": "Kenya"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Lesotho",
+    "iso3c": "LSO",
+    "translation": {
+      "en": "Lesotho",
+      "fr": "Lesotho"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Liberia",
+    "iso3c": "LBR",
+    "translation": {
+      "en": "Liberia",
+      "fr": "Libéria"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Libya",
+    "iso3c": "LBY",
+    "translation": {
+      "en": "Libya",
+      "fr": "Libye"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Madagascar",
+    "iso3c": "MDG",
+    "translation": {
+      "en": "Madagascar",
+      "fr": "Madagascar"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Malawi",
+    "iso3c": "MWI",
+    "translation": {
+      "en": "Malawi",
+      "fr": "Malawi"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Mali",
+    "iso3c": "MLI",
+    "translation": {
+      "en": "Mali",
+      "fr": "Mali"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Mauritania",
+    "iso3c": "MRT",
+    "translation": {
+      "en": "Mauritania",
+      "fr": "Mauritanie"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Mauritius",
+    "iso3c": "MUS",
+    "translation": {
+      "en": "Mauritius",
+      "fr": "Maurice"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Morocco",
+    "iso3c": "MAR",
+    "translation": {
+      "en": "Morocco",
+      "fr": "Maroc"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Mozambique",
+    "iso3c": "MOZ",
+    "translation": {
+      "en": "Mozambique",
+      "fr": "Mozambique"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Namibia",
+    "iso3c": "NAM",
+    "translation": {
+      "en": "Namibia",
+      "fr": "Namibie"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Niger",
+    "iso3c": "NER",
+    "translation": {
+      "en": "Niger",
+      "fr": "Niger"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Nigeria",
+    "iso3c": "NGA",
+    "translation": {
+      "en": "Nigeria",
+      "fr": "Nigéria"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Rwanda",
+    "iso3c": "RWA",
+    "translation": {
+      "en": "Rwanda",
+      "fr": "Rwanda"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Sao Tome And Principe",
+    "iso3c": "STP",
+    "translation": {
+      "en": "Sao Tome and Principe",
+      "fr": "Sao Tomé-et-Principe"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Senegal",
+    "iso3c": "SEN",
+    "translation": {
+      "en": "Senegal",
+      "fr": "Sénégal"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Seychelles",
+    "iso3c": "SYC",
+    "translation": {
+      "en": "Seychelles",
+      "fr": "Seychelles"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Sierra Leone",
+    "iso3c": "SLE",
+    "translation": {
+      "en": "Sierra Leone",
+      "fr": "Sierra Leone"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Somalia",
+    "iso3c": "SOM",
+    "translation": {
+      "en": "Somalia",
+      "fr": "Somalie"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "South Africa",
+    "iso3c": "ZAF",
+    "translation": {
+      "en": "South Africa",
+      "fr": "Afrique du Sud"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "South Sudan",
+    "iso3c": "SSD",
+    "translation": {
+      "en": "South Sudan",
+      "fr": "Soudan du Sud"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Sudan",
+    "iso3c": "SDN",
+    "translation": {
+      "en": "Sudan",
+      "fr": "Soudan"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Togo",
+    "iso3c": "TGO",
+    "translation": {
+      "en": "Togo",
+      "fr": "Togo"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Tunisia",
+    "iso3c": "TUN",
+    "translation": {
+      "en": "Tunisia",
+      "fr": "Tunisie"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Uganda",
+    "iso3c": "UGA",
+    "translation": {
+      "en": "Uganda",
+      "fr": "Ouganda"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "United Republic of Tanzania",
+    "iso3c": "TZA",
+    "translation": {
+      "en": "United Republic of Tanzania",
+      "fr": "République-Unie de Tanzanie"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Western Sahara",
+    "iso3c": "ESH",
+    "translation": {
+      "en": "Western Sahara",
+      "fr": "Sahara occidental"
+    },
+    "include": false
+  },
+  {
+    "admin0_name": "Zambia",
+    "iso3c": "ZMB",
+    "translation": {
+      "en": "Zambia",
+      "fr": "Zambie"
+    },
+    "include": true
+  },
+  {
+    "admin0_name": "Zimbabwe",
+    "iso3c": "ZWE",
+    "translation": {
+      "en": "Zimbabwe",
+      "fr": "Zimbabwe"
+    },
+    "include": true
+  }
+]

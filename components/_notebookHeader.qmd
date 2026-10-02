@@ -1,0 +1,7 @@
+```{=html}
+<script type="module" src="/helpers/hero.js"></script>
+
+<back-to-top></back-to-top>
+
+<atlas-notebook-hero></atlas-notebook-hero>
+```

@@ -1,0 +1,130 @@
+{
+  "General": {
+    "country": "Country",
+    "region": "Region",
+    "iso3": "iso3",
+    "farmSize": "Farm Size",
+    "numFarms": "Number of Farms",
+    "noEvents": "No Extreme Events",
+    "downloadFigure": "Download Figure",
+    "quickInsights": "Quick Insights for :::subject:::",
+    "farmSizeClasses": {
+      "All Farms": "All Farms",
+      "Under 1 HA": "Under 1 ha",
+      "1-2 HA": "1-2 ha",
+      "2-5 HA": "2-5 ha",
+      "5-10 HA": "5-10 ha",
+      "10-20 HA": "10-20 ha",
+      "20+ HA": "20+ ha"
+    },
+    "events": {
+      "Very Dry": "Very Dry",
+      "Very Wet": "Very Wet"
+    }
+  },
+  "FarmSize": {
+    "selectors": {
+      "time": {
+        "title": "Time",
+        "options": {
+          "Current Farms": "Current Farms",
+          "Farms 2050": "Farms 2050"
+        }
+      }
+    },
+    "insight": {
+      "baseline": "**:::country:::** has a total of **:::farms:::** farms in the **:::size:::** farm size class for the baseline year, circa 2020.",
+      "projection": "The total number of farms is expected to change to **:::future:::** by 2050, under SSP 245.",
+      "change": "This represents **:::trend:::** of **:::pct:::%**.",
+      "trend": {
+        "increase": "an increase",
+        "decrease": "a decrease"
+      }
+    }
+  },
+  "LossFunctions": {
+    "selectors": {
+      "eventType": {
+        "title": "Event Type",
+        "options": {
+          "Drought": "Drought",
+          "Flood": "Flood"
+        }
+      },
+      "loss": {
+        "title": "Loss",
+        "options": {
+          "Predicted Probabilities of Loss": "Predicted Probabilities of Loss",
+          "Predicted Proportion of Lost Revenue": "Predicted Proportion of Lost Revenue"
+        }
+      }
+    },
+    "axis": {
+      "x": "Log Farm Size",
+      "y": {
+        "Loss": "Loss",
+        "Lost Revenue": "Lost Revenue"
+      }
+    },
+    "insight": {
+      "template": "The **:::loss:::** from **:::event:::** **:::trend:::** as farm sizes get larger.",
+      "trend": {
+        "increases": "increases",
+        "decreases": "decreases"
+      }
+    }
+  },
+  "Ensembles": {
+    "axis": {
+      "x": "Number of Events"
+    },
+    "tooltip": {
+      "scenario": "Scenario",
+      "hazard": "Hazard"
+    },
+    "scenarios": {
+      "Historical (1995-2014)": "Historical (1995-2014)",
+      "SSP245 (2040-2060)": "SSP245 (2040-2060)",
+      "SSP585 (2040-2060)": "SSP585 (2040-2060)"
+    }
+  },
+  "LossByFarmType": {
+    "selectors": {
+      "event": {
+        "title": "Event"
+      },
+      "model": {
+        "title": "Model",
+        "options": {
+          "baseline": "Baseline",
+          "SSP245": "SSP245",
+          "SSP585": "SSP585"
+        }
+      }
+    },
+    "axis": {
+      "x": "Year",
+      "y": "Number of Farms"
+    },
+    "legend": {
+      "title": "Threshold",
+      "options": {
+        "Farms Likely Impacted": "Farms Likely Impacted",
+        "30% lost revenue": "30% lost revenue",
+        "40% lost revenue": "40% lost revenue",
+        "50% lost revenue": "50% lost revenue"
+      }
+    },
+    "tooltip": {
+      "lossType": "Loss Type",
+      "lossTypes": {
+        "Loss": "Loss",
+        "Revenue": "Revenue"
+      }
+    },
+    "insight": {
+      "losses": "Between :::minYear::: and :::maxYear:::, an estimated **:::farms:::** cumulative number of farms (:::size::: farm size class) will likely experience losses due to **:::event:::** conditions in **:::country:::** under the :::model::: model. This represents the potential need to **payout** an average of **:::payout:::** farms per year.",
+      "revenue": "Of the farms likely impacted, a cumulative **:::minFarms:::** farms could lose more than **:::minPct:::%** of their revenue and approximately **:::maxFarms:::** cumulative farms could lose more than **:::maxPct:::%** of their revenue due to **:::event:::** conditions in **:::country:::** under the :::model::: model."
+    }
+  }
+}

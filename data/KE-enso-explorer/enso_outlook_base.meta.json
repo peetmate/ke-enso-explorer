@@ -1,0 +1,30 @@
+{
+  "dataset": "enso_outlook_base",
+  "title": "ENSO seasonal-outlook analogue base (MAM/OND), Kenya counties",
+  "source": "Derived — CHIRPS county rainfall + ENSO/IOD driver indices",
+  "url": "(derived; see chirps_county + enso_drivers_seasonal)",
+  "citation": "Derived product; underlying CHIRPS (UCSB CHC) + NOAA CPC/PSL indices.",
+  "license": "Derived — CHIRPS CC-BY + NOAA public domain.",
+  "fetched_on": "2026-07-23",
+  "method": "_sources/enso_outlook_build.py: per target season (MAM<-DJF, OND<-JAS predictor) + county-year, computes seasonal rainfall vs the 1991-2020 normal, Dry/Near/Wet tercile, and predictor + concurrent driver state. Validated: OND El Nino years ~all Wet, La Nina ~Dry.",
+  "coverage": "MAM + OND, 47 counties + Ilemi Triangle, 1981-2025.",
+  "used_by": "notebook §7.2 analogue likely-outcome map + card",
+  "grain": "4320 rows",
+  "columns": [
+    "season",
+    "year",
+    "county",
+    "gaul1_code",
+    "is_county",
+    "ptot",
+    "clim_mean",
+    "clim_sd",
+    "anomaly_pct",
+    "tercile",
+    "roni_pred",
+    "dmi_pred",
+    "soi_pred",
+    "roni_conc",
+    "dmi_conc"
+  ]
+}

@@ -1,0 +1,2221 @@
+{
+  "africa-precipitation-monthly-seasonal": {
+    "key": "africa-precipitation-monthly-seasonal",
+    "title": "Monthly and Seasonal Precipitation from CHIRPS v3 (Africa)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Total precipitation (PTOT) aggregated from CHIRPS v3.0 and delivered as per-pixel monthly Cloud Optimized GeoTIFFs and per-year rolling 3-month (seasonal) sums over Africa, 1981 to present. This is the rainfall backbone of the KE-ENSO Explorer's seasonal/ENSO analysis: the twelve seasonal windows (JFM, FMA, ..., DJF) are the tri-month sums the notebook compares against ENSO phase and against the drought (SPEI), vegetation (NDVI) and flood layers. A derived aggregation product, not a redistribution of the CHIRPS daily archive.",
+    "licence": {
+      "id": "CC-BY-4.0",
+      "url": null,
+      "attribution": "Climate Hazards Center, UC Santa Barbara (CHIRPS/CHIRTS)"
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "Climate Hazards Center, UC Santa Barbara",
+        "url": "https://www.chc.ucsb.edu/data/chirps",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Steward, P., Funk, C., Peterson, P., Landsfeld, M. (2026). Monthly and seasonal precipitation from CHIRPS v3 (Africa), Africa Agriculture Adaptation Atlas",
+      "url": null
+    },
+    "caveats": [
+      "Source CHIRPS is public domain (\"no restrictions on use\"); these reprocessed COGs are released CC-BY-4.0 with attribution to the Climate Hazards Center, UC Santa Barbara. Seasonal windows are labelled by the calendar year in which the window ends (DJF_2020 = Dec 2019 to Feb 2020). Edge windows that the record cannot cover in full are absent (NDJ and DJF 1981; windows ending after the latest monthly file), so not every season x year combination of the template exists."
+    ],
+    "avoid": [
+      {
+        "use": "Daily or sub-monthly rainfall analysis.",
+        "reason": "Only monthly totals and 3-month sums are published here.",
+        "use_instead": "The CHIRPS v3 daily archive (catalog record chirps-v3-daily)."
+      }
+    ],
+    "intended_uses": [
+      "Seasonal and ENSO-phase rainfall analysis and anomaly context in the KE-ENSO Explorer.",
+      "Rainfall driver for interpreting the drought (SPEI), vegetation (NDVI) and flood layers."
+    ],
+    "coverage": {
+      "spatial": "xy 0.05 degree",
+      "temporal": "1981-01 to None"
+    },
+    "assets": [
+      {
+        "name": "monthly",
+        "description": "Per-pixel monthly precipitation totals, one COG per month.",
+        "s3": "s3://digital-atlas/domain=climate/type=observational/source=chirps-chirts-era5/region=africa/processing=monthly/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=observational/source=chirps-chirts-era5/region=africa/processing=monthly/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "variable={variable}/{variable}-{time}.tif"
+      },
+      {
+        "name": "seasonal",
+        "description": "Per-year rolling 3-month precipitation sums, one COG per season x year.",
+        "s3": "s3://digital-atlas/domain=climate/type=observational/source=chirps-chirts-era5/region=africa/processing=seasonal/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=observational/source=chirps-chirts-era5/region=africa/processing=seasonal/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "variable={variable}/season={season}/{variable}_{season}_{year}_sum.tif"
+      }
+    ],
+    "upstream": [
+      {
+        "title": "CHIRPS-3.0 data portal (Climate Hazards Center)",
+        "url": "https://data.chc.ucsb.edu/products/CHIRPS-3.0/"
+      },
+      {
+        "title": "CDH catalog record chirps-v3-daily",
+        "url": "https://github.com/CGIAR-Climate-Data-Hub/cdh-catalog/tree/main/records/chirps-v3-daily"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "CHIRPS v3.0 quasi-global daily/monthly precipitation (station + infrared blend).",
+        "derived_from": [
+          {
+            "title": "CHIRPS-3.0 data portal (Climate Hazards Center)",
+            "url": "https://data.chc.ucsb.edu/products/CHIRPS-3.0/"
+          },
+          {
+            "title": "CDH catalog record chirps-v3-daily",
+            "url": "https://github.com/CGIAR-Climate-Data-Hub/cdh-catalog/tree/main/records/chirps-v3-daily"
+          }
+        ]
+      },
+      {
+        "id": "monthly-cog",
+        "description": "Monthly PTOT over the Africa window, written as COGs with internal overviews.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "R/observational"
+        }
+      },
+      {
+        "id": "seasonal-sum",
+        "description": "Per-year tri-month sums over the twelve seasonal windows, written as COGs with overviews.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "R/observational/5b_make_obs_seasonal_rasters.R"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/africa-precipitation-monthly-seasonal.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-roads-osm": {
+    "key": "kenya-roads-osm",
+    "title": "Kenya Classified Road Network (OpenStreetMap)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Kenya's classified road network (motorway, trunk, primary, secondary and tertiary highways) extracted from the Geofabrik Kenya OpenStreetMap extract and delivered as GeoJSON. The road-access overlay of the KE-ENSO Explorer flood and drought exposure: the network that matters for access, not every track and footpath.",
+    "licence": {
+      "id": "ODbL-1.0",
+      "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "OpenStreetMap contributors (Geofabrik extract)",
+        "url": "https://www.openstreetmap.org/copyright",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "OpenStreetMap contributors (2026). OpenStreetMap Kenya extract (Geofabrik), classified highways",
+      "url": null
+    },
+    "caveats": [
+      "ODbL: attribution \"(c) OpenStreetMap contributors\" and share-alike apply to redistribution of the data. Classified highways only (motorway to tertiary); footways, tracks and unclassified roads are excluded to keep the overlay light. Snapshot of the Geofabrik extract as of August 2026."
+    ],
+    "avoid": [
+      {
+        "use": "Rural access or last-mile analysis.",
+        "reason": "Only classified highways are included; tracks, footways and unclassified roads are excluded.",
+        "use_instead": "The full Geofabrik extract for the complete OpenStreetMap road network."
+      }
+    ],
+    "intended_uses": [
+      "Road length exposed to flood or drought when overlaid with the hazard layers (record kenya-flood-exposure-intersect)."
+    ],
+    "coverage": {
+      "spatial": "kenya",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "roads",
+        "description": "Classified road network, LineString GeoJSON.",
+        "s3": "s3://digital-atlas/domain=exposure/type=infrastructure/source=osm/region=kenya/processing=analysis-ready/variable=roads/kenya_roads.geojson",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=osm/region=kenya/processing=analysis-ready/variable=roads/kenya_roads.geojson",
+        "media_type": "application/geo+json",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "Geofabrik Kenya OSM extract",
+        "url": "https://download.geofabrik.de/africa/kenya.html"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "Geofabrik Kenya OpenStreetMap extract (kenya-latest.osm.pbf), lines layer.",
+        "derived_from": [
+          {
+            "title": "Geofabrik Kenya OSM extract",
+            "url": "https://download.geofabrik.de/africa/kenya.html"
+          }
+        ]
+      },
+      {
+        "id": "extract",
+        "description": "ogr2ogr the classified highways, clip to the Kenya bbox, keep osm_id / name / highway, write GeoJSON.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_exposure_osm_roads.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-roads-osm.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-population-knbs-census": {
+    "key": "kenya-population-knbs-census",
+    "title": "KNBS 2019 Census Population Counts by County and Sub-county (Kenya)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Enumerated population from the 2019 Kenya Population and Housing Census (KNBS), as admin-level tables: national, the 47 counties keyed on IEBC COD-AB adm1_pcode, the 345 KNBS sub-county rows in the Bureau's own sub-county universe, and a county x 5-year age group x sex table. The official denominator for anything the KE-ENSO Explorer presents to a Kenyan audience: the census total is 47,564,296, where the two gridded surfaces the Explorer also carries (kenya-population-worldpop 55.2 M, kenya-population-grid3 55.9 M) sit about 17 per cent higher.",
+    "licence": {
+      "id": "LicenseRef-KNBS-Open-License",
+      "url": "https://kenya.opendataforafrica.org/gdlkmgb",
+      "attribution": "Kenya National Bureau of Statistics (KNBS) Official Statistics"
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "Kenya National Bureau of Statistics (KNBS)",
+        "url": "https://www.knbs.or.ke/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Kenya National Bureau of Statistics (2019). 2019 Kenya Population and Housing Census: Population, Households and Density by Sub-county",
+      "url": null
+    },
+    "caveats": [
+      "LICENCE EVIDENCE. Evidence for the licence, recorded because knbs.or.ke itself carries no terms page (the terms-and-conditions URL 404s and the footer asserts \"All Rights Reserved\"), which is misleading: (1) KNBS operates an Open License Agreement covering its Open Data Platform, granting a worldwide, royalty-free, non-exclusive licence to use, copy, modify, publish, adapt, distribute and create derivative works for commercial and non-commercial purposes, subject to attribution. (2) KNBS's own account on the Humanitarian Data Exchange published the SAME sub-county table used here - \"Distribution of Population by Sex, Number of Households, Land Area, Population Density and Sub County\" - under Public Domain / No restrictions (https://data.humdata.org/dataset/kenya-population-per-county-from-census-report-2019). (3) The same census figures are redistributed by UNFPA under CC-BY-3.0-IGO (HDX cod-ps-ken). Required attribution, carried by any product derived from this record: \"This product was adapted from the Statistical Office of Kenya's information, which is licensed under the KNBS Open License Agreement.\"\nADMIN LEVELS DIFFER BY LEVEL. County joins one-for-one with IEBC COD-AB (47 units, adm1_pcode). Sub-county does NOT: COD-AB adm2 is 290 IEBC constituencies while the census reports 345 KNBS sub-county rows (a different universe - constituency splits such as Embakasi East/West/Central against sub-county Embakasi, plus 12 forest and national-park units such as Aberdare Forest and Mt Elgon Forest). Normalised in-county name matching resolves 183 of the 290 COD-AB units, so the adm2 table is published in the KNBS universe, name-keyed, with adm2_pcode_codab filled only where a name matches exactly one COD-AB unit inside the same county and codab_match recording how each row resolved. Use county totals plus a gridded within-county share for any adm2 denominator; do not join this table to COD-AB sub-counties on name. Male + Female (47,562,772) falls 1,524 short of the published Total because KNBS suppresses the intersex count below national level; the residual is carried as pop_intersex. The age-and-sex table comes from HDX cod-ps-ken (UNFPA, CC-BY-3.0-IGO), which redistributes the same census (Volume III) with adm1 p-codes attached. DO NOT SWITCH THE SOURCE TO THE HDX COPY of the sub-county table, despite its cleaner licence status: that copy is defective. It carries 346 rows to this source's 345 because the Tharaka-Nithi COUNTY total (393,177) appears as if it were a sub-county, inflating the national figure to 47,957,473 against the published 47,564,296. This ingest uses the knbs.or.ke workbook, which reconciles exactly. (It also spells Kutulo as \"Kotulo\"; same value, harmless.)"
+    ],
+    "avoid": [
+      {
+        "use": "Joining the sub-county table to COD-AB adm2 units on name.",
+        "reason": "The two sub-county universes differ; only 183 of 290 COD-AB units have an exact in-county name match.",
+        "use_instead": "County totals combined with a gridded within-county share (see record kenya-flood-exposure-intersect)."
+      },
+      {
+        "use": "Current-year population figures.",
+        "reason": "These are 2019 enumerated counts; Kenya's population has grown by several million since.",
+        "use_instead": "Record kenya-population-knbs-projections for 2020-2045."
+      }
+    ],
+    "intended_uses": [
+      "Official population denominator for exposure counts presented to Kenyan users.",
+      "Levelling gridded exposure to census totals while keeping the gridded within-county share.",
+      "Reconciling the ~17 per cent gap between the gridded surfaces and the enumerated census."
+    ],
+    "coverage": {
+      "spatial": "polygon 1 admin-level",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "adm0",
+        "description": "National totals (1 row).",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=knbs-census-2019/region=kenya/processing=analysis-ready/level=adm0/population_knbs_census_adm0.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-census-2019/region=kenya/processing=analysis-ready/level=adm0/population_knbs_census_adm0.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      },
+      {
+        "name": "adm1",
+        "description": "County totals keyed on IEBC adm1_pcode (47 rows). The denominator used by the zonal exposure tables.",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=knbs-census-2019/region=kenya/processing=analysis-ready/level=adm1/population_knbs_census_adm1.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-census-2019/region=kenya/processing=analysis-ready/level=adm1/population_knbs_census_adm1.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      },
+      {
+        "name": "adm1-agesex",
+        "description": "County x 5-year age group x sex (22,770 rows).",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=knbs-census-2019/region=kenya/processing=analysis-ready/level=adm1/population_knbs_census_adm1_agesex.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-census-2019/region=kenya/processing=analysis-ready/level=adm1/population_knbs_census_adm1_agesex.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      },
+      {
+        "name": "adm2-knbs",
+        "description": "KNBS sub-county rows (345), name-keyed in the KNBS universe - NOT COD-AB adm2.",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=knbs-census-2019/region=kenya/processing=analysis-ready/level=adm2/population_knbs_census_adm2_knbs.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-census-2019/region=kenya/processing=analysis-ready/level=adm2/population_knbs_census_adm2_knbs.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "2019 Kenya Population and Housing Census - population, households and density by sub-county",
+        "url": "https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Population-households-density-by-sub-county.xlsx"
+      },
+      {
+        "title": "Kenya - Subnational Population Statistics (COD-PS, UNFPA, from KNBS census Volume III)",
+        "url": "https://data.humdata.org/dataset/cod-ps-ken"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "KNBS census workbook \"Population, households and density by sub-county\" (counts, households, land area) and, for the age-and-sex table, HDX cod-ps-ken (UNFPA) carrying the same census Volume III figures with adm1 p-codes.\n",
+        "derived_from": [
+          {
+            "title": "2019 Kenya Population and Housing Census - population, households and density by sub-county",
+            "url": "https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Population-households-density-by-sub-county.xlsx"
+          },
+          {
+            "title": "Kenya - Subnational Population Statistics (COD-PS, UNFPA, from KNBS census Volume III)",
+            "url": "https://data.humdata.org/dataset/cod-ps-ken"
+          }
+        ]
+      },
+      {
+        "id": "tabulate",
+        "description": "Parse the workbook, attach IEBC COD-AB adm1_pcode by name (crosswalk gated on census order KE001..KE047), derive pop_intersex and pop_density_km2, attempt a best-effort COD-AB match for sub-county rows, write parquet. Gated on the published national total (47,564,296) and on county and sub-county sums reconciling to it.\n",
+        "date": "2026-09-15",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_population_knbs_census.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-population-knbs-census.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-power-grid-kplc": {
+    "key": "kenya-power-grid-kplc",
+    "title": "Kenya Electricity Transmission Grid (KPLC)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Kenya's electricity transmission network - 11, 33, 66, 132 and 220 kV lines - from the Kenya Power and Lighting Company dataset on energydata.info, merged into one line layer (141,205 features) with a voltage attribute and delivered as GeoJSON. The 132 and 220 kV lines are the national backbone (highest-value at-risk assets). The power-infrastructure overlay of the KE-ENSO Explorer flood and drought exposure. The source's \"Unidentified Grid Network\" layer is excluded; gridfinder's modelled medium-voltage distribution grid is a deferred complement, not included here.",
+    "licence": {
+      "id": "CC0-1.0",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "Kenya Power and Lighting Company (KPLC), via energydata.info",
+        "url": "https://energydata.info/dataset/kenya-kenya-electricity-network",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Kenya Power and Lighting Company (2026). Kenya Electricity Network (KPLC transmission lines)",
+      "url": null
+    },
+    "caveats": [
+      "Transmission lines only (11 / 33 / 66 / 132 / 220 kV), not the distribution or medium-voltage network. Snapshot of the energydata.info dataset as retrieved in August 2026. The S3 object is served as application/octet-stream; it parses as GeoJSON."
+    ],
+    "avoid": [
+      {
+        "use": "Treating it as the full electricity network, including distribution.",
+        "reason": "Transmission lines only (11 to 220 kV); no distribution or medium-voltage network.",
+        "use_instead": "gridfinder's modelled medium-voltage grid for distribution-level coverage."
+      }
+    ],
+    "intended_uses": [
+      "Transmission-line length exposed to flood or drought when overlaid with the hazard layers (record kenya-flood-exposure-intersect)."
+    ],
+    "coverage": {
+      "spatial": "kenya",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "power-grid",
+        "description": "Merged transmission grid, LineString GeoJSON with a voltage_kv attribute.",
+        "s3": "s3://digital-atlas/domain=exposure/type=infrastructure/source=energydata-kplc/region=kenya/processing=analysis-ready/variable=power-grid/kenya_power_grid.geojson",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=energydata-kplc/region=kenya/processing=analysis-ready/variable=power-grid/kenya_power_grid.geojson",
+        "media_type": "application/geo+json",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "energydata.info - Kenya Electricity Network",
+        "url": "https://energydata.info/dataset/kenya-kenya-electricity-network"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "energydata.info KPLC transmission network, one GeoJSON per voltage class (11 / 33 / 66 / 132 / 220 kV).",
+        "derived_from": [
+          {
+            "title": "energydata.info - Kenya Electricity Network",
+            "url": "https://energydata.info/dataset/kenya-kenya-electricity-network"
+          }
+        ]
+      },
+      {
+        "id": "merge-clip",
+        "description": "Resolve the CKAN resources, add voltage_kv, concatenate the five voltage layers, force EPSG:4326, clip to the Kenya bbox, write GeoJSON.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_exposure_grid.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-power-grid-kplc.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-population-worldpop": {
+    "key": "kenya-population-worldpop",
+    "title": "WorldPop Constrained Gridded Population 2020 (Kenya)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Gridded population count for Kenya, 2020, from WorldPop's constrained (top-down dasymetric) 100 m product, cropped to Kenya and written as a Cloud Optimized GeoTIFF. The primary population-exposure surface of the KE-ENSO Explorer flood and drought overlay; paired with the GRID3 / WOPR bottom-up surface (record kenya-population-grid3), which has the same grain but a different method.",
+    "licence": {
+      "id": "CC-BY-4.0",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "WorldPop, University of Southampton",
+        "url": "https://www.worldpop.org/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "WorldPop (2020). WorldPop constrained individual countries 2020 (100 m), Kenya",
+      "url": null
+    },
+    "caveats": [
+      "Constrained = top-down redistribution of national totals onto built-settlement extents. Use for spatial distribution, not as a census-anchored count. Compare with the GRID3 / WOPR bottom-up surface (record kenya-population-grid3). DISCREPANCY AGAINST THE CENSUS: the UN-adjusted national total, ~55.2 M, is about 17 per cent above the enumerated KNBS 2019 census figure of 47,564,296 (record kenya-population-knbs-census). Any absolute headcount taken straight off this surface is therefore ~17 per cent above what a Kenyan user will compare it against. The KE-ENSO exposure tables handle this by taking the LEVEL from KNBS at county and only the within-county SHARE from this grid (record kenya-flood-exposure-intersect); shares and percentages are unaffected either way. An earlier version of this record quoted ~55.9 M, which is the GRID3 total, not this one."
+    ],
+    "avoid": [
+      {
+        "use": "Reporting census-anchored population totals.",
+        "reason": "The UN-adjusted total (~55.2 M) runs about 17 per cent above the KNBS 2019 census (47.56 M).",
+        "use_instead": "Record kenya-population-knbs-census for official totals (or kenya-population-knbs-projections for a later year); this surface for spatial distribution only."
+      }
+    ],
+    "intended_uses": [
+      "People exposed to flood or drought when overlaid with the hazard layers at Kenya admin levels (record kenya-flood-exposure-intersect)."
+    ],
+    "coverage": {
+      "spatial": "xy 100 meter",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "population",
+        "description": "2020 constrained population count, single COG.",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=worldpop-constrained-2020/region=east-africa/processing=constrained/variable=count/population_2020.tif",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=worldpop-constrained-2020/region=east-africa/processing=constrained/variable=count/population_2020.tif",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "WorldPop constrained individual countries 2020 (100 m)",
+        "url": "https://hub.worldpop.org/geodata/listing?id=79"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "WorldPop constrained (top-down dasymetric) 100 m population count, 2020.",
+        "derived_from": [
+          {
+            "title": "WorldPop constrained individual countries 2020 (100 m)",
+            "url": "https://hub.worldpop.org/geodata/listing?id=79"
+          }
+        ]
+      },
+      {
+        "id": "crop-cog",
+        "description": "Crop to Kenya, set the fill value to NoData, write a COG with overviews.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_exposure_worldpop.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-population-worldpop.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-facilities-hotosm": {
+    "key": "kenya-facilities-hotosm",
+    "title": "Kenya Health and Education Facilities (HOTOSM)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Health facilities and education facilities (schools) for Kenya from the Humanitarian OpenStreetMap Team exports on HDX (OpenStreetMap-derived), clipped to Kenya and delivered as two GeoJSON files. The critical-asset overlay of the KE-ENSO Explorer flood and drought exposure. HOTOSM is the open working substitute for the official registries (KMHFR health facilities, GIGA schools), whose APIs were not reachable when the layer was built.",
+    "licence": {
+      "id": "ODbL-1.0",
+      "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "OpenStreetMap contributors (ODbL) / Humanitarian OpenStreetMap Team"
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "Humanitarian OpenStreetMap Team (via HDX)",
+        "url": "https://data.humdata.org/organization/hot",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Humanitarian OpenStreetMap Team, OpenStreetMap contributors (2026). HOTOSM Kenya Health Facilities and Education Facilities (OpenStreetMap Export)",
+      "url": null
+    },
+    "caveats": [
+      "ODbL: attribution \"(c) OpenStreetMap contributors, via Humanitarian OpenStreetMap Team\" and share-alike apply to redistribution of the data. Snapshot of the HDX export as of August 2026. OSM-derived completeness varies by region; this is not an authoritative facility registry."
+    ],
+    "avoid": [
+      {
+        "use": "Treating counts as a complete or authoritative facility registry.",
+        "reason": "OpenStreetMap-derived; completeness varies by region.",
+        "use_instead": "The KMHFR (health) and GIGA (schools) official registries where accessible."
+      }
+    ],
+    "intended_uses": [
+      "Counting health facilities and schools exposed to flood or drought when overlaid with the hazard layers."
+    ],
+    "coverage": {
+      "spatial": "point",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "health",
+        "description": "Health facilities, GeoJSON.",
+        "s3": "s3://digital-atlas/domain=exposure/type=infrastructure/source=hotosm/region=kenya/processing=analysis-ready/variable=health/health.geojson",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=hotosm/region=kenya/processing=analysis-ready/variable=health/health.geojson",
+        "media_type": "application/geo+json",
+        "href_template": ""
+      },
+      {
+        "name": "schools",
+        "description": "Education facilities (schools), GeoJSON.",
+        "s3": "s3://digital-atlas/domain=exposure/type=infrastructure/source=hotosm/region=kenya/processing=analysis-ready/variable=schools/schools.geojson",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=hotosm/region=kenya/processing=analysis-ready/variable=schools/schools.geojson",
+        "media_type": "application/geo+json",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "HDX hotosm_ken_health_facilities",
+        "url": "https://data.humdata.org/dataset/hotosm_ken_health_facilities"
+      },
+      {
+        "title": "HDX hotosm_ken_education_facilities",
+        "url": "https://data.humdata.org/dataset/hotosm_ken_education_facilities"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "HDX HOTOSM health-facility and education-facility exports (OpenStreetMap-derived).",
+        "derived_from": [
+          {
+            "title": "HDX hotosm_ken_health_facilities",
+            "url": "https://data.humdata.org/dataset/hotosm_ken_health_facilities"
+          },
+          {
+            "title": "HDX hotosm_ken_education_facilities",
+            "url": "https://data.humdata.org/dataset/hotosm_ken_education_facilities"
+          }
+        ]
+      },
+      {
+        "id": "clip",
+        "description": "Resolve the HDX CKAN resource, force EPSG:4326, clip to the Kenya bbox, write GeoJSON.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_exposure_hotosm.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-facilities-hotosm.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "eastafrica-wrsi-fews": {
+    "key": "eastafrica-wrsi-fews",
+    "title": "FEWS NET Water Requirement Satisfaction Index, Cropland and Rangeland (Kenya)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "End-of-season Water Requirement Satisfaction Index (WRSI) for cropland (maize) and rangeland growing seasons from USGS FEWS NET, for the long rains (MAM) and short rains (OND) of every year from 2003, cropped to Kenya and written as Cloud Optimized GeoTIFFs. WRSI is the ratio of seasonal water supplied to crop or pasture water demand (0 to 100 percent); low values flag agricultural water deficit. The crop and rangeland monitoring layer of the KE-ENSO Explorer, on the same CHIRPS v3 precipitation backbone as the rainfall and SPEI layers.",
+    "licence": {
+      "id": "CC0-1.0",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "USGS FEWS NET",
+        "url": "https://earlywarning.usgs.gov/fews",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "USGS FEWS NET (2026). Water Requirement Satisfaction Index (WRSI), East Africa - FEWS NET Data Portal",
+      "url": null
+    },
+    "caveats": [
+      "Cropland and rangeland use different water-demand parameterisations and growing-season definitions (FEWS NET region codes / end-of-season dekads), so the two products are not interchangeable. Not every season x year combination of the template exists: the most recent season is only published once FEWS NET releases its end-of-season product."
+    ],
+    "avoid": [
+      {
+        "use": "Applying the cropland (maize) WRSI in pastoral or rangeland zones.",
+        "reason": "Crop and rangeland use different water-demand parameterisations and season definitions.",
+        "use_instead": "The rangeland WRSI product for pastoral areas."
+      }
+    ],
+    "intended_uses": [
+      "Cropland (maize) and rangeland seasonal water-deficit monitoring in the KE-ENSO Explorer.",
+      "Season-by-season agricultural drought context alongside SPEI and NDVI."
+    ],
+    "coverage": {
+      "spatial": "xy 0.1 degree",
+      "temporal": "2003 to None"
+    },
+    "assets": [
+      {
+        "name": "wrsi",
+        "description": "End-of-season WRSI, one COG per production system x season x year.",
+        "s3": "s3://digital-atlas/domain=climate/type=agriculture/source=fews-wrsi/region=east-africa/processing=seasonal/variable=wrsi/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=agriculture/source=fews-wrsi/region=east-africa/processing=seasonal/variable=wrsi/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "crop={crop}/season={season}/wrsi_{crop}_{season}_{year}.tif"
+      }
+    ],
+    "upstream": [
+      {
+        "title": "FEWS NET WRSI product page",
+        "url": "https://earlywarning.usgs.gov/fews/product/128"
+      },
+      {
+        "title": "CHIRPS-3.0 data portal (Climate Hazards Center)",
+        "url": "https://data.chc.ucsb.edu/products/CHIRPS-3.0/"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "FEWS NET WRSI (CHIRPS precipitation + reference evapotranspiration crop water balance) for the cropland and rangeland seasons.",
+        "derived_from": [
+          {
+            "title": "FEWS NET WRSI product page",
+            "url": "https://earlywarning.usgs.gov/fews/product/128"
+          },
+          {
+            "title": "CHIRPS-3.0 data portal (Climate Hazards Center)",
+            "url": "https://data.chc.ucsb.edu/products/CHIRPS-3.0/"
+          }
+        ]
+      },
+      {
+        "id": "crop-cog",
+        "description": "Assemble the cropland and rangeland end-of-season WRSI grids per season and year, crop to Kenya, write COGs with overviews.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_wrsi_fews.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/eastafrica-wrsi-fews.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "eastafrica-flood-jrc": {
+    "key": "eastafrica-flood-jrc",
+    "title": "JRC Return-Period River Flood Hazard (Kenya)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Modelled riverine flood hazard from the JRC / GloFAS Global Flood Maps: inundation depth for seven return periods (10 to 500 years), a static baseline climatology, cropped to the Kenya window and written as Cloud Optimized GeoTIFFs. The MODELLED flood-prone baseline of the KE-ENSO Explorer, complementing the OBSERVED Copernicus GFM extent (record kenya-flood-gfm): JRC answers \"how flood-prone at magnitude X\", GFM answers \"where and when it actually flooded\".",
+    "licence": {
+      "id": "CC-BY-4.0",
+      "url": null,
+      "attribution": "European Commission Joint Research Centre (EC JRC GloFAS)"
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "European Commission Joint Research Centre (JRC)",
+        "url": "https://data.jrc.ec.europa.eu/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Dottori, F., Salamon, P., Bianchi, A., Alfieri, L., Hirpa, F. A., Feyen, L. (2016). Development and evaluation of a framework for global flood hazard mapping",
+      "url": null
+    },
+    "caveats": [
+      "Static modelled hazard (return-period depths); not an observed time series and not scenario-projected, so no temporal coverage is declared. A subset (Kenya crop) of the global JRC product, unchanged in value. Pair with the GFM observed extent for the \"modelled vs observed\" flood story."
+    ],
+    "avoid": [
+      {
+        "use": "Reading it as observed or future-scenario flooding.",
+        "reason": "Modelled static return-period hazard for the baseline climatology only.",
+        "use_instead": "Copernicus GFM observed flood extent (record kenya-flood-gfm)."
+      }
+    ],
+    "intended_uses": [
+      "Static flood-prone baseline behind the observed GFM extent in the KE-ENSO Explorer.",
+      "Population and infrastructure exposure to flood magnitudes (record kenya-flood-exposure-intersect)."
+    ],
+    "coverage": {
+      "spatial": "xy 3 arc_second",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "return-period",
+        "description": "Flood-depth COGs, one per return period.",
+        "s3": "s3://digital-atlas/domain=climate/type=flood/source=jrc-glofas/region=east-africa/processing=return-period/variable=flood-depth/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=jrc-glofas/region=east-africa/processing=return-period/variable=flood-depth/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "rp={return_period}/flood-depth_rp{return_period}.tif"
+      }
+    ],
+    "upstream": [
+      {
+        "title": "JRC Global Flood Maps (JRC Data Catalogue)",
+        "url": "https://data.jrc.ec.europa.eu/dataset/jrc-floods-floodmapgl_rp50y"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "JRC / GloFAS global river flood hazard maps (hydrodynamic modelling of return-period flows).",
+        "derived_from": [
+          {
+            "title": "JRC Global Flood Maps (JRC Data Catalogue)",
+            "url": "https://data.jrc.ec.europa.eu/dataset/jrc-floods-floodmapgl_rp50y"
+          }
+        ]
+      },
+      {
+        "id": "crop-cog",
+        "description": "Crop to the Kenya window and write one COG per return period with internal overviews.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_flood_jrc.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/eastafrica-flood-jrc.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "enso-driver-dmi": {
+    "key": "enso-driver-dmi",
+    "title": "Indian Ocean Dipole Mode Index (DMI, NOAA CPC / ERSSTv6)",
+    "state": "authored",
+    "hosting": "federated",
+    "summary": "Monthly Dipole Mode Index for the Indian Ocean as published by the NOAA Climate Prediction Center: the sea-surface-temperature anomaly of the western tropical Indian Ocean (50E-70E, 10S-10N) minus that of the south-eastern tropical Indian Ocean (90E-110E, 10S-0), computed from ERSSTv6 against a 1991-2020 climatology. A federated record - the Adaptation Atlas cites this index but does not host or redistribute it.",
+    "licence": {
+      "id": "CC0-1.0",
+      "url": null,
+      "attribution": "NOAA Climate Prediction Center / Physical Sciences Laboratory"
+    },
+    "producer": [
+      {
+        "organization": "NOAA Climate Prediction Center",
+        "url": "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/indian/IODMI/DMI_month.html",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      },
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "NOAA Climate Prediction Center (2026). Indian Ocean Dipole Mode Index (DMI), monthly, ERSSTv6, 1991-2020 climatology",
+      "url": null
+    },
+    "caveats": [
+      "SOURCE CHOICE IS DELIBERATE. The widely cited DMI series served by NOAA PSL is computed from HadISST, which is Crown Copyright, Met Office, released under the UK Non-Commercial Government Licence - downloads permitted for private study and scientific research, any other use requiring a licence from the Met Office IPR officer. That is incompatible with the open licences Adaptation Atlas products carry, so this record uses the CPC ERSSTv6 series instead, which is a work of the US Government with no constraints on access or use. The swap is not only a licensing fix. CPC computes RONI (record enso-driver-roni) from the same ERSSTv6 reconstruction against the same 1991-2020 base period, so pairing CPC DMI with CPC RONI puts both drivers on one SST basis and one climatology. Pairing HadISST DMI with ERSSTv6 RONI does not, and mixing reconstructions is the same class of error as mixing RONI with the raw Nino 3.4 anomaly. VALUES DIFFER FROM THE HadISST SERIES. A different SST reconstruction and a different climatology produce a different series, not a relabelled one. Any analysis that selected analogue seasons from the HadISST-based DMI must be re-run after switching; do not splice the two. COVERAGE. Monthly, 1950-01 onward, updated automatically on the first Thursday of each month; the live file ran to 2026-08 when this record was written. This also resolves the staleness in the KE-ENSO staging, where DMI was NULL for all of 2025 in both seasons - a gap that made 2025 unusable as an analogue year and that failed SILENTLY in a z-scored analogue distance. The file carries both poles (WTIO, SETIO) alongside the index, so the two legs of a dipole event can be distinguished rather than inferred from the difference alone."
+    ],
+    "avoid": [
+      {
+        "use": "Splicing this series onto the HadISST-based DMI served by NOAA PSL.",
+        "reason": "Different SST reconstruction and different climatology, so the join introduces a step change that would be read as a physical signal.\n",
+        "use_instead": "One source end to end; this one, which is also the openly licensed option."
+      },
+      {
+        "use": "Weighting IOD and ENSO equally in an unscaled analogue distance.",
+        "reason": "For Kenya OND the two axes have very different spread (ENSO sd about 1.179 against IOD about 0.362), so an unscaled squared distance lets ENSO dominate by roughly ten to one - backwards for the season IOD matters most in.\n",
+        "use_instead": "Z-score each driver axis before computing distance."
+      }
+    ],
+    "intended_uses": [
+      "Characterising Indian Ocean Dipole state when selecting analogue seasons for Kenyan seasonal outlooks.",
+      "Pairing with RONI (record enso-driver-roni) on a single SST reconstruction and base period."
+    ],
+    "coverage": {
+      "spatial": "",
+      "temporal": "1950-01 to None"
+    },
+    "assets": [
+      {
+        "name": "dmi-monthly",
+        "description": "Fixed-width monthly table, columns Year, Month, WTIO, SETIO, DMI.",
+        "s3": null,
+        "https": "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/indian/IODMI/mnth.ersstv6.clim19912020.dmi_current.txt",
+        "media_type": "text/plain",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "NOAA CPC Indian Ocean Dipole Mode Index",
+        "url": "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/indian/IODMI/DMI_month.html"
+      },
+      {
+        "title": "NOAA Extended Reconstructed Sea Surface Temperature (ERSST)",
+        "url": "https://www.ncei.noaa.gov/products/extended-reconstructed-sst"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "CPC area-averages ERSSTv6 sea-surface-temperature anomalies over the two dipole poles defined by Saji and colleagues (1999), against a 1991-2020 climatology, and publishes the poles and their difference as a monthly fixed-width table.\n",
+        "derived_from": [
+          {
+            "title": "NOAA CPC Indian Ocean Dipole Mode Index",
+            "url": "https://www.cpc.ncep.noaa.gov/products/international/ocean_monitoring/indian/IODMI/DMI_month.html"
+          },
+          {
+            "title": "NOAA Extended Reconstructed Sea Surface Temperature (ERSST)",
+            "url": "https://www.ncei.noaa.gov/products/extended-reconstructed-sst"
+          }
+        ]
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/enso-driver-dmi.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-flood-exposure-intersect": {
+    "key": "kenya-flood-exposure-intersect",
+    "title": "Kenya Flood x Exposure, Per-Sub-County Tables",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Pre-computed flood x exposure statistics for Kenya's 290 IEBC sub-counties (admin 2), as three small Parquet tables the KE-ENSO Explorer reads directly (DuckDB-WASM) instead of intersecting heavy rasters and vectors in the browser. Two hazard products - Copernicus GFM observed flood (per season x year, 2018 to 2025) and JRC modelled return-period flood hazard - are each crossed with population (WorldPop constrained 100 m grid, levelled to the official KNBS county totals), classified roads and the electricity transmission grid (length exposed) and health and school facilities (count exposed); a third table holds the per-sub-county denominators. Tables carry no geometry: join on adm2_pcode to the boundary record kenya-admin-codab.",
+    "licence": {
+      "id": "CC-BY-4.0",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor",
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Steward, P. (2026). Kenya flood x exposure per-sub-county tables, Africa Agriculture Adaptation Atlas (KE-ENSO Explorer)",
+      "url": null
+    },
+    "caveats": [
+      "Derived aggregate statistics; no input geometry is redistributed. Please attribute the inputs: Copernicus GFM and JRC Global Flood Maps (Copernicus / European Commission), WorldPop constrained population (CC-BY-4.0), OpenStreetMap roads and HOTOSM facilities ((c) OpenStreetMap contributors, ODbL), KPLC grid (CC0-1.0, energydata.info), IEBC COD-AB boundaries (OCHA, CC-BY-3.0-IGO). In the GFM table, observed_pct is the SAR-observed share of the sub-county in that season: low values mean sparse observation, not absence of flooding. Road and grid kilometres are cell-resolution approximations (in-cell line length within flooded cells). Every table also carries adm1_pcode, adm1_name and adm2_name label columns. POPULATION METHOD (issue #28), stated in full. Headcounts are NOT raw gridded pixel sums. Every published sub-county population is built as three explicit factors, each published as its own column:\n  pop_adm2 = pop_adm2_grid x pop_scale_census x pop_growth_county\n(1) pop_adm2_grid - the 100 m gridded pixel sum, which supplies the SHARE of the county's people\n    living in that sub-county, and nothing else.\n(2) pop_scale_census = census county total / gridded county total - replaces the LEVEL of the\n    gridded surface with the enumerated KNBS 2019 census, county by county. The gridded surfaces\n    run about 17 per cent above the census (WorldPop constrained ~55.2 M, GRID3 ~55.9 M, census\n    47,564,296), so this factor is ~0.855 nationally but spans 0.324-1.394 across individual\n    counties (measured on the published grid, 2026-09-17): WorldPop exceeds the census by up to\n    threefold in some counties and falls below it in others. Any aggregate therefore moves by a\n    weighted mix of county factors, not by the national one - flood-exposed population sits mostly\n    in low-factor counties, so the GFM exposed total fell about 35 per cent where the national\n    denominator fell 14 per cent. No time component.\n(3) pop_growth_county = target county total / census county total - the county's proportional\n    CHANGE OVER TIME, from the KNBS Vol XVI projections (record\n    kenya-population-knbs-projections). Exactly 1.0 when the denominator is the census itself.\nCounty is the only level where any of this is defensible: COD-AB adm2 is 290 IEBC constituencies while the census reports 345 KNBS sub-counties, and only 183 names match (record kenya-population-knbs-census); KNBS does not project below county at all. FIXED-SHARE ASSUMPTION. Each sub-county's share of its county is held constant at the gridded 2020 distribution, so every sub-county in a county moves by exactly that county's percentage change. Sub-county-specific growth is NOT represented: a fast-urbanising sub-county and a depopulating one in the same county grow at the same rate here. Growth does vary between counties - the 2025 factors span 1.03 to 1.15 - but not within one. YEAR MATCHING (the published default from 2026-09-17). The GFM table records OBSERVED floods and carries a year, so a single fixed denominator is wrong in one direction or the other: the 2019 census undercounts a 2024 flood by roughly 9 per cent, and a 2025 projection overcounts a 2018 one by a similar margin. Each GFM row is therefore levelled against ITS OWN year's county population, and pop_year records which year was used. Years the KNBS projections cover (2020 onward) use them; 2018 and 2019 fall back to the enumerated census, because nothing official projects backwards from the 2020 base and inventing a figure would be worse than stating the fallback. Consequence for consumers: pop_source VARIES BY ROW in the GFM table - \"knbs-census-2019\" for 2018-2019 and \"knbs-projection-<year>\" thereafter - so do not read one value and assume it applies to the file. The JRC table is a return-period hazard with no event year, and the totals table is a static denominator, so both take a single stated reference year (pop_year, same on every row). TWO DEFINITIONS OF THE GROWTH FACTOR, recorded in pop_method:\n  county-growth-from-<base year> - pop_growth_county = projection(year) / projection(base year,\n    2020). The enumerated census remains the level and KNBS supplies only the shape of change;\n    national 2025 lands near 51.96 M because the ~2.6 per cent step KNBS puts between census night\n    (August 2019) and its own 2020 base is deliberately not imported.\n  county-level - pop_growth_county = projection(year) / census(2019), so the county total IS the\n    published official projection and national 2025 is 53,330,978 - the figure a Kenyan\n    counterpart would quote - at the cost of superseding the census anchor with the KNBS base-level\n    revision.\npop_source names the population vintage (knbs-census-2019, or knbs-projection-<year>); pop_grid_source names the surface supplying the share. Nothing is discarded: the raw gridded figures remain in pop_exposed_grid and pop_total_grid. pop_pct is identical under every option - the factors cancel."
+    ],
+    "avoid": [
+      {
+        "use": "Reading pop_exposed as a raw gridded count.",
+        "reason": "Headcounts carry the census level and, for a projection year, the county growth factor; the gridded figure is a different number.",
+        "use_instead": "pop_exposed_grid when the unadjusted gridded pixel sum is what is wanted."
+      },
+      {
+        "use": "Comparing growth between sub-counties of the same county.",
+        "reason": "Sub-county shares are held fixed, so every sub-county in a county grows at its county's rate by construction - the differences would be an artefact.",
+        "use_instead": "County-level comparison (pop_growth_county), or a sub-county projection from a source that actually produces one."
+      },
+      {
+        "use": "Survey-grade accounting of road or grid length at risk.",
+        "reason": "Road and grid kilometres are cell-resolution approximations.",
+        "use_instead": "The source vector layers with an exact line-in-polygon intersection."
+      },
+      {
+        "use": "Reading low flooded_km2 as \"no flooding\" in seasons with low observed_pct.",
+        "reason": "Sparse Sentinel-1 coverage in that season, not absence of flood; check observed_pct first."
+      }
+    ],
+    "intended_uses": [
+      "Sub-county flood-exposure choropleths and ranked tables (people and assets exposed) in the KE-ENSO Explorer.",
+      "Comparing observed (GFM, seasonal / ENSO) against modelled (JRC, return-period) flood exposure."
+    ],
+    "coverage": {
+      "spatial": "polygon 2 admin-level",
+      "temporal": "2018 to 2025"
+    },
+    "assets": [
+      {
+        "name": "gfm-seasonal",
+        "description": "GFM observed-flood exposure per sub-county x season x year (27,260 rows).",
+        "s3": "s3://digital-atlas/domain=exposure/type=intersect/region=kenya/processing=analysis-ready/exposure_gfm_seasonal.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=intersect/region=kenya/processing=analysis-ready/exposure_gfm_seasonal.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      },
+      {
+        "name": "jrc-rp",
+        "description": "JRC modelled flood-hazard exposure per sub-county x return period (2,030 rows).",
+        "s3": "s3://digital-atlas/domain=exposure/type=intersect/region=kenya/processing=analysis-ready/exposure_jrc_rp.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=intersect/region=kenya/processing=analysis-ready/exposure_jrc_rp.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      },
+      {
+        "name": "totals",
+        "description": "Per-sub-county denominators - population, area, road and grid kilometres, facility counts (290 rows).",
+        "s3": "s3://digital-atlas/domain=exposure/type=intersect/region=kenya/processing=analysis-ready/exposure_totals.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=intersect/region=kenya/processing=analysis-ready/exposure_totals.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "Kenya observed flood extent, Copernicus GFM (record kenya-flood-gfm)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=glofas-gfm/region=kenya/"
+      },
+      {
+        "title": "JRC return-period river flood hazard (record eastafrica-flood-jrc)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=jrc-glofas/region=east-africa/"
+      },
+      {
+        "title": "WorldPop constrained population 2020 (record kenya-population-worldpop)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=worldpop-constrained-2020/region=east-africa/"
+      },
+      {
+        "title": "Kenya classified roads, OpenStreetMap (record kenya-roads-osm)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=osm/region=kenya/"
+      },
+      {
+        "title": "Kenya electricity transmission grid, KPLC (record kenya-power-grid-kplc)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=energydata-kplc/region=kenya/"
+      },
+      {
+        "title": "Kenya health and education facilities, HOTOSM (record kenya-facilities-hotosm)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=hotosm/region=kenya/"
+      },
+      {
+        "title": "Kenya administrative boundaries, IEBC COD-AB (record kenya-admin-codab)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=boundaries/type=admin/source=iebc-codab/region=kenya/"
+      },
+      {
+        "title": "KNBS 2019 census county totals (record kenya-population-knbs-census)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-census-2019/region=kenya/"
+      },
+      {
+        "title": "KNBS official county projections 2020-2045 (record kenya-population-knbs-projections)",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-projections-2020-2045/region=kenya/"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "The Hub records this table is computed from: GFM observed flood (kenya-flood-gfm, seasonal flooded = 1 and nobs), JRC return-period hazard (eastafrica-flood-jrc, depth > 0), WorldPop constrained population (kenya-population-worldpop), OSM roads (kenya-roads-osm), KPLC grid (kenya-power-grid-kplc), HOTOSM facilities (kenya-facilities-hotosm), IEBC COD-AB sub-counties (kenya-admin-codab).\n",
+        "derived_from": [
+          {
+            "title": "Kenya observed flood extent, Copernicus GFM (record kenya-flood-gfm)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=glofas-gfm/region=kenya/"
+          },
+          {
+            "title": "JRC return-period river flood hazard (record eastafrica-flood-jrc)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=jrc-glofas/region=east-africa/"
+          },
+          {
+            "title": "WorldPop constrained population 2020 (record kenya-population-worldpop)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=worldpop-constrained-2020/region=east-africa/"
+          },
+          {
+            "title": "Kenya classified roads, OpenStreetMap (record kenya-roads-osm)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=osm/region=kenya/"
+          },
+          {
+            "title": "Kenya electricity transmission grid, KPLC (record kenya-power-grid-kplc)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=energydata-kplc/region=kenya/"
+          },
+          {
+            "title": "Kenya health and education facilities, HOTOSM (record kenya-facilities-hotosm)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=infrastructure/source=hotosm/region=kenya/"
+          },
+          {
+            "title": "Kenya administrative boundaries, IEBC COD-AB (record kenya-admin-codab)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=boundaries/type=admin/source=iebc-codab/region=kenya/"
+          },
+          {
+            "title": "KNBS 2019 census county totals (record kenya-population-knbs-census)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-census-2019/region=kenya/"
+          },
+          {
+            "title": "KNBS official county projections 2020-2045 (record kenya-population-knbs-projections)",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-projections-2020-2045/region=kenya/"
+          }
+        ]
+      },
+      {
+        "id": "zonal-intersect",
+        "description": "Zonal intersect of the flood masks with the sub-county polygons, the population raster, rasterised per-cell road and grid line length, and facility points. Exposure = geometry or cell intersecting the flood mask; population is a pixel sum; line kilometres are the rasterised in-cell length within flooded cells. Population figures are then rescaled county by county: first onto the enumerated 2019 census level (pop_scale_census), then by the county's proportional change to the denominator year (pop_growth_county), holding each sub-county's share of its county fixed at the gridded distribution. The unrescaled figures are kept as pop_exposed_grid / pop_total_grid and both factors are published, so any consumer can reconstruct or undo the adjustment.\n",
+        "date": "2026-09-15",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "R/observational/7_zonal_exposure.R"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-flood-exposure-intersect.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-admin-codab": {
+    "key": "kenya-admin-codab",
+    "title": "Kenya Administrative Boundaries, Counties and Sub-counties (IEBC COD-AB)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Official Kenya administrative boundaries - 47 counties (admin 1) and 290 sub-counties (admin 2) - from the OCHA Common Operational Dataset for Administrative Boundaries (COD-AB), source IEBC, with official p-codes, harmonised to EPSG:4326 and delivered as two GeoJSON files. The reporting-unit backbone for aggregating KE-ENSO Explorer flood and drought exposure (record kenya-flood-exposure-intersect joins on adm2_pcode). Preferred over GAUL for exposure because it carries p-codes and excludes disputed slivers.",
+    "licence": {
+      "id": "CC-BY-3.0-IGO",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "OCHA / Independent Electoral and Boundaries Commission (IEBC), via HDX",
+        "url": "https://data.humdata.org/dataset/cod-ab-ken",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "OCHA, IEBC (2025). Kenya - Subnational Administrative Boundaries (COD-AB)",
+      "url": null
+    },
+    "caveats": [
+      "Geometries were made valid and reprojected but not simplified or otherwise altered. Attribute columns follow the COD-AB convention (adm0/adm1/adm2 _pcode and _name, valid_on, area_sqkm)."
+    ],
+    "avoid": [],
+    "intended_uses": [
+      "Aggregating hazard and exposure layers to official Kenya counties and sub-counties with p-codes.",
+      "Geometry for joining the per-sub-county exposure tables (record kenya-flood-exposure-intersect)."
+    ],
+    "coverage": {
+      "spatial": "polygon  admin-level",
+      "temporal": "2019-10 to 2025-01"
+    },
+    "assets": [
+      {
+        "name": "adm1",
+        "description": "47 counties (admin 1), GeoJSON.",
+        "s3": "s3://digital-atlas/domain=boundaries/type=admin/source=iebc-codab/region=kenya/processing=analysis-ready/level=adm1/ken_adm1.geojson",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=boundaries/type=admin/source=iebc-codab/region=kenya/processing=analysis-ready/level=adm1/ken_adm1.geojson",
+        "media_type": "application/geo+json",
+        "href_template": ""
+      },
+      {
+        "name": "adm2",
+        "description": "290 sub-counties (admin 2), GeoJSON.",
+        "s3": "s3://digital-atlas/domain=boundaries/type=admin/source=iebc-codab/region=kenya/processing=analysis-ready/level=adm2/ken_adm2.geojson",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=boundaries/type=admin/source=iebc-codab/region=kenya/processing=analysis-ready/level=adm2/ken_adm2.geojson",
+        "media_type": "application/geo+json",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "HDX cod-ab-ken",
+        "url": "https://data.humdata.org/dataset/cod-ab-ken"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "OCHA COD-AB Kenya (source IEBC) official administrative boundaries with p-codes.",
+        "derived_from": [
+          {
+            "title": "HDX cod-ab-ken",
+            "url": "https://data.humdata.org/dataset/cod-ab-ken"
+          }
+        ]
+      },
+      {
+        "id": "harmonise",
+        "description": "Detect the adm1 / adm2 layers by their p-code fields, make geometries valid, force EPSG:4326, write GeoJSON.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_exposure_admin_codab.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-admin-codab.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "eastafrica-ndvi-modis": {
+    "key": "eastafrica-ndvi-modis",
+    "title": "MODIS NDVI Seasonal Vegetation Condition (East Africa)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Normalized Difference Vegetation Index from MODIS MOD13Q1 (250 m, 16-day composites), averaged over the two East African rainy seasons - the long rains (MAM, March to May) and the short rains (OND, October to December) - for every year from 2000 to 2025, over an East Africa window centred on Kenya. Written as Cloud Optimized GeoTIFFs. The vegetation-condition layer of the KE-ENSO Explorer: greenness response to seasonal rainfall and ENSO phase.",
+    "licence": {
+      "id": "CC-BY-4.0",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "NASA LP DAAC / USGS EROS",
+        "url": "https://lpdaac.usgs.gov/products/mod13q1v061/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Didan, K. (2021). MODIS/Terra Vegetation Indices 16-Day L3 Global 250 m SIN Grid V061 (MOD13Q1)",
+      "url": null
+    },
+    "caveats": [
+      "Source MODIS data are free and unrestricted; these aggregated COGs are released CC-BY-4.0 with attribution to NASA LP DAAC. NDVI ranges roughly -0.2 to 1.0 (higher = greener). Only the MAM and OND windows are published (no other seasons, no annual mean). Each file covers the full East Africa window (~275 MB); read with a bbox/overview to avoid whole-file downloads."
+    ],
+    "avoid": [
+      {
+        "use": "Analysis of seasons other than MAM and OND, or of within-season phenology.",
+        "reason": "Only the two rainy-season means are published; the 16-day cadence is not retained.",
+        "use_instead": "The MOD13Q1 16-day archive at NASA LP DAAC."
+      }
+    ],
+    "intended_uses": [
+      "Vegetation-condition response to seasonal rainfall and ENSO phase in the KE-ENSO Explorer.",
+      "Rainy-season greenness anomalies alongside the CHIRPS and SPEI layers."
+    ],
+    "coverage": {
+      "spatial": "xy 250 meter",
+      "temporal": "2000 to 2025"
+    },
+    "assets": [
+      {
+        "name": "seasonal",
+        "description": "Per-year seasonal-window mean NDVI, one COG per season x year.",
+        "s3": "s3://digital-atlas/domain=climate/type=vegetation/source=modis-mod13q1/region=east-africa/processing=seasonal/variable=NDVI/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=vegetation/source=modis-mod13q1/region=east-africa/processing=seasonal/variable=NDVI/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "season={season}/NDVI_{season}_{year}_mean.tif"
+      }
+    ],
+    "upstream": [
+      {
+        "title": "MODIS MOD13Q1 v061 (NASA LP DAAC)",
+        "url": "https://doi.org/10.5067/MODIS/MOD13Q1.061"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "MODIS MOD13Q1 Collection 6.1, 250 m 16-day NDVI composites.",
+        "derived_from": [
+          {
+            "title": "MODIS MOD13Q1 v061 (NASA LP DAAC)",
+            "url": "https://doi.org/10.5067/MODIS/MOD13Q1.061"
+          }
+        ]
+      },
+      {
+        "id": "aggregate-cog",
+        "description": "Average the 16-day composites falling in each MAM / OND window per year; write COGs with overviews.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_ndvi_modis.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/eastafrica-ndvi-modis.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "africa-spei-drought": {
+    "key": "africa-spei-drought",
+    "title": "SPEI Drought Index, 3- and 12-month (Africa)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Standardized Precipitation-Evapotranspiration Index at 3-month (SPEI-03) and 12-month (SPEI-12) accumulation, as per-pixel monthly Cloud Optimized GeoTIFFs over Africa, 1981 to present. Built from CHIRPS v3 precipitation and a potential-evapotranspiration climate water balance fitted with a log-logistic distribution; negative values are drier than the reference climatology. The drought layer of the KE-ENSO Explorer: the short accumulation tracks seasonal/agricultural drought, the long accumulation hydrological drought.",
+    "licence": {
+      "id": "CC-BY-4.0",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "licensor",
+          "producer",
+          "processor",
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Steward, P. (2026). SPEI-03 and SPEI-12 drought index from CHIRPS v3 (Africa), Africa Agriculture Adaptation Atlas",
+      "url": null
+    },
+    "caveats": [
+      "SPEI is a z-score anomaly against the fitted reference distribution, not an absolute deficit. Arid-cell -Inf values (zero-precipitation tails of the log-logistic fit) are clamped to NoData."
+    ],
+    "avoid": [
+      {
+        "use": "Reading SPEI as an absolute precipitation or soil-moisture deficit.",
+        "reason": "SPEI is a standardized anomaly against a fitted reference distribution.",
+        "use_instead": "CHIRPS precipitation totals (record africa-precipitation-monthly-seasonal) for absolute rainfall."
+      }
+    ],
+    "intended_uses": [
+      "Seasonal (SPEI-03) and multi-year (SPEI-12) drought characterisation in the KE-ENSO Explorer.",
+      "Drought context for the vegetation (NDVI) and crop water-stress (WRSI) layers."
+    ],
+    "coverage": {
+      "spatial": "xy 0.05 degree",
+      "temporal": "1981-01 to None"
+    },
+    "assets": [
+      {
+        "name": "monthly",
+        "description": "Per-pixel monthly SPEI-03 and SPEI-12, one COG per variable per month.",
+        "s3": "s3://digital-atlas/domain=climate/type=observational/source=chirps-chirts-era5/region=africa/processing=monthly/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=observational/source=chirps-chirts-era5/region=africa/processing=monthly/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "variable={variable}/{variable}-{time}.tif"
+      }
+    ],
+    "upstream": [
+      {
+        "title": "CHIRPS-3.0 data portal (Climate Hazards Center)",
+        "url": "https://data.chc.ucsb.edu/products/CHIRPS-3.0/"
+      },
+      {
+        "title": "Monthly precipitation from CHIRPS v3 (Africa) - Hub record africa-precipitation-monthly-seasonal",
+        "url": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=observational/source=chirps-chirts-era5/region=africa/processing=monthly/variable=PTOT/"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "CHIRPS v3 monthly precipitation minus potential evapotranspiration (climate water balance).",
+        "derived_from": [
+          {
+            "title": "CHIRPS-3.0 data portal (Climate Hazards Center)",
+            "url": "https://data.chc.ucsb.edu/products/CHIRPS-3.0/"
+          },
+          {
+            "title": "Monthly precipitation from CHIRPS v3 (Africa) - Hub record africa-precipitation-monthly-seasonal",
+            "url": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=observational/source=chirps-chirts-era5/region=africa/processing=monthly/variable=PTOT/"
+          }
+        ]
+      },
+      {
+        "id": "monthly-cog",
+        "description": "Fit log-logistic SPEI at 3- and 12-month accumulation (SPEI R package), clamp -Inf arid tails to NoData, write COGs with overviews.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "R/observational/2_calculate_obs_spei.R"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/africa-spei-drought.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-population-knbs-projections": {
+    "key": "kenya-population-knbs-projections",
+    "title": "KNBS Official Population Projections by County, 2020-2045 (Kenya)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Kenya's official cohort-component population projections, from the 2019 KPHC Analytical Report on Population Projections (Volume XVI, KNBS 2022), tabulated from the report's Appendix 5 as county x year x 5-year age group x sex, keyed on IEBC COD-AB adm1_pcode. National trajectory 48.82 M (2020), 53.33 M (2025), 57.81 M (2030), 62.16 M (2035), 66.31 M (2040), 70.18 M (2045). Lets forward-framed flood and drought exposure use a population denominator for the year in question instead of a 2020 surface read as current.",
+    "licence": {
+      "id": "LicenseRef-KNBS-Open-License",
+      "url": "https://kenya.opendataforafrica.org/gdlkmgb",
+      "attribution": "Kenya National Bureau of Statistics (KNBS) Official Statistics"
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "Kenya National Bureau of Statistics (KNBS)",
+        "url": "https://www.knbs.or.ke/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Kenya National Bureau of Statistics (2022). 2019 Kenya Population and Housing Census, Analytical Report on Population Projections (Volume XVI)",
+      "url": null
+    },
+    "caveats": [
+      "LICENCE EVIDENCE. Weaker footing than the census record, and the difference is worth stating. KNBS's Open License Agreement grants worldwide, royalty-free, non-exclusive rights to reuse, adapt, redistribute and create derivative works with attribution - but it is scoped to data published on the KNBS Open Data Platform, and Volume XVI is a PDF hosted on knbs.or.ke. Unlike the 2019 census tables, no licensed mirror of these projections exists anywhere (searched HDX, open.africa and the Kenya data portal, 2026-09-17): UNFPA's COD-PS covers the census, not Volume XVI. What is published here is a derived tabulation of figures printed in a public national statistical report, attributed, not a copy of the report. Confirm with KNBS before this record is contributed to cdh-catalog. Required attribution: \"This product was adapted from the Statistical Office of Kenya's information, which is licensed under the KNBS Open License Agreement.\"\nCOUNTY ONLY. Volume XVI does not project below county - no sub-county name appears anywhere in the report - so this record stops at county. The KE-ENSO exposure tables (record kenya-flood-exposure-intersect) do carry sub-county figures for a projection year, and the way they get there is stated there in full: each sub-county's share of its county is held fixed at the gridded 2020 distribution and the whole county is moved by its own percentage change from this table (pop_growth_county), with the enumerated census supplying the level. That means no sub-county-specific growth is represented; growth varies between counties (2025 factors span 1.03 to 1.15) but is uniform within one. Anyone wanting genuine sub-county differentials needs a source that produces them - this one does not. YEAR COVERAGE IS UNEVEN. The report's annual panels cover 2020-2035; 2040 and 2045 appear only in the five-yearly milestone panel, so 2036-2039 and 2041-2044 are absent. TWO SOURCE DEFECTS, both handled and logged by the ingest rather than silently absorbed. (1) Busia 2030, age 80+, female reads 3,120 in the 2030-2035 panel against 5,799 in the two other panels that carry 2030; the printed row total (9,714) reconciles only with 5,799, so 5,799 is used. (2) Kiambu's 2026-2030 panel labels its open-ended top age group \"80-84\" where every other panel says \"80+\"; it is relabelled \"80+\", without which it would double-count against the overlapping panels. KNBS rounds each printed cell independently, so sums do not close exactly: age groups land within five people of the printed All Ages row, and the 47 counties sum to roughly 15 to 20 people below the national row in every year. The identical report is also hosted as ...-Analytical-Report-on-Population-Projections-Vol-XVI.pdf (2024/05, 32.9 MB); its extracted text is identical to the 2023/09 upload used here."
+    ],
+    "avoid": [
+      {
+        "use": "Sub-county (adm2) projected denominators.",
+        "reason": "Volume XVI projects to county only.",
+        "use_instead": "County projection combined with a gridded within-county share, stated as such."
+      },
+      {
+        "use": "Years 2036-2039 or 2041-2044.",
+        "reason": "Not published - the annual panels stop at 2035 and only 2040 and 2045 follow.",
+        "use_instead": "The nearest published year, or interpolate and say so."
+      },
+      {
+        "use": "Reporting the 2019 enumerated baseline.",
+        "reason": "These are projections, not census counts.",
+        "use_instead": "Record kenya-population-knbs-census."
+      }
+    ],
+    "intended_uses": [
+      "Population denominator for a stated projection year in forward-framed exposure work.",
+      "County age and sex structure for vulnerability weighting (children, older people)."
+    ],
+    "coverage": {
+      "spatial": "polygon 1 admin-level",
+      "temporal": "2020 to 2045"
+    },
+    "assets": [
+      {
+        "name": "adm0",
+        "description": "National projections, year x age group x sex (972 rows).",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=knbs-projections-2020-2045/region=kenya/processing=analysis-ready/level=adm0/population_knbs_projections_adm0.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-projections-2020-2045/region=kenya/processing=analysis-ready/level=adm0/population_knbs_projections_adm0.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      },
+      {
+        "name": "adm1",
+        "description": "County projections, county x year x age group x sex (45,684 rows).",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=knbs-projections-2020-2045/region=kenya/processing=analysis-ready/level=adm1/population_knbs_projections_adm1.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-projections-2020-2045/region=kenya/processing=analysis-ready/level=adm1/population_knbs_projections_adm1.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      },
+      {
+        "name": "adm1-totals",
+        "description": "County x year All Ages totals (846 rows) - the table the zonal exposure engine reads.",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=knbs-projections-2020-2045/region=kenya/processing=analysis-ready/level=adm1/population_knbs_projections_adm1_totals.parquet",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=knbs-projections-2020-2045/region=kenya/processing=analysis-ready/level=adm1/population_knbs_projections_adm1_totals.parquet",
+        "media_type": "application/vnd.apache.parquet",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "2019 KPHC Analytical Report on Population Projections (Volume XVI)",
+        "url": "https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Analytical-Report-on-Population-Projections.pdf"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "KNBS 2019 KPHC Analytical Report on Population Projections, Volume XVI, Appendix 5.",
+        "derived_from": [
+          {
+            "title": "2019 KPHC Analytical Report on Population Projections (Volume XVI)",
+            "url": "https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Analytical-Report-on-Population-Projections.pdf"
+          }
+        ]
+      },
+      {
+        "id": "tabulate",
+        "description": "Extract Appendix 5 with pdftotext -layout, parse each county block's age x sex x year panels, reconcile the years that appear in more than one panel (ties broken on the row's own male + female = total, so a cell contradicting its printed total loses), attach IEBC COD-AB adm1_pcode, write parquet. Gated on the published national totals for all six milestone years, on the 47 counties resolving in COD-AB order, and on counties summing to the national row.\n",
+        "date": "2026-09-15",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_population_knbs_projections.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-population-knbs-projections.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-flood-gfm": {
+    "key": "kenya-flood-gfm",
+    "title": "Kenya Observed Flood Extent (Copernicus GFM, Sentinel-1)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Observed flood extent for Kenya from the Copernicus Emergency Management Service Global Flood Monitoring (GFM) product, which classifies flooding from every Sentinel-1 SAR acquisition (ensemble of the DLR, TU Wien and LIST algorithms; permanent and reference water excluded). Delivered as ~111 m aggregates built directly from the 20 m SAR tiles: a monthly flood-occurrence layer with its valid-observation count, a rolling 3-month (seasonal) layer aligned to the KE-ENSO Explorer precipitation seasons, and a full-record history (occurrence frequency and ever-flooded footprint), 2018 to present. Replaces the MODIS Global Flood Database (ended 2018) with a cloud-penetrating, continuously updated SAR record. The 20 m per-acquisition archive is not materialised here (16,000+ acquisitions); it can be re-pulled from the EODC STAC on demand.",
+    "licence": {
+      "id": "LicenseRef-Copernicus-EMS",
+      "url": "https://www.copernicus.eu/en/access-data/copyright-and-licences",
+      "attribution": "Contains modified Copernicus Emergency Management Service information [2018-2025]"
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "Copernicus Emergency Management Service (CEMS)",
+        "url": "https://global-flood.emergency.copernicus.eu/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Copernicus Emergency Management Service, Steward, P. (2026). Copernicus Global Flood Monitoring (GFM) - Kenya observed flood extent aggregates, Africa Agriculture Adaptation Atlas",
+      "url": null
+    },
+    "caveats": [
+      "Attribution required: \"Contains modified Copernicus Emergency Management Service information [year]\". Pixel coding of the flooded layers: 0 = not flooded, 1 = flooded, 255 = not observed (SAR gap or excluded) - 255 is absence of observation, NOT dry; the nobs layer gives the count of valid observations so no-flood is distinguishable from no-observation. Seasonal windows are named by the initials of their months and labelled by the year of their FIRST month (DJF_2018 = Dec 2018 to Feb 2019), so NDJ and DJF exist for 2018 to 2024 only. This differs from the CHIRPS seasonal record (africa-precipitation-monthly-seasonal), which labels NDJ and DJF by the year the window ends; align on those two windows with care. A ~7-year record measures recent observed flood occurrence, not return-period magnitude."
+    ],
+    "avoid": [
+      {
+        "use": "Splicing into one continuous flood time series with the pre-2018 Global Flood Database.",
+        "reason": "GFD is MODIS optical, event-triggered, 250 m; GFM is Sentinel-1 SAR, continuous, ~20 m. A join introduces a methodological break, so apparent post-2018 increases would be artefacts.\n",
+        "use_instead": "Analyse GFM on its own; complement with the JRC modelled return-period hazard (record eastafrica-flood-jrc), not GFD."
+      },
+      {
+        "use": "Reading the history frequency as a return-period or design-flood magnitude.",
+        "reason": "A ~7-year SAR record captures recent observed occurrence, not rare-event magnitude.",
+        "use_instead": "JRC Global Flood Maps (record eastafrica-flood-jrc) for modelled return periods."
+      }
+    ],
+    "intended_uses": [
+      "Overlaying observed flood extent with population and asset exposure at Kenya admin levels (record kenya-flood-exposure-intersect).",
+      "Characterising seasonal and ENSO-linked flood occurrence in the KE-ENSO Explorer."
+    ],
+    "coverage": {
+      "spatial": "xy 0.001 degree",
+      "temporal": "2018-01 to None"
+    },
+    "assets": [
+      {
+        "name": "monthly-flooded",
+        "description": "Monthly flood occurrence, one COG per month.",
+        "s3": "s3://digital-atlas/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=monthly/variable=flooded/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=monthly/variable=flooded/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "flooded-{time}.tif"
+      },
+      {
+        "name": "monthly-nobs",
+        "description": "Monthly valid-observation count, one COG per month.",
+        "s3": "s3://digital-atlas/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=monthly/variable=nobs/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=monthly/variable=nobs/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "nobs-{time}.tif"
+      },
+      {
+        "name": "seasonal-flooded",
+        "description": "Rolling 3-month flood occurrence, one COG per season x year.",
+        "s3": "s3://digital-atlas/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=seasonal/variable=flooded/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=seasonal/variable=flooded/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "season={season}/flooded_{season}_{year}.tif"
+      },
+      {
+        "name": "seasonal-nobs",
+        "description": "Rolling 3-month valid-observation count, one COG per season x year.",
+        "s3": "s3://digital-atlas/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=seasonal/variable=nobs/",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=seasonal/variable=nobs/",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": "season={season}/nobs_{season}_{year}.tif"
+      },
+      {
+        "name": "history-frequency",
+        "description": "Full-record flood frequency (flooded months / observed months), single COG.",
+        "s3": "s3://digital-atlas/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=history/variable=frequency/frequency.tif",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=history/variable=frequency/frequency.tif",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": ""
+      },
+      {
+        "name": "history-footprint",
+        "description": "Ever-flooded footprint over the full record, single COG.",
+        "s3": "s3://digital-atlas/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=history/variable=footprint/footprint.tif",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=climate/type=flood/source=glofas-gfm/region=kenya/processing=history/variable=footprint/footprint.tif",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "Copernicus Global Flood Monitoring (GFM), EODC STAC collection",
+        "url": "https://stac.eodc.eu/api/v1/collections/GFM"
+      },
+      {
+        "title": "Sentinel-1 SAR (Copernicus)",
+        "url": "https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-1"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "Copernicus CEMS GFM per-Sentinel-1-acquisition flood classification: ensemble of the DLR, TU Wien and LIST algorithms (a pixel is flooded when the ensemble agrees); flood = observed water minus reference water, so permanent water is excluded.\n",
+        "derived_from": [
+          {
+            "title": "Copernicus Global Flood Monitoring (GFM), EODC STAC collection",
+            "url": "https://stac.eodc.eu/api/v1/collections/GFM"
+          },
+          {
+            "title": "Sentinel-1 SAR (Copernicus)",
+            "url": "https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-1"
+          }
+        ]
+      },
+      {
+        "id": "mosaic-clip",
+        "description": "Mosaic the Equi7-AF 20 m ensemble flood-extent tiles per acquisition and warp onto the fixed 0.001 deg EPSG:4326 Kenya grid (full-resolution read, max resampling, NoData-aware).\n",
+        "date": "2026-08-28",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_flood_gfm.py"
+        }
+      },
+      {
+        "id": "aggregate-monthly",
+        "description": "Per-pixel monthly flood occurrence (max over the month's acquisitions) and valid-observation count.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_flood_gfm.py"
+        }
+      },
+      {
+        "id": "aggregate-seasonal",
+        "description": "Rolling 3-month occurrence and observation count over the twelve seasonal windows.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_flood_gfm.py"
+        }
+      },
+      {
+        "id": "aggregate-history",
+        "description": "Full-record occurrence frequency (flooded months / observed months) and ever-flooded footprint.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_flood_gfm.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-flood-gfm.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-population-grid3": {
+    "key": "kenya-population-grid3",
+    "title": "GRID3 / WOPR Bottom-up Gridded Population 2020 (Kenya)",
+    "state": "authored",
+    "hosting": "atlas",
+    "summary": "Gridded population count for Kenya from the WorldPop Open Population Repository (WOPR) KEN v2.0, a bottom-up 100 m surface modelled from KNBS microcensus survey clusters (GRID3-branded), cropped to Kenya and written as a Cloud Optimized GeoTIFF. The second population-exposure surface of the KE-ENSO Explorer, alongside the WorldPop constrained (top-down) product (record kenya-population-worldpop): same grain, different estimation method.",
+    "licence": {
+      "id": "CC-BY-4.0",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "processor",
+          "point-of-contact"
+        ]
+      },
+      {
+        "organization": "WorldPop / GRID3, University of Southampton",
+        "url": "https://wopr.worldpop.org/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "WorldPop, GRID3 (2020). WOPR: WorldPop Open Population Repository - Kenya population v2.0 (bottom-up)",
+      "url": null
+    },
+    "caveats": [
+      "Bottom-up = built up from microcensus survey clusters, not redistributed from a national total. Differs from the WorldPop constrained surface spatially, not in national scale; use for method comparison. DISCREPANCY AGAINST THE CENSUS: the national total, ~55.9 M, is about 17 per cent above the enumerated KNBS 2019 census figure of 47,564,296 (record kenya-population-knbs-census). That is worth stating plainly for this product in particular, because it is modelled FROM KNBS microcensus survey clusters, so a total near the census was the expectation rather than the exception. Any absolute headcount taken straight off this surface is ~17 per cent above what a Kenyan user will compare it against; the KE-ENSO exposure tables take the LEVEL from KNBS at county and only the within-county SHARE from a grid (record kenya-flood-exposure-intersect)."
+    ],
+    "avoid": [
+      {
+        "use": "Reporting census-anchored population totals.",
+        "reason": "The national total (~55.9 M) runs about 17 per cent above the KNBS 2019 census (47.56 M).",
+        "use_instead": "Record kenya-population-knbs-census for official totals (or kenya-population-knbs-projections for a later year); this surface for spatial distribution only."
+      }
+    ],
+    "intended_uses": [
+      "Second population-exposure surface for method comparison against the WorldPop constrained product."
+    ],
+    "coverage": {
+      "spatial": "xy 100 meter",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "population",
+        "description": "Bottom-up population count, single COG.",
+        "s3": "s3://digital-atlas/domain=exposure/type=population/source=grid3/region=east-africa/processing=bottom-up/variable=count/population_2020.tif",
+        "https": "https://digital-atlas.s3.amazonaws.com/domain=exposure/type=population/source=grid3/region=east-africa/processing=bottom-up/variable=count/population_2020.tif",
+        "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "WOPR KEN population v2.0",
+        "url": "https://data.worldpop.org/repo/wopr/KEN/population/v2.0/"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "WOPR KEN v2.0 bottom-up gridded population (KNBS microcensus-modelled), 100 m.",
+        "derived_from": [
+          {
+            "title": "WOPR KEN population v2.0",
+            "url": "https://data.worldpop.org/repo/wopr/KEN/population/v2.0/"
+          }
+        ]
+      },
+      {
+        "id": "crop-cog",
+        "description": "Crop to Kenya, set the fill value (-3.4e38) to NoData, write a COG with overviews.",
+        "code": {
+          "url": "https://github.com/AdaptationAtlas/hazards_prototype",
+          "version": "python/ingest_exposure_grid3.py"
+        }
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/kenya-population-grid3.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "enso-driver-roni": {
+    "key": "enso-driver-roni",
+    "title": "NOAA CPC Relative Oceanic Nino Index (RONI)",
+    "state": "authored",
+    "hosting": "federated",
+    "summary": "The Nino 3.4 sea-surface-temperature anomaly expressed relative to the tropical-mean SST anomaly, published monthly by the NOAA Climate Prediction Center as overlapping three-month windows. A federated record: the Adaptation Atlas cites this index but does not host or redistribute it.",
+    "licence": {
+      "id": "CC0-1.0",
+      "url": null,
+      "attribution": "NOAA Climate Prediction Center / Physical Sciences Laboratory"
+    },
+    "producer": [
+      {
+        "organization": "NOAA Climate Prediction Center",
+        "url": "https://www.cpc.ncep.noaa.gov/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      },
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "NOAA Climate Prediction Center (2026). Relative Oceanic Nino Index (RONI)",
+      "url": null
+    },
+    "caveats": [
+      "CPC REVISES PAST VALUES, so a refetch changes history - pin and record the fetch date with any analysis. RONI differs from the Nino 3.4 anomaly by up to 0.567 degC on a time-trending gap (about +0.20 degC in 1981-1995 falling to about -0.30 degC in 2015-2025), so mixing RONI and Nino 3.4 in one analogue-season comparison biases matches toward older years. Values are three-month means labelled by their centre month."
+    ],
+    "avoid": [
+      {
+        "use": "Mixing RONI with the raw Nino 3.4 anomaly in one time series or distance metric.",
+        "reason": "The two differ by up to 0.567 degC and the gap trends over time, so a mixed series biases analogue matching toward older years.\n",
+        "use_instead": "One index end to end, RONI throughout."
+      }
+    ],
+    "intended_uses": [
+      "Selecting analogue seasons for Kenyan seasonal outlooks in the KE-ENSO Explorer."
+    ],
+    "coverage": {
+      "spatial": "",
+      "temporal": "1950-01 to None"
+    },
+    "assets": [
+      {
+        "name": "roni-ascii",
+        "description": "Fixed-width ASCII table, one row per overlapping three-month window.",
+        "s3": null,
+        "https": "https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt",
+        "media_type": "text/plain",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "NOAA CPC RONI",
+        "url": "https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "CPC computes the Nino 3.4 SST anomaly and subtracts the tropical-mean (20S-20N) SST anomaly, publishing overlapping three-month means as a fixed-width ASCII table.\n",
+        "derived_from": [
+          {
+            "title": "NOAA CPC RONI",
+            "url": "https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt"
+          }
+        ]
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/enso-driver-roni.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "enso-driver-western-v": {
+    "key": "enso-driver-western-v",
+    "title": "Western V Sea Surface Temperature Index (Funk)",
+    "state": "draft",
+    "hosting": "federated",
+    "summary": "The \"Western V\" index of Funk and colleagues: a west-Pacific / Indian Ocean sea-surface-temperature pattern used as a predictor of East African rainfall, distinct from the Nino 3.4 and RONI ENSO indices. A federated record - the Adaptation Atlas cites this index but does not host it.",
+    "licence": {
+      "id": "",
+      "url": null,
+      "attribution": "UK Met Office Hadley Centre HadISST1.1 (UK Crown Copyright - Non-Commercial Use Only)"
+    },
+    "producer": [
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": " (). ",
+      "url": null
+    },
+    "caveats": [
+      "DRAFT - BLOCKED ON A SOURCE. This is the least standardised index in the KE-ENSO Explorer driver set: unlike RONI (NOAA CPC) and DMI (NOAA PSL), it has no single canonical published time series, and the notebook stages it through its own builder. Before promotion, establish and record (a) the exact SST box definition and the paper it comes from, (b) whether an authoritative series is published anywhere or whether the Atlas computes it, and (c) the licence of whichever SST product it is computed from - if that product is HadISST, the UK Non-Commercial Government Licence applies and the constraint in record enso-driver-dmi carries over verbatim."
+    ],
+    "avoid": [],
+    "intended_uses": [],
+    "coverage": {
+      "spatial": "",
+      "temporal": ""
+    },
+    "assets": [],
+    "upstream": [],
+    "processing": [
+      {
+        "id": "source",
+        "description": "Area-averaged sea-surface-temperature anomalies over the Western V region, as defined in the Funk et al. literature on East African rainfall decline. Exact definition to be recorded.\n"
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/draft/enso-driver-western-v.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-market-prices-ndma": {
+    "key": "kenya-market-prices-ndma",
+    "title": "Kenya Drought Early Warning Bulletins - Market Prices and Terms of Trade (NDMA)",
+    "state": "draft",
+    "hosting": "federated",
+    "summary": "County-level market indicators from Kenya's National Drought Management Authority monthly National Drought Early Warning Bulletins, including staple and livestock prices and the pastoral terms of trade. A federated record - the Adaptation Atlas cites these bulletins but does not host them.",
+    "licence": {
+      "id": "",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "organization": "National Drought Management Authority (NDMA), Kenya",
+        "url": "https://ndma.go.ke/",
+        "roles": [
+          "producer"
+        ]
+      },
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": " (). ",
+      "url": null
+    },
+    "caveats": [
+      "DRAFT - BLOCKED ON TWO THINGS. (a) No licence is published for NDMA bulletins; confirm with NDMA before asserting one. (b) The indicators are published as monthly PDF bulletins, not as a machine-readable series, so any time series is reconstructed by extraction - record who extracts it, with what code, and over which months, before promotion. TERMS OF TRADE IS A RATIO, NOT A PRICE. It expresses how much staple a pastoralist obtains per animal sold, so it moves with either leg; a fall can mean cheaper livestock or dearer grain, and the two have different implications. Do not read it as a price index. FEWS NET publishes a separate Kenya Price Bulletin covering overlapping markets - a different product with a different methodology, not a substitute."
+    ],
+    "avoid": [],
+    "intended_uses": [],
+    "coverage": {
+      "spatial": "",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "ndma-bulletins",
+        "description": "Monthly National Drought Early Warning Bulletins (PDF).",
+        "s3": null,
+        "https": "https://knowledgeweb.ndma.go.ke/Public/Resources/Default.aspx?ID=7",
+        "media_type": "application/pdf",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "NDMA National Drought Early Warning Bulletins",
+        "url": "https://knowledgeweb.ndma.go.ke/Public/Resources/Default.aspx?ID=7"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "NDMA county drought monitors collect market prices; the authority publishes them monthly in the National Drought Early Warning Bulletin along with the pastoral terms of trade.\n",
+        "derived_from": [
+          {
+            "title": "NDMA National Drought Early Warning Bulletins",
+            "url": "https://knowledgeweb.ndma.go.ke/Public/Resources/Default.aspx?ID=7"
+          }
+        ]
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/draft/kenya-market-prices-ndma.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "harveststat-crop-production": {
+    "key": "harveststat-crop-production",
+    "title": "HarvestStat Africa - Harmonized Subnational Crop Statistics",
+    "state": "draft",
+    "hosting": "federated",
+    "summary": "Cleaned and harmonised subnational crop production, harvested area and yield for Sub-Saharan Africa, assembled from FEWS NET and FAO sources: 574,204 records, 33 countries, 94 crop types, primarily 1980-2022. A federated record - the Adaptation Atlas cites this dataset but does not host or redistribute it.",
+    "licence": {
+      "id": "",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "organization": "NASA Harvest / University of Maryland",
+        "url": "https://github.com/HarvestStat/HarvestStat-Africa",
+        "roles": [
+          "producer"
+        ]
+      },
+      {
+        "organization": "Famine Early Warning Systems Network (FEWS NET)",
+        "url": "https://fews.net/",
+        "roles": [
+          "producer"
+        ]
+      },
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": "Lee, Donghoon, Anderson, Weston, Chen, Xuan (2026). HarvestStat Africa - Harmonized Subnational Crop Statistics for Sub-Saharan Africa",
+      "url": "10.5061/dryad.vq83bk42w"
+    },
+    "caveats": [
+      "DRAFT - BLOCKED ON LICENCE CONFIRMATION. The Dryad landing page does not state an explicit licence; Dryad's platform default is CC0-1.0 but that was not confirmed on the page itself, so no licence is asserted here rather than guessing one. Confirm with Dryad or the authors, then set license and promote. Quantities are metric tonnes, areas hectares, yields metric tonnes per hectare. Coverage is jagged across countries, crops and years - check per-country completeness before treating any national series as continuous."
+    ],
+    "avoid": [],
+    "intended_uses": [],
+    "coverage": {
+      "spatial": "",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "harveststat-africa",
+        "description": "Harmonised subnational crop statistics, v1.0.",
+        "s3": null,
+        "https": "https://doi.org/10.5061/dryad.vq83bk42w",
+        "media_type": "",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "HarvestStat Africa v1.0 (Dryad)",
+        "url": "https://doi.org/10.5061/dryad.vq83bk42w"
+      },
+      {
+        "title": "HarvestStat-Africa source code",
+        "url": "https://github.com/HarvestStat/HarvestStat-Africa"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "Agricultural statistics collected by FEWS NET and NASA Harvest into the FEWS NET Data Warehouse, then harmonised across administrative-unit changes by the HarvestStat framework.\n",
+        "derived_from": [
+          {
+            "title": "HarvestStat Africa v1.0 (Dryad)",
+            "url": "https://doi.org/10.5061/dryad.vq83bk42w"
+          },
+          {
+            "title": "HarvestStat-Africa source code",
+            "url": "https://github.com/HarvestStat/HarvestStat-Africa"
+          }
+        ]
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/draft/harveststat-crop-production.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-food-insecurity-ipc": {
+    "key": "kenya-food-insecurity-ipc",
+    "title": "Kenya Acute Food Insecurity Phase Classification (IPC / KFSSG)",
+    "state": "draft",
+    "hosting": "federated",
+    "summary": "IPC Acute Food Insecurity phase classifications and population-in-phase tables for Kenya, produced twice a year by the Kenya Food Security Steering Group after the long-rains and short-rains assessments. A federated record - the Adaptation Atlas cites this analysis but does not host it.",
+    "licence": {
+      "id": "",
+      "url": null,
+      "attribution": null
+    },
+    "producer": [
+      {
+        "organization": "Integrated Food Security Phase Classification (IPC) Global Partnership",
+        "url": "https://www.ipcinfo.org/",
+        "roles": [
+          "producer"
+        ]
+      },
+      {
+        "organization": "Kenya Food Security Steering Group (KFSSG)",
+        "roles": [
+          "producer"
+        ]
+      },
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": " (). ",
+      "url": null
+    },
+    "caveats": [
+      "DRAFT - BLOCKED ON LICENCE AND ACCESS TERMS. IPC publishes an API and population tables but the reuse licence is not stated on the pages consulted; confirm with IPC, and set access to restricted with an access_note if the API requires a key. A PHASE IS A CLASSIFICATION, NOT A MEASUREMENT. Phases 1-5 come from an expert consensus process over converging evidence, so they are ordinal and are NOT comparable across analysis rounds in the way a measured index is: methodology, evidence base and analyst panel all change between rounds. Do not difference phases between rounds to derive a trend, and do not interpolate between analyses. Kenya analyses are conducted twice a year - long rains (July-August) and short rains (January-February) - and the IPC process is hosted within NDMA."
+    ],
+    "avoid": [],
+    "intended_uses": [],
+    "coverage": {
+      "spatial": "",
+      "temporal": ""
+    },
+    "assets": [
+      {
+        "name": "ipc-kenya-analyses",
+        "description": "Area phase classifications and population-in-phase tables for Kenya.",
+        "s3": null,
+        "https": "https://www.ipcinfo.org/ipc-country-analysis/en/?country=KEN",
+        "media_type": "",
+        "href_template": ""
+      }
+    ],
+    "upstream": [
+      {
+        "title": "IPC Kenya country analyses",
+        "url": "https://www.ipcinfo.org/ipc-country-analysis/en/?country=KEN"
+      },
+      {
+        "title": "IPC Application Programming Interface",
+        "url": "https://www.ipcinfo.org/ipc-country-analysis/api/"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "KFSSG conducts the seasonal assessment; the IPC Technical Working Group classifies areas into phases by consensus over converging evidence and publishes area phases and population tables.\n",
+        "derived_from": [
+          {
+            "title": "IPC Kenya country analyses",
+            "url": "https://www.ipcinfo.org/ipc-country-analysis/en/?country=KEN"
+          },
+          {
+            "title": "IPC Application Programming Interface",
+            "url": "https://www.ipcinfo.org/ipc-country-analysis/api/"
+          }
+        ]
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/draft/kenya-food-insecurity-ipc.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  },
+  "kenya-gesi-knbs": {
+    "key": "kenya-gesi-knbs",
+    "title": "Kenya Gender and Social Inclusion Statistics (KNBS)",
+    "state": "draft",
+    "hosting": "federated",
+    "summary": "Gender and social-inclusion indicators published by the Kenya National Bureau of Statistics, for disaggregating exposure and impact analysis in the KE-ENSO Explorer. A federated record - the Adaptation Atlas cites these statistics but does not host them.",
+    "licence": {
+      "id": "",
+      "url": null,
+      "attribution": "Kenya National Bureau of Statistics (KNBS) Official Statistics"
+    },
+    "producer": [
+      {
+        "organization": "Kenya National Bureau of Statistics (KNBS)",
+        "url": "https://www.knbs.or.ke/",
+        "roles": [
+          "licensor",
+          "producer"
+        ]
+      },
+      {
+        "name": "Peter Steward",
+        "organization": "Alliance of Bioversity International and CIAT",
+        "email": "p.steward@cgiar.org",
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "citation": {
+      "text": " (). ",
+      "url": null
+    },
+    "caveats": [
+      "DRAFT - BLOCKED ON IDENTIFYING THE EXACT PRODUCT. KNBS publishes several gender and inclusion outputs and this record does not yet name which one the notebook uses; pin the specific publication and its release year before promotion, and record the administrative level it reports at, since that governs whether it can join the census tables at all. LICENCE. Expected to be the KNBS Open License Agreement, as for records kenya-population-knbs-census and kenya-population-knbs-projections, but that agreement is scoped to data published on the KNBS Open Data Platform - a publication that exists only as a PDF on knbs.or.ke is not clearly covered. Resolve alongside hazards_prototype issue 33. ADMIN JOINS. If it reports at sub-county level, the KNBS universe of 345 sub-counties does NOT join one-for-one to the 290 IEBC COD-AB constituencies; see the note in kenya-population-knbs-census."
+    ],
+    "avoid": [],
+    "intended_uses": [],
+    "coverage": {
+      "spatial": "",
+      "temporal": ""
+    },
+    "assets": [],
+    "upstream": [
+      {
+        "title": "Kenya National Bureau of Statistics",
+        "url": "https://www.knbs.or.ke/"
+      }
+    ],
+    "processing": [
+      {
+        "id": "source",
+        "description": "KNBS compiles gender and social-inclusion indicators from census and survey programmes.",
+        "derived_from": [
+          {
+            "title": "Kenya National Bureau of Statistics",
+            "url": "https://www.knbs.or.ke/"
+          }
+        ]
+      }
+    ],
+    "record": {
+      "cdh": "metadata/cdh/draft/kenya-gesi-knbs.yaml",
+      "cdh_version": "v0.3.0"
+    }
+  }
+}

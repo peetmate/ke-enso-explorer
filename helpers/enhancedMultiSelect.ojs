@@ -1,0 +1,46 @@
+import {
+  enhancedMultiSelect as enhanceSelect,
+} from "/helpers/enhancedMultiSelect.js";
+
+/** Create an Observable multi-select with Atlas behavior. */
+function atlasMultiSelect(
+  options,
+  {
+    maxSelections = null,
+    requireAtLeastOne = true,
+    enableSelectAll = false,
+    searchable = false,
+    commit = "close",
+    compactLabelThreshold = null,
+    language = "en",
+    labels = {},
+    minWidth = "240px",
+    maxWidth = "400px",
+    ...inputConfig
+  } = {},
+) {
+  const input = Inputs.select(options, {
+    ...inputConfig,
+    multiple: true,
+  });
+
+  enhanceSelect(input, {
+    maxSelections,
+    requireAtLeastOne,
+    enableSelectAll,
+    searchable,
+    commit,
+    compactLabelThreshold,
+    language,
+    labels,
+    minWidth,
+    maxWidth,
+  });
+
+  return input;
+}
+
+/** OJS compatibility wrapper around the native enhancement module. */
+function enhancedMultiSelect(viewofSelect, config = {}) {
+  return enhanceSelect(viewofSelect, config);
+}

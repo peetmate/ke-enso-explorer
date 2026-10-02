@@ -1,0 +1,54 @@
+{
+  "contributors": [
+    {
+      "id": "hewell",
+      "name": "Hanna Ewell",
+      "org": ["Alliance Bioversity and CIAT"]
+    },
+    {
+      "id": "svyas",
+      "name": "Shalika Vyas",
+      "org": ["Alliance Bioversity and CIAT"]
+    },
+    {
+      "id": "byoungberg",
+      "name": "Brayden Youngberg",
+      "org": ["Alliance Bioversity and CIAT"]
+    },
+    {
+      "id": "psteward",
+      "name": "Pete Steward",
+      "org": ["Alliance Bioversity and CIAT"]
+    },
+    {
+      "id": "trosenstock",
+      "name": "Todd Rosenstock",
+      "org": ["Alliance Bioversity and CIAT", "CGIAR"]
+    },
+    {
+      "id": "hachicanoy",
+      "name": "Harold Achicanoy",
+      "org": ["Alliance Bioversity and CIAT"]
+    },
+    {
+      "id": "zmehrabi",
+      "name": "Zia Mehrabi",
+      "org": ["Better Planet Laboratory"]
+    },
+    {
+      "id": "pthornton",
+      "name": "Phillip Thornton",
+      "org": ["ILRI"]
+    },
+    {
+      "id": "lmuller",
+      "name": "Lolita Muller",
+      "org": ["Alliance Bioversity and CIAT"]
+    },
+    {
+      "id": "zbogart",
+      "name": "Zach Bogart",
+      "org": ["Periscopic"]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "../shared/notebook.schema.json",
+  "id": "gender",
+  "title": {
+    "en": "Analyze Women's Exposure to Climate Hazards",
+    "fr": "Analyser l'exposition des femmes aux aléas climatiques"
+  },
+  "image": "/images/notebooks/womenClimate.webp",
+  "imageAlt": {
+    "en": "",
+    "fr": ""
+  },
+  "description": "See where climate risks disproportionately affect women in African agriculture and how exposure and empowerment differ across crops, countries, and regions.",
+  "keywords": [
+    "gender",
+    "women",
+    "climate hazards",
+    "exposure",
+    "agriculture",
+    "Africa",
+    "adaptation"
+  ],
+  "textDir": "data/genderExposure/text",
+  "contributors": {
+    "authors": [
+      { "type": "common", "id": "hewell" },
+      { "type": "common", "id": "svyas" },
+      { "type": "common", "id": "byoungberg" },
+      { "type": "common", "id": "psteward" },
+      { "type": "common", "id": "trosenstock" }
+    ],
+    "developers": [{ "type": "common", "id": "byoungberg" }]
+  }
+}

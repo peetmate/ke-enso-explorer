@@ -1,0 +1,5 @@
+---
+title: "Agriculteurs et taille des exploitations en Afrique"
+---
+
+L'agriculture est un secteur essentiel en Afrique, où [50 % de la population active](https://www.fao.org/4/i2490e/i2490e01b.pdf) travaille dans les champs et où elle représente [15 % du PIB du continent](https://openknowledge.fao.org/server/api/core/bitstreams/b33cbb8d-eb27-487c-acab-6e7a705b3ac9/content). Les petits exploitants — les agriculteurs qui cultivent des surfaces allant de moins d'un hectare à vingt hectares — constituent la majorité des exploitations africaines et fournissent [jusqu'à 80 %](https://www.fao.org/fileadmin/templates/nr/sustainability_pathways/docs/Factsheet_SMALLHOLDERS.pdf) de l'approvisionnement alimentaire du continent. Le nombre d'exploitations par classe de taille varie d'un pays africain à l'autre, et la distribution devrait évoluer d'ici 2050. Vous pouvez explorer ici le nombre d'exploitations par classe de taille dans les pays et les régions sous-nationales d'Afrique, ainsi que leur évolution prévue à l'horizon 2050.
