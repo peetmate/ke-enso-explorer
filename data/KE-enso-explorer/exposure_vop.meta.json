@@ -15,6 +15,6 @@
     "kind": "Crop | Livestock",
     "vop_intld15": "gross value of production, constant 2015 international dollars (I$)"
   },
-  "coverage": "1156 rows, 47 counties, 34 commodities. Snapshot (SPAM 2020 / GLW4) - no year dimension. In the arid/semi-arid counties livestock dominates VoP (Marsabit/Turkana: cattle+goats+sheep), grounding the pastoralist framing.",
-  "used_by": "notebook.qmd Block 1 (value-of-production bar + livestock-share insight)"
+  "coverage": "1156 rows, 47 counties, 34 commodities. Snapshot (MapSPAM 2020 v1r2 / GLW4) - no year dimension. Modelled gridded baseline layer per D16(1), active until measured producer-price VoP lands. In the arid/semi-arid counties livestock dominates VoP (Marsabit/Turkana: cattle+goats+sheep), grounding the pastoralist framing.",
+  "used_by": "notebook_v3.qmd Section 1.2 Figure 1.2 (Spatially Modeled Value of Production Portfolio)"
 }
