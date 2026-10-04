@@ -1,11 +1,11 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.5.1",
-  "versionDisplay": "v3.5.1",
-  "build": "2026.10.02",
+  "version": "3.5.2",
+  "versionDisplay": "v3.5.2",
+  "build": "2026.10.04",
   "releaseDate": "2026-09-26",
-  "lastUpdated": "2026-10-02",
+  "lastUpdated": "2026-10-04",
   "dataVintage": "2026-08",
   "authors": [
     "Pete Steward"
