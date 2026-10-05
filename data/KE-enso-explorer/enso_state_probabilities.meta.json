@@ -6,9 +6,9 @@
   "citation": "NOAA Climate Prediction Center. Official probabilistic ENSO forecast.",
   "license": "US Government public domain.",
   "fetched_on": "2026-10-02",
-  "method": "Self-fetching build (_sources/enso_state_prob_build.py): parses the official HTML table; each row gated to sum ~100%. Refreshes monthly \u2014 rerun to update.",
+  "method": "Self-fetching build (_sources/enso_state_prob_build.py): parses the official HTML table; each row gated to sum ~100%. Refreshes monthly — rerun to update.",
   "coverage": "El Nino / Neutral / La Nina probabilities for 9 overlapping 3-month seasons; issue month in the 'issued' column.",
-  "used_by": "notebook \u00a77.2 outlook forecast phase (D14-allowed ENSO-state forecast)",
+  "used_by": "notebook §7.2 outlook forecast phase (D14-allowed ENSO-state forecast)",
   "grain": "9 rows",
   "columns": [
     "season",

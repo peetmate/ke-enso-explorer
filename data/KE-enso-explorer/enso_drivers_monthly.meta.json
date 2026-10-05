@@ -9,11 +9,12 @@
   "method": "Self-fetching build (_sources/enso_drivers_build.py). Rerun to refresh.",
   "coverage": "SOI + DMI monthly, 1870/1951-2026.",
   "used_by": "notebook §7 driver time-series",
-  "grain": "2770 rows",
+  "grain": "3705 rows",
   "columns": [
     "index",
     "year",
     "month",
-    "value"
+    "value",
+    "source"
   ]
 }
