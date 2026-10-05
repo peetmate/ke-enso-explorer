@@ -63,6 +63,7 @@
   "harveststat": "harveststat-crop-production",
   "kenya-market-prices-fews": "kenya-market-prices-fews",
   "market_prices": "kenya-market-prices-fews",
+  "xbt_trade": "kenya-market-prices-fews",
   "kenya-food-insecurity-ipc": "kenya-food-insecurity-ipc",
   "ipc_insecurity": "kenya-food-insecurity-ipc",
   "ipc-kfssg-phases": "kenya-food-insecurity-ipc",
@@ -5930,7 +5931,8 @@
   {
    "key": "kenya-market-prices-fews",
    "aliases": [
-    "market_prices"
+    "market_prices",
+    "xbt_trade"
    ],
    "title": "Kenya Retail and Wholesale Market Prices (FEWS NET Data Warehouse)",
    "title_source": "cdh",

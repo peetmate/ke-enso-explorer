@@ -132,6 +132,16 @@
       "type": "chart"
     },
     {
+      "id": "fig_3_2c",
+      "currentNumber": "Figure 4.4B",
+      "targetNumber": "Figure 4.4B",
+      "currentSection": "4",
+      "title": "Regional Cross-Border Food Trade Flows & Market Shock Absorber (FEWS NET XBT)",
+      "question": "How do regional food trade flows from Uganda, Tanzania, and Ethiopia buffer domestic grain supply during rainfall shocks?",
+      "downloadFilename": "cross_border_food_trade_flows",
+      "type": "chart"
+    },
+    {
       "id": "fig_3_3",
       "currentNumber": "Figure 4.5",
       "targetNumber": "Figure 4.5",
