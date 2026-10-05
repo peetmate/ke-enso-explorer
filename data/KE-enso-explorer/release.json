@@ -11,5 +11,34 @@
     "Pete Steward"
   ],
   "leadReview": "2026.09.23 - Issues and feature requests V3.0.docx",
-  "implementationPlan": "2026.09.24 - ENSO v3 Antigravity sequential implementation backlog.md"
+  "implementationPlan": "2026.09.24 - ENSO v3 Antigravity sequential implementation backlog.md",
+  "availableVersions": [
+    {
+      "id": "v3",
+      "version": "v3.5.2",
+      "label": "v3.5.2 (Current Active Review)",
+      "url": "notebook_v3.html",
+      "status": "active",
+      "date": "2026-10-05",
+      "description": "Full 6-section platform with KMD/KMSA ClimWeb CAP operational advisories, HarvestStat Africa multi-decadal series, cross-border trade flows, and flood hazard exposure."
+    },
+    {
+      "id": "v2",
+      "version": "v2.10",
+      "label": "v2.10 (August 2026 Milestone)",
+      "url": "notebook_v2.html",
+      "status": "archived",
+      "date": "2026-08-19",
+      "description": "August milestone review edition with initial analogue ranking and agricultural output series."
+    },
+    {
+      "id": "v1",
+      "version": "v1.0",
+      "label": "v1.0 (Initial Prototype)",
+      "url": "notebook.html",
+      "status": "archived",
+      "date": "2026-07-22",
+      "description": "Initial exploratory baseline prototype."
+    }
+  ]
 }
