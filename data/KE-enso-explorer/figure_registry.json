@@ -112,6 +112,16 @@
       "type": "chart"
     },
     {
+      "id": "fig_3_1c",
+      "currentNumber": "Figure 4.2B",
+      "targetNumber": "Figure 4.2B",
+      "currentSection": "4",
+      "title": "Multi-Decadal Seasonal Crop Harvests & Climate Teleconnections (HarvestStat Africa)",
+      "question": "How did subnational seasonal crop yields and production track historical rainfall terciles across 1990–2024?",
+      "downloadFilename": "harveststat_seasonal_crop_series",
+      "type": "chart"
+    },
+    {
       "id": "fig_3_2",
       "currentNumber": "Figure 4.3",
       "targetNumber": "Figure 4.3",
