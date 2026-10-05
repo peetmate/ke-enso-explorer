@@ -1,0 +1,74 @@
+{
+  "dataset": "kmd_cap_alerts",
+  "title": "Kenya Meteorological Department (KMD / KMSA) Official CAP Weather Warnings",
+  "source": "Kenya Meteorological Department (KMD / KMSA) ClimWeb Portal",
+  "feed_url": "https://meteo.go.ke/api/cap/rss.xml",
+  "format": "OASIS Common Alerting Protocol (CAP) v1.2",
+  "authority": "Meteorology Act No. 7 of 2026",
+  "last_updated": "2026-10-05T06:32:12.344534+00:00",
+  "alert_count": 5,
+  "county_rows": 109,
+  "columns": [
+    {
+      "name": "county",
+      "type": "VARCHAR",
+      "description": "Canonical Kenya County name (1 of 47)"
+    },
+    {
+      "name": "alert_id",
+      "type": "VARCHAR",
+      "description": "KMD CAP Alert GUID / Identifier"
+    },
+    {
+      "name": "event",
+      "type": "VARCHAR",
+      "description": "Hazard event category (e.g. Heavy rainfall, Strong Winds, Large waves)"
+    },
+    {
+      "name": "headline",
+      "type": "VARCHAR",
+      "description": "Official alert headline advisory"
+    },
+    {
+      "name": "severity",
+      "type": "VARCHAR",
+      "description": "CAP severity level (Moderate, Severe, Extreme)"
+    },
+    {
+      "name": "urgency",
+      "type": "VARCHAR",
+      "description": "CAP urgency timing (Expected, Immediate, Future)"
+    },
+    {
+      "name": "certainty",
+      "type": "VARCHAR",
+      "description": "CAP certainty probability (Likely, Observed, Possible)"
+    },
+    {
+      "name": "sent",
+      "type": "VARCHAR",
+      "description": "ISO timestamp when alert was formally transmitted"
+    },
+    {
+      "name": "onset",
+      "type": "VARCHAR",
+      "description": "ISO timestamp when hazard conditions begin"
+    },
+    {
+      "name": "expires",
+      "type": "VARCHAR",
+      "description": "ISO timestamp when hazard conditions lapse"
+    },
+    {
+      "name": "instruction",
+      "type": "VARCHAR",
+      "description": "Public safety and early action guidance issued by KMD"
+    },
+    {
+      "name": "web",
+      "type": "VARCHAR",
+      "description": "Authoritative link to KMD weather warning bulletin"
+    }
+  ],
+  "used_by": "notebook_v3.qmd Section 2 KMD Early Warning & Alert Card"
+}

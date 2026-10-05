@@ -172,6 +172,16 @@
       "type": "chart"
     },
     {
+      "id": "box_2_0",
+      "currentNumber": "Advisory Card 2.0",
+      "targetNumber": "Advisory Card 2.0",
+      "currentSection": "2",
+      "title": "Kenya Meteorological Department (KMD) / KMSA ClimWeb CAP Weather Advisories",
+      "question": "What active severe weather alerts, heavy rainfall warnings, and precautionary advisories are currently in effect for this county from the Kenya Meteorological Department?",
+      "downloadFilename": "kmd_cap_alerts",
+      "type": "table"
+    },
+    {
       "id": "fig_4_1",
       "currentNumber": "Figure 2.1",
       "targetNumber": "Figure 2.1",
