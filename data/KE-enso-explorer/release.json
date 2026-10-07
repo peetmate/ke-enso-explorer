@@ -1,9 +1,9 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.8",
-  "versionDisplay": "v3.8.8",
-  "build": "3031154",
+  "version": "3.8.9",
+  "versionDisplay": "v3.8.9",
+  "build": "3031155",
   "releaseDate": "2026-10-08",
   "lastUpdated": "2026-10-08",
   "dataVintage": "2026-09",
@@ -15,18 +15,19 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.8",
-      "label": "v3.8.8 (Verified Operational Release)",
+      "version": "v3.8.9",
+      "label": "v3.8.9 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-08",
-      "build": "3031154",
-      "description": "Table 2.3 Early Warning Directory card compaction and official institutional logos integration: Replaced text monogram cards with authentic official emblems (KMSA, NDMA, KRCS, ICPAC, FEWS NET, NDOC) and consolidated operational metadata into a high-density compact card layout, reducing vertical card height by over 40%.",
+      "build": "3031155",
+      "description": "Section 3 Sub-tab Handle Architecture Unification: Aligned Section 3 (Historical Climate Evidence) with the standardized sub-tab handle pattern established in Section 1 and Section 2. Replaced the split 3.1/3.2 top-level navigation buttons with a single unified '3 Climate evidence' tab, introduced an in-page sub-tab bar ('3.1 Climate Graphs & Probabilities' and '3.2 Spatial Climate Maps & Flood Grids'), and integrated the sticky sub-navigation bar.",
       "highlights": [
-        "Table 2.3 Official Institutional Logos: Integrated crisp, high-resolution official emblems for all 6 early warning authorities (Kenya Meteorological Service Authority, National Drought Management Authority, Kenya Red Cross Society, ICPAC, FEWS NET / KFSSG, and National Disaster Operations Centre).",
-        "Compact Card Architecture: Replaced stacked redundant boxes with a unified operational metadata row (Coverage, Cadence, and direct Operational Tools links), cutting card vertical height from ~480px down to ~270px.",
-        "Table 2.2 & 2.3 Harmony: Perfect visual alignment between the structured Table 2.2 Sectoral Advisory Matrix and the 2-column high-density Table 2.3 Directory grid.",
-        "Strict Operational Link Integrity: Verified 100% functionality and statutory references across meteo.go.ke, ndma.go.ke, redcross.or.ke, ICPAC, FEWS NET, and NDOC emergency hotline."
+        "Section 3 Sub-tab Handle Unification: Brought Section 3 into full architectural alignment with Section 1 and Section 2, eliminating the awkward split 3.1/3.2 buttons in the top navigation bar.",
+        "Single Top-Level Tab 3 Button: Replaced the group container with a single, clean '3 Climate evidence' button matching the symmetry of Tabs 0, 1, 2, 4, 5, and 6.",
+        "In-Page Sub-tab Bar: Added the standardized `#climateSubTabBar` with '3.1 Climate Graphs & Probabilities' and '3.2 Spatial Climate Maps & Flood Grids' buttons.",
+        "Sticky Sub-navigation Integration: Connected Section 3 to `#stickySubNav`, rendering live sub-section buttons ('3.1 Climate Graphs' and '3.2 Spatial Climate Maps') in the sticky header below the main navigation bar.",
+        "Sub-section Progression & Continuity: Added a clean 'Sub-section 3.1 Complete' progression banner with instant jump to 3.2, and Section 3 completion card jumping to Section 4."
       ],
       "categories": [
         {
