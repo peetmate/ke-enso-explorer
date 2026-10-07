@@ -1,9 +1,9 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.3",
-  "versionDisplay": "v3.8.3",
-  "build": "0b4bd71",
+  "version": "3.8.4",
+  "versionDisplay": "v3.8.4",
+  "build": "dfe3b14",
   "releaseDate": "2026-10-07",
   "lastUpdated": "2026-10-07",
   "dataVintage": "2026-09",
@@ -15,19 +15,19 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.3",
-      "label": "v3.8.3 (Verified Operational Release)",
+      "version": "v3.8.4",
+      "label": "v3.8.4 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-07",
-      "build": "0b4bd71",
-      "description": "Navigation and subtab header polish: Removed parenthetical '(Fig)' references from all Section 2 sub-tab buttons and sticky navigation pills, streamlining UI titles.",
+      "build": "dfe3b14",
+      "description": "Sub-section purpose headers & de-duplication: Replaced redundant tab-level headers with dedicated, informative purpose and action guidance headers for each sub-section (2.1 to 2.4).",
       "highlights": [
+        "Sub-section Purpose & Action Headers: Removed the redundant static page heading that merely repeated the tab name ('Seasonal Outlook & Preparedness'), replacing it with dedicated guidance headers inside each sub-section pane (2.1–2.4) explicitly stating 'What this sub-section is for' and 'What to do here'.",
         "Sub-tab Title Cleanup: Removed parenthetical '(Fig 2.1)' and '(Fig 2.2)' labels from sticky sub-section pills, in-pane subtab buttons, and forward-navigation affordances, streamlining Section 2 navigation to 'Seasonal Probabilities' and 'Analogue Diagnostics'.",
         "Season-Reactive MAM Positioning: Relocated the Long Rains (MAM) Teleconnection box to the top of Section 2.2 conditionally when MAM is selected, keeping OND Short Rains views clean and uncluttered.",
         "Dynamic Figure 2.1 Title: Added season reactivity to Figure 2.1 title header, dynamically switching between Short Rains (OND) and Long Rains (MAM) based on the active season selector.",
-        "Plain-English Verification Explainer: Interactive collapsible guide ('💡 In Plain English: What do these numbers mean for county planning?') breaking down Terciles, Hit Rate, RPSS, Flood Early Warning, and Surprise Drought Risk into everyday language.",
-        "Micro-Labels on Verification Tiles: Augmented statistical verification tiles with clear subtitles ('Beats random guessing', 'Right ~6 in 10 seasons', 'Catches heavy rain & floods', 'Predicted wet -> observed dry')."
+        "Plain-English Verification Explainer: Interactive collapsible guide ('💡 In Plain English: What do these numbers mean for county planning?') breaking down Terciles, Hit Rate, RPSS, Flood Early Warning, and Surprise Drought Risk into everyday language."
       ],
       "categories": [
         {
