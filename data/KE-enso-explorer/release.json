@@ -1,9 +1,9 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.1",
-  "versionDisplay": "v3.8.1",
-  "build": "54a81e9",
+  "version": "3.8.2",
+  "versionDisplay": "v3.8.2",
+  "build": "ea4210f",
   "releaseDate": "2026-10-07",
   "lastUpdated": "2026-10-07",
   "dataVintage": "2026-09",
@@ -15,19 +15,19 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.1",
-      "label": "v3.8.1 (Verified Operational Release)",
+      "version": "v3.8.2",
+      "label": "v3.8.2 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-07",
-      "build": "54a81e9",
-      "description": "Layperson explanation and accessibility enhancement for Figure 2.1 seasonal probabilities and LOOCV hindcast verification, providing plain-English interpretations of terciles, RPSS, Hit Rate, BSS flood resolution, and severe false alarm rates for county committees and non-statisticians.",
+      "build": "ea4210f",
+      "description": "UX positioning and season-reactivity milestone: Relocated the Long Rains (MAM) Teleconnection card to the top of Section 2.2 conditionally when MAM is selected, hiding it during OND to prevent context mismatch.",
       "highlights": [
-        "Plain-English Verification Explainer: Added an intuitive collapsible guide ('💡 In Plain English: What do these numbers mean for county planning?') breaking down Terciles, Hit Rate, RPSS, Flood Early Warning, and Surprise Drought Risk into everyday language.",
-        "Micro-Labels on Verification Tiles: Augmented the 4 statistical verification tiles with clear, plain-language subtitles ('Beats random guessing', 'Right ~6 in 10 seasons', 'Catches heavy rain & floods', 'Predicted wet -> observed dry').",
-        "Intuitive Rainfall Tiers: Updated Figure 2.1 tercile bar and scenario columns with plain-English labels ('Top 1/3 Wettest Years', 'Middle 1/3 Typical Years', 'Lower 1/3 Driest Years') with county-specific millimeter rainfall thresholds.",
-        "Actionable County Advisory: Enhanced the planning interpretation callout with explicit operational recommendations for county disaster and agricultural committees.",
-        "Methodology Foldout Plain-English Guide: Added an accessible donor- and committee-ready statistical guide directly inside Figure 2.1's 'Find out more' methods drawer."
+        "Season-Reactive MAM Positioning: Relocated the Long Rains (MAM) Teleconnection box to the top of Section 2.2, displaying it only when MAM season is selected so planners see the near-zero ENSO skill caveat first, while hiding it during OND so Short Rains views remain clean and focused.",
+        "Dynamic Figure 2.1 Title: Added season reactivity to Figure 2.1 title header, dynamically switching between Short Rains (OND) and Long Rains (MAM) based on the active season selector.",
+        "Plain-English Verification Explainer: Interactive collapsible guide ('💡 In Plain English: What do these numbers mean for county planning?') breaking down Terciles, Hit Rate, RPSS, Flood Early Warning, and Surprise Drought Risk into everyday language.",
+        "Micro-Labels on Verification Tiles: Augmented statistical verification tiles with clear subtitles ('Beats random guessing', 'Right ~6 in 10 seasons', 'Catches heavy rain & floods', 'Predicted wet -> observed dry').",
+        "Actionable County Advisory: Enhanced planning interpretation callout with explicit operational recommendations for county disaster and agricultural committees."
       ],
       "categories": [
         {
