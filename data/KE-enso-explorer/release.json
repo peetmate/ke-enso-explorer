@@ -1,9 +1,9 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.0",
-  "versionDisplay": "v3.8.0",
-  "build": "c2f489a",
+  "version": "3.8.1",
+  "versionDisplay": "v3.8.1",
+  "build": "54a81e9",
   "releaseDate": "2026-10-07",
   "lastUpdated": "2026-10-07",
   "dataVintage": "2026-09",
@@ -15,18 +15,19 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.0",
-      "label": "v3.8.0 (Verified Operational Release)",
+      "version": "v3.8.1",
+      "label": "v3.8.1 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-07",
-      "build": "c2f489a",
-      "description": "UX and layout milestone release implementing independent sub-tab architecture for Section 1 and Section 2, eliminating lengthy page scrolling, expanding Figure 2.1 to full container width, repositioning MAM teleconnection below Figure 2.1 in a horizontal 3-column row, and streamlining telemetry and analogue metric cards across single rows.",
+      "build": "54a81e9",
+      "description": "Layperson explanation and accessibility enhancement for Figure 2.1 seasonal probabilities and LOOCV hindcast verification, providing plain-English interpretations of terciles, RPSS, Hit Rate, BSS flood resolution, and severe false alarm rates for county committees and non-statisticians.",
       "highlights": [
-        "Independent Sub-Tab Architecture: Split Section 1 (1.1, 1.2, 1.3) and Section 2 (2.1, 2.2, 2.3, 2.4) into dedicated sub-tabs matching Section 4, eliminating lengthy 10,000px page scrolling and resetting scroll position instantly on tab switch.",
-        "Full-Width Figure 2.1 & Repositioned MAM Box: Expanded Figure 2.1 across full container width (976px) and relocated the Long Rains (MAM) Teleconnection box directly below it, formatting its 3 physical mechanisms into a clean horizontal 3-column row.",
-        "Single-Row Section 2.1 Telemetry Cards: Laid out Equatorial Pacific (RONI), Indian Ocean (DMI), and NOAA CPC Forward Projection cards across 1 balanced 3-column line, eliminating dead whitespace and orphan cards.",
-        "Single-Row Section 2.3 Analogue Precedent Cards: Formatted observed historical analogue precedent cards (Ocean State, Rainfall, Pasture, Terms of Trade) into 4 equal columns across 1 single line on desktop."
+        "Plain-English Verification Explainer: Added an intuitive collapsible guide ('💡 In Plain English: What do these numbers mean for county planning?') breaking down Terciles, Hit Rate, RPSS, Flood Early Warning, and Surprise Drought Risk into everyday language.",
+        "Micro-Labels on Verification Tiles: Augmented the 4 statistical verification tiles with clear, plain-language subtitles ('Beats random guessing', 'Right ~6 in 10 seasons', 'Catches heavy rain & floods', 'Predicted wet -> observed dry').",
+        "Intuitive Rainfall Tiers: Updated Figure 2.1 tercile bar and scenario columns with plain-English labels ('Top 1/3 Wettest Years', 'Middle 1/3 Typical Years', 'Lower 1/3 Driest Years') with county-specific millimeter rainfall thresholds.",
+        "Actionable County Advisory: Enhanced the planning interpretation callout with explicit operational recommendations for county disaster and agricultural committees.",
+        "Methodology Foldout Plain-English Guide: Added an accessible donor- and committee-ready statistical guide directly inside Figure 2.1's 'Find out more' methods drawer."
       ],
       "categories": [
         {
@@ -39,6 +40,11 @@
             "Whitespace Reduction: Formatted Section 2.1 (3 cards) and Section 2.3 (4 cards) into single-row responsive grids."
           ]
         }
+      ],
+      "decisions": [
+        "D56",
+        "D57",
+        "D58"
       ]
     },
     {
