@@ -1,12 +1,12 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.5.2",
-  "versionDisplay": "v3.5.2",
-  "build": "2c39872",
-  "releaseDate": "2026-09-26",
-  "lastUpdated": "2026-10-05",
-  "dataVintage": "2026-08",
+  "version": "3.7.0",
+  "versionDisplay": "v3.7.0",
+  "build": "61c3784",
+  "releaseDate": "2026-10-06",
+  "lastUpdated": "2026-10-07",
+  "dataVintage": "2026-09",
   "authors": [
     "Pete Steward"
   ],
@@ -14,13 +14,233 @@
   "implementationPlan": "2026.09.24 - ENSO v3 Antigravity sequential implementation backlog.md",
   "availableVersions": [
     {
-      "id": "v3",
-      "version": "v3.5.2",
-      "label": "v3.5.2 (Current Active Review)",
+      "id": "v3.7",
+      "version": "v3.7.0",
+      "label": "v3.7.0 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
+      "date": "2026-10-07",
+      "build": "61c3784",
+      "description": "Operational milestone release featuring 45-year leave-one-out historical hindcast skill cross-validation (RPSS & contingency matrices; Decision D56), automated CI release assertions, Handle API academic DOI registration verification, and interactive methodological foldouts across all 22 figures (Decision D57).",
+      "highlights": [
+        "Analogue Outlook LOOCV Skill Verification: 45-year retrospective leave-one-out cross-validation (1981\u20132025) across all 47 counties and both seasons. Surfaces Ranked Probability Skill Score (RPSS), modal hit rate (+ gain vs 33% climatology), extreme flood resolution (BSS Wet), severe false alarm rates, and interactive 3x3 contingency matrix (Decision D56).",
+        "Interactive Methodological Foldouts (KE-13): Restored and authored interactive 'About this plot' methodology expanders across all 22 figures in Sections 1\u20134 with accessible details styling.",
+        "Automated CI Release Assertions Suite: Comprehensive automated test suite (tools/ci_release_assertions.py) validating academic DOI registrations via the International DOI Foundation Handle REST API, dataset schemas, freshness horizons, and cross-dataset consistency across all 48 spatial units (Decision D57).",
+        "Cross-Tab Data Integrity Verification: Playwright test suite (tests/test_crosstab_integrity.mjs) asserting exact mutual numerical consistency between Section 0 Executive Brief, Section 2 Outlook, Section 3 Climate Evidence, and Section 4 Impacts with 0 console errors.",
+        "Executive County Brief & 2-Page Print/PDF Export: 1-screen actionable synthesis in Section 0 with live planetary drivers (RONI/DMI), statutory KMSA advisory mandate, analogue consensus odds with Wilson 95% confidence intervals, retrospective skill tag, top 3 historical precedents, and 4-sector anticipatory action matrix formatted strictly for 2-page print export (Decision D55).",
+        "Figure 3.1B Consecutive-Season Sequence View: pairs OND(Y\u22121) \u2192 MAM(Y) to track dual-season failure trajectories and unbroken pasture deficit runs (Decision D53).",
+        "Comprehensive External Audit Remediation: resolved all 15 identified code/data defects and sanitized 126 factual claims from Dr. Aniruddha Ghosh's review.",
+        "Official KNBS Census Benchmarks: aligned population exposure to 2019 Census enumerated headcounts and 2026 projections across all 47 counties (Decision D51)."
+      ],
+      "categories": [
+        {
+          "title": "New Features & Visualizations",
+          "icon": "\u2728",
+          "items": [
+            "Analogue Outlook LOOCV Skill Verification: Surfaced 45-year retrospective hindcast skill panel and expandable 3x3 confusion matrix in Figure 2.1 and Section 0 Brief (Decision D56).",
+            "Interactive Methodological Foldouts: Restored 'About this plot (data & methodology)' expanders across all 22 figures in Sections 1\u20134 with custom styling (Decision D57 / KE-13).",
+            "Executive County Brief & Citable 2-Page Print/PDF Export: Comprehensive 1-screen briefing document directly addressing County CIDP officers, climate-finance proposal writers (GCF/AF), and County Disaster Risk Management Committees (CDRMC) formatted strictly for 2-page A4 output (Decision D55).",
+            "Figure 3.1B Consecutive Seasonal Sequences & Compounding Runs: Pairs production years Y = OND(Y\u22121) + MAM(Y) per official KNBS/HarvestStat conventions, displays 2-cell domino strips with continuous diverging z colormaps, tracks unbroken sub-normal runs, highlights double-failure emergencies, and correlates with staple crop yield deficits (Decision D53).",
+            "Figure 4.2B Long-Term Crop & Climate Historical Response: Integrates HarvestStat county maize and bean production/yield (1990\u20132024), 2002\u20132014 seasonal reporting gap overlays, and CHIRPS planting-season tercile strips (Decision D40).",
+            "Figure 1.1 Responsive Side-by-Side Commodity Panels: Dynamic multi-panel layout rendering Crop and Livestock balances side-by-side without vertical clipping or overflow (Decision D48)."
+          ]
+        },
+        {
+          "title": "Data Ingestion & Integrity",
+          "icon": "\ud83d\udcca",
+          "items": [
+            "Automated CI Release Assertions: Continuous data integrity script asserting schemas, row bounds, and freshness across served parquets (Decision D57).",
+            "Canonical DOI Handle Registration: Verified 100% resolution of all 18 academic literature citations via the Handle REST API and corrected Saji 1999 citation to 10.1038/43854.",
+            "Tier 16 Exposure Denominators & Demographic Re-Leveling: Aligned Section 1 demographics to official KNBS 2019 Census enumerated headcount and 2026 projections across all 47 counties (Decision D51).",
+            "Official Sub-County Universe: Labeled adm2 boundaries as official IEBC parliamentary constituencies (290 units), documenting boundary universe divergence from KNBS's 345 administrative sub-counties.",
+            "NOAA CPC JAS 2026 Ocean Drivers: Verified real-time NOAA CPC ingestion (+1.69 \u00b0C RONI, +2.56 \u00b0C Ni\u00f1o 3.4), replacing stale lead-ins and updating drivers parquets with 30/30 freshness assertions."
+          ]
+        },
+        {
+          "title": "Science, Teleconnections & Methodology",
+          "icon": "\ud83d\udd2c",
+          "items": [
+            "Leave-One-Out Historical Hindcast Verification: Rigorous 45-year retrospective cross-validation (1981\u20132025) evaluating analogue outlook skill per county and season (RPSS, BSS, HSS, false-alarm rates; Decision D56).",
+            "Empirical Non-Parametric Rainfall Quantiles: Replaced parametric Gaussian normal bands with empirical P10, P33, P67, P90 quantiles from 1991\u20132020 WMO baseline, eliminating negative rainfall thresholds (Decision D43).",
+            "Unified Metric Space for Analogue Matching: Mapped IRI Ni\u00f1o 3.4 plume median into RONI space before Euclidean distance calculation against historical OND RONI, eliminating inflated anomaly alerts (Decision D42).",
+            "Dual-Window Ocean Driver Formulation: Documented Pacific vs Indian Ocean empirical baseline standard deviations, clarifying variance ratios govern SST, not rainfall (Decision D44).",
+            "Western-V Gradient Clarification: Aligned MAM Western-V gradient definition with Funk et al. (2019, 2023) and replaced 'persistent' droughts with 'more frequent' droughts."
+          ]
+        },
+        {
+          "title": "Institutional Alignment & Governance",
+          "icon": "\ud83c\udfdb\ufe0f",
+          "items": [
+            "Institutional Realignment: Kenya Meteorological Service Authority (KMSA) under Meteorology Act No. 7 of 2026; County Disaster Risk Management Committees (CDRMC) under NDRM Act 2026; expanded NDMA warning stages to all 6 operational phases.",
+            "Tone & Authority Sanitization: Removed pseudo-statutory language ('Anti-AI Slop', 'statutory legal baselines', 'audited statutory indicators') and internal developer ticket codes (Decisions D44, D52).",
+            "Verified Literature Citations: Replaced defective/hallucinated academic citations with verified Crossref DOIs (Bauer-Marschallinger 2022, Wagner 2026, Funk 2019/2023 Western-V, Gamoyo 2015 rewritten).",
+            "Operational Tool Links: Converted Table 2.3 into active hyperlinks pointing to live KMSA, NDMA, KRCS, ICPAC, KFSSG, and NDOC portals."
+          ]
+        }
+      ],
+      "decisions": [
+        "D38",
+        "D39",
+        "D40",
+        "D41",
+        "D42",
+        "D43",
+        "D44",
+        "D45",
+        "D46",
+        "D47",
+        "D48",
+        "D49",
+        "D50",
+        "D51",
+        "D52",
+        "D53",
+        "D54",
+        "D55",
+        "D56",
+        "D57"
+      ]
+    },
+    {
+      "id": "v3.6",
+      "version": "v3.6.0",
+      "label": "v3.6.0 (Post-Audit Remediation Baseline)",
+      "url": "notebook_v3.html?v=3.6.0",
+      "status": "archived",
+      "date": "2026-10-07",
+      "build": "8d397ed",
+      "description": "Comprehensive post-audit remediation release addressing Dr. Aniruddha Ghosh's external critical review, implementing the consecutive-season sequence view (Figure 3.1B), aligning official KNBS census baselines, and eliminating pseudo-statutory language.",
+      "highlights": [
+        "Analogue Outlook LOOCV Skill Verification: 45-year leave-one-out historical cross-validation (1981\u20132025) across all 47 counties and both seasons. Surfaces Ranked Probability Skill Score (RPSS), modal hit rate (+ gain vs 33% climatology), extreme flood resolution (BSS), severe false alarm rates, and 3x3 contingency matrix (Decision D56).",
+        "Executive County Brief & 2-Page Print/PDF Export: 1-screen actionable synthesis in Section 0 with live planetary drivers (RONI/DMI), statutory KMSA advisory mandate, analogue consensus odds with Wilson 95% confidence intervals, top 3 historical precedents, and 4-sector anticipatory action matrix formatted strictly for 2-page print export (Decision D55).",
+        "Figure 3.1B Consecutive-Season Sequence View: pairs OND(Y\u22121) \u2192 MAM(Y) to track dual-season failure trajectories and unbroken pasture deficit runs (Decision D53).",
+        "Comprehensive External Audit Remediation: resolved all 15 identified code/data defects and sanitized 126 factual claims from Dr. Aniruddha Ghosh's review.",
+        "Official KNBS Census Benchmarks: aligned population exposure to 2019 Census enumerated headcounts and 2026 projections across all 47 counties (Decision D51).",
+        "NOAA CPC JAS 2026 Teleconnection Ingestion: verified live RONI (+1.69 \u00b0C) and aligned metric spaces for analogue matching (Decision D42).",
+        "Empirical Non-Parametric Climatological Quantiles: replaced Gaussian bands with 1991\u20132020 WMO empirical quantiles (P10, P33, P67, P90) in Figure 3.1 (Decision D43).",
+        "Figure 4.2B Crop & Climate Historical Response: integrated HarvestStat maize/beans time series (1990\u20132024) and seasonal rainfall terciles (Decision D40)."
+      ],
+      "categories": [
+        {
+          "title": "New Features & Visualizations",
+          "icon": "\u2728",
+          "items": [
+            "Executive County Brief & Citable 2-Page Print/PDF Export: Comprehensive 1-screen briefing document directly addressing County CIDP officers, climate-finance proposal writers (GCF/AF), and County Disaster Risk Management Committees (CDRMC). Features responsive diagnostic KPI cards, top 3 verified historical analogue precedents, multi-sector anticipatory action matrix, 1-click citable proposal text copying, and print stylesheet formatted strictly for 2-page A4 output (Decision D55).",
+            "Figure 3.1B Consecutive Seasonal Sequences & Compounding Runs: Resolves Decision D39's additive half; pairs production years Y = OND(Y\u22121) + MAM(Y) per official KNBS/HarvestStat conventions, displays 2-cell domino strips with continuous diverging z colormaps, tracks unbroken sub-normal runs, highlights double-failure emergencies (2011, 2017, 2008, etc.), and correlates with staple crop yield deficits.",
+            "Figure 4.2B Long-Term Crop & Climate Historical Response: Integrates HarvestStat county maize and bean production/yield (1990\u20132024), 2002\u20132014 seasonal reporting gap overlays, and CHIRPS planting-season tercile strips (Decision D40).",
+            "Figure 1.1 Responsive Side-by-Side Commodity Panels: Dynamic multi-panel layout rendering Crop and Livestock balances side-by-side without vertical clipping or overflow (Decision D48).",
+            "In-Fold Metadata Drawer Navigation: In-place slide-out metadata drawer on the active tab, eliminating jarring full-page jumps to Tab 6 (Decision D49).",
+            "Figure 4.1 Headroom & Unified Legend: Consolidated Panel A and Panel B headings and legends into a single unified bar, providing ample headroom preventing text label clipping (Decision D50)."
+          ]
+        },
+        {
+          "title": "Data Ingestion & Demographic Benchmarks",
+          "icon": "\ud83d\udcca",
+          "items": [
+            "Tier 16 Exposure Denominators & Demographic Re-Leveling: Actioned upstream pipeline dispatch re-pulling exposure parquets; aligned Section 1 demographics to official KNBS 2019 Census enumerated headcount and 2026 projections across all 47 counties (Decision D51).",
+            "Official Sub-County Universe: Labeled adm2 boundaries as official IEBC parliamentary constituencies (290 units), documenting boundary universe divergence from KNBS's 345 administrative sub-counties.",
+            "NOAA CPC JAS 2026 Ocean Drivers: Verified real-time NOAA CPC ingestion (+1.69 \u00b0C RONI, +2.56 \u00b0C Ni\u00f1o 3.4), replacing stale lead-ins and updating drivers parquets with 30/30 freshness assertions.",
+            "GESI Vulnerability Database: Ingested 35 verified KNBS 2019/2023 indicators across 4 thematic domains with dynamic reactive county loading, eliminating hardcoded Marsabit fallbacks (Decision D46).",
+            "EC JRC Global River Flood Hazard Maps v2.1: Replaced placeholder GloFAS mentions with authoritative 90 m 2D LISFLOOD-FP flood hazard maps (10\u2013500 year return periods; Baugh et al. 2024)."
+          ]
+        },
+        {
+          "title": "Science, Teleconnections & Methodology",
+          "icon": "\ud83d\udd2c",
+          "items": [
+            "Empirical Non-Parametric Rainfall Quantiles: Replaced parametric Gaussian normal bands with empirical P10, P33, P67, P90 quantiles from 1991\u20132020 WMO baseline, eliminating negative rainfall thresholds (Decision D43).",
+            "Unified Metric Space for Analogue Matching: Mapped IRI Ni\u00f1o 3.4 plume median into RONI space before Euclidean distance calculation against historical OND RONI, eliminating inflated anomaly alerts (Decision D42).",
+            "Unbiased Analogue Mode Classification: Implemented explicit tie detection (TIED MODE) when analogue seasons are evenly split across terciles (Defect 8).",
+            "Dual-Window Ocean Driver Formulation: Documented Pacific vs Indian Ocean empirical baseline standard deviations, clarifying variance ratios govern SST, not rainfall (Decision D44).",
+            "Western-V Gradient Clarification: Aligned MAM Western-V gradient definition with Funk et al. (2019, 2023) and replaced 'persistent' droughts with 'more frequent' droughts.",
+            "Leave-One-Out Historical Hindcast Verification: Rigorous 45-year retrospective cross-validation (1981\u20132025) evaluating analogue outlook skill per county and season. Displays RPSS vs equal-odds climatology, modal hit rate (+ gain over 33.3% chance), extreme flood resolution (BSS Wet), severe false alarm rates, and an expandable 3x3 historical confusion matrix (Decision D56)."
+          ]
+        },
+        {
+          "title": "Institutional Alignment & Governance",
+          "icon": "\ud83c\udfdb\ufe0f",
+          "items": [
+            "Institutional Realignment: Kenya Meteorological Service Authority (KMSA) under Meteorology Act No. 7 of 2026; County Disaster Risk Management Committees (CDRMC) under NDRM Act 2026; expanded NDMA warning stages to all 6 operational phases.",
+            "Tone & Authority Sanitization: Removed pseudo-statutory language ('Anti-AI Slop', 'statutory legal baselines', 'audited statutory indicators') and internal developer ticket codes (Decisions D44, D52).",
+            "Verified Literature Citations: Replaced defective/hallucinated academic citations with verified Crossref DOIs (Bauer-Marschallinger 2022, Wagner 2026, Funk 2019/2023 Western-V, Gamoyo 2015 rewritten).",
+            "Operational Tool Links: Converted Table 2.3 into active hyperlinks pointing to live KMSA, NDMA, KRCS, ICPAC, KFSSG, and NDOC portals."
+          ]
+        },
+        {
+          "title": "Audit Remediations & Bug Fixes",
+          "icon": "\ud83d\udee0\ufe0f",
+          "items": [
+            "Defect 1: ENSO state gauge sorted chronologically (DJF..NDJ), showing active JAS 2026 (+1.69 \u00b0C) instead of jumping to past seasons.",
+            "Defect 3 & 4: Removed silent hardcoded fallback constants and synthetic z=0 scoring in analogue ranking.",
+            "Defect 10: CCSR/IRI prediction plume ensemble average traces segregated from individual models, ensuring clean median computation.",
+            "Review Tools Gated: Floating annotation tools and review dashboard hidden behind ?review=true in production.",
+            "Automated CI Release Assertions & Methodological Foldout Restoration: Developed automated CI test suite (tools/ci_release_assertions.py) validating academic DOI registrations (via International DOI Foundation Handle REST API), dataset schemas, freshness horizons, and cross-dataset consistency across all 48 spatial units. Restored interactive 'About this plot' methodology expanders across all 22 figures in notebook_v3.qmd, with full automated headless Playwright cross-tab value equality verification (Decision D57)."
+          ]
+        }
+      ],
+      "decisions": [
+        "D38",
+        "D39",
+        "D40",
+        "D41",
+        "D42",
+        "D43",
+        "D44",
+        "D45",
+        "D46",
+        "D47",
+        "D48",
+        "D49",
+        "D50",
+        "D51",
+        "D52",
+        "D53",
+        "D54",
+        "D55",
+        "D56",
+        "D57"
+      ]
+    },
+    {
+      "id": "v3.5",
+      "version": "v3.5.2",
+      "label": "v3.5.2 (Dr. Ghosh Audit Baseline)",
+      "url": "notebook_v3.html?review=true",
+      "status": "archived",
       "date": "2026-10-05",
-      "description": "Full 6-section platform with KMD/KMSA ClimWeb CAP operational advisories, HarvestStat Africa multi-decadal series, cross-border trade flows, and flood hazard exposure."
+      "build": "c84c574",
+      "description": "Baseline edition audited by Dr. Aniruddha Ghosh (Senior Scientist / Spatial Modeler, Alliance Bioversity-CIAT / CGIAR) on 5 Oct 2026.",
+      "highlights": [
+        "Served as the reference baseline for the comprehensive external expert critical review.",
+        "Introduced Section 3 Sub-County Comparison tool and Section 4 Pastoral Terms of Trade.",
+        "Introduced Section 5 Multi-Hazard Timeline visual.",
+        "Included in-situ partner review annotation tools and floating feedback drawers."
+      ],
+      "categories": [
+        {
+          "title": "Features Introduced",
+          "icon": "\u2728",
+          "items": [
+            "Section 3 Sub-County Comparison Tool: Interactive comparison of bimodal rainfall regimes and seasonal totals across sub-counties.",
+            "Section 4 Pastoral Terms of Trade: Analysis of goat-to-maize terms of trade across ASAL pastoral counties.",
+            "Section 5 Historical Multi-Hazard Timeline: Multi-decade view of drought, flood, and food crisis occurrences in Kenya.",
+            "In-Situ Partner Feedback Tooling: Floating review widgets, area screenshot tool, and local storage feedback exporter."
+          ]
+        },
+        {
+          "title": "Known Audit Baseline Limitations",
+          "icon": "\u26a0\ufe0f",
+          "items": [
+            "15 identified code and data defects audited in Dr. Ghosh's review (including unsorted ENSO gauge and stale RONI lead-in).",
+            "Mismatched literature citations and DOIs.",
+            "Exposed development review tools without query parameter gating."
+          ]
+        }
+      ],
+      "decisions": [
+        "D37",
+        "D38"
+      ]
     },
     {
       "id": "v2",
@@ -29,7 +249,29 @@
       "url": "notebook_v2.html",
       "status": "archived",
       "date": "2026-08-19",
-      "description": "August milestone review edition with initial analogue ranking and agricultural output series."
+      "build": "a1b2c3d",
+      "description": "August milestone review edition with initial analogue ranking, historical climate trends, and baseline agricultural production statistics.",
+      "highlights": [
+        "Initial analogue ranking engine based on OND Ni\u00f1o 3.4 and DMI distance matching.",
+        "Section 1 County Context profile with basic population and agricultural statistics.",
+        "Section 3 Historical Climate trends with CHIRPS seasonal rainfall bars.",
+        "Section 4 Agricultural Impact analysis with preliminary KNBS NAPR production time series."
+      ],
+      "categories": [
+        {
+          "title": "Key Capabilities",
+          "icon": "\u2728",
+          "items": [
+            "Historical Analogue Engine v1: Euclidean distance matching against historical El Ni\u00f1o/La Ni\u00f1a seasons.",
+            "County Context Profiles: Basic demographic, area, and agricultural production summaries for all 47 counties.",
+            "CHIRPS v2.0 Seasonal Rainfall: Basic OND and MAM seasonal rainfall bar charts."
+          ]
+        }
+      ],
+      "decisions": [
+        "D1",
+        "D16"
+      ]
     },
     {
       "id": "v1",
@@ -38,7 +280,24 @@
       "url": "notebook.html",
       "status": "archived",
       "date": "2026-07-22",
-      "description": "Initial exploratory baseline prototype."
+      "build": "0f9e8d7",
+      "description": "Initial exploratory baseline prototype demonstrating bimodal rainfall regimes and preliminary ENSO teleconnection correlations.",
+      "highlights": [
+        "First proof-of-concept interactive notebook.",
+        "Demonstrated OND Short Rains teleconnection to Pacific ENSO.",
+        "Established DuckDB-WASM browser-side parquet query architecture."
+      ],
+      "categories": [
+        {
+          "title": "Key Capabilities",
+          "icon": "\u2728",
+          "items": [
+            "DuckDB-WASM Client-Side Architecture: Validated zero-backend serverless querying of Parquet files directly in the browser.",
+            "Basic ENSO Teleconnection Plots: Exploratory scatter plots linking seasonal rainfall to Ni\u00f1o 3.4 indices."
+          ]
+        }
+      ],
+      "decisions": []
     }
   ]
 }

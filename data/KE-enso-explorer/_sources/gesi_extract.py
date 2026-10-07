@@ -35,15 +35,7 @@ def county_of(path):
 
 def clean_label(s):
     s = re.sub(r"\s+", " ", s).strip()
-    s = re.sub(r",?\s*20q?19\s*$", "", s)
-    s = re.sub(r",?\s*(19|20)\d{2}(\s*(&|and)\s*(19|20)\d{2})?\.?", "", s)
-    s = s.replace("mins to access", "minutes to access")
-    s = s.replace("(Drinking", "(drinking")
-    s = s.replace(", (drinking", " (drinking")
-    s = s.replace("15 - 49", "15–49")
-    s = s.replace("KDHS", "").replace("by County", "")
-    s = re.sub(r"\s+", " ", s).strip()
-    s = s.rstrip(" ,.:;")
+    s = YEAR.sub("", s).strip().rstrip(",")
     return s
 
 
@@ -69,10 +61,10 @@ def parse_pdf(path):
     i = 0
     n = len(blocks)
     # index code blocks
-    idx = [j for j, b in enumerate(blocks) if CODE.match(b["t"])]
+    idx = [j for j, b in enumerate(blocks) if CODE.match(b["t"].split("\n")[0])]
     for k, j in enumerate(idx):
         b = blocks[j]
-        m = CODE.match(b["t"])
+        m = CODE.match(b["t"].split("\n")[0])
         code, rawlabel = m.group(1), m.group(2)
         label = clean_label(rawlabel)
         # region = blocks after j, same page+col, until next code block
@@ -81,7 +73,7 @@ def parse_pdf(path):
             bb = blocks[jj]
             if bb["pi"] != b["pi"] or bb["col"] != b["col"]:
                 break
-            if CODE.match(bb["t"]):
+            if CODE.match(bb["t"].split("\n")[0]):
                 break
             region.append(bb)
         rows = parse_region(region, county)
@@ -141,8 +133,7 @@ def parse_region(region, county):
 def main():
     args = sys.argv[1:]
     if args and args[0] == "--all":
-        pdf_dir = args[1] if len(args) > 1 else "/Users/pstewarda/Library/CloudStorage/OneDrive-CGIAR/ClimateActionNetZero/1_Projects/D409_Adaptation _Atlas/2_Technical & Data/RCMRD/ENSO explorer/KNBS/County gender data sheets"
-        pdfs = sorted(glob.glob(os.path.join(pdf_dir, "*.pdf")))
+        pdfs = sorted(glob.glob(os.path.join(args[1], "*.pdf")))
         allrows = []
         for p in pdfs:
             allrows += parse_pdf(p)[1]

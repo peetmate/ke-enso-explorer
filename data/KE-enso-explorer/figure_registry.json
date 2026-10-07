@@ -52,6 +52,16 @@
       "type": "chart"
     },
     {
+      "id": "fig_2_1b",
+      "currentNumber": "Figure 3.1B",
+      "targetNumber": "Figure 3.1B",
+      "currentSection": "3",
+      "title": "Consecutive Seasonal Rainfall Sequences & Compounding Drought Runs",
+      "question": "Did this county's two rainy seasons fail back to back, how often has that happened before, and what happened when it did?",
+      "downloadFilename": "consecutive_season_sequence_runs",
+      "type": "chart"
+    },
+    {
       "id": "fig_2_2",
       "currentNumber": "Figure 3.2",
       "targetNumber": "Figure 3.2",
@@ -117,7 +127,7 @@
       "targetNumber": "Figure 4.2B",
       "currentSection": "4",
       "title": "Multi-Decadal Seasonal Crop Harvests & Climate Teleconnections (HarvestStat Africa)",
-      "question": "How did subnational seasonal crop yields and production track historical rainfall terciles across 1990–2024?",
+      "question": "How did subnational seasonal crop yields and production track historical rainfall terciles across 1990\u20132024?",
       "downloadFilename": "harveststat_seasonal_crop_series",
       "type": "chart"
     },
@@ -186,8 +196,8 @@
       "currentNumber": "Figure 2.1",
       "targetNumber": "Figure 2.1",
       "currentSection": "2",
-      "title": "Empirical Tercile Probability Distribution & Forecast Plume",
-      "question": "What is the empirical probability of a wetter, near-normal, or drier season based on nearest historical ocean analogues, and how is the Pacific ENSO state projected to evolve over the next 9 months?",
+      "title": "Empirical Tercile Probability Distribution & Forecast Plume (with 45-Year LOOCV Hindcast Skill)",
+      "question": "What is the empirical probability of a wetter, near-normal, or drier season based on nearest historical ocean analogues, what is the retrospective hindcast skill (RPSS & accuracy, 1981\u20132025), and how is the Pacific ENSO state projected to evolve?",
       "downloadFilename": "analogue_tercile_probabilities",
       "type": "chart"
     },

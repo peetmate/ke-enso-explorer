@@ -97,6 +97,7 @@
      worse than showing none. */
   function resolve(key) {
     if (!key) return null;
+    if (key === 'release_meta') return S.byKey['enso-driver-indices'] || S.entries[0] || null;
     if (S.byKey[key]) return S.byKey[key];
     var real = S.doc && S.doc.aliases ? S.doc.aliases[key] : null;
     return real && S.byKey[real] ? S.byKey[real] : null;
@@ -582,7 +583,9 @@
   window.openMethodDrawer = openMethodDrawer;
   window.closeDrawer = closeDrawer;
   window.jumpToFullCatalog = function () {
-    if (typeof window.jumpToDataset === 'function' && S.activeKey) {
+    if (typeof window.jumpToDatasetCard === 'function' && S.activeKey) {
+      window.jumpToDatasetCard(S.activeKey);
+    } else if (typeof window.jumpToDataset === 'function' && S.activeKey) {
       window.jumpToDataset(S.activeKey);
     } else if (typeof window.switchTab === 'function') {
       window.switchTab('tab-methods');
