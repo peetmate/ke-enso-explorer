@@ -1,9 +1,9 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.6",
-  "versionDisplay": "v3.8.6",
-  "build": "781ba8f",
+  "version": "3.8.7",
+  "versionDisplay": "v3.8.7",
+  "build": "3031153",
   "releaseDate": "2026-10-07",
   "lastUpdated": "2026-10-07",
   "dataVintage": "2026-09",
@@ -15,21 +15,20 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.6",
-      "label": "v3.8.6 (Verified Operational Release)",
+      "version": "v3.8.7",
+      "label": "v3.8.7 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-07",
-      "build": "781ba8f",
-      "description": "KMD CAP Advisory active vs expired filtering, Section 2.4 operational status verification, and Figure 2.2 / Table 2.1 streamlining: Enforced strict expiration filtering on KMD Common Alerting Protocol advisories to eliminate outdated April/May 2026 alerts from active views, introduced official 'Normal Monitoring' status banner when 0 active warnings exist, preserved past bulletins in an institutional historical archive drawer, streamlined Figure 2.2 controls, and structured Table 2.1 outcome matrix.",
+      "build": "3031153",
+      "description": "Table 2.2 Sectoral Advisory Matrix redesign, KMD CAP active vs expired filtering, and Subtab 2.4 whitespace optimization: Replaced awkward 3+1 grid cards in Section 2.4 with a structured 4-sector advisory matrix table, eliminating orphaned whitespace and cutting vertical height by over 50% while preserving all statutory citations and operational directives.",
       "highlights": [
+        "Table 2.2 Structured Sectoral Matrix: Replaced awkward 3-column + 1-orphaned-box grid with an authentic 3-column, 4-row structured matrix table ('Sector & Advisory Scope', 'Priority Operational Triggers & Actions', 'Lead Institutional Partners'), cutting vertical scrolling space by >50%.",
+        "Elimination of Wasted Space in Section 2.4: Unified Agriculture, Pastoralism, Water, and Disaster Risk Management into a continuous, dense institutional decision table with color-accented indicator bars and dedicated lead agency metadata cards.",
         "KMD CAP Expiration Verification (Section 2.4): Enforced strict client-side expiration checks (expires > now) on KMD CAP severe weather advisories, preventing expired Long Rains 2026 bulletins from displaying as active warnings.",
-        "Official 'Normal Monitoring' Operational Banner: When 0 active alerts are in effect for a county (matching KMD's official weather warnings portal), renders a clear green operational card confirming 'Status: Normal Monitoring' with links to meteo.go.ke/weather-warnings.",
-        "Historical Advisory Archive: Repurposed the nationwide bulletin drawer into an institutional archive explicitly designated for retrospective auditing and local contingency benchmarking of expired MAM 2026 Long Rains bulletins, complete with 'EXPIRED' status badges.",
-        "Figure 2.2 Analogue Year Dropdown: Eliminated 8 duplicate analogue buttons in favor of a sleek dropdown synchronized two-way with Section 2.2.",
-        "Direct Multi-Hazard Profile Rendering: Removed redundant radio view toggle to render the multi-hazard profile directly.",
-        "Structured Table 2.1 Outcome Matrix: Formatted Table 2.1 into a 4-row tabular matrix with baseline departures and sector impact propagation notes.",
-        "Reconciled Captions & Guidance Headers: Reconciled captions between Figure 2.2 and Table 2.1, with dedicated purpose and action guidance headers across Sections 2.1–2.4."
+        "Official 'Normal Monitoring' Operational Banner: When 0 active alerts are in effect for a county, renders a verified green operational card confirming 'Status: Normal Monitoring' with direct links to meteo.go.ke/weather-warnings.",
+        "Historical Advisory Archive: Preserved past bulletins in an institutional archive drawer explicitly designated for retrospective auditing of MAM 2026 bulletins with EXPIRED badges.",
+        "Figure 2.2 Analogue Year Dropdown & Table 2.1 Matrix: Streamlined Figure 2.2 controls into a compact dropdown and structured Table 2.1 outcome matrix."
       ],
       "categories": [
         {
