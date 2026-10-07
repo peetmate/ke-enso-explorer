@@ -845,3 +845,187 @@ details.enso-more-details > summary span.enso-more-details-title {
 .tool-meta-item strong {
   color: #0f172a;
 }
+
+/* Figure 3.1 Compact Control Toolbar (v3.8.10) */
+#sec21ControlsHost.enso-control-bar {
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin-bottom: 0.75rem;
+}
+
+.fig31-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.65rem;
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.4rem 0.65rem;
+  box-sizing: border-box;
+}
+
+.fig31-ctrl-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.fig31-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.fig31-divider {
+  width: 1px;
+  height: 18px;
+  background: #cbd5e1;
+  margin: 0 0.1rem;
+  flex-shrink: 0;
+}
+
+/* Compact Pill Toggle */
+.fig31-pill-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: #e2e8f0;
+  border-radius: 5px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.fig31-pill-btn {
+  font-family: inherit;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.fig31-pill-btn:hover {
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.fig31-pill-btn.active {
+  background: #0284c7;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(2, 132, 199, 0.25);
+}
+
+/* Compact Select */
+.fig31-select-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.fig31-select {
+  font-family: inherit;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #1e293b;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 2px 6px;
+  height: 25px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.fig31-select:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 1px #0284c7;
+}
+
+/* Compact Numeric Range Inputs */
+.fig31-years-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fig31-num-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.fig31-num-input {
+  font-family: inherit;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #1e293b;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 2px 4px;
+  width: 56px;
+  height: 25px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s ease;
+  -moz-appearance: textfield;
+}
+
+.fig31-num-input::-webkit-outer-spin-button,
+.fig31-num-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fig31-num-input:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 1px #0284c7;
+}
+
+.fig31-range-sep {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Quick Reset Button */
+.fig31-reset-btn {
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 2px 6px;
+  height: 25px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+
+.fig31-reset-btn:hover {
+  color: #0284c7;
+  border-color: #0284c7;
+  background: #f0f9ff;
+}
+
+@media (max-width: 768px) {
+  .fig31-divider {
+    display: none;
+  }
+}
+

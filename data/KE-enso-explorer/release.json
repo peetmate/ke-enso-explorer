@@ -1,9 +1,9 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.9",
-  "versionDisplay": "v3.8.9",
-  "build": "3031155",
+  "version": "3.8.10",
+  "versionDisplay": "v3.8.10",
+  "build": "3031200",
   "releaseDate": "2026-10-08",
   "lastUpdated": "2026-10-08",
   "dataVintage": "2026-09",
@@ -15,19 +15,18 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.9",
-      "label": "v3.8.9 (Verified Operational Release)",
+      "version": "v3.8.10",
+      "label": "v3.8.10 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-08",
-      "build": "3031155",
-      "description": "Section 3 Sub-tab Handle Architecture Unification: Aligned Section 3 (Historical Climate Evidence) with the standardized sub-tab handle pattern established in Section 1 and Section 2. Replaced the split 3.1/3.2 top-level navigation buttons with a single unified '3 Climate evidence' tab, introduced an in-page sub-tab bar ('3.1 Climate Graphs & Probabilities' and '3.2 Spatial Climate Maps & Flood Grids'), and integrated the sticky sub-navigation bar.",
+      "build": "3031200",
+      "description": "Figure 3.1 Compact Control Toolbar: Replaced the bulky, vertically stacked 5-row control block with a high-density, space-efficient horizontal toolbar (<75px height, >80% reduction in dead space). Features inline segmented pill buttons for timeseries resolution ('By year' vs 'Monthly') and rainfall representation ('Absolute' vs 'Anomaly'), compact sub-county range dropdown, segmented ocean driver marker strip ('Phase' vs 'Intensity' vs 'Off'), and inline year inputs with one-click full-record Reset.",
       "highlights": [
-        "Section 3 Sub-tab Handle Unification: Brought Section 3 into full architectural alignment with Section 1 and Section 2, eliminating the awkward split 3.1/3.2 buttons in the top navigation bar.",
-        "Single Top-Level Tab 3 Button: Replaced the group container with a single, clean '3 Climate evidence' button matching the symmetry of Tabs 0, 1, 2, 4, 5, and 6.",
-        "In-Page Sub-tab Bar: Added the standardized `#climateSubTabBar` with '3.1 Climate Graphs & Probabilities' and '3.2 Spatial Climate Maps & Flood Grids' buttons.",
-        "Sticky Sub-navigation Integration: Connected Section 3 to `#stickySubNav`, rendering live sub-section buttons ('3.1 Climate Graphs' and '3.2 Spatial Climate Maps') in the sticky header below the main navigation bar.",
-        "Sub-section Progression & Continuity: Added a clean 'Sub-section 3.1 Complete' progression banner with instant jump to 3.2, and Section 3 completion card jumping to Section 4."
+        "High-Density Figure 3.1 Control Toolbar: Compact horizontal toolbar reducing vertical dead space from 379px to ~73px (>80% height reduction), bringing the multi-decadal precipitation chart immediately into view.",
+        "Segmented Pill Toggles: Sleek interactive pill buttons for timeseries resolution ('By year' | 'Monthly') and rainfall representation ('Absolute' | 'Anomaly vs 1991–2020 normal').",
+        "Direct Ocean Marker Strip Control: 3-state segmented toggle ('Phase' | 'Intensity' | 'Off') providing instantaneous ocean teleconnection toggling without line wrapping.",
+        "Inline Year Range & Reset: Clean number inputs with spinner suppression and one-click 'Reset' button restoring the 1981–2024 historical baseline."
       ],
       "categories": [
         {
