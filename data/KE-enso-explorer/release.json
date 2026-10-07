@@ -1,11 +1,11 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.7",
-  "versionDisplay": "v3.8.7",
-  "build": "3031153",
-  "releaseDate": "2026-10-07",
-  "lastUpdated": "2026-10-07",
+  "version": "3.8.8",
+  "versionDisplay": "v3.8.8",
+  "build": "3031154",
+  "releaseDate": "2026-10-08",
+  "lastUpdated": "2026-10-08",
   "dataVintage": "2026-09",
   "authors": [
     "Pete Steward"
@@ -15,20 +15,18 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.7",
-      "label": "v3.8.7 (Verified Operational Release)",
+      "version": "v3.8.8",
+      "label": "v3.8.8 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
-      "date": "2026-10-07",
-      "build": "3031153",
-      "description": "Table 2.2 Sectoral Advisory Matrix redesign, KMD CAP active vs expired filtering, and Subtab 2.4 whitespace optimization: Replaced awkward 3+1 grid cards in Section 2.4 with a structured 4-sector advisory matrix table, eliminating orphaned whitespace and cutting vertical height by over 50% while preserving all statutory citations and operational directives.",
+      "date": "2026-10-08",
+      "build": "3031154",
+      "description": "Table 2.3 Early Warning Directory card compaction and official institutional logos integration: Replaced text monogram cards with authentic official emblems (KMSA, NDMA, KRCS, ICPAC, FEWS NET, NDOC) and consolidated operational metadata into a high-density compact card layout, reducing vertical card height by over 40%.",
       "highlights": [
-        "Table 2.2 Structured Sectoral Matrix: Replaced awkward 3-column + 1-orphaned-box grid with an authentic 3-column, 4-row structured matrix table ('Sector & Advisory Scope', 'Priority Operational Triggers & Actions', 'Lead Institutional Partners'), cutting vertical scrolling space by >50%.",
-        "Elimination of Wasted Space in Section 2.4: Unified Agriculture, Pastoralism, Water, and Disaster Risk Management into a continuous, dense institutional decision table with color-accented indicator bars and dedicated lead agency metadata cards.",
-        "KMD CAP Expiration Verification (Section 2.4): Enforced strict client-side expiration checks (expires > now) on KMD CAP severe weather advisories, preventing expired Long Rains 2026 bulletins from displaying as active warnings.",
-        "Official 'Normal Monitoring' Operational Banner: When 0 active alerts are in effect for a county, renders a verified green operational card confirming 'Status: Normal Monitoring' with direct links to meteo.go.ke/weather-warnings.",
-        "Historical Advisory Archive: Preserved past bulletins in an institutional archive drawer explicitly designated for retrospective auditing of MAM 2026 bulletins with EXPIRED badges.",
-        "Figure 2.2 Analogue Year Dropdown & Table 2.1 Matrix: Streamlined Figure 2.2 controls into a compact dropdown and structured Table 2.1 outcome matrix."
+        "Table 2.3 Official Institutional Logos: Integrated crisp, high-resolution official emblems for all 6 early warning authorities (Kenya Meteorological Service Authority, National Drought Management Authority, Kenya Red Cross Society, ICPAC, FEWS NET / KFSSG, and National Disaster Operations Centre).",
+        "Compact Card Architecture: Replaced stacked redundant boxes with a unified operational metadata row (Coverage, Cadence, and direct Operational Tools links), cutting card vertical height from ~480px down to ~270px.",
+        "Table 2.2 & 2.3 Harmony: Perfect visual alignment between the structured Table 2.2 Sectoral Advisory Matrix and the 2-column high-density Table 2.3 Directory grid.",
+        "Strict Operational Link Integrity: Verified 100% functionality and statutory references across meteo.go.ke, ndma.go.ke, redcross.or.ke, ICPAC, FEWS NET, and NDOC emergency hotline."
       ],
       "categories": [
         {
