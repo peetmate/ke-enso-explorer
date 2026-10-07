@@ -1,9 +1,9 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.5",
-  "versionDisplay": "v3.8.5",
-  "build": "a52ae2a",
+  "version": "3.8.6",
+  "versionDisplay": "v3.8.6",
+  "build": "781ba8f",
   "releaseDate": "2026-10-07",
   "lastUpdated": "2026-10-07",
   "dataVintage": "2026-09",
@@ -15,21 +15,32 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.5",
-      "label": "v3.8.5 (Verified Operational Release)",
+      "version": "v3.8.6",
+      "label": "v3.8.6 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-07",
-      "build": "a52ae2a",
-      "description": "Figure 2.2 & Table 2.1 streamlining: Removed redundant duplicate analogue year boxes in favor of a sleek dropdown, eliminated the radio view selector to show the multi-hazard profile directly, structured Table 2.1 as a 4-row outcome matrix, and reconciled all captions.",
+      "build": "781ba8f",
+      "description": "KMD CAP Advisory active vs expired filtering, Section 2.4 operational status verification, and Figure 2.2 / Table 2.1 streamlining: Enforced strict expiration filtering on KMD Common Alerting Protocol advisories to eliminate outdated April/May 2026 alerts from active views, introduced official 'Normal Monitoring' status banner when 0 active warnings exist, preserved past bulletins in an institutional historical archive drawer, streamlined Figure 2.2 controls, and structured Table 2.1 outcome matrix.",
       "highlights": [
-        "Removed Duplicate Analogue Boxes in Figure 2.2: Eliminated the 8 large grey analogue year buttons that duplicated Section 2.2, replacing them with a sleek, compact dropdown selector ('Active Historical Analogue Year: [ #1 2015 ... ]') synchronized two-way with Section 2.2.",
-        "Direct Multi-Hazard Profile Rendering: Removed the radio view selector ('Multi-hazard profile' vs 'Ocean-state curve' vs 'County spatial context'), presenting the full 4-stat multi-hazard diagnostic profile directly without extra clicks.",
-        "Structured Table 2.1 Matrix: Formatted Table 2.1 as a true 4-row outcome matrix comparing Preceding MAM Long Rains, Target OND Short Rains, MODIS NDVI Pasture, and Pastoral Terms of Trade with baseline departures and sector impact propagation notes.",
-        "Caption Reconciliation: Harmonized captions between Figure 2.2 and Table 2.1 across the card title, table header, and footer citation note ('Figure 2.2 & Table 2.1 — Historical analogue scenario multi-hazard profile and two-season compound outcome record...').",
-        "Sub-section Purpose & Action Headers: Dedicated guidance headers inside each sub-section pane (2.1–2.4) explicitly stating 'What this sub-section is for' and 'What to do here'."
+        "KMD CAP Expiration Verification (Section 2.4): Enforced strict client-side expiration checks (expires > now) on KMD CAP severe weather advisories, preventing expired Long Rains 2026 bulletins from displaying as active warnings.",
+        "Official 'Normal Monitoring' Operational Banner: When 0 active alerts are in effect for a county (matching KMD's official weather warnings portal), renders a clear green operational card confirming 'Status: Normal Monitoring' with links to meteo.go.ke/weather-warnings.",
+        "Historical Advisory Archive: Repurposed the nationwide bulletin drawer into an institutional archive explicitly designated for retrospective auditing and local contingency benchmarking of expired MAM 2026 Long Rains bulletins, complete with 'EXPIRED' status badges.",
+        "Figure 2.2 Analogue Year Dropdown: Eliminated 8 duplicate analogue buttons in favor of a sleek dropdown synchronized two-way with Section 2.2.",
+        "Direct Multi-Hazard Profile Rendering: Removed redundant radio view toggle to render the multi-hazard profile directly.",
+        "Structured Table 2.1 Outcome Matrix: Formatted Table 2.1 into a 4-row tabular matrix with baseline departures and sector impact propagation notes.",
+        "Reconciled Captions & Guidance Headers: Reconciled captions between Figure 2.2 and Table 2.1, with dedicated purpose and action guidance headers across Sections 2.1–2.4."
       ],
       "categories": [
+        {
+          "title": "Early Warning & Operational Integrity",
+          "icon": "🛡️",
+          "items": [
+            "Strict CAP Expiration Filtering: Guaranteed only unexpired, currently active KMD severe weather warnings appear in the primary operational status card.",
+            "Normal Monitoring State: Authoritative green banner displaying zero-alert confirmation aligned with official KMD meteorological portal.",
+            "Historical Archive Drawer: Auditable catalog of expired MAM 2026 bulletins with explicit season attribution and EXPIRED tags."
+          ]
+        },
         {
           "title": "UI/UX & Layout Architecture",
           "icon": "✨",
@@ -44,7 +55,8 @@
       "decisions": [
         "D56",
         "D57",
-        "D58"
+        "D58",
+        "D59"
       ]
     },
     {
