@@ -1,10 +1,10 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.7.0",
-  "versionDisplay": "v3.7.0",
-  "build": "61c3784",
-  "releaseDate": "2026-10-06",
+  "version": "3.8.0",
+  "versionDisplay": "v3.8.0",
+  "build": "c2f489a",
+  "releaseDate": "2026-10-07",
   "lastUpdated": "2026-10-07",
   "dataVintage": "2026-09",
   "authors": [
@@ -14,11 +14,39 @@
   "implementationPlan": "2026.09.24 - ENSO v3 Antigravity sequential implementation backlog.md",
   "availableVersions": [
     {
-      "id": "v3.7",
-      "version": "v3.7.0",
-      "label": "v3.7.0 (Verified Operational Release)",
+      "id": "v3.8",
+      "version": "v3.8.0",
+      "label": "v3.8.0 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
+      "date": "2026-10-07",
+      "build": "c2f489a",
+      "description": "UX and layout milestone release implementing independent sub-tab architecture for Section 1 and Section 2, eliminating lengthy page scrolling, expanding Figure 2.1 to full container width, repositioning MAM teleconnection below Figure 2.1 in a horizontal 3-column row, and streamlining telemetry and analogue metric cards across single rows.",
+      "highlights": [
+        "Independent Sub-Tab Architecture: Split Section 1 (1.1, 1.2, 1.3) and Section 2 (2.1, 2.2, 2.3, 2.4) into dedicated sub-tabs matching Section 4, eliminating lengthy 10,000px page scrolling and resetting scroll position instantly on tab switch.",
+        "Full-Width Figure 2.1 & Repositioned MAM Box: Expanded Figure 2.1 across full container width (976px) and relocated the Long Rains (MAM) Teleconnection box directly below it, formatting its 3 physical mechanisms into a clean horizontal 3-column row.",
+        "Single-Row Section 2.1 Telemetry Cards: Laid out Equatorial Pacific (RONI), Indian Ocean (DMI), and NOAA CPC Forward Projection cards across 1 balanced 3-column line, eliminating dead whitespace and orphan cards.",
+        "Single-Row Section 2.3 Analogue Precedent Cards: Formatted observed historical analogue precedent cards (Ocean State, Rainfall, Pasture, Terms of Trade) into 4 equal columns across 1 single line on desktop."
+      ],
+      "categories": [
+        {
+          "title": "UI/UX & Layout Architecture",
+          "icon": "✨",
+          "items": [
+            "Independent Sub-Tab System: Converted Section 1 and Section 2 into discrete subtab panes with top sub-tab bars and sticky sub-navigation integration.",
+            "Full-Width Figure 2.1: Removed cramped 2-column container to give Figure 2.1 and LOOCV hindcast skill full width.",
+            "Repositioned MAM Teleconnection Box: Placed MAM teleconnection below Figure 2.1 with 3 horizontal mechanism cards.",
+            "Whitespace Reduction: Formatted Section 2.1 (3 cards) and Section 2.3 (4 cards) into single-row responsive grids."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v3.7",
+      "version": "v3.7.0",
+      "label": "v3.7.0 (Archived Operational Release)",
+      "url": "notebook_v3.html",
+      "status": "archived",
       "date": "2026-10-07",
       "build": "61c3784",
       "description": "Operational milestone release featuring 45-year leave-one-out historical hindcast skill cross-validation (RPSS & contingency matrices; Decision D56), automated CI release assertions, Handle API academic DOI registration verification, and interactive methodological foldouts across all 22 figures (Decision D57).",
