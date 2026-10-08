@@ -1,24 +1,76 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.11",
-  "versionDisplay": "v3.8.11",
-  "build": "3031201",
+  "version": "3.9.0",
+  "versionDisplay": "v3.9.0",
+  "build": "3031202",
   "releaseDate": "2026-10-08",
   "lastUpdated": "2026-10-08",
   "dataVintage": "2026-09",
   "authors": [
     "Pete Steward"
   ],
-  "leadReview": "2026.09.23 - Issues and feature requests V3.0.docx",
-  "implementationPlan": "2026.09.24 - ENSO v3 Antigravity sequential implementation backlog.md",
+  "leadReview": "V3.8.11 review.docx",
+  "implementationPlan": "v3_8_11_review_remediation_plan.md",
   "availableVersions": [
+    {
+      "id": "v3.9",
+      "version": "v3.9.0",
+      "label": "v3.9.0 (Comprehensive Review Remediation Release)",
+      "url": "notebook_v3.html",
+      "status": "active",
+      "date": "2026-10-08",
+      "build": "3031202",
+      "description": "Comprehensive Remediation of V3.8.11 Review: Resolved all 27 reviewer comments and visual anomalies across sticky headers, Section 1 geography context, Section 3 climatology and sequence views, Figures 3.1–3.5 driver analysis and flood maps, and Section 4 agricultural/pastoral impact dashboards.",
+      "highlights": [
+        "Global Chrome & Sticky Navigation: Cleaned sticky sub-navigation by removing redundant 'Section X Sub-sections:' title prefixes, wrapped header controls to prevent observation vintage date clipping, and introduced intuitive Similar Years labels.",
+        "Section 1 Context & Sub-navigation: Eliminated duplicated headings and de-duplicated county context titles across sub-tabs.",
+        "Section 3 Guide Box & County Baseline Card: Redesigned the Section 3 guide box into a balanced 4-box layout eliminating whitespace, and introduced a high-density County Climatological & Hazard Baseline card with bimodal rain normal bars, land area, population, and 100-year flood exposure metrics.",
+        "Figure 3.1 & 3.1B Enhancements: Collision-avoidance dynamic offsets for Normal Mean and Wetter labels, overflow-visible strip plot tooltips with explicit color strip legend, sequence KPI calculation showing exact boundary seasons and anomaly percentages, and full analogue highlighting in Figure 3.1B.",
+        "Figures 3.2 & 3.3 Visual Quality: Eliminated dead vertical whitespace under Figure 3.2 contingency matrix, redesigned insight box into structured dual-season cards (OND / MAM), relocated Candidate Ocean Drivers comparison table below scatter plot, and introduced halo-ring analogue highlighting preserving tercile palette.",
+        "Spatial Grids (Figs 3.4 & 3.5): Compacted control toolbars into 2-row high-density layouts, eliminated empty grid whitespace when filtered, and formatted flood observation year numbers without commas (e.g., '2023' instead of '2,023').",
+        "Section 4 Subtab & Impact Dashboards: Unified top-level subtab navigation directly below section header, embedded production toolbar directly in the chart card, and widened Figure 4.2B tercile strip margins to prevent text label clipping."
+      ],
+      "categories": [
+        {
+          "title": "Layout Architecture & Whitespace Elimination",
+          "icon": "📐",
+          "items": [
+            "Section 3 Guide Box: 4-box responsive grid resolving dead white space in the bottom right corner.",
+            "Contingency Matrix Container: Removed artificial min-height to shrink-wrap clean 3x3 table.",
+            "Raster & Flood Grids: Dynamic container sizing preventing trailing whitespace when filtered.",
+            "Section 4 Top Sub-tabs: Re-established hierarchical subtab navigation at section top with non-sticky card toolbar."
+          ]
+        },
+        {
+          "title": "Visual Data Clarity & Label Polish",
+          "icon": "✨",
+          "items": [
+            "Collision-Avoidance Labels: Smart dynamic Y-offset for Normal Mean and Wetter horizontal reference lines.",
+            "Figure 3.1 Tooltips & Legend: Visible hover tooltips for ocean phase strips with explicit legend.",
+            "Driver Scatter Halos: High-contrast outer dashed rings and dark borders for analogue years without obscuring tercile fill colors.",
+            "Clean Year Formatting: Corrected integer year formatting without commas across flood drop-downs.",
+            "Tercile Strip Margins: Increased left margins and shortened season labels on Figure 4.2B to prevent text clipping."
+          ]
+        }
+      ],
+      "decisions": [
+        "D56",
+        "D57",
+        "D58",
+        "D59",
+        "D60",
+        "D61",
+        "D62",
+        "D63"
+      ]
+    },
     {
       "id": "v3.8",
       "version": "v3.8.11",
-      "label": "v3.8.11 (Verified Operational Release)",
-      "url": "notebook_v3.html",
-      "status": "active",
+      "label": "v3.8.11 (Analogue Harmonization Milestone)",
+      "url": "notebook_v3.html?v=3.8.11",
+      "status": "archived",
       "date": "2026-10-08",
       "build": "3031201",
       "description": "Section 2 Forecast Analogue & Section 3 Historical Evidence Harmonization: Fully connected Section 2's multi-variate trajectory analogue engine (analogueYears) into Section 3.1's multi-decadal rainfall time series (similarYearsSet) and Figure 3.3 driver scatter plot. Introduces a dedicated '🎯 Forecast Analogues (Sec 2)' empirical chip displaying county-specific mean anomalies across the 8 verified analogues, synchronized sticky header controls, and bar tooltip channels showing analogue rank and Euclidean distance (D=X.XX).",
