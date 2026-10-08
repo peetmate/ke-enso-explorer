@@ -1,9 +1,9 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer \u2014 Kenya",
-  "version": "3.8.10",
-  "versionDisplay": "v3.8.10",
-  "build": "3031200",
+  "version": "3.8.11",
+  "versionDisplay": "v3.8.11",
+  "build": "3031201",
   "releaseDate": "2026-10-08",
   "lastUpdated": "2026-10-08",
   "dataVintage": "2026-09",
@@ -15,18 +15,19 @@
   "availableVersions": [
     {
       "id": "v3.8",
-      "version": "v3.8.10",
-      "label": "v3.8.10 (Verified Operational Release)",
+      "version": "v3.8.11",
+      "label": "v3.8.11 (Verified Operational Release)",
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-08",
-      "build": "3031200",
-      "description": "Figure 3.1 Compact Control Toolbar: Replaced the bulky, vertically stacked 5-row control block with a high-density, space-efficient horizontal toolbar (<75px height, >80% reduction in dead space). Features inline segmented pill buttons for timeseries resolution ('By year' vs 'Monthly') and rainfall representation ('Absolute' vs 'Anomaly'), compact sub-county range dropdown, segmented ocean driver marker strip ('Phase' vs 'Intensity' vs 'Off'), and inline year inputs with one-click full-record Reset.",
+      "build": "3031201",
+      "description": "Section 2 Forecast Analogue & Section 3 Historical Evidence Harmonization: Fully connected Section 2's multi-variate trajectory analogue engine (analogueYears) into Section 3.1's multi-decadal rainfall time series (similarYearsSet) and Figure 3.3 driver scatter plot. Introduces a dedicated '🎯 Forecast Analogues (Sec 2)' empirical chip displaying county-specific mean anomalies across the 8 verified analogues, synchronized sticky header controls, and bar tooltip channels showing analogue rank and Euclidean distance (D=X.XX).",
       "highlights": [
-        "High-Density Figure 3.1 Control Toolbar: Compact horizontal toolbar reducing vertical dead space from 379px to ~73px (>80% height reduction), bringing the multi-decadal precipitation chart immediately into view.",
-        "Segmented Pill Toggles: Sleek interactive pill buttons for timeseries resolution ('By year' | 'Monthly') and rainfall representation ('Absolute' | 'Anomaly vs 1991–2020 normal').",
-        "Direct Ocean Marker Strip Control: 3-state segmented toggle ('Phase' | 'Intensity' | 'Off') providing instantaneous ocean teleconnection toggling without line wrapping.",
-        "Inline Year Range & Reset: Clean number inputs with spinner suppression and one-click 'Reset' button restoring the 1981–2024 historical baseline."
+        "Section 2 Forecast Analogue Harmonization: Unified Section 2's LOOCV-audited multi-variate continuous Euclidean distance analogue ensemble (8 seasons) directly into Section 3.1's 44-year CHIRPS historical distribution (similarYearsSet).",
+        "Dedicated Empirical Analogue Chip: Prominent '🎯 Forecast Analogues (Sec 2)' chip above Figure 3.1 computing county-specific rainfall anomaly deviations and season counts alongside broad single-index phase climatologies.",
+        "High-Contrast Visual Highlighting: One-click highlighting isolating the 8 forecast analogues with 100% opacity and bold borders while gracefully dimming other historical seasons to 22% opacity.",
+        "Multi-Figure Synchronized State: Synchronized Figure 3.1, Figure 3.3 Driver Scatter Plot ('Sec 2 Forecast Analogues' highlight badge), and sticky header toggle and criterion selector ('Sec 2 Analogues (8 yrs)' vs 'All Phase' vs 'Lead-in').",
+        "Detailed Analogue Tooltips: Enriched hover tooltips across Figure 3.1 bars and Figure 3.3 dots surfacing Section 2 analogue rank and Euclidean distance (e.g., 'Rank #1 (D=0.42)')."
       ],
       "categories": [
         {
