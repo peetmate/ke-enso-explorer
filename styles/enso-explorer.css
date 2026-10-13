@@ -358,6 +358,8 @@ details.enso-more-details > summary span.enso-more-details-title {
   transition: opacity 0.15s ease, visibility 0.15s ease;
   z-index: 1000;
   text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .enso-tooltip-bubble::after {
@@ -375,6 +377,28 @@ details.enso-more-details > summary span.enso-more-details-title {
 .enso-tooltip-wrap:focus-within .enso-tooltip-bubble {
   opacity: 1;
   visibility: visible;
+}
+
+.enso-tooltip-wrap.tooltip-align-right .enso-tooltip-bubble {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.enso-tooltip-wrap.tooltip-align-right .enso-tooltip-bubble::after {
+  left: auto;
+  right: 8px;
+  transform: none;
+}
+
+.enso-tooltip-wrap.tooltip-align-left .enso-tooltip-bubble {
+  left: 0;
+  transform: none;
+}
+
+.enso-tooltip-wrap.tooltip-align-left .enso-tooltip-bubble::after {
+  left: 8px;
+  transform: none;
 }
 
 /* ==========================================================================
