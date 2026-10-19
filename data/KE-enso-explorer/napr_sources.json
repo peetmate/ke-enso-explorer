@@ -267,7 +267,7 @@
   "edition": "2023-24 edition",
   "table": "Annex 4: Area and Production of Pearl Millet by County",
   "page": 118,
-  "validation": "additivity + completeness (single-engine; pdfplumber unreliable on page)"
+  "validation": "dual-engine + additivity"
  },
  {
   "commodity": "Pigeon peas",
@@ -276,7 +276,7 @@
   "edition": "2023-24 edition",
   "table": "Annex 8: Area and Production of Pigeon peas by County",
   "page": 122,
-  "validation": "additivity + completeness (single-engine; pdfplumber unreliable on page)"
+  "validation": "dual-engine + additivity"
  },
  {
   "commodity": "Pigeon peas",
@@ -360,22 +360,31 @@
   "validation": "dual-engine + additivity"
  },
  {
-  "commodity": "Sugarcane",
+  "commodity": "Sugar (made)",
   "category": "crop",
-  "variables": "production (t)",
+  "variables": "production (t) - sugar output",
   "edition": "2023-24 edition",
-  "table": "Table 4.2: Area under Sugarcane, Area Harvested, Production, Average",
+  "table": "Table 4.3: Sugar Made by County, 2019-2023",
   "page": 47,
+  "validation": "dual-engine + additivity"
+ },
+ {
+  "commodity": "Sugar (made)",
+  "category": "crop",
+  "variables": "production (t) - sugar output",
+  "edition": "2024-25 edition",
+  "table": "Table 5.3.3: Sugar Production by County",
+  "page": 99,
   "validation": "dual-engine + additivity"
  },
  {
   "commodity": "Sugarcane",
   "category": "crop",
-  "variables": "production (t)",
-  "edition": "2024-25 edition",
-  "table": "Table 5.3.3: Sugar Production by County",
-  "page": 99,
-  "validation": "dual-engine + additivity"
+  "variables": "area (ha), production (t) - cane deliveries",
+  "edition": "2023-24 edition",
+  "table": "Annex 12: Comparative performance of the sugar industry by county, 2019-2023",
+  "page": 126,
+  "validation": "dual-engine + additivity (100% on all 20 columns; sugar == T4.3; cane == T4.2)"
  },
  {
   "commodity": "Sunflower",
@@ -420,7 +429,7 @@
   "edition": "2023-24 edition",
   "table": "Table 4.32: Green leaf Tea Production by county in Kenya",
   "page": 73,
-  "validation": "additivity + completeness (single-engine; pdfplumber unreliable on page)"
+  "validation": "dual-engine + additivity"
  },
  {
   "commodity": "Tea (green leaf)",
@@ -463,17 +472,26 @@
   "category": "livestock",
   "variables": "head",
   "edition": "2023-24 edition",
-  "table": "Annex 15-26: Population by county",
+  "table": "Annex 15-26: Population by county, 2021-2023 (pp.129-140)",
   "page": 129,
-  "validation": "dual-engine (per page) + cross-year plausibility"
+  "validation": "additivity to each page's printed Totals row + county sum vs national T6.1-T6.4(b) (napr_livestock_gate.csv) + pdfplumber token presence"
  },
  {
-  "commodity": "Livestock products (11)",
+  "commodity": "National livestock, products, sugarcane",
+  "category": "national",
+  "variables": "population, production, value, slaughter, cane",
+  "edition": "2023-24 + 2024-25 editions",
+  "table": "T4.2, T4.4, T6.1-T6.8 (2024 ed); T5.3.2, T5.3.5, T7.1-T7.12 (2025 ed)",
+  "page": 95,
+  "validation": "printed totals = sum of parts + completeness; cross-edition revisions reported (napr_national_gate.csv)"
+ },
+ {
+  "commodity": "Livestock products (14)",
   "category": "product",
   "variables": "quantity, value (KSh)",
   "edition": "2023-24 edition",
-  "table": "Annex 27: Livestock products by county",
-  "page": 143,
-  "validation": "value = quantity x unit-price + cross-year"
+  "table": "Annex 27: Livestock products by county (pp.141-156; pages headed 2021/2022 hold 2022/2023 data, p141 = 2021 quantities)",
+  "page": 141,
+  "validation": "additivity to printed Total + value = qty x price + year label vs national T6.6-T6.8 (napr_products_gate.csv); suspect flags"
  }
 ]

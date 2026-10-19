@@ -6,10 +6,10 @@
   "citation": "KNBS. National Agriculture Production Report. Nairobi, Kenya.",
   "license": "KNBS official statistics — public; cite KNBS.",
   "fetched_on": "2026-07-20",
-  "method": "Deterministic extraction (_sources/napr_build_livestock.py) via the napr_extract engine; dual-engine + cross-year plausibility (±50%) gate. No number typed by a model.",
-  "coverage": "13 species, head, 2021-2023.",
+  "method": "Deterministic extraction (_sources/napr_build_livestock.py + napr_annex.py), rebuilt 2026-10-15 (U2, _sources/napr_fix_2026-10-15.md). Column grid anchored on each annex page's printed Totals row; all printed county labels resolved (incl. broken-font Kilifi, 'T/Taveta'); no plausibility filtering. Gates: every column sums to the page's printed Totals row (all 39 species-years 100%); no unattributed rows; every value also present in pdfplumber's reading; county sum vs NAPR 2024 national tables T6.1-T6.4(b) per species-year in _sources/napr_livestock_gate.csv (38/39 within 1%; 2021 goats annex 33,681,560 vs T6.2 32,570,314 is a KNBS annex-vs-body difference, reported). Values are extension-officer estimates as printed by KNBS, not a census. No number typed by a model.",
+  "coverage": "13 species, head, 2021-2023, all 47 counties where printed (NAPR 2024 Annex 15-26, pp.129-140).",
   "used_by": "notebook §1.1 produce (Livestock view)",
-  "grain": "1537 rows",
+  "grain": "1716 rows",
   "columns": [
     "species",
     "county",

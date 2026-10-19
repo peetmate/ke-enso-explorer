@@ -6,20 +6,23 @@
   "citation": "KNBS. National Agriculture Production Report. Nairobi, Kenya.",
   "license": "KNBS official statistics — public; cite KNBS.",
   "fetched_on": "2026-07-20",
-  "method": "Deterministic extraction (_sources/napr_build_products.py); gated on the value = quantity x unit-price identity + cross-year plausibility. No number typed by a model.",
-  "coverage": "11 products, quantity + value, 2021-2022.",
+  "method": "Deterministic extraction (_sources/napr_build_products.py + napr_annex.py), rebuilt 2026-10-15 (U3/U4, _sources/napr_fix_2026-10-15.md). Annex 27 pages headed 'year 2021' (pp.143-149) and 'year 2022' (pp.150-156) hold 2022 and 2023 data: their printed Totals equal the national tables for 2022/2023 (e.g. beef 222,881,417 kg = T6.7(a) 2022; 237,907,405 kg = 2023), so `year` is the reconciled year and `year_printed` keeps the header label. p141 (quantity only: honey, wax, eggs, hides, skins) is genuine 2021 (Totals = T6.8 2021); p142 duplicates it. Gates: additivity to each page's printed Total (100%), value = qty x price, year label vs national (napr_products_gate.csv). KNBS copy-paste: p144 (wool/chevon) and p149 (hides/skins) repeat earlier pages in their lower rows and Total; copied cells and county rows that carry the national total are dropped, remaining rows on those pages are flagged. `suspect`/`suspect_reason` flag (not drop) KNBS-printed anomalies: under-entries (<0.1x the county's other years, e.g. Garissa/Mandera/Marsabit/Lamu 2022 milk), identical rows in both years (carry-forward), cross-product identical triples, value != qty x price. No number typed by a model.",
+  "coverage": "14 products. 2022-2023: quantity + unit price + value for milk, beef, goat meat, mutton, pork, rabbit meat, poultry meat, camel meat, honey, wax, eggs, hides, skins, wool. 2021: quantity only for honey, wax, eggs, hides, skins (no 2021 county milk/meat table exists in either edition; NAPR 2025 has no county product annex).",
   "used_by": "notebook §1.1 produce (Products view)",
-  "grain": "858 rows",
+  "grain": "1256 rows",
   "columns": [
     "product",
     "county",
     "gaul1_code",
     "year",
+    "year_printed",
     "quantity",
     "unit",
     "unit_price_ksh",
     "value_ksh",
     "source_file",
-    "pdf_page"
+    "pdf_page",
+    "suspect",
+    "suspect_reason"
   ]
 }

@@ -108,12 +108,31 @@ non-authored datasets are tracked in
   `https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/dmi.had.long.data` · ENSO probs
   `https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/probabilities/`.
 - **Acquire → build:** `_sources/enso_drivers_build.py` and `_sources/enso_state_prob_build.py` —
-  **self-fetching** (rerun to refresh; the CPC probabilities update monthly).
+  **self-fetching** (rerun to refresh; the CPC probabilities update monthly). One-shot refresh of
+  everything in this block plus the forecast plumes: `python3 scripts/update_drivers.py` (runs the
+  builders, `scripts/fetch_iri_plume.py`, `_sources/sintex_iod_build.py`, then the
+  `scripts/check_data_freshness.py` gate: live-snapshot fidelity, +40 d observation SLA on DMI and
+  Niño 3.4, +45 d issue SLA on both plumes, +20 d on the CPC probabilities).
+- **Niño 3.4 (Oct 2026):** CPC retired `ersst5.nino.mth.91-20.ascii` (last row 2026-06, de-listed).
+  `nino34_anom_noaa` in `driver_indices.parquet` is now refreshed by `enso_drivers_build.py` from the
+  maintained **ERSSTv6 monthly file** `https://www.cpc.ncep.noaa.gov/data/indices/detrend.nino34.ascii.txt`
+  (centered 30-yr base periods, the ONI input). Whole column replaced — one product, never spliced
+  onto v5. Months newer than the D409 bake carry only that column (Western-V/HadISST stay NULL).
 - **Reproducibility:** **git-full** for `enso_*`. `driver_indices.parquet` (Niño 3.4/DMI/Western-V
-  monthly) is **D409-only** (produced by the D409 pipeline, staged here).
+  monthly) is **D409-only** for every column except `nino34_anom_noaa` (see above).
 - **Licence:** US Government public domain (Western-V derived).
+- **Forecast plumes (Section 2 outlook, D28):** `iri_forecast_plume.json` — CCSR/IRI ENSO prediction plume,
+  decoded from the official figure SVG by `scripts/fetch_iri_plume.py` (per-model Niño 3.4 per 3-month
+  season; `current.seasons` + `current.seasonYears`; snapshot `_sources/IRI_plume.snapshot.svg`);
+  `iod_forecast_plume.json` — JAMSTEC SINTEX-F DMI ensemble by `_sources/sintex_iod_build.py` (init month
+  from the CSV; snapshot `_sources/SINTEX_DMI.snapshot.csv`). Both carry `metadata.releaseYear/releaseMonth`
+  for the 45-day issue SLA. Refreshed monthly by `scripts/update_drivers.py`; files are rewritten only when
+  content changes.
+- **Cadence:** CPC monthly indices for month M appear ~5th–8th of M+1; SINTEX M-init mid-M+1; IRI plume
+  ~19th–21st; CPC probabilities 2nd Thursday. Run the refresh after the 10th and after the 21st.
 - **Files:** `enso_drivers_seasonal.parquet`, `enso_drivers_monthly.parquet`,
-  `enso_state_probabilities.parquet`, `driver_indices.parquet`. **No `.meta.json` yet.**
+  `enso_state_probabilities.parquet`, `driver_indices.parquet`, `iri_forecast_plume.json`,
+  `iod_forecast_plume.json` (+ `.meta.json` for the parquets).
 
 ### 5. ENSO seasonal outlook (derived analogue)
 - **Source:** derived — CHIRPS county rainfall (§6) + the driver indices (§4).
@@ -205,15 +224,49 @@ non-authored datasets are tracked in
 - **Files:** `harveststat_county_production.parquet` (+`.meta.json`). Not yet served by the notebook —
   registered for the production×climate design (ISSUES KE-18 / V2-15 / V2-27).
 
+### 15. NDMA drought early warning bulletins (document index)
+- **Source:** National Drought Management Authority (NDMA) KnowledgeWeb document library —
+  National (ID=7) + County (ID=11) Drought Early Warning Bulletin categories.
+- **URL:** <https://knowledgeweb.ndma.go.ke/Public/Resources/Default.aspx?ID=7> (and `ID=11`).
+  Per-document PDF: `…/Library/doclink.aspx?document=<doc_uuid>`.
+- **Acquire → build:** `_sources/ndma_index_build.py` (self-fetching; `--selftest` first).
+  Reusable skill: `.claude/skills/harvest-ndma-bulletins`.
+- **Reproducibility:** **git-full** — the script fetches from the live site and needs no OneDrive
+  input. First PDF-adjacent git-full dataset here. Caveat: git-full means reproducible *while the
+  site is up and unchanged*; `_sources/.ndma_cache/` (gitignored) is the mitigation and is the thing
+  to copy to D409 if NDMA changes the site.
+- **Licence:** **UNRESOLVED — do not assert.** No terms page, no `robots.txt`, no copyright notice;
+  absence of a notice is not a licence grant. This holds **metadata about public documents** plus
+  deep links back to NDMA's pages — citation and federation. It is **not** a settled basis for
+  republishing values extracted from the PDF bodies. Settle before any extraction phase.
+- **Coverage:** 3,513 documents — **3,406 county** bulletins (2012-08 → 2026-08, **23 ASAL
+  counties**) + **107 national** (2016-10 → 2026-08). **Index only: no PDF is downloaded or parsed
+  and no indicator value is extracted.**
+- **Three traps:**
+  1. `uploaded_date` is the **upload** date, not the reference period — the back catalogue was bulk
+     uploaded in Dec 2021, so 1,537 rows carry a 2021 upload date including bulletins referencing
+     2012–2018. Use `ref_period` (parsed from the title) and check `ref_basis`.
+  2. NDMA's county category lists **3,410 rows but 3,406 distinct documents** — four are listed
+     twice at different offsets with the same grid key. The index carries one row per document;
+     the duplicate uuids are recorded in `_sources/ndma_index_validation_report.csv`.
+  3. **ASAL counties only — 23 of 47.** A missing county is structural, **never a zero**.
+- **Gate:** every sweep enumerates exactly the row count the site itself reports (checked per page
+  against the server's `Page n of N (M items)` echo); distinct documents + NDMA's repeat listings
+  reconcile to that row count; and a **second sweep under a different column sort surfaces zero new
+  documents**, which is what rules out offset paging silently dropping rows.
+- **Files:** `ndma_bulletin_index.parquet` (+`.meta.json`). Provenance:
+  `_sources/ndma_index_validation_report.csv`, `_sources/ndma_index_ledger.csv`.
+  Not yet served by the notebook — `doc_uuid` is the join key for a later extraction phase.
+
 ### (Reference) county ↔ GAUL24 lookup
 `county_key.parquet` — join key (FAO GAUL 2024); not a standalone dataset.
 
 ---
 
 ## State summary
-- **14 source-grouped datasets** (5 novel + 9 harmonized) from **27 parquet files** + 1 reference lookup.
+- **15 source-grouped datasets** (6 novel + 9 harmonized) from **28 parquet files** + 1 reference lookup.
 - Reproducible from git alone: **git-full** = the `enso_*` driver/outlook set (§4 self-fetch, §5 derived)
-  + `harveststat_county_production` (§14 self-fetch).
+  + `harveststat_county_production` (§14 self-fetch) + `ndma_bulletin_index` (§15 self-fetch).
   **git-transform** = NAPR, GESI, AFA-rice, NDVI, XBT, exposure, ASAP (script in repo, raw on OneDrive).
   **D409-only** = CHIRPS, FAOSTAT, IPC, market prices, ACLED, ReliefWeb, driver_indices.
 - `.meta.json` present for **all 26 parquet files** (written/refreshed 2026-08-07 by
