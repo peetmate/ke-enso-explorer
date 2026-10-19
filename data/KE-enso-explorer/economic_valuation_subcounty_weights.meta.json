@@ -1,0 +1,13 @@
+{
+  "dataset": "economic_valuation_subcounty_weights",
+  "title": "IEBC constituency allocation shares for county valuation totals",
+  "source": "See economic_valuation_prices.json 'sources' and _sources/valuation_evidence/source_registry.csv (per-row *_source_ids).",
+  "citation": "KNBS NAPR 2024/2025, Economic Survey 2025, KPHC 2019; NDMA bulletins 2019-21; KAMIS; AFA Yearbook 2025; HCD HVR 2022; Behnke & Muthami 2011 (audited); Field 1985; Kuria et al. 2016; Thiakunu et al. 2024; MapSPAM 2020.",
+  "license": "BETA, NOT FOR REDISTRIBUTION. Contains values derived from NDMA County Drought Early Warning Bulletins ((c) NDMA, All Rights Reserved; no licence), shown as annual county medians under research fair dealing while NDMA permission is sought (hazards_prototype #51). Do not publish to the CGIAR Data Hub, the Atlas S3 filestore or any download link until permission is granted. Other inputs: KNBS public statistics; MapSPAM CC-BY-4.0.",
+  "fetched_on": "2026-10-19",
+  "method": "share_j = w_j / county sum. Livestock and products: KPHC 2019 by constituency (census sub-county -> IEBC crosswalk). Crops and horticulture: MapSPAM 2020 physical area. weight_fallback = land-area shares where the prior is zero.",
+  "coverage": "290 constituencies, 47 counties.",
+  "used_by": "notebook Section 1.2 valuation engine (not yet wired)",
+  "grain": "9863 rows",
+  "columns": ["gaul1_code", "adm1_pcode", "adm2_pcode", "adm2_name", "sector", "commodity", "weight_key", "share", "weight_fallback", "weight_note", "weight_source_ids"]
+}

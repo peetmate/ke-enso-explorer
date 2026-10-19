@@ -1,0 +1,26 @@
+{
+  "dataset": "knbs_napr_national_tables",
+  "title": "KNBS national livestock, livestock-product and sugarcane tables, Kenya",
+  "source": "KNBS National Agriculture Production Report, 2023-24 edition (NAPR 2024: T4.2, T4.4, T6.1-T6.8) and 2024-25 edition (NAPR 2025: T5.3.2, T5.3.5, T7.1-T7.5, T7.7-T7.12)",
+  "url": "https://www.knbs.or.ke/",
+  "citation": "KNBS. National Agriculture Production Report. Nairobi, Kenya.",
+  "license": "KNBS official statistics — public; cite KNBS.",
+  "fetched_on": "2026-10-15",
+  "method": "Deterministic extraction (_sources/napr_build_national.py + napr_annex.py): rows located by printed label / year stub, numbers bound to columns by glyph right edge (rotated tables handled). Gates: completeness (every declared cell filled except cells printed '--' / blank), printed totals = sum of parts (cattle, sheep, goats, hives, meat quantity + value; 60/60 PASS). Cross-edition 2024 vs 2025 differences are reported in _sources/napr_national_gate.csv (KNBS revisions, e.g. 2023 milk 4,568.6 -> 5,242.1 M kg). `value` is as printed in `unit`; `value_base` = value x printed scale in `unit_base`. No number typed by a model.",
+  "coverage": "National, 2019-2023 (2024 ed) and 2019/2020-2024 (2025 ed): livestock populations by type, hives, milk production/intake + value, meat production + value, slaughter numbers, eggs/honey/wax/hides/skins/wool quantity + value, sugarcane area/harvested/deliveries/yield/farm-gate price, sugar production/imports/exports.",
+  "used_by": "reference for the county-sum gates in napr_build_livestock.py / napr_build_products.py; national context",
+  "grain": "752 rows",
+  "columns": [
+    "table_id",
+    "edition",
+    "source_file",
+    "pdf_page",
+    "item",
+    "metric",
+    "unit",
+    "year",
+    "value",
+    "unit_base",
+    "value_base"
+  ]
+}

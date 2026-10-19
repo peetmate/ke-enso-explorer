@@ -1,11 +1,11 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer — Kenya",
-  "version": "3.10.0",
-  "versionDisplay": "v3.10.0",
-  "build": "3031501",
-  "releaseDate": "2026-10-15",
-  "lastUpdated": "2026-10-15",
+  "version": "3.11.0",
+  "versionDisplay": "v3.11.0",
+  "build": "3031901",
+  "releaseDate": "2026-10-19",
+  "lastUpdated": "2026-10-19",
   "dataVintage": "2026-09",
   "authors": [
     "Pete Steward"
@@ -14,11 +14,51 @@
   "implementationPlan": "v3_8_11_review_remediation_plan.md",
   "availableVersions": [
     {
+      "id": "v3.11",
+      "version": "v3.11.0",
+      "label": "v3.11.0 (Agricultural & Pastoral Economic Valuation Engine Release)",
+      "url": "notebook_v3.html",
+      "status": "active",
+      "date": "2026-10-19",
+      "build": "3031901",
+      "description": "Interactive Agricultural & Pastoral Economic Valuation Engine (Beta): Participatory monetization of official county production balances and livestock census headcounts. Formally decouples standing herd capital stock ($869.3B KES national) from annual production flow ($1,157.2B KES national), integrates camels and official livestock products, parameterizes live animal offtake and milk yields against audited NDMA and KNBS price benchmarks, provides high-grade dairy share sensitivity controls, and features dasymetric disaggregation across all 290 parliamentary constituencies strictly preserving county sum identities.",
+      "highlights": [
+        "Participatory Valuation Engine (Section 1.2): Decouples standing capital stock (live animal asset wealth at risk from multi-season droughts) from annual production turnover (meat offtake, milk, crops, and products).",
+        "Full Species Scope & Camel Integration: Reintegrates camels (283k head in Marsabit representing $108M standing capital and $49M annual flow) alongside cattle, goats, sheep, donkeys, pigs, and poultry.",
+        "Audited Lactation & Offtake Parameters: Zone-specific lactation coefficients (arid, semi-arid, highland) and offtake rates parameterized against NDMA county bulletins and empirical rangeland audits.",
+        "Interactive Sensitivity Controls: Real-time user parameter overrides for crop and livestock prices, offtake rates, currency toggles (KES / USD with custom FX), and high-grade dairy cow quality share.",
+        "Constrained Dasymetric Disaggregation: Spatial allocation across all 290 IEBC parliamentary constituencies using FAO GLW4, RCMRD rangeland grazing suitability, and CropGRIDS physical areas, strictly preserving county sum identities.",
+        "Beta Data Governance Compliance: Robust beta disclaimer banner, zero open-access release, zero cloud uploads, and omission of bulk CSV downloads for economic valuation assets pending formal NDMA licensing (Decision D63)."
+      ],
+      "categories": [
+        {
+          "title": "Economic Valuation & Pastoral Modeling",
+          "icon": "Valuation",
+          "items": [
+            "Stock-Flow Decoupling: Separates living capital wealth from annual commodity flow, rectifying severe pastoral wealth under-representation.",
+            "NDMA Sentinel Pricing: Grounded in audited annual county price medians across Kenya's 23 ASAL counties.",
+            "High-Grade Dairy Sensitivity: Dynamic adjustment of dairy cow valuation between local and high-grade quality tiers."
+          ]
+        },
+        {
+          "title": "Spatial & Constitutional Disaggregation",
+          "icon": "Spatial",
+          "items": [
+            "290 Constituency Universe: Parliamentary constituency allocations preserving mathematical sum identities.",
+            "Spatial Priors: Multi-model gridded allocation using GLW4, RCMRD, and CropGRIDS."
+          ]
+        }
+      ],
+      "decisions": [
+        "D63"
+      ]
+    },
+    {
       "id": "v3.10",
       "version": "v3.10.0",
       "label": "v3.10.0 (Audience Reading Mode & Tone Alignment Release)",
-      "url": "notebook_v3.html",
-      "status": "active",
+      "url": "notebook_v3.html?v=3.10.0",
+      "status": "archived",
       "date": "2026-10-15",
       "build": "3031501",
       "description": "Audience Reading Mode & Scientific Tone Harmonization: Introduces a persistent, zero-latency Audience Reading Mode toggle (Operational vs Technical) in the sticky control bar, harmonizes institutional tone with CGIAR / Global Methane Hub Cattle GHG Uncertainty standards, completely purges decorative emojis, standardizes all 17 figure/table accordions to dual operational/technical summaries, and enriches Section 4 empirical hindcast verification metrics and planning advisories.",

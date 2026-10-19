@@ -1203,3 +1203,258 @@ html:not([data-audience-mode="technical"]) span.mode-technical-inline,
   display: none !important;
 }
 
+/* ==========================================================================
+   SECTION 1.2: AGRICULTURAL & PASTORAL ECONOMIC VALUATION ENGINE
+   ========================================================================== */
+
+.val-beta-banner {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #f59e0b;
+  border-radius: 6px;
+  padding: 0.85rem 1.15rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: #92400e;
+}
+
+.val-beta-badge {
+  background: #f59e0b;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.val-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #f8fafc;
+  border: 1px solid var(--enso-border, #e2e8f0);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.val-controls-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.val-btn-pill {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.val-btn-pill:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.val-btn-pill.active {
+  background: #0284c7;
+  border-color: #0284c7;
+  color: #ffffff;
+}
+
+.val-input-num {
+  width: 75px;
+  padding: 3px 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-monospace, monospace);
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.val-input-num:focus {
+  border-color: #0284c7;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.15);
+}
+
+.val-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.val-kpi-card {
+  background: #ffffff;
+  border: 1px solid var(--enso-border, #e2e8f0);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.val-kpi-card.highlight {
+  border-top: 3px solid #0284c7;
+}
+
+.val-kpi-card.secondary {
+  border-top: 3px solid #2D6A4F;
+}
+
+.val-kpi-card.tertiary {
+  border-top: 3px solid #ea580c;
+}
+
+.val-kpi-card.neutral {
+  border-top: 3px solid #64748b;
+}
+
+.val-kpi-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.val-kpi-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-family: var(--font-monospace, monospace);
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.val-kpi-sub {
+  font-size: 0.76rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.val-macro-bar-wrap {
+  background: #f8fafc;
+  border: 1px solid var(--enso-border, #e2e8f0);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.val-macro-bar {
+  display: flex;
+  height: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+  background: #e2e8f0;
+  margin: 6px 0 4px;
+}
+
+.val-macro-fill-livestock {
+  background: #0284c7;
+  transition: width 0.25s ease;
+}
+
+.val-macro-fill-crop {
+  background: #b45309;
+  transition: width 0.25s ease;
+}
+
+.val-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--enso-border, #e2e8f0);
+  border-radius: 6px;
+  background: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.val-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.80rem;
+  text-align: left;
+}
+
+.val-table th {
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-bottom: 1px solid #cbd5e1;
+  white-space: nowrap;
+}
+
+.val-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.val-table tr:hover {
+  background: #f8fafc;
+}
+
+.val-table td.num {
+  text-align: right;
+  font-family: var(--font-monospace, monospace);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.val-cell-input {
+  width: 80px;
+  text-align: right;
+  font-family: var(--font-monospace, monospace);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 2px 5px;
+  border: 1px solid #cbd5e1;
+  border-radius: 3px;
+  background: #fff;
+  color: #0f172a;
+}
+
+.val-cell-input:focus {
+  border-color: #0284c7;
+  outline: none;
+  background: #f0f9ff;
+}
+
+.val-cell-input.modified {
+  border-color: #f59e0b;
+  background: #fffbeb;
+  font-weight: 700;
+}
+
+.val-source-chip {
+  display: inline-block;
+  font-size: 0.70rem;
+  font-weight: 600;
+  color: #0369a1;
+  background: #e0f2fe;
+  padding: 1px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
