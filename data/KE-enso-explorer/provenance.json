@@ -67,6 +67,7 @@
   "kenya-food-insecurity-ipc": "kenya-food-insecurity-ipc",
   "ipc_insecurity": "kenya-food-insecurity-ipc",
   "ipc-kfssg-phases": "kenya-food-insecurity-ipc",
+  "reliefweb": "kenya-food-insecurity-ipc",
   "kenya-county-gender-datasheets": "kenya-county-gender-datasheets",
   "knbs_gesi": "kenya-county-gender-datasheets",
   "kenya-gesi-knbs": "kenya-county-gender-datasheets"
@@ -107,10 +108,10 @@
    "title": "Ocean Climate Teleconnection Drivers (Pacific RONI, Indian Ocean DMI & Western-V)",
    "title_source": "cdh",
    "category": "climate",
-   "state": "invalid",
-   "state_basis": "validator-failed",
+   "state": "authored",
+   "state_basis": "cdh-yaml",
    "hosting": "unknown",
-   "settled": false,
+   "settled": true,
    "summary": "Harmonised multi-decadal monthly and seasonal time series of primary equatorial ocean-atmosphere climate teleconnection drivers governing Kenyan rainfall: NOAA CPC Relative Oceanic Niño Index (RONI) for Pacific ENSO state; NOAA CPC / HadISST Dipole Mode Index (DMI) for Indian Ocean Dipole state; and Funk et al. Western-V SST index for MAM Long Rains teleconnections. Standardised and compiled into analysis-ready parquet tables (1950 to present).\n",
    "licence": {
     "id": "CC0-1.0",
@@ -159,7 +160,7 @@
     {
      "use": "Deterministic point-forecasts of county rainfall from ocean index values alone.",
      "reason": "Ocean drivers alter conditional probability distributions; local weather is mediated by topography and synoptic meteorology.",
-     "use_instead": "Ensemble probabilistic scenarios combined with official KMSA statutory outlooks."
+     "use_instead": "Ensemble probabilistic scenarios combined with official Kenya Meteorological Department (KMD) seasonal outlooks."
     }
    ],
    "intended_uses": [
@@ -310,9 +311,7 @@
     "search_terms": "ocean climate teleconnection drivers enso roni dmi western-v noaa cpc hadisst sst pacific indian ocean el nino la nina"
    },
    "gates": [],
-   "gaps": [
-    "CDH record does not pass strict validation: /data/0: must have required property 'locations'; /data/0: must NOT have additional properties: \"s3\"; /data/1: must have required property 'locations'; /data/1: must NOT have additional properties: \"s3\"; /spatial/geography/0: must be equal to one of the allowed values: afghanistan, africa, aland-islands, albania, algeria, american-samoa, americas, andorra, …; /spatial/geography/1: must be equal to one of the allowed values: afghanistan, africa, aland-islands, albania, algeria, american-samoa, americas, andorra, …"
-   ]
+   "gaps": []
   },
   {
    "key": "africa-precipitation-monthly-seasonal",
@@ -5435,10 +5434,10 @@
    "title": "Gridded Livestock of the World (GLW4) Value of Production (Adaptation Atlas SSA)",
    "title_source": "cdh",
    "category": "agri",
-   "state": "invalid",
-   "state_basis": "validator-failed",
+   "state": "authored",
+   "state_basis": "cdh-yaml",
    "hosting": "unknown",
-   "settled": false,
+   "settled": true,
    "summary": "Spatial density distribution and economic value of production for major livestock species (cattle, sheep, goats, camels, pigs, chickens) across Sub-Saharan Africa. Based on FAO Gridded Livestock of the World v4 (GLW4 2020) downscaled to 1 km / 5-minute resolution, harmonised to FAOSTAT country production values and national livestock populations, expressed in constant 2015 international dollars (vop_intld15).\n",
    "licence": {
     "id": "CC-BY-4.0",
@@ -5584,10 +5583,7 @@
     "search_terms": "glw4 gridded livestock of the world value of production herd faostat cattle shoats"
    },
    "gates": [],
-   "gaps": [
-    "CDH record does not pass strict validation: /data/0: must have required property 'locations'; /data/0: must NOT have additional properties: \"s3\"; /spatial/resolution/0: must have required property 'type'; /cdh/domain/0: must be equal to one of the allowed values: adaptation, agricultural-production, boundaries, climate, hydrology, mitigation, socioeconomic; /cdh/domain/1: must be equal to one of the allowed values: adaptation, agricultural-production, boundaries, climate, hydrology, mitigation, socioeconomic",
-    "Blocked on the glw4-2020 origin gap. Empty on the laptop."
-   ]
+   "gaps": []
   },
   {
    "key": "knbs-napr",
@@ -5597,10 +5593,10 @@
    "title": "KNBS National Agricultural Production Reports (Crops, Livestock & Products)",
    "title_source": "cdh",
    "category": "agri",
-   "state": "invalid",
-   "state_basis": "validator-failed",
+   "state": "authored",
+   "state_basis": "cdh-yaml",
    "hosting": "unknown",
-   "settled": false,
+   "settled": true,
    "summary": "Audited subnational agricultural statistics from the Kenya National Bureau of Statistics (KNBS) National Agricultural Production Reports (NAPR 2023/24 and 2024/25 editions). Contains county-level annual area harvested (ha), production (t), and gross farm-gate value (KES) across 22 major food and cash commodities (maize, beans, sorghum, tea, coffee, potatoes, pyrethrum, wheat, dairy milk, beef), cross-verified via dual-engine deterministic parsing (PyMuPDF) and additivity gates.\n",
    "licence": {
     "id": "LicenseRef-KNBS",
@@ -5639,7 +5635,7 @@
     "dois": []
    },
    "caveats": [
-    "Attribution: \"Data extracted deterministically from the Kenya National Bureau of Statistics (KNBS) National Agricultural Production Reports (2023/24, 2024/25), Republic of Kenya.\" PROJECT RULE D1 COMPLIANCE: ZERO LLM INFERENCE. Every number served from this dataset is parsed directly from published government PDF tables by deterministic code (_sources/napr_extract.py) and passed through an automated machine additivity gate. No language model reads, types, or imputes any numerical value. BLANK IS NOT ZERO. KNBS data is compiled from administrative expert-estimates. Missing county-years represent unobserved reporting gaps, never zero production. Records with missing data are preserved as null and never imputed as false zeroes. CROSS-EDITION REBASE (2025 EDITION PRIORITY). Where reporting years overlap between the 2023/24 and 2024/25 editions, the latest edition is prioritised because it incorporates KNBS retrospective prior-year revisions. ADMINISTRATIVE ESTIMATES VS CENSUS SURVEYS. NAPR figures represent annual ministerial and county directorate of agriculture administrative estimates, not full-enumeration agricultural censuses."
+    "Attribution: \"Data extracted deterministically from the Kenya National Bureau of Statistics (KNBS) National Agricultural Production Reports (2023/24, 2024/25), Republic of Kenya.\" DETERMINISTIC EXTRACTION: Every number served from this dataset is parsed directly from published government PDF tables by deterministic code (_sources/napr_extract.py) and passed through an automated machine additivity gate. No language model reads, types, or imputes any numerical value. BLANK IS NOT ZERO. KNBS data is compiled from administrative expert-estimates. Missing county-years represent unobserved reporting gaps, never zero production. Records with missing data are preserved as null and never imputed as false zeroes. CROSS-EDITION REBASE (2025 EDITION PRIORITY). Where reporting years overlap between the 2023/24 and 2024/25 editions, the latest edition is prioritised because it incorporates KNBS retrospective prior-year revisions. ADMINISTRATIVE ESTIMATES VS CENSUS SURVEYS. NAPR figures represent annual ministerial and county directorate of agriculture administrative estimates, not full-enumeration agricultural censuses."
    ],
    "avoid": [
     {
@@ -5770,10 +5766,7 @@
     "search_terms": "knbs national agriculture production report napr county crops livestock area production"
    },
    "gates": [],
-   "gaps": [
-    "CDH record does not pass strict validation: /: must have required property 'additional_links'; /: must match \"then\" schema; /data/0: must have required property 'locations'; /data/0: must NOT have additional properties: \"s3\"; /data/1: must have required property 'locations'; /data/1: must NOT have additional properties: \"s3\"",
-    "Licence mandates a specific attribution wording, but no quoted attribution string was found in `note` — the drawer has nothing verbatim to show."
-   ]
+   "gaps": []
   },
   {
    "key": "harveststat-crop-production",

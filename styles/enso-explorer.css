@@ -293,20 +293,26 @@
   padding-top: var(--enso-space-2);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: var(--enso-space-4);
+  align-items: flex-start;
+  gap: var(--enso-space-3);
   flex-wrap: wrap;
 }
 
 .enso-figure-footer-note {
-  flex: 1 1 240px;
-  font-size: 0.8rem;
-  color: var(--enso-text-muted);
-  line-height: 1.45;
+  flex: 1 1 520px;
+  max-width: calc(100% - 190px);
+  font-size: 0.81rem;
+  color: #475569;
+  line-height: 1.5;
 }
 
 .enso-figure-footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 /* Standard Details Fold (Point 8) */
