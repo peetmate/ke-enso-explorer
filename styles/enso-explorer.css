@@ -82,6 +82,7 @@
 }
 
 .enso-section-title {
+  font-family: var(--atlas-font-family, "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif);
   font-size: var(--enso-section-title-size);
   font-weight: 700;
   color: var(--enso-text);
