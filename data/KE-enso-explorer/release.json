@@ -3,7 +3,7 @@
   "title": "ENSO Explorer — Kenya",
   "version": "3.11.0",
   "versionDisplay": "v3.11.0",
-  "build": "3031912",
+  "build": "3031913",
   "releaseDate": "2026-10-19",
   "lastUpdated": "2026-10-19",
   "dataVintage": "2026-09",
@@ -20,7 +20,7 @@
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-10-19",
-      "build": "3031912",
+      "build": "3031913",
       "description": "Interactive Agricultural & Pastoral Economic Valuation Engine (Beta): Participatory monetization of official county production balances and livestock census headcounts. Formally decouples standing herd capital stock ($869.3B KES national) from annual production flow ($1,157.2B KES national), integrates camels and official livestock products, parameterizes live animal offtake and milk yields against audited NDMA and KNBS price benchmarks, provides high-grade dairy share sensitivity controls, and features dasymetric disaggregation across all 290 parliamentary constituencies strictly preserving county sum identities.",
       "highlights": [
         "Participatory Valuation Engine (Section 1.2): Decouples standing capital stock (live animal asset wealth at risk from multi-season droughts) from annual production turnover (meat offtake, milk, crops, and products).",
