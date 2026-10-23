@@ -181,6 +181,11 @@
         return link('https://doi.org/' + d, d);
       }).join(' &middot; ') + '</p>';
     }
+    html += '<div style="margin-top: 0.65rem;">' +
+      '<button type="button" class="enso-citation-btn" data-prov-citation-copy="' + esc(e.key) + '">' +
+      'Copy Dataset Citation' +
+      '</button>' +
+      '</div>';
     return html;
   }
 
@@ -420,7 +425,10 @@
       esc(has(e.assets) && e.assets[0].s3 ? e.assets[0].s3
           : has((e.notebook || {}).files) ? e.notebook.files[0]
           : 'no published location recorded') + '</span>' +
+      '<div style="display: inline-flex; align-items: center; gap: 6px;">' +
+      '<button type="button" class="enso-citation-btn" data-prov-citation-copy="' + esc(e.key) + '" style="padding: 3px 8px; font-size: 0.72rem;">Copy Citation</button>' +
       '<button type="button" class="copy-btn" data-prov-open="' + esc(e.key) + '">Provenance</button>' +
+      '</div>' +
       '</div>';
 
     return h + '</article>';
@@ -518,13 +526,80 @@
     openMethodDrawer(key);
   }
 
+  /* ------------------------------------------------------------- citations */
+
+  function formatCitation(e, opts) {
+    if (!e) return '';
+    var C = e.citation || {};
+    var baseText = (C.text || e.title || '').trim();
+    if (baseText && !/[.!?]$/.test(baseText)) baseText += '.';
+
+    var url = C.url || (has(C.dois) ? 'https://doi.org/' + C.dois[0] : null);
+    var accessDate = (opts && opts.accessDate) || C.accessed || (e.technical && e.technical.updated) || '2026-10-21';
+
+    var out = baseText;
+    if (url) {
+      out += ' Accessed ' + accessDate + ' from ' + url;
+      if (!/[.!?]$/.test(out)) out += '.';
+    }
+    return out;
+  }
+
+  function fallbackCopy(text, cb) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    ta.style.top = '-9999px';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      document.execCommand('copy');
+      if (cb) cb();
+    } catch (err) {}
+    document.body.removeChild(ta);
+  }
+
+  function copyDatasetCitation(key, btnEl) {
+    var e = resolve(key);
+    if (!e) {
+      console.warn('copyDatasetCitation: could not resolve key', key);
+      return;
+    }
+    var citationText = formatCitation(e);
+    if (!citationText) return;
+
+    function showFeedback() {
+      if (!btnEl) return;
+      var was = btnEl.innerText;
+      btnEl.classList.add('citation-copied');
+      btnEl.innerText = '✓ Copied!';
+      setTimeout(function () {
+        btnEl.innerText = was;
+        btnEl.classList.remove('citation-copied');
+      }, 2000);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(citationText).then(showFeedback).catch(function () {
+        fallbackCopy(citationText, showFeedback);
+      });
+    } else {
+      fallbackCopy(citationText, showFeedback);
+    }
+  }
+
   /* --------------------------------------------------------------- wiring */
 
   function bind() {
     document.addEventListener('click', function (ev) {
-      var t = ev.target.closest ? ev.target.closest('[data-prov-open],[data-prov-key],[data-prov-cat],[data-prov-copy]') : null;
+      var t = ev.target.closest ? ev.target.closest('[data-prov-open],[data-prov-key],[data-prov-cat],[data-prov-copy],[data-prov-citation-copy]') : null;
       if (!t) return;
-      if (t.hasAttribute('data-prov-open')) {
+      if (t.hasAttribute('data-prov-citation-copy')) {
+        ev.preventDefault();
+        copyDatasetCitation(t.getAttribute('data-prov-citation-copy'), t);
+      } else if (t.hasAttribute('data-prov-open')) {
         ev.preventDefault();
         openMethodDrawer(t.getAttribute('data-prov-open'));
       } else if (t.hasAttribute('data-prov-key')) {
@@ -579,10 +654,19 @@
   }
 
   window.provenanceDrawer = {
-    mount: mount, open: openMethodDrawer, close: closeDrawer, resolveKey: resolveKey, state: S
+    mount: mount,
+    open: openMethodDrawer,
+    close: closeDrawer,
+    resolveKey: resolveKey,
+    resolve: resolve,
+    state: S,
+    formatCitation: formatCitation,
+    copyCitation: copyDatasetCitation
   };
   window.openMethodDrawer = openMethodDrawer;
   window.closeDrawer = closeDrawer;
+  window.copyDatasetCitation = copyDatasetCitation;
+  window.formatDatasetCitation = formatCitation;
   window.jumpToFullCatalog = function () {
     if (typeof window.jumpToDatasetCard === 'function' && S.activeKey) {
       window.jumpToDatasetCard(S.activeKey);

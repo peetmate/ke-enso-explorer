@@ -1,0 +1,300 @@
+{
+  "type": "FeatureCollection",
+  "name": "kenya_riverine_flood_hotspots",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "hotspot-nzoia-budalangi",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.02,
+          0.125
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-nzoia-budalangi",
+        "river_name": "Nzoia River",
+        "place_name": "Budalang'i Floodplain & Dykes",
+        "county_name": "Busia",
+        "subcounty": "Budalangi",
+        "county_code": "040",
+        "basin": "Lake Victoria Basin",
+        "hazard_type": "Fluvial Riverine Overtopping & Dyke Breaches",
+        "teleconnection_sensitivity": "High vulnerability during El Niño Short Rains (OND) and Equatorial Wave surges (MAM)",
+        "description": "High-discharge outflow from Mt. Elgon and Cherang'any hills funneling through narrow lowland dykes; backflow from Lake Victoria backwaters submerging villages and farmland across Bunyala.",
+        "doc_evidence": "KFSSG Short Rains Assessment 2023; KMD Seasonal Flood Bulletins; NDMA Busia Early Warning."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-nyando-kano",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.92,
+          -0.155
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-nyando-kano",
+        "river_name": "Nyando River",
+        "place_name": "Ahero & Kano Plains",
+        "county_name": "Kisumu",
+        "subcounty": "Nyando",
+        "county_code": "042",
+        "basin": "Lake Victoria Basin",
+        "hazard_type": "Alluvial Floodplain Inundation & Lacustrine Backwater",
+        "teleconnection_sensitivity": "Extreme flood risk during El Niño and positive IOD Short Rains (OND 1997, 2019, 2023)",
+        "description": "Rapid torrential runoff from Nandi escarpment spreading across the flat alluvial Kano Plains; overtopping river training dykes, submerging Ahero rice irrigation paddies, and paralyzing the Kisumu–Kericho highway.",
+        "doc_evidence": "KFSSG SRA 2023/24; NDMA Kisumu Early Warning Bulletins; JRC GloFAS RP20 Hazard Assessment."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-kerio-kainuk",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.53,
+          1.58
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-kerio-kainuk",
+        "river_name": "Kerio River",
+        "place_name": "Kainuk Bridge Corridor",
+        "county_name": "Turkana",
+        "subcounty": "Turkana South",
+        "county_code": "023",
+        "basin": "Lake Turkana Basin",
+        "hazard_type": "Torrential Riverine Flash Deluges & Highway Approach Scouring",
+        "teleconnection_sensitivity": "Severe pulse flooding during enhanced OND convective rainfall",
+        "description": "Steep orographic runoff from Cherang'any hills surges down the Kerio canyon; repeatedly overtopping and washing out bridge approaches along the critical A1 Kitale–Lodwar transit artery.",
+        "doc_evidence": "NDMA Turkana Early Warning Bulletins; KFSSG Long/Short Rains Assessments; Kenya Red Cross Flood Dispatches."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-daua-mandera",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.865,
+          3.935
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-daua-mandera",
+        "river_name": "Daua River",
+        "place_name": "Mandera Border Floodplain",
+        "county_name": "Mandera",
+        "subcounty": "Mandera East",
+        "county_code": "009",
+        "basin": "Daua / Juba Basin",
+        "hazard_type": "Transboundary Riverine Overflow & Urban Perimeter Submergence",
+        "teleconnection_sensitivity": "Extreme sensitivity to Ethiopian highland convective deluges during El Niño / +IOD (1997, 2019, 2023)",
+        "description": "Transboundary flood waves generated in the Ethiopian massif funnel into the Daua River, overtopping riverbanks in Mandera municipality, destroying riverbank irrigation pumps, and contaminating shallow boreholes.",
+        "doc_evidence": "NDMA Mandera Early Warning Bulletins; KFSSG National SRA 2023; KMD Flood Warnings."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-tana-garissa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.645,
+          -0.455
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-tana-garissa",
+        "river_name": "Tana River",
+        "place_name": "Garissa Municipality & Mororo",
+        "county_name": "Garissa",
+        "subcounty": "Garissa Township",
+        "county_code": "007",
+        "basin": "Tana River Basin",
+        "hazard_type": "Major Riverine Overflow & Main Transit Artery Washout",
+        "teleconnection_sensitivity": "Highly sensitive to Upper Tana / Aberdare deluges and Seven Forks hydro cascade spills during El Niño / +IOD",
+        "description": "Severe riverine swelling breaching Garissa town flood dykes; extensive inundation of Mororo and Madogo settlements; submerging the A3 Nairobi–Garissa–Dadaab commercial artery.",
+        "doc_evidence": "KFSSG National SRA 2023/24; NDMA Garissa Drought Early Warning; UN OCHA Flood Sitreps."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-tana-delta",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.115,
+          -1.88
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-tana-delta",
+        "river_name": "Tana River",
+        "place_name": "Hola & Garsen (Tana Delta)",
+        "county_name": "Tana River",
+        "subcounty": "Galole",
+        "county_code": "004",
+        "basin": "Tana River Basin",
+        "hazard_type": "Expansive Meandering Floodplain Submergence & Delta Inundation",
+        "teleconnection_sensitivity": "Extreme cumulative flood accumulation during OND El Niño / +IOD surges",
+        "description": "Broad downstream fluvial dispersion spreading floodwaters across tens of kilometers of low-lying floodplains; cutting the B8 Malindi–Garsen–Garissa highway and displacing riverine pastoral and farming communities.",
+        "doc_evidence": "KFSSG National SRA 2023/24; NDMA Tana River Early Warning; Copernicus GFM SAR observations."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-sabaki-malindi",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.14,
+          -3.15
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-sabaki-malindi",
+        "river_name": "Sabaki (Galana) River",
+        "place_name": "Malindi & Magarini Floodplain",
+        "county_name": "Kilifi",
+        "subcounty": "Magarini",
+        "county_code": "003",
+        "basin": "Athi-Galana-Sabaki Basin",
+        "hazard_type": "Riverine Outflow & Coastal Estuary Inundation",
+        "teleconnection_sensitivity": "High surge risk following heavy rainfall across Athi / Tsavo catchments",
+        "description": "Downstream funnel of the Athi-Galana-Sabaki system overtopping banks north of Malindi town; flooding agricultural settlements, bridge approaches, and irrigation schemes in Magarini.",
+        "doc_evidence": "KMD Coastal Marine & River Flood Alerts; NDMA Kilifi Early Warning; KFSSG Assessments."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-ewaso-lorian",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.7,
+          0.65
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-ewaso-lorian",
+        "river_name": "Ewaso Ng'iro North River",
+        "place_name": "Gotu Bridge & Lorian Swamp",
+        "county_name": "Isiolo",
+        "subcounty": "Isiolo",
+        "county_code": "011",
+        "basin": "Ewaso Ng'iro North Basin",
+        "hazard_type": "Inland Arid Basin Flood Spreading & Terminating Pan Swell",
+        "teleconnection_sensitivity": "Triggered by heavy rainfall on Mt. Kenya and Aberdare massifs during wet ENSO phases",
+        "description": "High-energy flash flows discharging into arid lowlands; washing out Gotu bridge and spreading into the expansive Lorian Swamp, cutting off rural feeder links between Isiolo and Wajir.",
+        "doc_evidence": "NDMA Isiolo Early Warning Bulletins; KFSSG Short Rains Assessments."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-turkwel-lodwar",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.6,
+          3.12
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-turkwel-lodwar",
+        "river_name": "Turkwel River",
+        "place_name": "Lodwar Municipality",
+        "county_name": "Turkana",
+        "subcounty": "Turkana Central",
+        "county_code": "023",
+        "basin": "Lake Turkana Basin",
+        "hazard_type": "Fluvial Riverbank Inundation & Municipal Crossing Washout",
+        "teleconnection_sensitivity": "High flood volumes during enhanced Mt. Elgon / Turkwel catchment rainfall",
+        "description": "Large fluvial discharges overtopping river training works in Lodwar municipality; submerging informal riverbank agriculture and threatening bridges along key relief routes.",
+        "doc_evidence": "NDMA Turkana Early Warning Bulletins; KFSSG LRA/SRA Reports."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-chalbi-kalacha",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.433,
+          3.233
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-chalbi-kalacha",
+        "river_name": "Chalbi Endorheic Basin Drainage",
+        "place_name": "Kalacha Oasis & Chalbi Pan",
+        "county_name": "Marsabit",
+        "subcounty": "North Horr",
+        "county_code": "010",
+        "basin": "Chalbi Endorheic Basin",
+        "hazard_type": "Closed Depression Inundation & Desert Inland Sea Accumulation",
+        "teleconnection_sensitivity": "Extreme accumulation during Super El Niño (1997, 2023) and record +IOD (2019)",
+        "description": "Internal convergence of torrential runoff from Ethiopian highlands and volcanic plateaus into a closed desert depression; creating a 1,500–2,100 km² inland sea that maroons Kalacha and North Horr for months.",
+        "doc_evidence": "Copernicus GFM Sentinel-1 SAR observations; NDMA Marsabit Early Warning Bulletins."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-merille-milgis",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.73,
+          1.48
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-merille-milgis",
+        "river_name": "Milgis & Merille Sand Rivers (Laggas)",
+        "place_name": "A2 Highway Bridge Corridors",
+        "county_name": "Marsabit",
+        "subcounty": "Laisamis",
+        "county_code": "010",
+        "basin": "Northern Pastoral Lagga Catchment",
+        "hazard_type": "Dry Sand-River Flash Surge & Trans-African Highway Severance",
+        "teleconnection_sensitivity": "High flash surge frequency during intense convective short rains",
+        "description": "Violent flash torrents rushing down dry ephemeral wadis overtopping bridge decks and washing out approach abutments along the paved A2 highway, severing transit between Nairobi and Ethiopia.",
+        "doc_evidence": "NDMA Marsabit Early Warning Bulletins; KFSSG Assessments; Copernicus GFM Road Exposure."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hotspot-kuja-migori",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.25,
+          -0.92
+        ]
+      },
+      "properties": {
+        "hotspot_id": "hotspot-kuja-migori",
+        "river_name": "Kuja (Gucha) River",
+        "place_name": "Nyatike Lower Floodplain",
+        "county_name": "Migori",
+        "subcounty": "Nyatike",
+        "county_code": "044",
+        "basin": "Lake Victoria Basin",
+        "hazard_type": "Meandering River Overtopping & Lake Victoria Backwater",
+        "teleconnection_sensitivity": "High vulnerability during enhanced western Kenya seasonal rains",
+        "description": "Downstream confluence of Kuja and Migori rivers overflowing low dykes in Nyatike; submerging artisanal gold mining areas, maize plots, and lake shoreline settlements.",
+        "doc_evidence": "NDMA Migori Early Warning; KMD Western Kenya Weather Advisories."
+      }
+    }
+  ]
+}

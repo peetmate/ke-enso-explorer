@@ -1,0 +1,12 @@
+{
+  "dataset": "flood_hotspots",
+  "title": "Kenya Riverine Flood Hotspots & Fluvial Inundation Corridors",
+  "version": "1.0.0",
+  "description": "Authoritative spatial inventory of major Kenya riverine flood hotspots, floodplain overtopping reaches, and critical infrastructure severance corridors (KE-58). Synthesized from JRC GloFAS RP20 return periods, Copernicus GFM Sentinel-1 SAR flood observations, Kenya Food Security Steering Group (KFSSG) assessments, National Drought Management Authority (NDMA) early warning bulletins, and Kenya Meteorological Department (KMD) advisories.",
+  "spatial_coverage": "Kenya nationwide (47 counties)",
+  "temporal_coverage": "1997–2026",
+  "coordinate_system": "WGS 84 (EPSG:4326)",
+  "licence": "Open Database License (ODbL) / CC-BY 4.0",
+  "attribution": "Adaptation Atlas Kenya / KFSSG / NDMA / KMD / OpenStreetMap contributors",
+  "hotspots_count": 12
+}
