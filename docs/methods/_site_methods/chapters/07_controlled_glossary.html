@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Controlled Vocabulary &amp; Scientific Glossary – Kenya ENSO Explorer: Citable Scientific Methods Monograph &amp; Companion Documentation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/06_dataset_catalogue_and_provenance.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/07_controlled_glossary.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Controlled Vocabulary &amp; Scientific Glossary</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Kenya ENSO Explorer: Citable Scientific Methods Monograph &amp; Companion Documentation</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/AdaptationAtlas/atlas_notebooks" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="../Kenya-ENSO-Explorer--Citable-Scientific-Methods-Monograph---Companion-Documentation.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Overview &amp; Citation Guide</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01_county_context_and_demography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">County Context, Demography &amp; Social Inclusion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02_climate_teleconnections_and_forecasts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Equatorial Ocean Teleconnections &amp; Seasonal Forecasting</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03_precipitation_climatology_and_regimes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Precipitation Climatology, Empirical Quantiles &amp; Regimes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04_satellite_earth_observation_and_hazards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Satellite Earth Observation, Hazards &amp; Exposure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05_agricultural_and_livestock_valuation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Agricultural Production &amp; Economic Valuation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06_dataset_catalogue_and_provenance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Master Dataset Catalogue &amp; Data Provenance</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07_controlled_glossary.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Controlled Vocabulary &amp; Scientific Glossary</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#controlled-vocabulary-scientific-glossary" id="toc-controlled-vocabulary-scientific-glossary" class="nav-link active" data-scroll-target="#controlled-vocabulary-scientific-glossary"><span class="header-section-number">9</span> Controlled Vocabulary &amp; Scientific Glossary</a>
+  <ul class="collapse">
+  <li><a href="#administrative-geography" id="toc-administrative-geography" class="nav-link" data-scroll-target="#administrative-geography"><span class="header-section-number">9.1</span> Administrative &amp; Geography</a>
+  <ul class="collapse">
+  <li><a href="#arid-and-semi-arid-lands-asal" id="toc-arid-and-semi-arid-lands-asal" class="nav-link" data-scroll-target="#arid-and-semi-arid-lands-asal"><span class="header-section-number">9.1.1</span> Arid and Semi-Arid Lands (ASAL)</a></li>
+  <li><a href="#common-operational-datasets---administrative-boundaries-cod-ab" id="toc-common-operational-datasets---administrative-boundaries-cod-ab" class="nav-link" data-scroll-target="#common-operational-datasets---administrative-boundaries-cod-ab"><span class="header-section-number">9.1.2</span> Common Operational Datasets - Administrative Boundaries (COD-AB)</a></li>
+  <li><a href="#humanitarian-openstreetmap-team-facilities-hot-osm" id="toc-humanitarian-openstreetmap-team-facilities-hot-osm" class="nav-link" data-scroll-target="#humanitarian-openstreetmap-team-facilities-hot-osm"><span class="header-section-number">9.1.3</span> Humanitarian OpenStreetMap Team Facilities (HOT-OSM)</a></li>
+  <li><a href="#kenya-power-and-lighting-company-grid-kplc" id="toc-kenya-power-and-lighting-company-grid-kplc" class="nav-link" data-scroll-target="#kenya-power-and-lighting-company-grid-kplc"><span class="header-section-number">9.1.4</span> Kenya Power and Lighting Company Grid (KPLC)</a></li>
+  </ul></li>
+  <li><a href="#climatology-seasons" id="toc-climatology-seasons" class="nav-link" data-scroll-target="#climatology-seasons"><span class="header-section-number">9.2</span> Climatology &amp; Seasons</a>
+  <ul class="collapse">
+  <li><a href="#long-rains-mam" id="toc-long-rains-mam" class="nav-link" data-scroll-target="#long-rains-mam"><span class="header-section-number">9.2.1</span> Long Rains (MAM)</a></li>
+  <li><a href="#pastoral-boreal-summer-window-jjas-jas" id="toc-pastoral-boreal-summer-window-jjas-jas" class="nav-link" data-scroll-target="#pastoral-boreal-summer-window-jjas-jas"><span class="header-section-number">9.2.2</span> Pastoral Boreal Summer Window (JJAS / JAS)</a></li>
+  <li><a href="#short-rains-ond" id="toc-short-rains-ond" class="nav-link" data-scroll-target="#short-rains-ond"><span class="header-section-number">9.2.3</span> Short Rains (OND)</a></li>
+  <li><a href="#wmo-19912020-standard-normal-baseline-wmo-normal" id="toc-wmo-19912020-standard-normal-baseline-wmo-normal" class="nav-link" data-scroll-target="#wmo-19912020-standard-normal-baseline-wmo-normal"><span class="header-section-number">9.2.4</span> WMO 1991–2020 Standard Normal Baseline (WMO Normal)</a></li>
+  <li><a href="#warm-dry-season-window-djf" id="toc-warm-dry-season-window-djf" class="nav-link" data-scroll-target="#warm-dry-season-window-djf"><span class="header-section-number">9.2.5</span> Warm Dry Season Window (DJF)</a></li>
+  </ul></li>
+  <li><a href="#demography-equity" id="toc-demography-equity" class="nav-link" data-scroll-target="#demography-equity"><span class="header-section-number">9.3</span> Demography &amp; Equity</a>
+  <ul class="collapse">
+  <li><a href="#gender-equality-and-social-inclusion-gesi" id="toc-gender-equality-and-social-inclusion-gesi" class="nav-link" data-scroll-target="#gender-equality-and-social-inclusion-gesi"><span class="header-section-number">9.3.1</span> Gender Equality and Social Inclusion (GESI)</a></li>
+  </ul></li>
+  <li><a href="#economic-valuation" id="toc-economic-valuation" class="nav-link" data-scroll-target="#economic-valuation"><span class="header-section-number">9.4</span> Economic &amp; Valuation</a>
+  <ul class="collapse">
+  <li><a href="#gross-value-of-production-vop" id="toc-gross-value-of-production-vop" class="nav-link" data-scroll-target="#gross-value-of-production-vop"><span class="header-section-number">9.4.1</span> Gross Value of Production (VOP)</a></li>
+  </ul></li>
+  <li><a href="#food-security-vulnerability" id="toc-food-security-vulnerability" class="nav-link" data-scroll-target="#food-security-vulnerability"><span class="header-section-number">9.5</span> Food Security &amp; Vulnerability</a>
+  <ul class="collapse">
+  <li><a href="#integrated-food-security-phase-classification-ipc" id="toc-integrated-food-security-phase-classification-ipc" class="nav-link" data-scroll-target="#integrated-food-security-phase-classification-ipc"><span class="header-section-number">9.5.1</span> Integrated Food Security Phase Classification (IPC)</a></li>
+  <li><a href="#reduced-coping-strategy-index-rcsi" id="toc-reduced-coping-strategy-index-rcsi" class="nav-link" data-scroll-target="#reduced-coping-strategy-index-rcsi"><span class="header-section-number">9.5.2</span> Reduced Coping Strategy Index (rCSI)</a></li>
+  </ul></li>
+  <li><a href="#institutional-governance" id="toc-institutional-governance" class="nav-link" data-scroll-target="#institutional-governance"><span class="header-section-number">9.6</span> Institutional &amp; Governance</a>
+  <ul class="collapse">
+  <li><a href="#agriculture-and-food-authority-afa" id="toc-agriculture-and-food-authority-afa" class="nav-link" data-scroll-target="#agriculture-and-food-authority-afa"><span class="header-section-number">9.6.1</span> Agriculture and Food Authority (AFA)</a></li>
+  <li><a href="#anticipatory-action-aa" id="toc-anticipatory-action-aa" class="nav-link" data-scroll-target="#anticipatory-action-aa"><span class="header-section-number">9.6.2</span> Anticipatory Action (AA)</a></li>
+  <li><a href="#comprehensive-data-hub-schema-cdh-schema" id="toc-comprehensive-data-hub-schema-cdh-schema" class="nav-link" data-scroll-target="#comprehensive-data-hub-schema-cdh-schema"><span class="header-section-number">9.6.3</span> Comprehensive Data Hub Schema (CDH Schema)</a></li>
+  <li><a href="#disaster-risk-reduction-drr" id="toc-disaster-risk-reduction-drr" class="nav-link" data-scroll-target="#disaster-risk-reduction-drr"><span class="header-section-number">9.6.4</span> Disaster Risk Reduction (DRR)</a></li>
+  <li><a href="#famine-early-warning-systems-network-fews-net" id="toc-famine-early-warning-systems-network-fews-net" class="nav-link" data-scroll-target="#famine-early-warning-systems-network-fews-net"><span class="header-section-number">9.6.5</span> Famine Early Warning Systems Network (FEWS NET)</a></li>
+  <li><a href="#food-and-agriculture-organization-fao-faostat" id="toc-food-and-agriculture-organization-fao-faostat" class="nav-link" data-scroll-target="#food-and-agriculture-organization-fao-faostat"><span class="header-section-number">9.6.6</span> Food and Agriculture Organization (FAO / FAOSTAT)</a></li>
+  <li><a href="#kenya-agricultural-and-livestock-research-organization-kalro" id="toc-kenya-agricultural-and-livestock-research-organization-kalro" class="nav-link" data-scroll-target="#kenya-agricultural-and-livestock-research-organization-kalro"><span class="header-section-number">9.6.7</span> Kenya Agricultural and Livestock Research Organization (KALRO)</a></li>
+  <li><a href="#kenya-food-security-steering-group-kfssg" id="toc-kenya-food-security-steering-group-kfssg" class="nav-link" data-scroll-target="#kenya-food-security-steering-group-kfssg"><span class="header-section-number">9.6.8</span> Kenya Food Security Steering Group (KFSSG)</a></li>
+  <li><a href="#kenya-meteorological-department-kmd" id="toc-kenya-meteorological-department-kmd" class="nav-link" data-scroll-target="#kenya-meteorological-department-kmd"><span class="header-section-number">9.6.9</span> Kenya Meteorological Department (KMD)</a></li>
+  <li><a href="#kenya-national-bureau-of-statistics-knbs" id="toc-kenya-national-bureau-of-statistics-knbs" class="nav-link" data-scroll-target="#kenya-national-bureau-of-statistics-knbs"><span class="header-section-number">9.6.10</span> Kenya National Bureau of Statistics (KNBS)</a></li>
+  <li><a href="#national-drought-management-authority-ndma" id="toc-national-drought-management-authority-ndma" class="nav-link" data-scroll-target="#national-drought-management-authority-ndma"><span class="header-section-number">9.6.11</span> National Drought Management Authority (NDMA)</a></li>
+  <li><a href="#regional-centre-for-mapping-of-resources-for-development-rcmrd" id="toc-regional-centre-for-mapping-of-resources-for-development-rcmrd" class="nav-link" data-scroll-target="#regional-centre-for-mapping-of-resources-for-development-rcmrd"><span class="header-section-number">9.6.12</span> Regional Centre for Mapping of Resources for Development (RCMRD)</a></li>
+  <li><a href="#reliefweb-disaster-chronicle-reliefweb-glide" id="toc-reliefweb-disaster-chronicle-reliefweb-glide" class="nav-link" data-scroll-target="#reliefweb-disaster-chronicle-reliefweb-glide"><span class="header-section-number">9.6.13</span> ReliefWeb Disaster Chronicle (ReliefWeb / GLIDE)</a></li>
+  </ul></li>
+  <li><a href="#markets-early-warning" id="toc-markets-early-warning" class="nav-link" data-scroll-target="#markets-early-warning"><span class="header-section-number">9.7</span> Markets &amp; Early Warning</a>
+  <ul class="collapse">
+  <li><a href="#cross-border-food-trade-xbt-trade" id="toc-cross-border-food-trade-xbt-trade" class="nav-link" data-scroll-target="#cross-border-food-trade-xbt-trade"><span class="header-section-number">9.7.1</span> Cross-Border Food Trade (XBT Trade)</a></li>
+  <li><a href="#kenya-agricultural-market-information-system-kamis" id="toc-kenya-agricultural-market-information-system-kamis" class="nav-link" data-scroll-target="#kenya-agricultural-market-information-system-kamis"><span class="header-section-number">9.7.2</span> Kenya Agricultural Market Information System (KAMIS)</a></li>
+  <li><a href="#pastoral-terms-of-trade-tot" id="toc-pastoral-terms-of-trade-tot" class="nav-link" data-scroll-target="#pastoral-terms-of-trade-tot"><span class="header-section-number">9.7.3</span> Pastoral Terms of Trade (ToT)</a></li>
+  </ul></li>
+  <li><a href="#ocean-climate-drivers" id="toc-ocean-climate-drivers" class="nav-link" data-scroll-target="#ocean-climate-drivers"><span class="header-section-number">9.8</span> Ocean &amp; Climate Drivers</a>
+  <ul class="collapse">
+  <li><a href="#columbia-iri-prediction-plume-iri-plume" id="toc-columbia-iri-prediction-plume-iri-plume" class="nav-link" data-scroll-target="#columbia-iri-prediction-plume-iri-plume"><span class="header-section-number">9.8.1</span> Columbia IRI Prediction Plume (IRI Plume)</a></li>
+  <li><a href="#dipole-mode-index-dmi" id="toc-dipole-mode-index-dmi" class="nav-link" data-scroll-target="#dipole-mode-index-dmi"><span class="header-section-number">9.8.2</span> Dipole Mode Index (DMI)</a></li>
+  <li><a href="#el-niñosouthern-oscillation-enso" id="toc-el-niñosouthern-oscillation-enso" class="nav-link" data-scroll-target="#el-niñosouthern-oscillation-enso"><span class="header-section-number">9.8.3</span> El Niño–Southern Oscillation (ENSO)</a></li>
+  <li><a href="#indian-ocean-dipole-iod" id="toc-indian-ocean-dipole-iod" class="nav-link" data-scroll-target="#indian-ocean-dipole-iod"><span class="header-section-number">9.8.4</span> Indian Ocean Dipole (IOD)</a></li>
+  <li><a href="#oceanic-niño-index-oni" id="toc-oceanic-niño-index-oni" class="nav-link" data-scroll-target="#oceanic-niño-index-oni"><span class="header-section-number">9.8.5</span> Oceanic Niño Index (ONI)</a></li>
+  <li><a href="#relative-oceanic-niño-index-roni" id="toc-relative-oceanic-niño-index-roni" class="nav-link" data-scroll-target="#relative-oceanic-niño-index-roni"><span class="header-section-number">9.8.6</span> Relative Oceanic Niño Index (RONI)</a></li>
+  <li><a href="#sintex-f-forecast-plume-sintex-f" id="toc-sintex-f-forecast-plume-sintex-f" class="nav-link" data-scroll-target="#sintex-f-forecast-plume-sintex-f"><span class="header-section-number">9.8.7</span> SINTEX-F Forecast Plume (SINTEX-F)</a></li>
+  <li><a href="#sea-surface-temperature-anomaly-ssta" id="toc-sea-surface-temperature-anomaly-ssta" class="nav-link" data-scroll-target="#sea-surface-temperature-anomaly-ssta"><span class="header-section-number">9.8.8</span> Sea Surface Temperature Anomaly (SSTA)</a></li>
+  <li><a href="#western-pacific-v-shape-pattern-western-v-wv" id="toc-western-pacific-v-shape-pattern-western-v-wv" class="nav-link" data-scroll-target="#western-pacific-v-shape-pattern-western-v-wv"><span class="header-section-number">9.8.9</span> Western Pacific V-shape Pattern (Western-V / WV)</a></li>
+  </ul></li>
+  <li><a href="#official-statistics" id="toc-official-statistics" class="nav-link" data-scroll-target="#official-statistics"><span class="header-section-number">9.9</span> Official Statistics</a>
+  <ul class="collapse">
+  <li><a href="#harveststat-subnational-crop-statistics-harveststat" id="toc-harveststat-subnational-crop-statistics-harveststat" class="nav-link" data-scroll-target="#harveststat-subnational-crop-statistics-harveststat"><span class="header-section-number">9.9.1</span> HarvestStat Subnational Crop Statistics (HarvestStat)</a></li>
+  <li><a href="#national-agriculture-production-report-knbs-napr" id="toc-national-agriculture-production-report-knbs-napr" class="nav-link" data-scroll-target="#national-agriculture-production-report-knbs-napr"><span class="header-section-number">9.9.2</span> National Agriculture Production Report (KNBS NAPR)</a></li>
+  </ul></li>
+  <li><a href="#remote-sensing-hazards" id="toc-remote-sensing-hazards" class="nav-link" data-scroll-target="#remote-sensing-hazards"><span class="header-section-number">9.10</span> Remote Sensing &amp; Hazards</a>
+  <ul class="collapse">
+  <li><a href="#climate-hazards-center-infrared-precipitation-with-station-data-chirps-v3" id="toc-climate-hazards-center-infrared-precipitation-with-station-data-chirps-v3" class="nav-link" data-scroll-target="#climate-hazards-center-infrared-precipitation-with-station-data-chirps-v3"><span class="header-section-number">9.10.1</span> Climate Hazards Center InfraRed Precipitation with Station Data (CHIRPS v3)</a></li>
+  <li><a href="#cold-cloud-duration-ccd" id="toc-cold-cloud-duration-ccd" class="nav-link" data-scroll-target="#cold-cloud-duration-ccd"><span class="header-section-number">9.10.2</span> Cold Cloud Duration (CCD)</a></li>
+  <li><a href="#copernicus-global-flood-monitoring-copernicus-gfm" id="toc-copernicus-global-flood-monitoring-copernicus-gfm" class="nav-link" data-scroll-target="#copernicus-global-flood-monitoring-copernicus-gfm"><span class="header-section-number">9.10.3</span> Copernicus Global Flood Monitoring (Copernicus GFM)</a></li>
+  <li><a href="#cropland-land-cover-mask-cropland-mask" id="toc-cropland-land-cover-mask-cropland-mask" class="nav-link" data-scroll-target="#cropland-land-cover-mask-cropland-mask"><span class="header-section-number">9.10.4</span> Cropland Land Cover Mask (Cropland Mask)</a></li>
+  <li><a href="#gridded-livestock-of-the-world-glw-livestock-density" id="toc-gridded-livestock-of-the-world-glw-livestock-density" class="nav-link" data-scroll-target="#gridded-livestock-of-the-world-glw-livestock-density"><span class="header-section-number">9.10.5</span> Gridded Livestock of the World (GLW / Livestock Density)</a></li>
+  <li><a href="#jrc-flood-return-period-hazard-layers-jrc-flood-rp" id="toc-jrc-flood-return-period-hazard-layers-jrc-flood-rp" class="nav-link" data-scroll-target="#jrc-flood-return-period-hazard-layers-jrc-flood-rp"><span class="header-section-number">9.10.6</span> JRC Flood Return Period Hazard Layers (JRC Flood RP)</a></li>
+  <li><a href="#normalized-difference-vegetation-index-modis-ndvi" id="toc-normalized-difference-vegetation-index-modis-ndvi" class="nav-link" data-scroll-target="#normalized-difference-vegetation-index-modis-ndvi"><span class="header-section-number">9.10.7</span> Normalized Difference Vegetation Index (MODIS NDVI)</a></li>
+  <li><a href="#standardized-precipitation-index-spi" id="toc-standardized-precipitation-index-spi" class="nav-link" data-scroll-target="#standardized-precipitation-index-spi"><span class="header-section-number">9.10.8</span> Standardized Precipitation Index (SPI)</a></li>
+  <li><a href="#standardized-precipitation-evapotranspiration-index-spei-3" id="toc-standardized-precipitation-evapotranspiration-index-spei-3" class="nav-link" data-scroll-target="#standardized-precipitation-evapotranspiration-index-spei-3"><span class="header-section-number">9.10.9</span> Standardized Precipitation-Evapotranspiration Index (SPEI-3)</a></li>
+  <li><a href="#synthetic-aperture-radar-sar" id="toc-synthetic-aperture-radar-sar" class="nav-link" data-scroll-target="#synthetic-aperture-radar-sar"><span class="header-section-number">9.10.10</span> Synthetic Aperture Radar (SAR)</a></li>
+  <li><a href="#water-requirement-satisfaction-index-wrsi" id="toc-water-requirement-satisfaction-index-wrsi" class="nav-link" data-scroll-target="#water-requirement-satisfaction-index-wrsi"><span class="header-section-number">9.10.11</span> Water Requirement Satisfaction Index (WRSI)</a></li>
+  </ul></li>
+  <li><a href="#statistical-methods" id="toc-statistical-methods" class="nav-link" data-scroll-target="#statistical-methods"><span class="header-section-number">9.11</span> Statistical Methods</a>
+  <ul class="collapse">
+  <li><a href="#bivariate-joint-probability-distribution-joint-probability" id="toc-bivariate-joint-probability-distribution-joint-probability" class="nav-link" data-scroll-target="#bivariate-joint-probability-distribution-joint-probability"><span class="header-section-number">9.11.1</span> Bivariate Joint Probability Distribution (Joint Probability)</a></li>
+  <li><a href="#empirical-confidence-interval-95-ci" id="toc-empirical-confidence-interval-95-ci" class="nav-link" data-scroll-target="#empirical-confidence-interval-95-ci"><span class="header-section-number">9.11.2</span> Empirical Confidence Interval (95% CI)</a></li>
+  <li><a href="#hyndman-fan-type-7-quantile-estimator-hyndman-fan-type-7" id="toc-hyndman-fan-type-7-quantile-estimator-hyndman-fan-type-7" class="nav-link" data-scroll-target="#hyndman-fan-type-7-quantile-estimator-hyndman-fan-type-7"><span class="header-section-number">9.11.3</span> Hyndman-Fan Type 7 Quantile Estimator (Hyndman-Fan Type 7)</a></li>
+  <li><a href="#independent-seasonal-standardization-seasonal-z-score" id="toc-independent-seasonal-standardization-seasonal-z-score" class="nav-link" data-scroll-target="#independent-seasonal-standardization-seasonal-z-score"><span class="header-section-number">9.11.4</span> Independent Seasonal Standardization (Seasonal z-score)</a></li>
+  <li><a href="#leave-one-out-cross-validation-loocv" id="toc-leave-one-out-cross-validation-loocv" class="nav-link" data-scroll-target="#leave-one-out-cross-validation-loocv"><span class="header-section-number">9.11.5</span> Leave-One-Out Cross-Validation (LOOCV)</a></li>
+  <li><a href="#modal-hit-rate-modal-hit-rate" id="toc-modal-hit-rate-modal-hit-rate" class="nav-link" data-scroll-target="#modal-hit-rate-modal-hit-rate"><span class="header-section-number">9.11.6</span> Modal Hit Rate (Modal Hit Rate)</a></li>
+  <li><a href="#non-parametric-empirical-quantiles-empirical-quantiles" id="toc-non-parametric-empirical-quantiles-empirical-quantiles" class="nav-link" data-scroll-target="#non-parametric-empirical-quantiles-empirical-quantiles"><span class="header-section-number">9.11.7</span> Non-Parametric Empirical Quantiles (Empirical Quantiles)</a></li>
+  <li><a href="#olympic-mean-baseline-olympic-mean" id="toc-olympic-mean-baseline-olympic-mean" class="nav-link" data-scroll-target="#olympic-mean-baseline-olympic-mean"><span class="header-section-number">9.11.8</span> Olympic Mean Baseline (Olympic Mean)</a></li>
+  <li><a href="#ordinary-least-squares-linear-regression-ols-regression" id="toc-ordinary-least-squares-linear-regression-ols-regression" class="nav-link" data-scroll-target="#ordinary-least-squares-linear-regression-ols-regression"><span class="header-section-number">9.11.9</span> Ordinary Least Squares Linear Regression (OLS Regression)</a></li>
+  <li><a href="#rainfall-positive-skewness-positive-skewness" id="toc-rainfall-positive-skewness-positive-skewness" class="nav-link" data-scroll-target="#rainfall-positive-skewness-positive-skewness"><span class="header-section-number">9.11.10</span> Rainfall Positive Skewness (Positive Skewness)</a></li>
+  <li><a href="#ranked-probability-skill-score-rpss" id="toc-ranked-probability-skill-score-rpss" class="nav-link" data-scroll-target="#ranked-probability-skill-score-rpss"><span class="header-section-number">9.11.11</span> Ranked Probability Skill Score (RPSS)</a></li>
+  <li><a href="#standard-normal-homogeneity-test-snht" id="toc-standard-normal-homogeneity-test-snht" class="nav-link" data-scroll-target="#standard-normal-homogeneity-test-snht"><span class="header-section-number">9.11.12</span> Standard Normal Homogeneity Test (SNHT)</a></li>
+  <li><a href="#subcounty-spatial-apportionment-spatial-apportionment" id="toc-subcounty-spatial-apportionment-spatial-apportionment" class="nav-link" data-scroll-target="#subcounty-spatial-apportionment-spatial-apportionment"><span class="header-section-number">9.11.13</span> Subcounty Spatial Apportionment (Spatial Apportionment)</a></li>
+  <li><a href="#teleconnection-gradient-pearson-r" id="toc-teleconnection-gradient-pearson-r" class="nav-link" data-scroll-target="#teleconnection-gradient-pearson-r"><span class="header-section-number">9.11.14</span> Teleconnection Gradient (Pearson r)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/AdaptationAtlas/atlas_notebooks/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Controlled Vocabulary &amp; Scientific Glossary</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="controlled-vocabulary-scientific-glossary" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Controlled Vocabulary &amp; Scientific Glossary</h1>
+<p>This chapter provides standardized canonical definitions, abbreviations, mathematical notations, and institutional citations for all <strong>65 domain terms</strong> across the Kenya ENSO Explorer platform. It establishes the controlled terminology required for interoperable subnational climate risk analytics.</p>
+<hr>
+<section id="administrative-geography" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="administrative-geography"><span class="header-section-number">9.1</span> Administrative &amp; Geography</h2>
+<section id="arid-and-semi-arid-lands-asal" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="arid-and-semi-arid-lands-asal"><span class="header-section-number">9.1.1</span> Arid and Semi-Arid Lands (ASAL)</h3>
+<p>The 23 designated arid and semi-arid counties of Kenya comprising over 80% of the national landmass, characterized by low and erratic rainfall, fragile rangeland ecosystems, and predominantly pastoralist livelihoods.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{County Count} = 23 \text{ designated ASAL counties}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Kenya Ministry of Devolution and ASALs.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>1.0</code>, <code>1.1</code>, <code>4.3</code>, <code>4.4</code></p>
+</section>
+<section id="common-operational-datasets---administrative-boundaries-cod-ab" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="common-operational-datasets---administrative-boundaries-cod-ab"><span class="header-section-number">9.1.2</span> Common Operational Datasets - Administrative Boundaries (COD-AB)</h3>
+<p>The authoritative United Nations humanitarian GIS administrative boundary layers (ADM0 National, ADM1 County, ADM2 Sub-county) endorsed by UN OCHA and the Kenya Survey Department.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Vector polygonal boundary layers with standardized P-codes
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>UN OCHA Humanitarian Data Exchange (HDX).</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.0</code>, <code>1.1</code>, <code>3.4</code>, <code>6.1</code></p>
+</section>
+<section id="humanitarian-openstreetmap-team-facilities-hot-osm" class="level3" data-number="9.1.3">
+<h3 data-number="9.1.3" class="anchored" data-anchor-id="humanitarian-openstreetmap-team-facilities-hot-osm"><span class="header-section-number">9.1.3</span> Humanitarian OpenStreetMap Team Facilities (HOT-OSM)</h3>
+<p>Community-mapped geospatial vector points of health clinics, hospitals, and educational institutions in Kenya, validated for humanitarian disaster exposure modeling.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Geospatial point feature layer
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Humanitarian OpenStreetMap Team (HOT) Kenya Export.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.5</code>, <code>4.5</code>, <code>6.1</code></p>
+</section>
+<section id="kenya-power-and-lighting-company-grid-kplc" class="level3" data-number="9.1.4">
+<h3 data-number="9.1.4" class="anchored" data-anchor-id="kenya-power-and-lighting-company-grid-kplc"><span class="header-section-number">9.1.4</span> Kenya Power and Lighting Company Grid (KPLC)</h3>
+<p>National electrical transmission line infrastructure vector dataset used in the platform to evaluate power grid asset vulnerability to flood inundation.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Vector line network (kV transmission lines)
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Kenya Power and Lighting Company GIS Repository.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.5</code>, <code>6.1</code></p>
+<hr>
+</section>
+</section>
+<section id="climatology-seasons" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="climatology-seasons"><span class="header-section-number">9.2</span> Climatology &amp; Seasons</h2>
+<section id="long-rains-mam" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="long-rains-mam"><span class="header-section-number">9.2.1</span> Long Rains (MAM)</h3>
+<p>The primary agricultural rainfall season across western, central, and northern Kenya, spanning the months of March, April, and May, driven by the northward migration of the Intertropical Convergence Zone (ITCZ).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+R_{\text{MAM}} = \sum_{m \in \{\text{Mar, Apr, May}\}} R_m
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Kenya Meteorological Department (KMD) National Seasonal Calendar.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>1.0</code>, <code>2.1</code>, <code>3.1</code>, <code>3.1B</code>, <code>4.1</code></p>
+</section>
+<section id="pastoral-boreal-summer-window-jjas-jas" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="pastoral-boreal-summer-window-jjas-jas"><span class="header-section-number">9.2.2</span> Pastoral Boreal Summer Window (JJAS / JAS)</h3>
+<p>The dry season across eastern and southern pastoral rangelands (June–September) and the primary rainfall season in the western highlands and Lake Victoria basin.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+R_{\text{JJAS}} = \sum_{m \in \{\text{Jun, Jul, Aug, Sep}\}} R_m
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Kenya Meteorological Department (KMD) Regional Climatology.</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.0</code>, <code>3.1</code>, <code>4.3</code></p>
+</section>
+<section id="short-rains-ond" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="short-rains-ond"><span class="header-section-number">9.2.3</span> Short Rains (OND)</h3>
+<p>The secondary agricultural and pastoral rainfall season spanning October, November, and December, exhibiting the highest teleconnection sensitivity and predictive skill linked to Pacific ENSO and Indian Ocean Dipole dynamics.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+R_{\text{OND}} = \sum_{m \in \{\text{Oct, Nov, Dec}\}} R_m
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Kenya Meteorological Department (KMD) National Seasonal Calendar.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>1.0</code>, <code>2.1</code>, <code>3.1</code>, <code>3.1B</code>, <code>4.1</code></p>
+</section>
+<section id="wmo-19912020-standard-normal-baseline-wmo-normal" class="level3" data-number="9.2.4">
+<h3 data-number="9.2.4" class="anchored" data-anchor-id="wmo-19912020-standard-normal-baseline-wmo-normal"><span class="header-section-number">9.2.4</span> WMO 1991–2020 Standard Normal Baseline (WMO Normal)</h3>
+<p>The canonical 30-year climatological reference period defined by the World Meteorological Organization for assessing contemporary climate anomalies and evaluating extreme frequencies.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Calendar period 1991-01-01 through 2020-12-31 (30 complete historical years)
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>WMO-No.&nbsp;1203 (2017). WMO Guidelines on the Calculation of Climate Normals.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.1</code>, <code>3.1</code>, <code>3.1B</code>, <code>3.2</code>, <code>6.1</code></p>
+</section>
+<section id="warm-dry-season-window-djf" class="level3" data-number="9.2.5">
+<h3 data-number="9.2.5" class="anchored" data-anchor-id="warm-dry-season-window-djf"><span class="header-section-number">9.2.5</span> Warm Dry Season Window (DJF)</h3>
+<p>The warm dry interval spanning December, January, and February, marked by crop maturation and harvesting in agricultural counties and grazing pressure in pastoral zones.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+R_{\text{DJF}} = R_{\text{Dec}} + R_{\text{Jan}} + R_{\text{Feb}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Kenya Meteorological Department (KMD).</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.0</code>, <code>3.1</code></p>
+<hr>
+</section>
+</section>
+<section id="demography-equity" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="demography-equity"><span class="header-section-number">9.3</span> Demography &amp; Equity</h2>
+<section id="gender-equality-and-social-inclusion-gesi" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="gender-equality-and-social-inclusion-gesi"><span class="header-section-number">9.3.1</span> Gender Equality and Social Inclusion (GESI)</h3>
+<p>A developmental framework and empirical indicator suite examining how gender headship, intra-household decision-making, land tenure documentation, and labor division influence differential vulnerability to climate extremes.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Multidimensional indicator suite benchmarking county vs national medians
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>KNBS County Gender Data Sheets (2025).</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.3</code>, <code>6.1</code></p>
+<hr>
+</section>
+</section>
+<section id="economic-valuation" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="economic-valuation"><span class="header-section-number">9.4</span> Economic &amp; Valuation</h2>
+<section id="gross-value-of-production-vop" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="gross-value-of-production-vop"><span class="header-section-number">9.4.1</span> Gross Value of Production (VOP)</h3>
+<p>The aggregate physical output of agricultural crops and livestock commodities valued at constant standardized gate prices, providing an uninflated metric of total agricultural capital at risk from climate extremes.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{VOP}_{c} = \sum_{k=1}^{K} Q_{c,k} \times P_{k}^{\text{constant}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>FAOSTAT Valuation Methodology / Decision D62 Beta Review Governance.</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.2</code>, <code>4.5</code></p>
+<hr>
+</section>
+</section>
+<section id="food-security-vulnerability" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="food-security-vulnerability"><span class="header-section-number">9.5</span> Food Security &amp; Vulnerability</h2>
+<section id="integrated-food-security-phase-classification-ipc" class="level3" data-number="9.5.1">
+<h3 data-number="9.5.1" class="anchored" data-anchor-id="integrated-food-security-phase-classification-ipc"><span class="header-section-number">9.5.1</span> Integrated Food Security Phase Classification (IPC)</h3>
+<p>A multi-partner standardized scale categorizing food insecurity severity into five distinct phases: Phase 1 (Minimal), Phase 2 (Stressed), Phase 3 (Crisis), Phase 4 (Emergency), and Phase 5 (Catastrophe/Famine).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{Phase } \in \{1, 2, 3, 4, 5\}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>IPC Global Partners (2021). Integrated Food Security Phase Classification Technical Manual Version 3.1.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.6</code>, <code>6.1</code></p>
+</section>
+<section id="reduced-coping-strategy-index-rcsi" class="level3" data-number="9.5.2">
+<h3 data-number="9.5.2" class="anchored" data-anchor-id="reduced-coping-strategy-index-rcsi"><span class="header-section-number">9.5.2</span> Reduced Coping Strategy Index (rCSI)</h3>
+<p>A standardized proxy measure of household food stress based on a weighted 5-question survey assessing behavioral adaptations taken by households experiencing food shortages over the past 7 days.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{rCSI} = \sum_{i=1}^{5} w_i \times f_i, \quad w \in \{1, 1, 1, 2, 3\}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Maxwell, D., et al.&nbsp;(2008). The Coping Strategies Index Field Methods Manual. CARE / WFP.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.6</code>, <code>6.1</code></p>
+<hr>
+</section>
+</section>
+<section id="institutional-governance" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="institutional-governance"><span class="header-section-number">9.6</span> Institutional &amp; Governance</h2>
+<section id="agriculture-and-food-authority-afa" class="level3" data-number="9.6.1">
+<h3 data-number="9.6.1" class="anchored" data-anchor-id="agriculture-and-food-authority-afa"><span class="header-section-number">9.6.1</span> Agriculture and Food Authority (AFA)</h3>
+<p>The state regulator overseeing development, regulation, and promotion of scheduled agricultural crops in Kenya (including sugar, tea, coffee, nuts, and cereals).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+State regulatory authority
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Agriculture and Food Authority Act (2013).</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.1</code>, <code>6.1</code></p>
+</section>
+<section id="anticipatory-action-aa" class="level3" data-number="9.6.2">
+<h3 data-number="9.6.2" class="anchored" data-anchor-id="anticipatory-action-aa"><span class="header-section-number">9.6.2</span> Anticipatory Action (AA)</h3>
+<p>Acting ahead of predicted hazardous climate events to prevent or reduce humanitarian impacts before disaster strikes, triggered by probabilistic meteorological forecasts.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{Trigger: } P(\text{Extreme}) \ge \tau_{\text{action}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>UN OCHA / Red Cross Climate Centre Anticipatory Action Framework.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.2</code></p>
+</section>
+<section id="comprehensive-data-hub-schema-cdh-schema" class="level3" data-number="9.6.3">
+<h3 data-number="9.6.3" class="anchored" data-anchor-id="comprehensive-data-hub-schema-cdh-schema"><span class="header-section-number">9.6.3</span> Comprehensive Data Hub Schema (CDH Schema)</h3>
+<p>The institutional metadata and data publishing specification (v0.3.0) governing dataset descriptions, citation formatting, temporal-spatial schemas, and open data licensing across the Adaptation Atlas.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Metadata contract specification v0.3.0
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Africa Agriculture Adaptation Atlas CDH Technical Specification.</em></p>
+<p><em>Active in Platform Sections:</em> <code>6.1</code></p>
+</section>
+<section id="disaster-risk-reduction-drr" class="level3" data-number="9.6.4">
+<h3 data-number="9.6.4" class="anchored" data-anchor-id="disaster-risk-reduction-drr"><span class="header-section-number">9.6.4</span> Disaster Risk Reduction (DRR)</h3>
+<p>Policy objective aimed at preventing new and reducing existing disaster risk and managing residual risk, strengthening resilience.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Sendai Framework for Disaster Risk Reduction 2015-2030.
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>UNDRR Sendai Framework.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.2</code>, <code>4.6</code></p>
+</section>
+<section id="famine-early-warning-systems-network-fews-net" class="level3" data-number="9.6.5">
+<h3 data-number="9.6.5" class="anchored" data-anchor-id="famine-early-warning-systems-network-fews-net"><span class="header-section-number">9.6.5</span> Famine Early Warning Systems Network (FEWS NET)</h3>
+<p>A leading provider of early warning and analysis on food insecurity created by USAID, providing data on markets, trade, and agro-climatology across East Africa.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Global early warning network
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>USAID FEWS NET.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.1</code>, <code>4.2B</code>, <code>4.4</code>, <code>4.4B</code>, <code>6.1</code></p>
+</section>
+<section id="food-and-agriculture-organization-fao-faostat" class="level3" data-number="9.6.6">
+<h3 data-number="9.6.6" class="anchored" data-anchor-id="food-and-agriculture-organization-fao-faostat"><span class="header-section-number">9.6.6</span> Food and Agriculture Organization (FAO / FAOSTAT)</h3>
+<p>The specialized agency of the United Nations leading international efforts to defeat hunger, maintain global agricultural statistical databases (FAOSTAT), and establish standardized commodity price concepts.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+UN Specialized Statistical Agency
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>FAO Statistical Databases (FAOSTAT).</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.2</code>, <code>4.1</code>, <code>6.1</code></p>
+</section>
+<section id="kenya-agricultural-and-livestock-research-organization-kalro" class="level3" data-number="9.6.7">
+<h3 data-number="9.6.7" class="anchored" data-anchor-id="kenya-agricultural-and-livestock-research-organization-kalro"><span class="header-section-number">9.6.7</span> Kenya Agricultural and Livestock Research Organization (KALRO)</h3>
+<p>The principal agricultural research institution in Kenya developing crop varieties, rangeland management protocols, and agro-weather advisories.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+National agricultural research authority
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>KALRO Act (2013).</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.1</code>, <code>6.1</code></p>
+</section>
+<section id="kenya-food-security-steering-group-kfssg" class="level3" data-number="9.6.8">
+<h3 data-number="9.6.8" class="anchored" data-anchor-id="kenya-food-security-steering-group-kfssg"><span class="header-section-number">9.6.8</span> Kenya Food Security Steering Group (KFSSG)</h3>
+<p>The multi-agency technical coordination body led by NDMA and national line ministries that conducts biannual post-harvest food security assessments (Short Rains Assessment - SRA; Long Rains Assessment - LRA).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Biannual consensus assessments (SRA / LRA)
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>National Drought Management Authority (NDMA).</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>4.6</code>, <code>6.1</code></p>
+</section>
+<section id="kenya-meteorological-department-kmd" class="level3" data-number="9.6.9">
+<h3 data-number="9.6.9" class="anchored" data-anchor-id="kenya-meteorological-department-kmd"><span class="header-section-number">9.6.9</span> Kenya Meteorological Department (KMD)</h3>
+<p>The canonical national hydrometeorological service of Kenya responsible for national weather forecasting, seasonal climate outlooks, marine telemetry, and severe weather early warnings (Decision D40 canonical institutional naming).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+National hydromet authority
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Ministry of Environment, Climate Change and Forestry.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.1</code>, <code>2.2</code>, <code>2.3</code>, <code>6.1</code></p>
+</section>
+<section id="kenya-national-bureau-of-statistics-knbs" class="level3" data-number="9.6.10">
+<h3 data-number="9.6.10" class="anchored" data-anchor-id="kenya-national-bureau-of-statistics-knbs"><span class="header-section-number">9.6.10</span> Kenya National Bureau of Statistics (KNBS)</h3>
+<p>The principal government agency responsible for collecting, analyzing, and disseminating official statistical information in Kenya, including the decennial Population and Housing Census and economic surveys.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+National statistical authority
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Statistics Act (2006).</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.0</code>, <code>1.1</code>, <code>1.2</code>, <code>1.3</code>, <code>4.1</code>, <code>6.1</code></p>
+</section>
+<section id="national-drought-management-authority-ndma" class="level3" data-number="9.6.11">
+<h3 data-number="9.6.11" class="anchored" data-anchor-id="national-drought-management-authority-ndma"><span class="header-section-number">9.6.11</span> National Drought Management Authority (NDMA)</h3>
+<p>The statutory leadership agency in the Government of Kenya responsible for drought early warning, crisis coordination, resilience building, and operating the national early warning bulletin monitoring network.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Monthly drought monitoring across 23 ASAL counties
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>National Drought Management Authority Act (2016).</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>1.2</code>, <code>4.6</code>, <code>6.1</code></p>
+</section>
+<section id="regional-centre-for-mapping-of-resources-for-development-rcmrd" class="level3" data-number="9.6.12">
+<h3 data-number="9.6.12" class="anchored" data-anchor-id="regional-centre-for-mapping-of-resources-for-development-rcmrd"><span class="header-section-number">9.6.12</span> Regional Centre for Mapping of Resources for Development (RCMRD)</h3>
+<p>An intergovernmental organization based in Nairobi, Kenya, providing geospatial and remote sensing support, disaster risk mapping, and Earth observation analytics across Eastern and Southern Africa.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Intergovernmental Earth observation center
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>RCMRD Institutional Charter.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.5</code>, <code>6.1</code></p>
+</section>
+<section id="reliefweb-disaster-chronicle-reliefweb-glide" class="level3" data-number="9.6.13">
+<h3 data-number="9.6.13" class="anchored" data-anchor-id="reliefweb-disaster-chronicle-reliefweb-glide"><span class="header-section-number">9.6.13</span> ReliefWeb Disaster Chronicle (ReliefWeb / GLIDE)</h3>
+<p>The UN OCHA humanitarian information portal tracking disaster situations and compiling emergency response dispatches indexed by Global Identifier Numbers (GLIDE).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+GLIDE Unique Disaster Identifier standard
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>UN OCHA ReliefWeb Service.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.6</code>, <code>6.1</code></p>
+<hr>
+</section>
+</section>
+<section id="markets-early-warning" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="markets-early-warning"><span class="header-section-number">9.7</span> Markets &amp; Early Warning</h2>
+<section id="cross-border-food-trade-xbt-trade" class="level3" data-number="9.7.1">
+<h3 data-number="9.7.1" class="anchored" data-anchor-id="cross-border-food-trade-xbt-trade"><span class="header-section-number">9.7.1</span> Cross-Border Food Trade (XBT Trade)</h3>
+<p>The formal and informal monitored cross-border trade of staple cereal grains and livestock across East African border corridors (e.g.&nbsp;Busia, Malaba, Moyale, Namanga, Mandera) tracked quarterly by FEWS NET.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+V_{\text{XBT}} = \sum \text{Tonnes}_{\text{cereal}} \text{ (Import / Export)}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>FEWS NET East Africa Cross-Border Trade Bulletin.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.4B</code>, <code>6.1</code></p>
+</section>
+<section id="kenya-agricultural-market-information-system-kamis" class="level3" data-number="9.7.2">
+<h3 data-number="9.7.2" class="anchored" data-anchor-id="kenya-agricultural-market-information-system-kamis"><span class="header-section-number">9.7.2</span> Kenya Agricultural Market Information System (KAMIS)</h3>
+<p>The national market price surveillance platform operated by the Ministry of Agriculture and Livestock Development tracking daily wholesale and retail food commodity prices across Kenya’s urban and rural markets.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Daily / weekly market surveillance time series
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Ministry of Agriculture and Livestock Development (MoALD).</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.4</code>, <code>6.1</code></p>
+</section>
+<section id="pastoral-terms-of-trade-tot" class="level3" data-number="9.7.3">
+<h3 data-number="9.7.3" class="anchored" data-anchor-id="pastoral-terms-of-trade-tot"><span class="header-section-number">9.7.3</span> Pastoral Terms of Trade (ToT)</h3>
+<p>The ratio of pastoral purchasing power, measured as the number of kilograms of local staple grain (dry maize) that a pastoral household can purchase through the sale of one medium-sized live goat (shoat).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{ToT}_m = \frac{P_{\text{goat},m}}{P_{\text{maize},m}} \quad (\text{kg/goat})
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>National Drought Management Authority (NDMA) Monthly Early Warning Bulletins.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.4</code>, <code>6.1</code></p>
+<hr>
+</section>
+</section>
+<section id="ocean-climate-drivers" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="ocean-climate-drivers"><span class="header-section-number">9.8</span> Ocean &amp; Climate Drivers</h2>
+<section id="columbia-iri-prediction-plume-iri-plume" class="level3" data-number="9.8.1">
+<h3 data-number="9.8.1" class="anchored" data-anchor-id="columbia-iri-prediction-plume-iri-plume"><span class="header-section-number">9.8.1</span> Columbia IRI Prediction Plume (IRI Plume)</h3>
+<p>A multi-model ensemble of dynamical and statistical seasonal forecast models predicting Niño 3.4 SST anomalies up to 9 months ahead, curated monthly by the International Research Institute for Climate and Society (IRI).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\bar{z}_{\text{IRI}} = \frac{1}{M}\sum_{m=1}^{M} z_{\text{model}_m}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Columbia Climate School International Research Institute for Climate and Society.</em></p>
+<p><em>Active in Platform Sections:</em> <code>2.2</code></p>
+</section>
+<section id="dipole-mode-index-dmi" class="level3" data-number="9.8.2">
+<h3 data-number="9.8.2" class="anchored" data-anchor-id="dipole-mode-index-dmi"><span class="header-section-number">9.8.2</span> Dipole Mode Index (DMI)</h3>
+<p>The quantitative measure of the Indian Ocean Dipole, defined as the difference in sea surface temperature anomaly between the western tropical Indian Ocean (50°E–70°E, 10°S–10°N) and the southeastern tropical Indian Ocean (90°E–110°E, 10°S–0°).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{DMI} = \text{SSTA}(50^\circ\text{–}70^\circ\text{E}, 10^\circ\text{S–}10^\circ\text{N}) - \text{SSTA}(90^\circ\text{–}110^\circ\text{E}, 10^\circ\text{S–}0^\circ)
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>JAMSTEC Application Laboratory / NOAA Physical Sciences Laboratory.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.1</code>, <code>3.2</code>, <code>3.3</code>, <code>4.1</code></p>
+</section>
+<section id="el-niñosouthern-oscillation-enso" class="level3" data-number="9.8.3">
+<h3 data-number="9.8.3" class="anchored" data-anchor-id="el-niñosouthern-oscillation-enso"><span class="header-section-number">9.8.3</span> El Niño–Southern Oscillation (ENSO)</h3>
+<p>A coupled ocean-atmosphere phenomenon in the tropical Pacific characterized by irregular fluctuations between warm (El Niño), cool (La Niña), and neutral sea surface temperature anomalies, exerting global atmospheric teleconnections.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{SSTA}_{\text{Niño 3.4}} \ge +0.5^\circ\text{C} \text{ (El Niño)}, \le -0.5^\circ\text{C} \text{ (La Niña)}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Trenberth, K. E. (1997). The definition of El Niño. BAMS, 78(12), 2771-2778.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.1</code>, <code>2.2</code>, <code>3.1</code>, <code>3.2</code>, <code>3.3</code>, <code>4.1</code>, <code>5.1</code></p>
+</section>
+<section id="indian-ocean-dipole-iod" class="level3" data-number="9.8.4">
+<h3 data-number="9.8.4" class="anchored" data-anchor-id="indian-ocean-dipole-iod"><span class="header-section-number">9.8.4</span> Indian Ocean Dipole (IOD)</h3>
+<p>An ocean-atmosphere coupled climate mode in the equatorial Indian Ocean characterized by an anomalous sea surface temperature gradient between the western tropical Indian Ocean and the eastern tropical Indian Ocean.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{DMI} = \text{SSTA}_{\text{Western IO}} - \text{SSTA}_{\text{Eastern IO}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Saji, N. H., et al.&nbsp;(1999). A dipole mode in the tropical Indian Ocean. Nature, 401(6751), 360-363.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.1</code>, <code>2.2</code>, <code>3.2</code>, <code>3.3</code>, <code>4.1</code></p>
+</section>
+<section id="oceanic-niño-index-oni" class="level3" data-number="9.8.5">
+<h3 data-number="9.8.5" class="anchored" data-anchor-id="oceanic-niño-index-oni"><span class="header-section-number">9.8.5</span> Oceanic Niño Index (ONI)</h3>
+<p>NOAA’s primary operational index for tracking ENSO, computed as the 3-month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5°N–5°S, 120°–170°W) based on 30-year centered base periods.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{ONI} = \frac{1}{3}\sum_{m=1}^{3} \text{SSTA}_{\text{Niño 3.4}, m}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>NOAA Climate Prediction Center (CPC) Operational ENSO Criteria.</em></p>
+<p><em>Active in Platform Sections:</em> <code>2.1</code>, <code>3.2</code>, <code>3.3</code></p>
+</section>
+<section id="relative-oceanic-niño-index-roni" class="level3" data-number="9.8.6">
+<h3 data-number="9.8.6" class="anchored" data-anchor-id="relative-oceanic-niño-index-roni"><span class="header-section-number">9.8.6</span> Relative Oceanic Niño Index (RONI)</h3>
+<p>The Oceanic Niño Index (Niño 3.4 SST anomaly) minus the mean tropical ocean SST anomaly (20°S–20°N). Measures relative warmth against tropical background warming to identify true atmospheric convective forcing in a warming climate.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{RONI} = \text{SSTA}_{\text{Niño 3.4}} - \text{SSTA}_{\text{Tropical (20°S–20°N)}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>van Oldenborgh, G. J., et al.&nbsp;(2021). Relative SST indices for ENSO. Climate Dynamics.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.1</code>, <code>3.2</code>, <code>3.3</code>, <code>4.1</code></p>
+</section>
+<section id="sintex-f-forecast-plume-sintex-f" class="level3" data-number="9.8.7">
+<h3 data-number="9.8.7" class="anchored" data-anchor-id="sintex-f-forecast-plume-sintex-f"><span class="header-section-number">9.8.7</span> SINTEX-F Forecast Plume (SINTEX-F)</h3>
+<p>The Scale Interaction Experiment-Frontier coupled ocean-atmosphere general circulation model developed by JAMSTEC, used operationally for 9-month lead forecasts of the Indian Ocean Dipole and ENSO.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Ensemble mean of 9 coupled dynamical simulation members
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Luo, J. J., et al.&nbsp;(2005). Extended-range ENSO and IOD predictions using SINTEX-F. J. Climate.</em></p>
+<p><em>Active in Platform Sections:</em> <code>2.2</code></p>
+</section>
+<section id="sea-surface-temperature-anomaly-ssta" class="level3" data-number="9.8.8">
+<h3 data-number="9.8.8" class="anchored" data-anchor-id="sea-surface-temperature-anomaly-ssta"><span class="header-section-number">9.8.8</span> Sea Surface Temperature Anomaly (SSTA)</h3>
+<p>The deviation of ocean surface temperature from the long-term climatological mean for a given location and calendar month, typically referenced to a 30-year WMO normal baseline.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{SSTA}_{y,m} = \text{SST}_{y,m} - \bar{\text{SST}}_{m(1991\text{--}2020)}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>WMO Climatological Standard Normals Technical Document No.&nbsp;1203.</em></p>
+<p><em>Active in Platform Sections:</em> <code>2.1</code>, <code>3.3</code></p>
+</section>
+<section id="western-pacific-v-shape-pattern-western-v-wv" class="level3" data-number="9.8.9">
+<h3 data-number="9.8.9" class="anchored" data-anchor-id="western-pacific-v-shape-pattern-western-v-wv"><span class="header-section-number">9.8.9</span> Western Pacific V-shape Pattern (Western-V / WV)</h3>
+<p>A recognized sea surface temperature and atmospheric circulation dipole in the Western North Pacific that modulates moisture flux into the Greater Horn of Africa, particularly relevant during boreal spring (MAM).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{WV Index} = \text{Standardized } z\text{-score of WNP SST/Wind anomaly dipole}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Funk, C., et al.&nbsp;(2023). Western Pacific driver mechanics modulating East African rainfall.</em></p>
+<p><em>Active in Platform Sections:</em> <code>2.1</code>, <code>5.1</code></p>
+<hr>
+</section>
+</section>
+<section id="official-statistics" class="level2" data-number="9.9">
+<h2 data-number="9.9" class="anchored" data-anchor-id="official-statistics"><span class="header-section-number">9.9</span> Official Statistics</h2>
+<section id="harveststat-subnational-crop-statistics-harveststat" class="level3" data-number="9.9.1">
+<h3 data-number="9.9.1" class="anchored" data-anchor-id="harveststat-subnational-crop-statistics-harveststat"><span class="header-section-number">9.9.1</span> HarvestStat Subnational Crop Statistics (HarvestStat)</h3>
+<p>A harmonized, multi-decadal historical subnational crop production database developed by the FEWS NET Science Team and UC Santa Barbara, extending from 1982 through 2020 for Kenyan counties.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Harmonized historical time series with quality flags
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>FEWS NET Science Team &amp; Climate Hazards Center.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.2B</code>, <code>6.1</code></p>
+</section>
+<section id="national-agriculture-production-report-knbs-napr" class="level3" data-number="9.9.2">
+<h3 data-number="9.9.2" class="anchored" data-anchor-id="national-agriculture-production-report-knbs-napr"><span class="header-section-number">9.9.2</span> National Agriculture Production Report (KNBS NAPR)</h3>
+<p>The official national agricultural survey published by the Kenya National Bureau of Statistics providing subnational, county-level production statistics across 47 counties for crops, livestock headcounts, and animal products.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+Official state statistical release (2024/2025 editions)
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Kenya National Bureau of Statistics (KNBS).</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.1</code>, <code>4.1</code>, <code>6.1</code></p>
+<hr>
+</section>
+</section>
+<section id="remote-sensing-hazards" class="level2" data-number="9.10">
+<h2 data-number="9.10" class="anchored" data-anchor-id="remote-sensing-hazards"><span class="header-section-number">9.10</span> Remote Sensing &amp; Hazards</h2>
+<section id="climate-hazards-center-infrared-precipitation-with-station-data-chirps-v3" class="level3" data-number="9.10.1">
+<h3 data-number="9.10.1" class="anchored" data-anchor-id="climate-hazards-center-infrared-precipitation-with-station-data-chirps-v3"><span class="header-section-number">9.10.1</span> Climate Hazards Center InfraRed Precipitation with Station Data (CHIRPS v3)</h3>
+<p>A quasi-global high-resolution precipitation dataset blending cold cloud duration (CCD) satellite infrared imagery with calibrated in-situ station observations, providing gridded rainfall at 0.05° spatial resolution from 1981 to present.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+R_{\text{CHIRPS}} = R_{\text{IR}} \times \frac{S_{\text{gauged}}}{S_{\text{climatology}}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Funk, C., et al.&nbsp;(2015). The climate hazards infrared precipitation with stations. Scientific Data, 2, 150066.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>1.0</code>, <code>2.1</code>, <code>3.1</code>, <code>3.4</code>, <code>6.1</code></p>
+</section>
+<section id="cold-cloud-duration-ccd" class="level3" data-number="9.10.2">
+<h3 data-number="9.10.2" class="anchored" data-anchor-id="cold-cloud-duration-ccd"><span class="header-section-number">9.10.2</span> Cold Cloud Duration (CCD)</h3>
+<p>The duration of time a satellite thermal infrared pixel registers temperatures below a convective threshold (typically -40°C), used by CHIRPS as a physical proxy for convective precipitation.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{CCD} = \sum_{t} \mathbb{I}(T_b(t) &lt; 233.15\,\text{K}) \times \Delta t
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Milford, J. R., &amp; Dugdale, G. (1990). Estimation of rainfall using cold cloud duration. Int. J. Remote Sens.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.1</code>, <code>3.4</code></p>
+</section>
+<section id="copernicus-global-flood-monitoring-copernicus-gfm" class="level3" data-number="9.10.3">
+<h3 data-number="9.10.3" class="anchored" data-anchor-id="copernicus-global-flood-monitoring-copernicus-gfm"><span class="header-section-number">9.10.3</span> Copernicus Global Flood Monitoring (Copernicus GFM)</h3>
+<p>An operational Earth observation service providing near-real-time satellite Synthetic Aperture Radar (SAR) flood inundation extents derived from Sentinel-1 constellation radar acquisitions at 20m resolution, independent of cloud cover.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{SAR Backscatter Threshold: } \sigma_0 &lt; \tau_{\text{water}} \text{ (dB)}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>European Commission Joint Research Centre (JRC) Copernicus GFM Service.</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.0</code>, <code>3.5</code>, <code>4.5</code>, <code>6.1</code></p>
+</section>
+<section id="cropland-land-cover-mask-cropland-mask" class="level3" data-number="9.10.4">
+<h3 data-number="9.10.4" class="anchored" data-anchor-id="cropland-land-cover-mask-cropland-mask"><span class="header-section-number">9.10.4</span> Cropland Land Cover Mask (Cropland Mask)</h3>
+<p>A 10m spatial resolution binary landcover mask derived from ESA WorldCover Sentinel-1/Sentinel-2 classification identifying cultivated agricultural parcels.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+M_{\text{crop}}(x, y) \in \{0, 1\}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Zanaga, D., et al.&nbsp;(2021). ESA WorldCover 10m 2020 v100.</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.2</code>, <code>4.5</code></p>
+</section>
+<section id="gridded-livestock-of-the-world-glw-livestock-density" class="level3" data-number="9.10.5">
+<h3 data-number="9.10.5" class="anchored" data-anchor-id="gridded-livestock-of-the-world-glw-livestock-density"><span class="header-section-number">9.10.5</span> Gridded Livestock of the World (GLW / Livestock Density)</h3>
+<p>Global high-resolution modeled spatial distribution grids of cattle, goats, sheep, and camels disaggregated to sub-kilometer pixels using random forest environmental regressions.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+D_{\text{animal}}(x, y) \text{ (heads/km²)}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Gilbert, M., et al.&nbsp;(2018). Global distribution data for cattle, buffaloes, horses, sheep, goats, pigs, chickens and ducks in 2010. Scientific Data.</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.2</code>, <code>4.5</code></p>
+</section>
+<section id="jrc-flood-return-period-hazard-layers-jrc-flood-rp" class="level3" data-number="9.10.6">
+<h3 data-number="9.10.6" class="anchored" data-anchor-id="jrc-flood-return-period-hazard-layers-jrc-flood-rp"><span class="header-section-number">9.10.6</span> JRC Flood Return Period Hazard Layers (JRC Flood RP)</h3>
+<p>Hydrodynamic inundation depth maps modeled by the European Commission Joint Research Centre for statistical return intervals (1-in-10, 1-in-20, 1-in-50, 1-in-100 years) based on calibrated river discharge distributions.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+T_{\text{RP}} = \frac{1}{P(\text{Exceedance in any single year})}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Dottori, F., et al.&nbsp;(2016). Development and evaluation of a framework for global flood hazard mapping. Advances in Water Resources.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.5</code>, <code>4.5</code>, <code>6.1</code></p>
+</section>
+<section id="normalized-difference-vegetation-index-modis-ndvi" class="level3" data-number="9.10.7">
+<h3 data-number="9.10.7" class="anchored" data-anchor-id="normalized-difference-vegetation-index-modis-ndvi"><span class="header-section-number">9.10.7</span> Normalized Difference Vegetation Index (MODIS NDVI)</h3>
+<p>A satellite remote sensing index quantifying photosynthetic biomass and vegetation greenness by computing the normalized ratio of surface reflectance in near-infrared (NIR) and visible red (RED) spectrums.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{NDVI} = \frac{\rho_{\text{NIR}} - \rho_{\text{RED}}}{\rho_{\text{NIR}} + \rho_{\text{RED}}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Rouse, J. W., et al.&nbsp;(1974). Monitoring the vernal advancement of retrogradation of natural vegetation. NASA/GSFC.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.3</code>, <code>6.1</code></p>
+</section>
+<section id="standardized-precipitation-index-spi" class="level3" data-number="9.10.8">
+<h3 data-number="9.10.8" class="anchored" data-anchor-id="standardized-precipitation-index-spi"><span class="header-section-number">9.10.8</span> Standardized Precipitation Index (SPI)</h3>
+<p>A widely used drought index based on the probability of precipitation for any time scale, fitted to a gamma distribution and transformed to a normal distribution with mean zero and standard deviation one.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{SPI} = \Phi^{-1}(G(P))
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>McKee, T. B., et al.&nbsp;(1993). The relationship of drought frequency and duration to time scales. AMS.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.1</code>, <code>6.1</code></p>
+</section>
+<section id="standardized-precipitation-evapotranspiration-index-spei-3" class="level3" data-number="9.10.9">
+<h3 data-number="9.10.9" class="anchored" data-anchor-id="standardized-precipitation-evapotranspiration-index-spei-3"><span class="header-section-number">9.10.9</span> Standardized Precipitation-Evapotranspiration Index (SPEI-3)</h3>
+<p>A multiscalar drought index that combines precipitation and atmospheric evaporative demand (potential evapotranspiration) accumulated over a 3-month rolling window, fitted to a log-logistic probability distribution.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+D_i = P_i - \text{PET}_i, \quad \text{SPEI} = \Phi^{-1}(F(D))
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Vicente-Serrano, S. M., et al.&nbsp;(2010). A multiscalar drought index sensitive to global warming: SPEI. J. Climate.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.1</code>, <code>6.1</code></p>
+</section>
+<section id="synthetic-aperture-radar-sar" class="level3" data-number="9.10.10">
+<h3 data-number="9.10.10" class="anchored" data-anchor-id="synthetic-aperture-radar-sar"><span class="header-section-number">9.10.10</span> Synthetic Aperture Radar (SAR)</h3>
+<p>An active microwave imaging sensor that illuminates the Earth’s surface with radar pulses, capable of penetrating cloud cover, dense smoke, and nighttime darkness to detect smooth open water surfaces via specular reflection.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\sigma^0 \text{ (radar backscatter coefficient in decibels)}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Sentinel-1 Technical Guide, European Space Agency (ESA).</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.0</code>, <code>3.5</code>, <code>4.5</code></p>
+</section>
+<section id="water-requirement-satisfaction-index-wrsi" class="level3" data-number="9.10.11">
+<h3 data-number="9.10.11" class="anchored" data-anchor-id="water-requirement-satisfaction-index-wrsi"><span class="header-section-number">9.10.11</span> Water Requirement Satisfaction Index (WRSI)</h3>
+<p>A geospatial agro-climatological crop water balance model calculating the ratio of actual seasonal evapotranspiration to crop water requirements, used by FEWS NET to identify crop and pasture moisture stress.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{WRSI} = \frac{\sum_{t=1}^{N} \text{ET}_a}{\sum_{t=1}^{N} \text{ET}_c} \times 100\%
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Senay, G. B., &amp; Verdin, J. (2003). Characterizing drought conditions in the Greater Horn of Africa using WRSI. Int. J. Remote Sens.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.1</code>, <code>6.1</code></p>
+<hr>
+</section>
+</section>
+<section id="statistical-methods" class="level2" data-number="9.11">
+<h2 data-number="9.11" class="anchored" data-anchor-id="statistical-methods"><span class="header-section-number">9.11</span> Statistical Methods</h2>
+<section id="bivariate-joint-probability-distribution-joint-probability" class="level3" data-number="9.11.1">
+<h3 data-number="9.11.1" class="anchored" data-anchor-id="bivariate-joint-probability-distribution-joint-probability"><span class="header-section-number">9.11.1</span> Bivariate Joint Probability Distribution (Joint Probability)</h3>
+<p>The empirical probability of two climate variables concurrently occupying designated states (e.g., El Niño in the Pacific co-occurring with positive Indian Ocean Dipole).</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+P(A \cap B) = \frac{n(A \cap B)}{N_{\text{total}}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Wilks, D. S. (2011). Statistical Methods in the Atmospheric Sciences.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.2</code>, <code>4.1</code></p>
+</section>
+<section id="empirical-confidence-interval-95-ci" class="level3" data-number="9.11.2">
+<h3 data-number="9.11.2" class="anchored" data-anchor-id="empirical-confidence-interval-95-ci"><span class="header-section-number">9.11.2</span> Empirical Confidence Interval (95% CI)</h3>
+<p>The range of statistical estimates within which the true population parameter is expected to fall with 95% probability, calculated via non-parametric bootstrapping.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{CI}_{95\%} = [\hat{Q}_{\text{boot}}(0.025), \hat{Q}_{\text{boot}}(0.975)]
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Efron, B., &amp; Tibshirani, R. J. (1994). An Introduction to the Bootstrap.</em></p>
+<p><em>Active in Platform Sections:</em> <code>2.2</code>, <code>3.3</code></p>
+</section>
+<section id="hyndman-fan-type-7-quantile-estimator-hyndman-fan-type-7" class="level3" data-number="9.11.3">
+<h3 data-number="9.11.3" class="anchored" data-anchor-id="hyndman-fan-type-7-quantile-estimator-hyndman-fan-type-7"><span class="header-section-number">9.11.3</span> Hyndman-Fan Type 7 Quantile Estimator (Hyndman-Fan Type 7)</h3>
+<p>The standard continuous empirical quantile estimation algorithm used in R, Python, and DuckDB where sample fractiles are linearly interpolated between adjacent sorted values.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\hat{Q}(p) = X_{(\lfloor h \rfloor)} + (h - \lfloor h \rfloor)(X_{(\lfloor h \rfloor + 1)} - X_{(\lfloor h \rfloor)}), \quad h = (N - 1)p + 1
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Hyndman, R. J., &amp; Fan, Y. (1996). Sample quantiles in statistical packages. The American Statistician.</em></p>
+<p><em>Active in Platform Sections:</em> <code>2.1</code>, <code>3.1</code></p>
+</section>
+<section id="independent-seasonal-standardization-seasonal-z-score" class="level3" data-number="9.11.4">
+<h3 data-number="9.11.4" class="anchored" data-anchor-id="independent-seasonal-standardization-seasonal-z-score"><span class="header-section-number">9.11.4</span> Independent Seasonal Standardization (Seasonal z-score)</h3>
+<p>A standardization protocol where OND and MAM seasonal rainfall are transformed into z-scores independently against their own distinct historical seasonal means and standard deviations, ensuring fair multi-season sequence classification.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+z_{s,y} = \frac{R_{s,y} - \mu_{s(1991\text{--}2020)}}{\sigma_{s(1991\text{--}2020)}}, \quad s \in \{\text{OND}, \text{MAM}\}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Decision D53 Technical Architecture Specification.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.1B</code></p>
+</section>
+<section id="leave-one-out-cross-validation-loocv" class="level3" data-number="9.11.5">
+<h3 data-number="9.11.5" class="anchored" data-anchor-id="leave-one-out-cross-validation-loocv"><span class="header-section-number">9.11.5</span> Leave-One-Out Cross-Validation (LOOCV)</h3>
+<p>A deterministic cross-validation procedure where each year in the historical hindcast record is iteratively omitted from the training distribution and used solely as the out-of-sample evaluation target, preventing artificial hindcast overconfidence.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{Skill}_{\text{LOOCV}} = \frac{1}{N}\sum_{y=1}^{N} \mathcal{S}(\hat{P}_{(-y)}, O_y)
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Wilks, D. S. (2011). Statistical Methods in the Atmospheric Sciences. Academic Press.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.2</code>, <code>6.1</code></p>
+</section>
+<section id="modal-hit-rate-modal-hit-rate" class="level3" data-number="9.11.6">
+<h3 data-number="9.11.6" class="anchored" data-anchor-id="modal-hit-rate-modal-hit-rate"><span class="header-section-number">9.11.6</span> Modal Hit Rate (Modal Hit Rate)</h3>
+<p>The percentage of historical verification seasons where the forecast’s highest-probability (modal) category exactly matched the tercile category that actually occurred.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{HR} = \frac{1}{N}\sum_{i=1}^{N} \mathbb{I}\left(\arg\max_k p_{i,k} == \arg\max_k o_{i,k}\right) \times 100\%
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Jolliffe, I. T., &amp; Stephenson, D. B. (2012). Forecast Verification: A Practitioner’s Guide.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.2</code></p>
+</section>
+<section id="non-parametric-empirical-quantiles-empirical-quantiles" class="level3" data-number="9.11.7">
+<h3 data-number="9.11.7" class="anchored" data-anchor-id="non-parametric-empirical-quantiles-empirical-quantiles"><span class="header-section-number">9.11.7</span> Non-Parametric Empirical Quantiles (Empirical Quantiles)</h3>
+<p>Fractile estimators calculated directly from the sorted empirical cumulative distribution function without assuming a theoretical parametric distribution (such as Gaussian normal). Mandatory for East African rainfall due to positive skewness.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\hat{Q}(p) = (1 - \gamma) X_{(j)} + \gamma X_{(j+1)}, \quad j = \lfloor p N + (1 - p)/3 \rfloor
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Hyndman, R. J., &amp; Fan, Y. (1996). Sample quantiles in statistical packages. The American Statistician.</em></p>
+<p><em>Active in Platform Sections:</em> <code>2.1</code>, <code>3.1</code>, <code>3.2</code></p>
+</section>
+<section id="olympic-mean-baseline-olympic-mean" class="level3" data-number="9.11.8">
+<h3 data-number="9.11.8" class="anchored" data-anchor-id="olympic-mean-baseline-olympic-mean"><span class="header-section-number">9.11.8</span> Olympic Mean Baseline (Olympic Mean)</h3>
+<p>A robust central tendency statistic calculated by dropping the highest and lowest extreme values from a multi-year sample (e.g.&nbsp;5 or 10 years) and averaging the remaining values, minimizing distortion from black-swan shocks.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\bar{X}_{\text{Olympic}} = \frac{1}{N - 2} \sum_{i=2}^{N-1} X_{(i)}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>WMO Climatological Practices Guide.</em></p>
+<p><em>Active in Platform Sections:</em> <code>4.1</code>, <code>4.2B</code></p>
+</section>
+<section id="ordinary-least-squares-linear-regression-ols-regression" class="level3" data-number="9.11.9">
+<h3 data-number="9.11.9" class="anchored" data-anchor-id="ordinary-least-squares-linear-regression-ols-regression"><span class="header-section-number">9.11.9</span> Ordinary Least Squares Linear Regression (OLS Regression)</h3>
+<p>A parametric linear model estimating the slope and intercept relating continuous oceanic driver z-scores to county rainfall accumulation in mm.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\hat{Y} = \beta_0 + \beta_1 X + \epsilon, \quad \min_{\beta} \sum (Y_i - \hat{Y}_i)^2
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Weisberg, S. (2005). Applied Linear Regression.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.3</code></p>
+</section>
+<section id="rainfall-positive-skewness-positive-skewness" class="level3" data-number="9.11.10">
+<h3 data-number="9.11.10" class="anchored" data-anchor-id="rainfall-positive-skewness-positive-skewness"><span class="header-section-number">9.11.10</span> Rainfall Positive Skewness (Positive Skewness)</h3>
+<p>The asymmetric right-tailed distribution characteristic of East African seasonal precipitation, where the majority of seasons experience near- or below-average totals and a minority experience extreme episodic deluge.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\gamma_1 = \frac{\frac{1}{N}\sum_{i=1}^{N}(R_i - \bar{R})^3}{\left(\frac{1}{N}\sum_{i=1}^{N}(R_i - \bar{R})^2\right)^{3/2}} &gt; 0
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Hastings, D., et al.&nbsp;(2020). Skewness in African rainfall extremes. J. Hydrometeorology.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.1</code>, <code>6.1</code></p>
+</section>
+<section id="ranked-probability-skill-score-rpss" class="level3" data-number="9.11.11">
+<h3 data-number="9.11.11" class="anchored" data-anchor-id="ranked-probability-skill-score-rpss"><span class="header-section-number">9.11.11</span> Ranked Probability Skill Score (RPSS)</h3>
+<p>A categorical probabilistic verification metric that measures the relative accuracy of a multicategory probabilistic forecast (such as terciles) compared to a climatological reference forecast.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+\text{RPS} = \sum_{m=1}^{K}\left(\sum_{k=1}^m p_k - \sum_{k=1}^m o_k\right)^2, \quad \text{RPSS} = 1 - \frac{\text{RPS}_{\text{forecast}}}{\text{RPS}_{\text{climatology}}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Epstein, E. S. (1969). A scoring system for probability forecasts of ranked categories. J. Appl. Meteor.</em></p>
+<p><em>Active in Platform Sections:</em> <code>0.0</code>, <code>2.2</code>, <code>6.1</code></p>
+</section>
+<section id="standard-normal-homogeneity-test-snht" class="level3" data-number="9.11.12">
+<h3 data-number="9.11.12" class="anchored" data-anchor-id="standard-normal-homogeneity-test-snht"><span class="header-section-number">9.11.12</span> Standard Normal Homogeneity Test (SNHT)</h3>
+<p>A statistical test applied to climatological time series to detect abrupt shifts or changepoints caused by station relocations, instrument recalibrations, or landcover changes.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+T_k = k \bar{z}_1^2 + (n - k) \bar{z}_2^2
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Alexandersson, H. (1986). A homogeneity test applied to precipitation data. J. Climatology.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.1</code></p>
+</section>
+<section id="subcounty-spatial-apportionment-spatial-apportionment" class="level3" data-number="9.11.13">
+<h3 data-number="9.11.13" class="anchored" data-anchor-id="subcounty-spatial-apportionment-spatial-apportionment"><span class="header-section-number">9.11.13</span> Subcounty Spatial Apportionment (Spatial Apportionment)</h3>
+<p>The mathematical disaggregation of county-level aggregate production and livestock values across subcounties using high-resolution spatial auxiliary weights.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+V_{sc} = V_c \times w_{sc}, \quad \sum_{sc \in c} w_{sc} = 1.0
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Decision D62 Technical Valuation Specification.</em></p>
+<p><em>Active in Platform Sections:</em> <code>1.2</code></p>
+</section>
+<section id="teleconnection-gradient-pearson-r" class="level3" data-number="9.11.14">
+<h3 data-number="9.11.14" class="anchored" data-anchor-id="teleconnection-gradient-pearson-r"><span class="header-section-number">9.11.14</span> Teleconnection Gradient (Pearson r)</h3>
+<p>The bivariate linear correlation coefficient quantifying the strength and sign of teleconnection between ocean sea surface temperature anomalies and local county precipitation.</p>
+<p><strong>Mathematical Formulation / Metric:</strong> <span class="math display">\[
+r = \frac{\sum (z_x - \bar{z}_x)(z_y - \bar{z}_y)}{\sqrt{\sum (z_x - \bar{z}_x)^2 \sum (z_y - \bar{z}_y)^2}}
+\]</span></p>
+<p><strong>Canonical Institutional / Literature Reference:</strong> <em>Pearson, K. (1895). Mathematical contributions to the theory of evolution.</em></p>
+<p><em>Active in Platform Sections:</em> <code>3.3</code></p>
+<hr>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/africaadaptationatlas\.cgiar\.org\/methods\/ke-enso-explorer\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/06_dataset_catalogue_and_provenance.html" class="pagination-link" aria-label="Master Dataset Catalogue &amp; Data Provenance">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Master Dataset Catalogue &amp; Data Provenance</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/AdaptationAtlas/atlas_notebooks/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -1,0 +1,906 @@
+{
+  "version": "1.0.0",
+  "total_terms": 65,
+  "terms": [
+    {
+      "term": "El Niño–Southern Oscillation",
+      "abbreviation": "ENSO",
+      "category": "Ocean & Climate Drivers",
+      "definition": "A coupled ocean-atmosphere phenomenon in the tropical Pacific characterized by irregular fluctuations between warm (El Niño), cool (La Niña), and neutral sea surface temperature anomalies, exerting global atmospheric teleconnections.",
+      "tooltip": "A coupled ocean-atmosphere phenomenon in the tropical Pacific characterized by irregular fluctuations between warm (El Niño), cool (La Niña), and neutral sea surface temperature anomalies, exerting global atmospheric teleconnections..",
+      "formula_or_metric": "\\text{SSTA}_{\\text{Niño 3.4}} \\ge +0.5^\\circ\\text{C} \\text{ (El Niño)}, \\le -0.5^\\circ\\text{C} \\text{ (La Niña)}",
+      "canonical_reference": "Trenberth, K. E. (1997). The definition of El Niño. BAMS, 78(12), 2771-2778.",
+      "sections_used": [
+        "0.0",
+        "2.1",
+        "2.2",
+        "3.1",
+        "3.2",
+        "3.3",
+        "4.1",
+        "5.1"
+      ]
+    },
+    {
+      "term": "Relative Oceanic Niño Index",
+      "abbreviation": "RONI",
+      "category": "Ocean & Climate Drivers",
+      "definition": "The Oceanic Niño Index (Niño 3.4 SST anomaly) minus the mean tropical ocean SST anomaly (20°S–20°N). Measures relative warmth against tropical background warming to identify true atmospheric convective forcing in a warming climate.",
+      "tooltip": "The Oceanic Niño Index (Niño 3.4 SST anomaly) minus the mean tropical ocean SST anomaly (20°S–20°N).",
+      "formula_or_metric": "\\text{RONI} = \\text{SSTA}_{\\text{Niño 3.4}} - \\text{SSTA}_{\\text{Tropical (20°S–20°N)}}",
+      "canonical_reference": "van Oldenborgh, G. J., et al. (2021). Relative SST indices for ENSO. Climate Dynamics.",
+      "sections_used": [
+        "0.0",
+        "2.1",
+        "3.2",
+        "3.3",
+        "4.1"
+      ]
+    },
+    {
+      "term": "Oceanic Niño Index",
+      "abbreviation": "ONI",
+      "category": "Ocean & Climate Drivers",
+      "definition": "NOAA's primary operational index for tracking ENSO, computed as the 3-month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5°N–5°S, 120°–170°W) based on 30-year centered base periods.",
+      "tooltip": "NOAA's primary operational index for tracking ENSO, computed as the 3-month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5°N–5°S, 120°–170°W) based on 30-year centered base periods..",
+      "formula_or_metric": "\\text{ONI} = \\frac{1}{3}\\sum_{m=1}^{3} \\text{SSTA}_{\\text{Niño 3.4}, m}",
+      "canonical_reference": "NOAA Climate Prediction Center (CPC) Operational ENSO Criteria.",
+      "sections_used": [
+        "2.1",
+        "3.2",
+        "3.3"
+      ]
+    },
+    {
+      "term": "Indian Ocean Dipole",
+      "abbreviation": "IOD",
+      "category": "Ocean & Climate Drivers",
+      "definition": "An ocean-atmosphere coupled climate mode in the equatorial Indian Ocean characterized by an anomalous sea surface temperature gradient between the western tropical Indian Ocean and the eastern tropical Indian Ocean.",
+      "tooltip": "An ocean-atmosphere coupled climate mode in the equatorial Indian Ocean characterized by an anomalous sea surface temperature gradient between the western tropical Indian Ocean and the eastern tropical Indian Ocean..",
+      "formula_or_metric": "\\text{DMI} = \\text{SSTA}_{\\text{Western IO}} - \\text{SSTA}_{\\text{Eastern IO}}",
+      "canonical_reference": "Saji, N. H., et al. (1999). A dipole mode in the tropical Indian Ocean. Nature, 401(6751), 360-363.",
+      "sections_used": [
+        "0.0",
+        "2.1",
+        "2.2",
+        "3.2",
+        "3.3",
+        "4.1"
+      ]
+    },
+    {
+      "term": "Dipole Mode Index",
+      "abbreviation": "DMI",
+      "category": "Ocean & Climate Drivers",
+      "definition": "The quantitative measure of the Indian Ocean Dipole, defined as the difference in sea surface temperature anomaly between the western tropical Indian Ocean (50°E–70°E, 10°S–10°N) and the southeastern tropical Indian Ocean (90°E–110°E, 10°S–0°).",
+      "tooltip": "The quantitative measure of the Indian Ocean Dipole, defined as the difference in sea surface temperature anomaly between the western tropical Indian Ocean (50°E–70°E, 10°S–10°N) and the southeastern tropical Indian Ocean (90°E–110°E, 10°S–0°)..",
+      "formula_or_metric": "\\text{DMI} = \\text{SSTA}(50^\\circ\\text{–}70^\\circ\\text{E}, 10^\\circ\\text{S–}10^\\circ\\text{N}) - \\text{SSTA}(90^\\circ\\text{–}110^\\circ\\text{E}, 10^\\circ\\text{S–}0^\\circ)",
+      "canonical_reference": "JAMSTEC Application Laboratory / NOAA Physical Sciences Laboratory.",
+      "sections_used": [
+        "0.0",
+        "2.1",
+        "3.2",
+        "3.3",
+        "4.1"
+      ]
+    },
+    {
+      "term": "Western Pacific V-shape Pattern",
+      "abbreviation": "Western-V / WV",
+      "category": "Ocean & Climate Drivers",
+      "definition": "A recognized sea surface temperature and atmospheric circulation dipole in the Western North Pacific that modulates moisture flux into the Greater Horn of Africa, particularly relevant during boreal spring (MAM).",
+      "tooltip": "A recognized sea surface temperature and atmospheric circulation dipole in the Western North Pacific that modulates moisture flux into the Greater Horn of Africa, particularly relevant during boreal spring (MAM)..",
+      "formula_or_metric": "\\text{WV Index} = \\text{Standardized } z\\text{-score of WNP SST/Wind anomaly dipole}",
+      "canonical_reference": "Funk, C., et al. (2023). Western Pacific driver mechanics modulating East African rainfall.",
+      "sections_used": [
+        "2.1",
+        "5.1"
+      ]
+    },
+    {
+      "term": "Sea Surface Temperature Anomaly",
+      "abbreviation": "SSTA",
+      "category": "Ocean & Climate Drivers",
+      "definition": "The deviation of ocean surface temperature from the long-term climatological mean for a given location and calendar month, typically referenced to a 30-year WMO normal baseline.",
+      "tooltip": "The deviation of ocean surface temperature from the long-term climatological mean for a given location and calendar month, typically referenced to a 30-year WMO normal baseline..",
+      "formula_or_metric": "\\text{SSTA}_{y,m} = \\text{SST}_{y,m} - \\bar{\\text{SST}}_{m(1991\\text{--}2020)}",
+      "canonical_reference": "WMO Climatological Standard Normals Technical Document No. 1203.",
+      "sections_used": [
+        "2.1",
+        "3.3"
+      ]
+    },
+    {
+      "term": "SINTEX-F Forecast Plume",
+      "abbreviation": "SINTEX-F",
+      "category": "Ocean & Climate Drivers",
+      "definition": "The Scale Interaction Experiment-Frontier coupled ocean-atmosphere general circulation model developed by JAMSTEC, used operationally for 9-month lead forecasts of the Indian Ocean Dipole and ENSO.",
+      "tooltip": "The Scale Interaction Experiment-Frontier coupled ocean-atmosphere general circulation model developed by JAMSTEC, used operationally for 9-month lead forecasts of the Indian Ocean Dipole and ENSO..",
+      "formula_or_metric": "Ensemble mean of 9 coupled dynamical simulation members",
+      "canonical_reference": "Luo, J. J., et al. (2005). Extended-range ENSO and IOD predictions using SINTEX-F. J. Climate.",
+      "sections_used": [
+        "2.2"
+      ]
+    },
+    {
+      "term": "Columbia IRI Prediction Plume",
+      "abbreviation": "IRI Plume",
+      "category": "Ocean & Climate Drivers",
+      "definition": "A multi-model ensemble of dynamical and statistical seasonal forecast models predicting Niño 3.4 SST anomalies up to 9 months ahead, curated monthly by the International Research Institute for Climate and Society (IRI).",
+      "tooltip": "A multi-model ensemble of dynamical and statistical seasonal forecast models predicting Niño 3.4 SST anomalies up to 9 months ahead, curated monthly by the International Research Institute for Climate and Society (IRI)..",
+      "formula_or_metric": "\\bar{z}_{\\text{IRI}} = \\frac{1}{M}\\sum_{m=1}^{M} z_{\\text{model}_m}",
+      "canonical_reference": "Columbia Climate School International Research Institute for Climate and Society.",
+      "sections_used": [
+        "2.2"
+      ]
+    },
+    {
+      "term": "Long Rains",
+      "abbreviation": "MAM",
+      "category": "Climatology & Seasons",
+      "definition": "The primary agricultural rainfall season across western, central, and northern Kenya, spanning the months of March, April, and May, driven by the northward migration of the Intertropical Convergence Zone (ITCZ).",
+      "tooltip": "The primary agricultural rainfall season across western, central, and northern Kenya, spanning the months of March, April, and May, driven by the northward migration of the Intertropical Convergence Zone (ITCZ)..",
+      "formula_or_metric": "R_{\\text{MAM}} = \\sum_{m \\in \\{\\text{Mar, Apr, May}\\}} R_m",
+      "canonical_reference": "Kenya Meteorological Department (KMD) National Seasonal Calendar.",
+      "sections_used": [
+        "0.0",
+        "1.0",
+        "2.1",
+        "3.1",
+        "3.1B",
+        "4.1"
+      ]
+    },
+    {
+      "term": "Short Rains",
+      "abbreviation": "OND",
+      "category": "Climatology & Seasons",
+      "definition": "The secondary agricultural and pastoral rainfall season spanning October, November, and December, exhibiting the highest teleconnection sensitivity and predictive skill linked to Pacific ENSO and Indian Ocean Dipole dynamics.",
+      "tooltip": "The secondary agricultural and pastoral rainfall season spanning October, November, and December, exhibiting the highest teleconnection sensitivity and predictive skill linked to Pacific ENSO and Indian Ocean Dipole dynamics..",
+      "formula_or_metric": "R_{\\text{OND}} = \\sum_{m \\in \\{\\text{Oct, Nov, Dec}\\}} R_m",
+      "canonical_reference": "Kenya Meteorological Department (KMD) National Seasonal Calendar.",
+      "sections_used": [
+        "0.0",
+        "1.0",
+        "2.1",
+        "3.1",
+        "3.1B",
+        "4.1"
+      ]
+    },
+    {
+      "term": "Pastoral Boreal Summer Window",
+      "abbreviation": "JJAS / JAS",
+      "category": "Climatology & Seasons",
+      "definition": "The dry season across eastern and southern pastoral rangelands (June–September) and the primary rainfall season in the western highlands and Lake Victoria basin.",
+      "tooltip": "The dry season across eastern and southern pastoral rangelands (June–September) and the primary rainfall season in the western highlands and Lake Victoria basin..",
+      "formula_or_metric": "R_{\\text{JJAS}} = \\sum_{m \\in \\{\\text{Jun, Jul, Aug, Sep}\\}} R_m",
+      "canonical_reference": "Kenya Meteorological Department (KMD) Regional Climatology.",
+      "sections_used": [
+        "1.0",
+        "3.1",
+        "4.3"
+      ]
+    },
+    {
+      "term": "Warm Dry Season Window",
+      "abbreviation": "DJF",
+      "category": "Climatology & Seasons",
+      "definition": "The warm dry interval spanning December, January, and February, marked by crop maturation and harvesting in agricultural counties and grazing pressure in pastoral zones.",
+      "tooltip": "The warm dry interval spanning December, January, and February, marked by crop maturation and harvesting in agricultural counties and grazing pressure in pastoral zones..",
+      "formula_or_metric": "R_{\\text{DJF}} = R_{\\text{Dec}} + R_{\\text{Jan}} + R_{\\text{Feb}}",
+      "canonical_reference": "Kenya Meteorological Department (KMD).",
+      "sections_used": [
+        "1.0",
+        "3.1"
+      ]
+    },
+    {
+      "term": "WMO 1991–2020 Standard Normal Baseline",
+      "abbreviation": "WMO Normal",
+      "category": "Climatology & Seasons",
+      "definition": "The canonical 30-year climatological reference period defined by the World Meteorological Organization for assessing contemporary climate anomalies and evaluating extreme frequencies.",
+      "tooltip": "The canonical 30-year climatological reference period defined by the World Meteorological Organization for assessing contemporary climate anomalies and evaluating extreme frequencies..",
+      "formula_or_metric": "Calendar period 1991-01-01 through 2020-12-31 (30 complete historical years)",
+      "canonical_reference": "WMO-No. 1203 (2017). WMO Guidelines on the Calculation of Climate Normals.",
+      "sections_used": [
+        "0.0",
+        "2.1",
+        "3.1",
+        "3.1B",
+        "3.2",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Non-Parametric Empirical Quantiles",
+      "abbreviation": "Empirical Quantiles",
+      "category": "Statistical Methods",
+      "definition": "Fractile estimators calculated directly from the sorted empirical cumulative distribution function without assuming a theoretical parametric distribution (such as Gaussian normal). Mandatory for East African rainfall due to positive skewness.",
+      "tooltip": "Fractile estimators calculated directly from the sorted empirical cumulative distribution function without assuming a theoretical parametric distribution (such as Gaussian normal).",
+      "formula_or_metric": "\\hat{Q}(p) = (1 - \\gamma) X_{(j)} + \\gamma X_{(j+1)}, \\quad j = \\lfloor p N + (1 - p)/3 \\rfloor",
+      "canonical_reference": "Hyndman, R. J., & Fan, Y. (1996). Sample quantiles in statistical packages. The American Statistician.",
+      "sections_used": [
+        "2.1",
+        "3.1",
+        "3.2"
+      ]
+    },
+    {
+      "term": "Rainfall Positive Skewness",
+      "abbreviation": "Positive Skewness",
+      "category": "Statistical Methods",
+      "definition": "The asymmetric right-tailed distribution characteristic of East African seasonal precipitation, where the majority of seasons experience near- or below-average totals and a minority experience extreme episodic deluge.",
+      "tooltip": "The asymmetric right-tailed distribution characteristic of East African seasonal precipitation, where the majority of seasons experience near- or below-average totals and a minority experience extreme episodic deluge..",
+      "formula_or_metric": "\\gamma_1 = \\frac{\\frac{1}{N}\\sum_{i=1}^{N}(R_i - \\bar{R})^3}{\\left(\\frac{1}{N}\\sum_{i=1}^{N}(R_i - \\bar{R})^2\\right)^{3/2}} > 0",
+      "canonical_reference": "Hastings, D., et al. (2020). Skewness in African rainfall extremes. J. Hydrometeorology.",
+      "sections_used": [
+        "3.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Ranked Probability Skill Score",
+      "abbreviation": "RPSS",
+      "category": "Statistical Methods",
+      "definition": "A categorical probabilistic verification metric that measures the relative accuracy of a multicategory probabilistic forecast (such as terciles) compared to a climatological reference forecast.",
+      "tooltip": "A categorical probabilistic verification metric that measures the relative accuracy of a multicategory probabilistic forecast (such as terciles) compared to a climatological reference forecast..",
+      "formula_or_metric": "\\text{RPS} = \\sum_{m=1}^{K}\\left(\\sum_{k=1}^m p_k - \\sum_{k=1}^m o_k\\right)^2, \\quad \\text{RPSS} = 1 - \\frac{\\text{RPS}_{\\text{forecast}}}{\\text{RPS}_{\\text{climatology}}}",
+      "canonical_reference": "Epstein, E. S. (1969). A scoring system for probability forecasts of ranked categories. J. Appl. Meteor.",
+      "sections_used": [
+        "0.0",
+        "2.2",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Leave-One-Out Cross-Validation",
+      "abbreviation": "LOOCV",
+      "category": "Statistical Methods",
+      "definition": "A deterministic cross-validation procedure where each year in the historical hindcast record is iteratively omitted from the training distribution and used solely as the out-of-sample evaluation target, preventing artificial hindcast overconfidence.",
+      "tooltip": "A deterministic cross-validation procedure where each year in the historical hindcast record is iteratively omitted from the training distribution and used solely as the out-of-sample evaluation target, preventing artificial hindcast overconfidence..",
+      "formula_or_metric": "\\text{Skill}_{\\text{LOOCV}} = \\frac{1}{N}\\sum_{y=1}^{N} \\mathcal{S}(\\hat{P}_{(-y)}, O_y)",
+      "canonical_reference": "Wilks, D. S. (2011). Statistical Methods in the Atmospheric Sciences. Academic Press.",
+      "sections_used": [
+        "0.0",
+        "2.2",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Modal Hit Rate",
+      "abbreviation": "Modal Hit Rate",
+      "category": "Statistical Methods",
+      "definition": "The percentage of historical verification seasons where the forecast's highest-probability (modal) category exactly matched the tercile category that actually occurred.",
+      "tooltip": "The percentage of historical verification seasons where the forecast's highest-probability (modal) category exactly matched the tercile category that actually occurred..",
+      "formula_or_metric": "\\text{HR} = \\frac{1}{N}\\sum_{i=1}^{N} \\mathbb{I}\\left(\\arg\\max_k p_{i,k} == \\arg\\max_k o_{i,k}\\right) \\times 100\\%",
+      "canonical_reference": "Jolliffe, I. T., & Stephenson, D. B. (2012). Forecast Verification: A Practitioner's Guide.",
+      "sections_used": [
+        "0.0",
+        "2.2"
+      ]
+    },
+    {
+      "term": "Independent Seasonal Standardization",
+      "abbreviation": "Seasonal z-score",
+      "category": "Statistical Methods",
+      "definition": "A standardization protocol where OND and MAM seasonal rainfall are transformed into z-scores independently against their own distinct historical seasonal means and standard deviations, ensuring fair multi-season sequence classification.",
+      "tooltip": "A standardization protocol where OND and MAM seasonal rainfall are transformed into z-scores independently against their own distinct historical seasonal means and standard deviations, ensuring fair multi-season sequence classification..",
+      "formula_or_metric": "z_{s,y} = \\frac{R_{s,y} - \\mu_{s(1991\\text{--}2020)}}{\\sigma_{s(1991\\text{--}2020)}}, \\quad s \\in \\{\\text{OND}, \\text{MAM}\\}",
+      "canonical_reference": "Decision D53 Technical Architecture Specification.",
+      "sections_used": [
+        "3.1B"
+      ]
+    },
+    {
+      "term": "Climate Hazards Center InfraRed Precipitation with Station Data",
+      "abbreviation": "CHIRPS v3",
+      "category": "Remote Sensing & Hazards",
+      "definition": "A quasi-global high-resolution precipitation dataset blending cold cloud duration (CCD) satellite infrared imagery with calibrated in-situ station observations, providing gridded rainfall at 0.05° spatial resolution from 1981 to present.",
+      "tooltip": "A quasi-global high-resolution precipitation dataset blending cold cloud duration (CCD) satellite infrared imagery with calibrated in-situ station observations, providing gridded rainfall at 0.05° spatial resolution from 1981 to present..",
+      "formula_or_metric": "R_{\\text{CHIRPS}} = R_{\\text{IR}} \\times \\frac{S_{\\text{gauged}}}{S_{\\text{climatology}}}",
+      "canonical_reference": "Funk, C., et al. (2015). The climate hazards infrared precipitation with stations. Scientific Data, 2, 150066.",
+      "sections_used": [
+        "0.0",
+        "1.0",
+        "2.1",
+        "3.1",
+        "3.4",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Copernicus Global Flood Monitoring",
+      "abbreviation": "Copernicus GFM",
+      "category": "Remote Sensing & Hazards",
+      "definition": "An operational Earth observation service providing near-real-time satellite Synthetic Aperture Radar (SAR) flood inundation extents derived from Sentinel-1 constellation radar acquisitions at 20m resolution, independent of cloud cover.",
+      "tooltip": "An operational Earth observation service providing near-real-time satellite Synthetic Aperture Radar (SAR) flood inundation extents derived from Sentinel-1 constellation radar acquisitions at 20m resolution, independent of cloud cover..",
+      "formula_or_metric": "\\text{SAR Backscatter Threshold: } \\sigma_0 < \\tau_{\\text{water}} \\text{ (dB)}",
+      "canonical_reference": "European Commission Joint Research Centre (JRC) Copernicus GFM Service.",
+      "sections_used": [
+        "1.0",
+        "3.5",
+        "4.5",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Synthetic Aperture Radar",
+      "abbreviation": "SAR",
+      "category": "Remote Sensing & Hazards",
+      "definition": "An active microwave imaging sensor that illuminates the Earth's surface with radar pulses, capable of penetrating cloud cover, dense smoke, and nighttime darkness to detect smooth open water surfaces via specular reflection.",
+      "tooltip": "An active microwave imaging sensor that illuminates the Earth's surface with radar pulses, capable of penetrating cloud cover, dense smoke, and nighttime darkness to detect smooth open water surfaces via specular reflection..",
+      "formula_or_metric": "\\sigma^0 \\text{ (radar backscatter coefficient in decibels)}",
+      "canonical_reference": "Sentinel-1 Technical Guide, European Space Agency (ESA).",
+      "sections_used": [
+        "1.0",
+        "3.5",
+        "4.5"
+      ]
+    },
+    {
+      "term": "JRC Flood Return Period Hazard Layers",
+      "abbreviation": "JRC Flood RP",
+      "category": "Remote Sensing & Hazards",
+      "definition": "Hydrodynamic inundation depth maps modeled by the European Commission Joint Research Centre for statistical return intervals (1-in-10, 1-in-20, 1-in-50, 1-in-100 years) based on calibrated river discharge distributions.",
+      "tooltip": "Hydrodynamic inundation depth maps modeled by the European Commission Joint Research Centre for statistical return intervals (1-in-10, 1-in-20, 1-in-50, 1-in-100 years) based on calibrated river discharge distributions..",
+      "formula_or_metric": "T_{\\text{RP}} = \\frac{1}{P(\\text{Exceedance in any single year})}",
+      "canonical_reference": "Dottori, F., et al. (2016). Development and evaluation of a framework for global flood hazard mapping. Advances in Water Resources.",
+      "sections_used": [
+        "3.5",
+        "4.5",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Normalized Difference Vegetation Index",
+      "abbreviation": "MODIS NDVI",
+      "category": "Remote Sensing & Hazards",
+      "definition": "A satellite remote sensing index quantifying photosynthetic biomass and vegetation greenness by computing the normalized ratio of surface reflectance in near-infrared (NIR) and visible red (RED) spectrums.",
+      "tooltip": "A satellite remote sensing index quantifying photosynthetic biomass and vegetation greenness by computing the normalized ratio of surface reflectance in near-infrared (NIR) and visible red (RED) spectrums..",
+      "formula_or_metric": "\\text{NDVI} = \\frac{\\rho_{\\text{NIR}} - \\rho_{\\text{RED}}}{\\rho_{\\text{NIR}} + \\rho_{\\text{RED}}}",
+      "canonical_reference": "Rouse, J. W., et al. (1974). Monitoring the vernal advancement of retrogradation of natural vegetation. NASA/GSFC.",
+      "sections_used": [
+        "4.3",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Water Requirement Satisfaction Index",
+      "abbreviation": "WRSI",
+      "category": "Remote Sensing & Hazards",
+      "definition": "A geospatial agro-climatological crop water balance model calculating the ratio of actual seasonal evapotranspiration to crop water requirements, used by FEWS NET to identify crop and pasture moisture stress.",
+      "tooltip": "A geospatial agro-climatological crop water balance model calculating the ratio of actual seasonal evapotranspiration to crop water requirements, used by FEWS NET to identify crop and pasture moisture stress..",
+      "formula_or_metric": "\\text{WRSI} = \\frac{\\sum_{t=1}^{N} \\text{ET}_a}{\\sum_{t=1}^{N} \\text{ET}_c} \\times 100\\%",
+      "canonical_reference": "Senay, G. B., & Verdin, J. (2003). Characterizing drought conditions in the Greater Horn of Africa using WRSI. Int. J. Remote Sens.",
+      "sections_used": [
+        "4.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Standardized Precipitation-Evapotranspiration Index",
+      "abbreviation": "SPEI-3",
+      "category": "Remote Sensing & Hazards",
+      "definition": "A multiscalar drought index that combines precipitation and atmospheric evaporative demand (potential evapotranspiration) accumulated over a 3-month rolling window, fitted to a log-logistic probability distribution.",
+      "tooltip": "A multiscalar drought index that combines precipitation and atmospheric evaporative demand (potential evapotranspiration) accumulated over a 3-month rolling window, fitted to a log-logistic probability distribution..",
+      "formula_or_metric": "D_i = P_i - \\text{PET}_i, \\quad \\text{SPEI} = \\Phi^{-1}(F(D))",
+      "canonical_reference": "Vicente-Serrano, S. M., et al. (2010). A multiscalar drought index sensitive to global warming: SPEI. J. Climate.",
+      "sections_used": [
+        "3.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Gross Value of Production",
+      "abbreviation": "VOP",
+      "category": "Economic & Valuation",
+      "definition": "The aggregate physical output of agricultural crops and livestock commodities valued at constant standardized gate prices, providing an uninflated metric of total agricultural capital at risk from climate extremes.",
+      "tooltip": "The aggregate physical output of agricultural crops and livestock commodities valued at constant standardized gate prices, providing an uninflated metric of total agricultural capital at risk from climate extremes..",
+      "formula_or_metric": "\\text{VOP}_{c} = \\sum_{k=1}^{K} Q_{c,k} \\times P_{k}^{\\text{constant}}",
+      "canonical_reference": "FAOSTAT Valuation Methodology / Decision D62 Beta Review Governance.",
+      "sections_used": [
+        "1.2",
+        "4.5"
+      ]
+    },
+    {
+      "term": "National Agriculture Production Report",
+      "abbreviation": "KNBS NAPR",
+      "category": "Official Statistics",
+      "definition": "The official national agricultural survey published by the Kenya National Bureau of Statistics providing subnational, county-level production statistics across 47 counties for crops, livestock headcounts, and animal products.",
+      "tooltip": "The official national agricultural survey published by the Kenya National Bureau of Statistics providing subnational, county-level production statistics across 47 counties for crops, livestock headcounts, and animal products..",
+      "formula_or_metric": "Official state statistical release (2024/2025 editions)",
+      "canonical_reference": "Kenya National Bureau of Statistics (KNBS).",
+      "sections_used": [
+        "1.1",
+        "4.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "HarvestStat Subnational Crop Statistics",
+      "abbreviation": "HarvestStat",
+      "category": "Official Statistics",
+      "definition": "A harmonized, multi-decadal historical subnational crop production database developed by the FEWS NET Science Team and UC Santa Barbara, extending from 1982 through 2020 for Kenyan counties.",
+      "tooltip": "A harmonized, multi-decadal historical subnational crop production database developed by the FEWS NET Science Team and UC Santa Barbara, extending from 1982 through 2020 for Kenyan counties..",
+      "formula_or_metric": "Harmonized historical time series with quality flags",
+      "canonical_reference": "FEWS NET Science Team & Climate Hazards Center.",
+      "sections_used": [
+        "4.2B",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Pastoral Terms of Trade",
+      "abbreviation": "ToT",
+      "category": "Markets & Early Warning",
+      "definition": "The ratio of pastoral purchasing power, measured as the number of kilograms of local staple grain (dry maize) that a pastoral household can purchase through the sale of one medium-sized live goat (shoat).",
+      "tooltip": "The ratio of pastoral purchasing power, measured as the number of kilograms of local staple grain (dry maize) that a pastoral household can purchase through the sale of one medium-sized live goat (shoat)..",
+      "formula_or_metric": "\\text{ToT}_m = \\frac{P_{\\text{goat},m}}{P_{\\text{maize},m}} \\quad (\\text{kg/goat})",
+      "canonical_reference": "National Drought Management Authority (NDMA) Monthly Early Warning Bulletins.",
+      "sections_used": [
+        "4.4",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Reduced Coping Strategy Index",
+      "abbreviation": "rCSI",
+      "category": "Food Security & Vulnerability",
+      "definition": "A standardized proxy measure of household food stress based on a weighted 5-question survey assessing behavioral adaptations taken by households experiencing food shortages over the past 7 days.",
+      "tooltip": "A standardized proxy measure of household food stress based on a weighted 5-question survey assessing behavioral adaptations taken by households experiencing food shortages over the past 7 days..",
+      "formula_or_metric": "\\text{rCSI} = \\sum_{i=1}^{5} w_i \\times f_i, \\quad w \\in \\{1, 1, 1, 2, 3\\}",
+      "canonical_reference": "Maxwell, D., et al. (2008). The Coping Strategies Index Field Methods Manual. CARE / WFP.",
+      "sections_used": [
+        "4.6",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Integrated Food Security Phase Classification",
+      "abbreviation": "IPC",
+      "category": "Food Security & Vulnerability",
+      "definition": "A multi-partner standardized scale categorizing food insecurity severity into five distinct phases: Phase 1 (Minimal), Phase 2 (Stressed), Phase 3 (Crisis), Phase 4 (Emergency), and Phase 5 (Catastrophe/Famine).",
+      "tooltip": "A multi-partner standardized scale categorizing food insecurity severity into five distinct phases: Phase 1 (Minimal), Phase 2 (Stressed), Phase 3 (Crisis), Phase 4 (Emergency), and Phase 5 (Catastrophe/Famine)..",
+      "formula_or_metric": "\\text{Phase } \\in \\{1, 2, 3, 4, 5\\}",
+      "canonical_reference": "IPC Global Partners (2021). Integrated Food Security Phase Classification Technical Manual Version 3.1.",
+      "sections_used": [
+        "4.6",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Cross-Border Food Trade",
+      "abbreviation": "XBT Trade",
+      "category": "Markets & Early Warning",
+      "definition": "The formal and informal monitored cross-border trade of staple cereal grains and livestock across East African border corridors (e.g. Busia, Malaba, Moyale, Namanga, Mandera) tracked quarterly by FEWS NET.",
+      "tooltip": "The formal and informal monitored cross-border trade of staple cereal grains and livestock across East African border corridors (e.g.",
+      "formula_or_metric": "V_{\\text{XBT}} = \\sum \\text{Tonnes}_{\\text{cereal}} \\text{ (Import / Export)}",
+      "canonical_reference": "FEWS NET East Africa Cross-Border Trade Bulletin.",
+      "sections_used": [
+        "4.4B",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Kenya Agricultural Market Information System",
+      "abbreviation": "KAMIS",
+      "category": "Markets & Early Warning",
+      "definition": "The national market price surveillance platform operated by the Ministry of Agriculture and Livestock Development tracking daily wholesale and retail food commodity prices across Kenya's urban and rural markets.",
+      "tooltip": "The national market price surveillance platform operated by the Ministry of Agriculture and Livestock Development tracking daily wholesale and retail food commodity prices across Kenya's urban and rural markets..",
+      "formula_or_metric": "Daily / weekly market surveillance time series",
+      "canonical_reference": "Ministry of Agriculture and Livestock Development (MoALD).",
+      "sections_used": [
+        "4.4",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Kenya Food Security Steering Group",
+      "abbreviation": "KFSSG",
+      "category": "Institutional & Governance",
+      "definition": "The multi-agency technical coordination body led by NDMA and national line ministries that conducts biannual post-harvest food security assessments (Short Rains Assessment - SRA; Long Rains Assessment - LRA).",
+      "tooltip": "The multi-agency technical coordination body led by NDMA and national line ministries that conducts biannual post-harvest food security assessments (Short Rains Assessment - SRA; Long Rains Assessment - LRA)..",
+      "formula_or_metric": "Biannual consensus assessments (SRA / LRA)",
+      "canonical_reference": "National Drought Management Authority (NDMA).",
+      "sections_used": [
+        "0.0",
+        "4.6",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Arid and Semi-Arid Lands",
+      "abbreviation": "ASAL",
+      "category": "Administrative & Geography",
+      "definition": "The 23 designated arid and semi-arid counties of Kenya comprising over 80% of the national landmass, characterized by low and erratic rainfall, fragile rangeland ecosystems, and predominantly pastoralist livelihoods.",
+      "tooltip": "The 23 designated arid and semi-arid counties of Kenya comprising over 80% of the national landmass, characterized by low and erratic rainfall, fragile rangeland ecosystems, and predominantly pastoralist livelihoods..",
+      "formula_or_metric": "\\text{County Count} = 23 \\text{ designated ASAL counties}",
+      "canonical_reference": "Kenya Ministry of Devolution and ASALs.",
+      "sections_used": [
+        "0.0",
+        "1.0",
+        "1.1",
+        "4.3",
+        "4.4"
+      ]
+    },
+    {
+      "term": "Gender Equality and Social Inclusion",
+      "abbreviation": "GESI",
+      "category": "Demography & Equity",
+      "definition": "A developmental framework and empirical indicator suite examining how gender headship, intra-household decision-making, land tenure documentation, and labor division influence differential vulnerability to climate extremes.",
+      "tooltip": "A developmental framework and empirical indicator suite examining how gender headship, intra-household decision-making, land tenure documentation, and labor division influence differential vulnerability to climate extremes..",
+      "formula_or_metric": "Multidimensional indicator suite benchmarking county vs national medians",
+      "canonical_reference": "KNBS County Gender Data Sheets (2025).",
+      "sections_used": [
+        "1.3",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Common Operational Datasets - Administrative Boundaries",
+      "abbreviation": "COD-AB",
+      "category": "Administrative & Geography",
+      "definition": "The authoritative United Nations humanitarian GIS administrative boundary layers (ADM0 National, ADM1 County, ADM2 Sub-county) endorsed by UN OCHA and the Kenya Survey Department.",
+      "tooltip": "The authoritative United Nations humanitarian GIS administrative boundary layers (ADM0 National, ADM1 County, ADM2 Sub-county) endorsed by UN OCHA and the Kenya Survey Department..",
+      "formula_or_metric": "Vector polygonal boundary layers with standardized P-codes",
+      "canonical_reference": "UN OCHA Humanitarian Data Exchange (HDX).",
+      "sections_used": [
+        "1.0",
+        "1.1",
+        "3.4",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Kenya Meteorological Department",
+      "abbreviation": "KMD",
+      "category": "Institutional & Governance",
+      "definition": "The canonical national hydrometeorological service of Kenya responsible for national weather forecasting, seasonal climate outlooks, marine telemetry, and severe weather early warnings (Decision D40 canonical institutional naming).",
+      "tooltip": "The canonical national hydrometeorological service of Kenya responsible for national weather forecasting, seasonal climate outlooks, marine telemetry, and severe weather early warnings (Decision D40 canonical institutional naming)..",
+      "formula_or_metric": "National hydromet authority",
+      "canonical_reference": "Ministry of Environment, Climate Change and Forestry.",
+      "sections_used": [
+        "0.0",
+        "2.1",
+        "2.2",
+        "2.3",
+        "6.1"
+      ]
+    },
+    {
+      "term": "National Drought Management Authority",
+      "abbreviation": "NDMA",
+      "category": "Institutional & Governance",
+      "definition": "The statutory leadership agency in the Government of Kenya responsible for drought early warning, crisis coordination, resilience building, and operating the national early warning bulletin monitoring network.",
+      "tooltip": "The statutory leadership agency in the Government of Kenya responsible for drought early warning, crisis coordination, resilience building, and operating the national early warning bulletin monitoring network..",
+      "formula_or_metric": "Monthly drought monitoring across 23 ASAL counties",
+      "canonical_reference": "National Drought Management Authority Act (2016).",
+      "sections_used": [
+        "0.0",
+        "1.2",
+        "4.6",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Kenya National Bureau of Statistics",
+      "abbreviation": "KNBS",
+      "category": "Institutional & Governance",
+      "definition": "The principal government agency responsible for collecting, analyzing, and disseminating official statistical information in Kenya, including the decennial Population and Housing Census and economic surveys.",
+      "tooltip": "The principal government agency responsible for collecting, analyzing, and disseminating official statistical information in Kenya, including the decennial Population and Housing Census and economic surveys..",
+      "formula_or_metric": "National statistical authority",
+      "canonical_reference": "Statistics Act (2006).",
+      "sections_used": [
+        "1.0",
+        "1.1",
+        "1.2",
+        "1.3",
+        "4.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Regional Centre for Mapping of Resources for Development",
+      "abbreviation": "RCMRD",
+      "category": "Institutional & Governance",
+      "definition": "An intergovernmental organization based in Nairobi, Kenya, providing geospatial and remote sensing support, disaster risk mapping, and Earth observation analytics across Eastern and Southern Africa.",
+      "tooltip": "An intergovernmental organization based in Nairobi, Kenya, providing geospatial and remote sensing support, disaster risk mapping, and Earth observation analytics across Eastern and Southern Africa..",
+      "formula_or_metric": "Intergovernmental Earth observation center",
+      "canonical_reference": "RCMRD Institutional Charter.",
+      "sections_used": [
+        "3.5",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Comprehensive Data Hub Schema",
+      "abbreviation": "CDH Schema",
+      "category": "Institutional & Governance",
+      "definition": "The institutional metadata and data publishing specification (v0.3.0) governing dataset descriptions, citation formatting, temporal-spatial schemas, and open data licensing across the Adaptation Atlas.",
+      "tooltip": "The institutional metadata and data publishing specification (v0.3.0) governing dataset descriptions, citation formatting, temporal-spatial schemas, and open data licensing across the Adaptation Atlas..",
+      "formula_or_metric": "Metadata contract specification v0.3.0",
+      "canonical_reference": "Africa Agriculture Adaptation Atlas CDH Technical Specification.",
+      "sections_used": [
+        "6.1"
+      ]
+    },
+    {
+      "term": "Standardized Precipitation Index",
+      "abbreviation": "SPI",
+      "category": "Remote Sensing & Hazards",
+      "definition": "A widely used drought index based on the probability of precipitation for any time scale, fitted to a gamma distribution and transformed to a normal distribution with mean zero and standard deviation one.",
+      "tooltip": "A widely used drought index based on the probability of precipitation for any time scale, fitted to a gamma distribution and transformed to a normal distribution with mean zero and standard deviation one..",
+      "formula_or_metric": "\\text{SPI} = \\Phi^{-1}(G(P))",
+      "canonical_reference": "McKee, T. B., et al. (1993). The relationship of drought frequency and duration to time scales. AMS.",
+      "sections_used": [
+        "3.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Anticipatory Action",
+      "abbreviation": "AA",
+      "category": "Institutional & Governance",
+      "definition": "Acting ahead of predicted hazardous climate events to prevent or reduce humanitarian impacts before disaster strikes, triggered by probabilistic meteorological forecasts.",
+      "tooltip": "Acting ahead of predicted hazardous climate events to prevent or reduce humanitarian impacts before disaster strikes, triggered by probabilistic meteorological forecasts..",
+      "formula_or_metric": "\\text{Trigger: } P(\\text{Extreme}) \\ge \\tau_{\\text{action}}",
+      "canonical_reference": "UN OCHA / Red Cross Climate Centre Anticipatory Action Framework.",
+      "sections_used": [
+        "0.0",
+        "2.2"
+      ]
+    },
+    {
+      "term": "Disaster Risk Reduction",
+      "abbreviation": "DRR",
+      "category": "Institutional & Governance",
+      "definition": "Policy objective aimed at preventing new and reducing existing disaster risk and managing residual risk, strengthening resilience.",
+      "tooltip": "Policy objective aimed at preventing new and reducing existing disaster risk and managing residual risk, strengthening resilience..",
+      "formula_or_metric": "Sendai Framework for Disaster Risk Reduction 2015-2030.",
+      "canonical_reference": "UNDRR Sendai Framework.",
+      "sections_used": [
+        "0.0",
+        "2.2",
+        "4.6"
+      ]
+    },
+    {
+      "term": "Famine Early Warning Systems Network",
+      "abbreviation": "FEWS NET",
+      "category": "Institutional & Governance",
+      "definition": "A leading provider of early warning and analysis on food insecurity created by USAID, providing data on markets, trade, and agro-climatology across East Africa.",
+      "tooltip": "A leading provider of early warning and analysis on food insecurity created by USAID, providing data on markets, trade, and agro-climatology across East Africa..",
+      "formula_or_metric": "Global early warning network",
+      "canonical_reference": "USAID FEWS NET.",
+      "sections_used": [
+        "4.1",
+        "4.2B",
+        "4.4",
+        "4.4B",
+        "6.1"
+      ]
+    },
+    {
+      "term": "ReliefWeb Disaster Chronicle",
+      "abbreviation": "ReliefWeb / GLIDE",
+      "category": "Institutional & Governance",
+      "definition": "The UN OCHA humanitarian information portal tracking disaster situations and compiling emergency response dispatches indexed by Global Identifier Numbers (GLIDE).",
+      "tooltip": "The UN OCHA humanitarian information portal tracking disaster situations and compiling emergency response dispatches indexed by Global Identifier Numbers (GLIDE)..",
+      "formula_or_metric": "GLIDE Unique Disaster Identifier standard",
+      "canonical_reference": "UN OCHA ReliefWeb Service.",
+      "sections_used": [
+        "4.6",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Humanitarian OpenStreetMap Team Facilities",
+      "abbreviation": "HOT-OSM",
+      "category": "Administrative & Geography",
+      "definition": "Community-mapped geospatial vector points of health clinics, hospitals, and educational institutions in Kenya, validated for humanitarian disaster exposure modeling.",
+      "tooltip": "Community-mapped geospatial vector points of health clinics, hospitals, and educational institutions in Kenya, validated for humanitarian disaster exposure modeling..",
+      "formula_or_metric": "Geospatial point feature layer",
+      "canonical_reference": "Humanitarian OpenStreetMap Team (HOT) Kenya Export.",
+      "sections_used": [
+        "3.5",
+        "4.5",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Kenya Power and Lighting Company Grid",
+      "abbreviation": "KPLC",
+      "category": "Administrative & Geography",
+      "definition": "National electrical transmission line infrastructure vector dataset used in the platform to evaluate power grid asset vulnerability to flood inundation.",
+      "tooltip": "National electrical transmission line infrastructure vector dataset used in the platform to evaluate power grid asset vulnerability to flood inundation..",
+      "formula_or_metric": "Vector line network (kV transmission lines)",
+      "canonical_reference": "Kenya Power and Lighting Company GIS Repository.",
+      "sections_used": [
+        "4.5",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Kenya Agricultural and Livestock Research Organization",
+      "abbreviation": "KALRO",
+      "category": "Institutional & Governance",
+      "definition": "The principal agricultural research institution in Kenya developing crop varieties, rangeland management protocols, and agro-weather advisories.",
+      "tooltip": "The principal agricultural research institution in Kenya developing crop varieties, rangeland management protocols, and agro-weather advisories..",
+      "formula_or_metric": "National agricultural research authority",
+      "canonical_reference": "KALRO Act (2013).",
+      "sections_used": [
+        "4.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Agriculture and Food Authority",
+      "abbreviation": "AFA",
+      "category": "Institutional & Governance",
+      "definition": "The state regulator overseeing development, regulation, and promotion of scheduled agricultural crops in Kenya (including sugar, tea, coffee, nuts, and cereals).",
+      "tooltip": "The state regulator overseeing development, regulation, and promotion of scheduled agricultural crops in Kenya (including sugar, tea, coffee, nuts, and cereals)..",
+      "formula_or_metric": "State regulatory authority",
+      "canonical_reference": "Agriculture and Food Authority Act (2013).",
+      "sections_used": [
+        "4.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Food and Agriculture Organization",
+      "abbreviation": "FAO / FAOSTAT",
+      "category": "Institutional & Governance",
+      "definition": "The specialized agency of the United Nations leading international efforts to defeat hunger, maintain global agricultural statistical databases (FAOSTAT), and establish standardized commodity price concepts.",
+      "tooltip": "The specialized agency of the United Nations leading international efforts to defeat hunger, maintain global agricultural statistical databases (FAOSTAT), and establish standardized commodity price concepts..",
+      "formula_or_metric": "UN Specialized Statistical Agency",
+      "canonical_reference": "FAO Statistical Databases (FAOSTAT).",
+      "sections_used": [
+        "1.2",
+        "4.1",
+        "6.1"
+      ]
+    },
+    {
+      "term": "Cold Cloud Duration",
+      "abbreviation": "CCD",
+      "category": "Remote Sensing & Hazards",
+      "definition": "The duration of time a satellite thermal infrared pixel registers temperatures below a convective threshold (typically -40°C), used by CHIRPS as a physical proxy for convective precipitation.",
+      "tooltip": "The duration of time a satellite thermal infrared pixel registers temperatures below a convective threshold (typically -40°C), used by CHIRPS as a physical proxy for convective precipitation..",
+      "formula_or_metric": "\\text{CCD} = \\sum_{t} \\mathbb{I}(T_b(t) < 233.15\\,\\text{K}) \\times \\Delta t",
+      "canonical_reference": "Milford, J. R., & Dugdale, G. (1990). Estimation of rainfall using cold cloud duration. Int. J. Remote Sens.",
+      "sections_used": [
+        "3.1",
+        "3.4"
+      ]
+    },
+    {
+      "term": "Standard Normal Homogeneity Test",
+      "abbreviation": "SNHT",
+      "category": "Statistical Methods",
+      "definition": "A statistical test applied to climatological time series to detect abrupt shifts or changepoints caused by station relocations, instrument recalibrations, or landcover changes.",
+      "tooltip": "A statistical test applied to climatological time series to detect abrupt shifts or changepoints caused by station relocations, instrument recalibrations, or landcover changes..",
+      "formula_or_metric": "T_k = k \\bar{z}_1^2 + (n - k) \\bar{z}_2^2",
+      "canonical_reference": "Alexandersson, H. (1986). A homogeneity test applied to precipitation data. J. Climatology.",
+      "sections_used": [
+        "3.1"
+      ]
+    },
+    {
+      "term": "Subcounty Spatial Apportionment",
+      "abbreviation": "Spatial Apportionment",
+      "category": "Statistical Methods",
+      "definition": "The mathematical disaggregation of county-level aggregate production and livestock values across subcounties using high-resolution spatial auxiliary weights.",
+      "tooltip": "The mathematical disaggregation of county-level aggregate production and livestock values across subcounties using high-resolution spatial auxiliary weights..",
+      "formula_or_metric": "V_{sc} = V_c \\times w_{sc}, \\quad \\sum_{sc \\in c} w_{sc} = 1.0",
+      "canonical_reference": "Decision D62 Technical Valuation Specification.",
+      "sections_used": [
+        "1.2"
+      ]
+    },
+    {
+      "term": "Cropland Land Cover Mask",
+      "abbreviation": "Cropland Mask",
+      "category": "Remote Sensing & Hazards",
+      "definition": "A 10m spatial resolution binary landcover mask derived from ESA WorldCover Sentinel-1/Sentinel-2 classification identifying cultivated agricultural parcels.",
+      "tooltip": "A 10m spatial resolution binary landcover mask derived from ESA WorldCover Sentinel-1/Sentinel-2 classification identifying cultivated agricultural parcels..",
+      "formula_or_metric": "M_{\\text{crop}}(x, y) \\in \\{0, 1\\}",
+      "canonical_reference": "Zanaga, D., et al. (2021). ESA WorldCover 10m 2020 v100.",
+      "sections_used": [
+        "1.2",
+        "4.5"
+      ]
+    },
+    {
+      "term": "Gridded Livestock of the World",
+      "abbreviation": "GLW / Livestock Density",
+      "category": "Remote Sensing & Hazards",
+      "definition": "Global high-resolution modeled spatial distribution grids of cattle, goats, sheep, and camels disaggregated to sub-kilometer pixels using random forest environmental regressions.",
+      "tooltip": "Global high-resolution modeled spatial distribution grids of cattle, goats, sheep, and camels disaggregated to sub-kilometer pixels using random forest environmental regressions..",
+      "formula_or_metric": "D_{\\text{animal}}(x, y) \\text{ (heads/km²)}",
+      "canonical_reference": "Gilbert, M., et al. (2018). Global distribution data for cattle, buffaloes, horses, sheep, goats, pigs, chickens and ducks in 2010. Scientific Data.",
+      "sections_used": [
+        "1.2",
+        "4.5"
+      ]
+    },
+    {
+      "term": "Olympic Mean Baseline",
+      "abbreviation": "Olympic Mean",
+      "category": "Statistical Methods",
+      "definition": "A robust central tendency statistic calculated by dropping the highest and lowest extreme values from a multi-year sample (e.g. 5 or 10 years) and averaging the remaining values, minimizing distortion from black-swan shocks.",
+      "tooltip": "A robust central tendency statistic calculated by dropping the highest and lowest extreme values from a multi-year sample (e.g.",
+      "formula_or_metric": "\\bar{X}_{\\text{Olympic}} = \\frac{1}{N - 2} \\sum_{i=2}^{N-1} X_{(i)}",
+      "canonical_reference": "WMO Climatological Practices Guide.",
+      "sections_used": [
+        "4.1",
+        "4.2B"
+      ]
+    },
+    {
+      "term": "Hyndman-Fan Type 7 Quantile Estimator",
+      "abbreviation": "Hyndman-Fan Type 7",
+      "category": "Statistical Methods",
+      "definition": "The standard continuous empirical quantile estimation algorithm used in R, Python, and DuckDB where sample fractiles are linearly interpolated between adjacent sorted values.",
+      "tooltip": "The standard continuous empirical quantile estimation algorithm used in R, Python, and DuckDB where sample fractiles are linearly interpolated between adjacent sorted values..",
+      "formula_or_metric": "\\hat{Q}(p) = X_{(\\lfloor h \\rfloor)} + (h - \\lfloor h \\rfloor)(X_{(\\lfloor h \\rfloor + 1)} - X_{(\\lfloor h \\rfloor)}), \\quad h = (N - 1)p + 1",
+      "canonical_reference": "Hyndman, R. J., & Fan, Y. (1996). Sample quantiles in statistical packages. The American Statistician.",
+      "sections_used": [
+        "2.1",
+        "3.1"
+      ]
+    },
+    {
+      "term": "Bivariate Joint Probability Distribution",
+      "abbreviation": "Joint Probability",
+      "category": "Statistical Methods",
+      "definition": "The empirical probability of two climate variables concurrently occupying designated states (e.g., El Niño in the Pacific co-occurring with positive Indian Ocean Dipole).",
+      "tooltip": "The empirical probability of two climate variables concurrently occupying designated states (e.g., El Niño in the Pacific co-occurring with positive Indian Ocean Dipole)..",
+      "formula_or_metric": "P(A \\cap B) = \\frac{n(A \\cap B)}{N_{\\text{total}}}",
+      "canonical_reference": "Wilks, D. S. (2011). Statistical Methods in the Atmospheric Sciences.",
+      "sections_used": [
+        "3.2",
+        "4.1"
+      ]
+    },
+    {
+      "term": "Teleconnection Gradient",
+      "abbreviation": "Pearson r",
+      "category": "Statistical Methods",
+      "definition": "The bivariate linear correlation coefficient quantifying the strength and sign of teleconnection between ocean sea surface temperature anomalies and local county precipitation.",
+      "tooltip": "The bivariate linear correlation coefficient quantifying the strength and sign of teleconnection between ocean sea surface temperature anomalies and local county precipitation..",
+      "formula_or_metric": "r = \\frac{\\sum (z_x - \\bar{z}_x)(z_y - \\bar{z}_y)}{\\sqrt{\\sum (z_x - \\bar{z}_x)^2 \\sum (z_y - \\bar{z}_y)^2}}",
+      "canonical_reference": "Pearson, K. (1895). Mathematical contributions to the theory of evolution.",
+      "sections_used": [
+        "3.3"
+      ]
+    },
+    {
+      "term": "Ordinary Least Squares Linear Regression",
+      "abbreviation": "OLS Regression",
+      "category": "Statistical Methods",
+      "definition": "A parametric linear model estimating the slope and intercept relating continuous oceanic driver z-scores to county rainfall accumulation in mm.",
+      "tooltip": "A parametric linear model estimating the slope and intercept relating continuous oceanic driver z-scores to county rainfall accumulation in mm..",
+      "formula_or_metric": "\\hat{Y} = \\beta_0 + \\beta_1 X + \\epsilon, \\quad \\min_{\\beta} \\sum (Y_i - \\hat{Y}_i)^2",
+      "canonical_reference": "Weisberg, S. (2005). Applied Linear Regression.",
+      "sections_used": [
+        "3.3"
+      ]
+    },
+    {
+      "term": "Empirical Confidence Interval",
+      "abbreviation": "95% CI",
+      "category": "Statistical Methods",
+      "definition": "The range of statistical estimates within which the true population parameter is expected to fall with 95% probability, calculated via non-parametric bootstrapping.",
+      "tooltip": "The range of statistical estimates within which the true population parameter is expected to fall with 95% probability, calculated via non-parametric bootstrapping..",
+      "formula_or_metric": "\\text{CI}_{95\\%} = [\\hat{Q}_{\\text{boot}}(0.025), \\hat{Q}_{\\text{boot}}(0.975)]",
+      "canonical_reference": "Efron, B., & Tibshirani, R. J. (1994). An Introduction to the Bootstrap.",
+      "sections_used": [
+        "2.2",
+        "3.3"
+      ]
+    }
+  ]
+}

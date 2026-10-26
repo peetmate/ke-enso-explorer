@@ -1,34 +1,33 @@
 {
   "metadata": {
     "source": "CCSR/IRI Model Predictions of ENSO (IRI / Columbia Climate School, with NOAA CPC)",
-    "api_origin": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/8",
+    "api_origin": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/10",
     "pageUrl": "https://iri.columbia.edu/our-expertise/climate/forecasts/enso/current/",
-    "figureUrl": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/8",
+    "figureUrl": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/10",
     "sourceKind": "figure-svg",
     "parser": "scripts/fetch_iri_plume.py (vector geometry of the official plume figure; no typed values)",
     "issueYear": 2026,
-    "issueMonth": 9,
+    "issueMonth": 10,
     "issueMonthIsOneBased": true,
-    "issueLabel": "September 2026",
-    "releaseDate": "2026-09-21",
-    "releaseMonth": 9,
+    "issueLabel": "October 2026",
+    "releaseDate": null,
+    "releaseMonth": 10,
     "releaseYear": 2026,
-    "discussion": "The mid-September 2026 intensity assessment provides a striking indication of the exceptional strength of the ongoing El Ni\u00f1o event. The model ensemble points to an exceptionally strong 2026-27 El Ni\u00f1o, with all 22 models forecasting a \u201cvery strong\u201d El Ni\u00f1o (Ni\u00f1o 3.4 \u2265 +2.0 \u00b0C) from SON 2026 through DJF 2026\u201327. Our current intensity classification is capped at +2.0\u00b0C, yet a majority of models in the plume\u2014including both dynamical and statistical models\u2014project Ni\u00f1o3.4 values that could reach or exceed +3.0\u00b0C, well beyond our highest defined category. This is more than a high-probability El Ni\u00f1o: the ensemble shows an unusually strong and consistent signal for an event of exceptional intensity. Although the forecast shifts toward weaker categories in early 2027, strong-to-moderate El Ni\u00f1o conditions remain through MAM 2027, underscoring the unusual magnitude and persistence of the 2026 event. Taken together, the mid-September objective ENSO outlook points to an exceptionally strong El Ni\u00f1o that will remain firmly established through the end of 2026 and persist into spring 2027.\n\nENSO Forecast CCSR/IRI ENSO Predictions Plume Published: September 21, 2026 Note on interpreting model forecasts The following graph and table show forecasts made by dynamical and statistical models for SST in the Nino 3.4 region for nine overlapping 3-month periods. Note that the expected skills of the models, based on historical performance, are not equal to one another. The skills also generally decrease as the lead time increases. Thirdly, forecasts made at some times of the year generally have higher skill than forecasts made at other times of the year--namely, they are better when made between June and December than when they are made between February and May. Differences among the forecasts of the models reflect both differences in model design, and actual uncertainty in the forecast of the possible future SST scenario.\n\nThe mid-September 2026 CCSR/IRI ENSO prediction plume has been updated with the latest model forecasts. The outlook shows close agreement among the 22 participating models (13 dynamical and 9 statistical) that El Ni\u00f1o conditions will strengthen further during 2026 and continue into early 2027.",
-    "fetchedAt": "2026-10-02T11:21:45+00:00",
+    "discussion": null,
+    "fetchedAt": "2026-10-23T13:13:16+00:00",
     "calibration": {
-      "y_slope": -0.015782828282828277,
-      "y_intercept": 5.590228456439392,
-      "y_resid": 1.7763568394002505e-15,
+      "y_slope": -0.01465548339226598,
+      "y_intercept": 5.048069277554051,
+      "y_resid": 6.538600327843369e-09,
       "x_spacing": 60.45,
-      "n_yticks": 15
+      "n_yticks": 14
     }
   },
   "current": {
     "issueYear": 2026,
-    "issueMonth": 9,
-    "issueLabel": "September 2026",
+    "issueMonth": 10,
+    "issueLabel": "October 2026",
     "seasons": [
-      "ASO",
       "SON",
       "OND",
       "NDJ",
@@ -37,13 +36,14 @@
       "FMA",
       "MAM",
       "AMJ",
-      "MJJ"
+      "MJJ",
+      "JJA"
     ],
     "seasonYears": [
       2026,
       2026,
       2026,
-      2026,
+      2027,
       2027,
       2027,
       2027,
@@ -53,52 +53,52 @@
     ],
     "observedSeasons": [
       {
-        "label": "JJA-OBS",
-        "period": "JJA",
-        "value": 2.0333
+        "label": "JAS-OBS",
+        "period": "JAS",
+        "value": 2.4633
       },
       {
-        "label": "Aug-OBS",
-        "period": "Aug",
-        "value": 2.52
+        "label": "Sep-OBS",
+        "period": "Sep",
+        "value": 2.84
       }
     ],
     "averages": {
       "dynamical": [
         null,
-        3.33,
-        3.54,
-        3.52,
-        3.25,
-        2.61,
-        2.11,
-        1.75,
+        3.64,
+        3.67,
+        3.39,
+        2.89,
+        2.17,
+        1.73,
         1.37,
-        1.02
+        1.02,
+        0.69
       ],
       "statistical": [
         null,
-        3.0,
-        3.16,
-        3.19,
-        3.03,
-        2.63,
-        2.07,
-        1.48,
-        0.95,
-        0.5
+        3.24,
+        3.26,
+        3.08,
+        2.72,
+        2.17,
+        1.55,
+        0.94,
+        0.41,
+        0.02
       ],
       "total": [
         null,
-        3.16,
-        3.37,
-        3.39,
-        3.18,
-        2.62,
-        2.08,
-        1.55,
-        1.01,
-        0.57
+        3.48,
+        3.5,
+        3.26,
+        2.82,
+        2.17,
+        1.64,
+        1.13,
+        0.65,
+        0.28
       ]
     },
     "models": [
@@ -107,10 +107,10 @@
         "type": "Dynamical",
         "data": [
           null,
-          3.9,
-          4.1333,
-          4.1,
-          3.8,
+          4.0067,
+          4.2,
+          3.9667,
+          3.5,
           null,
           null,
           null,
@@ -118,35 +118,53 @@
           null
         ],
         "color": "#4477aa",
-        "symbol": "m1cb9e83702"
+        "symbol": "m6263e96462"
+      },
+      {
+        "model": "BCC DIAP",
+        "type": "Dynamical",
+        "data": [
+          null,
+          4.28,
+          4.21,
+          3.44,
+          2.3,
+          1.2,
+          0.67,
+          0.45,
+          0.22,
+          -0.16
+        ],
+        "color": "#66ccee",
+        "symbol": "m26ce417bb6"
       },
       {
         "model": "CMC CANSIP",
         "type": "Dynamical",
         "data": [
           null,
-          3.8,
-          4.08,
           4.04,
-          3.72,
-          3.17,
-          2.59,
-          2.01,
-          1.29,
-          0.59
+          4.09,
+          3.82,
+          3.33,
+          2.79,
+          2.25,
+          1.58,
+          0.88,
+          0.36
         ],
         "color": "#228833",
-        "symbol": "mc05d8bdc39"
+        "symbol": "m0016b1a6b6"
       },
       {
         "model": "CMCC SPS4",
         "type": "Dynamical",
         "data": [
           null,
-          3.68,
-          4.2,
-          4.58,
-          4.66,
+          3.91,
+          4.21,
+          4.24,
+          4.01,
           null,
           null,
           null,
@@ -154,89 +172,107 @@
           null
         ],
         "color": "#228833",
-        "symbol": "m543784ef4a"
+        "symbol": "mf7d359c70e"
       },
       {
         "model": "COLA CCSM4",
         "type": "Dynamical",
         "data": [
           null,
-          3.249,
-          3.356,
-          3.183,
-          2.839,
-          2.417,
-          2.05,
-          1.817,
-          1.65,
-          1.492
+          3.329,
+          3.22,
+          2.869,
+          2.41,
+          2.025,
+          1.815,
+          1.688,
+          1.469,
+          1.155
         ],
         "color": "#ccbb44",
-        "symbol": "mc2e38656cd"
+        "symbol": "mb5f30ba291"
       },
       {
         "model": "CS-IRI-MM",
         "type": "Dynamical",
         "data": [
           null,
-          2.92,
-          3.26,
           3.29,
-          3.06,
-          2.65,
-          2.08,
+          3.37,
+          3.2,
+          2.89,
+          2.32,
+          1.73,
           null,
           null,
           null
         ],
         "color": "#ee6677",
-        "symbol": "m3c5492de9e"
+        "symbol": "m759cd358f2"
+      },
+      {
+        "model": "GFDL SPEAR",
+        "type": "Dynamical",
+        "data": [
+          null,
+          3.7197,
+          3.6942,
+          3.4154,
+          2.8552,
+          2.207,
+          1.8056,
+          1.5899,
+          1.3207,
+          1.0036
+        ],
+        "color": "#bbbbbb",
+        "symbol": "mea71dd9b80"
       },
       {
         "model": "IOCAS ICM",
         "type": "Dynamical",
         "data": [
           null,
-          2.66,
-          2.66,
-          2.64,
-          2.6,
-          2.36,
-          1.91,
-          1.28,
-          0.68,
-          0.17
+          3.03,
+          3.0,
+          2.89,
+          2.63,
+          2.17,
+          1.53,
+          0.9,
+          0.38,
+          -0.03
         ],
         "color": "#4477aa",
-        "symbol": "m654a77cfb4"
+        "symbol": "m64186c4d73"
       },
       {
         "model": "JMA",
         "type": "Dynamical",
         "data": [
           null,
-          3.61,
-          4.0,
-          4.0533,
-          3.75,
-          3.0833,
+          3.8767,
+          3.88,
+          3.55,
+          2.91,
+          2.19,
           null,
           null,
           null,
           null
         ],
         "color": "#66ccee",
-        "symbol": "m5755e75319"
+        "symbol": "ma268b89389"
       },
       {
         "model": "KMA",
         "type": "Dynamical",
         "data": [
           null,
-          3.49,
-          3.6,
-          3.51,
-          3.15,
+          3.706,
+          3.721,
+          3.421,
+          2.904,
           null,
           null,
           null,
@@ -244,107 +280,107 @@
           null
         ],
         "color": "#228833",
-        "symbol": "m5eb3386982"
+        "symbol": "mcbca7e7b09"
       },
       {
         "model": "LDEO",
         "type": "Dynamical",
         "data": [
           null,
-          2.3343,
-          2.4297,
-          2.3723,
-          2.0903,
-          1.7313,
-          1.5477,
-          1.6067,
-          1.7503,
-          1.803
+          2.7463,
+          2.6727,
+          2.3977,
+          1.9887,
+          1.6397,
+          1.5137,
+          1.5367,
+          1.6207,
+          1.757
         ],
         "color": "#ccbb44",
-        "symbol": "m9ebe718b04"
+        "symbol": "m4140aab228"
       },
       {
         "model": "MetFRANCE",
         "type": "Dynamical",
         "data": [
           null,
-          3.7801,
-          3.9566,
-          3.8486,
-          3.3229,
-          2.5122,
+          4.0759,
+          4.072,
+          3.6708,
+          2.8987,
+          2.0344,
           null,
           null,
           null,
           null
         ],
         "color": "#ee6677",
-        "symbol": "m289db460dc"
+        "symbol": "m0cbe1a2607"
       },
       {
         "model": "NASA GMAOv3",
         "type": "Dynamical",
         "data": [
           null,
-          3.373,
-          3.511,
-          3.56,
-          3.455,
-          3.13,
-          2.757,
-          2.408,
+          3.841,
+          3.903,
+          3.801,
+          3.569,
+          3.238,
+          2.708,
+          2.116,
           null,
           null
         ],
         "color": "#aa3377",
-        "symbol": "m61d8209fde"
+        "symbol": "mf61447e645"
       },
       {
         "model": "NCEP CFSv2",
         "type": "Dynamical",
         "data": [
           null,
-          3.36,
-          3.59,
-          3.43,
-          2.94,
-          2.36,
-          1.82,
-          1.27,
+          3.33,
+          3.24,
+          2.95,
+          2.42,
+          1.88,
+          1.31,
+          0.82,
           null,
           null
         ],
         "color": "#bbbbbb",
-        "symbol": "mde5ffc8226"
+        "symbol": "m7d8c4dd3c3"
       },
       {
         "model": "SINTEX-F",
         "type": "Dynamical",
         "data": [
           null,
-          3.379,
-          3.5087,
-          3.4609,
-          3.1377,
-          2.6506,
-          2.1535,
-          1.8277,
-          1.4687,
-          1.0263
+          3.7698,
+          3.8097,
+          3.4632,
+          2.9219,
+          2.3544,
+          1.9952,
+          1.6695,
+          1.2175,
+          0.7205
         ],
         "color": "#66ccee",
-        "symbol": "m1fc0e2c106"
+        "symbol": "m6132bda961"
       },
       {
         "model": "UKMO",
         "type": "Dynamical",
         "data": [
           null,
-          3.13,
-          3.27,
-          3.23,
-          2.98,
+          3.34,
+          3.38,
+          3.15,
+          2.7,
           null,
           null,
           null,
@@ -352,201 +388,219 @@
           null
         ],
         "color": "#228833",
-        "symbol": "m5f16e24c57"
+        "symbol": "mf52c68d542"
       },
       {
         "model": "BCC_RZDM",
         "type": "Statistical",
         "data": [
           null,
-          3.13,
-          3.4,
-          3.41,
-          3.06,
-          2.57,
-          1.93,
-          1.24,
-          0.59,
-          0.03
+          3.83,
+          3.83,
+          3.45,
+          2.94,
+          2.24,
+          1.45,
+          0.66,
+          -0.02,
+          -0.48
         ],
         "color": "#ccbb44",
-        "symbol": "m71bd2c6ec3"
+        "symbol": "mf94f006f40"
       },
       {
         "model": "CPC MRKOV",
         "type": "Statistical",
         "data": [
           null,
-          3.19,
-          3.36,
-          3.41,
-          3.27,
-          2.91,
-          2.43,
-          1.94,
-          1.49,
-          1.08
+          3.15,
+          3.18,
+          3.04,
+          2.69,
+          2.23,
+          1.74,
+          1.29,
+          0.86,
+          0.47
         ],
         "color": "#aa3377",
-        "symbol": "mdd76010cef"
+        "symbol": "m45e04545f3"
       },
       {
         "model": "CSU CLIPR",
         "type": "Statistical",
         "data": [
           null,
-          2.81,
-          2.86,
-          2.91,
-          2.96,
-          2.2633,
-          1.5667,
-          0.87,
-          0.5533,
-          0.2367
+          2.99,
+          2.6833,
+          2.3767,
+          2.07,
+          1.4867,
+          0.9033,
+          0.32,
+          0.0367,
+          -0.2467
         ],
         "color": "#bbbbbb",
-        "symbol": "m9281f44abf"
+        "symbol": "mfe3a5881f3"
       },
       {
         "model": "IAP-NN",
         "type": "Statistical",
         "data": [
           null,
-          2.71,
-          2.706,
-          2.568,
-          2.285,
-          1.854,
-          1.344,
-          0.827,
-          0.341,
-          -0.074
+          2.856,
+          2.744,
+          2.498,
+          2.125,
+          1.655,
+          1.154,
+          0.683,
+          0.261,
+          -0.086
         ],
         "color": "#4477aa",
-        "symbol": "mc5e34a5148"
+        "symbol": "m8327c18bb0"
+      },
+      {
+        "model": "NTU CODA",
+        "type": "Statistical",
+        "data": [
+          null,
+          3.62,
+          3.68,
+          3.43,
+          2.95,
+          2.21,
+          1.49,
+          0.66,
+          -0.2,
+          -0.85
+        ],
+        "color": "#66ccee",
+        "symbol": "md5a16569ed"
       },
       {
         "model": "TONGJI-ML",
         "type": "Statistical",
         "data": [
           null,
-          2.0096,
-          2.0126,
-          2.1934,
-          2.313,
-          2.3392,
-          1.9375,
-          1.5465,
-          1.1897,
-          1.095
+          2.4631,
+          2.4398,
+          2.4545,
+          2.3103,
+          1.9479,
+          1.1493,
+          0.5028,
+          0.1059,
+          0.2008
         ],
         "color": "#bbbbbb",
-        "symbol": "mbb47896788"
+        "symbol": "m180951d2ee"
       },
       {
         "model": "UCLA-TCD",
         "type": "Statistical",
         "data": [
           null,
-          3.25,
-          3.47,
-          3.48,
-          3.22,
-          2.76,
-          2.18,
-          1.63,
-          1.17,
-          0.84
+          3.23,
+          3.28,
+          3.13,
+          2.79,
+          2.34,
+          1.87,
+          1.47,
+          1.16,
+          0.94
         ],
         "color": "#228833",
-        "symbol": "m16ce3fe7cc"
+        "symbol": "ma189faa98d"
       },
       {
         "model": "UW PSL-CSLIM",
         "type": "Statistical",
         "data": [
           null,
-          3.15,
-          3.39,
           3.42,
-          3.19,
-          2.72,
-          2.12,
-          1.48,
-          0.86,
-          0.29
+          3.53,
+          3.36,
+          2.92,
+          2.33,
+          1.66,
+          0.99,
+          0.33,
+          -0.25
         ],
         "color": "#ccbb44",
-        "symbol": "m1b97e22877"
+        "symbol": "m989c826a02"
       },
       {
         "model": "UW PSL-LIM",
         "type": "Statistical",
         "data": [
           null,
-          2.8,
-          2.82,
-          2.74,
-          2.54,
-          2.25,
-          1.85,
-          1.43,
-          1.03,
-          0.66
+          3.15,
+          3.16,
+          3.01,
+          2.71,
+          2.29,
+          1.81,
+          1.33,
+          0.88,
+          0.47
         ],
         "color": "#ee6677",
-        "symbol": "m7b7ba1cd8a"
+        "symbol": "mad6dc964ae"
       },
       {
         "model": "Wyrtki-CSLIM",
         "type": "Statistical",
         "data": [
           null,
-          3.1356,
-          3.3887,
-          3.4875,
-          3.2767,
-          2.8065,
-          2.1511,
-          1.4948,
-          0.8337,
-          0.2756
+          3.4163,
+          3.572,
+          3.4201,
+          2.9913,
+          2.3522,
+          1.7256,
+          1.0829,
+          0.53,
+          0.0804
         ],
         "color": "#bbbbbb",
-        "symbol": "m9281f44abf"
+        "symbol": "mfe3a5881f3"
       },
       {
         "model": "XRO",
         "type": "Statistical",
         "data": [
           null,
-          3.8063,
-          4.1827,
-          4.2843,
-          4.1817,
-          3.839,
-          3.2057,
-          2.345,
-          1.4097,
-          0.5583
+          3.5633,
+          3.7073,
+          3.6593,
+          3.3787,
+          2.835,
+          2.1007,
+          1.3077,
+          0.582,
+          0.0203
         ],
         "color": "#aa3377",
-        "symbol": "ma0490e4dcb"
+        "symbol": "m243c909ab5"
       }
     ],
-    "discussion": "The mid-September 2026 intensity assessment provides a striking indication of the exceptional strength of the ongoing El Ni\u00f1o event. The model ensemble points to an exceptionally strong 2026-27 El Ni\u00f1o, with all 22 models forecasting a \u201cvery strong\u201d El Ni\u00f1o (Ni\u00f1o 3.4 \u2265 +2.0 \u00b0C) from SON 2026 through DJF 2026\u201327. Our current intensity classification is capped at +2.0\u00b0C, yet a majority of models in the plume\u2014including both dynamical and statistical models\u2014project Ni\u00f1o3.4 values that could reach or exceed +3.0\u00b0C, well beyond our highest defined category. This is more than a high-probability El Ni\u00f1o: the ensemble shows an unusually strong and consistent signal for an event of exceptional intensity. Although the forecast shifts toward weaker categories in early 2027, strong-to-moderate El Ni\u00f1o conditions remain through MAM 2027, underscoring the unusual magnitude and persistence of the 2026 event. Taken together, the mid-September objective ENSO outlook points to an exceptionally strong El Ni\u00f1o that will remain firmly established through the end of 2026 and persist into spring 2027.\n\nENSO Forecast CCSR/IRI ENSO Predictions Plume Published: September 21, 2026 Note on interpreting model forecasts The following graph and table show forecasts made by dynamical and statistical models for SST in the Nino 3.4 region for nine overlapping 3-month periods. Note that the expected skills of the models, based on historical performance, are not equal to one another. The skills also generally decrease as the lead time increases. Thirdly, forecasts made at some times of the year generally have higher skill than forecasts made at other times of the year--namely, they are better when made between June and December than when they are made between February and May. Differences among the forecasts of the models reflect both differences in model design, and actual uncertainty in the forecast of the possible future SST scenario.\n\nThe mid-September 2026 CCSR/IRI ENSO prediction plume has been updated with the latest model forecasts. The outlook shows close agreement among the 22 participating models (13 dynamical and 9 statistical) that El Ni\u00f1o conditions will strengthen further during 2026 and continue into early 2027.",
-    "source": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/8",
+    "discussion": null,
+    "source": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/10",
     "sourceKind": "figure-svg",
-    "fetchedAt": "2026-10-02T11:21:45+00:00",
+    "fetchedAt": "2026-10-23T13:13:16+00:00",
     "observed": [
       {
-        "month": "JJA",
-        "data": 2.0333
+        "month": "JAS",
+        "data": 2.4633
       },
       {
-        "month": "Aug",
-        "data": 2.52
+        "month": "Sep",
+        "data": 2.84
       }
     ]
   },
@@ -556,7 +610,15 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#4477aa",
-      "symbol": "m1cb9e83702",
+      "symbol": "m6263e96462",
+      "active": true
+    },
+    {
+      "name": "BCC DIAP",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#66ccee",
+      "symbol": "m26ce417bb6",
       "active": true
     },
     {
@@ -564,7 +626,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#228833",
-      "symbol": "mc05d8bdc39",
+      "symbol": "m0016b1a6b6",
       "active": true
     },
     {
@@ -572,7 +634,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#228833",
-      "symbol": "m543784ef4a",
+      "symbol": "mf7d359c70e",
       "active": true
     },
     {
@@ -580,7 +642,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#ccbb44",
-      "symbol": "mc2e38656cd",
+      "symbol": "mb5f30ba291",
       "active": true
     },
     {
@@ -588,7 +650,15 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#ee6677",
-      "symbol": "m3c5492de9e",
+      "symbol": "m759cd358f2",
+      "active": true
+    },
+    {
+      "name": "GFDL SPEAR",
+      "type": "Dynamical",
+      "typeCode": "D",
+      "color": "#bbbbbb",
+      "symbol": "mea71dd9b80",
       "active": true
     },
     {
@@ -596,7 +666,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#4477aa",
-      "symbol": "m654a77cfb4",
+      "symbol": "m64186c4d73",
       "active": true
     },
     {
@@ -604,7 +674,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#66ccee",
-      "symbol": "m5755e75319",
+      "symbol": "ma268b89389",
       "active": true
     },
     {
@@ -612,7 +682,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#228833",
-      "symbol": "m5eb3386982",
+      "symbol": "mcbca7e7b09",
       "active": true
     },
     {
@@ -620,7 +690,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#ccbb44",
-      "symbol": "m9ebe718b04",
+      "symbol": "m4140aab228",
       "active": true
     },
     {
@@ -628,7 +698,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#ee6677",
-      "symbol": "m289db460dc",
+      "symbol": "m0cbe1a2607",
       "active": true
     },
     {
@@ -636,7 +706,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#aa3377",
-      "symbol": "m61d8209fde",
+      "symbol": "mf61447e645",
       "active": true
     },
     {
@@ -644,7 +714,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#bbbbbb",
-      "symbol": "mde5ffc8226",
+      "symbol": "m7d8c4dd3c3",
       "active": true
     },
     {
@@ -652,7 +722,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#66ccee",
-      "symbol": "m1fc0e2c106",
+      "symbol": "m6132bda961",
       "active": true
     },
     {
@@ -660,7 +730,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#228833",
-      "symbol": "m5f16e24c57",
+      "symbol": "mf52c68d542",
       "active": true
     },
     {
@@ -668,7 +738,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#ccbb44",
-      "symbol": "m71bd2c6ec3",
+      "symbol": "mf94f006f40",
       "active": true
     },
     {
@@ -676,7 +746,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#aa3377",
-      "symbol": "mdd76010cef",
+      "symbol": "m45e04545f3",
       "active": true
     },
     {
@@ -684,7 +754,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#bbbbbb",
-      "symbol": "m9281f44abf",
+      "symbol": "mfe3a5881f3",
       "active": true
     },
     {
@@ -692,7 +762,15 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#4477aa",
-      "symbol": "mc5e34a5148",
+      "symbol": "m8327c18bb0",
+      "active": true
+    },
+    {
+      "name": "NTU CODA",
+      "type": "Statistical",
+      "typeCode": "S",
+      "color": "#66ccee",
+      "symbol": "md5a16569ed",
       "active": true
     },
     {
@@ -700,7 +778,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#bbbbbb",
-      "symbol": "mbb47896788",
+      "symbol": "m180951d2ee",
       "active": true
     },
     {
@@ -708,7 +786,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#228833",
-      "symbol": "m16ce3fe7cc",
+      "symbol": "ma189faa98d",
       "active": true
     },
     {
@@ -716,7 +794,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#ccbb44",
-      "symbol": "m1b97e22877",
+      "symbol": "m989c826a02",
       "active": true
     },
     {
@@ -724,7 +802,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#ee6677",
-      "symbol": "m7b7ba1cd8a",
+      "symbol": "mad6dc964ae",
       "active": true
     },
     {
@@ -732,7 +810,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#bbbbbb",
-      "symbol": "m9281f44abf",
+      "symbol": "mfe3a5881f3",
       "active": true
     },
     {
@@ -740,7 +818,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#aa3377",
-      "symbol": "ma0490e4dcb",
+      "symbol": "m243c909ab5",
       "active": true
     }
   ]

@@ -1,15 +1,15 @@
 {
   "dataset": "market_prices",
-  "title": "FEWS NET retail market prices, Kenya",
-  "source": "FEWS NET Data Warehouse (FDW), marketpricefacts",
-  "url": "https://fdw.fews.net/",
-  "citation": "FEWS NET Data Warehouse (FDW).",
-  "license": "FEWS NET — reading and display unencumbered. REDISTRIBUTION CAVEAT: FEWS NET states that third-party series held in the warehouse may not be redistributed without the originating provider's consent, and market prices are usually collected by national agencies. Display is fine; identify the originating agency for a given series before republishing it.",
-  "fetched_on": "2026-07-15",
-  "method": "Machine-readable FEWS FDW retail prices; staged via the D409 pipeline. Terms of trade is NOT in this file and is NOT sourced — the notebook derives it client-side as median goat price (KES/head) / median maize-grain price (KES/kg) per county-month. It is a ratio: a fall can mean cheaper livestock or dearer grain, which carry opposite implications, so it must be read against both price legs.",
-  "coverage": "County x market x product monthly prices (KES), retail + wholesale, 42 counties, 2000-2026.",
-  "used_by": "notebook §5.3 market prices + derived terms of trade",
-  "grain": "27406 rows",
+  "title": "FEWS NET retail market prices + MoALD KAMIS live-animal monthly medians, Kenya",
+  "source": "FEWS NET Data Warehouse (FDW), marketpricefacts (source LIKE 'FEWS NET FDW%') UNION MoALD KAMIS kamis.kilimo.go.ke (source LIKE 'MoALD KAMIS%')",
+  "url": "https://fdw.fews.net/ ; https://kamis.kilimo.go.ke/site/market",
+  "citation": "FEWS NET Data Warehouse (FDW). Ministry of Agriculture and Livestock Development (MoALD), Kenya: KAMIS livestock market prices.",
+  "license": "FEWS NET — reading and display unencumbered. REDISTRIBUTION CAVEAT: FEWS NET states that third-party series held in the warehouse may not be redistributed without the originating provider's consent, and market prices are usually collected by national agencies. Display is fine; identify the originating agency for a given series before republishing it. KAMIS rows — the portal publishes no licence or terms of use; displayed for analysis as monthly medians, not redistributed.",
+  "fetched_on": "2026-07-15 (FEWS NET rows) / 2026-10-23 (KAMIS rows)",
+  "method": "FEWS NET rows: machine-readable FEWS FDW retail prices; staged via the D409 pipeline; preserved byte-for-byte by _sources/kamis_build.py (row count 27,406 and content fingerprint gated on every rebuild). KAMIS rows: _sources/kamis_build.py appends county x market x product x month MEDIANS of the clean wholesale per-head quotes in market_prices_kamis.parquet (products 'Cattle/Sheep/Goats/Camels (Live, all grades)', price_type 'Wholesale', unit 'head', n_quotes = quotes behind the median; the 2021-05-24 bulk-backfill day, duplicates, test entries and outliers are excluded). Terms of trade is NOT in this file and is NOT sourced — the notebook derives it client-side as median goat price (KES/head) / median maize-grain price (KES/kg) per county-month from the FEWS NET legs only. It is a ratio: a fall can mean cheaper livestock or dearer grain, which carry opposite implications, so it must be read against both price legs.",
+  "coverage": "FEWS NET: county x market x product monthly prices (KES), retail + wholesale, 42 counties, 2000-2026. KAMIS: county x market x species monthly medians (KES/head, wholesale), 45 counties, 2021-2026 (camels to 2025-11).",
+  "used_by": "notebook §4.4 market prices + derived terms of trade (FEWS NET rows; the KAMIS rows are Wholesale and not yet selected by the Figure 4.4 Retail filter)",
+  "grain": "35206 rows",
   "columns": [
     "county",
     "admin_2",
@@ -23,6 +23,7 @@
     "unit",
     "currency",
     "iso3",
-    "source"
+    "source",
+    "n_quotes"
   ]
 }

@@ -4,6 +4,7 @@
  "sources": {
   "cdh": "hazards_prototype/metadata/cdh/",
   "catalogue": "hazards_prototype/metadata/catalogue/",
+  "local_drafts": "data/KE-enso-explorer/_sources/cdh_local/",
   "validator": null
  },
  "state_values": [
@@ -64,6 +65,9 @@
   "kenya-market-prices-fews": "kenya-market-prices-fews",
   "market_prices": "kenya-market-prices-fews",
   "xbt_trade": "kenya-market-prices-fews",
+  "kenya-market-prices-kamis": "kenya-market-prices-kamis",
+  "market_prices_kamis": "kenya-market-prices-kamis",
+  "kamis": "kenya-market-prices-kamis",
   "kenya-food-insecurity-ipc": "kenya-food-insecurity-ipc",
   "ipc_insecurity": "kenya-food-insecurity-ipc",
   "ipc-kfssg-phases": "kenya-food-insecurity-ipc",
@@ -6299,6 +6303,302 @@
    },
    "gates": [],
    "gaps": []
+  },
+  {
+   "key": "kenya-market-prices-kamis",
+   "aliases": [
+    "market_prices_kamis",
+    "kamis"
+   ],
+   "title": "Kenya Live-Animal Market Prices by Grade and Sex (MoALD KAMIS)",
+   "title_source": "cdh",
+   "category": "markets",
+   "state": "draft",
+   "state_basis": "local-draft",
+   "hosting": "federated",
+   "settled": false,
+   "summary": "Market-day livestock price quotes for Kenya from the Kilimo AgriMarkets Market Information System (KAMIS) of the Ministry of Agriculture and Livestock Development (MoALD): cattle, sheep, goats and camels priced per head at named livestock markets in 45 counties, each quote carrying a breed (classification), a quality grade (1 to 3), the animal's sex and the volume on offer, from May 2021 to the present. Harvested from the portal's search export. The only verified open Kenyan source that prices camels and sheep and that records grade and sex, which the FEWS NET series behind the Kenya ENSO Explorer does not; it extends the explorer's pastoral price panel from goats and cattle to all four pastoral species at market-day frequency.\n",
+   "licence": {
+    "id": "LicenseRef-MoALD-KAMIS-Unstated",
+    "url": null,
+    "attribution": null,
+    "attribution_required": false,
+    "attribution_verbatim_required": false,
+    "access": "public",
+    "access_note": null
+   },
+   "producer": [
+    {
+     "organization": "Ministry of Agriculture and Livestock Development (MoALD), Kenya",
+     "name": null,
+     "url": "https://kamis.kilimo.go.ke/",
+     "email": null,
+     "roles": [
+      "producer"
+     ]
+    },
+    {
+     "organization": "Alliance of Bioversity International and CIAT",
+     "name": "Peter Steward",
+     "url": null,
+     "email": "p.steward@cgiar.org",
+     "roles": [
+      "processor",
+      "point-of-contact"
+     ]
+    }
+   ],
+   "citation": {
+    "text": "Ministry of Agriculture and Livestock Development (MoALD), Kenya (2026) Kilimo AgriMarkets Market Information System (KAMIS), livestock market prices. Ministry of Agriculture and Livestock Development, Republic of Kenya.",
+    "url": "https://kamis.kilimo.go.ke/site/market",
+    "dois": [],
+    "accessed": "2026-10-23",
+    "authors": [
+     "Ministry of Agriculture and Livestock Development (MoALD), Kenya"
+    ],
+    "year": "2026",
+    "title": "Kilimo AgriMarkets Market Information System (KAMIS), livestock market prices",
+    "publisher": "Ministry of Agriculture and Livestock Development, Republic of Kenya"
+   },
+   "caveats": [
+    "NO PUBLISHED LICENCE. The KAMIS portal (kamis.kilimo.go.ke) footer asserts \"Copyright (c) KAMIS\" and gives the Ministry's contact (info@kilimo.go.ke, +254-20-2718870, Cathedral Road, Nairobi); it carries no licence statement and no terms of use, and the About page credits the National Agricultural and Rural Inclusive Growth Project (NARIGP) for the system. A copyright line without a licence is a reservation, not a grant. The Atlas reads the quotes for analysis and displays derived monthly medians; the market-day quotes are not republished to S3 or to the Climate Data Hub and no bulk download is offered until MoALD confirms terms of reuse. HOW THE PORTAL PAGES, AND WHY EARLIER COUNTS WERE WRONG. The HTML results table pages by an offset in the URL path (/site/market_search/<offset>), not by the page= query parameter, so one wide request returns only the first per_page rows. The Excel export honours per_page and returns a whole window in one file. The harvester pulls one export per species-year and checks the row count against the portal's own pagination total; on 2026-10-23 that was 116,634 rows across the four species. WHOLESALE IS THE LIVESTOCK PRICE. 99.8 percent of live-animal quotes sit in the portal's Wholesale column, which is the per-head price at the livestock market; the Retail column is essentially empty for animals. The explorer therefore serves these as wholesale prices, distinct from the FEWS NET retail goat and cattle series it already shows. THE 2021-05-24 BULK BACKFILL. The portal's history starts on 2021-05-24, and that single date carries 11,079 quotes, about one tenth of the whole archive. It is the upload date of a backfill, not a market day. Those rows are kept in the market-day file with the flag launch_day_bulk and are excluded from the monthly medians. KAMIS cannot reach the 2011 or 2017 drought analogues; the FEWS NET series remains the long-run record. DIRTY ROWS ARE FLAGGED, NOT DROPPED. A county literally named test (345 quotes), 3,203 exact duplicate submissions, 67 non-positive prices and 591 order-of-magnitude outliers against the same market-day median are all present in the market-day file with a qc_flag, and absent from the monthly medians. County spellings are canonicalised to the 47-county key (Tana-River to Tana River, Homa-bay to Homa Bay, Muranga to Murang'a); the portal spelling is kept in county_raw. COVERAGE IS UNEVEN AND THINNING. Reporting peaked in 2022 (about 40,000 quotes) and fell to a few thousand a year by 2025; camel quotes stop at 2025-11-24. Absence of a market-month is a gap in reporting, not a zero price. Grade and breed are enumerator judgements with no published grading standard, so grade comparisons across markets are indicative only. NO COORDINATES. The portal names the market and county only; the file is plain parquet, not GeoParquet. OBFUSCATED DELIVERY, BY CHOICE. As a courtesy to the Ministry while reuse terms are sought, the market-day file is published to the explorer only as an AES-256-GCM container (market_prices_kamis.parquet.enc) that the explorer decrypts in the browser; the monthly medians it displays are derived aggregates. This stops casual download and crawling. It is not access control: a static page must hold whatever decrypts it, so a determined reader can recover the bytes. The plain file is not committed to the repository and no bulk download is offered."
+   ],
+   "avoid": [
+    {
+     "use": "Republishing the quotes as an Atlas or Climate Data Hub data product.",
+     "reason": "The portal asserts copyright and publishes no licence or terms of use; a reservation without a grant.\n",
+     "use_instead": "Read for analysis and display derived monthly medians until MoALD confirms terms."
+    },
+    {
+     "use": "Analysing the 2011 or 2017 drought years, or any year before 2021.",
+     "reason": "The portal's history starts on 2021-05-24.",
+     "use_instead": "The FEWS NET series, which runs from 2000."
+    },
+    {
+     "use": "Treating the 2021-05-24 quotes as a market day.",
+     "reason": "That date is an 11,079-row bulk backfill carrying the upload date.",
+     "use_instead": "Exclude rows flagged launch_day_bulk, as the monthly medians already do."
+    },
+    {
+     "use": "Comparing grades across markets as if they followed one standard.",
+     "reason": "Grade is an enumerator judgement with no published grading standard.",
+     "use_instead": "Compare grades within a market, or pool grades and compare medians."
+    }
+   ],
+   "intended_uses": [
+    "Extending the Kenya ENSO Explorer's pastoral price panel to camels and sheep, with grade and sex, for the 2021 to present period.",
+    "Reading market-day livestock price dispersion and supply volumes around recent drought and flood seasons."
+   ],
+   "coverage": {
+    "spatial": "kenya",
+    "temporal": "2021-05-24 to present (open-ended)",
+    "crs": "EPSG:4326",
+    "bbox": [
+     33.9,
+     -4.7,
+     41.9,
+     5.5
+    ]
+   },
+   "assets": [
+    {
+     "name": "kamis-livestock-market-day-quotes",
+     "description": "Market-day quotes for cattle, sheep, goats and camels with breed, grade, sex, supply volume and QC flags, 116,575 priced rows from 2021-05-24 to the pull date, as staged for the Kenya ENSO Explorer. Held by the explorer only as an AES-GCM container decrypted in the browser (obfuscation, not access control). Not republished by the Atlas.\n",
+     "https": "https://kamis.kilimo.go.ke/site/market_search",
+     "s3": null,
+     "other_locations": [],
+     "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+     "href_template": null,
+     "file_size": null,
+     "nodata": null,
+     "processing_steps": [
+      "source",
+      "harvest"
+     ]
+    }
+   ],
+   "upstream": [
+    {
+     "title": "KAMIS market search",
+     "url": "https://kamis.kilimo.go.ke/site/market"
+    }
+   ],
+   "processing": [
+    {
+     "id": "source",
+     "description": "County and market enumerators of the Ministry of Agriculture and Livestock Development enter market-day quotes into KAMIS, which serves them through a public search page and Excel export.\n",
+     "date": null,
+     "code": null,
+     "code_url": null,
+     "derived_from": [
+      {
+       "title": "KAMIS market search",
+       "url": "https://kamis.kilimo.go.ke/site/market"
+      }
+     ]
+    },
+    {
+     "id": "harvest",
+     "description": "kamis_build.py pulls one Excel export per species-year, gates the row count against the portal's pagination total, canonicalises county names to the 47-county key, flags dirty rows, writes the market-day file, and appends county by market by species by month medians of the clean wholesale quotes to the explorer's market price file without altering the FEWS NET rows (row count and content fingerprint gated).\n",
+     "date": "2026-10-23",
+     "code": "atlas_notebooks dev/KE-enso-explorer",
+     "code_url": "https://github.com/AdaptationAtlas/atlas_notebooks/blob/dev/KE-enso-explorer/data/KE-enso-explorer/_sources/kamis_build.py",
+     "derived_from": [
+      {
+       "title": "KAMIS market search",
+       "url": "https://kamis.kilimo.go.ke/site/market"
+      }
+     ]
+    }
+   ],
+   "technical": {
+    "dimensions": [
+     {
+      "name": "market_day",
+      "type": "temporal",
+      "description": "Date of the quote as recorded by the portal. Quotes are market-day, not monthly; the monthly medians served to the explorer are derived.",
+      "step": "P1D"
+     },
+     {
+      "name": "market",
+      "type": "location",
+      "description": "Named livestock market, nested within a county (185 markets, 45 counties). No coordinates."
+     },
+     {
+      "name": "species",
+      "type": "product",
+      "description": "Live animal priced per head.",
+      "values": [
+       "Cattle",
+       "Sheep",
+       "Goat",
+       "Camel"
+      ]
+     },
+     {
+      "name": "classification",
+      "type": "category",
+      "description": "Breed or type as entered by the enumerator (for example Zebu, Boran, Galla, Somali, Red Maasai, Blackhead Persian, Mixed)."
+     },
+     {
+      "name": "grade",
+      "type": "category",
+      "description": "Enumerator quality grade, 1 (best) to 3, or unstated. No published grading standard.",
+      "values": [
+       "Grade 1",
+       "Grade 2",
+       "Grade 3"
+      ]
+     },
+     {
+      "name": "sex",
+      "type": "category",
+      "description": "Sex of the animal quoted.",
+      "values": [
+       "Male",
+       "Female",
+       "Castrate"
+      ]
+     },
+     {
+      "name": "price_type",
+      "type": "price-type",
+      "description": "Portal column the quote was read from. Wholesale is the livestock-market price per head and carries 99.8 percent of quotes.",
+      "values": [
+       "Wholesale",
+       "Retail"
+      ]
+     }
+    ],
+    "variables": [
+     {
+      "name": "value_kes",
+      "dimensions": [
+       "market_day",
+       "market",
+       "species",
+       "classification",
+       "grade",
+       "sex",
+       "price_type"
+      ],
+      "description": "Quoted price in Kenyan shillings per head. Nominal, not deflated.\n",
+      "data_type": "float64",
+      "unit": "KES per head"
+     },
+     {
+      "name": "supply_volume",
+      "dimensions": [
+       "market_day",
+       "market",
+       "species",
+       "classification",
+       "grade",
+       "sex",
+       "price_type"
+      ],
+      "description": "Number of animals on offer behind the quote, as entered; missing on about 5 percent of rows.",
+      "data_type": "float64",
+      "unit": "head"
+     },
+     {
+      "name": "qc_flag",
+      "dimensions": [
+       "market_day",
+       "market",
+       "species",
+       "classification",
+       "grade",
+       "sex",
+       "price_type"
+      ],
+      "description": "Comma-joined quality flags (bad_county, duplicate, launch_day_bulk, nonpositive, outlier_vs_marketday_median, unexpected_unit); empty when the quote is clean.",
+      "data_type": "string"
+     }
+    ],
+    "joins": [],
+    "resource_type": "dataset",
+    "keywords": [
+     "market prices",
+     "livestock prices",
+     "cattle",
+     "sheep",
+     "goats",
+     "camels",
+     "grade",
+     "kamis",
+     "moald",
+     "kenya"
+    ],
+    "domain": [
+     "socioeconomic"
+    ],
+    "schema_version": "v0.3.0",
+    "created": "2026-10-23",
+    "updated": "2026-10-23"
+   },
+   "record": {
+    "cdh": "atlas_notebooks:data/KE-enso-explorer/_sources/cdh_local/kenya-market-prices-kamis.yaml",
+    "catalogue": null,
+    "catalog_pr": null,
+    "catalog_pr_state": null,
+    "published_record": null
+   },
+   "notebook": {
+    "files": [
+     "data/KE-enso-explorer/market_prices_kamis.parquet.enc",
+     "data/KE-enso-explorer/market_prices.parquet"
+    ],
+    "built_by": "data/KE-enso-explorer/_sources/kamis_build.py",
+    "related": [
+     "kenya-market-prices-fews"
+    ],
+    "search_terms": "kamis moald kilimo livestock market prices cattle sheep goat camel grade sex breed supply volume market day pastoral"
+   },
+   "gates": [],
+   "gaps": [
+    "Held as a notebook-local draft record (data/KE-enso-explorer/_sources/cdh_local/); not yet moved into hazards_prototype/metadata/cdh/ nor submitted to cdh-catalog."
+   ]
   },
   {
    "key": "kenya-food-insecurity-ipc",
