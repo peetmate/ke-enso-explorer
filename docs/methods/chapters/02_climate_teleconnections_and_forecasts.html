@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Equatorial Ocean Teleconnections &amp; Seasonal Forecasting – Kenya ENSO Explorer: Citable Scientific Methods Monograph &amp; Companion Documentation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/03_precipitation_climatology_and_regimes.html" rel="next">
+<link href="../chapters/01_county_context_and_demography.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/02_climate_teleconnections_and_forecasts.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Equatorial Ocean Teleconnections &amp; Seasonal Forecasting</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Kenya ENSO Explorer: Citable Scientific Methods Monograph &amp; Companion Documentation</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/AdaptationAtlas/atlas_notebooks" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="../Kenya-ENSO-Explorer--Citable-Scientific-Methods-Monograph---Companion-Documentation.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Overview &amp; Citation Guide</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01_county_context_and_demography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">County Context, Demography &amp; Social Inclusion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02_climate_teleconnections_and_forecasts.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Equatorial Ocean Teleconnections &amp; Seasonal Forecasting</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03_precipitation_climatology_and_regimes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Precipitation Climatology, Empirical Quantiles &amp; Regimes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04_satellite_earth_observation_and_hazards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Satellite Earth Observation, Hazards &amp; Exposure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05_agricultural_and_livestock_valuation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Agricultural Production &amp; Economic Valuation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06_dataset_catalogue_and_provenance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Master Dataset Catalogue &amp; Data Provenance</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07_controlled_glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Controlled Vocabulary &amp; Scientific Glossary</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#equatorial-ocean-teleconnections-seasonal-forecasting" id="toc-equatorial-ocean-teleconnections-seasonal-forecasting" class="nav-link active" data-scroll-target="#equatorial-ocean-teleconnections-seasonal-forecasting"><span class="header-section-number">4</span> Equatorial Ocean Teleconnections &amp; Seasonal Forecasting</a>
+  <ul class="collapse">
+  <li><a href="#advisory-card-2.0-kenya-meteorological-department-kmd-climweb-cap-weather-advisories" id="toc-advisory-card-2.0-kenya-meteorological-department-kmd-climweb-cap-weather-advisories" class="nav-link" data-scroll-target="#advisory-card-2.0-kenya-meteorological-department-kmd-climweb-cap-weather-advisories"><span class="header-section-number">4.1</span> Advisory Card 2.0: Kenya Meteorological Department (KMD) ClimWeb CAP Weather Advisories</a>
+  <ul class="collapse">
+  <li><a href="#scientific-purpose-context" id="toc-scientific-purpose-context" class="nav-link" data-scroll-target="#scientific-purpose-context"><span class="header-section-number">4.1.1</span> Scientific Purpose &amp; Context</a></li>
+  <li><a href="#mathematical-formulation-algorithmic-approach" id="toc-mathematical-formulation-algorithmic-approach" class="nav-link" data-scroll-target="#mathematical-formulation-algorithmic-approach"><span class="header-section-number">4.1.2</span> Mathematical Formulation &amp; Algorithmic Approach</a></li>
+  <li><a href="#underlying-data-assets-inputs" id="toc-underlying-data-assets-inputs" class="nav-link" data-scroll-target="#underlying-data-assets-inputs"><span class="header-section-number">4.1.3</span> Underlying Data Assets &amp; Inputs</a></li>
+  <li><a href="#methodological-assumptions-analytical-limitations" id="toc-methodological-assumptions-analytical-limitations" class="nav-link" data-scroll-target="#methodological-assumptions-analytical-limitations"><span class="header-section-number">4.1.4</span> Methodological Assumptions &amp; Analytical Limitations</a></li>
+  <li><a href="#controlled-vocabulary-keywords" id="toc-controlled-vocabulary-keywords" class="nav-link" data-scroll-target="#controlled-vocabulary-keywords"><span class="header-section-number">4.1.5</span> Controlled Vocabulary Keywords</a></li>
+  </ul></li>
+  <li><a href="#figure-2.1-empirical-tercile-probabilities-analogue-matching-short-rains-or-long-rains-outlook" id="toc-figure-2.1-empirical-tercile-probabilities-analogue-matching-short-rains-or-long-rains-outlook" class="nav-link" data-scroll-target="#figure-2.1-empirical-tercile-probabilities-analogue-matching-short-rains-or-long-rains-outlook"><span class="header-section-number">4.2</span> Figure 2.1: Empirical Tercile Probabilities &amp; Analogue Matching (Short Rains or Long Rains Outlook)</a>
+  <ul class="collapse">
+  <li><a href="#scientific-purpose-context-1" id="toc-scientific-purpose-context-1" class="nav-link" data-scroll-target="#scientific-purpose-context-1"><span class="header-section-number">4.2.1</span> Scientific Purpose &amp; Context</a></li>
+  <li><a href="#mathematical-formulation-algorithmic-approach-1" id="toc-mathematical-formulation-algorithmic-approach-1" class="nav-link" data-scroll-target="#mathematical-formulation-algorithmic-approach-1"><span class="header-section-number">4.2.2</span> Mathematical Formulation &amp; Algorithmic Approach</a></li>
+  <li><a href="#underlying-data-assets-inputs-1" id="toc-underlying-data-assets-inputs-1" class="nav-link" data-scroll-target="#underlying-data-assets-inputs-1"><span class="header-section-number">4.2.3</span> Underlying Data Assets &amp; Inputs</a></li>
+  <li><a href="#methodological-assumptions-analytical-limitations-1" id="toc-methodological-assumptions-analytical-limitations-1" class="nav-link" data-scroll-target="#methodological-assumptions-analytical-limitations-1"><span class="header-section-number">4.2.4</span> Methodological Assumptions &amp; Analytical Limitations</a></li>
+  <li><a href="#controlled-vocabulary-keywords-1" id="toc-controlled-vocabulary-keywords-1" class="nav-link" data-scroll-target="#controlled-vocabulary-keywords-1"><span class="header-section-number">4.2.5</span> Controlled Vocabulary Keywords</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.2.6</span> References</a></li>
+  </ul></li>
+  <li><a href="#figure-2.2-historical-analogue-scenario-multi-hazard-diagnostics" id="toc-figure-2.2-historical-analogue-scenario-multi-hazard-diagnostics" class="nav-link" data-scroll-target="#figure-2.2-historical-analogue-scenario-multi-hazard-diagnostics"><span class="header-section-number">4.3</span> Figure 2.2: Historical Analogue Scenario Multi-Hazard Diagnostics</a>
+  <ul class="collapse">
+  <li><a href="#scientific-purpose-context-2" id="toc-scientific-purpose-context-2" class="nav-link" data-scroll-target="#scientific-purpose-context-2"><span class="header-section-number">4.3.1</span> Scientific Purpose &amp; Context</a></li>
+  <li><a href="#mathematical-formulation-algorithmic-approach-2" id="toc-mathematical-formulation-algorithmic-approach-2" class="nav-link" data-scroll-target="#mathematical-formulation-algorithmic-approach-2"><span class="header-section-number">4.3.2</span> Mathematical Formulation &amp; Algorithmic Approach</a></li>
+  <li><a href="#underlying-data-assets-inputs-2" id="toc-underlying-data-assets-inputs-2" class="nav-link" data-scroll-target="#underlying-data-assets-inputs-2"><span class="header-section-number">4.3.3</span> Underlying Data Assets &amp; Inputs</a></li>
+  <li><a href="#methodological-assumptions-analytical-limitations-2" id="toc-methodological-assumptions-analytical-limitations-2" class="nav-link" data-scroll-target="#methodological-assumptions-analytical-limitations-2"><span class="header-section-number">4.3.4</span> Methodological Assumptions &amp; Analytical Limitations</a></li>
+  <li><a href="#controlled-vocabulary-keywords-2" id="toc-controlled-vocabulary-keywords-2" class="nav-link" data-scroll-target="#controlled-vocabulary-keywords-2"><span class="header-section-number">4.3.5</span> Controlled Vocabulary Keywords</a></li>
+  </ul></li>
+  <li><a href="#figure-5.1-physical-teleconnection-mechanics-pacific-to-kenya-teleconnection" id="toc-figure-5.1-physical-teleconnection-mechanics-pacific-to-kenya-teleconnection" class="nav-link" data-scroll-target="#figure-5.1-physical-teleconnection-mechanics-pacific-to-kenya-teleconnection"><span class="header-section-number">4.4</span> Figure 5.1: Physical Teleconnection Mechanics: Pacific-to-Kenya Teleconnection</a>
+  <ul class="collapse">
+  <li><a href="#scientific-purpose-context-3" id="toc-scientific-purpose-context-3" class="nav-link" data-scroll-target="#scientific-purpose-context-3"><span class="header-section-number">4.4.1</span> Scientific Purpose &amp; Context</a></li>
+  <li><a href="#mathematical-formulation-algorithmic-approach-3" id="toc-mathematical-formulation-algorithmic-approach-3" class="nav-link" data-scroll-target="#mathematical-formulation-algorithmic-approach-3"><span class="header-section-number">4.4.2</span> Mathematical Formulation &amp; Algorithmic Approach</a></li>
+  <li><a href="#underlying-data-assets-inputs-3" id="toc-underlying-data-assets-inputs-3" class="nav-link" data-scroll-target="#underlying-data-assets-inputs-3"><span class="header-section-number">4.4.3</span> Underlying Data Assets &amp; Inputs</a></li>
+  <li><a href="#methodological-assumptions-analytical-limitations-3" id="toc-methodological-assumptions-analytical-limitations-3" class="nav-link" data-scroll-target="#methodological-assumptions-analytical-limitations-3"><span class="header-section-number">4.4.4</span> Methodological Assumptions &amp; Analytical Limitations</a></li>
+  <li><a href="#controlled-vocabulary-keywords-3" id="toc-controlled-vocabulary-keywords-3" class="nav-link" data-scroll-target="#controlled-vocabulary-keywords-3"><span class="header-section-number">4.4.5</span> Controlled Vocabulary Keywords</a></li>
+  </ul></li>
+  <li><a href="#table-2.1-two-season-compound-agricultural-livelihood-outcome-matrix" id="toc-table-2.1-two-season-compound-agricultural-livelihood-outcome-matrix" class="nav-link" data-scroll-target="#table-2.1-two-season-compound-agricultural-livelihood-outcome-matrix"><span class="header-section-number">4.5</span> Table 2.1: Two-Season Compound Agricultural &amp; Livelihood Outcome Matrix</a>
+  <ul class="collapse">
+  <li><a href="#scientific-purpose-context-4" id="toc-scientific-purpose-context-4" class="nav-link" data-scroll-target="#scientific-purpose-context-4"><span class="header-section-number">4.5.1</span> Scientific Purpose &amp; Context</a></li>
+  <li><a href="#mathematical-formulation-algorithmic-approach-4" id="toc-mathematical-formulation-algorithmic-approach-4" class="nav-link" data-scroll-target="#mathematical-formulation-algorithmic-approach-4"><span class="header-section-number">4.5.2</span> Mathematical Formulation &amp; Algorithmic Approach</a></li>
+  <li><a href="#underlying-data-assets-inputs-4" id="toc-underlying-data-assets-inputs-4" class="nav-link" data-scroll-target="#underlying-data-assets-inputs-4"><span class="header-section-number">4.5.3</span> Underlying Data Assets &amp; Inputs</a></li>
+  <li><a href="#methodological-assumptions-analytical-limitations-4" id="toc-methodological-assumptions-analytical-limitations-4" class="nav-link" data-scroll-target="#methodological-assumptions-analytical-limitations-4"><span class="header-section-number">4.5.4</span> Methodological Assumptions &amp; Analytical Limitations</a></li>
+  <li><a href="#controlled-vocabulary-keywords-4" id="toc-controlled-vocabulary-keywords-4" class="nav-link" data-scroll-target="#controlled-vocabulary-keywords-4"><span class="header-section-number">4.5.5</span> Controlled Vocabulary Keywords</a></li>
+  </ul></li>
+  <li><a href="#table-2.2-official-kmd-seasonal-sectoral-advisory-matrix" id="toc-table-2.2-official-kmd-seasonal-sectoral-advisory-matrix" class="nav-link" data-scroll-target="#table-2.2-official-kmd-seasonal-sectoral-advisory-matrix"><span class="header-section-number">4.6</span> Table 2.2: Official KMD Seasonal Sectoral Advisory Matrix</a>
+  <ul class="collapse">
+  <li><a href="#scientific-purpose-context-5" id="toc-scientific-purpose-context-5" class="nav-link" data-scroll-target="#scientific-purpose-context-5"><span class="header-section-number">4.6.1</span> Scientific Purpose &amp; Context</a></li>
+  <li><a href="#mathematical-formulation-algorithmic-approach-5" id="toc-mathematical-formulation-algorithmic-approach-5" class="nav-link" data-scroll-target="#mathematical-formulation-algorithmic-approach-5"><span class="header-section-number">4.6.2</span> Mathematical Formulation &amp; Algorithmic Approach</a></li>
+  <li><a href="#underlying-data-assets-inputs-5" id="toc-underlying-data-assets-inputs-5" class="nav-link" data-scroll-target="#underlying-data-assets-inputs-5"><span class="header-section-number">4.6.3</span> Underlying Data Assets &amp; Inputs</a></li>
+  <li><a href="#methodological-assumptions-analytical-limitations-5" id="toc-methodological-assumptions-analytical-limitations-5" class="nav-link" data-scroll-target="#methodological-assumptions-analytical-limitations-5"><span class="header-section-number">4.6.4</span> Methodological Assumptions &amp; Analytical Limitations</a></li>
+  <li><a href="#controlled-vocabulary-keywords-5" id="toc-controlled-vocabulary-keywords-5" class="nav-link" data-scroll-target="#controlled-vocabulary-keywords-5"><span class="header-section-number">4.6.5</span> Controlled Vocabulary Keywords</a></li>
+  </ul></li>
+  <li><a href="#table-2.3-forecast-verification-categorical-skill-assessment-official-advisory-directory" id="toc-table-2.3-forecast-verification-categorical-skill-assessment-official-advisory-directory" class="nav-link" data-scroll-target="#table-2.3-forecast-verification-categorical-skill-assessment-official-advisory-directory"><span class="header-section-number">4.7</span> Table 2.3: Forecast Verification, Categorical Skill Assessment &amp; Official Advisory Directory</a>
+  <ul class="collapse">
+  <li><a href="#scientific-purpose-context-6" id="toc-scientific-purpose-context-6" class="nav-link" data-scroll-target="#scientific-purpose-context-6"><span class="header-section-number">4.7.1</span> Scientific Purpose &amp; Context</a></li>
+  <li><a href="#mathematical-formulation-algorithmic-approach-6" id="toc-mathematical-formulation-algorithmic-approach-6" class="nav-link" data-scroll-target="#mathematical-formulation-algorithmic-approach-6"><span class="header-section-number">4.7.2</span> Mathematical Formulation &amp; Algorithmic Approach</a></li>
+  <li><a href="#underlying-data-assets-inputs-6" id="toc-underlying-data-assets-inputs-6" class="nav-link" data-scroll-target="#underlying-data-assets-inputs-6"><span class="header-section-number">4.7.3</span> Underlying Data Assets &amp; Inputs</a></li>
+  <li><a href="#methodological-assumptions-analytical-limitations-6" id="toc-methodological-assumptions-analytical-limitations-6" class="nav-link" data-scroll-target="#methodological-assumptions-analytical-limitations-6"><span class="header-section-number">4.7.4</span> Methodological Assumptions &amp; Analytical Limitations</a></li>
+  <li><a href="#controlled-vocabulary-keywords-6" id="toc-controlled-vocabulary-keywords-6" class="nav-link" data-scroll-target="#controlled-vocabulary-keywords-6"><span class="header-section-number">4.7.5</span> Controlled Vocabulary Keywords</a></li>
+  <li><a href="#references-1" id="toc-references-1" class="nav-link" data-scroll-target="#references-1"><span class="header-section-number">4.7.6</span> References</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/AdaptationAtlas/atlas_notebooks/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Equatorial Ocean Teleconnections &amp; Seasonal Forecasting</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="equatorial-ocean-teleconnections-seasonal-forecasting" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Equatorial Ocean Teleconnections &amp; Seasonal Forecasting</h1>
+<p>This chapter presents the physical oceanographic indices, dynamical model plumes, and statistical verification frameworks governing Kenyan seasonal climate predictability. It establishes the detrended Relative Oceanic Niño Index (RONI), Indian Ocean Dipole Mode Index (DMI), multi-model forecast plume ensembles (SINTEX-F, IRI), and Ranked Probability Skill Score (RPSS) cross-validation protocols.</p>
+<hr>
+<section id="advisory-card-2.0-kenya-meteorological-department-kmd-climweb-cap-weather-advisories" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="advisory-card-2.0-kenya-meteorological-department-kmd-climweb-cap-weather-advisories"><span class="header-section-number">4.1</span> Advisory Card 2.0: Kenya Meteorological Department (KMD) ClimWeb CAP Weather Advisories</h2>
+<p><strong>Section in Platform:</strong> Section 2 &nbsp;|&nbsp; <strong>Target Identifier:</strong> <code>box_2_0</code> &nbsp;|&nbsp; <strong>Output Type:</strong> Table</p>
+<blockquote class="blockquote">
+<p><strong>Policy / Scientific Question:</strong> <em>What active severe weather alerts, heavy rainfall warnings, and precautionary advisories are currently in effect for this county from the Kenya Meteorological Department?</em></p>
+</blockquote>
+<section id="scientific-purpose-context" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="scientific-purpose-context"><span class="header-section-number">4.1.1</span> Scientific Purpose &amp; Context</h3>
+<p>Quantify and communicate Kenya Meteorological Department (KMD) ClimWeb CAP Weather Advisories across Kenyan counties to inform anticipatory action and climate adaptation planning.</p>
+</section>
+<section id="mathematical-formulation-algorithmic-approach" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach"><span class="header-section-number">4.1.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
+<p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
+<p>Official Kenya Meteorological Department (KMD) seasonal climate advisory synthesis and sectoral contingency protocols.</p>
+<section id="methodological-rationale" class="level4" data-number="4.1.2.1">
+<h4 data-number="4.1.2.1" class="anchored" data-anchor-id="methodological-rationale"><span class="header-section-number">4.1.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
+</section>
+</section>
+<section id="underlying-data-assets-inputs" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="underlying-data-assets-inputs"><span class="header-section-number">4.1.3</span> Underlying Data Assets &amp; Inputs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Provenance Key</th>
+<th style="text-align: left;">Dataset Title</th>
+<th style="text-align: left;">Spatial Resolution</th>
+<th style="text-align: left;">Temporal Span</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>kmd-official-advisories</code></td>
+<td style="text-align: left;">kmd-official-advisories</td>
+<td style="text-align: left;">County (ADM1)</td>
+<td style="text-align: left;">Historical multi-decadal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Served Parquet Files in Platform:</strong> <code>kmd_cap_county_active.parquet</code></p>
+</section>
+<section id="methodological-assumptions-analytical-limitations" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="methodological-assumptions-analytical-limitations"><span class="header-section-number">4.1.4</span> Methodological Assumptions &amp; Analytical Limitations</h3>
+<ul>
+<li>County aggregations rely on official polygon boundaries from UN OCHA COD-AB standard.</li>
+<li>Sub-seasonal temporal variations within rolling seasons are smoothed over seasonal totals.</li>
+<li>Data latency reflects standard publication cadences of underlying satellite and administrative surveys.</li>
+</ul>
+</section>
+<section id="controlled-vocabulary-keywords" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords"><span class="header-section-number">4.1.5</span> Controlled Vocabulary Keywords</h3>
+<p><strong><code>KMD</code></strong> • <strong><code>AA</code></strong> • <strong><code>Common Alerting Protocol</code></strong></p>
+<hr>
+</section>
+</section>
+<section id="figure-2.1-empirical-tercile-probabilities-analogue-matching-short-rains-or-long-rains-outlook" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="figure-2.1-empirical-tercile-probabilities-analogue-matching-short-rains-or-long-rains-outlook"><span class="header-section-number">4.2</span> Figure 2.1: Empirical Tercile Probabilities &amp; Analogue Matching (Short Rains or Long Rains Outlook)</h2>
+<p><strong>Section in Platform:</strong> Section 2 &nbsp;|&nbsp; <strong>Target Identifier:</strong> <code>fig_4_1</code> &nbsp;|&nbsp; <strong>Output Type:</strong> Chart</p>
+<blockquote class="blockquote">
+<p><strong>Policy / Scientific Question:</strong> <em>Given the current and forecast state of the equatorial Pacific and Indian Ocean, how were the coming season’s rainfall terciles distributed in the eight most similar historical years for this county, and how well has that analogue method performed when tested against 45 years of history?</em></p>
+</blockquote>
+<section id="scientific-purpose-context-1" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="scientific-purpose-context-1"><span class="header-section-number">4.2.1</span> Scientific Purpose &amp; Context</h3>
+<p>Figure 2.1 is the Explorer’s seasonal outlook card. For the selected county and target season (the Short Rains, OND, or the Long Rains, MAM) it finds the eight historical years whose ocean state most closely resembles the present and reports how often each of those years produced a wetter, near-normal or drier season in that county. The result is shown as a three-segment probability bar with dashed markers at the one-third climatological shares, the tercile bounds in millimetres from the county’s 1991–2020 record, dots for the individual analogue years, and a verification strip summarising the method’s leave-one-out hindcast skill for that county, season and matching criterion.</p>
+<p>The approach is deliberately empirical and transparent. A planner can see which years drove the outlook, check what happened in those years against local memory and records, and judge the outlook against the track record shown beside it. Three matching criteria are offered: Full Trajectory, which weights the pre-season ocean state and the forecast in-season state equally; Lead-in Observed, which uses only the observed pre-season state; and Projected Season, which uses only the forecast in-season state.</p>
+<p>The card does not replace the official seasonal forecast of the Kenya Meteorological Department (KMD), which should govern operational decisions. Its purpose is to make the historical base rate behind ENSO-conditioned outlooks visible at county scale and to state plainly where that base rate carries skill. In OND the analogue method beats climatology in a minority of counties, mostly in the east and northeast. In MAM it does not beat climatology anywhere in a meaningful way, and every MAM outlook carries a standing notice to that effect.</p>
+</section>
+<section id="mathematical-formulation-algorithmic-approach-1" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-1"><span class="header-section-number">4.2.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
+<p><strong>Baseline Reference Period:</strong> Tercile bounds and distance standardization from the 1991–2020 WMO standard normal; analogue candidates 1981 to 2025</p>
+<p><strong>Target season and candidates.</strong> The user selects OND or MAM. Candidate years are every year from 1981 to 2025 in the outlook table with the required ocean coordinates. Each candidate carries its observed county rainfall tercile (Drier, Near normal, Wetter), assigned offline from the county’s 1991–2020 seasonal totals with empirical tercile bounds (linear interpolation between order statistics), a total at or below the lower bound classed Drier and a total strictly above the upper bound classed Wetter.</p>
+<p><strong>Current ocean state.</strong> The lead-in coordinates are the most recently published CPC Relative Oceanic Niño Index (RONI) three-month value and the most recent single month of the CPC ERSSTv6 Dipole Mode Index (DMI). The in-season (peak) coordinates are the median across members of the IRI Niño 3.4 multi-model plume for the target season, shifted into RONI space by subtracting a fixed 0.38 °C, and the median of the JAMSTEC SINTEX-F IOD plume members for the same season. Plume seasons are located by their label (the target season first, then OND).</p>
+<p><strong>Distance and selection.</strong> Each coordinate difference between the current state and a candidate year is divided by that coordinate’s 1991–2020 sample standard deviation for the target season (for OND: RONI lead-in 0.74, DMI lead-in 0.37, RONI in-season 1.12, DMI in-season 0.37 °C; for MAM: 1.11, 0.19, 0.64, 0.22 °C). Under Full Trajectory the distance is the square root of half the summed squared lead-in differences plus half the summed squared in-season differences; Lead-in Observed and Projected Season use only one pair. Candidates are ranked by distance and the eight nearest are kept. Years missing a required coordinate are excluded rather than scored as zero difference.</p>
+<p><strong>Probabilities.</strong> The forecast probability of each tercile is the share of the eight analogue years whose observed tercile fell in it, displayed as a whole-number percentage. There is no distance weighting and no shrinkage toward one third. The modal category is the tercile with the largest count; ties are reported as no single modal category. The millimetre bounds printed with the bar are the empirical 33.3rd and 66.7th percentiles of the county’s 1991–2020 seasonal totals, shown only when at least ten baseline years exist.</p>
+<p><strong>Verification strip.</strong> The card reads the leave-one-out hindcast record for the same county, season and matching criterion with eight analogues (the method and the full skill results are documented in the Table 2.3 card). It shows the Ranked Probability Skill Score (RPSS), the modal hit rate and its gain over the 33.3 percent baseline, the Heidke Skill Score, the Brier Skill Score for the wet tercile and the severe wet false-alarm rate. The skill class (High, Moderate, Marginal or No skill) sets the badge colour and the guidance text. Probabilities are displayed in every class; MAM outlooks always carry a notice that they are a historical frequency guide rather than predictive guidance.</p>
+<section id="methodological-rationale-1" class="level4" data-number="4.2.2.1">
+<h4 data-number="4.2.2.1" class="anchored" data-anchor-id="methodological-rationale-1"><span class="header-section-number">4.2.2.1</span> Methodological Rationale</h4>
+<p><strong>Why analogues.</strong> Dynamical seasonal forecasts for East Africa are issued at regional scale and in terms of tercile shifts; county planners need the same information for their own county and season. An analogue ensemble provides it directly from each county’s observed rainfall record, with no statistical model between the ocean state and the county outcome. It also keeps the evidence inspectable: the eight years are listed, and anyone can check what happened in them.</p>
+<p><strong>Why standardized distance over RONI and DMI.</strong> The Short Rains respond to both the Pacific (ENSO) and the Indian Ocean Dipole, which often co-vary but not always. Using both indices in the distance lets analogues reflect the joint state. Dividing each difference by its 1991–2020 standard deviation stops the index with the larger raw variance (RONI) from dominating. RONI is used rather than raw Niño 3.4 because subtracting the tropical-mean sea surface temperature anomaly removes the secular warming that would otherwise make recent years look like El Niño states; the fixed 0.38 °C shift applied to the IRI plume approximates that tropical-mean correction for a plume issued in raw Niño 3.4 units.</p>
+<p><strong>Why eight analogues and no smoothing.</strong> Eight years is a compromise between sharpness and sampling noise in a 45-year record: fewer analogues give jumpy probabilities, more drift toward climatology and dilute the ocean signal. The probabilities are left as raw frequencies so that they remain interpretable as counts of real seasons. The cost is coarseness (steps of 12.5 percent) and overconfidence when the method has no skill, which is why skill is reported beside every outlook.</p>
+<p><strong>What the verification shows.</strong> Across the 47 counties, the Full Trajectory criterion with eight analogues has a mean OND modal hit rate of 43 percent against 33 percent by chance and positive RPSS in 20 counties; the Projected Season criterion reaches positive RPSS in 25. For MAM the mean RPSS is negative under every criterion and the hit rate is at chance level. The outlook should therefore be read as a historical frequency for MAM everywhere, and for OND in counties whose badge shows No skill.</p>
+<p><strong>Governing Mathematical Formulations:</strong></p>
+<p><strong>Current ocean state.</strong> Lead-in values are the latest published RONI season and latest CPC ERSSTv6 DMI month; s is the target season located by label in each plume.</p>
+<p><span class="math display">\[
+\mathbf{x}_0 = \left(\text{RONI}^{\text{lead}}_0,\ \text{DMI}^{\text{lead}}_0,\ \text{RONI}^{\text{peak}}_0,\ \text{DMI}^{\text{peak}}_0\right), \quad \text{RONI}^{\text{peak}}_0 = \operatorname{median}_m\!\left(\text{Niño3.4}^{\text{IRI}}_{m,s}\right) - 0.38, \quad \text{DMI}^{\text{peak}}_0 = \operatorname{median}_m\!\left(\text{DMI}^{\text{SINTEX-F}}_{m,s}\right)
+\]</span></p>
+<p><strong>Standardized analogue distance.</strong> Full Trajectory w = (0.5, 0.5); Lead-in Observed w = (1, 0); Projected Season w = (0, 1). Sigmas are 1991–2020 sample standard deviations for the target season.</p>
+<p><span class="math display">\[
+D_i = \sqrt{\,w_{\text{lead}}\left[\left(\frac{\Delta \text{RONI}^{\text{lead}}_i}{\sigma^{\text{lead}}_{\text{RONI}}}\right)^{2} + \left(\frac{\Delta \text{DMI}^{\text{lead}}_i}{\sigma^{\text{lead}}_{\text{DMI}}}\right)^{2}\right] + w_{\text{peak}}\left[\left(\frac{\Delta \text{RONI}^{\text{peak}}_i}{\sigma^{\text{peak}}_{\text{RONI}}}\right)^{2} + \left(\frac{\Delta \text{DMI}^{\text{peak}}_i}{\sigma^{\text{peak}}_{\text{DMI}}}\right)^{2}\right]}
+\]</span></p>
+<p><strong>Analogue set and tercile probabilities.</strong> The eight nearest candidate years; displayed as rounded whole percentages, which need not sum to exactly 100.</p>
+<p><span class="math display">\[
+\mathcal{A} = \operatorname*{arg\,min}_{|S| = 8} \sum_{i \in S} D_i, \qquad \hat{p}_k = \frac{1}{|\mathcal{A}|}\sum_{i \in \mathcal{A}} \mathbb{I}\!\left(T_i = k\right), \quad k \in \{\text{Drier}, \text{Near normal}, \text{Wetter}\}
+\]</span></p>
+<p><strong>Modal category.</strong> Ties are shown as no single modal category.</p>
+<p><span class="math display">\[
+\hat{k} = \arg\max_k \hat{p}_k \quad \text{(undefined when two or three categories tie)}
+\]</span></p>
+<p><strong>Tercile bounds shown in millimetres.</strong> Hyndman and Fan Type 7 empirical quantiles of the county’s seasonal totals.</p>
+<p><span class="math display">\[
+t_1 = \hat{Q}_{1991\text{--}2020}\!\left(\tfrac{1}{3}\right), \qquad t_2 = \hat{Q}_{1991\text{--}2020}\!\left(\tfrac{2}{3}\right), \qquad \text{shown only if } N_{1991\text{--}2020} \ge 10
+\]</span></p>
+</section>
+</section>
+<section id="underlying-data-assets-inputs-1" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-1"><span class="header-section-number">4.2.3</span> Underlying Data Assets &amp; Inputs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Provenance Key</th>
+<th style="text-align: left;">Dataset Title</th>
+<th style="text-align: left;">Spatial Resolution</th>
+<th style="text-align: left;">Temporal Span</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>enso-driver-indices</code></td>
+<td style="text-align: left;">Ocean Climate Teleconnection Drivers (Pa</td>
+<td style="text-align: left;">Equatorial Pacific and tropical Indian Ocean basin indices</td>
+<td style="text-align: left;">Analogue candidates 1981 to 2025; current-season plumes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>africa-precipitation-monthly-seasonal</code></td>
+<td style="text-align: left;">Monthly and Seasonal Precipitation from</td>
+<td style="text-align: left;">0.05 deg (~5.5 km, CHIRPS v3 native) aggregated to county mean</td>
+<td style="text-align: left;">1981 to 2025; terciles from 1991–2020</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Served Parquet Files in Platform:</strong> <code>enso_outlook_base.parquet</code>, <code>enso_hindcast_skill.parquet</code>, <code>enso_drivers_seasonal.parquet</code>, <code>iri_forecast_plume.json</code>, <code>iod_forecast_plume.json</code></p>
+</section>
+<section id="methodological-assumptions-analytical-limitations-1" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="methodological-assumptions-analytical-limitations-1"><span class="header-section-number">4.2.4</span> Methodological Assumptions &amp; Analytical Limitations</h3>
+<ul>
+<li>Eight analogues give probabilities in steps of 12.5 percent. A shift of one year between categories moves a probability by 12.5 points, so differences of that size carry no information on their own.</li>
+<li>Probabilities are shown whatever the hindcast skill. For MAM, and for OND in counties whose badge shows No skill, the bar is a historical frequency, not a forecast, and should not be used to depart from climatological planning on its own.</li>
+<li>The live lead-in coordinates differ from the historical ones. Historical candidates use the JAS (for OND) or DJF (for MAM) RONI and a three-month HadISST DMI mean, whereas the live state uses the most recently published RONI season and the latest single month of the CPC ERSSTv6 DMI. Early in the lead-in window the two can refer to different months.</li>
+<li>The in-season coordinates come from model plumes and inherit their errors. The IRI plume is converted to RONI space with a fixed 0.38 °C offset, which differs from the time-varying conversion used in the plume figure; the SINTEX-F IOD plume is used without adjustment.</li>
+<li>The hindcast skill shown in the strip uses observed in-season ocean values, so for the Full Trajectory and Projected Season criteria it is an upper bound on real-time skill (see Table 2.3).</li>
+<li>Candidate years are drawn from 1981 to 2025 and are not detrended. A warming Indian Ocean and the drying of the Long Rains mean that early analogue years may represent a different background climate.</li>
+<li>If the hindcast record for the exact criterion is missing, the card falls back to another record for the same county and season, and several display fields have fixed placeholder values when data are absent; the badge should be read only when a county-specific record is present.</li>
+<li>This outlook is not an official forecast. Operational decisions should follow the Kenya Meteorological Department (KMD) seasonal forecast and county advisories.</li>
+</ul>
+</section>
+<section id="controlled-vocabulary-keywords-1" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-1"><span class="header-section-number">4.2.5</span> Controlled Vocabulary Keywords</h3>
+<p><strong><code>Analogue Year</code></strong> • <strong><code>Terciles</code></strong> • <strong><code>Conditional Probability</code></strong> • <strong><code>RONI</code></strong> • <strong><code>DMI</code></strong> • <strong><code>IRI Plume</code></strong> • <strong><code>SINTEX-F</code></strong> • <strong><code>RPSS</code></strong> • <strong><code>LOOCV</code></strong> • <strong><code>Modal Hit Rate</code></strong> • <strong><code>HSS</code></strong> • <strong><code>BSS</code></strong> • <strong><code>Forecast Skill</code></strong> • <strong><code>KMD</code></strong> • <strong><code>OND</code></strong> • <strong><code>MAM</code></strong></p>
+</section>
+<section id="references" class="level3" data-number="4.2.6">
+<h3 data-number="4.2.6" class="anchored" data-anchor-id="references"><span class="header-section-number">4.2.6</span> References</h3>
+<ul>
+<li>van Oldenborgh, G. J., Hendon, H., Stockdale, T., L’Heureux, M., Coughlan de Perez, E., Singh, R., &amp; van Aalst, M. (2021). Defining El Niño indices in a warming climate. Environmental Research Letters, 16(4), 044003. <a href="https://doi.org/10.1088/1748-9326/abe9ed">https://doi.org/10.1088/1748-9326/abe9ed</a></li>
+<li>Saji, N. H., Goswami, B. N., Vinayachandran, P. N., &amp; Yamagata, T. (1999). A dipole mode in the tropical Indian Ocean. Nature, 401(6751), 360–363. <a href="https://doi.org/10.1038/43854">https://doi.org/10.1038/43854</a></li>
+<li>Nicholson, S. E. (2017). Climate and climatic variability of rainfall over eastern Africa. Reviews of Geophysics, 55(3), 590–635. <a href="https://doi.org/10.1002/2016RG000544">https://doi.org/10.1002/2016RG000544</a></li>
+<li>Barnston, A. G., Tippett, M. K., L’Heureux, M. L., Li, S., &amp; DeWitt, D. G. (2012). Skill of real-time seasonal ENSO model predictions during 2002–11: Is our capability increasing? Bulletin of the American Meteorological Society, 93(5), 631–651. <a href="https://doi.org/10.1175/BAMS-D-11-00111.1">https://doi.org/10.1175/BAMS-D-11-00111.1</a></li>
+<li>Doi, T., Behera, S. K., &amp; Yamagata, T. (2016). Improved seasonal prediction using the SINTEX-F2 coupled model. Journal of Advances in Modeling Earth Systems, 8(4), 1847–1867. <a href="https://doi.org/10.1002/2016MS000744">https://doi.org/10.1002/2016MS000744</a></li>
+<li>Wilks, D. S. (2011). Statistical methods in the atmospheric sciences (3rd ed.). Academic Press. <a href="https://www.sciencedirect.com/book/9780123850225/statistical-methods-in-the-atmospheric-sciences">https://www.sciencedirect.com/book/9780123850225/statistical-methods-in-the-atmospheric-sciences</a></li>
+<li>Funk, C., Peterson, P., Landsfeld, M., Pedreros, D., Verdin, J., Shukla, S., Husak, G., Rowland, J., Harrison, L., Hoell, A., &amp; Michaelsen, J. (2015). The climate hazards infrared precipitation with stations: A new environmental record for monitoring extremes. Scientific Data, 2, 150066. <a href="https://doi.org/10.1038/sdata.2015.66">https://doi.org/10.1038/sdata.2015.66</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="figure-2.2-historical-analogue-scenario-multi-hazard-diagnostics" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="figure-2.2-historical-analogue-scenario-multi-hazard-diagnostics"><span class="header-section-number">4.3</span> Figure 2.2: Historical Analogue Scenario Multi-Hazard Diagnostics</h2>
+<p><strong>Section in Platform:</strong> Section 2 &nbsp;|&nbsp; <strong>Target Identifier:</strong> <code>fig_4_2</code> &nbsp;|&nbsp; <strong>Output Type:</strong> Chart</p>
+<blockquote class="blockquote">
+<p><strong>Policy / Scientific Question:</strong> <em>What multi-hazard impacts occurred when this specific analogue ocean condition was observed in the past, and how did compound climate shocks propagate through crop production, rangeland pasture, and market purchasing power?</em></p>
+</blockquote>
+<section id="scientific-purpose-context-2" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="scientific-purpose-context-2"><span class="header-section-number">4.3.1</span> Scientific Purpose &amp; Context</h3>
+<p>Quantify and communicate Historical Analogue Scenario Multi-Hazard Diagnostics across Kenyan counties to inform anticipatory action and climate adaptation planning.</p>
+</section>
+<section id="mathematical-formulation-algorithmic-approach-2" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-2"><span class="header-section-number">4.3.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
+<p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
+<p>Historical multi-driver analog identification matching joint Pacific RONI/ONI and Indian Ocean DMI phases to past seasons with multi-hazard impacts.</p>
+<section id="methodological-rationale-2" class="level4" data-number="4.3.2.1">
+<h4 data-number="4.3.2.1" class="anchored" data-anchor-id="methodological-rationale-2"><span class="header-section-number">4.3.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
+<p><strong>Governing Mathematical Formulations:</strong></p>
+<p><span class="math display">\[
+\text{Distance}(y) = \sqrt{w_1 (z_{\text{RONI},y} - z_{\text{target}})^2 + w_2 (z_{\text{DMI},y} - z_{\text{target}})^2}
+\]</span></p>
+</section>
+</section>
+<section id="underlying-data-assets-inputs-2" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-2"><span class="header-section-number">4.3.3</span> Underlying Data Assets &amp; Inputs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Provenance Key</th>
+<th style="text-align: left;">Dataset Title</th>
+<th style="text-align: left;">Spatial Resolution</th>
+<th style="text-align: left;">Temporal Span</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>enso-driver-indices</code></td>
+<td style="text-align: left;">Ocean Climate Teleconnection Drivers (Pa</td>
+<td style="text-align: left;">global-oceans, equatorial-pacific, indian-ocean</td>
+<td style="text-align: left;">1950-01 to present (open-ended)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>africa-precipitation-monthly-seasonal</code></td>
+<td style="text-align: left;">Monthly and Seasonal Precipitation from</td>
+<td style="text-align: left;">africa — 0.05 deg (~5.5 km, CHIRPS native)</td>
+<td style="text-align: left;">1981-01 to present (open-ended)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Served Parquet Files in Platform:</strong> <code>driver_indices.parquet</code>, <code>chirps_county_monthly.parquet</code></p>
+</section>
+<section id="methodological-assumptions-analytical-limitations-2" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="methodological-assumptions-analytical-limitations-2"><span class="header-section-number">4.3.4</span> Methodological Assumptions &amp; Analytical Limitations</h3>
+<ul>
+<li>County aggregations rely on official polygon boundaries from UN OCHA COD-AB standard.</li>
+<li>Sub-seasonal temporal variations within rolling seasons are smoothed over seasonal totals.</li>
+<li>Data latency reflects standard publication cadences of underlying satellite and administrative surveys.</li>
+</ul>
+</section>
+<section id="controlled-vocabulary-keywords-2" class="level3" data-number="4.3.5">
+<h3 data-number="4.3.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-2"><span class="header-section-number">4.3.5</span> Controlled Vocabulary Keywords</h3>
+<p><strong><code>Analogue Year</code></strong> • <strong><code>Joint Ocean Phase</code></strong> • <strong><code>RONI</code></strong> • <strong><code>DMI</code></strong></p>
+<hr>
+</section>
+</section>
+<section id="figure-5.1-physical-teleconnection-mechanics-pacific-to-kenya-teleconnection" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="figure-5.1-physical-teleconnection-mechanics-pacific-to-kenya-teleconnection"><span class="header-section-number">4.4</span> Figure 5.1: Physical Teleconnection Mechanics: Pacific-to-Kenya Teleconnection</h2>
+<p><strong>Section in Platform:</strong> Section 5.1 &nbsp;|&nbsp; <strong>Target Identifier:</strong> <code>fig_5_1</code> &nbsp;|&nbsp; <strong>Output Type:</strong> Figure</p>
+<blockquote class="blockquote">
+<p><strong>Policy / Scientific Question:</strong> <em>What physical atmospheric wave dynamics connect equatorial Pacific warming to East African rainfall?</em></p>
+</blockquote>
+<section id="scientific-purpose-context-3" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="scientific-purpose-context-3"><span class="header-section-number">4.4.1</span> Scientific Purpose &amp; Context</h3>
+<p>Quantify and communicate Physical Teleconnection Mechanics: Pacific-to-Kenya Teleconnection across Kenyan counties to inform anticipatory action and climate adaptation planning.</p>
+</section>
+<section id="mathematical-formulation-algorithmic-approach-3" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-3"><span class="header-section-number">4.4.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
+<p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
+<p>Physical teleconnection mechanics: Walker circulation displacement, Indian Ocean dipole zonal wind reversals, and upper-level divergence modulating East African convective rainfall.</p>
+<section id="methodological-rationale-3" class="level4" data-number="4.4.2.1">
+<h4 data-number="4.4.2.1" class="anchored" data-anchor-id="methodological-rationale-3"><span class="header-section-number">4.4.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
+</section>
+</section>
+<section id="underlying-data-assets-inputs-3" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-3"><span class="header-section-number">4.4.3</span> Underlying Data Assets &amp; Inputs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Provenance Key</th>
+<th style="text-align: left;">Dataset Title</th>
+<th style="text-align: left;">Spatial Resolution</th>
+<th style="text-align: left;">Temporal Span</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>enso-driver-indices</code></td>
+<td style="text-align: left;">Ocean Climate Teleconnection Drivers (Pa</td>
+<td style="text-align: left;">global-oceans, equatorial-pacific, indian-ocean</td>
+<td style="text-align: left;">1950-01 to present (open-ended)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Served Parquet Files in Platform:</strong> <code>driver_indices.parquet</code></p>
+</section>
+<section id="methodological-assumptions-analytical-limitations-3" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="methodological-assumptions-analytical-limitations-3"><span class="header-section-number">4.4.4</span> Methodological Assumptions &amp; Analytical Limitations</h3>
+<ul>
+<li>County aggregations rely on official polygon boundaries from UN OCHA COD-AB standard.</li>
+<li>Sub-seasonal temporal variations within rolling seasons are smoothed over seasonal totals.</li>
+<li>Data latency reflects standard publication cadences of underlying satellite and administrative surveys.</li>
+</ul>
+</section>
+<section id="controlled-vocabulary-keywords-3" class="level3" data-number="4.4.5">
+<h3 data-number="4.4.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-3"><span class="header-section-number">4.4.5</span> Controlled Vocabulary Keywords</h3>
+<p><strong><code>Walker Circulation</code></strong> • <strong><code>ENSO</code></strong></p>
+<hr>
+</section>
+</section>
+<section id="table-2.1-two-season-compound-agricultural-livelihood-outcome-matrix" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="table-2.1-two-season-compound-agricultural-livelihood-outcome-matrix"><span class="header-section-number">4.5</span> Table 2.1: Two-Season Compound Agricultural &amp; Livelihood Outcome Matrix</h2>
+<p><strong>Section in Platform:</strong> Section 2 &nbsp;|&nbsp; <strong>Target Identifier:</strong> <code>table_2_1</code> &nbsp;|&nbsp; <strong>Output Type:</strong> Table</p>
+<blockquote class="blockquote">
+<p><strong>Policy / Scientific Question:</strong> <em>How did consecutive MAM and OND seasons compound agricultural and livelihood shocks in the selected analogue year?</em></p>
+</blockquote>
+<section id="scientific-purpose-context-4" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="scientific-purpose-context-4"><span class="header-section-number">4.5.1</span> Scientific Purpose &amp; Context</h3>
+<p>Quantify and communicate Two-Season Compound Agricultural &amp; Livelihood Outcome Matrix across Kenyan counties to inform anticipatory action and climate adaptation planning.</p>
+</section>
+<section id="mathematical-formulation-algorithmic-approach-4" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-4"><span class="header-section-number">4.5.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
+<p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
+<p>Two-season compound agricultural impact table pairing OND and MAM analog seasons with observed crop and rangeland yields.</p>
+<section id="methodological-rationale-4" class="level4" data-number="4.5.2.1">
+<h4 data-number="4.5.2.1" class="anchored" data-anchor-id="methodological-rationale-4"><span class="header-section-number">4.5.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
+</section>
+</section>
+<section id="underlying-data-assets-inputs-4" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-4"><span class="header-section-number">4.5.3</span> Underlying Data Assets &amp; Inputs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Provenance Key</th>
+<th style="text-align: left;">Dataset Title</th>
+<th style="text-align: left;">Spatial Resolution</th>
+<th style="text-align: left;">Temporal Span</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>enso-driver-indices</code></td>
+<td style="text-align: left;">Ocean Climate Teleconnection Drivers (Pa</td>
+<td style="text-align: left;">global-oceans, equatorial-pacific, indian-ocean</td>
+<td style="text-align: left;">1950-01 to present (open-ended)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>knbs-napr</code></td>
+<td style="text-align: left;">KNBS National Agricultural Production Re</td>
+<td style="text-align: left;">kenya</td>
+<td style="text-align: left;">2019 to 2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>harveststat-crop-production</code></td>
+<td style="text-align: left;">HarvestStat Africa - Harmonized Subnatio</td>
+<td style="text-align: left;">County (ADM1), 47 counties</td>
+<td style="text-align: left;">1965 to 2024 (harvest years; seasonal gap 2002 to 2014)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Served Parquet Files in Platform:</strong> <code>harveststat_county_production.parquet</code>, <code>driver_indices.parquet</code></p>
+</section>
+<section id="methodological-assumptions-analytical-limitations-4" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="methodological-assumptions-analytical-limitations-4"><span class="header-section-number">4.5.4</span> Methodological Assumptions &amp; Analytical Limitations</h3>
+<ul>
+<li>County aggregations rely on official polygon boundaries from UN OCHA COD-AB standard.</li>
+<li>Sub-seasonal temporal variations within rolling seasons are smoothed over seasonal totals.</li>
+<li>Data latency reflects standard publication cadences of underlying satellite and administrative surveys.</li>
+</ul>
+</section>
+<section id="controlled-vocabulary-keywords-4" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-4"><span class="header-section-number">4.5.5</span> Controlled Vocabulary Keywords</h3>
+<p><strong><code>Double Failure</code></strong> • <strong><code>Analogue Year</code></strong> • <strong><code>HarvestStat</code></strong></p>
+<hr>
+</section>
+</section>
+<section id="table-2.2-official-kmd-seasonal-sectoral-advisory-matrix" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="table-2.2-official-kmd-seasonal-sectoral-advisory-matrix"><span class="header-section-number">4.6</span> Table 2.2: Official KMD Seasonal Sectoral Advisory Matrix</h2>
+<p><strong>Section in Platform:</strong> Section 2 &nbsp;|&nbsp; <strong>Target Identifier:</strong> <code>table_2_2</code> &nbsp;|&nbsp; <strong>Output Type:</strong> Table</p>
+<blockquote class="blockquote">
+<p><strong>Policy / Scientific Question:</strong> <em>What anticipatory actions are recommended across agriculture, livestock, water, and disaster management sectors?</em></p>
+</blockquote>
+<section id="scientific-purpose-context-5" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="scientific-purpose-context-5"><span class="header-section-number">4.6.1</span> Scientific Purpose &amp; Context</h3>
+<p>Quantify and communicate Official KMD Seasonal Sectoral Advisory Matrix across Kenyan counties to inform anticipatory action and climate adaptation planning.</p>
+</section>
+<section id="mathematical-formulation-algorithmic-approach-5" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-5"><span class="header-section-number">4.6.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
+<p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
+<p>Tabular sectoral guidelines cross-referencing KMD forecast advisories across Agriculture, Water, Livestock, and Disaster Risk Reduction sectors.</p>
+<section id="methodological-rationale-5" class="level4" data-number="4.6.2.1">
+<h4 data-number="4.6.2.1" class="anchored" data-anchor-id="methodological-rationale-5"><span class="header-section-number">4.6.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
+</section>
+</section>
+<section id="underlying-data-assets-inputs-5" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-5"><span class="header-section-number">4.6.3</span> Underlying Data Assets &amp; Inputs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Provenance Key</th>
+<th style="text-align: left;">Dataset Title</th>
+<th style="text-align: left;">Spatial Resolution</th>
+<th style="text-align: left;">Temporal Span</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>kmd-official-advisories</code></td>
+<td style="text-align: left;">kmd-official-advisories</td>
+<td style="text-align: left;">County (ADM1)</td>
+<td style="text-align: left;">Historical multi-decadal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Served Parquet Files in Platform:</strong> <code>kmd_cap_county_active.parquet</code></p>
+</section>
+<section id="methodological-assumptions-analytical-limitations-5" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="methodological-assumptions-analytical-limitations-5"><span class="header-section-number">4.6.4</span> Methodological Assumptions &amp; Analytical Limitations</h3>
+<ul>
+<li>County aggregations rely on official polygon boundaries from UN OCHA COD-AB standard.</li>
+<li>Sub-seasonal temporal variations within rolling seasons are smoothed over seasonal totals.</li>
+<li>Data latency reflects standard publication cadences of underlying satellite and administrative surveys.</li>
+</ul>
+</section>
+<section id="controlled-vocabulary-keywords-5" class="level3" data-number="4.6.5">
+<h3 data-number="4.6.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-5"><span class="header-section-number">4.6.5</span> Controlled Vocabulary Keywords</h3>
+<p><strong><code>KMD</code></strong> • <strong><code>AA</code></strong> • <strong><code>Anticipatory Action</code></strong></p>
+<hr>
+</section>
+</section>
+<section id="table-2.3-forecast-verification-categorical-skill-assessment-official-advisory-directory" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="table-2.3-forecast-verification-categorical-skill-assessment-official-advisory-directory"><span class="header-section-number">4.7</span> Table 2.3: Forecast Verification, Categorical Skill Assessment &amp; Official Advisory Directory</h2>
+<p><strong>Section in Platform:</strong> Section 2 &nbsp;|&nbsp; <strong>Target Identifier:</strong> <code>table_2_3</code> &nbsp;|&nbsp; <strong>Output Type:</strong> Table</p>
+<blockquote class="blockquote">
+<p><strong>Policy / Scientific Question:</strong> <em>How much predictive skill does equatorial ocean state carry for county seasonal rainfall terciles when tested honestly against the historical record, and where should county planners obtain the official operational forecasts and warnings that the Explorer’s outlook complements?</em></p>
+</blockquote>
+<section id="scientific-purpose-context-6" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="scientific-purpose-context-6"><span class="header-section-number">4.7.1</span> Scientific Purpose &amp; Context</h3>
+<p>A probabilistic seasonal outlook is only as useful as its verified track record. Section 2 of the Explorer issues an empirical analogue outlook for the coming season: it finds the historical years whose equatorial Pacific and Indian Ocean state most resembles the present, reads off the rainfall terciles those years produced in the selected county, and reports the resulting tercile frequencies as forecast probabilities. Without verification such an outlook is an appeal to plausibility. This card documents the verification framework that accompanies every outlook: a 45-year leave-one-out cross-validated (LOOCV) hindcast that scores the analogue method against the observed CHIRPS v3 terciles for every county, both seasons, every analogue-selection criterion and both ensemble sizes, using the Ranked Probability Skill Score (RPSS) as the headline metric with modal hit rate, Heidke Skill Score, Brier Skill Scores for the dry and wet terciles and severe false-alarm rates alongside. The skill badge, the plain-language skill statement and the Long Rains planning notice shown beside each outlook are all driven by this table.</p>
+<p>The second purpose is institutional. Table 2.3 itself is the directory of official forecast, early warning and advisory products for Kenya: the Kenya Meteorological Department (KMD) seasonal outlooks and Common Alerting Protocol warnings, the IGAD Climate Prediction and Applications Centre (ICPAC) Greater Horn of Africa Climate Outlook Forum consensus, the National Drought Management Authority (NDMA) county drought early warning bulletins, the Kenya Food Security Steering Group (KFSSG) assessments and the Kenya Red Cross Society early action protocols. The Explorer’s analogue outlook is a complement to these products, intended to make the historical base rate visible; it is not an official forecast, and the hindcast skill reported here applies to the Explorer’s analogue method only. The directory routes planners to the mandated sources for operational decisions.</p>
+<p>Verification also delivers the platform’s most important piece of epistemic humility. The hindcast shows that ocean state carries modest, county-dependent skill for the Short Rains (OND) and no usable skill for the Long Rains (MAM). The Explorer still displays the MAM analogue frequencies, but every MAM outlook carries a fixed notice that they are a historical frequency guide rather than a forecast.</p>
+</section>
+<section id="mathematical-formulation-algorithmic-approach-6" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-6"><span class="header-section-number">4.7.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
+<p><strong>Baseline Reference Period:</strong> Observed terciles from the 1991–2020 WMO standard normal; hindcast years 1981 to 2025 (N = 45); distance standardization from 1991–2020</p>
+<p><strong>Forecast object.</strong> For a target season (OND or MAM) and a county, the analogue outlook is a probability vector over K = 3 ordered rainfall categories, Below normal (Dry), Near normal and Above normal (Wet), defined by the empirical 1991–2020 terciles of the county’s CHIRPS seasonal total. Candidate years are characterised by four ocean-state coordinates: the Relative Oceanic Niño Index (RONI) and the Dipole Mode Index (DMI), each averaged over a pre-season lead-in window and over the target season itself. Each coordinate difference between two years is standardized by that coordinate’s 1991–2020 standard deviation, and a Euclidean distance combines them under one of three selectable criteria: Full Trajectory (equal weight on lead-in and concurrent coordinates), Lead-in Observed (lead-in coordinates only) and Projected Season (concurrent coordinates only). The k nearest years (k = 5 or k = 8) form the analogue ensemble, and the forecast probability of each category is the fraction of analogue years whose observed tercile fell in it.</p>
+<p><strong>Leave-one-out cross-validation.</strong> For every hindcast year T in 1981 to 2025, year T is withheld, the remaining 44 years are ranked by distance from T, the k nearest form the ensemble, and the resulting probability vector is scored against the observed tercile of year T. The test year never contributes to its own forecast. Scores are averaged over the 45 test years to give one record per county, season, criterion and k; the live outlook always uses the eight nearest analogue years, so the notebook displays the k = 8 record for the user’s selected criterion (if that record is missing it falls back to any record for the same county and season).</p>
+<p><strong>Ranked Probability Score.</strong> For each test year the forecast and observation vectors are accumulated over the ordered categories, P_m = sum of forecast probabilities up to category m and O_m = sum of the observation indicator up to m. Because the cumulative sums reach 1 at m = K, only the first K − 1 = 2 terms carry information, and the RPS is the sum of squared differences of the cumulative vectors over those terms. The reference forecast is the equal-odds climatology p_clim = (1/3, 1/3, 1/3), whose RPS is computed against the same observation each year. The RPSS is one minus the ratio of the mean forecast RPS to the mean climatological RPS over the 45 years; RPSS = 1 is a perfect deterministic forecast, 0 matches climatology and negative values are worse than climatology.</p>
+<p><strong>Categorical metrics.</strong> The modal forecast category is the category with the largest analogue count. When two or three categories tie, the hit is credited fractionally (1/2 or 1/3) and the case is recorded in a “Tied” row of the 3 × 3 contingency table. The modal hit rate is the mean credited hit over the 45 years; the hit-rate gain is the hit rate minus the 33.3 percent expected from an uninformed three-way choice; the Heidke Skill Score rescales the hit count by its climatological expectation. Brier Skill Scores are computed separately for the binary events “Dry occurs” and “Wet occurs” against the climatological Brier score of (1/3 − o)^2. The severe false-alarm rate for wet is the share of modal Wet forecasts that verified Dry, and symmetrically for dry.</p>
+<p><strong>Skill classes.</strong> Records are labelled High (RPSS ≥ 0.20), Moderate (0.10 ≤ RPSS &lt; 0.20), Marginal (0 ≤ RPSS &lt; 0.10) and No skill (RPSS &lt; 0). The class sets the colour of the skill badge and selects the guidance text. It does not suppress the probabilities: tercile percentages are displayed for every county and season whatever the class, and the user is expected to read them together with the badge and, for MAM, the standing planning notice.</p>
+<section id="methodological-rationale-6" class="level4" data-number="4.7.2.1">
+<h4 data-number="4.7.2.1" class="anchored" data-anchor-id="methodological-rationale-6"><span class="header-section-number">4.7.2.1</span> Methodological Rationale</h4>
+<p><strong>Why RPSS is the headline metric.</strong> The three rainfall categories are ordered, and the cost of a forecast error grows with distance: issuing a confident Above-normal outlook when Below-normal occurs is a worse failure than issuing Near-normal. The Brier score treats each category as a separate yes/no event and is blind to this ordering, and the area under the relative operating characteristic (ROC) curve is defined for one binary event at a time and measures discrimination only, ignoring whether the stated probabilities are calibrated. The Ranked Probability Score (Epstein 1969; Murphy 1971) is the multi-category generalisation of the Brier score computed on cumulative probabilities, so a forecast that places its mass two categories from the outcome is penalised more than one that places it one category away. It is a strictly proper scoring rule, so it cannot be gamed by hedging, and it rewards both reliability and resolution (Wilks 2011; Jolliffe and Stephenson 2012). Expressing it as a skill score against equal-odds climatology answers the question a planner actually asks: does conditioning on ocean state beat assuming that each tercile is equally likely?</p>
+<p><strong>Why leave-one-out.</strong> Ocean-rainfall relationships estimated and evaluated on the same years overstate skill, because the test year’s own outcome has been used to estimate the conditional frequencies. Withholding each year in turn is the only cross-validation scheme that leaves 44 training years for every test year in a record this short, and it is the standard protocol for small-sample seasonal hindcasts. It removes in-sample optimism in the analogue selection; it does not remove information shared between adjacent years through persistence and trend (see limitations).</p>
+<p><strong>What the hindcast shows.</strong> For OND with the Projected Season criterion and k = 8, the county-average RPSS is +0.02, 25 of 47 counties have positive RPSS, the best counties (Marsabit, Mandera, Vihiga) reach +0.30 to +0.32, the mean modal hit rate is 43 percent against the 33.3 percent baseline and the mean Heidke Skill Score is +0.15. The Full Trajectory criterion at k = 8 is similar (20 of 47 positive, mean hit 43 percent). Skill is concentrated in the eastern and northeastern counties, where the Short Rains respond to the combined ENSO and IOD signal, and is weakest in the lake basin and the western highlands. For MAM every criterion and ensemble size yields a negative county-average RPSS (between −0.10 and −0.22), at most two counties exceed zero, and the modal hit rate is indistinguishable from chance (33 to 35 percent). This is the boreal spring predictability barrier: ENSO events decay or transition during MAM, the Pacific signal that organises the Short Rains is absent, and Long Rains variability is governed by regional circulation (the Western-V pattern, Indian Ocean moisture flux, the Turkana jet and intraseasonal activity) that the two-index analogue does not capture. Negative RPSS values arise because an analogue ensemble of five or eight years is sharp: it assigns probabilities in steps of 0.2 or 0.125 and is penalised relative to the flat climatology whenever that sharpness is misplaced. The platform treats these results as a finding to be communicated, not a defect to be tuned away.</p>
+<p><strong>Governing Mathematical Formulations:</strong></p>
+<p><strong>Standardized analogue distance between candidate years.</strong> Delta denotes the difference between years i and j; sigma values are 1991–2020 standard deviations. Full Trajectory uses w_lead = w_conc = 0.5, Lead-in Observed uses (1, 0), Projected Season uses (0, 1).</p>
+<p><span class="math display">\[
+D_{i,j} = \sqrt{\, w_{\text{lead}}\left(\frac{(\Delta \text{RONI}_{\text{lead}})^2}{\sigma^2_{\text{RONI,lead}}} + \frac{(\Delta \text{DMI}_{\text{lead}})^2}{\sigma^2_{\text{DMI,lead}}}\right) + w_{\text{conc}}\left(\frac{(\Delta \text{RONI}_{\text{conc}})^2}{\sigma^2_{\text{RONI,conc}}} + \frac{(\Delta \text{DMI}_{\text{conc}})^2}{\sigma^2_{\text{DMI,conc}}}\right)}
+\]</span></p>
+<p><strong>Leave-one-out analogue forecast probabilities.</strong> Categories k are Dry, Near and Wet from the county’s 1991–2020 empirical terciles; the test year never enters its own ensemble.</p>
+<p><span class="math display">\[
+p^{(-T)}_{T,k} = \frac{1}{|\mathcal{A}_T|}\sum_{i \in \mathcal{A}_T} \mathbb{I}\!\left(\text{Terc}_i = k\right), \qquad \mathcal{A}_T = \text{the } k \text{ nearest years to } T \text{ among } \{1981,\ldots,2025\}\setminus\{T\}
+\]</span></p>
+<p><strong>Cumulative forecast and observation vectors.</strong> Categories are ordered Dry &lt; Near &lt; Wet; the third cumulative term is identically 1 and drops out.</p>
+<p><span class="math display">\[
+P_m = \sum_{k=1}^{m} p_k, \qquad O_m = \sum_{k=1}^{m} o_k, \qquad m \in \{1, 2\}, \quad o_k = \mathbb{I}(\text{observed category} = k)
+\]</span></p>
+<p><strong>Ranked Probability Score and climatological reference.</strong> K = 3; the reference forecast is the equal-odds climatology (1/3, 1/3, 1/3).</p>
+<p><span class="math display">\[
+\text{RPS}_T = \sum_{m=1}^{K-1}\left(P_m - O_m\right)^2, \qquad \text{RPS}^{\text{clim}}_T = \left(\tfrac{1}{3} - O_1\right)^2 + \left(\tfrac{2}{3} - O_2\right)^2
+\]</span></p>
+<p><strong>Ranked Probability Skill Score.</strong> RPSS = 1 is perfect, 0 equals climatology, negative is worse than climatology; the ratio of means is used, not the mean of ratios.</p>
+<p><span class="math display">\[
+\text{RPSS} = 1 - \frac{\frac{1}{N}\sum_{T=1}^{N}\text{RPS}_T}{\frac{1}{N}\sum_{T=1}^{N}\text{RPS}^{\text{clim}}_T}, \qquad N = 45
+\]</span></p>
+<p><strong>Leave-one-out modal hit rate with tie splitting.</strong> A tie among two or three modal categories credits 1/2 or 1/3 of a hit; the gain is measured against the 33.3 percent uninformed baseline.</p>
+<p><span class="math display">\[
+\text{HR}_{\text{modal}} = \frac{1}{N}\sum_{T=1}^{N} \frac{\mathbb{I}\!\left(\text{Terc}_T \in \arg\max_k p^{(-T)}_{T,k}\right)}{\left|\arg\max_k p^{(-T)}_{T,k}\right|}, \qquad \text{Gain} = \text{HR}_{\text{modal}} - \tfrac{1}{3}
+\]</span></p>
+<p><strong>Heidke Skill Score and Brier Skill Scores.</strong> H is the credited hit count; BSS is computed separately for the drought (Dry) and flood-relevant (Wet) terciles.</p>
+<p><span class="math display">\[
+\text{HSS} = \frac{H - N/3}{N - N/3}, \qquad \text{BSS}_{c} = 1 - \frac{\frac{1}{N}\sum_T \left(p_{T,c} - o_{T,c}\right)^2}{\frac{1}{N}\sum_T \left(\tfrac{1}{3} - o_{T,c}\right)^2}, \quad c \in \{\text{Dry}, \text{Wet}\}
+\]</span></p>
+<p><strong>Severe false-alarm rates.</strong> Share of modal Wet (Dry) forecasts that verified in the opposite extreme tercile, taken from the 3 × 3 contingency table.</p>
+<p><span class="math display">\[
+\text{FAR}^{\text{severe}}_{\text{Wet}} = \frac{n(\hat{c} = \text{Wet},\ c = \text{Dry})}{n(\hat{c} = \text{Wet})}, \qquad \text{FAR}^{\text{severe}}_{\text{Dry}} = \frac{n(\hat{c} = \text{Dry},\ c = \text{Wet})}{n(\hat{c} = \text{Dry})}
+\]</span></p>
+<p><strong>Skill class used for the badge and guidance text.</strong> The Long Rains outlook falls in the No-skill class for almost every county; its probabilities are still shown, with a notice that they are a historical frequency guide rather than a forecast.</p>
+<p><span class="math display">\[
+\text{Class} = \begin{cases} \text{High} &amp; \text{RPSS} \ge 0.20 \\ \text{Moderate} &amp; 0.10 \le \text{RPSS} &lt; 0.20 \\ \text{Marginal} &amp; 0 \le \text{RPSS} &lt; 0.10 \\ \text{No skill} &amp; \text{RPSS} &lt; 0 \end{cases}, \qquad \text{badge colour and guidance text set by Class}
+\]</span></p>
+</section>
+</section>
+<section id="underlying-data-assets-inputs-6" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-6"><span class="header-section-number">4.7.3</span> Underlying Data Assets &amp; Inputs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Provenance Key</th>
+<th style="text-align: left;">Dataset Title</th>
+<th style="text-align: left;">Spatial Resolution</th>
+<th style="text-align: left;">Temporal Span</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>enso-driver-indices</code></td>
+<td style="text-align: left;">Ocean Climate Teleconnection Drivers (Pa</td>
+<td style="text-align: left;">Equatorial Pacific (Niño 3.4 relative to tropical mean) and tropical Indian Ocean basin indices</td>
+<td style="text-align: left;">1950 to present; hindcast uses 1981 to 2025</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>enso-hindcast-skill</code></td>
+<td style="text-align: left;">enso-hindcast-skill</td>
+<td style="text-align: left;">County (ADM1), 47 counties plus Ilemi Triangle</td>
+<td style="text-align: left;">45 hindcast years (1981 to 2025), OND and MAM</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>africa-precipitation-monthly-seasonal</code></td>
+<td style="text-align: left;">Monthly and Seasonal Precipitation from</td>
+<td style="text-align: left;">0.05 deg aggregated to county mean</td>
+<td style="text-align: left;">1981 to present</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Served Parquet Files in Platform:</strong> <code>enso_hindcast_skill.parquet</code>, <code>enso_state_probabilities.parquet</code>, <code>enso_outlook_base.parquet</code></p>
+</section>
+<section id="methodological-assumptions-analytical-limitations-6" class="level3" data-number="4.7.4">
+<h3 data-number="4.7.4" class="anchored" data-anchor-id="methodological-assumptions-analytical-limitations-6"><span class="header-section-number">4.7.4</span> Methodological Assumptions &amp; Analytical Limitations</h3>
+<ul>
+<li>The verification sample is 45 seasons per county. Standard errors on a 45-year RPSS are large, and the difference between a Marginal and a Moderate class for one county is within sampling noise; the robust findings are the seasonal contrast (OND modest, MAM none) and the regional pattern, not individual county rankings.</li>
+<li>Leave-one-out removes the test year but not the information shared between neighbouring years through ENSO and IOD persistence, multi-year rainfall regimes or the long-term trend. The fixed 1991–2020 terciles also mean that 15 of the 45 hindcast years lie outside the baseline, and trends over 1981 to 2025 are not removed. Both effects make the hindcast a mildly optimistic estimate of real-time skill.</li>
+<li>In the hindcast the concurrent-season ocean coordinates are the observed values. In real time the Projected Season and Full Trajectory criteria use model plume forecasts of those coordinates, which carry their own error, so the hindcast for those criteria is a perfect-prognosis upper bound. The live outlook also translates the IRI Niño 3.4 plume median into RONI space with a fixed −0.38 °C offset. Even the Lead-in Observed criterion does not reproduce real-time conditions exactly: historical candidates use the JAS (for OND) or DJF (for MAM) RONI and a three-month HadISST DMI mean, whereas the live lead-in uses the most recently published RONI season and the latest single month of the CPC ERSSTv6 DMI.</li>
+<li>The equal-odds climatology is the conventional but weakest-informed reference. A trend-aware or persistence-based reference would be harder to beat and would lower the reported RPSS for OND further.</li>
+<li>Ensembles of five or eight analogues give forecast probabilities in coarse steps (multiples of 0.2 or 0.125). Sharpness is therefore imposed by design rather than learned from the data, and negative RPSS values partly reflect this coarseness.</li>
+<li>Observed terciles are county means of CHIRPS, which carries larger absolute uncertainty in the sparsely gauged northern and eastern counties; tercile ranks are more robust than totals but are not immune to it.</li>
+<li>Ties in the modal category are credited fractionally. This is a neutral convention, but it means the hit rate is not a count of unambiguous correct calls.</li>
+<li>The directory entries in Table 2.3 are institutional pointers and are maintained manually from the publishing institutions’ portals; they are not themselves verified products, and the hindcast skill reported here does not apply to KMD, ICPAC or NDMA products, which have their own verification regimes.</li>
+</ul>
+</section>
+<section id="controlled-vocabulary-keywords-6" class="level3" data-number="4.7.5">
+<h3 data-number="4.7.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-6"><span class="header-section-number">4.7.5</span> Controlled Vocabulary Keywords</h3>
+<p><strong><code>RPSS</code></strong> • <strong><code>RPS</code></strong> • <strong><code>LOOCV</code></strong> • <strong><code>Modal Hit Rate</code></strong> • <strong><code>HSS</code></strong> • <strong><code>BSS</code></strong> • <strong><code>Forecast Skill</code></strong> • <strong><code>RONI</code></strong> • <strong><code>DMI</code></strong> • <strong><code>KMD</code></strong> • <strong><code>NDMA</code></strong> • <strong><code>KFSSG</code></strong> • <strong><code>AA</code></strong> • <strong><code>Terciles</code></strong></p>
+</section>
+<section id="references-1" class="level3" data-number="4.7.6">
+<h3 data-number="4.7.6" class="anchored" data-anchor-id="references-1"><span class="header-section-number">4.7.6</span> References</h3>
+<ul>
+<li>Epstein, E. S. (1969). A scoring system for probability forecasts of ranked categories. Journal of Applied Meteorology, 8(6), 985–987. <a href="https://doi.org/10.1175/1520-0450(1969)008%3C0985:ASSFPF%3E2.0.CO;2">https://doi.org/10.1175/1520-0450(1969)008%3C0985:ASSFPF%3E2.0.CO;2</a></li>
+<li>Murphy, A. H. (1971). A note on the ranked probability score. Journal of Applied Meteorology, 10(1), 155–156. <a href="https://doi.org/10.1175/1520-0450(1971)010%3C0155:ANOTRP%3E2.0.CO;2">https://doi.org/10.1175/1520-0450(1971)010%3C0155:ANOTRP%3E2.0.CO;2</a></li>
+<li>Wilks, D. S. (2011). Statistical methods in the atmospheric sciences (3rd ed.). Academic Press. <a href="https://www.sciencedirect.com/book/9780123850225/statistical-methods-in-the-atmospheric-sciences">https://www.sciencedirect.com/book/9780123850225/statistical-methods-in-the-atmospheric-sciences</a></li>
+<li>Jolliffe, I. T., &amp; Stephenson, D. B. (Eds.). (2012). Forecast verification: A practitioner’s guide in atmospheric science (2nd ed.). Wiley. <a href="https://doi.org/10.1002/9781119960003">https://doi.org/10.1002/9781119960003</a></li>
+<li>Mason, S. J., &amp; Graham, N. E. (2002). Areas beneath the relative operating characteristics (ROC) and relative operating levels (ROL) curves: Statistical significance and interpretation. Quarterly Journal of the Royal Meteorological Society, 128(584), 2145–2166. <a href="https://doi.org/10.1256/003590002320603584">https://doi.org/10.1256/003590002320603584</a></li>
+<li>Nicholson, S. E. (2017). Climate and climatic variability of rainfall over eastern Africa. Reviews of Geophysics, 55(3), 590–635. <a href="https://doi.org/10.1002/2016RG000544">https://doi.org/10.1002/2016RG000544</a></li>
+<li>van Oldenborgh, G. J., Hendon, H., Stockdale, T., L’Heureux, M., Coughlan de Perez, E., Singh, R., &amp; van Aalst, M. (2021). Defining El Niño indices in a warming climate. Environmental Research Letters, 16(4), 044003. <a href="https://doi.org/10.1088/1748-9326/abe9ed">https://doi.org/10.1088/1748-9326/abe9ed</a></li>
+</ul>
+<hr>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/africaadaptationatlas\.cgiar\.org\/methods\/ke-enso-explorer\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/01_county_context_and_demography.html" class="pagination-link" aria-label="County Context, Demography &amp; Social Inclusion">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">County Context, Demography &amp; Social Inclusion</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/03_precipitation_climatology_and_regimes.html" class="pagination-link" aria-label="Precipitation Climatology, Empirical Quantiles &amp; Regimes">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Precipitation Climatology, Empirical Quantiles &amp; Regimes</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/AdaptationAtlas/atlas_notebooks/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
