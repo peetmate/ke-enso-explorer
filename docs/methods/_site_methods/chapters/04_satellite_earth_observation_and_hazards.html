@@ -280,11 +280,14 @@ window.Quarto = {
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach"><span class="header-section-number">6.1.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
 <p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
 <p>Subcounty flood hazard profiling pairing Copernicus GFM Sentinel-1 SAR observed surface water extent with JRC flood return periods (1-in-10 to 1-in-100 year models).</p>
-<p><em>Applies non-parametric or standardized metrics aligned with Decision D43 and D53 to avoid distributional distortion.</em></p>
+<section id="methodological-rationale" class="level4" data-number="6.1.2.1">
+<h4 data-number="6.1.2.1" class="anchored" data-anchor-id="methodological-rationale"><span class="header-section-number">6.1.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
 <p><strong>Governing Mathematical Formulations:</strong></p>
 <p><span class="math display">\[
 \text{Exposure Rate} = \frac{\text{Pop}_{\text{inundated}}}{\text{Pop}_{\text{total}}} \times 100\%
 \]</span></p>
+</section>
 </section>
 <section id="underlying-data-assets-inputs" class="level3" data-number="6.1.3">
 <h3 data-number="6.1.3" class="anchored" data-anchor-id="underlying-data-assets-inputs"><span class="header-section-number">6.1.3</span> Underlying Data Assets &amp; Inputs</h3>
@@ -314,7 +317,7 @@ window.Quarto = {
 <td style="text-align: left;"><code>eastafrica-flood-jrc</code></td>
 <td style="text-align: left;">JRC / GloFAS Return-Period River Flood H</td>
 <td style="text-align: left;">world, kenya — 3 arc-seconds (~90 m)</td>
-<td style="text-align: left;">None</td>
+<td style="text-align: left;">Static baseline (return periods 10 to 500 years, CEMS-GLOFAS v2.1.2)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>kenya-facilities-hotosm</code></td>
@@ -342,7 +345,7 @@ window.Quarto = {
 </section>
 <section id="controlled-vocabulary-keywords" class="level3" data-number="6.1.5">
 <h3 data-number="6.1.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords"><span class="header-section-number">6.1.5</span> Controlled Vocabulary Keywords</h3>
-<p><strong><code>Copernicus GFM</code></strong> • <strong><code>Sentinel-1 SAR</code></strong> • <strong><code>JRC Flood RP</code></strong> • <strong><code>Return Period</code></strong></p>
+<p><strong><code>Copernicus GFM</code></strong> • <strong><code>SAR</code></strong> • <strong><code>JRC Flood RP</code></strong></p>
 <hr>
 </section>
 </section>
@@ -360,11 +363,14 @@ window.Quarto = {
 <h3 data-number="6.2.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-1"><span class="header-section-number">6.2.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
 <p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
 <p>Continuous MODIS 250m 16-day NDVI vegetation anomaly z-scores tracking pasture biomass, forage desiccation, and post-shock rangeland green-up.</p>
-<p><em>Applies non-parametric or standardized metrics aligned with Decision D43 and D53 to avoid distributional distortion.</em></p>
+<section id="methodological-rationale-1" class="level4" data-number="6.2.2.1">
+<h4 data-number="6.2.2.1" class="anchored" data-anchor-id="methodological-rationale-1"><span class="header-section-number">6.2.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
 <p><strong>Governing Mathematical Formulations:</strong></p>
 <p><span class="math display">\[
 z_{\text{NDVI},t} = \frac{\text{NDVI}_{t} - \text{Median}_{t}(2000\text{--}2020)}{\sigma_{t}(2000\text{--}2020)}
 \]</span></p>
+</section>
 </section>
 <section id="underlying-data-assets-inputs-1" class="level3" data-number="6.2.3">
 <h3 data-number="6.2.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-1"><span class="header-section-number">6.2.3</span> Underlying Data Assets &amp; Inputs</h3>
@@ -410,7 +416,7 @@ z_{\text{NDVI},t} = \frac{\text{NDVI}_{t} - \text{Median}_{t}(2000\text{--}2020)
 </section>
 <section id="controlled-vocabulary-keywords-1" class="level3" data-number="6.2.5">
 <h3 data-number="6.2.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-1"><span class="header-section-number">6.2.5</span> Controlled Vocabulary Keywords</h3>
-<p><strong><code>MODIS NDVI</code></strong> • <strong><code>Pasture Biomass</code></strong> • <strong><code>Greenness Anomaly</code></strong> • <strong><code>Rangeland Recovery</code></strong></p>
+<p><strong><code>MODIS NDVI</code></strong> • <strong><code>ASAL</code></strong></p>
 <hr>
 </section>
 </section>
@@ -428,11 +434,14 @@ z_{\text{NDVI},t} = \frac{\text{NDVI}_{t} - \text{Median}_{t}(2000\text{--}2020)
 <h3 data-number="6.3.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-2"><span class="header-section-number">6.3.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
 <p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
 <p>Spatial intersection model evaluating physical asset exposure to observed flood inundation: population headcount, cropland area, road network kilometers, and health/education facilities.</p>
-<p><em>Applies non-parametric or standardized metrics aligned with Decision D43 and D53 to avoid distributional distortion.</em></p>
+<section id="methodological-rationale-2" class="level4" data-number="6.3.2.1">
+<h4 data-number="6.3.2.1" class="anchored" data-anchor-id="methodological-rationale-2"><span class="header-section-number">6.3.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
 <p><strong>Governing Mathematical Formulations:</strong></p>
 <p><span class="math display">\[
 E_{\text{asset}} = \int_{\Omega_{\text{inundated}}} D_{\text{asset}}(x, y) \, dx dy
 \]</span></p>
+</section>
 </section>
 <section id="underlying-data-assets-inputs-2" class="level3" data-number="6.3.3">
 <h3 data-number="6.3.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-2"><span class="header-section-number">6.3.3</span> Underlying Data Assets &amp; Inputs</h3>
@@ -496,7 +505,7 @@ E_{\text{asset}} = \int_{\Omega_{\text{inundated}}} D_{\text{asset}}(x, y) \, dx
 </section>
 <section id="controlled-vocabulary-keywords-2" class="level3" data-number="6.3.5">
 <h3 data-number="6.3.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-2"><span class="header-section-number">6.3.5</span> Controlled Vocabulary Keywords</h3>
-<p><strong><code>Spatial Overlay</code></strong> • <strong><code>Inundation Exposure</code></strong> • <strong><code>Critical Infrastructure</code></strong></p>
+<p><strong><code>KPLC</code></strong> • <strong><code>Copernicus GFM</code></strong> • <strong><code>HOT-OSM</code></strong></p>
 <hr>
 </section>
 </section>
@@ -514,7 +523,10 @@ E_{\text{asset}} = \int_{\Omega_{\text{inundated}}} D_{\text{asset}}(x, y) \, dx
 <h3 data-number="6.4.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-3"><span class="header-section-number">6.4.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
 <p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
 <p>Humanitarian crisis impact chronology compiling UN OCHA ReliefWeb disaster dispatches and NDMA monthly drought early warning bulletins across alarm phases.</p>
-<p><em>Applies non-parametric or standardized metrics aligned with Decision D43 and D53 to avoid distributional distortion.</em></p>
+<section id="methodological-rationale-3" class="level4" data-number="6.4.2.1">
+<h4 data-number="6.4.2.1" class="anchored" data-anchor-id="methodological-rationale-3"><span class="header-section-number">6.4.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
+</section>
 </section>
 <section id="underlying-data-assets-inputs-3" class="level3" data-number="6.4.3">
 <h3 data-number="6.4.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-3"><span class="header-section-number">6.4.3</span> Underlying Data Assets &amp; Inputs</h3>
@@ -560,7 +572,7 @@ E_{\text{asset}} = \int_{\Omega_{\text{inundated}}} D_{\text{asset}}(x, y) \, dx
 </section>
 <section id="controlled-vocabulary-keywords-3" class="level3" data-number="6.4.5">
 <h3 data-number="6.4.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-3"><span class="header-section-number">6.4.5</span> Controlled Vocabulary Keywords</h3>
-<p><strong><code>ReliefWeb</code></strong> • <strong><code>NDMA Bulletin</code></strong> • <strong><code>Disaster Chronology</code></strong> • <strong><code>Drought Phase</code></strong></p>
+<p><strong><code>ReliefWeb / GLIDE</code></strong> • <strong><code>NDMA</code></strong> • <strong><code>Drought Phase</code></strong></p>
 <hr>
 
 

@@ -264,11 +264,14 @@ window.Quarto = {
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach"><span class="header-section-number">3.1.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
 <p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
 <p>Gender Equality and Social Inclusion (GESI) indicators extracted from KNBS County Gender Data Sheets (Oct 2025 edition). Evaluates female headship, agricultural land ownership titles, agricultural labor share, and clean cooking fuel access relative to national medians.</p>
-<p><em>Applies non-parametric or standardized metrics aligned with Decision D43 and D53 to avoid distributional distortion.</em></p>
+<section id="methodological-rationale" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="methodological-rationale"><span class="header-section-number">3.1.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
 <p><strong>Governing Mathematical Formulations:</strong></p>
 <p><span class="math display">\[
 \Delta_{\text{GESI}} = I_{c} - \text{Median}_{\text{Kenya}}
 \]</span></p>
+</section>
 </section>
 <section id="underlying-data-assets-inputs" class="level3" data-number="3.1.3">
 <h3 data-number="3.1.3" class="anchored" data-anchor-id="underlying-data-assets-inputs"><span class="header-section-number">3.1.3</span> Underlying Data Assets &amp; Inputs</h3>
@@ -292,7 +295,7 @@ window.Quarto = {
 <td style="text-align: left;"><code>kenya-county-gender-datasheets</code></td>
 <td style="text-align: left;">Kenya County Gender Data Sheets, 2025</td>
 <td style="text-align: left;">kenya</td>
-<td style="text-align: left;">None</td>
+<td style="text-align: left;">2025 edition (indicators from KDHS 2022, KPHC 2019 and the 2022 general election)</td>
 </tr>
 </tbody>
 </table>
@@ -308,7 +311,7 @@ window.Quarto = {
 </section>
 <section id="controlled-vocabulary-keywords" class="level3" data-number="3.1.5">
 <h3 data-number="3.1.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords"><span class="header-section-number">3.1.5</span> Controlled Vocabulary Keywords</h3>
-<p><strong><code>GESI</code></strong> • <strong><code>Female Headship</code></strong> • <strong><code>Land Tenure</code></strong> • <strong><code>KNBS Gender Sheets</code></strong></p>
+<p><strong><code>GESI</code></strong> • <strong><code>KNBS</code></strong></p>
 <hr>
 </section>
 </section>
@@ -326,7 +329,9 @@ window.Quarto = {
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="mathematical-formulation-algorithmic-approach-1"><span class="header-section-number">3.2.2</span> Mathematical Formulation &amp; Algorithmic Approach</h3>
 <p><strong>Baseline Reference Period:</strong> 1991–2020 WMO standard normal</p>
 <p>Spatial polygon intersection over UN OCHA COD-AB boundaries; population density = headcount / area (km²); 1981–2025 CHIRPS v3 monthly accumulation aggregated to subcounty administrative boundaries.</p>
-<p><em>Applies non-parametric or standardized metrics aligned with Decision D43 and D53 to avoid distributional distortion.</em></p>
+<section id="methodological-rationale-1" class="level4" data-number="3.2.2.1">
+<h4 data-number="3.2.2.1" class="anchored" data-anchor-id="methodological-rationale-1"><span class="header-section-number">3.2.2.1</span> Methodological Rationale</h4>
+<p>Applies non-parametric or standardized metrics aligned with the platform conventions of empirical quantile partitioning and independent seasonal standardization to avoid distributional distortion.</p>
 <p><strong>Governing Mathematical Formulations:</strong></p>
 <p><span class="math display">\[
 \rho_{sc} = \frac{\text{Pop}_{sc}}{\text{Area}_{sc}}
@@ -334,6 +339,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \bar{R}_{s,sc} = \frac{1}{N}\sum_{y=1}^{N} \sum_{m \in s} R_{y,m,sc}
 \]</span></p>
+</section>
 </section>
 <section id="underlying-data-assets-inputs-1" class="level3" data-number="3.2.3">
 <h3 data-number="3.2.3" class="anchored" data-anchor-id="underlying-data-assets-inputs-1"><span class="header-section-number">3.2.3</span> Underlying Data Assets &amp; Inputs</h3>
@@ -385,7 +391,7 @@ window.Quarto = {
 </section>
 <section id="controlled-vocabulary-keywords-1" class="level3" data-number="3.2.5">
 <h3 data-number="3.2.5" class="anchored" data-anchor-id="controlled-vocabulary-keywords-1"><span class="header-section-number">3.2.5</span> Controlled Vocabulary Keywords</h3>
-<p><strong><code>KNBS Census</code></strong> • <strong><code>COD-AB</code></strong> • <strong><code>MAM</code></strong> • <strong><code>OND</code></strong> • <strong><code>Bimodal Normal</code></strong></p>
+<p><strong><code>KNBS</code></strong> • <strong><code>COD-AB</code></strong> • <strong><code>MAM</code></strong> • <strong><code>OND</code></strong> • <strong><code>WMO Normal</code></strong></p>
 <hr>
 
 
