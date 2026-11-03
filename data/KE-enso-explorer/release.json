@@ -1,26 +1,68 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer — Kenya",
-  "version": "3.11.0",
-  "versionDisplay": "v3.11.0",
-  "build": "303103001",
-  "releaseDate": "2026-10-19",
-  "lastUpdated": "2026-10-30",
-  "dataVintage": "2026-09",
+  "version": "3.12.0",
+  "versionDisplay": "v3.12.0",
+  "build": "303110301",
+  "releaseDate": "2026-11-03",
+  "lastUpdated": "2026-11-03",
+  "dataVintage": "2026-10",
   "authors": [
     "Pete Steward"
   ],
-  "leadReview": "V3.8.11 review.docx",
-  "implementationPlan": "v3_8_11_review_remediation_plan.md",
+  "leadReview": "ENSO_Review_Package_Marsabit_2026-11-03.zip",
+  "implementationPlan": "REVIEW_TRIAGE_AND_PLAN_2026-11-03.md",
   "availableVersions": [
+    {
+      "id": "v3.12",
+      "version": "v3.12.0",
+      "label": "v3.12.0 (Working Draft · Active Testing)",
+      "url": "notebook_v3.html",
+      "status": "active",
+      "date": "2026-11-03",
+      "build": "303110301",
+      "description": "Comprehensive Partner Review Remediation & Citable Methods Monograph Release: Resolves all 45 in-situ partner review notes across Sections 0–6 (Clusters 1–5), upgrades Section 1.2 Valuation Engine with a 4-column KPI strip, sortable table, and interactive bar chart view, adds an interactive Esri/OpenStreetMap Leaflet flood exposure basemap in Figure 4.5, introduces a 4-Stage Pastoral Shock Transmission Timeline in Figure 4.4, caches Figure 3.4 COG raster slices in memory, links 26 peer-reviewed academic references with live-verified DOIs in Section 5, and ships the 25-card Citable Methods Monograph and 84-term controlled glossary.",
+      "highlights": [
+        "Partner Review Remediation (45/45 Notes Resolved): Systematic cross-notebook sweep resolving all 45 Marsabit/Kilifi/Nairobi partner review items across Operational vs Technical framing, table unit hygiene, sticky bar tooltips, and source links.",
+        "Section 1.2 Economic Valuation UX Overhaul: Single-row 4-column KPI summary grid positioned above controls, click-to-sort column headers, and interactive Table / Chart / Both view modes.",
+        "Interactive Flood Exposure Basemap (Figure 4.5 & Table 4.4): Added interactive Leaflet map mode with Esri Street & Terrain, Esri World Imagery (Satellite), and OpenStreetMap layer switching plus direct links to Google Flood Hub for Kenya.",
+        "Pastoral Market Controls & Shock Transmission Timeline (Figure 4.4): Added dual-handle year range slider, market observation coverage counts, and a 4-Stage Pastoral Shock Transmission Timeline card.",
+        "Cross-Border Trade & Humanitarian Scope Clarity (Figures 4.4B & 4.6): Explicit thousand-tonne units, dynamic year-range titles, clickable FEWS NET XBT provenance, and County-Specific vs National appeal filtering in ReliefWeb.",
+        "Citable Methods Monograph & Section 5 DOI Bibliography: 25 schema-validated method cards, 84 controlled glossary terms with interactive tooltips, and 26 clickable Section 5 bibliography entries with verified DOIs."
+      ],
+      "categories": [
+        {
+          "title": "Interactive UX, Maps & Visual Clarity",
+          "icon": "UI",
+          "items": [
+            "Interactive Flood Basemap (Figure 4.5): Overlay sub-county flood polygons and facilities on Esri Satellite, Esri Street & Terrain, or OpenStreetMap.",
+            "Section 1.2 Chart & Sortable Table: Compare commodity values visually or sort columns dynamically while preserving constituency sum identities.",
+            "In-Memory Raster Caching (Figure 3.4): Instant year-slider slicing from memory without redundant network fetches."
+          ]
+        },
+        {
+          "title": "Scientific Rigor, Terminology & Citations",
+          "icon": "Science",
+          "items": [
+            "Historical Analogue vs Official Forecast Distinction: Reframed Section 2.2 around Historical Analogue Reliability and Analogue Majority Signal to avoid conflation with KMD dynamical forecasts.",
+            "Clickable Academic Bibliography (Section 5.9): 26 peer-reviewed references with live-verified DOIs linked from inline citations.",
+            "Living Methods Monograph (Check 11): 25 modular method cards and 84 glossary terms enforced in CI."
+          ]
+        }
+      ],
+      "decisions": [
+        "D64",
+        "D65"
+      ]
+    },
     {
       "id": "v3.11",
       "version": "v3.11.0",
-      "label": "v3.11.0 (Working Draft · Active Testing)",
-      "url": "notebook_v3.html",
-      "status": "active",
+      "label": "v3.11.0 (Participatory Valuation Baseline)",
+      "url": "notebook_v3.html?v=3.11.0",
+      "status": "archived",
       "date": "2026-10-30",
-      "build": "303103001",
+      "build": "303103003",
       "description": "Active Working Draft & Testing Environment: Participatory monetization of official county production balances and livestock census headcounts. Formally decouples standing herd capital stock ($869.3B KES national) from annual production flow ($1,157.2B KES national), integrates camels and official livestock products, parameterizes live animal offtake and milk yields against audited NDMA and KNBS price benchmarks, provides high-grade dairy share sensitivity controls, and features dasymetric disaggregation across all 290 parliamentary constituencies strictly preserving county sum identities.",
       "highlights": [
         "Participatory Valuation Engine (Section 1.2): Decouples standing capital stock (live animal asset wealth at risk from multi-season droughts) from annual production turnover (meat offtake, milk, crops, and products).",
