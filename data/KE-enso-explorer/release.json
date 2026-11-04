@@ -3,9 +3,9 @@
   "title": "ENSO Explorer — Kenya",
   "version": "3.12.0",
   "versionDisplay": "v3.12.0",
-  "build": "303110301",
+  "build": "303110401",
   "releaseDate": "2026-11-03",
-  "lastUpdated": "2026-11-03",
+  "lastUpdated": "2026-11-04",
   "dataVintage": "2026-10",
   "authors": [
     "Pete Steward"
@@ -16,11 +16,11 @@
     {
       "id": "v3.12",
       "version": "v3.12.0",
-      "label": "v3.12.0 (Working Draft · Active Testing)",
+      "label": "v3.12.0 (Current — Nov 2026)",
       "url": "notebook_v3.html",
       "status": "active",
-      "date": "2026-11-03",
-      "build": "303110301",
+      "date": "2026-11-04",
+      "build": "303110401",
       "description": "Comprehensive Partner Review Remediation & Citable Methods Monograph Release: Resolves all 45 in-situ partner review notes across Sections 0–6 (Clusters 1–5), upgrades Section 1.2 Valuation Engine with a 4-column KPI strip, sortable table, and interactive bar chart view, adds an interactive Esri/OpenStreetMap Leaflet flood exposure basemap in Figure 4.5, introduces a 4-Stage Pastoral Shock Transmission Timeline in Figure 4.4, caches Figure 3.4 COG raster slices in memory, links 26 peer-reviewed academic references with live-verified DOIs in Section 5, and ships the 25-card Citable Methods Monograph and 84-term controlled glossary.",
       "highlights": [
         "Partner Review Remediation (45/45 Notes Resolved): Systematic cross-notebook sweep resolving all 45 Marsabit/Kilifi/Nairobi partner review items across Operational vs Technical framing, table unit hygiene, sticky bar tooltips, and source links.",
@@ -58,7 +58,7 @@
     {
       "id": "v3.11",
       "version": "v3.11.0",
-      "label": "v3.11.0 (Participatory Valuation Baseline)",
+      "label": "v3.11.0 (Oct 2026 — Economic Valuation)",
       "url": "notebook_v3.html?v=3.11.0",
       "status": "archived",
       "date": "2026-10-30",
@@ -98,7 +98,7 @@
     {
       "id": "v3.10",
       "version": "v3.10.0",
-      "label": "v3.10.0 (Audience Reading Mode Baseline)",
+      "label": "v3.10.0 (Oct 2026 — Operational & Technical Modes)",
       "url": "notebook_v3.html?v=3.10.0",
       "status": "archived",
       "date": "2026-10-15",
@@ -139,7 +139,7 @@
     {
       "id": "v3.9",
       "version": "v3.9.0",
-      "label": "v3.9.0 (Comprehensive Review Remediation Baseline)",
+      "label": "v3.9.0 (Oct 2026 — Climate & Impacts Redesign)",
       "url": "notebook_v3.html?v=3.9.0",
       "status": "archived",
       "date": "2026-10-08",
@@ -191,7 +191,7 @@
     {
       "id": "v3.8",
       "version": "v3.8.11",
-      "label": "v3.8.11 (Analogue Harmonization Milestone)",
+      "label": "v3.8.11 (Oct 2026 — Analogue Selection)",
       "url": "notebook_v3.html?v=3.8.11",
       "status": "archived",
       "date": "2026-10-08",
@@ -235,7 +235,7 @@
     {
       "id": "v3.7",
       "version": "v3.7.0",
-      "label": "v3.7.0 (Archived Operational Release)",
+      "label": "v3.7.0 (Oct 2026 — Forecast Skill Metrics)",
       "url": "notebook_v3.html",
       "status": "archived",
       "date": "2026-10-07",
@@ -323,7 +323,7 @@
     {
       "id": "v3.6",
       "version": "v3.6.0",
-      "label": "v3.6.0 (Post-Audit Remediation Baseline)",
+      "label": "v3.6.0 (Oct 2026 — Data & Boundary Updates)",
       "url": "notebook_v3.html?v=3.6.0",
       "status": "archived",
       "date": "2026-10-07",
@@ -423,7 +423,7 @@
     {
       "id": "v3.5",
       "version": "v3.5.2",
-      "label": "v3.5.2 (External Audit Baseline)",
+      "label": "v3.5.2 (Oct 2026 — External Review)",
       "url": "notebook_v3.html?review=true",
       "status": "archived",
       "date": "2026-10-05",
@@ -464,7 +464,7 @@
     {
       "id": "v2",
       "version": "v2.10",
-      "label": "v2.10 (August 2026 Milestone)",
+      "label": "v2.10 (Aug 2026 — v2 Release)",
       "url": "notebook_v2.html",
       "status": "archived",
       "date": "2026-08-19",
@@ -495,7 +495,7 @@
     {
       "id": "v1",
       "version": "v1.0",
-      "label": "v1.0 (Initial Prototype)",
+      "label": "v1.0 (Jul 2026 — v1 Prototype)",
       "url": "notebook.html",
       "status": "archived",
       "date": "2026-07-22",
