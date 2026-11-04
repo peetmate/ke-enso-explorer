@@ -3,7 +3,7 @@
   "title": "ENSO Explorer — Kenya",
   "version": "3.12.0",
   "versionDisplay": "v3.12.0",
-  "build": "303110401",
+  "build": "303110402",
   "releaseDate": "2026-11-03",
   "lastUpdated": "2026-11-04",
   "dataVintage": "2026-10",
@@ -20,7 +20,7 @@
       "url": "notebook_v3.html",
       "status": "active",
       "date": "2026-11-04",
-      "build": "303110401",
+      "build": "303110402",
       "description": "Comprehensive Partner Review Remediation & Citable Methods Monograph Release: Resolves all 45 in-situ partner review notes across Sections 0–6 (Clusters 1–5), upgrades Section 1.2 Valuation Engine with a 4-column KPI strip, sortable table, and interactive bar chart view, adds an interactive Esri/OpenStreetMap Leaflet flood exposure basemap in Figure 4.5, introduces a 4-Stage Pastoral Shock Transmission Timeline in Figure 4.4, caches Figure 3.4 COG raster slices in memory, links 26 peer-reviewed academic references with live-verified DOIs in Section 5, and ships the 25-card Citable Methods Monograph and 84-term controlled glossary.",
       "highlights": [
         "Partner Review Remediation (45/45 Notes Resolved): Systematic cross-notebook sweep resolving all 45 Marsabit/Kilifi/Nairobi partner review items across Operational vs Technical framing, table unit hygiene, sticky bar tooltips, and source links.",
