@@ -317,7 +317,7 @@
             esc(r ? r.title : k) + '</button>';
         }).join(' ') + '</p>'
       : '';
-    return dl([['Files read by this notebook', files], ['Built by', N.built_by ? '<code>' + esc(N.built_by) + '</code>' : '']]) + related;
+    return dl([['Files read by this notebook', files], ['Built by', N.built_by ? '<code>' + esc(N.built_by) + '</code>' : ''], ['Refresh command', N.refresh_command ? '<code>' + esc(N.refresh_command) + '</code>' : ''], ['Upstream check', N.freshness_check ? '<code>' + esc(N.freshness_check) + '</code>' : '']]) + related;
   }
 
   function drawerHtml(e) {

@@ -74,7 +74,11 @@
   "reliefweb": "kenya-food-insecurity-ipc",
   "kenya-county-gender-datasheets": "kenya-county-gender-datasheets",
   "knbs_gesi": "kenya-county-gender-datasheets",
-  "kenya-gesi-knbs": "kenya-county-gender-datasheets"
+  "kenya-gesi-knbs": "kenya-county-gender-datasheets",
+  "kenya-trade-macro": "kenya-trade-macro",
+  "kenya_trade_macro": "kenya-trade-macro",
+  "kenya-trade-partners": "kenya-trade-partners",
+  "kenya_trade_partners": "kenya-trade-partners"
  },
  "categories": [
   {
@@ -320,6 +324,8 @@
      "data/KE-enso-explorer/enso_drivers_seasonal.parquet"
     ],
     "built_by": "data/KE-enso-explorer/_sources/enso_drivers_build.py",
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "ocean climate teleconnection drivers enso roni dmi western-v noaa cpc hadisst sst pacific indian ocean el nino la nina"
    },
@@ -1159,6 +1165,8 @@
      "data/KE-enso-explorer/chirps_county_monthly.parquet"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "chirps v3 seasonal rainfall precipitation climatology anomaly ptot drought flood ucsb satellite gauge mm"
    },
@@ -1900,6 +1908,8 @@
      "data/KE-enso-explorer/spei_county.parquet"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "spei standardised precipitation evapotranspiration index drought hargreaves pet water balance"
    },
@@ -2130,6 +2140,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "jrc glofas riverine flood hazard return period inundation depth hydrodynamic model rp"
    },
@@ -2590,6 +2602,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "copernicus gfm sentinel-1 sar observed flood extent inundation cems eodc nobs"
    },
@@ -2818,6 +2832,8 @@
      "data/KE-enso-explorer/ndvi_county.parquet"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "modis mod13q1 ndvi vegetation index pasture biomass rangeland greenness terra lp daac"
    },
@@ -3057,6 +3073,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "wrsi water requirement satisfaction index fews net cropland rangeland crop water deficit"
    },
@@ -3623,6 +3641,8 @@
      "data/KE-enso-explorer/exposure_totals.parquet"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [
      "kenya-flood-gfm",
      "eastafrica-flood-jrc",
@@ -3998,6 +4018,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "knbs 2019 kenya population housing census counts adm2 sub-county age sex"
    },
@@ -4346,6 +4368,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "knbs volume xvi county population projections 2020 2045 growth"
    },
@@ -4522,6 +4546,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "worldpop constrained 2020 100m gridded population building footprints"
    },
@@ -4694,6 +4720,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "openstreetmap osm roads highways classified network"
    },
@@ -4884,6 +4912,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "hotosm health facilities schools points humanitarian openstreetmap"
    },
@@ -5055,6 +5085,8 @@
    "notebook": {
     "files": [],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "kplc power transmission grid high voltage lines energydata"
    },
@@ -5245,6 +5277,8 @@
      "data/KE-enso-explorer/ken_adm2_iebc_simple.topojson"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "kenya administrative boundaries county sub-county iebc cod-ab ocha adm1 adm2 pcode"
    },
@@ -5550,6 +5584,8 @@
      "data/KE-enso-explorer/exposure_vop.parquet"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [
      "livestock-vop"
     ],
@@ -5572,7 +5608,7 @@
    "state_basis": "version-probe",
    "hosting": "unknown",
    "settled": true,
-   "summary": "Spatial density distribution and economic value of production for major livestock species (cattle, sheep, goats, camels, pigs, chickens) across Sub-Saharan Africa. Based on FAO Gridded Livestock of the World v4 (GLW4 2020) downscaled to 1 km / 5-minute resolution, harmonised to FAOSTAT country production values and national livestock populations, expressed in constant 2015 international dollars (vop_intld15).\n",
+   "summary": "Livestock numbers and economic value of production for five livestock species (cattle, sheep, goats, pigs, poultry; plus tropical livestock units) across Sub-Saharan Africa. Based on FAO Gridded Livestock of the World v4 (GLW4 2020, about 10 km / 0.0833 degree), converted from per-square-kilometre density to head per pixel at native resolution and summed onto the Atlas exposure grids (0.05 and 0.25 degree). National FAOSTAT value of production is distributed by each pixel's share of the national herd and split into highland and tropical zones. Values are published in constant 2015 international dollars (vop_intld15) and, separately, nominal 2021 US dollars (national producer prices since 2026-10-21, hazards_prototype issue 47).\n",
    "licence": {
     "id": "CC-BY-4.0",
     "url": null,
@@ -5610,7 +5646,7 @@
     "dois": [
      "10.1038/sdata.2018.227"
     ],
-    "accessed": "2026-09-25",
+    "accessed": "2026-10-23",
     "authors": [
      "Gilbert, M.",
      "Nicolas, G.",
@@ -5626,7 +5662,7 @@
     "publisher": "Food and Agriculture Organization of the United Nations (FAO) / Adaptation Atlas"
    },
    "caveats": [
-    "Attribution: \"Data provided by FAO Gridded Livestock of the World (GLW4) and compiled for the African Agriculture Adaptation Atlas (AAAA).\" CURRENCY BASIS MUST REMAIN CONSTANT INTERNATIONAL DOLLARS (vop_intld15). Several value-of-production metrics coexist (nominal USD, constant 2015 international dollars). To avoid severe distortions when pairing livestock with MapSPAM crop VoP, both portfolios must be evaluated on the identical constant 2015 international dollar basis. Past unit mismatches produced ~7x errors in cattle exposure. DENSITY VS PIXEL COUNTS. GLW4-2020 layers represent per-km2 animal density (D-DA), not raw counts per grid cell. Spatial aggregation across county administrative polygons must weight by grid-cell land area (excluding open waterbodies). LIVESTOCK VULNERABILITY LAGS. Unlike annual field crops which fail within a single dry dekad, pastoral herds exhibit biological inertia: mortality, distress sales, and conception deficits lag rainfall anomalies by 6 to 12 months."
+    "Attribution: \"Data provided by FAO Gridded Livestock of the World (GLW4) and compiled for the African Agriculture Adaptation Atlas (AAAA).\" CURRENCY BASIS MUST REMAIN CONSTANT INTERNATIONAL DOLLARS (vop_intld15). Several value-of-production metrics coexist (nominal USD, constant 2015 international dollars). To avoid severe distortions when pairing livestock with MapSPAM crop VoP, both portfolios must be evaluated on the identical constant 2015 international dollar basis. Past unit mismatches produced ~7x errors in cattle exposure. DENSITY VS PIXEL COUNTS. The GLW4-2020 source layers are per-km2 animal density (D-DA). The Atlas pipeline (R/0.4.1_create_livestock_exposure.R) multiplies them by cell area at native resolution to get head per pixel BEFORE any resampling, then resamples by sum, so the derived rasters hold counts and administrative totals are plain sums - no area weighting is needed or applied. Anyone working from the raw GLW4 density layers instead must weight by cell area. (Corrected 2026-10-23, issue 49: an earlier version listed camels, 1 km resolution and density units.) LIVESTOCK VULNERABILITY LAGS. Unlike annual field crops which fail within a single dry dekad, pastoral herds exhibit biological inertia: mortality, distress sales, and conception deficits lag rainfall anomalies by 6 to 12 months."
    ],
    "avoid": [
     {
@@ -5640,7 +5676,7 @@
     "Comparing baseline pastoral livestock wealth against crop production across counties."
    ],
    "coverage": {
-    "spatial": "sub-saharan-africa, kenya — 1 km (0.008333 deg)",
+    "spatial": "sub-saharan-africa, kenya — 0.05 deg (exposure grid; source GLW4 2020 about 0.0833 deg)",
     "temporal": "2020",
     "crs": "EPSG:4326",
     "bbox": [
@@ -5675,19 +5711,14 @@
       "unit": "Intl$"
      },
      {
-      "name": "cattle_density",
-      "description": "Cattle animal density per square kilometre.",
-      "unit": "head/km2"
+      "name": "vop_nominal-usd-2021",
+      "description": "Gross value of livestock production in nominal 2021 US dollars (national producer prices).",
+      "unit": "USD"
      },
      {
-      "name": "shoats_density",
-      "description": "Sheep and goat animal density per square kilometre.",
-      "unit": "head/km2"
-     },
-     {
-      "name": "camel_density",
-      "description": "Camel animal density per square kilometre.",
-      "unit": "head/km2"
+      "name": "livestock_number",
+      "description": "Animal count per pixel for cattle, sheep, goats, pigs and poultry, plus tropical livestock units (total).",
+      "unit": "head (TLU for total)"
      }
     ],
     "joins": [],
@@ -5701,7 +5732,6 @@
      "rangeland",
      "cattle",
      "shoats",
-     "camels",
      "sub-saharan africa",
      "exposure"
     ],
@@ -5711,7 +5741,7 @@
     ],
     "schema_version": "v0.3.0",
     "created": "2026-09-25",
-    "updated": "2026-09-25"
+    "updated": "2026-10-23"
    },
    "record": {
     "cdh": "metadata/cdh/livestock-vop.yaml",
@@ -5725,6 +5755,8 @@
      "data/KE-enso-explorer/exposure_vop.parquet"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [
      "crop-vop-intld15"
     ],
@@ -5919,6 +5951,8 @@
      "data/KE-enso-explorer/knbs_napr_livestock.parquet"
     ],
     "built_by": "data/KE-enso-explorer/_sources/napr_build.py",
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "knbs national agriculture production report napr county crops livestock area production"
    },
@@ -6083,6 +6117,8 @@
      "data/KE-enso-explorer/harveststat_county_production.parquet"
     ],
     "built_by": "data/KE-enso-explorer/_sources/harveststat_build.py",
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "harveststat ifpri fews net subnational crop statistics county seasonal maize"
    },
@@ -6298,6 +6334,8 @@
      "data/KE-enso-explorer/market_prices.parquet"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "fews net fdw marketpricefacts market prices retail wholesale kes terms of trade pastoral staple maize goat"
    },
@@ -6590,6 +6628,8 @@
      "data/KE-enso-explorer/market_prices.parquet"
     ],
     "built_by": "data/KE-enso-explorer/_sources/kamis_build.py",
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [
      "kenya-market-prices-fews"
     ],
@@ -6770,6 +6810,8 @@
      "data/KE-enso-explorer/ipc_county.parquet"
     ],
     "built_by": null,
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "ipc kfssg acute food insecurity phase classification caseload malnutrition reliefweb"
    },
@@ -7025,11 +7067,312 @@
      "data/KE-enso-explorer/gesi_v2.parquet"
     ],
     "built_by": "data/KE-enso-explorer/_sources/gesi_extract.py",
+    "refresh_command": null,
+    "freshness_check": null,
     "related": [],
     "search_terms": "knbs county gender data sheets gesi poverty female headed households water access indicators"
    },
    "gates": [],
    "gaps": []
+  },
+  {
+   "key": "kenya-trade-macro",
+   "aliases": [
+    "kenya_trade_macro"
+   ],
+   "title": "Kenya national agricultural trade and macroeconomic context",
+   "title_source": "cdh",
+   "category": "markets",
+   "state": "draft",
+   "state_basis": "local-draft",
+   "hosting": "unknown",
+   "settled": false,
+   "summary": "Annual ten-commodity panel combining FAOSTAT trade with separately scoped food balances, CBK export totals and exchange rates, and World Bank annual benchmark prices. Requested grid 1961–2025; actual coverage varies by field and commodity.",
+   "licence": {
+    "id": "LicenseRef-Source-Specific",
+    "url": null,
+    "attribution": null,
+    "attribution_required": false,
+    "attribution_verbatim_required": false,
+    "access": "public",
+    "access_note": null
+   },
+   "producer": [
+    {
+     "organization": "FAO; Central Bank of Kenya; World Bank",
+     "name": null,
+     "url": "https://www.fao.org/faostat/en/#data/TCL",
+     "email": null,
+     "roles": [
+      "producer"
+     ]
+    }
+   ],
+   "citation": {
+    "text": "FAO; Central Bank of Kenya; World Bank (2026) Kenya national agricultural trade and macroeconomic context.",
+    "url": "https://www.fao.org/faostat/en/#data/TCL",
+    "dois": [],
+    "accessed": "2026-11-05",
+    "authors": [
+     "FAO; Central Bank of Kenya; World Bank"
+    ],
+    "year": "2026",
+    "title": "Kenya national agricultural trade and macroeconomic context",
+    "publisher": null
+   },
+   "caveats": [
+    "TCL quantities are tonnes and values converted from 1000 USD to USD. FBS quantities are converted from 1000 tonnes and retained in separate columns because their commodity scopes differ. Sugar TCL uses refined sugar code 164. No paddy-to-milled rice, sugarcane-to-sugar, or green-to-made tea conversion is assumed. Supply and import dependency require complete matching production and trade observations. A row in the requested year grid does not imply observations. Missing values are null. Cut flowers have no TCL series; cut roses use reported Comtrade World totals for HS060311. Signed apparent_balance_t retains negative accounting residuals; net_supply_t and dependency are null where that balance is negative, pending stock/calendar reconciliation.",
+    "CBK exports remain KES totals separate from TCL USD values; FX is the unweighted mean of twelve monthly averages. Total horticulture is not assigned to flowers or avocados. Pink Sheet prices are global benchmarks, not realized Kenya prices. FAOSTAT and World Bank require attribution; CBK terms are source-specific.",
+    "Climate associations require controls for global prices, exchange rates, policy and reporting changes; trade alone cannot attribute impacts to ENSO."
+   ],
+   "avoid": [
+    "Causal attribution of trade changes to ENSO alone"
+   ],
+   "intended_uses": [
+    "National trade context and exploratory climate association"
+   ],
+   "coverage": {
+    "spatial": "Kenya — National annual",
+    "temporal": "1961-01-01 to 2025-12-31",
+    "crs": null,
+    "bbox": null
+   },
+   "assets": [],
+   "upstream": [
+    {
+     "title": "FAOSTAT trade",
+     "url": "https://www.fao.org/faostat/en/#data/TCL"
+    },
+    {
+     "title": "FAOSTAT food balances",
+     "url": "https://www.fao.org/faostat/en/#data/FBS"
+    },
+    {
+     "title": "CBK principal exports",
+     "url": "https://www.centralbank.go.ke/principal-exports-volume-value-unit-prices/"
+    },
+    {
+     "title": "CBK monthly average exchange rates",
+     "url": "https://www.centralbank.go.ke/statistics/exchange-rates/"
+    },
+    {
+     "title": "World Bank Pink Sheet",
+     "url": "https://www.worldbank.org/en/research/commodity-markets"
+    },
+    {
+     "title": "UN Comtrade cut roses",
+     "url": "https://comtradeplus.un.org/"
+    }
+   ],
+   "processing": [
+    {
+     "id": "annual-trade-aggregation",
+     "description": "Rebuild through scripts/update_trade_data.py; validation before promotion, source revision checks through scripts/check_upstream_sources.py. Cached source responses remain local.",
+     "date": "2026-11-05",
+     "code": null,
+     "code_url": null,
+     "derived_from": [
+      {
+       "title": "FAOSTAT trade",
+       "url": "https://www.fao.org/faostat/en/#data/TCL"
+      },
+      {
+       "title": "FAOSTAT food balances",
+       "url": "https://www.fao.org/faostat/en/#data/FBS"
+      },
+      {
+       "title": "CBK principal exports",
+       "url": "https://www.centralbank.go.ke/principal-exports-volume-value-unit-prices/"
+      },
+      {
+       "title": "CBK monthly average exchange rates",
+       "url": "https://www.centralbank.go.ke/statistics/exchange-rates/"
+      },
+      {
+       "title": "World Bank Pink Sheet",
+       "url": "https://www.worldbank.org/en/research/commodity-markets"
+      },
+      {
+       "title": "UN Comtrade cut roses",
+       "url": "https://comtradeplus.un.org/"
+      }
+     ]
+    }
+   ],
+   "technical": {
+    "dimensions": [],
+    "variables": [],
+    "joins": [],
+    "resource_type": "dataset",
+    "keywords": [
+     "Kenya",
+     "trade",
+     "agriculture"
+    ],
+    "domain": [],
+    "schema_version": "v0.3.0",
+    "created": null,
+    "updated": null
+   },
+   "record": {
+    "cdh": "atlas_notebooks:data/KE-enso-explorer/_sources/cdh_local/kenya-trade-macro.yaml",
+    "catalogue": null,
+    "catalog_pr": null,
+    "catalog_pr_state": null,
+    "published_record": null
+   },
+   "notebook": {
+    "files": [
+     "data/KE-enso-explorer/kenya_trade_macro.parquet"
+    ],
+    "built_by": "scripts/update_trade_data.py",
+    "refresh_command": "python3 scripts/update_trade_data.py --refresh",
+    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_faostat,trade_comtrade,trade_cbk,trade_wb,trade_production",
+    "related": [],
+    "search_terms": "kenya national imports exports trade faostat cbk comtrade prices"
+   },
+   "gates": [],
+   "gaps": [
+    "Held as a notebook-local draft record (data/KE-enso-explorer/_sources/cdh_local/); not yet moved into hazards_prototype/metadata/cdh/ nor submitted to cdh-catalog."
+   ]
+  },
+  {
+   "key": "kenya-trade-partners",
+   "aliases": [
+    "kenya_trade_partners"
+   ],
+   "title": "Kenya agricultural trade partner aggregates",
+   "title_source": "cdh",
+   "category": "markets",
+   "state": "draft",
+   "state_basis": "local-draft",
+   "hosting": "unknown",
+   "settled": false,
+   "summary": "Annual country partner aggregates for the specified ten-commodity HS basket, requested 2010–2025. Reporter years 2011, 2012 and 2014 are unavailable. Native HS editions and incomplete commodity coverage remain explicit.",
+   "licence": {
+    "id": "LicenseRef-UN-Comtrade",
+    "url": null,
+    "attribution": null,
+    "attribution_required": false,
+    "attribution_verbatim_required": false,
+    "access": "public",
+    "access_note": null
+   },
+   "producer": [
+    {
+     "organization": "United Nations Statistics Division",
+     "name": null,
+     "url": "https://comtradeplus.un.org/",
+     "email": null,
+     "roles": [
+      "producer"
+     ]
+    }
+   ],
+   "citation": {
+    "text": "United Nations Statistics Division (2026) Kenya agricultural trade partner aggregates.",
+    "url": "https://comtradeplus.un.org/",
+    "dois": [],
+    "accessed": "2026-11-05",
+    "authors": [
+     "United Nations Statistics Division"
+    ],
+    "year": "2026",
+    "title": "Kenya agricultural trade partner aggregates",
+    "publisher": null
+   },
+   "caveats": [
+    "Source: UN Comtrade. Raw responses are cached locally and excluded from redistribution. Only country-level basket aggregates, unit values and shares are served. See UN Comtrade re-dissemination terms; a small Parquet file is not itself a legal exemption.",
+    "Partner shares use reported World value, not the sum of selected partners. Special aggregate partners are excluded. Missing countries or commodity codes are not zero flows. Incomplete multi-code commodity-years are omitted. Transport mode is unknown and never inferred from geography. HS2007-or-earlier non-durum wheat includes seed (including Kenya 2013); the basket uses native HS classifications and carries HS editions.",
+    "Net weights may be estimated; the weight_estimated flag is retained. Values are nominal USD, weights metric tonnes. Annual month is null. Bilateral figures and FAOSTAT totals have different commodity scopes and cannot be treated as directly interchangeable.",
+    "Partner ISO codes come from the official UN Comtrade reference, not generic ISO numeric codes. Customs territories can differ from sovereign boundaries: France includes Monaco; Switzerland includes Liechtenstein; USA includes Puerto Rico and US Virgin Islands. Original partner codes and scope notes are retained."
+   ],
+   "avoid": [
+    "Causal attribution of trade changes to ENSO alone"
+   ],
+   "intended_uses": [
+    "National trade context and exploratory climate association"
+   ],
+   "coverage": {
+    "spatial": "Kenya — National annual",
+    "temporal": "2010-01-01 to 2025-12-31",
+    "crs": null,
+    "bbox": null
+   },
+   "assets": [],
+   "upstream": [
+    {
+     "title": "UN Comtrade API",
+     "url": "https://comtradeapi.un.org/"
+    },
+    {
+     "title": "UN Comtrade redistribution terms",
+     "url": "https://uncomtrade.org/docs/re-dissemination-of-data/"
+    },
+    {
+     "title": "UN Comtrade partner-country and customs-area definitions",
+     "url": "https://uncomtrade.org/docs/reporter-country-codes-and-their-custom-areas/"
+    }
+   ],
+   "processing": [
+    {
+     "id": "annual-trade-aggregation",
+     "description": "Rebuild through scripts/update_trade_data.py; validation before promotion, source revision checks through scripts/check_upstream_sources.py. Cached source responses remain local.",
+     "date": "2026-11-05",
+     "code": null,
+     "code_url": null,
+     "derived_from": [
+      {
+       "title": "UN Comtrade API",
+       "url": "https://comtradeapi.un.org/"
+      },
+      {
+       "title": "UN Comtrade redistribution terms",
+       "url": "https://uncomtrade.org/docs/re-dissemination-of-data/"
+      },
+      {
+       "title": "UN Comtrade partner-country and customs-area definitions",
+       "url": "https://uncomtrade.org/docs/reporter-country-codes-and-their-custom-areas/"
+      }
+     ]
+    }
+   ],
+   "technical": {
+    "dimensions": [],
+    "variables": [],
+    "joins": [],
+    "resource_type": "dataset",
+    "keywords": [
+     "Kenya",
+     "trade",
+     "agriculture"
+    ],
+    "domain": [],
+    "schema_version": "v0.3.0",
+    "created": null,
+    "updated": null
+   },
+   "record": {
+    "cdh": "atlas_notebooks:data/KE-enso-explorer/_sources/cdh_local/kenya-trade-partners.yaml",
+    "catalogue": null,
+    "catalog_pr": null,
+    "catalog_pr_state": null,
+    "published_record": null
+   },
+   "notebook": {
+    "files": [
+     "data/KE-enso-explorer/kenya_trade_partners.parquet"
+    ],
+    "built_by": "scripts/update_trade_data.py",
+    "refresh_command": "python3 scripts/update_trade_data.py --refresh",
+    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_faostat,trade_comtrade,trade_cbk,trade_wb,trade_production",
+    "related": [],
+    "search_terms": "kenya national imports exports trade faostat cbk comtrade prices"
+   },
+   "gates": [],
+   "gaps": [
+    "Held as a notebook-local draft record (data/KE-enso-explorer/_sources/cdh_local/); not yet moved into hazards_prototype/metadata/cdh/ nor submitted to cdh-catalog."
+   ]
   }
  ]
 }
