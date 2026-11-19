@@ -1,0 +1,2633 @@
+{
+  "built_at": "2026-11-14T16:13:26.493142+00:00",
+  "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "original_records": 8473,
+  "availability_sha256": "37f661deaa57cb1e0ed108fb1441e77aada68476c76a5e799e24ef7954d0c286",
+  "partner_reference_sha256": "624c1b17fffb8bc74608c4caee4e80f5635bafb479bacf2b17bd7ad94d347a22",
+  "rows": 6670,
+  "failed_requests": 0,
+  "coverage": [
+    {
+      "commodity_id": "maize",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 20,
+          "sha256": "270dd2c125c02610cdb6b81399e42516bbd6a2258ed504165e1dd404f33bbfeb"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100190",
+          "rows": 24,
+          "sha256": "3ffbd10836ac33150e1be23e55d6d6ef9895a1e7a3c61356788bbfaa7889bb1b"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 33,
+          "sha256": "f169c4b31bd950e43230d2719e8f71de2f97b399053e566048afe2083aaad712"
+        },
+        {
+          "code": "100640",
+          "rows": 19,
+          "sha256": "0d06eb041aaaa72b8a91195ac3b48a4c14da8ace33ed8e403a6bc4c30d1b0d1d"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170111",
+          "rows": 23,
+          "sha256": "d3a5a93c19406bf499304f11942fbdebfdc3675a71445d020c3186949855657b"
+        },
+        {
+          "code": "170199",
+          "rows": 31,
+          "sha256": "7ad70a8f03df592957e5f7af0eee12f7798594fa0162a06b04fa0db55dbcbe89"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 12,
+          "sha256": "036a5c5c89b8a51183686d16313e1b4778dfe39611b6737640767e2c3cc5ebc9"
+        },
+        {
+          "code": "151190",
+          "rows": 34,
+          "sha256": "8147be73688e1fef5ea567f114098d3daa0e9e64fbcb14dc027c823e0b5d1c8e"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 11,
+          "sha256": "59edefd1cfdb354f4abd2bce5949bf0be6aaea076922f0b896ff252d81efb639"
+        },
+        {
+          "code": "071332",
+          "rows": 5,
+          "sha256": "4b0263eddebb8ac8208d58d72e62c0ad079db9c300e4ebd243f518e7b17ee966"
+        },
+        {
+          "code": "071333",
+          "rows": 13,
+          "sha256": "65b5074da5e7c0e70113b5485c118956152027fef52562c7e3854f30f2be3f36"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 34,
+          "sha256": "5f25586eddbe5d86ddc11451f585dee7fed8a6a0b4dc119e627832ba199b68c9"
+        },
+        {
+          "code": "090240",
+          "rows": 95,
+          "sha256": "03ea459e2101b12e92b02d5b0ed5b360a4ac01c098e999d7899f81b02d91689b"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 51,
+          "sha256": "eda004ce1a2632851867fb195a1922f03efe1501740fbeaf0549b22e4b555a0c"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 81,
+          "sha256": "f449f9e3a5e4581bcd41accdfba100b1de2fd6f65832b7f6abf6fd33c4dad296"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2010,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 31,
+          "sha256": "a7b7679e65e33cc17d2092f43e0d932d3609f84570279d02cae93ca6d29f46f0"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "year": 2011,
+      "status": "Reporter-year not published by UN Comtrade"
+    },
+    {
+      "year": 2012,
+      "status": "Reporter-year not published by UN Comtrade"
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 28,
+          "sha256": "340176e572414ad66d582605f1b803a63dc2d8ace0bea9eba6cbfd414637ee38"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100190",
+          "rows": 16,
+          "sha256": "71c39b6963802470725e481b2c875535218342c1ec1011430b692ee8941250b1"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 33,
+          "sha256": "06e19b04d561313e4ebf687a75c169bef9d42bdf866efa01c09b55e928696d81"
+        },
+        {
+          "code": "100640",
+          "rows": 20,
+          "sha256": "fdca1ac8088254031c024d7ac1b191c4884cbd13bff7b8ed5e7459222dc09904"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170111",
+          "rows": 25,
+          "sha256": "d9174e4a2250b828545fa1c3c9038c9160ae68409031bf927c3c1363842fb384"
+        },
+        {
+          "code": "170199",
+          "rows": 30,
+          "sha256": "c8a4c126d5ed2ea47863fa02d3c54c8119dcdce1e9aa64f603d884de5fe19376"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 10,
+          "sha256": "77517d93505852c382d863e65465e3bcd7b0a8e7d9a81f32a2b907a7ccc918fe"
+        },
+        {
+          "code": "151190",
+          "rows": 22,
+          "sha256": "0667e9bbfada445bbf93f17117b92d4dba137729222e4d79aa0e6f116f9899a1"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 19,
+          "sha256": "70e4f3fa82e87155b8cdaf0dd01a85b02ca03dfb6b93c6816f7df7d712d04827"
+        },
+        {
+          "code": "071332",
+          "rows": 7,
+          "sha256": "f39497ea0133e99b5ca5abdc71763a089882674bbaa2054aa527358530d588d8"
+        },
+        {
+          "code": "071333",
+          "rows": 40,
+          "sha256": "f4c843b5a1b4d6851973f735e588ab3deee2b408633ac9e2f9bf8467f0a9b5ca"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 40,
+          "sha256": "c121f2a2507789fdf175849126189fc08387b943c7414ee64d1d545c148df2ff"
+        },
+        {
+          "code": "090240",
+          "rows": 102,
+          "sha256": "bd12dc04eac87b5196846c0895bae804580a0b6005853079f3836f29351b9bec"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 55,
+          "sha256": "776bbdb1492e06cf61539cffb88e193271ec50f6ced80bac0d9683fa400c6d10"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 114,
+          "sha256": "39d371f40edbda178cdc7dcb2fe10b6d32515d010e3cfce5fcecc4df2db26048"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2013,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 32,
+          "sha256": "dee6a92ab094be9898d0c98688298a632d40979e0ffc4e4cfda69fe1e6be9365"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "year": 2014,
+      "status": "Reporter-year not published by UN Comtrade"
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 20,
+          "sha256": "781825ba10f56c1ee51ab22191f2c2490498ad9f72f9e45ef21afcb79394bc30"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 20,
+          "sha256": "45596c3928b1f5e3f167614b833b58aec5f105a6e2cead222e34be309217c137"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 28,
+          "sha256": "1f249e4af27ff1218c0410bca497f06229ad21095310615d4fb19be378920c18"
+        },
+        {
+          "code": "100640",
+          "rows": 20,
+          "sha256": "7c258599eb5da45cb1688cc769deb20c6fc9e097693a17fece36c75619471608"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 11,
+          "sha256": "9786f723ad9f12c088159d50bd78fe9ae129c95ec6b408ca4ffbbd4aa8d86195"
+        },
+        {
+          "code": "170199",
+          "rows": 29,
+          "sha256": "4607d2514054deab99e046878b52e899f83c3e31c64b3e05eb609373fc1909a8"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 8,
+          "sha256": "1f3f5f4bd37c320829371b51bd47781319740bae7f5841fefcf18548aed3c386"
+        },
+        {
+          "code": "151190",
+          "rows": 29,
+          "sha256": "604841af529f5bf13a0f81eeba556a5c703b92f6e64dc42e1398c2ffdcb7a5eb"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 18,
+          "sha256": "b3fc02bc8bef6a78f31c639d57a5ece556409f4275c27fc2e34a3e126b98aec1"
+        },
+        {
+          "code": "071332",
+          "rows": 7,
+          "sha256": "a65220104830b3b9bfbae3eaf9fcf19ed6f8fa0062a0cf212ea710b17a0579b7"
+        },
+        {
+          "code": "071333",
+          "rows": 33,
+          "sha256": "d6955c585336f61410c9ffe029e7b2965e27e0134509d85dc744bd2f98548eb0"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 41,
+          "sha256": "be6fe11664b1f2f53312cd6c1735c11e543ca4334b1398fac4c1f0af166a6258"
+        },
+        {
+          "code": "090240",
+          "rows": 99,
+          "sha256": "3dcede0b38fb164edf36528f0264b2706d5ff1a876ad4bdc11628c72d473896f"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 54,
+          "sha256": "62a8e9347e4d977c0f990a4941b5a46e3741e6d11e8dbe0d02228c8785891eec"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 118,
+          "sha256": "a2a6f6611183d1d7f051f74eb76fa13ab40120c7d2934d08207ccabd063d8c0d"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2015,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 31,
+          "sha256": "826a6414fda76eabf2cd20d6089d667fcf9e0909df2ecd7dedd6480cf2e5a589"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Incomplete reported World totals; flow withheld",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 27,
+          "sha256": "c9a3d1ececb0adcfa825502ab2c21a2216bfa43dc4483e9209b3f2f7611323d3"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 21,
+          "sha256": "4c6c8f832d071284a92fcb05575d51d99846799d73e2e9364589f1a09fb9ebc4"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 28,
+          "sha256": "1b4dade874bed57aaf2348cfea4482255cd52da9f2e6ae7044ef3812630bda6f"
+        },
+        {
+          "code": "100640",
+          "rows": 20,
+          "sha256": "d282f4b66c8700bf47db8f05d1a65deaccf486f9af122fa27de522e9a6186910"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 16,
+          "sha256": "767046f2a212a60e14ed7fe6b5c57fd28a9c8222fbc0a1308fa2a4f01d821a72"
+        },
+        {
+          "code": "170199",
+          "rows": 29,
+          "sha256": "a9c3d999da0881a9f655e76aaa956305ae0c3a3eab10a63cceae2e4d5e997016"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 12,
+          "sha256": "0f811f7adee7f064838988e5f1df3e26c70e4dfbadc5401e71718fdfeee20042"
+        },
+        {
+          "code": "151190",
+          "rows": 24,
+          "sha256": "5e9039106e301d9752cbaa3d307086321dd9c6bdba07bc8a41928a45a5fbc076"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 30,
+          "sha256": "b0c4199eb6d1b90478601d504ab5ab37a7d10202efb9f0a437c60ef9e9e0ce6c"
+        },
+        {
+          "code": "071332",
+          "rows": 5,
+          "sha256": "e38cfa15d0a517d93c0faeeed279b54acbfae7975c5df5201e84f0c37db27b25"
+        },
+        {
+          "code": "071333",
+          "rows": 35,
+          "sha256": "0ca9d8e61786e788b69c1ffbf310d8f57060e84cd809ebc48a715af27d0af0be"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 40,
+          "sha256": "7e4f27e946cb29c466e20cea358242f4ba970b7be9a4ec74d30e11b7327d311c"
+        },
+        {
+          "code": "090240",
+          "rows": 101,
+          "sha256": "6a9b59be6f343f680ed7c32cec2127804228ade92e298f4a937e23d16572b690"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 55,
+          "sha256": "5a45975fc942e60a9eb05bc314492179e0eed42304adcc1a6ea4616c6e8defca"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 130,
+          "sha256": "e613efa30e912b0584004ed68b2f0a3187a6d2ce2bf47a7232ae1baef5c91e26"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2016,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 42,
+          "sha256": "3bcf9b4cf322bf3bb91272fabbfbc7ea5e21ea3ef8c68650c846cb09e46e16bb"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Incomplete reported World totals; flow withheld",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 33,
+          "sha256": "2add96ead7732362def9ed9181c807774edc22532655de5c65db11b725de3cb2"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 20,
+          "sha256": "26ede323fb8e1efaba3cb9f3faaa153b8b7ceb1bc8ce2c3c3b1fcf1cfcbc3ef7"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 27,
+          "sha256": "b6ce02ca4211d254cbe90e4404511b8509a03f19430baf1deb2bdae0d42c0a2d"
+        },
+        {
+          "code": "100640",
+          "rows": 19,
+          "sha256": "9764133d232676ec4366c53d9f2f814e2faece34ca60f07015dbec91ed108f5a"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 28,
+          "sha256": "8feaeeea7e763e906183dbdf4caf908ab7f1849112d17e43be102779d12a571f"
+        },
+        {
+          "code": "170199",
+          "rows": 41,
+          "sha256": "248d7642469f44f96d151d80c2a650c6ae4ad8d98fa7d6e226d355ee093e6518"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 12,
+          "sha256": "08c8c0e19a54f3b5c3f83e22d8148e5d32d78a2b66a07fd1782ce75b24461646"
+        },
+        {
+          "code": "151190",
+          "rows": 22,
+          "sha256": "b56b1f4f717e0d50ace1b4e0a46b1bf493a88cd3faddded8c7e60beb5bcdee2c"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 24,
+          "sha256": "435ca6e4449e729ed01c33bddfc2679c9772ebd6d40afe5e47d0a58e405bdc28"
+        },
+        {
+          "code": "071332",
+          "rows": 5,
+          "sha256": "5ab4814f02de7a193db033c7f54687490df0770c4ab26c9a5a69ea0097445d30"
+        },
+        {
+          "code": "071333",
+          "rows": 32,
+          "sha256": "1d312c5d519526a8532ca16176e75eacf91681d243c0b21662cf377985b76480"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 35,
+          "sha256": "a7953c769bc14ce3b5ce86eb0ff10cbf6ba185ce4c3e5a6dfbac0e24fbc753d2"
+        },
+        {
+          "code": "090240",
+          "rows": 92,
+          "sha256": "5694d003d0abcb5b4e0fe23098e17151ef7038240259e958a1bdc7a34c37d53a"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 65,
+          "sha256": "a9c52e80f049019d9835d54eb5b635575f47f2eb1d700c2a575d9a584a43c52d"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 127,
+          "sha256": "9379ab97cf5607c7377592ec8d8360b033ae2dc9476f08c4193ac2960739eb6c"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2017,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 47,
+          "sha256": "0d1074fd4c09503ebd16b321cb39a455700eb91eb217f5ec742bd5a8860ecd64"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 34,
+          "sha256": "7cc95e8d54ceaedace3bdb1f42fceb86eab1c38847553fb3e82cc61d9c717294"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 20,
+          "sha256": "1e20615d401c08a6af8cd3dc31d971766d939fa6db295f5afe52d2e015d4a414"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 28,
+          "sha256": "a8d2806c0db0b59015ffcadc3a5b4048d613a61905aa8e1a305d7ba7918aafc6"
+        },
+        {
+          "code": "100640",
+          "rows": 16,
+          "sha256": "f9763952a80acf8dbb1d7c316ef6566b2363ee11b0e05d4a45b2c852838c7221"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 18,
+          "sha256": "20a3ad1e2759892dbba7edf5e1478081d085eb6af98aac516ebb01cdcc7720bc"
+        },
+        {
+          "code": "170199",
+          "rows": 35,
+          "sha256": "70a3d07cd3383fed2c0c62b1e33ff951f03fd5ad1d46e44ead323c5d9b0bc4fb"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 15,
+          "sha256": "aaa88a4495470e171534b6ee627d9e77c571e3702f2386aad6c9d70b6c771fa5"
+        },
+        {
+          "code": "151190",
+          "rows": 23,
+          "sha256": "cc6d8932dc9b6a84580989421338634146aa2c63c55883a280bfe9c15224a4ce"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 32,
+          "sha256": "f86cc3ca6c0264baee213892b6b32ab7a327ef5f2e64564ea4ddfda4be0889c4"
+        },
+        {
+          "code": "071332",
+          "rows": 8,
+          "sha256": "6becd8ec9a289b62b3f6cb113f0882179d0e1f84981c99841b7831be87ed5185"
+        },
+        {
+          "code": "071333",
+          "rows": 31,
+          "sha256": "b0cd7ceb0d3b1ba7f0f98cb11267c642d0bf7011db78e49983e80186e0a3cf34"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 44,
+          "sha256": "ca0ab28658c2f9e4c91afa44266a62649c691b22ad66c66d86045cd4134acdfe"
+        },
+        {
+          "code": "090240",
+          "rows": 104,
+          "sha256": "67866be3e3965022958dc14f4dedc6dc9bc172529f11c9778c087de008a583b1"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 69,
+          "sha256": "f908eb39f65f92b56d4d88ebc063d6bccaeaae8a84acc49468a52622e4cc709f"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 126,
+          "sha256": "254bb8e59b6bd1269fb5a09669fa7ddc7d89f0105ebbcc218a02c62fd4fa4336"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2018,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 52,
+          "sha256": "28ba78e58b79120b6e6a3678d122c4461c9be3c0fd3fe43b8ca4471f365d923e"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 24,
+          "sha256": "ce17f977f59e4a02baed371a2529018c2e5eb5753147872a4419613e48bf676b"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 22,
+          "sha256": "01e5f4767a5c7e9ca5154f89edb9793cf3e7ba00a09133b31a124e7174309b74"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 30,
+          "sha256": "94a8748ac2482928032280c2759520a24580cd3b17977522519e510571ddda88"
+        },
+        {
+          "code": "100640",
+          "rows": 13,
+          "sha256": "90243ce198982dfe0f68a96a8f0646208b7945d833d896f11c28e9ef7139b988"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 24,
+          "sha256": "1e2ebcf14aa129da891b87def860e3e7786ec581b9e49c0a84b4312872294040"
+        },
+        {
+          "code": "170199",
+          "rows": 30,
+          "sha256": "89ef46fa78a7a85cad3beced5795fd583f31043d24bff8fcbda667389488450f"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 13,
+          "sha256": "7faa25ac1ea9da180a3fa49fc28ade6d64e878b12780c65a681b0b7066782ed3"
+        },
+        {
+          "code": "151190",
+          "rows": 25,
+          "sha256": "b19c5f84ea9f2875926655f2da232d34f2dd592b58ca8bbb10ec4303018f6dde"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 24,
+          "sha256": "bb4cf76d1e0826a95b3a8f8ac637c8698d5b24034d0342d700e32fc29875f4bb"
+        },
+        {
+          "code": "071332",
+          "rows": 7,
+          "sha256": "54b6776cabf415ce44aa9846d3bbb871d517ef00d01c8694f4418d8414f0444d"
+        },
+        {
+          "code": "071333",
+          "rows": 34,
+          "sha256": "d238f76ce8d4b7661b9b9a9ebb22b9266fd84648d6ddc1cb4ca4c18eca5d07b2"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 46,
+          "sha256": "a2442e7dbb82aa52568e43b427db791bd333b0f50dc1832bce6a580da5f9bf9a"
+        },
+        {
+          "code": "090240",
+          "rows": 110,
+          "sha256": "9af4e49552569ae84a9a91bdbdb9428f44673044b102334b307854bed322a0f2"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 65,
+          "sha256": "4a48582fc5ba88caf6a783be590831cf9795a4a36bd7ec6fed7b1696f5f6ae2f"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 128,
+          "sha256": "07523f862f573777a7d154c206594c1ca8cde1078c3d5f939982f2cd3c9471fc"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2019,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 51,
+          "sha256": "8b168de2c5ce79968910048b7329decabb42cc580ee09fcb6c34feb03db48c39"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 37,
+          "sha256": "113ae3b22411366389803507f785f4e71dde22fbc77d4e2b6ac6e04e0a03a78a"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 18,
+          "sha256": "49b5a8b999d99379a7c84b33a4646440d33a503bc1880607591729da2097bb3d"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 25,
+          "sha256": "a9caffb66730ddb385c2c4bc7e4363f6f855a32a7076bf12262664113c0205ac"
+        },
+        {
+          "code": "100640",
+          "rows": 17,
+          "sha256": "002bc62a6ecd32be818ad045f8610f60110309cfb54fcf4bed3991bfd85e1b70"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 15,
+          "sha256": "1f233af8331c37fee805133cbc046d9b8cec0f8644b99f47a4fcaf0f8ba04783"
+        },
+        {
+          "code": "170199",
+          "rows": 29,
+          "sha256": "bc170b22d5bc050ff0120b6cca1c1b790af01bed9006eb5693f7c68ee93bd19b"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 12,
+          "sha256": "05a96c05040cd41ba3fd62ccc696fcb9aaa5881816cc3c04cf105d4d506a4e0b"
+        },
+        {
+          "code": "151190",
+          "rows": 28,
+          "sha256": "103b427386f3847e4904100e5dccabc8a1d808472f2c361c8c371b020bec023e"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 34,
+          "sha256": "69809dda5649efad838362e066e5b63f5c7227d3f4d6f7ab97ab027a83206be7"
+        },
+        {
+          "code": "071332",
+          "rows": 7,
+          "sha256": "4e58036c052ada2800b632d3cb28d7d5d0ccbe3f44db228f84f584893b4b5166"
+        },
+        {
+          "code": "071333",
+          "rows": 33,
+          "sha256": "6d44de0abd644b1a5ddb6f184d9826427bda3a5769e3187d70d28ab1e3dad2dd"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 54,
+          "sha256": "ca0f35d4a61d9f5e596a3b6e46ffb5ba0e4d6dd9a72f5cb2c760605aa62973f2"
+        },
+        {
+          "code": "090240",
+          "rows": 120,
+          "sha256": "defd4712b85d309723a70757db3626ae7402c6d2ea8ff8888c93ecae63b15161"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 73,
+          "sha256": "ed3aae9168aa7ee004e7ae53c47eeb0af93b8bb1a9727b3b5ab0f62a2696dd61"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 117,
+          "sha256": "b5022b6d55d17084815e9e353f4055906f1d76ad8b0d8de78cd16f75eb12a0a7"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2020,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 54,
+          "sha256": "c1111cb7d45bfe96640063fd05ea4411663f9fb8767074c10e462bd1554de61d"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 39,
+          "sha256": "b19ba22dfaf0610589e3646a3797c8bae3cd1f2a2f9fec8050fc7c4a150107d0"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 16,
+          "sha256": "ac6bb78f1fe918a14b1a21732d04206721e27cb96cdfd378eb3b4c5c9a2e94b9"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 40,
+          "sha256": "0b36995e2fe4c915828a08e0dbd1ab3d0f7ac9bd1abea83e63a4225829b00467"
+        },
+        {
+          "code": "100640",
+          "rows": 24,
+          "sha256": "fc56357ddaf346bbfe4328d22c8762c3bc0352ca0eee43874b17dfebf71f0381"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 18,
+          "sha256": "881ff91ed352ab9e9bc697b103ce5de676a2e8d85b60bc263f686ccce0eb5ccd"
+        },
+        {
+          "code": "170199",
+          "rows": 44,
+          "sha256": "6d835813ed3615c5eabec15cd797c3a2b67fb5994b15b868bc3db0d5b8606b24"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 11,
+          "sha256": "dbaa425467d54d68430b4ed6d18746b4d7d473839029e607b0e33542b48c6231"
+        },
+        {
+          "code": "151190",
+          "rows": 27,
+          "sha256": "5e44153a42574f8ea9faa71970799cdeff23ee7a354c30b41b4af4565eb7343c"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 36,
+          "sha256": "b59020d3c982f134d5b6ea6551b93291992d9f23c671cb55c903ed18836ca143"
+        },
+        {
+          "code": "071332",
+          "rows": 6,
+          "sha256": "18cd56a753db54f2dee23adcc456c211ccc7454cca5150bfcb5f318837e70ebf"
+        },
+        {
+          "code": "071333",
+          "rows": 46,
+          "sha256": "c199c51dfdcf5606bac9f5f8ce9002ba18e6f718fb69c0fb1baaa5dd02eb7d28"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 69,
+          "sha256": "d50badc760d936f9d9e7945f11a6b70dd4d77f44acc8d41d60928080763a72c1"
+        },
+        {
+          "code": "090240",
+          "rows": 127,
+          "sha256": "96cee234973e97bba04ca0abdea84556bdbaf78d1901e35e8d67b73918be979f"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 70,
+          "sha256": "754cde179aeb40b7355158df078cddf5de3adda1f78c84db01d87a2ee0abf226"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 113,
+          "sha256": "1dfb3fb74a843389b19ccfe0db5726a35698a5078510c446b1d013da866014f2"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Incomplete reported World totals; flow withheld",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2021,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 63,
+          "sha256": "6a739ce820abbb1f7f6efeedfa4170c6e16227ee4df925b88158dae20e4af41f"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 35,
+          "sha256": "1833e3af23112970dfcc5d7bb15fd733a94af4276329dcbba377253b1d053183"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 19,
+          "sha256": "5e4f335d504b6df77041b4527e87c75c5fb0d665ccb7116d92c9b194d4eba45b"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 40,
+          "sha256": "e5b1918c35b87f28fe97917f6b01b8c11f6862552c0d25b243072c704fda61cd"
+        },
+        {
+          "code": "100640",
+          "rows": 20,
+          "sha256": "b9c0565f0b00822063beaee571de8a4ea83906c8be57f5bb93b6cd557032e3ea"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 15,
+          "sha256": "601725c8f10f04b311fb5443bc297ca1d0a1075acdce4a878120fbfd94c89691"
+        },
+        {
+          "code": "170199",
+          "rows": 29,
+          "sha256": "60b6428d28653b27cd53d34df71a084771c5a721cfb78d0673c198358a17629e"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 18,
+          "sha256": "fac7561bf1cf2ab4a31cc8f4b3c4e0de0ceb654757f783dd8daf0de3f2c0866f"
+        },
+        {
+          "code": "151190",
+          "rows": 33,
+          "sha256": "2f5870d2324328e51ec2d65c1921e0773bf7017cd0ce2c3978bc364c3a138a1b"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2022,
+      "complete_codes": false,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 25,
+          "sha256": "eb71209c325301653ce6c157b0ab2fdbacf4eecb017024af6ff775f5898090ba"
+        },
+        {
+          "code": "071332",
+          "status": "No observations; not zero trade",
+          "sha256": "29a60c6425bcda2d20f5d47ca8596c3808bb45d8469176037ee7780a4102e709"
+        },
+        {
+          "code": "071333",
+          "rows": 34,
+          "sha256": "11c779f33ef7cd538bb32e03eaecaeb5602a6b321b0f2ee40e2c8f7653da1571"
+        }
+      ]
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 57,
+          "sha256": "62c7f13163a8ed798bb721bbfc0cce8b6a3948f7448a82c5f8850df6b9d0864f"
+        },
+        {
+          "code": "090240",
+          "rows": 118,
+          "sha256": "d52ce327840873f08b432ea98dd05e7f49cc480edc8effba28c9465659242296"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 75,
+          "sha256": "17e612423b074d7aade572a3b761265a70ef61fe3cbcb70f541b0e89a4861c48"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 120,
+          "sha256": "5fa59a9f21905203ff264dc4b5c271e48193a27affab568a5991598071675529"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2022,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 58,
+          "sha256": "2a2f54aa4f69c2ee4278d23ede9948120e30ac9e633ef620219c008c4dbfd182"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Incomplete reported World totals; flow withheld",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 31,
+          "sha256": "962f8562c5eb9fc8590f2e88f8cf7924f321dea57700144d70ca42b71c708fde"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 21,
+          "sha256": "6af590ad7eaeb941d58749dfec44f80ad98d30a4eaa07e531821f5cbd95be966"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 32,
+          "sha256": "964e12995ce9664240a6df634d4bd0789ee2a05aa54b6cc70776277705892c73"
+        },
+        {
+          "code": "100640",
+          "rows": 12,
+          "sha256": "c81f97b42c43a19e07cffb51b35656d944c0b05b02d6bfe95d5347ecba06a257"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 16,
+          "sha256": "c552fd3dfbbcfabf5c8af5d2eaf747061475e296c5e29a25730bad3faa54bc49"
+        },
+        {
+          "code": "170199",
+          "rows": 37,
+          "sha256": "b5c6a2c870f75d8c64c68211c6a3f7ea55768baf2ec75e3e26f84e1e6a761c1a"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 13,
+          "sha256": "8c5b5b00379a66db6399b261a9cf6341bb1d0a3fc65885053b379502239a64e1"
+        },
+        {
+          "code": "151190",
+          "rows": 26,
+          "sha256": "8e0287b5fe78596172a3d7e6e403984438cd34ee1bc41cef8f507078f7f929ef"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 33,
+          "sha256": "d22ef652f8099557cc2e6f8eb1ad82eb81e74e4aae406a03d3051b3525daaf08"
+        },
+        {
+          "code": "071332",
+          "rows": 2,
+          "sha256": "45e3ef7d4b6cf0228ba2e87184784459cee742080e8ba823b1dbc44037141099"
+        },
+        {
+          "code": "071333",
+          "rows": 31,
+          "sha256": "78b950bd7312b69f3bfb13f349176aa6875b93b6c5f525d06ecf442b66604cd2"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Incomplete reported World totals; flow withheld",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 64,
+          "sha256": "8c71bd3b4824c5f0c3fe1672445cf651b3adb3dacf3e35ea4632ffbfaaa5f08e"
+        },
+        {
+          "code": "090240",
+          "rows": 105,
+          "sha256": "7a8262201627964743bd5f3a814840219ab99d7c640b5a7e3f1c60fc4a5ef213"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 77,
+          "sha256": "5c0f7c65ea0c5590e439c1aab578af3e8e1eeb1b8bc288c21f7dba1e24a0cbf8"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 128,
+          "sha256": "d5873cc248f9e2d750cfc135a5f8af50023bbd76916bac70ad8ef1e580c07aaa"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2023,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 65,
+          "sha256": "316a6de48f008bb611b86cbc83d644a312bae210b2881fc8a6e59ae7562f75d0"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 29,
+          "sha256": "31a08f3a9f0e0b7a24259f9b8bd9ca8a95e841e307f0c414715dd91f42537922"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 17,
+          "sha256": "f0079604b6a57c9632ad4b2349ed4934edcbbc0b636ef5e98d3bfcb32ea7309c"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 37,
+          "sha256": "1b04170bc97d67f0f5893ff8fe1a67c62fe993785ff62a4a4c340ced56e2780e"
+        },
+        {
+          "code": "100640",
+          "rows": 19,
+          "sha256": "0d389d6b716e42de219f19086c95a9020e81496a57bd11f6604985d2e085012b"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 19,
+          "sha256": "3851380915a7ecedae4e9ded1de4af01d87887d2644535146eb7901d9e5618cc"
+        },
+        {
+          "code": "170199",
+          "rows": 34,
+          "sha256": "e30accd4bf0bd5893bd58820807453a7119cc0063c7c9bb9c297618e0a2fec63"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 9,
+          "sha256": "58d200f5fc8eb4c28f92e251f561b5a78284304e40438b829c0dfb9e63f46a7f"
+        },
+        {
+          "code": "151190",
+          "rows": 27,
+          "sha256": "428b1b84c133bb3c2d998b87952aa099a54cb35bc07af3966eae0087042f0542"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 31,
+          "sha256": "83aaa9195b0403484b47522122efaffab1a98e8de1c90f17f4f93922b359ca90"
+        },
+        {
+          "code": "071332",
+          "rows": 7,
+          "sha256": "8db73c33f772ffa925d3b08680b5f118e07db8349360d8cba64922262cfbf0a4"
+        },
+        {
+          "code": "071333",
+          "rows": 29,
+          "sha256": "c184a87e4a4181d80213f2cb100fc85e9169a35f961dde5aca9b46ed9e5e304f"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 71,
+          "sha256": "06d32d9f70ff31f380ae9d46a2785f24870c0793d27f710d2680290a5dc01d84"
+        },
+        {
+          "code": "090240",
+          "rows": 114,
+          "sha256": "0f62c1edf26899af0e00bf944638de485c50bfbbd0acd56af107476f787ea754"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 77,
+          "sha256": "1d727f51b6e30f7141247924914128fcb7d16f263f1c01d716ff95ded8f53564"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 133,
+          "sha256": "b5732f11fe769c6304f347456d8082f192c0a8bbb15f55146a0ff3ce1faa01dd"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2024,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 63,
+          "sha256": "916be2998d84f907e24b1788826066752e93bb96119ff8f97b3084e4fc6e7444"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Incomplete reported World totals; flow withheld",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "maize",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100590",
+          "rows": 31,
+          "sha256": "58d102d5dd3664d7691b1b5ab9eece435cd295227f6ea76ce549507e52a75f78"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "wheat",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100199",
+          "rows": 17,
+          "sha256": "fbd90f6b3e26f6d55bd21246cfdc64836a269f298f62858ec2645e2ba681e86d"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "rice",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "100630",
+          "rows": 29,
+          "sha256": "6051322d4ba6cb1a280783ba95b3341a3f0ff3b8c8eaf7af0d02072c24605d65"
+        },
+        {
+          "code": "100640",
+          "rows": 14,
+          "sha256": "776e88fe3c8e2c1d330374f59c618f85f5e130cc38ef90c4ab9f9a54d7c5e00f"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "sugar",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "170114",
+          "rows": 17,
+          "sha256": "098e639aa9809bdc76607700f2f1190fe5716db266d5dc81e5af06f747d6c83a"
+        },
+        {
+          "code": "170199",
+          "rows": 41,
+          "sha256": "806372052de5d80fdf8cae0da886d12336289e665771cc77e6aa040aa9be63bd"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "palm_oil",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "151110",
+          "rows": 9,
+          "sha256": "b6fb1ba430613fa8dda76413a691c52b7fff6ead3da67d532a00a692167d8d76"
+        },
+        {
+          "code": "151190",
+          "rows": 31,
+          "sha256": "251cde355bb7cbafa60ea22a60bf17b70abd150f488390dfd17ce0766cc33aa6"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "dry_beans",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "071331",
+          "rows": 31,
+          "sha256": "fef27e6e975b911a6d17c919d6a42e9d097ca9571dccc0744bd408d318d77c82"
+        },
+        {
+          "code": "071332",
+          "rows": 6,
+          "sha256": "8a7ee618d08a85ffad2c22939197bd72acf1eceb2837c19285bffa910835958b"
+        },
+        {
+          "code": "071333",
+          "rows": 32,
+          "sha256": "616a00214e7424c71f15fdf0a6bdf866c545e26d467cf58dc11d1b04525c9e21"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "tea",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090230",
+          "rows": 79,
+          "sha256": "7d6d85aad0b7425d255415dd670b3515fbf70b2e09b4a1b999cb632ae90af16e"
+        },
+        {
+          "code": "090240",
+          "rows": 112,
+          "sha256": "1adecd93fd370842f9b1a5d4e2c72ff33ad2f992de2e242c5552e93bf2c6b124"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "coffee",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "090111",
+          "rows": 76,
+          "sha256": "339f37964d7c5feeb094e241a4468fe2d7c4e80b41707290ebddbfa716244d55"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "cut_flowers",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "060311",
+          "rows": 135,
+          "sha256": "ca3ea0d9a5eac97172066084a059fdb5c08e97129ffabb2e0b2decf7596651dd"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    },
+    {
+      "commodity_id": "avocados",
+      "year": 2025,
+      "complete_codes": true,
+      "requests": [
+        {
+          "code": "080440",
+          "rows": 65,
+          "sha256": "2c57996c55d1c7132a331f002e8c353eca928a7a7aa0bcd928e0fd7441a5c908"
+        }
+      ],
+      "flow_coverage": {
+        "M": "Reported World totals available for all component codes",
+        "X": "Reported World totals available for all component codes"
+      }
+    }
+  ],
+  "refresh_command": "python3 scripts/update_trade_data.py --refresh",
+  "licence_basis": "Free analytical application / limited original-record redistribution; Source: UN Comtrade. Raw responses excluded. See https://uncomtrade.org/docs/re-dissemination-of-data/",
+  "caveats": [
+    "World/aggregate partners excluded from country rows; shares may sum below 100%.",
+    "ISO mapping follows UN Comtrade partner reference, not generic numeric ISO codes. partner_scope preserves customs-area differences (e.g. France includes Monaco).",
+    "Unknown transport mode; geography is not a route.",
+    "Native HS revisions retained; wheat under HS2007 or earlier includes seed, including Kenya 2013.",
+    "Country absence is not a proven zero; unsuccessful commodity-years omitted."
+  ],
+  "fields": {
+    "commodity_id": {
+      "type": "string",
+      "description": "Standardized commodity identifier in national basket",
+      "unit": "code",
+      "null_semantics": "not nullable",
+      "lineage": "BASKET key in trade_common.py"
+    },
+    "flow_direction": {
+      "type": "string",
+      "description": "Trade flow direction: Import or Export",
+      "unit": "category",
+      "null_semantics": "not nullable",
+      "lineage": "UN Comtrade flowCode (M mapped to Import, X mapped to Export)"
+    },
+    "year": {
+      "type": "integer",
+      "description": "Calendar year of bilateral trade report",
+      "unit": "year",
+      "null_semantics": "not nullable",
+      "lineage": "UN Comtrade period / refYear"
+    },
+    "month": {
+      "type": "integer",
+      "description": "Calendar month of observation (null for annual aggregates)",
+      "unit": "month",
+      "null_semantics": "null for all annual records; monthly data not acquired",
+      "lineage": "Acquisition scope constraint (annual only)"
+    },
+    "partner_iso3": {
+      "type": "string",
+      "description": "Trading partner ISO 3166-1 alpha-3 country code",
+      "unit": "code",
+      "null_semantics": "not nullable",
+      "lineage": "UN Comtrade PartnerCodeIsoAlpha3"
+    },
+    "partner_name": {
+      "type": "string",
+      "description": "Official partner country or territory display name",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "UN Comtrade PartnerDesc"
+    },
+    "partner_comtrade_codes": {
+      "type": "string",
+      "description": "UN Comtrade numeric partner area code(s)",
+      "unit": "code",
+      "null_semantics": "not nullable",
+      "lineage": "UN Comtrade partnerCode"
+    },
+    "partner_scope": {
+      "type": "string",
+      "description": "Scope notes on customs territory inclusions and exceptions",
+      "unit": "text",
+      "null_semantics": "null where standard sovereign territory applies",
+      "lineage": "UN Comtrade partner reference custom area notes"
+    },
+    "corridor_type": {
+      "type": "string",
+      "description": "Observed transport corridor or mode",
+      "unit": "category",
+      "null_semantics": "always set to Unknown (transport not observed) to prevent transport inference",
+      "lineage": "Scientific rule D-7 / Handover \u00a71: no transport inference"
+    },
+    "volume_t": {
+      "type": "float",
+      "description": "Bilateral trade volume in metric tonnes",
+      "unit": "metric tonnes",
+      "null_semantics": "null where net weight was not reported or zero",
+      "lineage": "UN Comtrade netWgt / 1000"
+    },
+    "value_usd": {
+      "type": "float",
+      "description": "Bilateral trade value in nominal US dollars",
+      "unit": "nominal USD",
+      "null_semantics": "not nullable for reported flow",
+      "lineage": "UN Comtrade primaryValue"
+    },
+    "unit_price_usd_t": {
+      "type": "float",
+      "description": "Implied bilateral unit price in nominal USD per metric tonne",
+      "unit": "nominal USD per tonne",
+      "null_semantics": "null where volume is absent or zero",
+      "lineage": "Computed: value_usd / volume_t"
+    },
+    "partner_share_pct": {
+      "type": "float",
+      "description": "Partner share of reported World trade value: 100 * value_usd / world_value_usd",
+      "unit": "percent",
+      "null_semantics": "null where world_value_usd is absent or zero",
+      "lineage": "Computed: 100 * value_usd / world_value_usd"
+    },
+    "share_basis": {
+      "type": "string",
+      "description": "Denominator specification used for partner share computation",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "UN Comtrade reported World total specification"
+    },
+    "world_value_usd": {
+      "type": "float",
+      "description": "Total trade value reported for World partner (partner code 0)",
+      "unit": "nominal USD",
+      "null_semantics": "null where World partner was not reported",
+      "lineage": "UN Comtrade primaryValue for partnerCode == 0"
+    },
+    "source": {
+      "type": "string",
+      "description": "Source attribution string",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "Source identifier: UN Comtrade"
+    },
+    "hs_codes": {
+      "type": "string",
+      "description": "Harmonized System commodity code(s) queried for this record",
+      "unit": "code",
+      "null_semantics": "not nullable",
+      "lineage": "BASKET HS codes queried from UN Comtrade"
+    },
+    "hs_editions": {
+      "type": "string",
+      "description": "Harmonized System nomenclature edition(s) active for reporting year",
+      "unit": "code",
+      "null_semantics": "not nullable",
+      "lineage": "UN Comtrade classificationCode (e.g. H3, H4, H5, H6)"
+    },
+    "weight_estimated": {
+      "type": "boolean",
+      "description": "Flag indicating whether net weight was estimated by UN Comtrade",
+      "unit": "flag",
+      "null_semantics": "not nullable",
+      "lineage": "UN Comtrade isNetWgtEstimated"
+    }
+  }
+}

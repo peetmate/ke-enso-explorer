@@ -748,8 +748,6 @@ details.enso-more-details > summary span.enso-more-details-title {
 @media (max-width: 768px) {
   .ke-sticky-shell {
     padding: 0.25rem 0.5rem 0 0.5rem;
-    max-height: 28vh;
-    overflow-y: auto;
   }
   .ke-sticky-top-row {
     gap: 0.3rem;
@@ -1475,5 +1473,720 @@ html:not([data-audience-mode="technical"]) span.mode-technical-inline,
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* ==========================================================================
+   Section 4.5: Kenya-Wide Food Trade Styles
+   ========================================================================== */
+
+.trade-cbar {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+}
+
+.trade-cbar .trade-lab {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 5px;
+  color: #334155;
+}
+
+.trade-cbar .trade-grp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.trade-cbar select {
+  font-size: 13.5px;
+  font-weight: 600;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #fff;
+  height: 32px;
+  padding: 0 8px;
+  max-width: 100%;
+}
+
+.trade-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.trade-kpi {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #fff;
+  min-width: 0;
+}
+
+.trade-kpi .trade-kpi-label,
+.trade-kpi .kpi-k {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #64748b;
+}
+
+.trade-kpi .trade-kpi-value,
+.trade-kpi .kpi-v {
+  font-family: var(--atlas-font-family-mono, 'JetBrains Mono', monospace);
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  margin-top: 2px;
+  color: #0f172a;
+}
+
+.trade-kpi .trade-kpi-sub,
+.trade-kpi .kpi-s {
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+.trade-kpi.trade-unavail-kpi .trade-kpi-value,
+.trade-kpi.na .kpi-v {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.trade-kpi.trade-warn-kpi,
+.trade-kpi.warn {
+  border-left: 3px solid #f59e0b;
+}
+
+.trade-panel {
+  margin-bottom: 6px;
+  min-width: 0;
+}
+
+.trade-panel-title,
+.trade-panel-t {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 4px 0 4px;
+}
+
+.trade-panel-sub,
+.panel-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.trade-panel-note,
+.panel-note {
+  font-size: 12px;
+  color: #92400e;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin-top: 4px;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.trade-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 12px;
+  color: #475569;
+  margin: 6px 0 10px;
+}
+
+.trade-legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+
+.trade-legend i.hollow {
+  background: #fff !important;
+  border: 1.5px solid #64748b;
+  border-radius: 50%;
+}
+
+.trade-multi {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.trade-unavail {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 6px;
+  padding: 1.25rem;
+  color: #64748b;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trade-unavail b {
+  display: block;
+  font-size: 0.92rem;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.trade-callout {
+  padding: 0.65rem 0.95rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.trade-callout.neutral {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #64748b;
+  color: #334155;
+}
+
+.trade-callout.warn {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #f59e0b;
+  color: #92400e;
+}
+
+.pfd-mobile-mode-card {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .pfd-mobile-mode-card {
+    display: block !important;
+  }
+  #sec3StickyGeoHost,
+  .sec3-sticky-geo-host {
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
+  }
+  .enso-figure-footer {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+  .enso-figure-footer-note {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .enso-figure-footer-actions {
+    width: 100% !important;
+    align-items: flex-start !important;
+    margin-left: 0 !important;
+  }
+  html, body {
+    max-width: 100vw !important;
+  }
+  #quarto-content, #quarto-document-content, main, .page-columns {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  #quarto-header, #quarto-header nav, #quarto-header .navbar-container {
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .ke-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0.85rem 0.65rem !important;
+  }
+  .ke-hero-eyebrow,
+  .ke-hero-eyebrow > div {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .version-switcher-pill {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  #versionSwitcher {
+    max-width: 140px !important;
+    min-width: 0 !important;
+    text-overflow: ellipsis !important;
+  }
+  .brief-kpi-grid,
+  .metric-strip,
+  .baseline-kpi-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .brief-kpi-card,
+  .metric-tile {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+  .executive-brief-container {
+    padding: 0.75rem !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+  }
+  .sub-metric,
+  .enso-fold-actions,
+  details summary {
+    flex-wrap: wrap !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .driver-label {
+    white-space: normal !important;
+  }
+  .kpi-card-header {
+    flex-wrap: wrap !important;
+  }
+  .consensus-ratio, .consensus-ci, .compound-transition {
+    flex-wrap: wrap !important;
+  }
+  .fb-drawer:not(.open),
+  #plotControlsDrawer:not(.open),
+  #provenanceDrawer:not(.open),
+  #provenance-drawer:not(.open),
+  #provenance-drawer[aria-hidden="true"],
+  .plot-features-drawer:not(.open) {
+    display: none !important;
+  }
+  .fb-drawer {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  .enso-tooltip-wrap {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .enso-tooltip-pop,
+  .enso-tooltip-bubble {
+    display: none !important;
+  }
+  .enso-tooltip-wrap:hover .enso-tooltip-pop,
+  .enso-tooltip-wrap:focus-within .enso-tooltip-pop,
+  .enso-tooltip-wrap:hover .enso-tooltip-bubble,
+  .enso-tooltip-wrap:focus-within .enso-tooltip-bubble {
+    display: block !important;
+    max-width: min(260px, 85vw) !important;
+    right: 0 !important;
+    left: auto !important;
+    box-sizing: border-box !important;
+  }
+  .rain-panel {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+  }
+  .dataset-catalog-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .dataset-card,
+  .prov-card,
+  .methods-formula-card,
+  .methods-formula-box,
+  .enso-figure-card,
+  .tab-pane,
+  .tab-pane > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere !important;
+  }
+  .methods-formula-grid,
+  #tab-methods [style*="grid-template-columns"],
+  #tab-graphs [style*="grid-template-columns"],
+  #tab-outlook [style*="grid-template-columns"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #iriForecastPlumeHost div,
+  .iri-plume-container div,
+  #tab-graphs .enso-figure-card div,
+  #tab-outlook .enso-figure-card div {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  #iriForecastPlumeHost [style*="display: flex"],
+  #iriForecastPlumeHost [style*="display:flex"],
+  #iriForecastPlumeHost [style*="inline-flex"] {
+    flex-wrap: wrap !important;
+  }
+  .btn-plume-pill,
+  #tab-graphs .badge {
+    white-space: normal !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #tab-graphs svg,
+  #tab-outlook svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .plot-features-sidebar-btn {
+    top: auto !important;
+    bottom: 48px !important;
+    transform: none !important;
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+  }
+  .review-mode-sidebar-btn {
+    top: auto !important;
+    bottom: 10px !important;
+    transform: none !important;
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+  }
+
+  /* Phone sticky shell (§P2.1 / Mockup T6) */
+  .ke-sticky-shell {
+    max-height: none !important;
+    overflow-y: visible !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 4px 8px !important;
+  }
+  .ke-sticky-mobile-compact {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 4px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .ke-sticky-shell.is-collapsed .ke-sticky-mobile-compact {
+    display: flex !important;
+  }
+  .ke-mobile-summary {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #1e293b;
+    font-size: 13px;
+  }
+  .ke-mobile-change-btn {
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #0284c7;
+    border-radius: 6px;
+    min-height: 34px;
+    padding: 0 12px;
+    cursor: pointer;
+  }
+  .ke-sticky-shell.is-collapsed:not(.m-expanded) .ke-sticky-top-row,
+  .ke-sticky-shell.is-collapsed:not(.m-expanded) .ke-sticky-outlook-wrapper {
+    display: none !important;
+  }
+  .ke-sticky-top-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    padding: 6px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #globalControlsHost, .ke-sticky-controls-group {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #globalControlsHost .cell:first-child, .ke-sticky-controls-group .cell:first-child {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+  #globalControlsHost .cell, .ke-sticky-controls-group .cell {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  #globalControlsHost form[class^="oi-"], .ke-sticky-controls-group form[class^="oi-"] {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 2px !important;
+  }
+  #globalControlsHost select, .ke-sticky-controls-group select {
+    width: 100% !important;
+    min-height: 44px !important;
+    box-sizing: border-box !important;
+    font-size: 14.5px !important;
+  }
+  #audienceModeToggle {
+    display: none !important;
+  }
+  .ke-sticky-outlook-row {
+    font-size: 11.5px !important;
+    padding: 4px 6px !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+  }
+  .ke-tab-nav {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x proximity !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 4px !important;
+    padding: 4px 0 !important;
+  }
+  .ke-tab-btn {
+    scroll-snap-align: start !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+  .ke-sticky-subnav-wrapper {
+    position: relative !important;
+  }
+  .ke-sticky-subnav-wrapper.has-overflow-left::before,
+  .ke-sticky-subnav-wrapper.has-overflow-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    pointer-events: none;
+    z-index: 3;
+  }
+  .ke-sticky-subnav-wrapper.has-overflow-left::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(248, 250, 252, 0.96), rgba(248, 250, 252, 0));
+  }
+  .ke-sticky-subnav-wrapper.has-overflow-right::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(248, 250, 252, 0.96), rgba(248, 250, 252, 0));
+  }
+  .ke-sticky-subnav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x proximity !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 8px !important;
+    padding: 4px 0 !important;
+  }
+  .ke-subnav-btn,
+  .ke-subtab-btn {
+    scroll-snap-align: start !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .enso-figure-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--enso-space-2);
+  }
+  .enso-figure-header-main {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+  .enso-figure-header-controls {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #subtab-trade .enso-figure-header-controls {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .fig31-pill-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .fig31-pill-btn {
+    white-space: normal;
+    text-align: center;
+    flex: 1 1 auto;
+    font-size: 0.72rem;
+    padding: 4px 6px;
+  }
+  #subtab-trade .enso-section-eyebrow,
+  #subtab-trade .enso-figure-number,
+  #subtab-trade .rationale-pill,
+  #subtab-trade .rationale-tag,
+  #subtab-trade .btn-dataset-jump,
+  #subtab-trade .dual-range-widget span,
+  #subtab-trade .dual-range-widget button,
+  #subtab-trade .trade-cbar span {
+    font-size: max(12px, 0.75rem) !important;
+  }
+  #subtab-trade .trade-kpi .trade-kpi-value,
+  #subtab-trade .trade-kpi .kpi-v {
+    white-space: nowrap !important;
+    font-size: 1.02rem !important;
+  }
+  #subtab-trade .trade-kpi.trade-unavail-kpi .trade-kpi-value,
+  #subtab-trade .trade-kpi.na .kpi-v {
+    font-size: 0.88rem !important;
+  }
+  #subtab-trade button,
+  #subtab-trade select,
+  #subtab-trade summary,
+  #subtab-trade .fig31-pill-btn,
+  #subtab-trade input[type="range"],
+  #subtab-trade a.enso-source-method-button,
+  #subtab-trade .enso-source-method-button {
+    min-height: 44px !important;
+    box-sizing: border-box !important;
+  }
+  #subtab-trade .fig31-pill-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+  }
+  #subtab-trade .dual-range-widget {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 44px !important;
+    gap: 6px !important;
+    box-sizing: border-box !important;
+  }
+  #subtab-trade .dual-range-widget > div {
+    height: 44px !important;
+    min-height: 44px !important;
+    flex: 1 1 130px !important;
+    min-width: 110px !important;
+    max-width: 100% !important;
+  }
+  #subtab-trade .dual-range-widget input[type="range"] {
+    height: 44px !important;
+    min-height: 44px !important;
+  }
+  .trade-cbar {
+    padding: 10px !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .trade-cbar #tradeCommodityInputSlot,
+  .trade-cbar form,
+  #subtab-trade .trade-grp {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px !important;
+    box-sizing: border-box !important;
+  }
+  .trade-cbar select,
+  #subtab-trade select {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 44px !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+  }
+  .trade-kpis {
+    grid-template-columns: 1fr 1fr;
+  }
+  .trade-kpis .trade-kpi:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+  .trade-multi {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  #subtab-trade {
+    padding-bottom: 120px !important;
+  }
+}
+
+.trade-grp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.trade-lab {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+}
+
+
 
 

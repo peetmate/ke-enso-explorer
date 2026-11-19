@@ -1,11 +1,11 @@
 {
   "name": "KE-enso-explorer",
   "title": "ENSO Explorer — Kenya",
-  "version": "3.13.0",
-  "versionDisplay": "v3.13.0",
-  "build": "303111301",
-  "releaseDate": "2026-11-13",
-  "lastUpdated": "2026-11-13",
+  "version": "3.14.0",
+  "versionDisplay": "v3.14.0",
+  "build": "303111703",
+  "releaseDate": "2026-11-14",
+  "lastUpdated": "2026-11-17",
   "dataVintage": "2026-10",
   "authors": [
     "Pete Steward"
@@ -14,11 +14,52 @@
   "implementationPlan": "REVIEW_TRIAGE_AND_PLAN_2026-11-03.md",
   "availableVersions": [
     {
-      "id": "v3.13",
-      "version": "v3.13.0",
-      "label": "v3.13.0 (Current — Nov 2026)",
+      "id": "v3.14",
+      "version": "v3.14.0",
+      "label": "v3.14.0 (Current — Nov 2026)",
       "url": "notebook_v3.html",
       "status": "active",
+      "date": "2026-11-17",
+      "build": "303111703",
+      "description": "Kenya-Wide Food Trade Telemetry & Phone Ergonomics Release: Introduces Sub-section 4.5 (Kenya-wide food trade) integrating FAOSTAT and UN Comtrade bilateral trade series across ten agricultural commodities (Figures 4.7–4.10 and Table 4.6), quantifying national import dependency, cross-border partner concentration, and aggregate caloric exposure; adds Method 07 and comprehensive cross-border trade boundaries in Section 6; and delivers an ergonomic responsive phone navigation shell with collapsible controls and page-level overflow elimination.",
+      "highlights": [
+        "Figure 4.7 (Production, Imports & Exports): Small multiples on shared physical tonnes scale with staple import dependency, hollow dots for unobserved years, and optional ENSO telemetry strip.",
+        "Figure 4.8 & Table 4.6 (Bilateral Trade Origins): Ranked partner bars and 100% stacked partner share timelines identifying primary cross-border supply origins with interactive Charts/Table toggle.",
+        "Figure 4.9 (Export Earnings vs Import Bill): Macro-economic staple and export cash crop baskets comparing net foreign exchange flows across complete reporting years (2013, 2015–2024).",
+        "Figure 4.10 (Macroeconomic Context): Governed display policy for global benchmark prices, horticulture exports, and exchange rates with official source linkages.",
+        "Phone Ergonomics & Sticky Bar (P2 / Mockup T6): Responsive 2-column controls collapsing to a compact summary bar during scrolling, horizontal scroll-snap tabs, and zero horizontal page overflow."
+      ],
+      "categories": [
+        {
+          "title": "Macro-Economic Trade Telemetry",
+          "icon": "TRADE",
+          "items": [
+            "Section 4.5 Kenya-Wide Food Trade: 10 commodities across production, trade flows, and apparent balances.",
+            "Bilateral Customs Origins: Top trading partners and cross-border import dependencies.",
+            "Caloric Import Baskets: Ratio of staple imports to domestic production across complete reporting years."
+          ]
+        },
+        {
+          "title": "Mobile UX & Responsive Layout",
+          "icon": "MOBILE",
+          "items": [
+            "Phone Sticky Shell: 2-column controls collapsing to compact summary after scrolling.",
+            "Zero Page Overflow: Strict documentElement.scrollWidth <= 390px on phones."
+          ]
+        }
+      ],
+      "decisions": [
+        "D64",
+        "D65",
+        "D66"
+      ]
+    },
+    {
+      "id": "v3.13",
+      "version": "v3.13.0",
+      "label": "v3.13.0 (Nov 2026 — 20m SAR Flood Raster & Riverine Hotspots)",
+      "url": "notebook_v3.html?v=3.13.0",
+      "status": "archived",
       "date": "2026-11-13",
       "build": "303111301",
       "description": "High-Resolution Copernicus GFM 20m SAR Flood Raster & Riverine Hotspot Release: Replaces coarse sub-county polygon vectors in Section 4.3 (Figure 4.5) with direct 20m Sentinel-1 SAR satellite radar flood inundation overlays across Esri Satellite, Street, and OpenStreetMap basemaps; integrates verified KE-58 named riverine flood hotspots with KFSSG/NDMA/KMD documentary citations; and eliminates cross-section redundancy by refocusing Section 3.3 on physical flood hydrology dynamics with a cross-section navigation bridge to Section 4.3 asset exposure.",

@@ -78,7 +78,16 @@
   "kenya-trade-macro": "kenya-trade-macro",
   "kenya_trade_macro": "kenya-trade-macro",
   "kenya-trade-partners": "kenya-trade-partners",
-  "kenya_trade_partners": "kenya-trade-partners"
+  "kenya_trade_partners": "kenya-trade-partners",
+  "kenya-trade-production": "kenya-trade-production",
+  "kenya_trade_production": "kenya-trade-production",
+  "kenya-wdi-exchange-rate": "kenya-wdi-exchange-rate",
+  "kenya_wdi_fx": "kenya-wdi-exchange-rate",
+  "world_bank_wdi_fx": "kenya-wdi-exchange-rate",
+  "kenya-faostat-trade-balances": "kenya-faostat-trade-balances",
+  "kenya_faostat_trade_balances": "kenya-faostat-trade-balances",
+  "kenya-fews-retail-prices": "kenya-fews-retail-prices",
+  "kenya_fews_retail_prices": "kenya-fews-retail-prices"
  },
  "categories": [
   {
@@ -7087,21 +7096,41 @@
    "state_basis": "local-draft",
    "hosting": "unknown",
    "settled": false,
-   "summary": "Annual ten-commodity panel combining FAOSTAT trade with separately scoped food balances, CBK export totals and exchange rates, and World Bank annual benchmark prices. Requested grid 1961–2025; actual coverage varies by field and commodity.",
+   "summary": "Annual ten-commodity panel combining FAOSTAT trade with separately scoped food balances, IMF IFS exchange rates via World Bank WDI (PA.NUS.FCRF), and World Bank annual benchmark prices. Requested grid 1961–2025; actual coverage varies by field and commodity.",
    "licence": {
     "id": "LicenseRef-Source-Specific",
-    "url": null,
+    "url": "https://www.fao.org/contact-us/terms/db-terms-of-use/en/",
     "attribution": null,
     "attribution_required": false,
     "attribution_verbatim_required": false,
-    "access": "public",
-    "access_note": null
+    "access": "non-public",
+    "access_note": "Local acquired artifact, not a published CDH asset. Access paths below are repository-relative. External use requires the component-specific decisions in governance/redistribution_register.json; schema validation is not permission."
    },
    "producer": [
     {
-     "organization": "FAO; Central Bank of Kenya; World Bank",
+     "organization": "Food and Agriculture Organization of the United Nations",
      "name": null,
-     "url": "https://www.fao.org/faostat/en/#data/TCL",
+     "url": "https://www.fao.org/faostat/",
+     "email": null,
+     "roles": [
+      "producer",
+      "licensor"
+     ]
+    },
+    {
+     "organization": "United Nations Statistics Division",
+     "name": null,
+     "url": "https://comtradeplus.un.org/",
+     "email": null,
+     "roles": [
+      "producer",
+      "licensor"
+     ]
+    },
+    {
+     "organization": "World Bank",
+     "name": null,
+     "url": "https://www.worldbank.org/en/research/commodity-markets",
      "email": null,
      "roles": [
       "producer"
@@ -7109,12 +7138,12 @@
     }
    ],
    "citation": {
-    "text": "FAO; Central Bank of Kenya; World Bank (2026) Kenya national agricultural trade and macroeconomic context.",
+    "text": "FAO; UN Comtrade; IMF / World Bank (2026) Kenya national agricultural trade and macroeconomic context.",
     "url": "https://www.fao.org/faostat/en/#data/TCL",
     "dois": [],
     "accessed": "2026-11-05",
     "authors": [
-     "FAO; Central Bank of Kenya; World Bank"
+     "FAO; UN Comtrade; IMF / World Bank"
     ],
     "year": "2026",
     "title": "Kenya national agricultural trade and macroeconomic context",
@@ -7122,22 +7151,40 @@
    },
    "caveats": [
     "TCL quantities are tonnes and values converted from 1000 USD to USD. FBS quantities are converted from 1000 tonnes and retained in separate columns because their commodity scopes differ. Sugar TCL uses refined sugar code 164. No paddy-to-milled rice, sugarcane-to-sugar, or green-to-made tea conversion is assumed. Supply and import dependency require complete matching production and trade observations. A row in the requested year grid does not imply observations. Missing values are null. Cut flowers have no TCL series; cut roses use reported Comtrade World totals for HS060311. Signed apparent_balance_t retains negative accounting residuals; net_supply_t and dependency are null where that balance is negative, pending stock/calendar reconciliation.",
-    "CBK exports remain KES totals separate from TCL USD values; FX is the unweighted mean of twelve monthly averages. Total horticulture is not assigned to flowers or avocados. Pink Sheet prices are global benchmarks, not realized Kenya prices. FAOSTAT and World Bank require attribution; CBK terms are source-specific.",
-    "Climate associations require controls for global prices, exchange rates, policy and reporting changes; trade alone cannot attribute impacts to ENSO."
+    "The Explorer serves the filtered display extract (kenya_trade_macro_display.parquet) for Figures 4.7 and 4.9. Exchange-rate context in Figure 4.10 uses the published IMF International Financial Statistics annual period average via World Bank WDI (PA.NUS.FCRF, CC BY 4.0). Pink Sheet prices are global benchmarks, not realized Kenya prices (display pending source terms). Central Bank of Kenya columns in the local archive are not displayed in the application.",
+    "Climate associations require controls for global prices, exchange rates, policy and reporting changes; trade alone cannot attribute impacts to ENSO. Source accessed 2026-11-05. Rice trade uses TCL items 31 (milled) plus 32 (broken); paddy production is withheld. Licensor roles apply only to the named providers’ components and do not clear the combined file. World Bank Pink Sheet benchmark decisions remain unresolved."
    ],
    "avoid": [
-    "Causal attribution of trade changes to ENSO alone"
+    {
+     "use": "Causal attribution of trade changes to ENSO alone",
+     "reason": "Product definitions, source coverage and observational limits are described in the dataset note."
+    }
    ],
    "intended_uses": [
     "National trade context and exploratory climate association"
    ],
    "coverage": {
-    "spatial": "Kenya — National annual",
+    "spatial": "kenya — Kenya national aggregate",
     "temporal": "1961-01-01 to 2025-12-31",
     "crs": null,
     "bbox": null
    },
-   "assets": [],
+   "assets": [
+    {
+     "name": "kenya-trade-macro",
+     "description": null,
+     "https": null,
+     "s3": null,
+     "other_locations": [
+      "data/KE-enso-explorer/kenya_trade_macro.parquet"
+     ],
+     "media_type": "application/vnd.apache.parquet",
+     "href_template": null,
+     "file_size": null,
+     "nodata": null,
+     "processing_steps": []
+    }
+   ],
    "upstream": [
     {
      "title": "FAOSTAT trade",
@@ -7148,12 +7195,8 @@
      "url": "https://www.fao.org/faostat/en/#data/FBS"
     },
     {
-     "title": "CBK principal exports",
-     "url": "https://www.centralbank.go.ke/principal-exports-volume-value-unit-prices/"
-    },
-    {
-     "title": "CBK monthly average exchange rates",
-     "url": "https://www.centralbank.go.ke/statistics/exchange-rates/"
+     "title": "World Bank WDI official exchange rate (PA.NUS.FCRF)",
+     "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE"
     },
     {
      "title": "World Bank Pink Sheet",
@@ -7165,6 +7208,14 @@
     }
    ],
    "processing": [
+    {
+     "id": "source",
+     "description": "Published source statistics listed in the extraction step; no new measurements collected by this pipeline.",
+     "date": null,
+     "code": null,
+     "code_url": null,
+     "derived_from": []
+    },
     {
      "id": "annual-trade-aggregation",
      "description": "Rebuild through scripts/update_trade_data.py; validation before promotion, source revision checks through scripts/check_upstream_sources.py. Cached source responses remain local.",
@@ -7181,12 +7232,8 @@
        "url": "https://www.fao.org/faostat/en/#data/FBS"
       },
       {
-       "title": "CBK principal exports",
-       "url": "https://www.centralbank.go.ke/principal-exports-volume-value-unit-prices/"
-      },
-      {
-       "title": "CBK monthly average exchange rates",
-       "url": "https://www.centralbank.go.ke/statistics/exchange-rates/"
+       "title": "World Bank WDI official exchange rate (PA.NUS.FCRF)",
+       "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE"
       },
       {
        "title": "World Bank Pink Sheet",
@@ -7209,7 +7256,10 @@
      "trade",
      "agriculture"
     ],
-    "domain": [],
+    "domain": [
+     "agricultural-production",
+     "socioeconomic"
+    ],
     "schema_version": "v0.3.0",
     "created": null,
     "updated": null
@@ -7227,9 +7277,9 @@
     ],
     "built_by": "scripts/update_trade_data.py",
     "refresh_command": "python3 scripts/update_trade_data.py --refresh",
-    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_faostat,trade_comtrade,trade_cbk,trade_wb,trade_production",
+    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_faostat,trade_comtrade,trade_wdi_fx,trade_wb,trade_production",
     "related": [],
-    "search_terms": "kenya national imports exports trade faostat cbk comtrade prices"
+    "search_terms": "kenya national imports exports trade faostat comtrade prices"
    },
    "gates": [],
    "gaps": [
@@ -7251,12 +7301,12 @@
    "summary": "Annual country partner aggregates for the specified ten-commodity HS basket, requested 2010–2025. Reporter years 2011, 2012 and 2014 are unavailable. Native HS editions and incomplete commodity coverage remain explicit.",
    "licence": {
     "id": "LicenseRef-UN-Comtrade",
-    "url": null,
+    "url": "https://uncomtrade.org/docs/re-dissemination-of-data/",
     "attribution": null,
     "attribution_required": false,
     "attribution_verbatim_required": false,
-    "access": "public",
-    "access_note": null
+    "access": "non-public",
+    "access_note": "Local acquired artifact, not a published CDH asset. Access paths below are repository-relative. External use requires the component-specific decisions in governance/redistribution_register.json; schema validation is not permission."
    },
    "producer": [
     {
@@ -7265,7 +7315,8 @@
      "url": "https://comtradeplus.un.org/",
      "email": null,
      "roles": [
-      "producer"
+      "producer",
+      "licensor"
      ]
     }
    ],
@@ -7285,21 +7336,39 @@
     "Source: UN Comtrade. Raw responses are cached locally and excluded from redistribution. Only country-level basket aggregates, unit values and shares are served. See UN Comtrade re-dissemination terms; a small Parquet file is not itself a legal exemption.",
     "Partner shares use reported World value, not the sum of selected partners. Special aggregate partners are excluded. Missing countries or commodity codes are not zero flows. Incomplete multi-code commodity-years are omitted. Transport mode is unknown and never inferred from geography. HS2007-or-earlier non-durum wheat includes seed (including Kenya 2013); the basket uses native HS classifications and carries HS editions.",
     "Net weights may be estimated; the weight_estimated flag is retained. Values are nominal USD, weights metric tonnes. Annual month is null. Bilateral figures and FAOSTAT totals have different commodity scopes and cannot be treated as directly interchangeable.",
-    "Partner ISO codes come from the official UN Comtrade reference, not generic ISO numeric codes. Customs territories can differ from sovereign boundaries: France includes Monaco; Switzerland includes Liechtenstein; USA includes Puerto Rico and US Virgin Islands. Original partner codes and scope notes are retained."
+    "Partner ISO codes come from the official UN Comtrade reference, not generic ISO numeric codes. Customs territories can differ from sovereign boundaries: France includes Monaco; Switzerland includes Liechtenstein; USA includes Puerto Rico and US Virgin Islands. Original partner codes and scope notes are retained. Source accessed 2026-11-05. Provider hosting confirmation is recorded on 16 November 2026; database-wide original-record count, archived versions and the exact output decision must still be checked before release."
    ],
    "avoid": [
-    "Causal attribution of trade changes to ENSO alone"
+    {
+     "use": "Causal attribution of trade changes to ENSO alone",
+     "reason": "Product definitions, source coverage and observational limits are described in the dataset note."
+    }
    ],
    "intended_uses": [
     "National trade context and exploratory climate association"
    ],
    "coverage": {
-    "spatial": "Kenya — National annual",
+    "spatial": "kenya — Kenya national aggregate",
     "temporal": "2010-01-01 to 2025-12-31",
     "crs": null,
     "bbox": null
    },
-   "assets": [],
+   "assets": [
+    {
+     "name": "kenya-trade-partners",
+     "description": null,
+     "https": null,
+     "s3": null,
+     "other_locations": [
+      "data/KE-enso-explorer/kenya_trade_partners.parquet"
+     ],
+     "media_type": "application/vnd.apache.parquet",
+     "href_template": null,
+     "file_size": null,
+     "nodata": null,
+     "processing_steps": []
+    }
+   ],
    "upstream": [
     {
      "title": "UN Comtrade API",
@@ -7315,6 +7384,14 @@
     }
    ],
    "processing": [
+    {
+     "id": "source",
+     "description": "Published source statistics listed in the extraction step; no new measurements collected by this pipeline.",
+     "date": null,
+     "code": null,
+     "code_url": null,
+     "derived_from": []
+    },
     {
      "id": "annual-trade-aggregation",
      "description": "Rebuild through scripts/update_trade_data.py; validation before promotion, source revision checks through scripts/check_upstream_sources.py. Cached source responses remain local.",
@@ -7347,7 +7424,10 @@
      "trade",
      "agriculture"
     ],
-    "domain": [],
+    "domain": [
+     "agricultural-production",
+     "socioeconomic"
+    ],
     "schema_version": "v0.3.0",
     "created": null,
     "updated": null
@@ -7365,9 +7445,629 @@
     ],
     "built_by": "scripts/update_trade_data.py",
     "refresh_command": "python3 scripts/update_trade_data.py --refresh",
-    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_faostat,trade_comtrade,trade_cbk,trade_wb,trade_production",
+    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_faostat,trade_comtrade,trade_wdi_fx,trade_wb,trade_production",
     "related": [],
-    "search_terms": "kenya national imports exports trade faostat cbk comtrade prices"
+    "search_terms": "kenya national imports exports trade faostat comtrade partners"
+   },
+   "gates": [],
+   "gaps": [
+    "Held as a notebook-local draft record (data/KE-enso-explorer/_sources/cdh_local/); not yet moved into hazards_prototype/metadata/cdh/ nor submitted to cdh-catalog."
+   ]
+  },
+  {
+   "key": "kenya-trade-production",
+   "aliases": [
+    "kenya_trade_production"
+   ],
+   "title": "Kenya agricultural production supplement (FAOSTAT QCL)",
+   "title_source": "cdh",
+   "category": "markets",
+   "state": "draft",
+   "state_basis": "local-draft",
+   "hosting": "unknown",
+   "settled": false,
+   "summary": "Annual agricultural production series from FAOSTAT Crops and Livestock Products (QCL) for commodities in the national trade basket (1961–2024). Includes explicit compatibility flags indicating whether production product definitions align with macro trade classifications.",
+   "licence": {
+    "id": "CC-BY-4.0",
+    "url": null,
+    "attribution": null,
+    "attribution_required": true,
+    "attribution_verbatim_required": false,
+    "access": "non-public",
+    "access_note": "Local acquired artifact, not a published CDH asset. Access paths below are repository-relative. External use requires the component-specific decisions in governance/redistribution_register.json; schema validation is not permission."
+   },
+   "producer": [
+    {
+     "organization": "Food and Agriculture Organization of the United Nations (FAO)",
+     "name": null,
+     "url": "https://www.fao.org/faostat/en/#data/QCL",
+     "email": null,
+     "roles": [
+      "producer",
+      "licensor"
+     ]
+    }
+   ],
+   "citation": {
+    "text": "Food and Agriculture Organization of the United Nations (2025) FAOSTAT Crops and livestock products (QCL) — Kenya.",
+    "url": "https://www.fao.org/faostat/en/#data/QCL",
+    "dois": [],
+    "accessed": "2026-11-06",
+    "authors": [
+     "Food and Agriculture Organization of the United Nations"
+    ],
+    "year": "2025",
+    "title": "FAOSTAT Crops and livestock products (QCL) — Kenya",
+    "publisher": null
+   },
+   "caveats": [
+    "Source: FAOSTAT Crops and Livestock Products (QCL). Production tonnes for primary crops matching the national trade basket. Production definitions are strictly evaluated for equivalence with macro trade definitions: wheat, maize, dry beans, green coffee, and avocados share identical primary product bases (compatible_with_macro_trade = true). In contrast, rice is paddy (item 27), sugar raw centrifugal (item 162), and tea green leaves (item 667) or packaged tea (item 675), which cannot be compared directly with processed or refined trade quantities. No cut flower or palm oil production series exists for Kenya in FAOSTAT QCL. Values are metric tonnes; missing observations remain null. Source accessed 2026-11-06. FAO. 2025. FAOSTAT: Production: Crops and livestock products (QCL). Accessed 2026-11-06. https://www.fao.org/faostat/en/#data/QCL. Licence: CC BY 4.0. Retain FAO credit, domain notices, changes, CC BY 4.0 and additional FAO terms. No commercial promotion, misrepresentation or implied endorsement. https://creativecommons.org/licenses/by/4.0/ https://www.fao.org/contact-us/terms/db-terms-of-use/en/"
+   ],
+   "avoid": [
+    {
+     "use": "Converting paddy rice, raw sugar, or tea leaves to processed trade quantities without verified factors",
+     "reason": "Product definitions, source coverage and observational limits are described in the dataset note."
+    }
+   ],
+   "intended_uses": [
+    "Production context for national apparent balance and import dependency"
+   ],
+   "coverage": {
+    "spatial": "kenya — Kenya national aggregate",
+    "temporal": "1961-01-01 to 2024-12-31",
+    "crs": null,
+    "bbox": null
+   },
+   "assets": [
+    {
+     "name": "kenya-trade-production",
+     "description": null,
+     "https": null,
+     "s3": null,
+     "other_locations": [
+      "data/KE-enso-explorer/kenya_trade_production.parquet"
+     ],
+     "media_type": "application/vnd.apache.parquet",
+     "href_template": null,
+     "file_size": null,
+     "nodata": null,
+     "processing_steps": []
+    },
+    {
+     "name": "kenya-trade-production-credited",
+     "description": null,
+     "https": null,
+     "s3": null,
+     "other_locations": [
+      "data/KE-enso-explorer/reviewed/kenya_trade_production.parquet"
+     ],
+     "media_type": "application/vnd.apache.parquet",
+     "href_template": null,
+     "file_size": null,
+     "nodata": null,
+     "processing_steps": []
+    }
+   ],
+   "upstream": [
+    {
+     "title": "FAOSTAT Crops and livestock products",
+     "url": "https://www.fao.org/faostat/en/#data/QCL"
+    }
+   ],
+   "processing": [
+    {
+     "id": "source",
+     "description": "Published source statistics listed in the extraction step; no new measurements collected by this pipeline.",
+     "date": null,
+     "code": null,
+     "code_url": null,
+     "derived_from": []
+    },
+    {
+     "id": "faostat-qcl-extract",
+     "description": "Rebuild through scripts/update_trade_data.py; validation before promotion, source revision checks through scripts/check_upstream_sources.py. Cached source responses remain local.",
+     "date": "2026-11-06",
+     "code": null,
+     "code_url": null,
+     "derived_from": [
+      {
+       "title": "FAOSTAT Crops and livestock products",
+       "url": "https://www.fao.org/faostat/en/#data/QCL"
+      }
+     ]
+    }
+   ],
+   "technical": {
+    "dimensions": [],
+    "variables": [],
+    "joins": [],
+    "resource_type": "dataset",
+    "keywords": [
+     "Kenya",
+     "agriculture",
+     "production",
+     "crop production",
+     "FAOSTAT"
+    ],
+    "domain": [
+     "agricultural-production",
+     "socioeconomic"
+    ],
+    "schema_version": "v0.3.0",
+    "created": null,
+    "updated": null
+   },
+   "record": {
+    "cdh": "atlas_notebooks:data/KE-enso-explorer/_sources/cdh_local/kenya-trade-production.yaml",
+    "catalogue": null,
+    "catalog_pr": null,
+    "catalog_pr_state": null,
+    "published_record": null
+   },
+   "notebook": {
+    "files": [
+     "data/KE-enso-explorer/kenya_trade_production.parquet"
+    ],
+    "built_by": "scripts/update_trade_data.py",
+    "refresh_command": "python3 scripts/update_trade_data.py --refresh",
+    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_qcl",
+    "related": [],
+    "search_terms": "kenya faostat qcl crop production harvest tonnes maize wheat beans coffee avocados"
+   },
+   "gates": [],
+   "gaps": [
+    "Held as a notebook-local draft record (data/KE-enso-explorer/_sources/cdh_local/); not yet moved into hazards_prototype/metadata/cdh/ nor submitted to cdh-catalog."
+   ]
+  },
+  {
+   "key": "kenya-wdi-exchange-rate",
+   "aliases": [
+    "kenya_wdi_fx",
+    "world_bank_wdi_fx"
+   ],
+   "title": "Kenya official exchange rate (IMF IFS via World Bank WDI PA.NUS.FCRF)",
+   "title_source": "cdh",
+   "category": "markets",
+   "state": "draft",
+   "state_basis": "local-draft",
+   "hosting": "unknown",
+   "settled": false,
+   "summary": "Annual official exchange rate for Kenya (Kenya shillings per US dollar, period average, 1960–2025) from the International Monetary Fund, International Financial Statistics, distributed via World Bank World Development Indicators (series PA.NUS.FCRF).",
+   "licence": {
+    "id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "Source: International Monetary Fund, International Financial Statistics, via World Bank World Development Indicators (PA.NUS.FCRF). Licence: CC BY 4.0. Changes: Kenya annual values extracted; fields renamed.",
+    "attribution_required": true,
+    "attribution_verbatim_required": false,
+    "access": "public",
+    "access_note": null
+   },
+   "producer": [
+    {
+     "organization": "International Monetary Fund",
+     "name": null,
+     "url": "https://data.imf.org/",
+     "email": null,
+     "roles": [
+      "producer"
+     ]
+    },
+    {
+     "organization": "World Bank",
+     "name": null,
+     "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE",
+     "email": null,
+     "roles": [
+      "distributor",
+      "licensor"
+     ]
+    }
+   ],
+   "citation": {
+    "text": "International Monetary Fund, International Financial Statistics and data files, via World Bank World Development Indicators (2026) World Development Indicators: Official exchange rate (LCU per US$, period average) — Kenya (PA.NUS.FCRF).",
+    "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE",
+    "dois": [],
+    "accessed": "2026-11-17",
+    "authors": [
+     "International Monetary Fund, International Financial Statistics and data files, via World Bank World Development Indicators"
+    ],
+    "year": "2026",
+    "title": "World Development Indicators: Official exchange rate (LCU per US$, period average) — Kenya (PA.NUS.FCRF)",
+    "publisher": null
+   },
+   "caveats": [
+    "Source: International Monetary Fund, International Financial Statistics, via World Bank World Development Indicators (series PA.NUS.FCRF). Licence: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Changes: Kenya annual observations sorted by year; fields renamed; missing values left blank. Required attribution: \"Source: International Monetary Fund, International Financial Statistics, via World Bank World Development Indicators (PA.NUS.FCRF). Licence: CC BY 4.0. Changes: Kenya annual values extracted; fields renamed.\"",
+    "Official exchange rate, period average, nominal Kenya shillings per US dollar (1960–2025, 66 annual observations). Values in Figures 4.7 to 4.9 are reported in US dollars; no figure in Sub-section 4.5 is converted with this series. Source accessed 2026-11-17."
+   ],
+   "avoid": [
+    {
+     "use": "Converting annual FAOSTAT or UN Comtrade US-dollar totals into transaction-weighted Kenya shilling values",
+     "reason": "Period-average official exchange rates do not capture intra-year shipment timing or commercial settlement rates."
+    }
+   ],
+   "intended_uses": [
+    "Nominal exchange-rate context alongside US-dollar agricultural trade series"
+   ],
+   "coverage": {
+    "spatial": "kenya — Kenya national aggregate",
+    "temporal": "1960-01-01 to 2025-12-31",
+    "crs": null,
+    "bbox": null
+   },
+   "assets": [
+    {
+     "name": "kenya-wdi-exchange-rate",
+     "description": null,
+     "https": null,
+     "s3": null,
+     "other_locations": [
+      "data/KE-enso-explorer/kenya_wdi_fx.csv"
+     ],
+     "media_type": "text/csv",
+     "href_template": null,
+     "file_size": null,
+     "nodata": null,
+     "processing_steps": []
+    }
+   ],
+   "upstream": [
+    {
+     "title": "World Bank World Development Indicators PA.NUS.FCRF (Kenya)",
+     "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE"
+    }
+   ],
+   "processing": [
+    {
+     "id": "source",
+     "description": "Published annual period-average exchange rate series from IMF International Financial Statistics via the World Bank WDI API.",
+     "date": null,
+     "code": null,
+     "code_url": null,
+     "derived_from": []
+    },
+    {
+     "id": "wdi-fx-extract",
+     "description": "Extract Kenya annual observations (1960–2025) through data/KE-enso-explorer/_sources/wdi_fx.py, sort by year, rename fields, and retain source, license_url and changes columns.",
+     "date": "2026-11-17",
+     "code": null,
+     "code_url": null,
+     "derived_from": [
+      {
+       "title": "World Bank World Development Indicators PA.NUS.FCRF (Kenya)",
+       "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE"
+      }
+     ]
+    }
+   ],
+   "technical": {
+    "dimensions": [],
+    "variables": [],
+    "joins": [],
+    "resource_type": "dataset",
+    "keywords": [
+     "Kenya",
+     "exchange rate",
+     "macroeconomic context",
+     "World Bank",
+     "IMF"
+    ],
+    "domain": [
+     "socioeconomic"
+    ],
+    "schema_version": "v0.3.0",
+    "created": null,
+    "updated": null
+   },
+   "record": {
+    "cdh": "atlas_notebooks:data/KE-enso-explorer/_sources/cdh_local/kenya-wdi-exchange-rate.yaml",
+    "catalogue": null,
+    "catalog_pr": null,
+    "catalog_pr_state": null,
+    "published_record": null
+   },
+   "notebook": {
+    "files": [
+     "data/KE-enso-explorer/kenya_wdi_fx.csv"
+    ],
+    "built_by": "data/KE-enso-explorer/_sources/wdi_fx.py",
+    "refresh_command": "python3 scripts/update_trade_data.py --refresh",
+    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_wdi_fx",
+    "related": [],
+    "search_terms": "kenya exchange rate kes usd imf ifs world bank wdi pa.nus.fcrf nominal currency"
+   },
+   "gates": [],
+   "gaps": [
+    "Held as a notebook-local draft record (data/KE-enso-explorer/_sources/cdh_local/); not yet moved into hazards_prototype/metadata/cdh/ nor submitted to cdh-catalog."
+   ]
+  },
+  {
+   "key": "kenya-faostat-trade-balances",
+   "aliases": [
+    "kenya_faostat_trade_balances"
+   ],
+   "title": "Kenya agricultural trade and food balances",
+   "title_source": "cdh",
+   "category": "markets",
+   "state": "draft",
+   "state_basis": "local-draft",
+   "hosting": "unknown",
+   "settled": false,
+   "summary": "Filtered national basket items and elements in the Kenya source files. Retained original units, flags and notes. Separate rice items and food-balance aggregates retain their source definitions. Missing observations are not imputed.",
+   "licence": {
+    "id": "CC-BY-4.0",
+    "url": "https://www.fao.org/contact-us/terms/db-terms-of-use/en/",
+    "attribution": null,
+    "attribution_required": true,
+    "attribution_verbatim_required": false,
+    "access": "non-public",
+    "access_note": "Local acquired artifact, not a published CDH asset. Access paths below are repository-relative. External use requires the component-specific decisions in governance/redistribution_register.json; schema validation is not permission."
+   },
+   "producer": [
+    {
+     "organization": "Food and Agriculture Organization of the United Nations (FAO)",
+     "name": null,
+     "url": "https://www.fao.org/faostat/",
+     "email": null,
+     "roles": [
+      "producer",
+      "licensor"
+     ]
+    }
+   ],
+   "citation": {
+    "text": "Food and Agriculture Organization of the United Nations (FAO) (2026) Kenya agricultural trade and food balances.",
+    "url": "https://www.fao.org/faostat/en/#data/TCL",
+    "dois": [],
+    "accessed": "2026-10-21",
+    "authors": [
+     "Food and Agriculture Organization of the United Nations (FAO)"
+    ],
+    "year": "2026",
+    "title": "Kenya agricultural trade and food balances",
+    "publisher": null
+   },
+   "caveats": [
+    "FAO. 2026. FAOSTAT: Trade: Crops and livestock products (TCL). Accessed 2026-11-04. https://www.fao.org/faostat/en/#data/TCL. Licence: CC BY 4.0. FAO. 2025. FAOSTAT: Food Balances: Food Balances (2010-) (FBS). Accessed 2026-11-04. https://www.fao.org/faostat/en/#data/FBS. Licence: CC BY 4.0. Retain FAO credit, domain notices, changes, CC BY 4.0 and additional FAO terms. No commercial promotion, misrepresentation or implied endorsement. https://creativecommons.org/licenses/by/4.0/ https://www.fao.org/contact-us/terms/db-terms-of-use/en/ FAOSTAT TCL identifies UNSD, Eurostat and national authorities as contributors to its statistical product."
+   ],
+   "avoid": [],
+   "intended_uses": [
+    "Source-attributed charts and generated-file distribution"
+   ],
+   "coverage": {
+    "spatial": "kenya — Kenya national aggregate",
+    "temporal": "1961-01-01 to 2024-12-31",
+    "crs": null,
+    "bbox": null
+   },
+   "assets": [
+    {
+     "name": "kenya-faostat-trade-balances",
+     "description": null,
+     "https": null,
+     "s3": null,
+     "other_locations": [
+      "data/KE-enso-explorer/reviewed/kenya_faostat_trade_balances.parquet"
+     ],
+     "media_type": "application/vnd.apache.parquet",
+     "href_template": null,
+     "file_size": null,
+     "nodata": null,
+     "processing_steps": []
+    }
+   ],
+   "upstream": [
+    {
+     "title": "Trade: Crops and livestock products",
+     "url": "https://www.fao.org/faostat/en/#data/TCL"
+    },
+    {
+     "title": "Food Balances: Food Balances (2010-)",
+     "url": "https://www.fao.org/faostat/en/#data/FBS"
+    }
+   ],
+   "processing": [
+    {
+     "id": "source",
+     "description": "Published observations from the source institutions identified in the extract step.",
+     "date": null,
+     "code": null,
+     "code_url": null,
+     "derived_from": []
+    },
+    {
+     "id": "extract",
+     "description": "Filtered national basket items and elements in the Kenya source files. Retained original units, flags and notes. Separate rice items and food-balance aggregates retain their source definitions. Missing observations are not imputed.",
+     "date": "2026-11-16",
+     "code": null,
+     "code_url": null,
+     "derived_from": [
+      {
+       "title": "Trade: Crops and livestock products",
+       "url": "https://www.fao.org/faostat/en/#data/TCL"
+      },
+      {
+       "title": "Food Balances: Food Balances (2010-)",
+       "url": "https://www.fao.org/faostat/en/#data/FBS"
+      }
+     ]
+    }
+   ],
+   "technical": {
+    "dimensions": [],
+    "variables": [],
+    "joins": [],
+    "resource_type": "dataset",
+    "keywords": [
+     "Kenya",
+     "agricultural trade",
+     "FAOSTAT"
+    ],
+    "domain": [
+     "socioeconomic"
+    ],
+    "schema_version": "v0.3.0",
+    "created": null,
+    "updated": null
+   },
+   "record": {
+    "cdh": "atlas_notebooks:data/KE-enso-explorer/_sources/cdh_local/kenya-faostat-trade-balances.yaml",
+    "catalogue": null,
+    "catalog_pr": null,
+    "catalog_pr_state": null,
+    "published_record": null
+   },
+   "notebook": {
+    "files": [
+     "data/KE-enso-explorer/reviewed/kenya_faostat_trade_balances.parquet"
+    ],
+    "built_by": "scripts/build_reviewed_kenya_extracts.py",
+    "refresh_command": "python3 scripts/build_reviewed_kenya_extracts.py",
+    "freshness_check": "python3 scripts/check_upstream_sources.py --only trade_faostat",
+    "related": [],
+    "search_terms": null
+   },
+   "gates": [],
+   "gaps": [
+    "Held as a notebook-local draft record (data/KE-enso-explorer/_sources/cdh_local/); not yet moved into hazards_prototype/metadata/cdh/ nor submitted to cdh-catalog."
+   ]
+  },
+  {
+   "key": "kenya-fews-retail-prices",
+   "aliases": [
+    "kenya_fews_retail_prices"
+   ],
+   "title": "FEWS NET retail prices in Nairobi",
+   "title_source": "cdh",
+   "category": "markets",
+   "state": "draft",
+   "state_basis": "local-draft",
+   "hosting": "unknown",
+   "settled": false,
+   "summary": "Matched historical FDW rows on market, admin_2, product, period date, price type, unit, currency and value. Retained only exclusive FEWS-origin matches. Four ambiguous matches and all partner-origin records excluded.",
+   "licence": {
+    "id": "LicenseRef-FEWS-NET-Attribution",
+    "url": "https://help.fews.net/fdp/data-and-information-use-and-attribution-policy",
+    "attribution": null,
+    "attribution_required": false,
+    "attribution_verbatim_required": false,
+    "access": "non-public",
+    "access_note": "Local acquired artifact, not a published CDH asset. Access paths below are repository-relative. External use requires the component-specific decisions in governance/redistribution_register.json; schema validation is not permission."
+   },
+   "producer": [
+    {
+     "organization": "Famine Early Warning Systems Network (FEWS NET)",
+     "name": null,
+     "url": "https://fews.net/",
+     "email": null,
+     "roles": [
+      "producer",
+      "licensor"
+     ]
+    }
+   ],
+   "citation": {
+    "text": "Famine Early Warning Systems Network (FEWS NET) (2026) FEWS NET retail prices in Nairobi.",
+    "url": "https://fdw.fews.net/api/marketpricefacts/?format=csv&country_code=KE&fields=simple",
+    "dois": [],
+    "accessed": "2026-10-21",
+    "authors": [
+     "Famine Early Warning Systems Network (FEWS NET)"
+    ],
+    "year": "2026",
+    "title": "FEWS NET retail prices in Nairobi",
+    "publisher": null
+   },
+   "caveats": [
+    "Source: FEWS NET, Kenya retail market prices. https://fews.net/ Credit FEWS NET prominently on each chart or legend and link to https://fews.net/. Retain this acknowledgement requirement in generated files and all onward sublicences, including the requirement to pass it on. No endorsement implied. https://help.fews.net/fdp/data-and-information-use-and-attribution-policy"
+   ],
+   "avoid": [],
+   "intended_uses": [
+    "Source-attributed charts and generated-file distribution"
+   ],
+   "coverage": {
+    "spatial": "kenya — Nairobi retail market",
+    "temporal": "2005-01-31 to 2026-05-31",
+    "crs": null,
+    "bbox": null
+   },
+   "assets": [
+    {
+     "name": "kenya-fews-retail-prices",
+     "description": null,
+     "https": null,
+     "s3": null,
+     "other_locations": [
+      "data/KE-enso-explorer/reviewed/kenya_fews_retail_prices.parquet"
+     ],
+     "media_type": "application/vnd.apache.parquet",
+     "href_template": null,
+     "file_size": null,
+     "nodata": null,
+     "processing_steps": []
+    }
+   ],
+   "upstream": [
+    {
+     "title": "Famine Early Warning Systems Network (FEWS NET)",
+     "url": "https://fdw.fews.net/api/marketpricefacts/?format=csv&country_code=KE&fields=simple"
+    }
+   ],
+   "processing": [
+    {
+     "id": "source",
+     "description": "Published observations from the source institutions identified in the extract step.",
+     "date": null,
+     "code": null,
+     "code_url": null,
+     "derived_from": []
+    },
+    {
+     "id": "extract",
+     "description": "Matched historical FDW rows on market, admin_2, product, period date, price type, unit, currency and value. Retained only exclusive FEWS-origin matches. Four ambiguous matches and all partner-origin records excluded.",
+     "date": "2026-11-16",
+     "code": null,
+     "code_url": null,
+     "derived_from": [
+      {
+       "title": "Famine Early Warning Systems Network (FEWS NET)",
+       "url": "https://fdw.fews.net/api/marketpricefacts/?format=csv&country_code=KE&fields=simple"
+      }
+     ]
+    }
+   ],
+   "technical": {
+    "dimensions": [],
+    "variables": [],
+    "joins": [],
+    "resource_type": "dataset",
+    "keywords": [
+     "Kenya",
+     "market prices",
+     "FEWS NET"
+    ],
+    "domain": [
+     "socioeconomic"
+    ],
+    "schema_version": "v0.3.0",
+    "created": null,
+    "updated": null
+   },
+   "record": {
+    "cdh": "atlas_notebooks:data/KE-enso-explorer/_sources/cdh_local/kenya-fews-retail-prices.yaml",
+    "catalogue": null,
+    "catalog_pr": null,
+    "catalog_pr_state": null,
+    "published_record": null
+   },
+   "notebook": {
+    "files": [
+     "data/KE-enso-explorer/reviewed/kenya_fews_retail_prices.parquet"
+    ],
+    "built_by": "scripts/build_reviewed_kenya_extracts.py",
+    "refresh_command": "python3 scripts/build_reviewed_kenya_extracts.py",
+    "freshness_check": "python3 scripts/check_upstream_sources.py --only fews_prices",
+    "related": [],
+    "search_terms": null
    },
    "gates": [],
    "gaps": [

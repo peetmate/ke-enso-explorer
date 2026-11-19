@@ -275,6 +275,61 @@
       "question": "What physical atmospheric wave dynamics connect equatorial Pacific warming to East African rainfall?",
       "downloadFilename": "teleconnection_mechanics_framework",
       "type": "figure"
+    },
+    {
+      "id": "fig_3_5",
+      "figure_number": "Figure 4.7",
+      "currentNumber": "Figure 4.7",
+      "targetNumber": "Figure 4.7",
+      "currentSection": "4.5",
+      "title": "National Agricultural Production, Imports, Exports & Import Dependency by Commodity",
+      "question": "How do domestic production, international imports, and exports balance across staple foods and cash crops, and what is Kenya's import dependency ratio?",
+      "downloadFilename": "national_trade_commodity_balance",
+      "type": "chart"
+    },
+    {
+      "id": "fig_3_6",
+      "figure_number": "Figure 4.8",
+      "currentNumber": "Figure 4.8",
+      "targetNumber": "Figure 4.8",
+      "currentSection": "4.5",
+      "title": "Reported Agricultural Trade Origins, Destinations & Partner Concentration",
+      "question": "Which trading partners supply Kenya's food imports or purchase its agricultural exports, and how concentrated are bilateral trade flows over time?",
+      "downloadFilename": "agricultural_trade_partner_shares",
+      "type": "chart"
+    },
+    {
+      "id": "table_3_1",
+      "figure_number": "Table 4.6",
+      "currentNumber": "Table 4.6",
+      "targetNumber": "Table 4.6",
+      "currentSection": "4.5",
+      "title": "Kenya Bilateral Agricultural Trade Partner Flows",
+      "question": "What are the exact reported volumes, values, unit prices, and World market shares for bilateral trading partners across historical reporting years?",
+      "downloadFilename": "bilateral_trade_partner_flows",
+      "type": "table"
+    },
+    {
+      "id": "fig_3_7",
+      "figure_number": "Figure 4.9",
+      "currentNumber": "Figure 4.9",
+      "targetNumber": "Figure 4.9",
+      "currentSection": "4.5",
+      "title": "Selected Agricultural Export Earnings vs. Staple Food Import Bill",
+      "question": "How do Kenya's major agricultural export earnings compare against the import bill for critical staple foods across multi-decadal reporting years?",
+      "downloadFilename": "export_earnings_vs_staple_imports",
+      "type": "chart"
+    },
+    {
+      "id": "fig_3_8",
+      "figure_number": "Figure 4.10",
+      "currentNumber": "Figure 4.10",
+      "targetNumber": "Figure 4.10",
+      "currentSection": "4.5",
+      "title": "Trade Context: Exchange Rate and Global Prices",
+      "question": "What official exchange rate trajectory and global commodity price benchmarks contextualize Kenya's agricultural trade dynamics?",
+      "downloadFilename": "macroeconomic_trade_context",
+      "type": "chart"
     }
   ]
 }

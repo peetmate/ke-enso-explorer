@@ -1,0 +1,261 @@
+{
+  "built_at": "2026-11-14T16:13:28.759780+00:00",
+  "rows": 650,
+  "columns": [
+    "commodity_id",
+    "commodity_label",
+    "category",
+    "year",
+    "production_t",
+    "net_supply_t",
+    "apparent_balance_t",
+    "supply_status",
+    "import_dependency_pct",
+    "source",
+    "imports_t",
+    "exports_t",
+    "import_value_usd",
+    "export_value_usd",
+    "trade_source",
+    "comtrade_weight_estimated",
+    "unit_import_price_usd_t",
+    "unit_export_price_usd_t",
+    "fbs_production_t",
+    "fbs_imports_t",
+    "fbs_exports_t",
+    "fbs_domestic_supply_t",
+    "fbs_stock_variation_t",
+    "fbs_product_scope",
+    "tcl_item_code",
+    "tcl_flags",
+    "fbs_flags",
+    "trade_observed",
+    "coverage_note"
+  ],
+  "dropped_restricted_columns": [
+    "global_benchmark_usd_t",
+    "benchmark_label",
+    "cbk_export_volume_t",
+    "cbk_export_value_kes",
+    "cbk_export_unit_value_kes_t",
+    "exchange_rate_kes_usd"
+  ],
+  "source_rights_status": "Cleared display sources only: FAOSTAT and UN Comtrade (cut roses)",
+  "sha256": "0c14b70fab54b9406e2248b52bd90b11c4c8beb49a76f7b5e5fb43521801b7db",
+  "caveats": [
+    "Year grid is not observed coverage. Missing values remain null wherever TCL has no observation; cut roses use Comtrade World totals.",
+    "Rice macro trade uses FAOSTAT TCL items 31 (Rice, milled) and 32 (Rice, broken) summed; paddy rice (item 27) and production are excluded.",
+    "Sugar TCL code 164 is refined sugar, not raw sugar or sugarcane. FBS is raw equivalent.",
+    "FBS is in 1000 tonnes, TCL quantities in tonnes, TCL values in 1000 USD. FBS aggregates are kept in separate columns.",
+    "Signed apparent_balance_t retains negative accounting residuals. net_supply_t and dependency are null for negative balances, pending stock/calendar reconciliation. Supply excludes stocks; dependency ratio is computed only for maize, wheat, dry beans, green coffee and avocados with matching production. No unverified paddy/milled or green/made tea conversion.",
+    "CBK export values in KES remain separate from TCL USD. FX is mean of 12 monthly averages, not a transaction-weighted conversion.",
+    "Pink Sheet prices are benchmarks, not Kenya realized prices. Nominal values require price and exchange-rate controls before climate association analysis.",
+    "Horticulture totals are published separately in kenya_horticulture_exports.parquet; cannot be assigned to flowers/avocados."
+  ],
+  "fields": {
+    "commodity_id": {
+      "type": "string",
+      "description": "Standardized commodity identifier in national basket",
+      "unit": "code",
+      "null_semantics": "not nullable",
+      "lineage": "BASKET key in trade_common.py"
+    },
+    "commodity_label": {
+      "type": "string",
+      "description": "Human-readable commodity display name with scope note",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "BASKET label in trade_common.py"
+    },
+    "category": {
+      "type": "string",
+      "description": "Broad commodity category: Staple or Export",
+      "unit": "category",
+      "null_semantics": "not nullable",
+      "lineage": "BASKET category in trade_common.py"
+    },
+    "year": {
+      "type": "integer",
+      "description": "Calendar year of observation",
+      "unit": "year",
+      "null_semantics": "not nullable",
+      "lineage": "Calendar year grid 1961-2025"
+    },
+    "production_t": {
+      "type": "float",
+      "description": "National agricultural production quantity on matching product basis",
+      "unit": "metric tonnes",
+      "null_semantics": "null where product definition does not match macro trade or observation absent",
+      "lineage": "FAOSTAT QCL via faostat.parquet or kenya_trade_production.parquet"
+    },
+    "net_supply_t": {
+      "type": "float",
+      "description": "Apparent domestic supply (production + imports - exports) where balance is non-negative",
+      "unit": "metric tonnes",
+      "null_semantics": "null where production or trade inputs are incomplete, or apparent balance is negative",
+      "lineage": "Computed: production_t + imports_t - exports_t (if non-negative)"
+    },
+    "apparent_balance_t": {
+      "type": "float",
+      "description": "Signed apparent balance retaining negative accounting residuals",
+      "unit": "metric tonnes",
+      "null_semantics": "null where production or trade inputs are incomplete",
+      "lineage": "Computed: production_t + imports_t - exports_t"
+    },
+    "supply_status": {
+      "type": "string",
+      "description": "Qualitative status of apparent supply accounting",
+      "unit": "status string",
+      "null_semantics": "not nullable",
+      "lineage": "Derived from apparent_balance_t sign and component completeness"
+    },
+    "import_dependency_pct": {
+      "type": "float",
+      "description": "Import dependency ratio: 100 * imports_t / net_supply_t",
+      "unit": "percent",
+      "null_semantics": "null where net_supply_t is null or non-positive, or for export crops",
+      "lineage": "Computed: 100 * imports_t / net_supply_t"
+    },
+    "source": {
+      "type": "string",
+      "description": "Composite source attribution line",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "Source manifest string"
+    },
+    "imports_t": {
+      "type": "float",
+      "description": "Total annual import volume in metric tonnes",
+      "unit": "metric tonnes",
+      "null_semantics": "null where trade is not reported or observed",
+      "lineage": "FAOSTAT TCL element 5610, or UN Comtrade World for cut roses"
+    },
+    "exports_t": {
+      "type": "float",
+      "description": "Total annual export volume in metric tonnes",
+      "unit": "metric tonnes",
+      "null_semantics": "null where trade is not reported or observed",
+      "lineage": "FAOSTAT TCL element 5910, or UN Comtrade World for cut roses"
+    },
+    "import_value_usd": {
+      "type": "float",
+      "description": "Total annual import value in nominal US dollars",
+      "unit": "nominal USD",
+      "null_semantics": "null where trade is not reported or observed",
+      "lineage": "FAOSTAT TCL element 5622 (converted from 1000 USD), or UN Comtrade World"
+    },
+    "export_value_usd": {
+      "type": "float",
+      "description": "Total annual export value in nominal US dollars",
+      "unit": "nominal USD",
+      "null_semantics": "null where trade is not reported or observed",
+      "lineage": "FAOSTAT TCL element 5922 (converted from 1000 USD), or UN Comtrade World"
+    },
+    "trade_source": {
+      "type": "string",
+      "description": "Primary dataset source for trade flow observations",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "Source identifier: FAOSTAT TCL or UN Comtrade"
+    },
+    "comtrade_weight_estimated": {
+      "type": "boolean",
+      "description": "Flag indicating whether net weight was estimated by UN Comtrade",
+      "unit": "flag",
+      "null_semantics": "null for FAOSTAT sources; boolean for UN Comtrade cut roses",
+      "lineage": "UN Comtrade isNetWgtEstimated attribute"
+    },
+    "unit_import_price_usd_t": {
+      "type": "float",
+      "description": "Implied unit import value in nominal USD per metric tonne",
+      "unit": "nominal USD per tonne",
+      "null_semantics": "null where import volume or value is absent or volume is zero",
+      "lineage": "Computed: import_value_usd / imports_t"
+    },
+    "unit_export_price_usd_t": {
+      "type": "float",
+      "description": "Implied unit export value in nominal USD per metric tonne",
+      "unit": "nominal USD per tonne",
+      "null_semantics": "null where export volume or value is absent or volume is zero",
+      "lineage": "Computed: export_value_usd / exports_t"
+    },
+    "fbs_production_t": {
+      "type": "float",
+      "description": "Food Balance Sheet production aggregate (separate commodity scope)",
+      "unit": "metric tonnes",
+      "null_semantics": "null where FBS has no observation or commodity not in FBS",
+      "lineage": "FAOSTAT FBS element 5511 (converted from 1000 t)"
+    },
+    "fbs_imports_t": {
+      "type": "float",
+      "description": "Food Balance Sheet import aggregate (separate commodity scope)",
+      "unit": "metric tonnes",
+      "null_semantics": "null where FBS has no observation or commodity not in FBS",
+      "lineage": "FAOSTAT FBS element 5611 (converted from 1000 t)"
+    },
+    "fbs_exports_t": {
+      "type": "float",
+      "description": "Food Balance Sheet export aggregate (separate commodity scope)",
+      "unit": "metric tonnes",
+      "null_semantics": "null where FBS has no observation or commodity not in FBS",
+      "lineage": "FAOSTAT FBS element 5911 (converted from 1000 t)"
+    },
+    "fbs_domestic_supply_t": {
+      "type": "float",
+      "description": "Food Balance Sheet domestic supply quantity (separate commodity scope)",
+      "unit": "metric tonnes",
+      "null_semantics": "null where FBS has no observation or commodity not in FBS",
+      "lineage": "FAOSTAT FBS element 5301 (converted from 1000 t)"
+    },
+    "fbs_stock_variation_t": {
+      "type": "float",
+      "description": "Food Balance Sheet stock variation quantity (separate commodity scope)",
+      "unit": "metric tonnes",
+      "null_semantics": "null where FBS has no observation or commodity not in FBS",
+      "lineage": "FAOSTAT FBS element 5072 (converted from 1000 t)"
+    },
+    "fbs_product_scope": {
+      "type": "string",
+      "description": "FAOSTAT Food Balance Sheet item description",
+      "unit": "text",
+      "null_semantics": "null where commodity not in FBS",
+      "lineage": "FAOSTAT FBS Item column"
+    },
+    "tcl_item_code": {
+      "type": "string",
+      "description": "FAOSTAT Trade Crops and Livestock Products item code(s)",
+      "unit": "code",
+      "null_semantics": "null for commodities sourced outside TCL (e.g. cut roses)",
+      "lineage": "FAOSTAT TCL Item Code"
+    },
+    "tcl_flags": {
+      "type": "string",
+      "description": "FAOSTAT observation quality flags by element code",
+      "unit": "flag string",
+      "null_semantics": "null where no TCL observation exists",
+      "lineage": "FAOSTAT TCL Flag column"
+    },
+    "fbs_flags": {
+      "type": "string",
+      "description": "FAOSTAT Food Balance Sheet observation quality flags by element code",
+      "unit": "flag string",
+      "null_semantics": "null where no FBS observation exists",
+      "lineage": "FAOSTAT FBS Flag column"
+    },
+    "trade_observed": {
+      "type": "boolean",
+      "description": "Boolean flag indicating whether any trade flow was observed for commodity-year",
+      "unit": "flag",
+      "null_semantics": "not nullable",
+      "lineage": "Derived: any of imports_t, exports_t, import_value_usd, export_value_usd not null"
+    },
+    "coverage_note": {
+      "type": "string",
+      "description": "Temporal and source coverage status note",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "Derived from trade_observed boolean"
+    }
+  },
+  "licence": "Cleared display sources only: FAOSTAT bulk extracts under CC BY 4.0; UN Comtrade extracts under UN Comtrade data use policy."
+}

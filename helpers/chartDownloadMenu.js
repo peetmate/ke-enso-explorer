@@ -600,7 +600,7 @@ export function chartDownloadMenu(chartElement, opts) {
     onPng, onSvg, onCsv,
     pngAvailable,
     svgAvailable,
-    csvAvailable: hasData,
+    csvAvailable: hasData && !o.disableCsv,
   });
 
   const row = document.createElement("div");
@@ -708,7 +708,7 @@ export function chartDownloadButton(chartElement, opts) {
     onPng, onSvg, onCsv,
     pngAvailable,
     svgAvailable,
-    csvAvailable: hasData,
+    csvAvailable: hasData && !o.disableCsv,
   });
 
   // Click-outside scoped to the button group itself. Cleanup when the

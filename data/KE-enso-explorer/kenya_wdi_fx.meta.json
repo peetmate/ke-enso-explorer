@@ -1,0 +1,23 @@
+{
+  "indicator": "PA.NUS.FCRF",
+  "unit": "Kenya shillings per US dollar, annual period average",
+  "credit": "International Monetary Fund, International Financial Statistics, via World Bank World Development Indicators",
+  "source_url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE",
+  "api": "https://api.worldbank.org/v2/country/KEN/indicator/PA.NUS.FCRF?format=json&per_page=100",
+  "source_updated": "2026-11-11",
+  "metadata_url": "https://databank.worldbank.org/metadataglossary/world-development-indicators/series/PA.NUS.FCRF",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Kenya annual observations sorted by year; fields renamed; missing values left blank.",
+  "download": "kenya_wdi_fx.csv",
+  "first_year": 1960,
+  "last_year": 2025,
+  "observed_years": 66,
+  "missing_years": [],
+  "source_sha256": "01c0a3707fc3f87b8ac4919ad3d44dac33e76e9360c2792bce14727c96286966",
+  "sha256": "e1e34c9a66262466d9d276ef52dc785136d45111590c697d61848aa454b1f05f",
+  "historical_source": "Previous Explorer releases used Central Bank of Kenya monthly average exchange rates, averaged over twelve complete months.",
+  "historical_source_url": "https://www.centralbank.go.ke/statistics/exchange-rates/",
+  "refresh_command": "python3 scripts/update_trade_data.py --refresh",
+  "watch_command": "python3 scripts/check_upstream_sources.py --only trade_wdi_fx"
+}
