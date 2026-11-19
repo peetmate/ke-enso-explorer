@@ -1,0 +1,174 @@
+{
+  "citations": [
+    {
+      "domain": "QCL",
+      "publisher": "Food and Agriculture Organization of the United Nations (FAO)",
+      "title": "Production: Crops and livestock products",
+      "updated": "2025-12-31",
+      "accessed": "2026-11-06",
+      "url": "https://www.fao.org/faostat/en/#data/QCL",
+      "bulk_url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+      "notice": "This dataset provides annual statistics on crop and livestock production across countries and territories. For crops, data are provided on area harvested, production quantities and yields. For livestock, data are provided on animal stocks, numbers of producing and slaughtered animals, and the production of meat, milk, eggs and other livestock products. The dataset also includes information on production quantities for selected processed products, such as vegetable oils, sugar, fibres, beer, wine and major dairy products.",
+      "credit": "FAO. 2025. FAOSTAT: Production: Crops and livestock products (QCL). Accessed 2026-11-06. https://www.fao.org/faostat/en/#data/QCL. Licence: CC BY 4.0."
+    }
+  ],
+  "licence": "CC-BY-4.0",
+  "terms": [
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://www.fao.org/contact-us/terms/db-terms-of-use/en/"
+  ],
+  "method": "Selected Kenya production (element 5510) and nine basket items. Preserved source flags and tonnes. Product compatibility follows the source-specific trade dictionary.",
+  "downstream": "Retain FAO credit, domain notices, changes, CC BY 4.0 and additional FAO terms. No commercial promotion, misrepresentation or implied endorsement.",
+  "coverage_by_item": {
+    "15": {
+      "scope": "Wheat",
+      "first": 1961,
+      "last": 2024,
+      "observations": 64,
+      "compatible": true
+    },
+    "27": {
+      "scope": "Rice",
+      "first": 1961,
+      "last": 2024,
+      "observations": 64,
+      "compatible": false
+    },
+    "56": {
+      "scope": "Maize (corn)",
+      "first": 1961,
+      "last": 2024,
+      "observations": 64,
+      "compatible": true
+    },
+    "162": {
+      "scope": "Raw cane or beet sugar (centrifugal only)",
+      "first": 1961,
+      "last": 2023,
+      "observations": 63,
+      "compatible": false
+    },
+    "176": {
+      "scope": "Beans, dry",
+      "first": 1961,
+      "last": 2024,
+      "observations": 64,
+      "compatible": true
+    },
+    "572": {
+      "scope": "Avocados",
+      "first": 1961,
+      "last": 2024,
+      "observations": 64,
+      "compatible": true
+    },
+    "656": {
+      "scope": "Coffee, green",
+      "first": 1961,
+      "last": 2024,
+      "observations": 64,
+      "compatible": true
+    },
+    "667": {
+      "scope": "Tea leaves",
+      "first": 1961,
+      "last": 2024,
+      "observations": 64,
+      "compatible": false
+    },
+    "675": {
+      "scope": "Green tea (not fermented), black tea (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3 kg",
+      "first": 2010,
+      "last": 2023,
+      "observations": 14,
+      "compatible": false
+    }
+  },
+  "title": "Kenya agricultural production",
+  "fields": {
+    "commodity_id": {
+      "type": "string",
+      "description": "Standardized commodity identifier in national basket",
+      "unit": "code",
+      "null_semantics": "not nullable",
+      "lineage": "BASKET key in trade_common.py"
+    },
+    "year": {
+      "type": "int64",
+      "description": "Calendar year of production report",
+      "unit": "year",
+      "null_semantics": "not nullable",
+      "lineage": "FAOSTAT QCL Year column"
+    },
+    "item_code": {
+      "type": "int64",
+      "description": "FAOSTAT Crops and Livestock Products item code",
+      "unit": "code",
+      "null_semantics": "not nullable",
+      "lineage": "FAOSTAT QCL Item Code"
+    },
+    "product_scope": {
+      "type": "string",
+      "description": "Official FAOSTAT QCL product description and classification scope",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "FAOSTAT QCL Item column"
+    },
+    "production_t": {
+      "type": "double",
+      "description": "National crop production quantity in metric tonnes",
+      "unit": "metric tonnes",
+      "null_semantics": "null where FAOSTAT reports no production quantity",
+      "lineage": "FAOSTAT QCL Element 5510 (Production)"
+    },
+    "compatible_with_macro_trade": {
+      "type": "bool",
+      "description": "Boolean flag indicating exact primary-product equivalence with macro trade definitions",
+      "unit": "flag",
+      "null_semantics": "not nullable",
+      "lineage": "Expert review: true for wheat (15), maize (56), beans (176), avocados (572), coffee (656)"
+    },
+    "source_flag": {
+      "type": "string",
+      "description": "FAOSTAT observation quality flag (e.g. A=official, I=imputed, E=estimated)",
+      "unit": "flag",
+      "null_semantics": "null where flag is empty in source",
+      "lineage": "FAOSTAT QCL Flag column"
+    },
+    "source": {
+      "type": "string",
+      "description": "Source dataset attribution string",
+      "unit": "text",
+      "null_semantics": "not nullable",
+      "lineage": "Source identifier: FAOSTAT QCL"
+    }
+  },
+  "primary_key": [
+    "item_code",
+    "year"
+  ],
+  "input_sha256": {
+    "QCL_kenya.csv": "701e8f6a6b35677eb432a744c5b848d3ff9dd022bb809540ac5cb5c8993b7bfe",
+    "qcl_catalogue.json": "a09ac17438d149a8fa5c21df766e21aee47ba4b2fa1633858cb80c8cb5b27525",
+    "kenya_trade_production.parquet": "5ae12220e0c3e5c38ef7e39a9c2ed44e801d197d482c39c244ecbeb26df1fb97"
+  },
+  "rows": 525,
+  "null_counts": {
+    "commodity_id": 0,
+    "year": 0,
+    "item_code": 0,
+    "product_scope": 0,
+    "production_t": 0,
+    "compatible_with_macro_trade": 0,
+    "source_flag": 0,
+    "source": 0
+  },
+  "rebuild": "python3 scripts/build_reviewed_kenya_extracts.py",
+  "edition": "2026-11-16",
+  "geography": "Kenya",
+  "coverage": [
+    "1961",
+    "2024"
+  ],
+  "sha256": "6880491e1c3ca1a6767fa58ab9485cabcc1ccc083ea42a2ef878aa1f9f741ca3"
+}

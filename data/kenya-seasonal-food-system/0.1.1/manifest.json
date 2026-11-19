@@ -1,0 +1,13 @@
+{
+  "edition": "2026-11-16",
+  "collection_version": "0.1.1",
+  "sha256": {
+    "kenya_faostat_trade_balances.meta.json": "ed3c8ebd811045f7d26d3ba80377a68c93dea22d94d94bc1e6c1a1d0473df29f",
+    "kenya_faostat_trade_balances.parquet": "38edbceb522cc77d5a9f3c696bd8cea3d3df52c0e687f0d3e8f07843627e38b0",
+    "kenya_fews_retail_prices.meta.json": "1252e9fe14593dd4a86d30f744f04a054d8cbc859ca2b7a3cb53817626fa50ab",
+    "kenya_fews_retail_prices.parquet": "ee1308df406c145adb6a8bef0e7acf6e284c72d6392002ce75acfec7179aa465",
+    "kenya_trade_production.meta.json": "b5406c780bd458623d43151b2d523995d6fe792c53cdbf6218f3ee186c3d70bd",
+    "kenya_trade_production.parquet": "6880491e1c3ca1a6767fa58ab9485cabcc1ccc083ea42a2ef878aa1f9f741ca3"
+  },
+  "status": "Source-credited public review copies; CDH submission and acceptance pending."
+}

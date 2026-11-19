@@ -1,0 +1,154 @@
+{
+  "citations": [
+    {
+      "domain": "TCL",
+      "publisher": "Food and Agriculture Organization of the United Nations (FAO)",
+      "title": "Trade: Crops and livestock products",
+      "updated": "2026-07-24",
+      "accessed": "2026-11-04",
+      "url": "https://www.fao.org/faostat/en/#data/TCL",
+      "bulk_url": "https://bulks-faostat.fao.org/production/Trade_CropsLivestock_E_All_Data_(Normalized).zip",
+      "notice": "The food and agricultural trade dataset is collected, processed and disseminated by FAO according to the standard International Merchandise Trade Statistics (IMTS) Methodology. The data is mainly provided by UNSD, Eurostat, and other national authorities as needed. The source data is checked for outliers, trade partner data is used for non-reporting countries or missing cells, and data on food aid is added to take into account total cross-border trade flows. The trade database includes the following variables: export quantity, export value, import quantity, and import value. It includes all food and agricultural products imported/exported annually by all the countries in the world.",
+      "credit": "FAO. 2026. FAOSTAT: Trade: Crops and livestock products (TCL). Accessed 2026-11-04. https://www.fao.org/faostat/en/#data/TCL. Licence: CC BY 4.0."
+    },
+    {
+      "domain": "FBS",
+      "publisher": "Food and Agriculture Organization of the United Nations (FAO)",
+      "title": "Food Balances: Food Balances (2010-)",
+      "updated": "2025-10-28",
+      "accessed": "2026-11-04",
+      "url": "https://www.fao.org/faostat/en/#data/FBS",
+      "bulk_url": "https://bulks-faostat.fao.org/production/FoodBalanceSheets_E_All_Data_(Normalized).zip",
+      "notice": "A food balance sheet presents a comprehensive picture of the pattern of a country's food supply during a specified reference period. The food balance sheet shows for each food item - i.e. each primary commodity and a number of processed commodities potentially available for human consumption - the sources of supply and its utilization. The total quantity of foodstuffs produced in a country added to the total quantity imported and adjusted to any change in stocks that may have occurred since the beginning of the reference period gives the supply available during that period. On the utilization side a distinction is made between the quantities exported, fed to livestock, used for seed, put to manufacture for food use and non-food uses, losses during storage and transportation, and food supplies available for human consumption. The per caput supply of each such food item available for human consumption is then obtained by dividing the respective quantity by the related data on the population actually partaking of it. Data on per capita food supplies are expressed in terms of quantity and - by applying appropriate food composition factors for all primary and processed products - also in terms of caloric value and protein and fat content.",
+      "credit": "FAO. 2025. FAOSTAT: Food Balances: Food Balances (2010-) (FBS). Accessed 2026-11-04. https://www.fao.org/faostat/en/#data/FBS. Licence: CC BY 4.0."
+    }
+  ],
+  "licence": "CC-BY-4.0",
+  "terms": [
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://www.fao.org/contact-us/terms/db-terms-of-use/en/"
+  ],
+  "method": "Filtered national basket items and elements in the Kenya source files. Retained original units, flags and notes. Separate rice items and food-balance aggregates retain their source definitions. Missing observations are not imputed.",
+  "downstream": "Retain FAO credit, domain notices, changes, CC BY 4.0 and additional FAO terms. No commercial promotion, misrepresentation or implied endorsement.",
+  "domain_coverage": {
+    "FBS": {
+      "first_year": 2010,
+      "last_year": 2023,
+      "rows": 546,
+      "observed_values": 546,
+      "items": 8
+    },
+    "TCL": {
+      "first_year": 1961,
+      "last_year": 2024,
+      "rows": 2224,
+      "observed_values": 2224,
+      "items": 10
+    }
+  },
+  "title": "Kenya agricultural trade and food balances",
+  "fields": {
+    "domain": {
+      "description": "FAOSTAT domain",
+      "unit": "code",
+      "lineage": "domain",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "item_code": {
+      "description": "Domain-specific product identifier",
+      "unit": "code",
+      "lineage": "Item Code",
+      "null_semantics": "Required",
+      "type": "int64"
+    },
+    "item": {
+      "description": "FAO product scope",
+      "unit": "text",
+      "lineage": "Item",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "element_code": {
+      "description": "Domain-specific measure identifier",
+      "unit": "code",
+      "lineage": "Element Code",
+      "null_semantics": "Required",
+      "type": "int64"
+    },
+    "element": {
+      "description": "FAO measure",
+      "unit": "text",
+      "lineage": "Element",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "year": {
+      "description": "Calendar year",
+      "unit": "year",
+      "lineage": "Year",
+      "null_semantics": "Required",
+      "type": "int64"
+    },
+    "unit": {
+      "description": "Published measurement unit",
+      "unit": "text",
+      "lineage": "Unit",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "value": {
+      "description": "Published observation in original units",
+      "unit": "unit column",
+      "lineage": "Value",
+      "null_semantics": "Absent in source",
+      "type": "double"
+    },
+    "flag": {
+      "description": "FAO observation flag",
+      "unit": "code",
+      "lineage": "Flag",
+      "null_semantics": "Absent in source",
+      "type": "string"
+    },
+    "note": {
+      "description": "FAO observation note",
+      "unit": "text",
+      "lineage": "Note",
+      "null_semantics": "Absent in source",
+      "type": "string"
+    }
+  },
+  "primary_key": [
+    "domain",
+    "item_code",
+    "element_code",
+    "year"
+  ],
+  "input_sha256": {
+    "TCL_kenya.csv": "799506ed42c842e09cb16854e8576a0d157c4935751e55ce2961ea206389ddfd",
+    "FBS_kenya.csv": "9d0d860ca005abf1cdc4ad875df9ca5c74d8761adc471974ef9f60a31f674933",
+    "faostat_catalogue.json": "101cf05fe370205f5a68aeddb95b9f4dbdb31f39c944f11aa12aaeef12318bff"
+  },
+  "rows": 2770,
+  "null_counts": {
+    "domain": 0,
+    "item_code": 0,
+    "item": 0,
+    "element_code": 0,
+    "element": 0,
+    "year": 0,
+    "unit": 0,
+    "value": 0,
+    "flag": 0,
+    "note": 2543
+  },
+  "rebuild": "python3 scripts/build_reviewed_kenya_extracts.py",
+  "edition": "2026-11-16",
+  "geography": "Kenya",
+  "coverage": [
+    "1961",
+    "2024"
+  ],
+  "sha256": "38edbceb522cc77d5a9f3c696bd8cea3d3df52c0e687f0d3e8f07843627e38b0"
+}

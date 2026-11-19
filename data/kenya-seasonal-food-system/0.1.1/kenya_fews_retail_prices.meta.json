@@ -1,0 +1,142 @@
+{
+  "title": "FEWS NET retail prices in Nairobi",
+  "primary_key": [
+    "fdw_id"
+  ],
+  "fields": {
+    "fdw_id": {
+      "description": "FDW observation identifier",
+      "unit": "id",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "int64"
+    },
+    "county": {
+      "description": "Kenyan county",
+      "unit": "name",
+      "lineage": "Banked county",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "admin_2": {
+      "description": "Administrative area in source",
+      "unit": "name",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "market": {
+      "description": "Reporting market",
+      "unit": "name",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "product": {
+      "description": "Retail product specification",
+      "unit": "text",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "period_date": {
+      "description": "Monthly observation date",
+      "unit": "ISO date",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "price_type": {
+      "description": "Reported transaction level",
+      "unit": "category",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "unit": {
+      "description": "Quantity purchased at quoted price",
+      "unit": "unit code",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "currency": {
+      "description": "Currency of retail quotation",
+      "unit": "ISO 4217",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "string"
+    },
+    "value_kes": {
+      "description": "Nominal retail quotation",
+      "unit": "KES per stated unit",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "double"
+    },
+    "source_document": {
+      "description": "Originating FDW source document",
+      "unit": "text",
+      "lineage": "Kenya FDW marketpricefacts",
+      "null_semantics": "Required",
+      "type": "string"
+    }
+  },
+  "citations": [
+    {
+      "publisher": "Famine Early Warning Systems Network (FEWS NET)",
+      "url": "https://fdw.fews.net/api/marketpricefacts/?format=csv&country_code=KE&fields=simple",
+      "accessed": "2026-11-16",
+      "credit": "Source: FEWS NET, Kenya retail market prices. https://fews.net/"
+    }
+  ],
+  "historical_prices_retrieved": "2026-07-15",
+  "source_documents_checked": "2026-11-16",
+  "coverage_by_product": {
+    "Cow's Milk (Fresh, Pasteurized)": {
+      "rows": 245,
+      "first": "2005-01-31",
+      "last": "2026-05-31",
+      "unit": "500_ml"
+    },
+    "Maize Meal": {
+      "rows": 231,
+      "first": "2006-01-31",
+      "last": "2026-05-31",
+      "unit": "2_kg"
+    }
+  },
+  "licence": "LicenseRef-FEWS-NET-Attribution",
+  "terms": [
+    "https://help.fews.net/fdp/data-and-information-use-and-attribution-policy"
+  ],
+  "method": "Matched historical FDW rows on market, admin_2, product, period date, price type, unit, currency and value. Retained only exclusive FEWS-origin matches. Four ambiguous matches and all partner-origin records excluded.",
+  "downstream": "Credit FEWS NET prominently on each chart or legend and link to https://fews.net/. Retain this acknowledgement requirement in generated files and all onward sublicences, including the requirement to pass it on. No endorsement implied.",
+  "input_sha256": {
+    "fdw_prices_20261116.csv": "ef0e19e65b96ee626b1984ecac47541922207992bdb17e0e070b3205c3431f30",
+    "market_prices.parquet": "a696ff90099ace4347604f463a90a3fc3fd31d5c734c65eb1e15fd63bb439d11"
+  },
+  "membership_sha256": "43dcd88295946f2ddddf7a99886eefddd87f1d22569d151d04a01e43c72ec495",
+  "rows": 476,
+  "null_counts": {
+    "fdw_id": 0,
+    "county": 0,
+    "admin_2": 0,
+    "market": 0,
+    "product": 0,
+    "period_date": 0,
+    "price_type": 0,
+    "unit": 0,
+    "currency": 0,
+    "value_kes": 0,
+    "source_document": 0
+  },
+  "rebuild": "python3 scripts/build_reviewed_kenya_extracts.py",
+  "edition": "2026-11-16",
+  "geography": "Kenya",
+  "coverage": [
+    "2005-01-31",
+    "2026-05-31"
+  ],
+  "sha256": "ee1308df406c145adb6a8bef0e7acf6e284c72d6392002ce75acfec7179aa465"
+}
