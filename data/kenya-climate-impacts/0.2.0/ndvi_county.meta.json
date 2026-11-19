@@ -1,0 +1,126 @@
+{
+  "title": "County vegetation history",
+  "edition": "2026-11-19",
+  "rows": 41219,
+  "primary_key": [
+    "county",
+    "date"
+  ],
+  "credit": "NASA and World Food Programme, Kenya NDVI via HDX (publisher CC BY); IEBC boundaries through OCHA COD (CC BY 3.0 IGO); pixel-weighted county aggregation by the AAA Adaptation Atlas.",
+  "license": "LicenseRef-WFP-CC-BY-and-COD-IGO",
+  "terms": [
+    "https://data.humdata.org/dataset/ken-ndvi-subnational",
+    "https://data.humdata.org/dataset/cod-ab-ken",
+    "https://creativecommons.org/licenses/by/3.0/igo/"
+  ],
+  "fields": {
+    "county": {
+      "type": "string",
+      "description": "Canonical county label used by the Explorer crosswalk.",
+      "unit": "text",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    },
+    "gaul1_code": {
+      "type": "float64",
+      "description": "County identifier in the Explorer GAUL crosswalk; not an OCHA p-code.",
+      "unit": "identifier",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    },
+    "date": {
+      "type": "string",
+      "description": "Start date of the source ten-day observation period.",
+      "unit": "ISO date",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    },
+    "year": {
+      "type": "int32",
+      "description": "Calendar year; seasonal cross-year windows use the end-year convention in the source builder.",
+      "unit": "year",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    },
+    "month": {
+      "type": "int32",
+      "description": "Calendar month, 1–12.",
+      "unit": "month",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    },
+    "ndvi": {
+      "type": "float64",
+      "description": "Pixel-weighted observed vegetation index; rounded to five decimal places.",
+      "unit": "1",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    },
+    "ndvi_mean": {
+      "type": "float64",
+      "description": "Pixel-weighted source long-term mean for that dekad; WFP reference period is not assumed to be 1991–2020.",
+      "unit": "1",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    },
+    "ndvi_pct_normal": {
+      "type": "float64",
+      "description": "100 × unrounded pixel-weighted observed NDVI / source mean; rounded to three decimals.",
+      "unit": "percent",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    },
+    "n_pixels": {
+      "type": "int32",
+      "description": "Number of contributing pixels summed across included subcounty observations.",
+      "unit": "count",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from ndvi_county.parquet; transformations described by its maintained source builder."
+    }
+  },
+  "observed_coverage": {
+    "year": {
+      "first": "2002",
+      "last": "2026"
+    },
+    "date": {
+      "first": "2002-07-01",
+      "last": "2026-11-01"
+    }
+  },
+  "null_counts": {
+    "county": 0,
+    "gaul1_code": 0,
+    "date": 0,
+    "year": 0,
+    "month": 0,
+    "ndvi": 0,
+    "ndvi_mean": 0,
+    "ndvi_pct_normal": 0,
+    "n_pixels": 0
+  },
+  "input_sha256": {
+    "ndvi_county.parquet": "b38c3477479f04e831192a542736d5a930b90958b71d22964d98dccf8a068450"
+  },
+  "source_lineage": {
+    "source": "WFP VAM — Kenya: NDVI at Subnational Level (MODIS collection 6.1, Terra+Aqua)",
+    "source_url": "https://data.humdata.org/dataset/ken-ndvi-subnational",
+    "method": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization).",
+    "input_sha256": {
+      "ken-ndvi-subnat-full.csv": "575a923d10436c4a34e9bb63213a94a2ac57835ee87dca75047933336a72bef5",
+      "ken_admin_boundaries.xlsx": "530f002f4b1561c5675f6978713770fe5f7f739af9d703f1a3881b5b469e88fc",
+      "county_key.parquet": "ac02e5b174f653b960d9bf5879949b0693e2df11a9339c392b1b0b2d36571da8"
+    }
+  },
+  "maintenance": {
+    "source_refresh": "python3 data/KE-enso-explorer/_sources/parse_ndvi.py <WFP-CSV> <COD-XLSX> <county-key> <output>",
+    "packaging": "python3 scripts/package_kenya_cleared_collection.py --standard <v0.5-checkout> --output <new-version-dir> --public-base <immutable-review-URL>",
+    "rollback": "Existing data are not modified by packaging; stage a new version and retain prior versions. Source refresh safeguards remain with each source builder."
+  },
+  "validation": {
+    "primary_key": "unique and non-null",
+    "numerical_check": "Domain, key and ratio checks; source lineage retained",
+    "reviewed_on": "2026-11-19"
+  },
+  "sha256": "73636c731c856e0720612bc41a901d90396d51aac27b9a8c9ab2c568559050bb"
+}

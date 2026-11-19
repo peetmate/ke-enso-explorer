@@ -1,0 +1,93 @@
+{
+  "title": "Ocean conditions: ENSO and Indian Ocean indices",
+  "edition": "2026-11-19",
+  "rows": 4622,
+  "primary_key": [
+    "index",
+    "year",
+    "season"
+  ],
+  "credit": "NOAA CPC / NOAA PSL. HadISST data: © British Crown Copyright, Met Office, 2003, Open Government Licence v2.0; Rayner et al. (2003), doi:10.1029/2002JD002670. HadISST source: https://www.metoffice.gov.uk/hadobs/hadisst/.",
+  "license": "LicenseRef-NOAA-HadISST-OGL",
+  "terms": [
+    "https://www.noaa.gov/disclaimer",
+    "https://www.metoffice.gov.uk/hadobs/hadisst/terms_and_conditions.html",
+    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/"
+  ],
+  "fields": {
+    "index": {
+      "type": "string",
+      "description": "Index identity: SOI, DMI (HadISST), DMI_CPC (ERSSTv6), or RONI.",
+      "unit": "code",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from enso_drivers_seasonal.parquet; transformations described by its maintained source builder."
+    },
+    "season": {
+      "type": "string",
+      "description": "Provider season label; for drivers DJF ends in the recorded year, NDJ starts in the preceding year. HarvestStat labels retain source meaning.",
+      "unit": "code",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from enso_drivers_seasonal.parquet; transformations described by its maintained source builder."
+    },
+    "year": {
+      "type": "int64",
+      "description": "Calendar year; seasonal cross-year windows use the end-year convention in the source builder.",
+      "unit": "year",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from enso_drivers_seasonal.parquet; transformations described by its maintained source builder."
+    },
+    "value": {
+      "type": "float64",
+      "description": "Observed index value: SOI is standardised; DMI, DMI_CPC and RONI are temperature differences/anomalies in degrees Celsius.",
+      "unit": "index-dependent",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from enso_drivers_seasonal.parquet; transformations described by its maintained source builder."
+    },
+    "source": {
+      "type": "string",
+      "description": "Originating provider or product, retained separately for each series.",
+      "unit": "text",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from enso_drivers_seasonal.parquet; transformations described by its maintained source builder."
+    }
+  },
+  "observed_coverage": {
+    "year": {
+      "first": "1870",
+      "last": "2026"
+    }
+  },
+  "null_counts": {
+    "index": 0,
+    "season": 0,
+    "year": 0,
+    "value": 0,
+    "source": 0
+  },
+  "input_sha256": {
+    "enso_drivers_seasonal.parquet": "c7aa1b4f2d6c03cad9bca94d3b1d0a4ef78138e76c813c220bc20a51544665d2"
+  },
+  "source_lineage": {
+    "source": "NOAA CPC (RONI, SOI) + NOAA PSL (DMI/IOD, HadISST)",
+    "url": "https://www.cpc.ncep.noaa.gov/data/indices/ ; https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/dmi.had.long.data",
+    "method": "Self-fetching build (_sources/enso_drivers_build.py): parses the source ASCII; SOI/DMI seasonalised to 3-month overlapping seasons; RONI native seasonal. Spot-checked vs source. Rerun to refresh.",
+    "input_sha256": {
+      "RONI.snapshot.txt": "1297887f581b6190e459cbbf8bdec9a703ff65c1a229e2de4dd94285254f35c8",
+      "SOI.snapshot.txt": "ab5ad574dcb13e58dceb303ca86f70e707f84f0a310b42317f42ca932b01f8d4",
+      "DMI_HadISST.snapshot.txt": "42c1000e221addacac4451b8b9ddfbc5ee732b99ee69b0be5105e69ebe881e05",
+      "DMI_CPC.snapshot.txt": "1e99ba590c5e8cb760990886ca1d1801ded5f73587529a101ff112adfcacafff",
+      "NINO34.snapshot.txt": "a34ac11e9be08db0cef123ddaee759417be14d01fac12000ca4c5b8fbbad5f25"
+    }
+  },
+  "maintenance": {
+    "source_refresh": "python3 scripts/update_drivers.py",
+    "packaging": "python3 scripts/package_kenya_cleared_collection.py --standard <v0.5-checkout> --output <new-version-dir> --public-base <immutable-review-URL>",
+    "rollback": "Existing data are not modified by packaging; stage a new version and retain prior versions. Source refresh safeguards remain with each source builder."
+  },
+  "validation": {
+    "primary_key": "unique and non-null",
+    "numerical_check": "Full value-for-value source reconstruction",
+    "reviewed_on": "2026-11-19"
+  },
+  "sha256": "1438ad7ab9ca40e809bfba52f2cc65806d63d2d4f52d89d47d42f235d1146b16"
+}

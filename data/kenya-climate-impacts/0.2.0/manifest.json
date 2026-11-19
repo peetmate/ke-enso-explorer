@@ -1,0 +1,17 @@
+{
+  "edition": "0.2.0",
+  "status": "Public credited review copies; CDH submission pending human review",
+  "files": {
+    "LICENSE-HarvestStat.txt": "18a77fdea2731e20824cf18d25b9d0ac4808ab822bd494f09ac38cee84fda0ea",
+    "enso_drivers_monthly.meta.json": "c0fddaf63dad71f87f6e64cd7cf4919831183e031c51b4180f19b4f679a39a15",
+    "enso_drivers_monthly.parquet": "1c9541abae0bf007c17f34920b5afaa8110c890dbd0dc185ee861f2010b54d66",
+    "enso_drivers_seasonal.meta.json": "7d75209b72b10eaa7499bb9a01131732c64bc749611635e8750a7f3593501740",
+    "enso_drivers_seasonal.parquet": "1438ad7ab9ca40e809bfba52f2cc65806d63d2d4f52d89d47d42f235d1146b16",
+    "harveststat_county_production.meta.json": "66a94d332a781aaa6c6cd07ed2d3d23a4fce099bb1d6ceb747b1e1bdcd270eba",
+    "harveststat_county_production.parquet": "28a9a594127676c0ceb4097eb3050ec00239408e1b5aaf8d1f355912836245b9",
+    "kenya_wdi_fx.csv": "e1e34c9a66262466d9d276ef52dc785136d45111590c697d61848aa454b1f05f",
+    "kenya_wdi_fx.meta.json": "3a895e895268af2f037a6123b18f24827a63f271b62d158ad80bba358a4b2ec2",
+    "ndvi_county.meta.json": "349f91f50f3e7135f4919b905d25c9aa10a994a4e3f4eee756456cc4f3739bf4",
+    "ndvi_county.parquet": "73636c731c856e0720612bc41a901d90396d51aac27b9a8c9ab2c568559050bb"
+  }
+}

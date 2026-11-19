@@ -1,0 +1,100 @@
+{
+  "title": "Kenya exchange-rate context",
+  "edition": "2026-11-19",
+  "rows": 66,
+  "primary_key": [
+    "year"
+  ],
+  "credit": "IMF International Financial Statistics via World Bank WDI, PA.NUS.FCRF; CC BY 4.0; Kenya annual extract, columns renamed.",
+  "license": "CC-BY-4.0",
+  "terms": [
+    "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE",
+    "https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "fields": {
+    "year": {
+      "type": "int64",
+      "description": "Calendar year; seasonal cross-year windows use the end-year convention in the source builder.",
+      "unit": "year",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from kenya_wdi_fx.csv; transformations described by its maintained source builder."
+    },
+    "exchange_rate_kes_usd": {
+      "type": "float64",
+      "description": "Official exchange rate, annual period average, nominal Kenyan shillings per US dollar.",
+      "unit": "KES per USD",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from kenya_wdi_fx.csv; transformations described by its maintained source builder."
+    },
+    "indicator": {
+      "type": "string",
+      "description": "World Bank indicator identifier PA.NUS.FCRF.",
+      "unit": "code",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from kenya_wdi_fx.csv; transformations described by its maintained source builder."
+    },
+    "source": {
+      "type": "string",
+      "description": "Originating provider or product, retained separately for each series.",
+      "unit": "text",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from kenya_wdi_fx.csv; transformations described by its maintained source builder."
+    },
+    "source_url": {
+      "type": "string",
+      "description": "Source dataset URL.",
+      "unit": "URL",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from kenya_wdi_fx.csv; transformations described by its maintained source builder."
+    },
+    "license_url": {
+      "type": "string",
+      "description": "Applicable public licence URL.",
+      "unit": "URL",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from kenya_wdi_fx.csv; transformations described by its maintained source builder."
+    },
+    "changes": {
+      "type": "string",
+      "description": "Description of transformations made to the source observations.",
+      "unit": "text",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from kenya_wdi_fx.csv; transformations described by its maintained source builder."
+    }
+  },
+  "observed_coverage": {
+    "year": {
+      "first": "1960",
+      "last": "2025"
+    }
+  },
+  "null_counts": {
+    "year": 0,
+    "exchange_rate_kes_usd": 0,
+    "indicator": 0,
+    "source": 0,
+    "source_url": 0,
+    "license_url": 0,
+    "changes": 0
+  },
+  "input_sha256": {
+    "kenya_wdi_fx.csv": "e1e34c9a66262466d9d276ef52dc785136d45111590c697d61848aa454b1f05f"
+  },
+  "source_lineage": {
+    "source_url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KE",
+    "source_sha256": "c01f3242f0614303bbca78a32c7bc151d0933fe1bf9306c9c2f292a6597fdd7a",
+    "historical_source": "Previous Explorer releases used Central Bank of Kenya monthly average exchange rates, averaged over twelve complete months.",
+    "historical_source_url": "https://www.centralbank.go.ke/statistics/exchange-rates/"
+  },
+  "maintenance": {
+    "source_refresh": "python3 scripts/update_trade_data.py --refresh",
+    "packaging": "python3 scripts/package_kenya_cleared_collection.py --standard <v0.5-checkout> --output <new-version-dir> --public-base <immutable-review-URL>",
+    "rollback": "Existing data are not modified by packaging; stage a new version and retain prior versions. Source refresh safeguards remain with each source builder."
+  },
+  "validation": {
+    "primary_key": "unique and non-null",
+    "numerical_check": "Domain, key and ratio checks; source lineage retained",
+    "reviewed_on": "2026-11-19"
+  },
+  "sha256": "e1e34c9a66262466d9d276ef52dc785136d45111590c697d61848aa454b1f05f"
+}

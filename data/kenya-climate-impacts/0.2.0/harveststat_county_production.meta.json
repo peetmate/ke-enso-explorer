@@ -1,0 +1,155 @@
+{
+  "title": "Historical county crop statistics",
+  "edition": "2026-11-19",
+  "rows": 15795,
+  "primary_key": [
+    "crop",
+    "county",
+    "season",
+    "harvest_year"
+  ],
+  "credit": "HarvestStat Africa v1.2, Lee et al. (2025), doi:10.1038/s41597-025-05001-z. Retain upstream MIT copyright and permission notice; credit originating Kenya MoALD / FEWS NET statistics.",
+  "license": "MIT",
+  "terms": [
+    "https://github.com/HarvestStat/HarvestStat-Africa/blob/v1.2/LICENSE",
+    "https://github.com/HarvestStat/HarvestStat-Africa/blob/v1.2/README.md"
+  ],
+  "fields": {
+    "crop": {
+      "type": "string",
+      "description": "Source crop/product label.",
+      "unit": "text",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "county": {
+      "type": "string",
+      "description": "Canonical county label used by the Explorer crosswalk.",
+      "unit": "text",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "gaul1_code": {
+      "type": "float64",
+      "description": "County identifier in the Explorer GAUL crosswalk; not an OCHA p-code.",
+      "unit": "identifier",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "season": {
+      "type": "string",
+      "description": "Provider season label; for drivers DJF ends in the recorded year, NDJ starts in the preceding year. HarvestStat labels retain source meaning.",
+      "unit": "code",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "planting_year": {
+      "type": "int64",
+      "description": "Year in which the source crop season was planted.",
+      "unit": "year",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "planting_month": {
+      "type": "int64",
+      "description": "Source planting month, 1–12 where supplied.",
+      "unit": "month",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "harvest_year": {
+      "type": "int64",
+      "description": "Year in which the source crop season was harvested.",
+      "unit": "year",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "harvest_month": {
+      "type": "int64",
+      "description": "Source harvest month, 1–12 where supplied.",
+      "unit": "month",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "area_ha": {
+      "type": "float64",
+      "description": "Source harvested area.",
+      "unit": "ha",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "production_t": {
+      "type": "float64",
+      "description": "Source crop production.",
+      "unit": "t",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "yield_t_ha": {
+      "type": "float64",
+      "description": "Source crop yield; retained rather than silently recomputed from rounded area and production.",
+      "unit": "t ha-1",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "qc_flag": {
+      "type": "int64",
+      "description": "HarvestStat quality-control code; retain source codes and consult upstream documentation.",
+      "unit": "code",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    },
+    "fnid": {
+      "type": "string",
+      "description": "HarvestStat/FEWS geographic series identifier.",
+      "unit": "identifier",
+      "null_semantics": "Missing or not applicable source observation; never an imputed zero. See source-specific quality flags and coverage.",
+      "lineage": "Preserved from harveststat_county_production.parquet; transformations described by its maintained source builder."
+    }
+  },
+  "observed_coverage": {
+    "harvest_year": {
+      "first": "1965",
+      "last": "2024"
+    }
+  },
+  "null_counts": {
+    "crop": 0,
+    "county": 0,
+    "gaul1_code": 0,
+    "season": 0,
+    "planting_year": 0,
+    "planting_month": 0,
+    "harvest_year": 0,
+    "harvest_month": 0,
+    "area_ha": 84,
+    "production_t": 463,
+    "yield_t_ha": 547,
+    "qc_flag": 0,
+    "fnid": 0
+  },
+  "input_sha256": {
+    "harveststat_county_production.parquet": "fee727bfb45c9281f17ff72b05d1320b5b26a7eede8464cfa0b6bbeeee9f4ed0"
+  },
+  "source_lineage": {
+    "source": "HarvestStat Africa v1.2 (Lee et al. 2025) — FEWS NET Data Warehouse records originating from the Ministry of Agriculture & Livestock Development, Kenya",
+    "url": "https://github.com/HarvestStat/HarvestStat-Africa (public/hvstat_africa_data_v1.2.csv, tag v1.2)",
+    "method": "Deterministic subset (_sources/harveststat_build.py): fetch the pinned v1.2 CSV from GitHub, filter Kenya, join gaul1_code via county_key (gate: 47/47 counties match), rename to repo conventions. No number touched. Upstream harmonization (HarvestStat): FDW boundary vintages KE1982A2(41)/KE1989A2(47)/KE2009A2(47) remapped onto KE2013A1 47 counties by production-based ratios; 1989 districts ~1:1 with counties. Cross-check vs knbs_napr_county_production maize 2019-24: r=0.94 levels, median ratio 0.92-1.04/yr, but per-county vintages differ up to ~2x — do NOT present the two as interchangeable numbers.",
+    "input_sha256": {
+      "HarvestStat-v1.2-source.csv": "f659e121e315b9d8656699e4b16421ed3b313e4c8d09d15199452000836dbef9",
+      "county_key.parquet": "ac02e5b174f653b960d9bf5879949b0693e2df11a9339c392b1b0b2d36571da8"
+    }
+  },
+  "maintenance": {
+    "source_refresh": "python3 data/KE-enso-explorer/_sources/harveststat_build.py",
+    "packaging": "python3 scripts/package_kenya_cleared_collection.py --standard <v0.5-checkout> --output <new-version-dir> --public-base <immutable-review-URL>",
+    "rollback": "Existing data are not modified by packaging; stage a new version and retain prior versions. Source refresh safeguards remain with each source builder."
+  },
+  "license_notice": "MIT License\n\nCopyright (c) 2025 HarvestStat\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+  "validation": {
+    "primary_key": "unique and non-null",
+    "numerical_check": "Full value-for-value source reconstruction",
+    "reviewed_on": "2026-11-19"
+  },
+  "sha256": "28a9a594127676c0ceb4097eb3050ec00239408e1b5aaf8d1f355912836245b9"
+}
