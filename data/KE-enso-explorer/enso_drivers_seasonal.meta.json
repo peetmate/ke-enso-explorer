@@ -1,20 +1,73 @@
 {
   "dataset": "enso_drivers_seasonal",
   "title": "ENSO/IOD driver indices, seasonal",
-  "source": "NOAA CPC (RONI, SOI) + NOAA PSL (DMI/IOD, HadISST)",
+  "source": "NOAA CPC; NOAA PSL; NOAA NCEI ERSSTv6 calculated supplement",
   "url": "https://www.cpc.ncep.noaa.gov/data/indices/ ; https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/dmi.had.long.data",
-  "citation": "NOAA Climate Prediction Center; NOAA Physical Sciences Laboratory (HadISST, Met Office Hadley Centre).",
+  "citation": "NOAA Climate Prediction Center; NOAA Physical Sciences Laboratory; NOAA NCEI ERSSTv6 (Huang et al., 2025); HadISST, Met Office Hadley Centre.",
   "license": "US Government public domain.",
-  "fetched_on": "2026-07-23",
-  "method": "Self-fetching build (_sources/enso_drivers_build.py): parses the source ASCII; SOI/DMI seasonalised to 3-month overlapping seasons; RONI native seasonal. Spot-checked vs source. Rerun to refresh.",
-  "coverage": "RONI 1950-2026, SOI 1951-2026, DMI 1870-2025; 12 seasons.",
+  "method": "enso_drivers_build.py preserves DMI_CPC published history. DMI_ERSST6 supplements only missing months using NCEI ERSSTv6 SST minus fixed PSL 1991–2020 climatology, clipped spherical cell areas over west 50–70E/10S–10N minus east 90–110E/10S–0. Calculated rows are explicitly labelled, provisional and independently reproduced from _sources/DMI_ERSST6.inputs.npz; receipt records source hashes, April discrepancy and recent grid revisions. Seasonal values are 3-month means, labelled calculated if any component is calculated.",
+  "coverage": {
+    "DMI": {
+      "rows": 1875,
+      "first_year": 1870,
+      "last_year": 2026
+    },
+    "DMI_CPC": {
+      "rows": 918,
+      "first_year": 1950,
+      "last_year": 2026
+    },
+    "DMI_ERSST6": {
+      "rows": 920,
+      "first_year": 1950,
+      "last_year": 2026
+    },
+    "RONI": {
+      "rows": 921,
+      "first_year": 1950,
+      "last_year": 2026
+    },
+    "SOI": {
+      "rows": 908,
+      "first_year": 1951,
+      "last_year": 2026
+    }
+  },
   "used_by": "notebook §7 outlook analogue matching + driver context",
-  "grain": "4618 rows",
+  "grain": "5542 rows",
   "columns": [
     "index",
     "season",
     "year",
     "value",
     "source"
-  ]
+  ],
+  "refresh_receipt": "_sources/DMI_ERSST6.receipt.json",
+  "fields": {
+    "index": {
+      "description": "Product identifier; DMI_ERSST6 preserves CPC history and adds calculated missing months",
+      "unit": "text/code",
+      "null_semantics": "Missing observation; never zero-imputed"
+    },
+    "season": {
+      "description": "Calendar period",
+      "unit": "text/code",
+      "null_semantics": "Missing observation; never zero-imputed"
+    },
+    "year": {
+      "description": "Calendar period",
+      "unit": "text/code",
+      "null_semantics": "Missing observation; never zero-imputed"
+    },
+    "value": {
+      "description": "Index anomaly (SOI is standardized)",
+      "unit": "Celsius except standardized SOI",
+      "null_semantics": "Missing observation; never zero-imputed"
+    },
+    "source": {
+      "description": "Explicit published/calculated lineage",
+      "unit": "text/code",
+      "null_semantics": "Missing observation; never zero-imputed"
+    }
+  }
 }

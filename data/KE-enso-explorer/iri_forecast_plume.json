@@ -10,11 +10,11 @@
     "issueMonth": 10,
     "issueMonthIsOneBased": true,
     "issueLabel": "October 2026",
-    "releaseDate": null,
+    "releaseDate": "2026-10-19",
     "releaseMonth": 10,
     "releaseYear": 2026,
-    "discussion": null,
-    "fetchedAt": "2026-10-23T13:13:16+00:00",
+    "discussion": "The mid-October 2026 intensity assessment provides a striking indication of the exceptional strength of the ongoing El Ni\u00f1o event. The model ensemble points to an exceptionally strong 2026-27 El Ni\u00f1o, with all 27 models forecasting a \u201cvery strong\u201d El Ni\u00f1o (Ni\u00f1o 3.4 \u2265 +2.0 \u00b0C) from OND 2026 through DJF 2026\u201327. Our current intensity classification is capped at +2.0\u00b0C, yet a majority of models (about 10 models) in the plume\u2014including both dynamical and statistical models\u2014forecasts Ni\u00f1o3.4 values that could reach or exceed +3.5\u00b0C, well beyond our highest defined category. This is more than a high-probability El Ni\u00f1o: the ensemble shows an unusually strong and consistent signal for an event of exceptional intensity. Although the forecast shifts toward weaker categories in early 2027, strong-to-moderate El Ni\u00f1o conditions remain through MJJ 2027, underscoring the unusual magnitude and persistence of the 2026 event. Taken together, the mid-October objective ENSO outlook points to an exceptionally strong El Ni\u00f1o that will remain firmly established through the end of 2026 and persist into late spring 2027.\n\nThe mid-October 2026 CCSR/IRI ENSO prediction plume has been updated with the latest model forecasts. The outlook shows close agreement among the 27 participating models (16 dynamical and 11 statistical) that El Ni\u00f1o conditions will strengthen further during 2026 and continue into early 2027.\n\nThe following interactive plot shows the model forecasts issued not only from the current month (as in the plot above), but also from the 21 months previous to this month. The observations are shown up to the most recently completed 3-month period. The plots allow comparison of plumes from the previous start times, or examination of the forecast behavior of a given model over time. Hovering over any single model will highlight that particular model in the chart. Clicking a particular model will hide/show that model in the chart. At the bottom of the plot, you can select which models to show in the chart: all the models, the dynamical models only, or the statistical models only.",
+    "fetchedAt": "2026-11-19T19:43:38+00:00",
     "calibration": {
       "y_slope": -0.01465548339226598,
       "y_intercept": 5.048069277554051,
@@ -118,7 +118,7 @@
           null
         ],
         "color": "#4477aa",
-        "symbol": "m6263e96462"
+        "symbol": "m3bdfa4fc62"
       },
       {
         "model": "BCC DIAP",
@@ -136,7 +136,7 @@
           -0.16
         ],
         "color": "#66ccee",
-        "symbol": "m26ce417bb6"
+        "symbol": "m128c0df5cf"
       },
       {
         "model": "CMC CANSIP",
@@ -154,7 +154,7 @@
           0.36
         ],
         "color": "#228833",
-        "symbol": "m0016b1a6b6"
+        "symbol": "m47f8ba25fb"
       },
       {
         "model": "CMCC SPS4",
@@ -172,7 +172,7 @@
           null
         ],
         "color": "#228833",
-        "symbol": "mf7d359c70e"
+        "symbol": "me4cd3ce11d"
       },
       {
         "model": "COLA CCSM4",
@@ -190,7 +190,7 @@
           1.155
         ],
         "color": "#ccbb44",
-        "symbol": "mb5f30ba291"
+        "symbol": "mb330846e44"
       },
       {
         "model": "CS-IRI-MM",
@@ -208,7 +208,7 @@
           null
         ],
         "color": "#ee6677",
-        "symbol": "m759cd358f2"
+        "symbol": "m66f7997e3b"
       },
       {
         "model": "GFDL SPEAR",
@@ -226,7 +226,7 @@
           1.0036
         ],
         "color": "#bbbbbb",
-        "symbol": "mea71dd9b80"
+        "symbol": "m7cb48c6689"
       },
       {
         "model": "IOCAS ICM",
@@ -244,7 +244,7 @@
           -0.03
         ],
         "color": "#4477aa",
-        "symbol": "m64186c4d73"
+        "symbol": "m9932f34105"
       },
       {
         "model": "JMA",
@@ -262,7 +262,7 @@
           null
         ],
         "color": "#66ccee",
-        "symbol": "ma268b89389"
+        "symbol": "ma0cca8a97d"
       },
       {
         "model": "KMA",
@@ -280,7 +280,7 @@
           null
         ],
         "color": "#228833",
-        "symbol": "mcbca7e7b09"
+        "symbol": "mb1bbabf19d"
       },
       {
         "model": "LDEO",
@@ -298,7 +298,7 @@
           1.757
         ],
         "color": "#ccbb44",
-        "symbol": "m4140aab228"
+        "symbol": "m17a0e2946f"
       },
       {
         "model": "MetFRANCE",
@@ -316,7 +316,7 @@
           null
         ],
         "color": "#ee6677",
-        "symbol": "m0cbe1a2607"
+        "symbol": "mb2cf1b2a1f"
       },
       {
         "model": "NASA GMAOv3",
@@ -334,7 +334,7 @@
           null
         ],
         "color": "#aa3377",
-        "symbol": "mf61447e645"
+        "symbol": "m53fadd395c"
       },
       {
         "model": "NCEP CFSv2",
@@ -352,7 +352,7 @@
           null
         ],
         "color": "#bbbbbb",
-        "symbol": "m7d8c4dd3c3"
+        "symbol": "m2a26f58720"
       },
       {
         "model": "SINTEX-F",
@@ -370,7 +370,7 @@
           0.7205
         ],
         "color": "#66ccee",
-        "symbol": "m6132bda961"
+        "symbol": "m176a953871"
       },
       {
         "model": "UKMO",
@@ -388,7 +388,7 @@
           null
         ],
         "color": "#228833",
-        "symbol": "mf52c68d542"
+        "symbol": "m5c5ddaa80d"
       },
       {
         "model": "BCC_RZDM",
@@ -406,7 +406,7 @@
           -0.48
         ],
         "color": "#ccbb44",
-        "symbol": "mf94f006f40"
+        "symbol": "m8d4f5f969c"
       },
       {
         "model": "CPC MRKOV",
@@ -424,7 +424,7 @@
           0.47
         ],
         "color": "#aa3377",
-        "symbol": "m45e04545f3"
+        "symbol": "m0d95caa7ca"
       },
       {
         "model": "CSU CLIPR",
@@ -442,7 +442,7 @@
           -0.2467
         ],
         "color": "#bbbbbb",
-        "symbol": "mfe3a5881f3"
+        "symbol": "m5ebc274340"
       },
       {
         "model": "IAP-NN",
@@ -460,7 +460,7 @@
           -0.086
         ],
         "color": "#4477aa",
-        "symbol": "m8327c18bb0"
+        "symbol": "m4eae3d9311"
       },
       {
         "model": "NTU CODA",
@@ -478,7 +478,7 @@
           -0.85
         ],
         "color": "#66ccee",
-        "symbol": "md5a16569ed"
+        "symbol": "m127d4369b2"
       },
       {
         "model": "TONGJI-ML",
@@ -496,7 +496,7 @@
           0.2008
         ],
         "color": "#bbbbbb",
-        "symbol": "m180951d2ee"
+        "symbol": "mfa06e79cb0"
       },
       {
         "model": "UCLA-TCD",
@@ -514,7 +514,7 @@
           0.94
         ],
         "color": "#228833",
-        "symbol": "ma189faa98d"
+        "symbol": "mff0a8f8713"
       },
       {
         "model": "UW PSL-CSLIM",
@@ -532,7 +532,7 @@
           -0.25
         ],
         "color": "#ccbb44",
-        "symbol": "m989c826a02"
+        "symbol": "m51867e05fb"
       },
       {
         "model": "UW PSL-LIM",
@@ -550,7 +550,7 @@
           0.47
         ],
         "color": "#ee6677",
-        "symbol": "mad6dc964ae"
+        "symbol": "m135f8e82e4"
       },
       {
         "model": "Wyrtki-CSLIM",
@@ -568,7 +568,7 @@
           0.0804
         ],
         "color": "#bbbbbb",
-        "symbol": "mfe3a5881f3"
+        "symbol": "m5ebc274340"
       },
       {
         "model": "XRO",
@@ -586,13 +586,13 @@
           0.0203
         ],
         "color": "#aa3377",
-        "symbol": "m243c909ab5"
+        "symbol": "m054666a6e0"
       }
     ],
-    "discussion": null,
+    "discussion": "The mid-October 2026 intensity assessment provides a striking indication of the exceptional strength of the ongoing El Ni\u00f1o event. The model ensemble points to an exceptionally strong 2026-27 El Ni\u00f1o, with all 27 models forecasting a \u201cvery strong\u201d El Ni\u00f1o (Ni\u00f1o 3.4 \u2265 +2.0 \u00b0C) from OND 2026 through DJF 2026\u201327. Our current intensity classification is capped at +2.0\u00b0C, yet a majority of models (about 10 models) in the plume\u2014including both dynamical and statistical models\u2014forecasts Ni\u00f1o3.4 values that could reach or exceed +3.5\u00b0C, well beyond our highest defined category. This is more than a high-probability El Ni\u00f1o: the ensemble shows an unusually strong and consistent signal for an event of exceptional intensity. Although the forecast shifts toward weaker categories in early 2027, strong-to-moderate El Ni\u00f1o conditions remain through MJJ 2027, underscoring the unusual magnitude and persistence of the 2026 event. Taken together, the mid-October objective ENSO outlook points to an exceptionally strong El Ni\u00f1o that will remain firmly established through the end of 2026 and persist into late spring 2027.\n\nThe mid-October 2026 CCSR/IRI ENSO prediction plume has been updated with the latest model forecasts. The outlook shows close agreement among the 27 participating models (16 dynamical and 11 statistical) that El Ni\u00f1o conditions will strengthen further during 2026 and continue into early 2027.\n\nThe following interactive plot shows the model forecasts issued not only from the current month (as in the plot above), but also from the 21 months previous to this month. The observations are shown up to the most recently completed 3-month period. The plots allow comparison of plumes from the previous start times, or examination of the forecast behavior of a given model over time. Hovering over any single model will highlight that particular model in the chart. Clicking a particular model will hide/show that model in the chart. At the bottom of the plot, you can select which models to show in the chart: all the models, the dynamical models only, or the statistical models only.",
     "source": "https://ensoforecast.iri.columbia.edu/figure4_plot/2026/10",
     "sourceKind": "figure-svg",
-    "fetchedAt": "2026-10-23T13:13:16+00:00",
+    "fetchedAt": "2026-11-19T19:43:38+00:00",
     "observed": [
       {
         "month": "JAS",
@@ -610,7 +610,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#4477aa",
-      "symbol": "m6263e96462",
+      "symbol": "m3bdfa4fc62",
       "active": true
     },
     {
@@ -618,7 +618,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#66ccee",
-      "symbol": "m26ce417bb6",
+      "symbol": "m128c0df5cf",
       "active": true
     },
     {
@@ -626,7 +626,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#228833",
-      "symbol": "m0016b1a6b6",
+      "symbol": "m47f8ba25fb",
       "active": true
     },
     {
@@ -634,7 +634,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#228833",
-      "symbol": "mf7d359c70e",
+      "symbol": "me4cd3ce11d",
       "active": true
     },
     {
@@ -642,7 +642,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#ccbb44",
-      "symbol": "mb5f30ba291",
+      "symbol": "mb330846e44",
       "active": true
     },
     {
@@ -650,7 +650,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#ee6677",
-      "symbol": "m759cd358f2",
+      "symbol": "m66f7997e3b",
       "active": true
     },
     {
@@ -658,7 +658,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#bbbbbb",
-      "symbol": "mea71dd9b80",
+      "symbol": "m7cb48c6689",
       "active": true
     },
     {
@@ -666,7 +666,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#4477aa",
-      "symbol": "m64186c4d73",
+      "symbol": "m9932f34105",
       "active": true
     },
     {
@@ -674,7 +674,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#66ccee",
-      "symbol": "ma268b89389",
+      "symbol": "ma0cca8a97d",
       "active": true
     },
     {
@@ -682,7 +682,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#228833",
-      "symbol": "mcbca7e7b09",
+      "symbol": "mb1bbabf19d",
       "active": true
     },
     {
@@ -690,7 +690,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#ccbb44",
-      "symbol": "m4140aab228",
+      "symbol": "m17a0e2946f",
       "active": true
     },
     {
@@ -698,7 +698,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#ee6677",
-      "symbol": "m0cbe1a2607",
+      "symbol": "mb2cf1b2a1f",
       "active": true
     },
     {
@@ -706,7 +706,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#aa3377",
-      "symbol": "mf61447e645",
+      "symbol": "m53fadd395c",
       "active": true
     },
     {
@@ -714,7 +714,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#bbbbbb",
-      "symbol": "m7d8c4dd3c3",
+      "symbol": "m2a26f58720",
       "active": true
     },
     {
@@ -722,7 +722,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#66ccee",
-      "symbol": "m6132bda961",
+      "symbol": "m176a953871",
       "active": true
     },
     {
@@ -730,7 +730,7 @@
       "type": "Dynamical",
       "typeCode": "D",
       "color": "#228833",
-      "symbol": "mf52c68d542",
+      "symbol": "m5c5ddaa80d",
       "active": true
     },
     {
@@ -738,7 +738,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#ccbb44",
-      "symbol": "mf94f006f40",
+      "symbol": "m8d4f5f969c",
       "active": true
     },
     {
@@ -746,7 +746,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#aa3377",
-      "symbol": "m45e04545f3",
+      "symbol": "m0d95caa7ca",
       "active": true
     },
     {
@@ -754,7 +754,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#bbbbbb",
-      "symbol": "mfe3a5881f3",
+      "symbol": "m5ebc274340",
       "active": true
     },
     {
@@ -762,7 +762,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#4477aa",
-      "symbol": "m8327c18bb0",
+      "symbol": "m4eae3d9311",
       "active": true
     },
     {
@@ -770,7 +770,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#66ccee",
-      "symbol": "md5a16569ed",
+      "symbol": "m127d4369b2",
       "active": true
     },
     {
@@ -778,7 +778,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#bbbbbb",
-      "symbol": "m180951d2ee",
+      "symbol": "mfa06e79cb0",
       "active": true
     },
     {
@@ -786,7 +786,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#228833",
-      "symbol": "ma189faa98d",
+      "symbol": "mff0a8f8713",
       "active": true
     },
     {
@@ -794,7 +794,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#ccbb44",
-      "symbol": "m989c826a02",
+      "symbol": "m51867e05fb",
       "active": true
     },
     {
@@ -802,7 +802,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#ee6677",
-      "symbol": "mad6dc964ae",
+      "symbol": "m135f8e82e4",
       "active": true
     },
     {
@@ -810,7 +810,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#bbbbbb",
-      "symbol": "mfe3a5881f3",
+      "symbol": "m5ebc274340",
       "active": true
     },
     {
@@ -818,7 +818,7 @@
       "type": "Statistical",
       "typeCode": "S",
       "color": "#aa3377",
-      "symbol": "m243c909ab5",
+      "symbol": "m054666a6e0",
       "active": true
     }
   ]

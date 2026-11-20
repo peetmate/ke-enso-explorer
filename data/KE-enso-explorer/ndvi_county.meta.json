@@ -5,8 +5,8 @@
   "source_url": "https://data.humdata.org/dataset/ken-ndvi-subnational",
   "source_file": "ken-ndvi-subnat-full.csv",
   "crosswalk_source": "OCHA Kenya Common Operational Dataset - admin boundaries (cod-ab-ken), ken_admin_boundaries.xlsx (admin1 p-code -> county name)",
-  "license": "Creative Commons Attribution (CC BY) — WFP VAM; OCHA COD",
-  "fetched_on": "2026-10-12",
+  "license": "Publisher-declared: WFP VAM CC BY; OCHA COD CC BY-IGO. Scoped external-use review is recorded separately.",
+  "fetched_on": "2026-11-19",
   "method": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization).",
   "grain": "one row per county x dekad (10-day)",
   "columns": {
@@ -20,8 +20,93 @@
     "ndvi_pct_normal": "ndvi / ndvi_mean * 100 -> % of normal; <100 = vegetation deficit / drought stress",
     "n_pixels": "total MODIS pixels aggregated for the county-dekad"
   },
-  "coverage": "All 47 counties, 872 dekads 2002-07-01 to 2026-09-11 (dekad ending 2026-09-20; HDX resource updated 2026-10-05). Unlike the crop calendar, this covers the 8 pastoralist ASAL counties - it is the pasture/rangeland-condition layer for the drought->food-security pathway there.",
+  "coverage": "47 counties; 877 observed dekads, 2002-07-01 to 2026-11-01; 41219 county-dekads.",
   "validation": "Signal sanity-checked against known droughts: Marsabit 2022 (peak Horn drought) mean 81% of normal (min 63%); 2018 recovery 124%. Below-100 in drought years, above-100 in wet recovery years - physically consistent.",
   "used_by": "notebook.qmd Block 4 (vegetation-condition NDVI chart)",
-  "revisions": "WFP firms up the last ~6 dekads after first release: the 2026-10-12 refresh revised 75 county-dekads in 2026-05-11..2026-06-21 by up to 6.2 pp; all earlier rows and the vim_avg baseline were byte-identical. Treat the trailing ~6 dekads as provisional."
+  "revisions": "Trailing observations may be revised by WFP; each refresh rebuilds the complete supplied history. See dated maintenance receipts for observed changes.",
+  "primary_key": [
+    "county",
+    "date"
+  ],
+  "input_sha256": {
+    "ken-ndvi-subnat-full.csv": "575a923d10436c4a34e9bb63213a94a2ac57835ee87dca75047933336a72bef5",
+    "ken_admin_boundaries.xlsx": "530f002f4b1561c5675f6978713770fe5f7f739af9d703f1a3881b5b469e88fc",
+    "county_key.parquet": "ac02e5b174f653b960d9bf5879949b0693e2df11a9339c392b1b0b2d36571da8"
+  },
+  "output_sha256": "b38c3477479f04e831192a542736d5a930b90958b71d22964d98dccf8a068450",
+  "refresh_command": "python3 data/KE-enso-explorer/_sources/parse_ndvi.py <WFP-CSV> <OCHA-COD-XLSX> <county-key-parquet> <output-parquet>",
+  "fields": {
+    "county": {
+      "type": "string",
+      "description": "canonical county name",
+      "unit": "name",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    },
+    "gaul1_code": {
+      "type": "double",
+      "description": "GAUL24 admin1 code (matches CHIRPS / shared topojson)",
+      "unit": "identifier",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    },
+    "date": {
+      "type": "string",
+      "description": "dekad start date (YYYY-MM-DD)",
+      "unit": "ISO date",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    },
+    "year": {
+      "type": "int32",
+      "description": "calendar year",
+      "unit": "year",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    },
+    "month": {
+      "type": "int32",
+      "description": "calendar month",
+      "unit": "month",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    },
+    "ndvi": {
+      "type": "double",
+      "description": "pixel-weighted mean NDVI for the dekad (WFP vim)",
+      "unit": "dimensionless",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    },
+    "ndvi_mean": {
+      "type": "double",
+      "description": "long-term mean NDVI for that dekad-of-year (WFP vim_avg baseline)",
+      "unit": "dimensionless",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    },
+    "ndvi_pct_normal": {
+      "type": "double",
+      "description": "ndvi / ndvi_mean * 100 -> % of normal; <100 = vegetation deficit / drought stress",
+      "unit": "percent",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    },
+    "n_pixels": {
+      "type": "int32",
+      "description": "total MODIS pixels aggregated for the county-dekad",
+      "unit": "pixels",
+      "null_semantics": "No nulls in accepted county-dekad rows; absent dates are not zero.",
+      "lineage": "Deterministic (_sources/parse_ndvi.py), no LLM/transcription. WFP publishes on the OCHA legacy sub-county grid: admin2 p-codes are KE + county(001-047) + subunit, so the county is exactly the 5-char p-code prefix. County value = PIXEL-WEIGHTED (n_pixels) rollup of the sub-unit NDVI and its long-term mean; the anomaly is recomputed from the rolled-up values (ndvi / ndvi_mean * 100), never averaged directly. County name from the OCHA COD admin1 table; joined to the canonical 47 + gaul1_code via county_key (0 name mismatches after normalization)."
+    }
+  },
+  "citation": "NASA and World Food Programme, Kenya NDVI at Subnational Level (MODIS collection 6.1), via HDX; IEBC administrative references via OCHA COD-AB Kenya. County aggregation by the Alliance of Bioversity International and CIAT.",
+  "licence_urls": [
+    "https://data.humdata.org/dataset/ken-ndvi-subnational",
+    "https://opendefinition.org/licenses/cc-by/",
+    "https://data.humdata.org/dataset/cod-ab-ken",
+    "https://creativecommons.org/licenses/by/3.0/igo/legalcode"
+  ],
+  "redistribution_notice": "Retain source credits, linked publisher licence notices and the processing description with every copy. WFP declares CC BY without an explicit version. OCHA COD declares CC BY 3.0 IGO. No NASA, WFP, IEBC or United Nations endorsement is implied.",
+  "changes": "Pixel-weighted county aggregation of WFP subcounty observations; percentage of normal recomputed from aggregated NDVI and source mean. County labels joined through OCHA COD and the Explorer county key. No source normal period assumed to be 1991–2020."
 }

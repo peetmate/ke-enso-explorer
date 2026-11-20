@@ -5,9 +5,9 @@
   "feed_url": "https://meteo.go.ke/api/cap/rss.xml",
   "format": "OASIS Common Alerting Protocol (CAP) v1.2",
   "authority": "Meteorology Act No. 7 of 2026",
-  "last_updated": "2026-10-05T06:32:12.344534+00:00",
+  "last_updated": "2026-11-19T19:45:04.735713+00:00",
   "alert_count": 5,
-  "county_rows": 109,
+  "county_rows": 97,
   "columns": [
     {
       "name": "county",

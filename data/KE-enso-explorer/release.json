@@ -3,9 +3,9 @@
   "title": "ENSO Explorer — Kenya",
   "version": "3.14.0",
   "versionDisplay": "v3.14.0",
-  "build": "303111703",
+  "build": "303112002",
   "releaseDate": "2026-11-14",
-  "lastUpdated": "2026-11-17",
+  "lastUpdated": "2026-11-20",
   "dataVintage": "2026-10",
   "authors": [
     "Pete Steward"
@@ -19,8 +19,8 @@
       "label": "v3.14.0 (Current — Nov 2026)",
       "url": "notebook_v3.html",
       "status": "active",
-      "date": "2026-11-17",
-      "build": "303111703",
+      "date": "2026-11-20",
+      "build": "303112002",
       "description": "Kenya-Wide Food Trade Telemetry & Phone Ergonomics Release: Introduces Sub-section 4.5 (Kenya-wide food trade) integrating FAOSTAT and UN Comtrade bilateral trade series across ten agricultural commodities (Figures 4.7–4.10 and Table 4.6), quantifying national import dependency, cross-border partner concentration, and aggregate caloric exposure; adds Method 07 and comprehensive cross-border trade boundaries in Section 6; and delivers an ergonomic responsive phone navigation shell with collapsible controls and page-level overflow elimination.",
       "highlights": [
         "Figure 4.7 (Production, Imports & Exports): Small multiples on shared physical tonnes scale with staple import dependency, hollow dots for unobserved years, and optional ENSO telemetry strip.",

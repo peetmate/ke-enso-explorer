@@ -4,12 +4,12 @@
   "source": "FEWS NET Data Warehouse (FDW), marketpricefacts (source LIKE 'FEWS NET FDW%') UNION MoALD KAMIS kamis.kilimo.go.ke (source LIKE 'MoALD KAMIS%')",
   "url": "https://fdw.fews.net/ ; https://kamis.kilimo.go.ke/site/market",
   "citation": "FEWS NET Data Warehouse (FDW). Ministry of Agriculture and Livestock Development (MoALD), Kenya: KAMIS livestock market prices.",
-  "license": "FEWS NET — reading and display unencumbered. REDISTRIBUTION CAVEAT: FEWS NET states that third-party series held in the warehouse may not be redistributed without the originating provider's consent, and market prices are usually collected by national agencies. Display is fine; identify the originating agency for a given series before republishing it. KAMIS rows — the portal publishes no licence or terms of use; displayed for analysis as monthly medians, not redistributed.",
-  "fetched_on": "2026-07-15 (FEWS NET rows) / 2026-10-23 (KAMIS rows)",
-  "method": "FEWS NET rows: machine-readable FEWS FDW retail prices; staged via the D409 pipeline; preserved byte-for-byte by _sources/kamis_build.py (row count 27,406 and content fingerprint gated on every rebuild). KAMIS rows: _sources/kamis_build.py appends county x market x product x month MEDIANS of the clean wholesale per-head quotes in market_prices_kamis.parquet (products 'Cattle/Sheep/Goats/Camels (Live, all grades)', price_type 'Wholesale', unit 'head', n_quotes = quotes behind the median; the 2021-05-24 bulk-backfill day, duplicates, test entries and outliers are excluded). Terms of trade is NOT in this file and is NOT sourced — the notebook derives it client-side as median goat price (KES/head) / median maize-grain price (KES/kg) per county-month from the FEWS NET legs only. It is a ratio: a fall can mean cheaper livestock or dearer grain, which carry opposite implications, so it must be read against both price legs.",
+  "license": "Mixed providers via FDW and MoALD KAMIS. Public API access is not blanket redistribution permission. See provider-level lineage and governance/redistribution_register.json. Preserve existing external-use restrictions; the reviewed FEWS-origin extract is separate.",
+  "fetched_on": "2026-11-19 (FDW); 2026-10-23 (KAMIS)",
+  "method": "_sources/fews_prices_build.py validates the complete official Kenya CSV, retains the existing 12-product, positive KES, county-mapped monthly scope, and preserves KAMIS rows. Identical panel rows collapse; multiple observations with different prices remain distinct. _sources/fdw_market_prices_lineage.parquet retains the original observation IDs, provider source_document, status and usage policy, joined on all panel fields except n_quotes. _sources/fews_prices_refresh.json records input/output hashes, exclusions and revisions. KAMIS rows are monthly medians of clean wholesale per-head quotes. Terms of trade is derived in the notebook from the FDW goat and maize retail legs.",
   "coverage": "FEWS NET: county x market x product monthly prices (KES), retail + wholesale, 42 counties, 2000-2026. KAMIS: county x market x species monthly medians (KES/head, wholesale), 45 counties, 2021-2026 (camels to 2025-11).",
   "used_by": "notebook §4.4 market prices + derived terms of trade (FEWS NET rows; the KAMIS rows are Wholesale and not yet selected by the Figure 4.4 Retail filter)",
-  "grain": "35206 rows",
+  "grain": "36553 rows",
   "columns": [
     "county",
     "admin_2",
@@ -25,5 +25,132 @@
     "iso3",
     "source",
     "n_quotes"
-  ]
+  ],
+  "observed_fdw_coverage": {
+    "first_date": "2000-01-31",
+    "last_date": "2026-10-31",
+    "accepted_fdw_rows": 28753,
+    "provider_rows": {
+      "Famine Early Warning Systems Network (FEWS NET), Kenya, Price": 484,
+      "Kenya National Bureau of Statistics (KNBS), Kenya, price": 213,
+      "Kenya National Bureau of Statistics (KNBS), Leading Economic Indicators, Price, Kenya": 10121,
+      "Ministry of Agriculture, Livestock and Fisheries, Kenya, Price": 5811,
+      "National Drought Management Authority (NDMA), Kenya, Price": 12126
+    },
+    "product_rows": {
+      "Beans (Rosecoco)": 1527,
+      "Beans (mixed)": 6288,
+      "Cassava": 778,
+      "Cattle (Male, 2-3 years old, Local Quality)": 934,
+      "Cow's Milk (Fresh, Pasteurized)": 249,
+      "Cowpeas (Red)": 779,
+      "Goats (Local Quality)": 4969,
+      "Gram (Green)": 990,
+      "Kale": 71,
+      "Maize Flour": 71,
+      "Maize Grain (White)": 11862,
+      "Maize Meal": 235
+    }
+  },
+  "refresh_receipt": "_sources/fews_prices_refresh.json",
+  "fields": {
+    "county": {
+      "type": "object",
+      "description": "Canonical county from admin_1",
+      "unit": "name",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "admin_2": {
+      "type": "object",
+      "description": "Source administrative area; absent for KAMIS",
+      "unit": "name",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "market": {
+      "type": "object",
+      "description": "Reporting market",
+      "unit": "name",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "product": {
+      "type": "object",
+      "description": "Product specification",
+      "unit": "text",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "price_type": {
+      "type": "object",
+      "description": "Retail or Wholesale",
+      "unit": "category",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "year": {
+      "type": "int64",
+      "description": "Calendar year of observation",
+      "unit": "year",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "month": {
+      "type": "int64",
+      "description": "Calendar month of observation",
+      "unit": "month",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "period_date": {
+      "type": "object",
+      "description": "Monthly observation date",
+      "unit": "ISO date",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "value_kes": {
+      "type": "float64",
+      "description": "Nominal price per stated unit",
+      "unit": "KES per unit",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "unit": {
+      "type": "object",
+      "description": "Quoted quantity; no common-unit conversion",
+      "unit": "unit code",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "currency": {
+      "type": "object",
+      "description": "Kenyan shilling",
+      "unit": "ISO 4217",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "iso3": {
+      "type": "object",
+      "description": "Kenya",
+      "unit": "ISO 3166-1 alpha-3",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "source": {
+      "type": "object",
+      "description": "Transport/provider family; FDW originating provider in lineage",
+      "unit": "text",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    },
+    "n_quotes": {
+      "type": "float64",
+      "description": "Clean KAMIS quotes behind monthly median; absent for FDW",
+      "unit": "count",
+      "null_semantics": "Not supplied / not applicable; never zero-imputed",
+      "lineage": "FDW CSV and provider/ID lineage; KAMIS monthly median builder"
+    }
+  }
 }

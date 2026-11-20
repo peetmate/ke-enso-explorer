@@ -1,14 +1,14 @@
 {
   "dataset": "economic_valuation_prices",
-  "version": "2026-10-19",
+  "version": "2026-11-19",
   "builder_version": "v3",
   "base_year": 2021,
   "price_basis": "2021 KES, farm-gate / primary-market",
   "fx": {
     "kes_per_usd": 109.65,
     "year": 2021,
-    "source": "KNBS Economic Survey (ES2025 Table 6.19 p226), annual average",
-    "source_ids": "knbs_es2025",
+    "source": "KNBS Economic Survey (ES2026 Table 6.19 p200), annual average",
+    "source_ids": "knbs_es2026",
     "note": "2021 values convert at the 2021 rate. A current rate (e.g. 130) only as a user override."
   },
   "formulas": {
@@ -905,17 +905,17 @@
     },
     "Cotton (seed)": {
       "unit": "t",
-      "price_kes": 50235,
-      "price_usd": 458.14,
+      "price_kes": 50000,
+      "price_usd": 456,
       "low": null,
       "high": null,
       "status": "knbs_farm_price",
-      "source": "KNBS ES2025 Table 7.4 p232: Seed Cotton KSh per 100 Kg",
-      "source_ids": "knbs_es2025",
+      "source": "KNBS ES2026 Table 7.4 p207: Seed Cotton KSh per 100 Kg",
+      "source_ids": "knbs_es2026",
       "note": null,
       "crosscheck": {
         "method_kes_t": 52376.67,
-        "knbs_farm_kes_t": 50235,
+        "knbs_farm_kes_t": 50000,
         "knbs_napr_implied_kes_t": 50119.29,
         "pin_kes_t": null,
         "fao_producer_price_kes_t": 52379.8
@@ -1157,17 +1157,17 @@
     },
     "Sisal": {
       "unit": "t",
-      "price_kes": 173748,
-      "price_usd": 1584.57,
+      "price_kes": 159024,
+      "price_usd": 1450.29,
       "low": null,
       "high": null,
       "status": "knbs_farm_price",
-      "source": "KNBS ES2025 Table 7.4 p232: Sisal KSh per 100 Kg",
-      "source_ids": "knbs_es2025",
+      "source": "KNBS ES2026 Table 7.4 p207: Sisal KSh per 100 Kg",
+      "source_ids": "knbs_es2026",
       "note": null,
       "crosscheck": {
         "method_kes_t": null,
-        "knbs_farm_kes_t": 173748,
+        "knbs_farm_kes_t": 159024,
         "knbs_napr_implied_kes_t": 162150.82,
         "pin_kes_t": null,
         "fao_producer_price_kes_t": null
@@ -1211,17 +1211,17 @@
     },
     "Sugarcane": {
       "unit": "t",
-      "price_kes": 3912,
-      "price_usd": 35.68,
+      "price_kes": 3910,
+      "price_usd": 35.66,
       "low": null,
       "high": null,
       "status": "knbs_farm_price",
-      "source": "KNBS ES2025 Table 7.4 p232: Sugar-cane KSh per Tonne",
-      "source_ids": "knbs_es2025",
+      "source": "KNBS ES2026 Table 7.4 p207: Sugar-cane KSh per Tonne",
+      "source_ids": "knbs_es2026",
       "note": "Cane deliveries (NAPR 2024 Annex 12) at the KNBS cane price. NAPR 2025 prints no county cane for 2024.",
       "crosscheck": {
         "method_kes_t": 4142.33,
-        "knbs_farm_kes_t": 3912,
+        "knbs_farm_kes_t": 3910,
         "knbs_napr_implied_kes_t": null,
         "pin_kes_t": null,
         "fao_producer_price_kes_t": 4144.77
@@ -1288,8 +1288,8 @@
       "low": null,
       "high": null,
       "status": "knbs_farm_price",
-      "source": "KNBS ES2025 Table 7.4 p232: Wheat KSh per 100 Kg",
-      "source_ids": "knbs_es2025",
+      "source": "KNBS ES2026 Table 7.4 p207: Wheat KSh per 100 Kg",
+      "source_ids": "knbs_es2026",
       "note": null,
       "crosscheck": {
         "method_kes_t": 41213.97,
@@ -5425,7 +5425,7 @@
       "url": "https://www.fao.org/faostat/en/#data/PP",
       "doi": "",
       "access_status": "cached_offrepo",
-      "sha256": "0cd4853fedf9f6f6671bc0cfa6b67d329403f41bb1594318097a181382b3321e",
+      "sha256": "e84cdd46f854fd2f6e9d468f49d0388130876c9a91d5fe2a4c350afd3e6c373e",
       "pages_used": ""
     },
     "hp_nominal_price_method": {
@@ -5449,7 +5449,7 @@
       "url": "https://data.apps.fao.org/catalog/",
       "doi": "",
       "access_status": "cached_offrepo",
-      "sha256": "618037f5a2dd6e383d340bee23c492fb6707ba647426021d03a102eca409e25d",
+      "sha256": "93446fd6e54a7e050b833eae2d5a63fe74b6949ea2a53c82af83d56ba7a30ff7",
       "pages_used": ""
     },
     "afa_county_returns_raw": {
@@ -5459,6 +5459,14 @@
       "access_status": "cached",
       "sha256": "42cd460bfa3c3b5abf894b169691bdb210db2b895e6b4b95431d68a4a197fb39",
       "pages_used": "Crop == 'Rice'"
+    },
+    "knbs_es2026": {
+      "citation": "Kenya National Bureau of Statistics (2026). Economic Survey 2026. Nairobi: KNBS.",
+      "url": "https://www.knbs.or.ke/wp-content/uploads/2026/04/2026-Economic-Survey.pdf",
+      "doi": "",
+      "access_status": "cached",
+      "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+      "pages_used": "p70 (T2.1), p200 (T6.19), p207 (T7.4)"
     },
     "hcd_hvr_2022": {
       "citation": "Agriculture and Food Authority - Horticultural Crops Directorate / Ministry of Agriculture (2022). Horticulture Validated Report 2022 (covers 2021 and 2022). 120 pp. Posted on Calameo 2025-09-25 by account 'maingi dede'.",
@@ -5665,7 +5673,7 @@
       "url": "",
       "doi": "",
       "access_status": "cached",
-      "sha256": "fc42747c8dbc158f5b5bb633d917fb43c50070c5ec42cef33d6c593326b8834b",
+      "sha256": "3d0ca6bf8a79d36be054a7083a6cf3b8f33e8d170c602632beeb3e1350126a6b",
       "pages_used": "SA2025 p222; ES2025 p232"
     },
     "star2022_kalro_indigenous_chicken": {

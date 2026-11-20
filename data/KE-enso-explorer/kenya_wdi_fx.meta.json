@@ -14,7 +14,7 @@
   "last_year": 2025,
   "observed_years": 66,
   "missing_years": [],
-  "source_sha256": "01c0a3707fc3f87b8ac4919ad3d44dac33e76e9360c2792bce14727c96286966",
+  "source_sha256": "c01f3242f0614303bbca78a32c7bc151d0933fe1bf9306c9c2f292a6597fdd7a",
   "sha256": "e1e34c9a66262466d9d276ef52dc785136d45111590c697d61848aa454b1f05f",
   "historical_source": "Previous Explorer releases used Central Bank of Kenya monthly average exchange rates, averaged over twelve complete months.",
   "historical_source_url": "https://www.centralbank.go.ke/statistics/exchange-rates/",

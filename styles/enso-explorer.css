@@ -414,7 +414,8 @@ details.enso-more-details > summary span.enso-more-details-title {
   color: #0f172a;
 }
 
-.enso-tooltip-bubble {
+.enso-tooltip-bubble,
+.enso-tooltip-pop {
   position: absolute;
   bottom: calc(100% + 6px);
   left: 50%;
@@ -428,7 +429,7 @@ details.enso-more-details > summary span.enso-more-details-title {
   line-height: 1.35;
   white-space: normal;
   width: max-content;
-  max-width: 250px;
+  max-width: 290px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   pointer-events: none;
   opacity: 0;
@@ -440,7 +441,8 @@ details.enso-more-details > summary span.enso-more-details-title {
   letter-spacing: normal;
 }
 
-.enso-tooltip-bubble::after {
+.enso-tooltip-bubble::after,
+.enso-tooltip-pop::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -452,29 +454,35 @@ details.enso-more-details > summary span.enso-more-details-title {
 }
 
 .enso-tooltip-wrap:hover .enso-tooltip-bubble,
-.enso-tooltip-wrap:focus-within .enso-tooltip-bubble {
+.enso-tooltip-wrap:focus-within .enso-tooltip-bubble,
+.enso-tooltip-wrap:hover .enso-tooltip-pop,
+.enso-tooltip-wrap:focus-within .enso-tooltip-pop {
   opacity: 1;
   visibility: visible;
 }
 
-.enso-tooltip-wrap.tooltip-align-right .enso-tooltip-bubble {
+.enso-tooltip-wrap.tooltip-align-right .enso-tooltip-bubble,
+.enso-tooltip-wrap.tooltip-align-right .enso-tooltip-pop {
   left: auto;
   right: 0;
   transform: none;
 }
 
-.enso-tooltip-wrap.tooltip-align-right .enso-tooltip-bubble::after {
+.enso-tooltip-wrap.tooltip-align-right .enso-tooltip-bubble::after,
+.enso-tooltip-wrap.tooltip-align-right .enso-tooltip-pop::after {
   left: auto;
   right: 8px;
   transform: none;
 }
 
-.enso-tooltip-wrap.tooltip-align-left .enso-tooltip-bubble {
+.enso-tooltip-wrap.tooltip-align-left .enso-tooltip-bubble,
+.enso-tooltip-wrap.tooltip-align-left .enso-tooltip-pop {
   left: 0;
   transform: none;
 }
 
-.enso-tooltip-wrap.tooltip-align-left .enso-tooltip-bubble::after {
+.enso-tooltip-wrap.tooltip-align-left .enso-tooltip-bubble::after,
+.enso-tooltip-wrap.tooltip-align-left .enso-tooltip-pop::after {
   left: 8px;
   transform: none;
 }
