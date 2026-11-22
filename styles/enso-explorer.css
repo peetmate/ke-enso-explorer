@@ -2195,6 +2195,58 @@ html:not([data-audience-mode="technical"]) span.mode-technical-inline,
   white-space: nowrap;
 }
 
+/* ==========================================================================
+   County / Kenya Scope Filter (D66 Fourth Amendment — A2 & A3)
+   ========================================================================== */
+body[data-scope="county"] [data-scope="kenya"],
+body:not([data-scope]) [data-scope="kenya"],
+body[data-scope="kenya"] [data-scope="county"],
+body[data-scope="county"] #mainTabNav .ke-tab-btn[data-scope="kenya"],
+body:not([data-scope]) #mainTabNav .ke-tab-btn[data-scope="kenya"],
+body[data-scope="kenya"] #mainTabNav .ke-tab-btn[data-scope="county"] {
+  display: none !important;
+}
 
+body[data-scope="kenya"] #section-mam-teleconnection {
+  display: block !important;
+}
 
+#globalControlsHost form[class^="oi-"] select:disabled,
+#globalControlsHost form[class^="oi-"].is-scope-disabled select,
+#globalControlsHost select:disabled,
+#globalControlsHost form.is-scope-disabled select {
+  background: #f1f5f9 !important;
+  background-color: #f1f5f9 !important;
+  color: #94a3b8 !important;
+  border-color: #cbd5e1 !important;
+  cursor: not-allowed !important;
+  opacity: 0.78 !important;
+}
 
+#globalControlsHost form[class^="oi-"].is-scope-disabled > label,
+#globalControlsHost form[class^="oi-"].is-scope-disabled .ke-ctrl-label-stacked span,
+#globalControlsHost form.is-scope-disabled label {
+  color: #94a3b8 !important;
+}
+
+#similarYearsGroup.is-scope-disabled {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  opacity: 0.72 !important;
+}
+
+#similarYearsGroup.is-scope-disabled button:disabled,
+#similarYearsGroup.is-scope-disabled select:disabled {
+  background: #e2e8f0 !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 600px) {
+  #globalControlsHost #scopeToggleGroup,
+  #globalControlsHost > form[class^="oi-"]:first-of-type {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+}
