@@ -3,9 +3,9 @@
   "title": "ENSO Explorer — Kenya",
   "version": "3.15.0",
   "versionDisplay": "v3.15.0",
-  "build": "303112104",
+  "build": "303112301",
   "releaseDate": "2026-11-21",
-  "lastUpdated": "2026-11-21",
+  "lastUpdated": "2026-11-23",
   "dataVintage": "2026-10",
   "authors": [
     "Pete Steward"
@@ -19,8 +19,8 @@
       "label": "v3.15.0 (Current — Nov 2026)",
       "url": "notebook_v3.html",
       "status": "active",
-      "date": "2026-11-21",
-      "build": "303112104",
+      "date": "2026-11-23",
+      "build": "303112301",
       "description": "County / Kenya Scope Filter & Maize Harvest-Import Lens Release: Introduces the global County / Kenya scope selector separating county-level analysis from national-level evidence; moves Kenya-wide Food Trade (Figures 4.7–4.10 and Table 4.6) into Kenya view alongside Cross-Border Trade and National Humanitarian Appeals; and adds a default maize Harvest and Imports view in Figure 4.7 pairing annual maize harvest anomalies with import dependency and NOAA RONI ocean telemetry.",
       "highlights": [
         "County / Kenya Scope Selector: Switches cleanly between County view (Sections 0–6 with 4 county impact pathways) and Kenya view (Overview, Ocean & Outlook, National Impacts across Cross-Border Trade, Humanitarian Appeals, and Food Trade, plus Methods & Science).",
