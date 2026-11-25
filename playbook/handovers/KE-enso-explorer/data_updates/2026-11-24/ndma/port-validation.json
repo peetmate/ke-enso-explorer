@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "date": "2026-11-25",
+  "repository": "peetmate/ke-enso-explorer",
+  "base_branch": "source",
+  "base_commit": "fcbc61ef890be8fe45280cba35407df87c37d6d8",
+  "source_commit": "ea9e5d9d6ff325820bfb3ef5a4fc43fc7b47cc08",
+  "target_previous_rows": 107,
+  "accepted_rows": 3539,
+  "added_vs_target": 3432,
+  "removed_ids": 0,
+  "changed_existing_review_fields": 0,
+  "identical_schema": true,
+  "accepted_parquet_sha256": "947b04dfb590efc2d7b2a751acb309c696aa597c816b46b2ec85eb3e3ed0a0f3",
+  "metadata_regeneration_byte_identical": true,
+  "reviewed_harvester_hash_matches": true,
+  "closure_and_invalid_report_rejection": "PASS",
+  "platform_checks": "Seven passing checks archived from source project; not represented as execution against this older source branch. No notebook, UI, release metadata or loader changes in this port.",
+  "catalogue_integration": "Original source catalogue evidence archived only; not installed into this older branch governance/provenance system.",
+  "deployment": "Not requested; PR base is source, not main."
+}

@@ -1,0 +1,68 @@
+{
+  "status": "INCOMPLETE",
+  "mode": "handoff",
+  "assets": 30,
+  "issues": [
+    {
+      "asset": "publication_0_2_0_enso_drivers_monthly",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_monthly",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_monthly",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_seasonal",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_seasonal",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_seasonal",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "publication_0_2_0_harveststat_county_production",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_harveststat_county_production",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_harveststat_county_production",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "publication_0_2_0_kenya_wdi_fx",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_kenya_wdi_fx",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_kenya_wdi_fx",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "publication_0_2_0_ndvi_county",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_ndvi_county",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_ndvi_county",
+      "issue": "Field dictionary missing"
+    }
+  ],
+  "limitation": "File/record checks only; does not establish scientific correctness, current rights, or deployment authorization."
+}

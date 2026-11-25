@@ -1,0 +1,155 @@
+TLS: certificate valid (notAfter 2027-04-04T23:59:59+00:00), SPKI pin matched - verifying the full chain.
+selftest: GET ID=7, then callback PN5
+  state: 10 keys, callbackState 3032 B, VIEWSTATE 17196 B
+  echo=(6, 11, 109)  rows=10
+  SELFTEST PASS - random-access paging works
+
+=== ID=7  National Drought Early Warning Bulletins ===
+  sweep 1 (natural order):
+    page 1/11  rows=10
+    page 11/11  rows=109
+    109 rows -> 109 distinct documents (0 listed twice by NDMA)
+  sweep 2 (sort col3 ASC):
+    page 1/11  rows=10
+    page 11/11  rows=109
+    closure check: a different ordering surfaced 0 new document(s) - PASS, the set is closed
+
+=== ID=11  County Drought Early Warning Bulletins ===
+  sweep 1 (natural order):
+    page 1/344  rows=10
+PROGRESS category=11 page=21 network=44 cache=1
+PROGRESS category=11 page=41 network=64 cache=1
+    page 51/344  rows=510
+PROGRESS category=11 page=61 network=84 cache=1
+PROGRESS category=11 page=81 network=104 cache=1
+PROGRESS category=11 page=101 network=125 cache=1
+    page 101/344  rows=1010
+PROGRESS category=11 page=121 network=145 cache=1
+PROGRESS category=11 page=141 network=165 cache=1
+    page 151/344  rows=1510
+PROGRESS category=11 page=161 network=185 cache=1
+PROGRESS category=11 page=181 network=205 cache=1
+PROGRESS category=11 page=201 network=226 cache=1
+    page 201/344  rows=2010
+PROGRESS category=11 page=221 network=246 cache=1
+PROGRESS category=11 page=241 network=266 cache=1
+    page 251/344  rows=2510
+PROGRESS category=11 page=261 network=286 cache=1
+PROGRESS category=11 page=281 network=306 cache=1
+PROGRESS category=11 page=301 network=327 cache=1
+    page 301/344  rows=3010
+PROGRESS category=11 page=321 network=347 cache=1
+PROGRESS category=11 page=341 network=367 cache=1
+    page 344/344  rows=3434
+    3434 rows -> 3430 distinct documents (4 listed twice by NDMA)
+  sweep 2 (sort col3 ASC):
+    page 1/344  rows=10
+PROGRESS category=11 page=21 network=392 cache=1
+PROGRESS category=11 page=41 network=412 cache=1
+    page 51/344  rows=510
+PROGRESS category=11 page=61 network=432 cache=1
+PROGRESS category=11 page=81 network=452 cache=1
+PROGRESS category=11 page=101 network=473 cache=2
+    page 101/344  rows=1010
+PROGRESS category=11 page=121 network=493 cache=2
+PROGRESS category=11 page=141 network=513 cache=2
+    page 151/344  rows=1510
+PROGRESS category=11 page=161 network=533 cache=2
+PROGRESS category=11 page=181 network=553 cache=2
+PROGRESS category=11 page=201 network=574 cache=3
+    page 201/344  rows=2010
+PROGRESS category=11 page=221 network=594 cache=3
+PROGRESS category=11 page=241 network=614 cache=3
+    page 251/344  rows=2510
+PROGRESS category=11 page=261 network=634 cache=3
+PROGRESS category=11 page=281 network=654 cache=3
+PROGRESS category=11 page=301 network=675 cache=4
+    page 301/344  rows=3010
+PROGRESS category=11 page=321 network=695 cache=4
+PROGRESS category=11 page=341 network=715 cache=4
+    page 344/344  rows=3434
+    closure check: a different ordering surfaced 0 new document(s) - PASS, the set is closed
+
+wrote /Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/.ndma_cache/refresh-20261124/candidate/ndma_bulletin_index.parquet  (3539 rows)
+wrote /Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/.ndma_cache/refresh-20261124/candidate/ndma_index_validation_report.csv
+
+=== ID=7  National Drought Early Warning Bulletins ===
+  sweep 1 (natural order):
+    page 1/11  rows=10
+    page 11/11  rows=109
+    109 rows -> 109 distinct documents (0 listed twice by NDMA)
+  sweep 2 (sort col3 ASC):
+    page 1/11  rows=10
+    page 11/11  rows=109
+    closure check: a different ordering surfaced 0 new document(s) - PASS, the set is closed
+
+=== ID=11  County Drought Early Warning Bulletins ===
+  sweep 1 (natural order):
+    page 1/344  rows=10
+PROGRESS category=11 page=21 network=4 cache=41
+PROGRESS category=11 page=41 network=4 cache=61
+    page 51/344  rows=510
+PROGRESS category=11 page=61 network=4 cache=81
+PROGRESS category=11 page=81 network=4 cache=101
+PROGRESS category=11 page=101 network=5 cache=121
+    page 101/344  rows=1010
+PROGRESS category=11 page=121 network=5 cache=141
+PROGRESS category=11 page=141 network=5 cache=161
+    page 151/344  rows=1510
+PROGRESS category=11 page=161 network=5 cache=181
+PROGRESS category=11 page=181 network=5 cache=201
+PROGRESS category=11 page=201 network=6 cache=221
+    page 201/344  rows=2010
+PROGRESS category=11 page=221 network=6 cache=241
+PROGRESS category=11 page=241 network=6 cache=261
+    page 251/344  rows=2510
+PROGRESS category=11 page=261 network=6 cache=281
+PROGRESS category=11 page=281 network=6 cache=301
+PROGRESS category=11 page=301 network=7 cache=321
+    page 301/344  rows=3010
+PROGRESS category=11 page=321 network=7 cache=341
+PROGRESS category=11 page=341 network=7 cache=361
+    page 344/344  rows=3434
+    3434 rows -> 3430 distinct documents (4 listed twice by NDMA)
+  sweep 2 (sort col3 ASC):
+    page 1/344  rows=10
+PROGRESS category=11 page=21 network=8 cache=385
+PROGRESS category=11 page=41 network=8 cache=405
+    page 51/344  rows=510
+PROGRESS category=11 page=61 network=8 cache=425
+PROGRESS category=11 page=81 network=8 cache=445
+PROGRESS category=11 page=101 network=9 cache=466
+    page 101/344  rows=1010
+PROGRESS category=11 page=121 network=9 cache=486
+PROGRESS category=11 page=141 network=9 cache=506
+    page 151/344  rows=1510
+PROGRESS category=11 page=161 network=9 cache=526
+PROGRESS category=11 page=181 network=9 cache=546
+PROGRESS category=11 page=201 network=10 cache=567
+    page 201/344  rows=2010
+PROGRESS category=11 page=221 network=10 cache=587
+PROGRESS category=11 page=241 network=10 cache=607
+    page 251/344  rows=2510
+PROGRESS category=11 page=261 network=10 cache=627
+PROGRESS category=11 page=281 network=10 cache=647
+PROGRESS category=11 page=301 network=11 cache=668
+    page 301/344  rows=3010
+PROGRESS category=11 page=321 network=11 cache=688
+PROGRESS category=11 page=341 network=11 cache=708
+    page 344/344  rows=3434
+    closure check: a different ordering surfaced 0 new document(s) - PASS, the set is closed
+
+wrote /Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/.ndma_cache/refresh-20261124/replay/ndma_bulletin_index.parquet  (3539 rows)
+wrote /Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/.ndma_cache/refresh-20261124/replay/ndma_index_validation_report.csv
+{
+  "status": "VALIDATED_STAGED_NOT_PROMOTED",
+  "previous_rows": 3516,
+  "candidate_rows": 3539,
+  "removed": [],
+  "cached_replay": {
+    "equal_except_harvested_at": true,
+    "network_requests": 12,
+    "cache_hits": 711
+  }
+}
+Added=23 revised=0; evidence=/Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/.ndma_cache/refresh-20261124

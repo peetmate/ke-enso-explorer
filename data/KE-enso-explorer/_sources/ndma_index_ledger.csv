@@ -1,0 +1,17 @@
+category_id,category,items_reported,status,reason
+7,National Drought Early Warning Bulletins,109,SERVED,Validated 2026-11-24: 109 rows enumerated per sweep (server-echoed page number checked on every page) = 109 distinct documents + 0 repeated listings; closure confirmed by a second sweep under a different sort finding 0 new documents
+11,County Drought Early Warning Bulletins,3434,SERVED,Validated 2026-11-24: 3434 rows enumerated per sweep (server-echoed page number checked on every page) = 3430 distinct documents + 4 repeated listings; closure confirmed by a second sweep under a different sort finding 0 new documents
+,4 documents listed twice by NDMA (ID=11),4,duplicate,"Same doc_uuid, same grid key and title, at two widely separated offsets (e.g. Garissa Drought EWS Bulletin April 2014 at rows 1501 and 3131). Intrinsic to NDMA data, not a paging artifact - the same 4 recur under a different column sort. Deduped to one row each in the parquet; uuids listed in ndma_index_validation_report.csv."
+9,(unfiltered library view),4141,duplicate,Renders the whole library with no category filter (row 1 is a County Long Rain Assessment). Not a distinct category; harvesting it would duplicate every other row.
+12,(unfiltered library view),4141,duplicate,Same unfiltered library view as ID=9.
+13,(unfiltered library view),4141,duplicate,Same unfiltered library view as ID=9.
+16,National Long Rain Assessments,14,secondary,"LRA is a seasonal assessment, not a monthly bulletin. Different product and cadence; would muddy the monthly grain and the ASAL-coverage gate. Enable deliberately in a later unit."
+17,County Long Rain Assessments,275,secondary,As ID=16.
+18,National Short Rain Assessments,12,secondary,"SRA is a seasonal assessment, not a monthly bulletin. As ID=16."
+19,County Short Rain Assessments,251,secondary,As ID=18.
+10,Strategic Plans,,out-of-scope,Not drought bulletins. No pager.
+14,EDE Progress Reports,,out-of-scope,Not drought bulletins. No pager.
+15,Frameworks,,out-of-scope,Not drought bulletins. No pager.
+20,National Strategies,4,out-of-scope,Not drought bulletins.
+,titles with no parseable month (6 of 3430),6,held-unvalidatable,"Reference period cannot be derived deterministically from the title. Served with ref_period NULL and ref_basis=unparsed - never inferred from uploaded_date, which is the UPLOAD date and is wrong by up to nine years for the Dec-2021 back-fill. A further 5 rows carry month and year separated by other words (ref_basis=title-month-and-year-apart) and 3 carry a year only."
+,county token not in county_key.parquet (3 of 3430),3,held-unvalidatable,Served with county NULL and county_raw preserved. Extend COUNTY_ALIASES in ndma_index_build.py rather than guessing a spelling.

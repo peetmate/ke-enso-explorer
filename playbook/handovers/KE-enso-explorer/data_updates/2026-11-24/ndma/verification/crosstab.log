@@ -1,0 +1,21 @@
+Loading http://localhost:4333/notebooks/KE-enso-explorer/notebook_v3.html...
+--- 1. Testing Section 0 Executive County Brief (Marsabit) ---
+PASS: Section 0 Executive County Brief values extracted and verified!
+--- 2. Testing Tab 2 (Figure 2.1 Cross-Tab Equality & About Expander) ---
+PASS: Section 2 Figure 2.1 exactly matches Section 0 Executive Brief values!
+Testing Figure 2.1 unified methodology expander...
+PASS: Figure 2.1 unified methodology expander successfully opened with verified content!
+Saved /Users/pstewarda/.gemini/antigravity/brain/ef0a6d9e-a7e9-4d4b-b638-72992f6f90bf/fig21_with_about_expanded.png
+--- 3. Testing Tab 3 (Figure 3.1 & 3.1B Unified Methodology Expanders) ---
+PASS: Figure 3.1 unified methodology expander verified!
+PASS: Figure 3.1B unified methodology expander verified!
+--- 4. Testing Tab 4 (Figure 4.4B Cross-Border Trade Unified Methodology Expander) ---
+PASS: Figure 4.4B unified methodology expander verified!
+Saved /Users/pstewarda/.gemini/antigravity/brain/ef0a6d9e-a7e9-4d4b-b638-72992f6f90bf/fig44b_with_about_expanded.png
+--- 5. Testing County Reactivity: Switch to Turkana ---
+PASS: Executive Brief dynamically re-calculated and verified for Turkana (926,976 headcount)!
+PASS: Figure 2.1 dynamically re-calculated and verified for Turkana!
+
+--- AUDIT SUMMARY ---
+Real JS/Runtime errors: 0
+ALL CROSS-TAB INTEGRITY AND ABOUT EXPANDER ASSERTIONS PASSED WITH 0 CONSOLE ERRORS!

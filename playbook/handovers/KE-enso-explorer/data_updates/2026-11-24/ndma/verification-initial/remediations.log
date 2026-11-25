@@ -1,0 +1,42 @@
+Navigating to http://localhost:4333/notebooks/KE-enso-explorer/notebook_v3.html
+HTTP 307 http://gc.zgo.at/count.js
+--- 1. Testing Global Chrome & Section 1 ---
+PASS: Sticky subnav has clean titles without redundant prefixes.
+Hero Version Badge: V3.15.0
+Section 1 Title: 1.1 Marsabit County Context: Baseline Geography and Human Stakes
+--- 2. Testing Section 3 Guide Box & County Climatology Baseline Card ---
+Section 3 Guide Box Cards: 4 (expected 4)
+Baseline Card Full Text:
+ Marsabit Countywide Climatological & Hazard Baseline
+70,944 km² territory • Population: 459,785 (KNBS 2019 Census) • Baseline: 1981–2025 CHIRPS v3 • Copernicus GFM SAR Peak
+MAM (Long Rains)
+LONG RAINS (MAM) NORMAL
+204.2 mm
+56.0% of annual bimodal rainfall
+SHORT RAINS (OND) NORMAL
+160.8 mm
+44.0% of annual bimodal rainfall
+ANNUAL BIMODAL TOTAL
+365.0 mm
+Combined MAM + OND accumulation
+PEAK OBSERVED FLOOD INUNDATION
+18,332 people
+4.0% of population • 2,538.3 km² inundation
+Seasonal Rainfall Distribution
+MAM 56% / OND 44%
+--- 3. Testing Figure 3.1 & 3.1B Sequence View ---
+Figure 3.1B KPI Cards Count: 3 (expected 3)
+KPI Cards Content Summary: DOUBLE FAILURE YEARS (DRY / DRY) | 8 (18.2% of years) | Years: 1984, 1994, 1996, 1999, 2000, 2011, 2017, 2022 | LONGEST UNBROKEN DRY RUN | 4 seasons | 1998 OND → 2000 MAM | 326 mm total (-55% vs norm) | OCEAN DRIVERS IN DOUBLE FAILURES | 7 of 8 (88% La Niña / −IOD) | Initiated by cool Pacific / Indian Ocean phase | 11 of 19 (58%) La Niña/−IOD ONDs were dry
+Figure 3.1B Analogue Rows Highlighted: 16
+--- 4. Testing Figure 3.2 Contingency & Figure 3.3 Scatter ---
+Contingency Plot Bounding Box: height=226.078125px
+--- 5. Testing Figure 3.5 Flood Observation Year Formatting ---
+--- 6. Testing Section 4 Sub-Tabs & In-Card Toolbar ---
+Section 4 Sub-Tabs Count (County view): 4 (expected 4)
+--- 6b. Testing Section 4.1 Sector Switching & Non-Empty Renders ---
+PASS: Section 4.1 Crops renders data successfully.
+PASS: Section 4.1 Livestock renders data successfully.
+PASS: Section 4.1 Products renders data successfully.
+--- Audit Verification Summary ---
+Real Console errors: 0
+[PASS] ALL REMEDIATION VERIFICATION ASSERTIONS PASSED WITH 0 CONSOLE ERRORS!

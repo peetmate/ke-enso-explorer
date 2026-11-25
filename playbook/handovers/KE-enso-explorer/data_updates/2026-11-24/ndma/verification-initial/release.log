@@ -1,0 +1,19 @@
+======================================================================
+ KENYA ENSO EXPLORER: AUTOMATED CI RELEASE ASSERTIONS (D57)
+======================================================================
+[ℹ DOI] Extracted 25 canonical DOIs. Verifying registration via https://doi.org/api/handles/...
+[✓ DOI] All 25 academic DOIs registered and verified in Handle registry (rc=1)!
+[ℹ DATA] Validating served Parquet tables in data/KE-enso-explorer/...
+[✓ DATA] enso_hindcast_skill.parquet: 576 rows across 48 counties validated.
+[✓ DATA] chirps_county_monthly.parquet: 26112 rows extending to 2026 validated.
+[✓ DATA] driver_indices.parquet: 2074 monthly records validated.
+[✓ DATA] population_knbs_census_adm1.parquet: 47 counties, 47,564,296 headcount verified.
+[✓ DATA] exposure_totals.parquet: Denominator baselines verified.
+[✓ DATA] market_prices.parquet: 28,753 accepted FDW rows + 7,800 KAMIS monthly medians (2021-2026); market_prices_kamis.parquet: 116,575 market-day quotes, 102,659 clean wholesale.
+[ℹ INTEGRITY] Performing cross-dataset value equality assertions...
+[✓ INTEGRITY] Cross-dataset values verified identical for all sample counties (Marsabit, Turkana, Mandera, Kilifi, Kisumu, Garissa)!
+[ℹ GOVERNANCE] Verifying release.json and methodology disclosures...
+[✓ GOVERNANCE] Governance metadata, Decision references, and WMO baselines verified.
+======================================================================
+[PASS] ALL CI RELEASE AND DATA INTEGRITY ASSERTIONS PASSED!
+======================================================================

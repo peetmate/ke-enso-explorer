@@ -1,0 +1,281 @@
+{
+  "status": "ACCEPTED",
+  "date": "2026-11-24",
+  "previous_rows": 3516,
+  "candidate_rows": 3539,
+  "added": [
+    {
+      "doc_uuid": "299e580a-87a2-4963-8568-165ff140234e",
+      "title_raw": "Baringo County Drought Early Warning Bulletin October 2026",
+      "county": "Baringo",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "3936e1a9-0ee2-49ec-8c95-e491aa7608f3",
+      "title_raw": "Embu (Mbeere County Drought Early Warning Bulletin October 2026",
+      "county": "Embu",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "825d2271-8d7d-4233-9eab-5cd6c66a2050",
+      "title_raw": "Garissa County Drought Early Warning Bulletin October2026",
+      "county": "Garissa",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "3e9498fd-00c4-48cf-bba9-594e00b677bf",
+      "title_raw": "Isiolo County Drought Early Warning Bulletin October 2026",
+      "county": "Isiolo",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "3d565402-c1ae-460f-a1c3-26e495d545c7",
+      "title_raw": "Kajiado County Drought Early Warning Bulletin October 2026",
+      "county": "Kajiado",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "11b8f035-e41a-4750-9443-00b5de240626",
+      "title_raw": "Kilifi County Drought Early Warning Bulletin October 2026",
+      "county": "Kilifi",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "6f4c7480-9264-49e6-a4fd-809bd82b43c3",
+      "title_raw": "Kitui County Drought Early Warning Bulletin October 2026",
+      "county": "Kitui",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "c9aebcbf-4085-4c50-ad5d-5263297b3d37",
+      "title_raw": "Kwale County Drought Early Warning Bulletin October 2026",
+      "county": "Kwale",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "c7451624-54cd-4668-8c71-2a6b07665b6d",
+      "title_raw": "Laikipia County Drought Early Warning Bulletin October 2026",
+      "county": "Laikipia",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "d8baa35d-a385-4683-b962-79a5d33507e4",
+      "title_raw": "Lamu County Drought Early Warning Bulletin October 2026",
+      "county": "Lamu",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "7ad45069-5583-4f09-a168-e939e97cfc40",
+      "title_raw": "Makueni County Drought Early Warning Bulletin October 2026",
+      "county": "Makueni",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "79ffeb34-5352-44c3-885e-6a7d53fc1340",
+      "title_raw": "Mandera County Drought Early Warning Bulletin October 2026",
+      "county": "Mandera",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "c1291516-a92b-4900-b992-0a8457c977fb",
+      "title_raw": "Meru County Drought Early Warning Bulletin October 2026",
+      "county": "Meru",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "df9cbd9c-64d7-40a5-840c-beda07e81f18",
+      "title_raw": "Narok County Drought Early Warning Bulletin October 2026",
+      "county": "Narok",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "1e3958ec-0f3f-421d-8855-ea9612212d43",
+      "title_raw": "Nyeri County Drought Early Warning bulletin October 2026",
+      "county": "Nyeri",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "4b864a3a-a6f5-45be-b3a0-4205247c7cd7",
+      "title_raw": "Samburu County Drought Early Warning Bulletin October 2026",
+      "county": "Samburu",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "4082ac02-c025-4b1f-8793-e30bb3838f97",
+      "title_raw": "Taita Taveta County Drought Early Warning Bulletin October 2026",
+      "county": "Taita Taveta",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "261750bc-2d68-43fd-8efb-d197c72b449b",
+      "title_raw": "TanaRiver County Drought Early Warning Bulletin October 2026",
+      "county": "Tana River",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "07f6548c-6528-4518-9087-f8633a33fba8",
+      "title_raw": "THARAKA NITHI Drought Early Warning Bulletin October 2026",
+      "county": "Tharaka Nithi",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "aadf4dfc-0155-4b68-9409-31f8d1ccfc40",
+      "title_raw": "Turkana County Drought Early Warning Bulletin October 2026",
+      "county": "Turkana",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "c955efe2-0f90-4360-b091-35693fb012a9",
+      "title_raw": "Wajir County Drought Early Warning Bulletin October 2026",
+      "county": "Wajir",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "c103a44d-7a1b-410b-81be-99aa599cd0c1",
+      "title_raw": "West Pokot County Drought Early Warning Bulletin October 2026",
+      "county": "West Pokot",
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    },
+    {
+      "doc_uuid": "485bc937-7b9d-4c05-a5e7-30e68271e12c",
+      "title_raw": "National Drought Early Warning Bullletin October 2026",
+      "county": null,
+      "ref_period": "2026-10",
+      "uploaded_date": "2026-11-20T00:00:00.000"
+    }
+  ],
+  "removed": [],
+  "revised": [],
+  "validation": [
+    {
+      "category_id": 7,
+      "category": "National Drought Early Warning Bulletins",
+      "series": "dew_national",
+      "items_reported": 109,
+      "pages_reported": 11,
+      "sweep_rows": "109;109",
+      "duplicate_listings": 0,
+      "duplicate_uuids": "",
+      "closure_new_docs": 0,
+      "passes_used": 2,
+      "pages_fetched": 22,
+      "rows_seen": 218,
+      "rows_parsed": 109,
+      "uuids_unique": 109,
+      "keys_unique": 109,
+      "pages_with_zero_rows": 0,
+      "first_uuid_repeats": 0,
+      "page_echo_mismatches": 0,
+      "uuid_malformed": 0,
+      "uploaded_before_ref": 0,
+      "ref_period_unparsed": 0,
+      "county_unresolved": 0,
+      "served": true,
+      "validation": "109 rows enumerated per sweep (server-echoed page number checked on every page) = 109 distinct documents + 0 listed twice by NDMA; closure confirmed by a second sweep under a different sort finding 0 new documents",
+      "tls_verified": "TLS-OK",
+      "harvested_at": "2026-11-25T01:19:26+00:00",
+      "delay_s": 2.0,
+      "cache_hits": 4,
+      "network_requests": 719
+    },
+    {
+      "category_id": 11,
+      "category": "County Drought Early Warning Bulletins",
+      "series": "dew_county",
+      "items_reported": 3434,
+      "pages_reported": 344,
+      "sweep_rows": "3434;3434",
+      "duplicate_listings": 4,
+      "duplicate_uuids": "75a423f5-c240-49c3-bec5-cca48f765b3d;8a9e38f1-466c-4635-b8c2-e29b1ed61304;acc3cb42-251e-409e-b119-75f195983771;da11f73f-cf20-4c42-a470-a49d9dedcc2a",
+      "closure_new_docs": 0,
+      "passes_used": 2,
+      "pages_fetched": 688,
+      "rows_seen": 6868,
+      "rows_parsed": 3430,
+      "uuids_unique": 3430,
+      "keys_unique": 3430,
+      "pages_with_zero_rows": 0,
+      "first_uuid_repeats": 0,
+      "page_echo_mismatches": 0,
+      "uuid_malformed": 0,
+      "uploaded_before_ref": 0,
+      "ref_period_unparsed": 6,
+      "county_unresolved": 3,
+      "served": true,
+      "validation": "3434 rows enumerated per sweep (server-echoed page number checked on every page) = 3430 distinct documents + 4 listed twice by NDMA; closure confirmed by a second sweep under a different sort finding 0 new documents",
+      "tls_verified": "TLS-OK",
+      "harvested_at": "2026-11-25T01:19:26+00:00",
+      "delay_s": 2.0,
+      "cache_hits": 4,
+      "network_requests": 719
+    }
+  ],
+  "cached_replay": {
+    "equal_except_harvested_at": true,
+    "network_requests": 12,
+    "cache_hits": 711
+  },
+  "first_run": {
+    "network_requests": 719,
+    "cache_hits": 4
+  },
+  "prior_sha256": "6d77dddb66feea2ea24fb3c9e962bad222910dda7a5d6d2a9b7cdced91fb254c",
+  "candidate_sha256": "947b04dfb590efc2d7b2a751acb309c696aa597c816b46b2ec85eb3e3ed0a0f3",
+  "cache_manifest_sha256": "c5559044337a3b6845842d1fef65a421a4ac7a14759b222990aa395967d6dbec",
+  "builder_sha256": "4c44ac736c65115a6047a05f39db1f67ec8d4a4608395733c09bd79ba15759c2",
+  "runner_sha256": "939dc32bfb67570e07914b298fb4f0465b3a816ccea1227058e808029b0ca7b5",
+  "raw_cache": "/Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/.ndma_cache/refresh-20261124/cache",
+  "rollback": "/Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/.ndma_cache/refresh-20261124/before",
+  "scope": "Document metadata only; no PDFs, indicator extraction, publication or permission inference.",
+  "ordering_evidence": {
+    "7": {
+      "natural_page_2_sha256": "bb36eb5293a09bc5f51042a376dbee4287d893392421de26a5290931e312a939",
+      "sorted_page_2_sha256": "b05b9552f72f2c222f2f4e45683bd72d306d636931920cddb7a0b08713ac96e4",
+      "different_order": true
+    },
+    "11": {
+      "natural_page_2_sha256": "da9fd485cf0741f4e3528b5b30e625d93d6fa5d8e8e9cf01f42e8ef62b5ede92",
+      "sorted_page_2_sha256": "75e552e8841b4637fc36f0b88db290c634fbdb7618f1e24ceac2705e76c19227",
+      "different_order": true
+    }
+  },
+  "compared_revision_fields": [
+    "title_raw",
+    "county",
+    "ref_period",
+    "uploaded_date",
+    "detail_url",
+    "pdf_url"
+  ],
+  "accepted_rows": 3539,
+  "output_sha256": "947b04dfb590efc2d7b2a751acb309c696aa597c816b46b2ec85eb3e3ed0a0f3",
+  "cache_manifest": "data/KE-enso-explorer/_sources/ndma_cache_manifest.json",
+  "full_rollback": "data/KE-enso-explorer/_sources/.refresh_backups/ndma-20261124",
+  "runner": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/stage_refresh.py",
+  "validation_report": "_sources/ndma_index_validation_report.csv",
+  "replay_command": "/Users/pstewarda/miniforge3/bin/python3 playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/stage_refresh.py --stage data/KE-enso-explorer/_sources/.ndma_cache/refresh-20261124 --resume",
+  "refresh_command": "/Users/pstewarda/miniforge3/bin/python3 data/KE-enso-explorer/_sources/ndma_index_build.py (redirect OUT, REPORT_CSV and CACHE to a new stage as documented in harvest-ndma-bulletins)",
+  "reproduction_note": "Dated runner captures this 24 November run. Use a new directory for a new edition; --resume reuses only this run. Existing maintained ndma_index_build.py supplies parsing and gates."
+}

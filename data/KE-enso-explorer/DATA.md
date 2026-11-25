@@ -153,10 +153,8 @@ non-authored datasets are tracked in
   (`notebook_v3.qmd` `totRows`) as median goat price (KES/head) ÷ median maize-grain price (KES/kg) per
   county-month. Being a ratio it is ambiguous alone — a fall can mean cheaper livestock **or** dearer
   grain, which imply opposite responses — so it must be read against both price legs.
-- **NDMA is not a source here.** No NDMA bulletin is ingested anywhere in this notebook. Earlier
-  "FEWS NET / NDMA" provenance strings were unsupported and were removed (2026-09-18). NDMA still
-  appears as an *institution* (KMSA bulletin co-authorship, the Table 4.3 advisory directory) — that is
-  a statement about those bodies, not about our data.
+- **NDMA bulletin metadata is indexed separately.** FEWS NET prices are not extracted from NDMA PDFs. The NDMA index below stores document titles, dates, identifiers and official links only; it contains no bulletin values.
+
 - **Files:** `ipc_county.parquet` · `market_prices.parquet` · `xbt_trade.parquet` (+`.meta.json`).
 
 ### 9. ACLED — conflict
@@ -227,3 +225,11 @@ non-authored datasets are tracked in
    scripts here) so CHIRPS/FAOSTAT/IPC/prices/ACLED/ReliefWeb/driver_indices are git-reproducible.
 3. Move raw sources to a versioned/citable store (or record exact source URLs + retrieval dates per file).
 4. Submit the novel datasets to the CGIAR Climate Data Hub against its metadata standard.
+
+## NDMA document index — accepted edition 24 November 2026
+
+`ndma_bulletin_index.parquet` contains 3,539 distinct documents: 3,430 county and 109 national records, through October 2026. Marsabit remains at August 2026. Missing months are gaps, not zeros. Four repeated source listings are reconciled; six reference periods and three county labels remain unresolved.
+
+`ndma_bulletin_index.meta.json` documents all 22 columns. Its maintained generator is `_sources/meta_build.py`; parsing and validation use `_sources/ndma_index_build.py`. Use staged outputs and a fresh cache, validate both different sort orders, replay the cache and compare prior IDs before promotion. Never run an unvalidated refresh directly over accepted output.
+
+[Port and validation notes](../../playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/PORT_TO_PERSONAL_SOURCE.md) distinguish this older branch from the source project's 3,516-to-3,539 refresh. Index metadata is not a licence grant for bulletin values. External clearance and catalogue submission remain pending.

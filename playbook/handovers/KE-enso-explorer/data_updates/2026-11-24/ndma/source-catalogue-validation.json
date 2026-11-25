@@ -1,0 +1,18 @@
+{
+  "mode": "strict",
+  "status": "PASS",
+  "exit_code": 0,
+  "record": "data/KE-enso-explorer/_sources/cdh_local/kenya-ndma-bulletin-index.yaml",
+  "record_sha256": "9325d9d003e69402bca9c34385339d9fef5448954f0df56b325334be3de7d372",
+  "validator_revision": "b1b0d9a57e82919e417975df3ebef821fedc3f3b",
+  "reproduce_command": [
+    "node",
+    "/tmp/ke-ndma-cdh-standard/scripts/validate-yaml.js",
+    "--profile",
+    "/tmp/ke-ndma-cdh-standard/spec/schemas/profiles/cdh.schema.json",
+    "/Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/cdh_local/kenya-ndma-bulletin-index.yaml"
+  ],
+  "validation_input": "Byte-identical staged copy",
+  "diagnostics": "ok   /Users/pstewarda/Documents/rprojects/atlas_nb-KE-enso/data/KE-enso-explorer/_sources/cdh_local/kenya-ndma-bulletin-index.yaml\n",
+  "limitation": "Schema validation only; no scientific or legal clearance and no CDH submission."
+}
