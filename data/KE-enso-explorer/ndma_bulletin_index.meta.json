@@ -1,0 +1,211 @@
+{
+  "dataset": "ndma_bulletin_index",
+  "title": "NDMA drought early warning bulletin index, Kenya",
+  "source": "National Drought Management Authority (NDMA) KnowledgeWeb document library — National (ID=7) + County (ID=11) Drought Early Warning Bulletin categories",
+  "url": "https://knowledgeweb.ndma.go.ke/Public/Resources/Default.aspx?ID={7,11}",
+  "citation": "National Drought Management Authority (NDMA). Drought Early Warning Bulletins. Nairobi, Kenya.",
+  "license": "UNRESOLVED — do not assert. NDMA KnowledgeWeb publishes no terms page, no robots.txt and no copyright notice; absence of a notice is NOT a licence grant. This dataset holds METADATA ABOUT PUBLIC DOCUMENTS (title, uuid, category, upload date, plus a derived county and reference period) together with deep links back to NDMA's own pages — citation and federation, the weakest-risk end. It is NOT a settled basis for republishing values extracted from the PDF bodies; settle that before any extraction phase. No PDF bytes are redistributed.",
+  "fetched_on": "2026-11-25",
+  "method": "Deterministic harvest of NDMA's own grid (_sources/ndma_index_build.py). Paging is a DevExpress ASPxGridView callback (__CALLBACKID=ctl00$ContentPlaceHolder1$docGrid, __CALLBACKPARAM=c0:KV|..;GB|..;12|PAGERONCLICK3|PN<n>;) carrying a grid-state hidden field that is generated client-side and never appears in the served HTML — without it the server returns an empty grid with HTTP 200. Completeness gate: every sweep enumerates exactly the row count the SITE reports, checked per page against the server's own 'Page n of N (M items)' echo; distinct documents plus NDMA's repeated listings reconcile to that row count; and a SECOND sweep under a different column sort surfaces zero new documents, which is what rules out offset paging silently dropping rows. NO PDF is downloaded or parsed and NO indicator value is extracted. County and reference period are parsed from the grid title text; unresolved values are NULL, never guessed, and every served county is asserted against county_key.parquet.",
+  "coverage": "3,539 distinct documents; dew_county: 3,430 rows, reference periods 2012-08 to 2026-10; dew_national: 109 rows, reference periods 2016-10 to 2026-10. 23 resolved ASAL counties. Upload date is not reference date; missing counties or periods are not zero. Repeated source listings are reconciled in the two-order closure validation report.",
+  "used_by": "index only — not yet wired to the notebook; the join key for a later bulletin-extraction phase",
+  "grain": "3539 rows",
+  "columns": [
+    "doc_uuid",
+    "grid_key",
+    "category",
+    "category_id",
+    "series",
+    "scope",
+    "title_raw",
+    "county_raw",
+    "county",
+    "gaul1_code",
+    "ref_year",
+    "ref_month",
+    "ref_period",
+    "ref_basis",
+    "doc_year_grid",
+    "uploaded_date",
+    "uploaded_label",
+    "detail_url",
+    "pdf_url",
+    "page_index",
+    "row_index",
+    "harvested_at"
+  ],
+  "observed_coverage": {
+    "dew_county": {
+      "rows": 3430,
+      "first_reference": "2012-08",
+      "last_reference": "2026-10",
+      "latest_upload": "2026-11-20"
+    },
+    "dew_national": {
+      "rows": 109,
+      "first_reference": "2016-10",
+      "last_reference": "2026-10",
+      "latest_upload": "2026-11-20"
+    }
+  },
+  "fields": {
+    "doc_uuid": {
+      "type": "object",
+      "description": "NDMA document UUID and primary key",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "grid_key": {
+      "type": "object",
+      "description": "Source grid row key",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "category": {
+      "type": "object",
+      "description": "Source library category label",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "category_id": {
+      "type": "Int32",
+      "description": "Source library category ID",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "series": {
+      "type": "object",
+      "description": "National or county drought bulletin series",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "scope": {
+      "type": "object",
+      "description": "National or county scope",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "title_raw": {
+      "type": "object",
+      "description": "Unmodified source title",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "county_raw": {
+      "type": "object",
+      "description": "County token parsed from title",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "county": {
+      "type": "object",
+      "description": "Canonical county; null for national or unresolved titles",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "gaul1_code": {
+      "type": "float64",
+      "description": "Canonical county code joined from county_key",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "ref_year": {
+      "type": "Int32",
+      "description": "Reference year parsed from title",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "ref_month": {
+      "type": "Int32",
+      "description": "Reference month parsed from title",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "ref_period": {
+      "type": "object",
+      "description": "Reference period parsed from title; never inferred from upload date",
+      "unit": "date/time",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "ref_basis": {
+      "type": "object",
+      "description": "Period parsing method",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "doc_year_grid": {
+      "type": "Int32",
+      "description": "Sparse source Document Year, not reference period",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "uploaded_date": {
+      "type": "object",
+      "description": "Library upload date, not bulletin reference date",
+      "unit": "date/time",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "uploaded_label": {
+      "type": "object",
+      "description": "Raw upload-date label",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "detail_url": {
+      "type": "object",
+      "description": "Official document detail URL",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "pdf_url": {
+      "type": "object",
+      "description": "Official document download URL; PDF bodies not redistributed",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "page_index": {
+      "type": "Int32",
+      "description": "Source grid page offset",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "row_index": {
+      "type": "Int32",
+      "description": "Source row offset on page",
+      "unit": "source label/code",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    },
+    "harvested_at": {
+      "type": "object",
+      "description": "UTC harvest timestamp",
+      "unit": "date/time",
+      "null_semantics": "Absent, unresolved or inapplicable; never zero-imputed",
+      "lineage": "NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes"
+    }
+  },
+  "primary_key": [
+    "doc_uuid"
+  ],
+  "validation_report": "_sources/ndma_index_validation_report.csv"
+}

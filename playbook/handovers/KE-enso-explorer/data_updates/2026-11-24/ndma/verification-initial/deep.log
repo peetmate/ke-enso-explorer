@@ -1,0 +1,71 @@
+=== 1. D64 CARD CONTRACT ===
+  [PASS] NO_NUM (section-kenya-overview-card)
+  [PASS] Table 1.1 (section-subcounty-profile)
+  [PASS] Figure 1.1 (section-napr-baseline-card)
+  [PASS] Figure 1.2 (section-vop-card)
+  [PASS] Figure 1.3 (section-gesi)
+  [PASS] MAM Teleconnection (section-mam-teleconnection)
+  [PASS] Figure 2.1 (section-figure-2-1)
+  [PASS] Figure 2.2 & Table 2.1 (section-figure-2-2)
+  [PASS] Table 2.1B (section-kmd-advisories)
+  [PASS] Table 2.2 (section-table-2-2)
+  [PASS] Table 2.3 (section-table-2-3)
+  [PASS] Figure 3.1 (section-rain-climatology)
+  [PASS] Figure 3.1B (section-consecutive-sequence)
+  [PASS] Figure 3.2 (section-tercile-contingency)
+  [PASS] Figure 3.3 (section-driver-scatter)
+  [PASS] Figure 3.4 (section-raster-grid)
+  [PASS] Figure 3.5 (section-flood-explorer)
+  [PASS] Table 3.1 (section-hazard-summary)
+  [PASS] Figure 4.1 (section-production-card)
+  [PASS] Figure 4.2 (section-phase-response-card)
+  [PASS] Figure 4.2B (section-harveststat-card)
+  [PASS] Figure 4.3 (section-ndvi-card)
+  [PASS] Figure 4.4 (section-prices-card)
+  [PASS] Figure 4.4B (section-xbt-trade-card)
+  [PASS] Figure 4.5 & Table 4.4 (section-flood-exposure-card)
+  [PASS] Figure 4.6 & Table 4.5 (section-reliefweb-card)
+  [PASS] Figure 4.7 (section-trade-card)
+  [PASS] Figure 4.8 & Table 4.6 (section-trade-partners-card)
+  [PASS] Figure 4.9 (section-trade-baskets-card)
+  [PASS] Figure 4.10 (section-trade-context-card)
+
+=== 2. CROSS-TAB CLIMATOLOGY ===
+  MAM/OND normals: {"Sec 0":[204,161],"Sec 1.1":[204,161],"Sec 3":[204,161]}
+  [PASS] Climatology normals identical across tabs (MAM 204 mm / OND 161 mm)
+
+=== 3. PROVENANCE DRAWER ===
+  [PASS] drawer 'knbs_census'
+  [PASS] drawer 'knbs_napr'
+  [PASS] drawer 'knbs_gesi'
+  [PASS] drawer 'teleconnections'
+  [PASS] drawer 'driver_indices'
+  [PASS] drawer 'chirps_seasonal'
+  [PASS] drawer 'africa-precipitation-monthly-seasonal'
+  [PASS] drawer 'africa-spei-drought'
+  [PASS] drawer 'eastafrica-ndvi-modis'
+  [PASS] drawer 'eastafrica-wrsi-fews'
+  [PASS] drawer 'kenya-flood-gfm'
+  [PASS] drawer 'kenya-flood-exposure-intersect'
+  [PASS] drawer 'kenya-facilities-hotosm'
+  [PASS] drawer 'harveststat_crop'
+  [PASS] drawer 'modis_ndvi'
+  [PASS] drawer 'market_prices'
+  [FAIL] drawer 'xbt_trade' (len=3250, invalid=true)
+  [PASS] drawer 'exposure_intersect'
+  [FAIL] drawer 'reliefweb' (len=1530, invalid=true)
+  [PASS] drawer 'kenya-trade-production'
+  [PASS] drawer 'kenya-trade-macro'
+  [PASS] drawer 'kenya-trade-partners'
+  [PASS] drawer 'kenya-wdi-exchange-rate'
+
+=== 4. VISIBLE TEXT SCAN ===
+  [PASS] No visible NaN/undefined/[object Object]
+
+=== 4b. REVIEW MODE TOGGLE CONTRACT ===
+  [PASS] Review Mode toggle (flex/none) & highlight box (fixed) verified
+
+=== 5. CONSOLE & NETWORK ===
+  [PASS] 0 console/page/HTTP errors
+
+DEEP AUDIT FAILED: 2 issue(s)

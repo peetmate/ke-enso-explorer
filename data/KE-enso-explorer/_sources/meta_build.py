@@ -54,6 +54,16 @@ D = {
    method="Code-keyed deterministic extraction (_sources/gesi_extract.py): keys on the sheet's stable indicator code (not label text). Validation gate = the Kenya national value is identical on all 47 sheets per indicator; a series is served only if >=40/47 counties match the modal Kenya value. No number typed by a model.",
    coverage="35 indicator series across 24 codes, county level (adm1). Coverage is NOT uniform: the gate serves a series at >=40/47, so only 10 of 35 series reach all 47 counties (10 at 46, 3 at 45, 5 at 44, 3 at 43, 2 at 42, 2 at 40; worst is B6 households-with-elderly at 40/47). Per-county rows run 22-35. A missing county-series is a gate/parse drop, NEVER an observed zero. D7 is sex-asymmetric (Male 47, Female 46) - check both before any sex ratio. Chart-style indicators (ANC-visit/vaccination charts, internet-usage) dropped by the gate. Reference year is NOT retained: clean_label() strips trailing years, and the sheets mix vintages (KDHS 2022, 2019 census-derived), so the table must not be read as uniformly 2022.",
    used_by="notebook §2.1 GESI 47-county distribution"),
+ "ndma_bulletin_index": dict(
+   title="NDMA drought early warning bulletin index, Kenya",
+   source="National Drought Management Authority (NDMA) KnowledgeWeb document library — National (ID=7) + County (ID=11) Drought Early Warning Bulletin categories",
+   url="https://knowledgeweb.ndma.go.ke/Public/Resources/Default.aspx?ID={7,11}",
+   citation="National Drought Management Authority (NDMA). Drought Early Warning Bulletins. Nairobi, Kenya.",
+   license="UNRESOLVED — do not assert. NDMA KnowledgeWeb publishes no terms page, no robots.txt and no copyright notice; absence of a notice is NOT a licence grant. This dataset holds METADATA ABOUT PUBLIC DOCUMENTS (title, uuid, category, upload date, plus a derived county and reference period) together with deep links back to NDMA's own pages — citation and federation, the weakest-risk end. It is NOT a settled basis for republishing values extracted from the PDF bodies; settle that before any extraction phase. No PDF bytes are redistributed.",
+   fetched_on="2026-09-27",
+   method="Deterministic harvest of NDMA's own grid (_sources/ndma_index_build.py). Paging is a DevExpress ASPxGridView callback (__CALLBACKID=ctl00$ContentPlaceHolder1$docGrid, __CALLBACKPARAM=c0:KV|..;GB|..;12|PAGERONCLICK3|PN<n>;) carrying a grid-state hidden field that is generated client-side and never appears in the served HTML — without it the server returns an empty grid with HTTP 200. Completeness gate: every sweep enumerates exactly the row count the SITE reports, checked per page against the server's own 'Page n of N (M items)' echo; distinct documents plus NDMA's repeated listings reconcile to that row count; and a SECOND sweep under a different column sort surfaces zero new documents, which is what rules out offset paging silently dropping rows. NO PDF is downloaded or parsed and NO indicator value is extracted. County and reference period are parsed from the grid title text; unresolved values are NULL, never guessed, and every served county is asserted against county_key.parquet.",
+   coverage="3,513 documents: 3,406 county bulletins (2012-08 to 2026-08) across 23 ASAL counties, and 107 national bulletins (2016-10 to 2026-08). THREE TRAPS. (1) `uploaded_date` is the UPLOAD date, NOT the bulletin's reference period — the back catalogue was bulk-uploaded in Dec 2021 (1,537 of 3,513 rows carry a 2021 upload date, including bulletins referencing 2012-2018), so a time series built on it is wrong by up to nine years; use `ref_period`, parsed from the title, and check `ref_basis`. (2) NDMA's county category lists 3,410 ROWS but only 3,406 DISTINCT documents — four documents are listed twice at different offsets with the same grid key; the index carries one row per document and the duplicate uuids are recorded in _sources/ndma_index_validation_report.csv. (3) NDMA covers ASAL counties ONLY — 23 of 47. A missing county is structural and NEVER a zero. `ref_basis` flags derivation quality: 3,499 title-month-year, 5 month-and-year-apart, 3 year-only, 6 unparsed (NULL period). `doc_year_grid` is sparse and must not be used as the period.",
+   used_by="index only — not yet wired to the notebook; the join key for a later bulletin-extraction phase"),
  "afa_rice": dict(
    title="AFA county rice production & area, Kenya",
    source="Agriculture & Food Authority (AFA), Kenya — county crop returns (Rice only)",
@@ -255,6 +265,41 @@ def main():
         rec = {"dataset": name, **meta}
         rec["grain"] = f"{len(df)} rows"
         rec["columns"] = list(df.columns)
+        if name == "ndma_bulletin_index":
+            rec["fetched_on"] = str(df.harvested_at.max())[:10]
+            rec["observed_coverage"] = {str(series): dict(rows=len(group),
+                first_reference=group.ref_period.dropna().min(), last_reference=group.ref_period.dropna().max(),
+                latest_upload=str(group.uploaded_date.max())) for series, group in df.groupby("series")}
+            rec["coverage"] = (
+                f"{len(df):,} distinct documents; " + "; ".join(
+                    f"{series}: {v['rows']:,} rows, reference periods {v['first_reference']} to {v['last_reference']}"
+                    for series, v in rec["observed_coverage"].items()) + ". "
+                f"{df.loc[df.scope.eq('county'), 'county'].nunique()} resolved ASAL counties. "
+                "Upload date is not reference date; missing counties or periods are not zero. "
+                "Repeated source listings are reconciled in the two-order closure validation report."
+            )
+            meanings = {
+                "doc_uuid": "NDMA document UUID and primary key", "grid_key": "Source grid row key",
+                "category": "Source library category label", "category_id": "Source library category ID",
+                "series": "National or county drought bulletin series", "scope": "National or county scope",
+                "title_raw": "Unmodified source title", "county_raw": "County token parsed from title",
+                "county": "Canonical county; null for national or unresolved titles",
+                "gaul1_code": "Canonical county code joined from county_key",
+                "ref_year": "Reference year parsed from title", "ref_month": "Reference month parsed from title",
+                "ref_period": "Reference period parsed from title; never inferred from upload date",
+                "ref_basis": "Period parsing method", "doc_year_grid": "Sparse source Document Year, not reference period",
+                "uploaded_date": "Library upload date, not bulletin reference date",
+                "uploaded_label": "Raw upload-date label", "detail_url": "Official document detail URL",
+                "pdf_url": "Official document download URL; PDF bodies not redistributed",
+                "page_index": "Source grid page offset", "row_index": "Source row offset on page",
+                "harvested_at": "UTC harvest timestamp",
+            }
+            rec["fields"] = {c:dict(type=str(df[c].dtype), description=meanings[c],
+                unit="date/time" if c in ("uploaded_date", "ref_period", "harvested_at") else "source label/code",
+                null_semantics="Absent, unresolved or inapplicable; never zero-imputed",
+                lineage="NDMA KnowledgeWeb grid; ndma_index_build.py; county_key.parquet for county codes") for c in df.columns}
+            rec["primary_key"] = ["doc_uuid"]
+            rec["validation_report"] = "_sources/ndma_index_validation_report.csv"
         with open(f"{OUT}/{name}.meta.json", "w") as fh:
             json.dump(rec, fh, ensure_ascii=False, indent=2)
         n += 1

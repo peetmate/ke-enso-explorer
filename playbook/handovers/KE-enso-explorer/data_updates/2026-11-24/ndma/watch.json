@@ -1,0 +1,13 @@
+[
+  {
+    "key": "ndma",
+    "label": "NDMA bulletin index age",
+    "tier": 2,
+    "kind": "manual",
+    "banked": "2026-11-20",
+    "upstream": "",
+    "note": "last harvested 2026-11-25; latest publisher upload 2026-11-20 (ref period 2026-10); upload age 4 days",
+    "action": "skill harvest-ndma-bulletins: stage a full two-order index harvest; no bulletin-value extraction",
+    "status": "manual"
+  }
+]

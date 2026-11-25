@@ -1,0 +1,96 @@
+$schema: https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/schemas/profiles/cdh.schema.json
+cdh_schema_version: v0.3.0
+extensions:
+- https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/extensions/cdh/schema.json
+id: kenya-ndma-bulletin-index
+title: NDMA KnowledgeWeb county and national drought bulletin document index, Kenya
+description: Index of publisher document identifiers, titles, reference periods and
+  official links harvested from NDMA KnowledgeWeb. This record covers document metadata
+  only; it does not contain bulletin text, charts or extracted drought measurements.
+resource_type: dataset
+license: LicenseRef-NDMA-Permission-Pending
+access: non-public
+access_note: Local catalogue evidence only. No catalogue submission, public hosting
+  or redistribution approval is implied.
+keywords:
+- Kenya
+- source provenance
+- local research extract
+note: Local rights assessment records the pending NDMA publication process; it is
+  not a licence grant. Permission for the wider NDMA-derived valuation assets remains
+  pending, with their existing Beta restrictions unchanged. This index links to publisher-hosted
+  documents and does not mirror PDFs. Upload date and bulletin reference period are
+  different fields. Unparsed periods and unresolved county labels remain null; missing
+  documents do not establish that no bulletin was issued. Distinct document UUID is
+  the primary key; repeated source listings are reconciled by the harvest validation.
+created: '2026-11-19'
+updated: '2026-11-24'
+contact:
+- organization: National Drought Management Authority
+  url: https://knowledgeweb.ndma.go.ke/
+  roles:
+  - producer
+  - licensor
+- name: Pete Steward
+  organization: Alliance of Bioversity International and CIAT
+  email: P.Steward@cgiar.org
+  roles:
+  - processor
+  - point-of-contact
+citation:
+  title: NDMA KnowledgeWeb county and national drought bulletin document index, Kenya
+  authors:
+  - National Drought Management Authority
+  date: '2026-11-24'
+  url: https://knowledgeweb.ndma.go.ke/
+spatial:
+  geography:
+  - kenya
+processing:
+- id: source
+  description: Index of publisher document identifiers, titles, reference periods
+    and official links harvested from NDMA KnowledgeWeb. This record covers document
+    metadata only; it does not contain bulletin text, charts or extracted drought
+    measurements.
+  derived_from:
+  - title: NDMA KnowledgeWeb drought bulletins
+    url: https://knowledgeweb.ndma.go.ke/
+- id: local-extraction
+  date: '2026-11-24'
+  description: Source builders, validation receipts, column dictionaries, hashes and
+    rollback procedures are recorded in the linked local metadata and acquisition
+    inventory. No values are changed by catalogue generation.
+data:
+- name: ndma-bulletin-index
+  locations:
+  - url: data/KE-enso-explorer/ndma_bulletin_index.parquet
+    title: Local artifact; not a public download
+  media_type: application/vnd.apache.parquet
+  processing_steps:
+  - source
+  - local-extraction
+  description: 'Observed coverage: 3,539 distinct documents; dew_county: 3,430 rows,
+    reference periods 2012-08 to 2026-10; dew_national: 109 rows, reference periods
+    2016-10 to 2026-10. 23 resolved ASAL counties. Upload date is not reference date;
+    missing counties or periods are not zero. Repeated source listings are reconciled
+    in the two-order closure validation report.. Column meanings, units and null semantics:
+    data/KE-enso-explorer/ndma_bulletin_index.meta.json. SHA-256: 947b04dfb590efc2d7b2a751acb309c696aa597c816b46b2ec85eb3e3ed0a0f3.'
+additional_links:
+- rel: license
+  url: data/KE-enso-explorer/_sources/valuation_evidence/ndma_licence_assessment.md
+  description: Local rights assessment records the pending NDMA publication process;
+    it is not a licence grant. Permission for the wider NDMA-derived valuation assets
+    remains pending, with their existing Beta restrictions unchanged. This index links
+    to publisher-hosted documents and does not mirror PDFs. Upload date and bulletin
+    reference period are different fields. Unparsed periods and unresolved county
+    labels remain null; missing documents do not establish that no bulletin was issued.
+    Distinct document UUID is the primary key; repeated source listings are reconciled
+    by the harvest validation.
+- rel: describedby
+  url: data/KE-enso-explorer/governance/acquisition_inventory.json
+- rel: describedby
+  url: data/KE-enso-explorer/ndma_bulletin_index.meta.json
+cdh:
+  domain:
+  - agricultural-production
+  - socioeconomic

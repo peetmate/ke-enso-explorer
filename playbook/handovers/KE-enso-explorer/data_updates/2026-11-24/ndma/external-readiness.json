@@ -1,0 +1,132 @@
+{
+  "status": "INCOMPLETE",
+  "mode": "external",
+  "assets": 30,
+  "issues": [
+    {
+      "asset": "kenya_trade_macro",
+      "issue": "External-use decision incomplete: world_bank"
+    },
+    {
+      "asset": "kenya_trade_macro",
+      "issue": "External-use decision incomplete: comtrade"
+    },
+    {
+      "asset": "kenya_trade_macro_display",
+      "issue": "External-use decision incomplete: comtrade"
+    },
+    {
+      "asset": "kenya_trade_partners",
+      "issue": "External-use decision incomplete: comtrade"
+    },
+    {
+      "asset": "kenya_btr1",
+      "issue": "External-use decision incomplete: btr"
+    },
+    {
+      "asset": "fews_bulletins",
+      "issue": "External-use decision incomplete: fews"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_monthly",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_monthly",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_monthly",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_seasonal",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_seasonal",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_enso_drivers_seasonal",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "publication_0_2_0_harveststat_county_production",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_harveststat_county_production",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_harveststat_county_production",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "publication_0_2_0_kenya_wdi_fx",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_kenya_wdi_fx",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_kenya_wdi_fx",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "publication_0_2_0_ndvi_county",
+      "issue": "Asset missing"
+    },
+    {
+      "asset": "publication_0_2_0_ndvi_county",
+      "issue": "Missing metadata file"
+    },
+    {
+      "asset": "publication_0_2_0_ndvi_county",
+      "issue": "Field dictionary missing"
+    },
+    {
+      "asset": "market_prices",
+      "issue": "External-use decision incomplete: fews"
+    },
+    {
+      "asset": "market_prices",
+      "issue": "External-use decision incomplete: knbs"
+    },
+    {
+      "asset": "market_prices",
+      "issue": "External-use decision incomplete: ndma"
+    },
+    {
+      "asset": "market_prices",
+      "issue": "External-use decision incomplete: kamis"
+    },
+    {
+      "asset": "market_prices",
+      "issue": "External-use decision incomplete: moalf_fdw_prices"
+    },
+    {
+      "asset": "knbs_farm_prices",
+      "issue": "External-use decision incomplete: knbs"
+    },
+    {
+      "asset": "knbs_fx_kes_usd",
+      "issue": "External-use decision incomplete: knbs"
+    },
+    {
+      "asset": "knbs_marketed_production",
+      "issue": "External-use decision incomplete: knbs"
+    },
+    {
+      "asset": "knbs_national_agri_gva",
+      "issue": "External-use decision incomplete: knbs"
+    },
+    {
+      "asset": "ndma_bulletin_index",
+      "issue": "External-use decision incomplete: ndma"
+    }
+  ],
+  "limitation": "File/record checks only; does not establish scientific correctness, current rights, or deployment authorization."
+}

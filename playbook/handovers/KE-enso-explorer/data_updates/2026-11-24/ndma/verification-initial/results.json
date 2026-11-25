@@ -1,0 +1,91 @@
+{
+  "started_at": "2026-11-25T01:50:11.512905+00:00",
+  "input_hashes": {
+    "data/KE-enso-explorer/release.json": "7444035adc724d2fa849cd6362c38853f3a6aac6d3d10efd8ea2b530435fdcc5",
+    "notebooks/KE-enso-explorer/notebook_v3.qmd": "7641810da09fe15dc35c1310bde315e30a915ce9d65b7f44373960c47f350f8d",
+    "data/KE-enso-explorer/ndma_bulletin_index.parquet": "947b04dfb590efc2d7b2a751acb309c696aa597c816b46b2ec85eb3e3ed0a0f3",
+    "data/KE-enso-explorer/provenance.json": "295989946d4e332e2ff1182043bd2d1650a61a4865444ab836deef6e4b4f9f80"
+  },
+  "checks": [
+    {
+      "name": "static",
+      "command": [
+        "python3",
+        "tools/audit_notebook_consistency.py"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.7,
+      "log": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/verification-initial/static.log"
+    },
+    {
+      "name": "render",
+      "command": [
+        "quarto",
+        "render",
+        "notebooks/KE-enso-explorer/notebook_v3.qmd"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.5,
+      "log": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/verification-initial/render.log"
+    },
+    {
+      "name": "release",
+      "command": [
+        "python3",
+        "tools/ci_release_assertions.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.8,
+      "log": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/verification-initial/release.log"
+    },
+    {
+      "name": "valuation",
+      "command": [
+        "node",
+        "tests/test_section12_valuation_engine.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 37.0,
+      "log": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/verification-initial/valuation.log"
+    },
+    {
+      "name": "crosstab",
+      "command": [
+        "node",
+        "tests/test_crosstab_integrity.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 22.4,
+      "log": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/verification-initial/crosstab.log"
+    },
+    {
+      "name": "remediations",
+      "command": [
+        "node",
+        "tests/test_v390_remediations.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.5,
+      "log": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/verification-initial/remediations.log"
+    },
+    {
+      "name": "deep",
+      "command": [
+        "node",
+        "tests/test_deep_notebook_audit.mjs"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 30.8,
+      "log": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/verification-initial/deep.log"
+    }
+  ],
+  "final_hashes": {
+    "data/KE-enso-explorer/release.json": "7444035adc724d2fa849cd6362c38853f3a6aac6d3d10efd8ea2b530435fdcc5",
+    "notebooks/KE-enso-explorer/notebook_v3.qmd": "7641810da09fe15dc35c1310bde315e30a915ce9d65b7f44373960c47f350f8d",
+    "data/KE-enso-explorer/ndma_bulletin_index.parquet": "947b04dfb590efc2d7b2a751acb309c696aa597c816b46b2ec85eb3e3ed0a0f3",
+    "data/KE-enso-explorer/provenance.json": "295989946d4e332e2ff1182043bd2d1650a61a4865444ab836deef6e4b4f9f80"
+  },
+  "unchanged_inputs_during_checks": true,
+  "all_passed": false,
+  "log_normalization": "Stored Quarto render log removes trailing whitespace only."
+}

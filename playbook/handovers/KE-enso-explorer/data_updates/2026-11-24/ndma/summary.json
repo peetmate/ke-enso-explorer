@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-24",
+  "scope": "NDMA national and county bulletin document index only",
+  "acquisition": {
+    "status": "ACCEPTED",
+    "previous_rows": 3516,
+    "accepted_rows": 3539,
+    "additions": 23,
+    "removed": [],
+    "revised": [],
+    "county_rows": 3430,
+    "national_rows": 109,
+    "county_latest_reference": {
+      "Baringo": "2026-10",
+      "Embu": "2026-10",
+      "Garissa": "2026-10",
+      "Isiolo": "2026-10",
+      "Kajiado": "2026-10",
+      "Kilifi": "2026-10",
+      "Kitui": "2026-10",
+      "Kwale": "2026-10",
+      "Laikipia": "2026-10",
+      "Lamu": "2026-10",
+      "Makueni": "2026-10",
+      "Mandera": "2026-10",
+      "Marsabit": "2026-08",
+      "Meru": "2026-10",
+      "Narok": "2026-10",
+      "Nyeri": "2026-10",
+      "Samburu": "2026-10",
+      "Taita Taveta": "2026-10",
+      "Tana River": "2026-10",
+      "Tharaka Nithi": "2026-10",
+      "Turkana": "2026-10",
+      "Wajir": "2026-10",
+      "West Pokot": "2026-10"
+    },
+    "harvested_at_utc": "2026-11-25T01:19:26+00:00",
+    "run_date_timezone": "America/Bogota"
+  },
+  "numerical_validation": {
+    "status": "PASS",
+    "two_different_sort_orders": true,
+    "zero_new_ids_in_second_sweep": true,
+    "identical_previous_duplicate_ids": true,
+    "cached_replay": {
+      "equal_except_harvested_at": true,
+      "network_requests": 12,
+      "cache_hits": 711
+    },
+    "first_run": {
+      "network_requests": 719,
+      "cache_hits": 4
+    },
+    "null_ref_period": 6,
+    "unresolved_county": 3
+  },
+  "metadata": {
+    "status": "LOCAL_STRICT_VALIDATED",
+    "schema": "CDH v0.3.0",
+    "catalogue_submission": "not_submitted",
+    "field_dictionary_columns": 22
+  },
+  "external_use": {
+    "status": "PENDING",
+    "basis": "Existing NDMA rights assessment unchanged; public access does not grant redistribution permission."
+  },
+  "receipt": "data/KE-enso-explorer/_sources/ndma_index_refresh.json",
+  "rollback": "data/KE-enso-explorer/_sources/.refresh_backups/ndma-20261124",
+  "platform_verification": {
+    "status": "PASS",
+    "checks_passed": 7,
+    "version": "3.15.0",
+    "build": "303112403",
+    "unchanged_inputs_during_checks": true,
+    "receipt": "playbook/handovers/KE-enso-explorer/data_updates/2026-11-24/ndma/verification/results.json"
+  },
+  "manual_actions": [],
+  "limits": [
+    "No bulletin PDFs downloaded or indicator values extracted.",
+    "Missing county/month bulletins remain gaps; upload date is not reference period.",
+    "No push, pull request, deployment, catalogue submission or provider message."
+  ],
+  "cache_integrity": {
+    "files_verified": 708,
+    "status": "PASS"
+  },
+  "readiness_checks": {
+    "acquisition-readiness": {
+      "global_status": "INCOMPLETE",
+      "global_issue_count": 15,
+      "ndma_issues": []
+    },
+    "external-readiness": {
+      "global_status": "INCOMPLETE",
+      "global_issue_count": 31,
+      "ndma_issues": [
+        {
+          "asset": "ndma_bulletin_index",
+          "issue": "External-use decision incomplete: ndma"
+        }
+      ]
+    }
+  },
+  "artifact_sha256": {
+    "data/KE-enso-explorer/ndma_bulletin_index.parquet": "947b04dfb590efc2d7b2a751acb309c696aa597c816b46b2ec85eb3e3ed0a0f3",
+    "data/KE-enso-explorer/ndma_bulletin_index.meta.json": "5c50247d77eb5a8ed283aec1ffcbbb9233872ebb7d5fd1c155987f8d67452aea",
+    "data/KE-enso-explorer/_sources/ndma_index_validation_report.csv": "36474ff5519e6fc881c1d9ed03506f7e3676669bce87af6da3e559a8120a0a75",
+    "data/KE-enso-explorer/_sources/ndma_index_ledger.csv": "6d5f1125c75b4850b210b364603f0a653b2320f5d21b97350a980ffa5936354f",
+    "data/KE-enso-explorer/_sources/ndma_index_refresh.json": "1ad2356b3e96bffcc3d2e0c9ffde4042f7e3e8bee3354c3d67ef5948dcf97a4e",
+    "data/KE-enso-explorer/_sources/ndma_cache_manifest.json": "c5559044337a3b6845842d1fef65a421a4ac7a14759b222990aa395967d6dbec",
+    "data/KE-enso-explorer/_sources/cdh_local/kenya-ndma-bulletin-index.yaml": "9325d9d003e69402bca9c34385339d9fef5448954f0df56b325334be3de7d372",
+    "data/KE-enso-explorer/governance/catalogue_validation/ndma_bulletin_index.json": "bbf8a8a6fcde8f5ff2d94b553bf685b1945e6cc2deb65e3fcb2f792749d97510"
+  }
+}

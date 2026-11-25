@@ -1,0 +1,54 @@
+=== RUNNING SECTION 1.2 VALUATION ENGINE ACCEPTANCE TEST SUITE ===
+Navigating to http://localhost:4333/notebooks/KE-enso-explorer/notebook_v3.html
+Switching to Tab 1 (County Profile)...
+Switching to Sub-tab 1.2 (Economic Valuation Engine)...
+
+--- Test 7: Beta Disclaimer Banner & Data Access Governance ---
+PASS: Beta disclaimer banner is clearly visible with mandatory NDMA citation.
+PASS: Zero download buttons or export links in Section 1.2 (conforms strictly to §5b).
+
+--- Test 2: Default KPI Totals (Marsabit Benchmark) ---
+Marsabit KPIs -> Stock: KES 23.41B, Flow: KES 10.59B, Pastoral Share: 99.8%
+PASS: Marsabit default stock (KES 23.41B) and flow (KES 10.59B) match expected totals.
+Screenshot saved to /Users/pstewarda/.gemini/antigravity/brain/ef0a6d9e-a7e9-4d4b-b638-72992f6f90bf/v311_sec12_marsabit_table.png
+
+--- Test 3: Sub-county Constituency View & Sum Identity ---
+Found 4 constituencies for Marsabit
+Constituency Sum Footnote -> Stock: KES 23.41B, Flow: KES 10.59B
+PASS: Constituency disaggregation strictly preserves county sum identity.
+Screenshot saved to /Users/pstewarda/.gemini/antigravity/brain/ef0a6d9e-a7e9-4d4b-b638-72992f6f90bf/v311_sec12_marsabit_constituencies.png
+
+--- Test 4: Parameter Override & Reset Round-Trip ---
+Overriding Camels price to 50,000 KES...
+Post-override KPIs -> Stock: KES 33.85B, Flow: KES 10.85B
+PASS: User override updated stock and flow dynamically.
+Clicking Reset to Defaults...
+Post-reset KPIs -> Stock: KES 23.41B, Flow: KES 10.59B
+PASS: Reset to Defaults restored exact expected totals.
+
+--- Test 6: FX Rate Override & Currency Toggle ---
+PASS: FX override does not change KES valuation.
+USD Stock at FX 130: $180.1M
+
+--- Test 1: Testing Multiple Benchmark Counties ---
+Testing county: Turkana...
+  Turkana -> Stock: KES 60.41B (exp 60.41B), Flow: KES 28.96B (exp 28.96B)
+Testing county: Kitui...
+  Kitui -> Stock: KES 17.04B (exp 17.04B), Flow: KES 22.09B (exp 22.09B)
+Testing county: Kiambu...
+  Kiambu -> Stock: KES 18.57B (exp 18.57B), Flow: KES 39.95B (exp 39.95B)
+Testing county: Nakuru...
+  Nakuru -> Stock: KES 27.89B (exp 27.89B), Flow: KES 50.18B (exp 50.18B)
+Testing county: Marsabit...
+  Marsabit -> Stock: KES 23.41B (exp 23.41B), Flow: KES 10.59B (exp 10.59B)
+PASS: All benchmark counties loaded with exact expected stock and flow totals.
+
+--- Test 5: Verify Absence of Raw Monthly NDMA Data ---
+PASS: No monthly NDMA text or unapproved bulletin data in page.
+
+Total JavaScript / Runtime Errors Logged: 0
+PASS: 0 JavaScript runtime errors logged across all test phases.
+
+======================================================
+ALL 7 ACCEPTANCE TESTS PASSED WITH 100% SUCCESS!
+======================================================

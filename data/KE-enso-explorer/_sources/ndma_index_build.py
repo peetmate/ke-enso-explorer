@@ -43,6 +43,7 @@ Usage (from anywhere - paths are self-locating):
     /Users/pstewarda/miniforge3/bin/python3 ndma_index_build.py --refresh   # ignore cache
 """
 import argparse
+import collections
 import csv
 import datetime as dt
 import hashlib
@@ -92,6 +93,17 @@ DELAY = 2.0
 TIMEOUT = 120
 RETRY_BACKOFF = (5, 15, 45)
 STATE_REFRESH_EVERY = 100  # pages; ASP.NET session default is 20 min
+# The library lists 3410 ROWS in the county category but only 3406 DISTINCT documents:
+# four documents are listed twice, at widely separated offsets, with the same grid key
+# and title (verified 2026-09-27). That is a property of NDMA's data, not of our paging
+# - proven by sweeping the grid under two different orderings (natural, and sorted on
+# column 3) and finding the SAME 3406 documents and the SAME 4 duplicated uuids.
+#
+# So the second sweep is a CLOSURE CHECK, not a gap-filler: a different ordering puts
+# different rows in each offset window, so if paging were dropping documents the second
+# sweep would surface them. It surfaces none. Columns 1 and 2 are not sortable (the
+# server ignores them); column 3 is.
+SWEEPS = [None, ("3", "ASC")]
 UA = ("AdaptationAtlas-KE-ENSO-Explorer/1.0 (bulletin index harvest; "
       "contact p.steward@cgiar.org)")
 
@@ -113,6 +125,11 @@ COUNTY_ALIASES = {
     "elgeyo marakwet": "Elgeyo Marakwet", "e. marakwet": "Elgeyo Marakwet",
     "e/marakwet": "Elgeyo Marakwet", "elgeyo-marakwet": "Elgeyo Marakwet",
     "embu (mbeere)": "Embu", "embu(mbeere)": "Embu", "mbeere": "Embu",
+    "embu (mbeere": "Embu", "embu(mbeere": "Embu", "embu mbeere": "Embu",
+    "tana-river": "Tana River", "tanariver": "Tana River",
+    "west-pokot": "West Pokot", "tharakanithi": "Tharaka Nithi",
+    "nyeri (kieni)": "Nyeri", "nyeri (kieni": "Nyeri", "nyeri kieni": "Nyeri",
+    "meru north": "Meru", "meru central": "Meru", "meru south": "Meru",
     "homabay": "Homa Bay", "homa bay": "Homa Bay",
     "muranga": "Murang'a", "murang'a": "Murang'a",
     "trans nzoia": "Trans Nzoia", "uasin gishu": "Uasin Gishu",
@@ -259,10 +276,42 @@ class Harvester:
         self._sleep()
         return self._request(lambda: self.s.get(url, timeout=TIMEOUT), f"GET ID={cat}")
 
+    def sort(self, cat: int, col: str, order: str, keys: list[str], cbs: str,
+             vs: str, vsg: str, ev: str, pass_idx: int) -> str:
+        """Apply a column sort. The response IS page 1 of the new ordering."""
+        cf = CACHE / f"pass{pass_idx}"
+        cf.mkdir(parents=True, exist_ok=True)
+        cf = cf / f"ID{cat}_sort.html"
+        if cf.exists() and not self.refresh:
+            self.cache_hits += 1
+            return cf.read_text()
+        url = BASE % cat
+        gb = "".join(f"{len(a)}|{a}" for a in ["SORT", col, "", order, "true"])
+        kv = json.dumps(keys, separators=(",", ":"))
+        data = {
+            "__EVENTTARGET": "", "__EVENTARGUMENT": "",
+            "__VIEWSTATE": vs, "__VIEWSTATEGENERATOR": vsg, "__EVENTVALIDATION": ev,
+            "__CALLBACKID": GRID,
+            "__CALLBACKPARAM": f"c0:KV|{len(kv)};{kv};GB|{len(gb)};{gb};",
+            GRID: json.dumps({"keys": keys, "callbackState": cbs,
+                              "groupLevelState": {}, "selection": ""},
+                             separators=(",", ":")),
+        }
+        self._sleep()
+        body = self._request(
+            lambda: self.s.post(url, data=data, timeout=TIMEOUT,
+                                headers={"X-Requested-With": "XMLHttpRequest",
+                                         "Referer": url}),
+            f"ID={cat} sort col{col} {order}")
+        cf.write_text(body)
+        return body
+
     def page(self, cat: int, page: int, keys: list[str], cbs: str,
-             vs: str, vsg: str, ev: str) -> str:
+             vs: str, vsg: str, ev: str, pass_idx: int = 0) -> str:
         """Fetch one grid page (0-based). Cached to disk; cache IS the resume mechanism."""
-        cf = CACHE / f"ID{cat}_p{page:04d}.html"
+        pd_ = CACHE / f"pass{pass_idx}"
+        pd_.mkdir(parents=True, exist_ok=True)
+        cf = pd_ / f"ID{cat}_p{page:04d}.html"
         if cf.exists() and not self.refresh:
             self.cache_hits += 1
             return cf.read_text()
@@ -281,7 +330,7 @@ class Harvester:
             lambda: self.s.post(url, data=data, timeout=TIMEOUT,
                                 headers={"X-Requested-With": "XMLHttpRequest",
                                          "Referer": url}),
-            f"ID={cat} page {page}")
+            f"ID={cat} pass {pass_idx} page {page}")
         cf.write_text(body)  # write BEFORE parsing, so a parse bug costs no refetch
         return body
 
@@ -329,15 +378,24 @@ def parse_period(title: str) -> tuple[int | None, int | None, str]:
     t = re.sub(r"[_\-]+", " ", title)
     t = re.sub(r"\s+", " ", t).strip()
     names = "|".join(sorted(MONTHS, key=len, reverse=True))
-    m = re.search(rf"\b({names})\b[\s,./-]*((?:19|20)\d{{2}})", t, re.I)
+    # No trailing \b after the month: "August2022" has no word boundary before the
+    # digits, and several titles are written exactly that way.
+    m = re.search(rf"\b({names})[\s,./-]*((?:19|20)\d{{2}})\b", t, re.I)
     if m:
         return int(m.group(2)), MONTHS[m.group(1).lower()], "title-month-year"
-    m = re.search(rf"((?:19|20)\d{{2}})[\s,./-]*\b({names})\b", t, re.I)
+    m = re.search(rf"\b((?:19|20)\d{{2}})[\s,./-]*({names})\b", t, re.I)
     if m:
         return int(m.group(1)), MONTHS[m.group(2).lower()], "title-month-year"
-    m = re.search(r"\b((?:19|20)\d{2})\b", t)
-    if m:
-        return int(m.group(1)), None, "title-year-only"
+    # Month and year both present but separated by other words, e.g.
+    # "Samburu June DEW Bulletin - 2023". Both tokens are in the title, so this is
+    # still extraction rather than inference - but it is a weaker basis and is
+    # labelled separately so it can be audited or excluded.
+    my = re.search(rf"\b({names})\b", t, re.I)
+    yy = re.search(r"\b((?:19|20)\d{2})\b", t)
+    if my and yy:
+        return int(yy.group(1)), MONTHS[my.group(1).lower()], "title-month-and-year-apart"
+    if yy:
+        return int(yy.group(1)), None, "title-year-only"
     return None, None, "unparsed"
 
 
@@ -347,9 +405,15 @@ def parse_county(title: str, valid: set[str]) -> tuple[str | None, str | None]:
     t = re.sub(r"\s+", " ", t).strip()
     m = COUNTY_STOP.search(t)
     raw = (t[:m.start()] if m else t).strip(" -,.:;")
+    # Some titles put the period BEFORE the stop word ("Samburu June 2019 DEW
+    # Bulletin"), which would otherwise leave "Samburu June" as the county token.
+    # Strip a trailing year and/or month name; this removes no county name.
+    names = "|".join(sorted(MONTHS, key=len, reverse=True))
+    raw = re.sub(rf"\s*\b(?:{names})\b\s*((?:19|20)\d{{2}})?\s*$", "", raw, flags=re.I)
+    raw = re.sub(r"\s*\b(?:19|20)\d{2}\b\s*$", "", raw).strip(" -,.:;(")
     if not raw:
         return None, None
-    key = raw.lower().strip(" -,.:;")
+    key = raw.lower().strip(" -,.:;(")
     if key in COUNTY_ALIASES:
         return raw, COUNTY_ALIASES[key]
     for v in valid:
@@ -362,13 +426,22 @@ def parse_county(title: str, valid: set[str]) -> tuple[str | None, str | None]:
 
 def gate(rep: dict) -> bool:
     """Pure function over the report dict (napr_build.py:167-201 shape)."""
+    sweeps = [int(x) for x in rep["sweep_rows"].split(";") if x]
     return (
-        rep["rows_parsed"] == rep["items_reported"]
+        # 1. ROW completeness: every sweep enumerated exactly the number of rows the
+        #    SITE itself reports. Checked per page via the server's own page echo.
+        bool(sweeps) and all(n == rep["items_reported"] for n in sweeps)
+        # 2. DUPLICATE accounting: distinct documents + NDMA's own repeated listings
+        #    add back up to the row count. NDMA lists some documents twice; that is a
+        #    property of their library, and it must reconcile rather than be hidden.
+        and rep["uuids_unique"] + rep["duplicate_listings"] == rep["items_reported"]
+        and rep["rows_parsed"] == rep["uuids_unique"]
+        # 3. CLOSURE: a second, differently-ordered sweep surfaced no new document.
+        #    This is what rules out offset paging silently dropping rows.
+        and rep["closure_new_docs"] == 0
         and rep["pages_reported"] == math.ceil(rep["items_reported"] / ROWS_PER_PAGE)
-        and rep["pages_fetched"] == rep["pages_reported"]
-        and rep["uuids_unique"] == rep["rows_parsed"]
+        and rep["pages_fetched"] == rep["pages_reported"] * rep["passes_used"]
         and rep["keys_unique"] == rep["rows_parsed"]
-        and rep["first_uuid_repeats"] == 0
         and rep["page_echo_mismatches"] == 0
         and rep["pages_with_zero_rows"] == 0
         and rep["uuid_malformed"] == 0
@@ -379,19 +452,28 @@ def gate(rep: dict) -> bool:
 def validation_label(rep: dict) -> str:
     if not gate(rep):
         bad = []
-        if rep["rows_parsed"] != rep["items_reported"]:
-            bad.append(f"rows {rep['rows_parsed']} != site count {rep['items_reported']}")
+        sweeps = [int(x) for x in rep["sweep_rows"].split(";") if x]
+        if not sweeps or any(n != rep["items_reported"] for n in sweeps):
+            bad.append(f"sweep row counts {sweeps} != site count {rep['items_reported']}")
+        if rep["uuids_unique"] + rep["duplicate_listings"] != rep["items_reported"]:
+            bad.append(f"{rep['uuids_unique']} distinct + {rep['duplicate_listings']} "
+                       f"duplicate listings != {rep['items_reported']} rows")
+        if rep["closure_new_docs"] != 0:
+            bad.append(f"closure check failed: a second ordering found "
+                       f"{rep['closure_new_docs']} document(s) the first sweep missed")
         if rep["page_echo_mismatches"]:
             bad.append(f"{rep['page_echo_mismatches']} page-echo mismatches")
         if rep["pages_with_zero_rows"]:
             bad.append(f"{rep['pages_with_zero_rows']} empty pages (grid state rejected)")
-        if rep["uuids_unique"] != rep["rows_parsed"]:
-            bad.append("duplicate uuids")
+        if rep["keys_unique"] != rep["rows_parsed"]:
+            bad.append("grid keys not unique across the union")
         if rep["uploaded_before_ref"]:
             bad.append(f"{rep['uploaded_before_ref']} rows uploaded before their reference month")
         return "HELD: " + "; ".join(bad or ["gate failed"])
-    return ("pager item-count reconciled + uuid/key uniqueness + "
-            "server-echoed page number per page")
+    return (f"{rep['items_reported']} rows enumerated per sweep (server-echoed page "
+            f"number checked on every page) = {rep['uuids_unique']} distinct documents "
+            f"+ {rep['duplicate_listings']} listed twice by NDMA; closure confirmed by a "
+            f"second sweep under a different sort finding 0 new documents")
 
 
 # ------------------------------------------------------------------ harvest one
@@ -399,80 +481,144 @@ def validation_label(rep: dict) -> str:
 UUID_RE = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$")
 
 
-def harvest(h: Harvester, cat: int, valid: set[str], max_pages: int | None,
-            harvested_at: str) -> tuple[list[dict], dict]:
-    label, series, scope = CATEGORIES[cat]
-    print(f"\n=== ID={cat}  {label} ===")
-    body = h.category_page(cat)
+def _one_pass(h: Harvester, cat: int, max_pages: int | None,
+              pass_idx: int, sort: tuple[str, str] | None = None
+              ) -> tuple[list[dict], dict]:
+    """One full sweep of a category, optionally under a column sort."""
+    cat_body = h.category_page(cat)
 
-    assert GRID.split("$")[-1] in body, "grid control id changed"
-    hdr = re.findall(r'class="dxgvHeader[^"]*"[^>]*>(?:<[^>]+>)*([A-Za-z ]{3,20})<', body)
-    if hdr:
-        print(f"  header row: {hdr[:4]}")
-
-    keys, cbs = grid_state(body)
-    vs, vsg, ev = (form_value(body, "__VIEWSTATE"),
-                   form_value(body, "__VIEWSTATEGENERATOR"),
-                   form_value(body, "__EVENTVALIDATION"))
+    assert GRID.split("$")[-1] in cat_body, "grid control id changed"
+    keys, cbs = grid_state(cat_body)
+    vs, vsg, ev = (form_value(cat_body, "__VIEWSTATE"),
+                   form_value(cat_body, "__VIEWSTATEGENERATOR"),
+                   form_value(cat_body, "__EVENTVALIDATION"))
     assert vs, "__VIEWSTATE missing"
+
+    if sort:
+        body = h.sort(cat, sort[0], sort[1], keys, cbs, vs, vsg, ev, pass_idx)
+        keys, cbs = grid_state(body)
+        assert parse_rows(body), (
+            f"sort col{sort[0]} {sort[1]} returned no rows - the sort command was "
+            f"rejected; do not treat this sweep as a different ordering")
+    else:
+        body = cat_body
 
     echo = page_echo(body)
     assert echo, "pager echo not found on the category page"
     _, pages_reported, items_reported = echo
-    print(f"  site reports {items_reported} items over {pages_reported} pages")
 
     n_pages = pages_reported if max_pages is None else min(max_pages, pages_reported)
     rows, echo_bad, zero_pages, first_uuids = [], 0, 0, []
 
-    for p in range(n_pages):
-        if p and p % STATE_REFRESH_EVERY == 0:
-            print(f"  ... refreshing grid state at page {p}")
-            body = h.category_page(cat)
-            keys, cbs = grid_state(body)
-            vs, vsg, ev = (form_value(body, "__VIEWSTATE"),
-                           form_value(body, "__VIEWSTATEGENERATOR"),
-                           form_value(body, "__EVENTVALIDATION"))
+    for pg in range(n_pages):
+        if pg and pg % STATE_REFRESH_EVERY == 0:
+            cat_body = h.category_page(cat)
+            keys, cbs = grid_state(cat_body)
+            vs, vsg, ev = (form_value(cat_body, "__VIEWSTATE"),
+                           form_value(cat_body, "__VIEWSTATEGENERATOR"),
+                           form_value(cat_body, "__EVENTVALIDATION"))
+            if sort:  # a refreshed state is UNSORTED - re-apply, or the sweep reverts
+                sb = h.sort(cat, sort[0], sort[1], keys, cbs, vs, vsg, ev, pass_idx)
+                keys, cbs = grid_state(sb)
 
-        pb = body if p == 0 else h.page(cat, p, keys, cbs, vs, vsg, ev)
+        pb = body if pg == 0 else h.page(cat, pg, keys, cbs, vs, vsg, ev, pass_idx)
         pr = parse_rows(pb)
 
-        if not pr and p > 0:
+        if not pr and pg > 0:
             # Signature of a rejected grid-state field / expired session. One retry.
-            print(f"  page {p}: zero rows - refreshing state and retrying once")
+            print(f"    page {pg}: zero rows - refreshing state, retrying once")
             body = h.category_page(cat)
             keys, cbs = grid_state(body)
             vs, vsg, ev = (form_value(body, "__VIEWSTATE"),
                            form_value(body, "__VIEWSTATEGENERATOR"),
                            form_value(body, "__EVENTVALIDATION"))
-            (CACHE / f"ID{cat}_p{p:04d}.html").unlink(missing_ok=True)
-            pb = h.page(cat, p, keys, cbs, vs, vsg, ev)
+            (CACHE / f"pass{pass_idx}" / f"ID{cat}_p{pg:04d}.html").unlink(missing_ok=True)
+            pb = h.page(cat, pg, keys, cbs, vs, vsg, ev, pass_idx)
             pr = parse_rows(pb)
             if not pr:
                 zero_pages += 1
-                sys.exit(f"ABORT: ID={cat} page {p} returned no rows twice.\n"
+                sys.exit(f"ABORT: ID={cat} page {pg} returned no rows twice.\n"
                          f"  first 500 bytes: {pb[:500]!r}")
 
         e = page_echo(pb)
-        if not e or e[0] != p + 1:
+        if not e or e[0] != pg + 1:
             echo_bad += 1
-            sys.exit(f"ABORT: ID={cat} requested page {p} but server echoed "
-                     f"{e[0] if e else 'nothing'} (of {e[1] if e else '?'}). "
-                     f"Paging is not moving; do not trust this harvest.")
+            sys.exit(f"ABORT: ID={cat} requested page {pg} but server echoed "
+                     f"{e[0] if e else 'nothing'}. Paging is not moving; "
+                     f"do not trust this harvest.")
 
         if pr:
             first_uuids.append(pr[0]["doc_uuid"])
-        pkeys = grid_state(pb)[0] if p else keys
+        pkeys = grid_state(pb)[0] if pg else keys
         for i, r in enumerate(pr):
-            r.update({"category": label, "category_id": cat, "series": series,
-                      "scope": scope, "page_index": p, "row_index": i,
+            r.update({"page_index": pg, "row_index": i,
                       "grid_key": pkeys[i] if i < len(pkeys) else None})
         rows += pr
-        if p % 25 == 0 or p == n_pages - 1:
-            print(f"  page {p + 1}/{n_pages}  rows={len(rows)}")
+        if pg % 50 == 0 or pg == n_pages - 1:
+            print(f"    page {pg + 1}/{n_pages}  rows={len(rows)}")
 
-    repeats = sum(1 for a, b in zip(first_uuids, first_uuids[1:]) if a == b)
+    stats = {
+        "pages_reported": pages_reported, "items_reported": items_reported,
+        "pages_fetched": n_pages, "rows_seen": len(rows),
+        "zero_pages": zero_pages, "echo_bad": echo_bad,
+        "first_uuid_repeats": sum(1 for a, b in zip(first_uuids, first_uuids[1:]) if a == b),
+    }
+    return rows, stats
 
+
+def harvest(h: Harvester, cat: int, valid: set[str], max_pages: int | None,
+            harvested_at: str) -> tuple[list[dict], dict]:
+    """Harvest a category to completeness.
+
+    The grid pages with OFFSET over a non-unique sort, so one sweep can repeat a
+    document and silently drop another. Additional sweeps shuffle differently, so the
+    UNION converges on the full set. The stopping condition is the site's own item
+    count - we never guess that we are done.
+    """
+    label, series, scope = CATEGORIES[cat]
+    print(f"\n=== ID={cat}  {label} ===")
+
+    by_uuid: dict[str, dict] = {}
+    items_reported = pages_reported = pages_fetched = 0
+    zero_pages = echo_bad = repeats = rows_seen = 0
+    passes_used = 0
+    sweep_rows: list[int] = []      # rows enumerated per sweep; each must equal the site count
+    dup_uuids: set[str] = set()
+    closure_new = None              # documents the SECOND ordering found that the first missed
+
+    for pass_idx, sort in enumerate(SWEEPS):
+        passes_used = pass_idx + 1
+        order = "natural order" if not sort else f"sort col{sort[0]} {sort[1]}"
+        print(f"  sweep {passes_used} ({order}):")
+        rows, st = _one_pass(h, cat, max_pages, pass_idx, sort)
+        items_reported, pages_reported = st["items_reported"], st["pages_reported"]
+        pages_fetched += st["pages_fetched"]
+        rows_seen += st["rows_seen"]
+        sweep_rows.append(st["rows_seen"])
+        zero_pages += st["zero_pages"]
+        echo_bad += st["echo_bad"]
+        repeats += st["first_uuid_repeats"]
+
+        seen = collections.Counter(r["doc_uuid"] for r in rows)
+        dup_uuids |= {u for u, n in seen.items() if n > 1}
+        new = 0
+        for r in rows:
+            if r["doc_uuid"] not in by_uuid:
+                by_uuid[r["doc_uuid"]] = r
+                new += 1
+        if pass_idx == 0:
+            print(f"    {st['rows_seen']} rows -> {len(seen)} distinct documents "
+                  f"({st['rows_seen'] - len(seen)} listed twice by NDMA)")
+        else:
+            closure_new = new
+            print(f"    closure check: a different ordering surfaced {new} new document(s)"
+                  f" - {'PASS, the set is closed' if new == 0 else 'FAIL, paging is dropping rows'}")
+        if max_pages is not None:
+            break  # a truncated smoke run cannot prove closure
+
+    rows = list(by_uuid.values())
     for r in rows:
+        r.update({"category": label, "category_id": cat, "series": series, "scope": scope})
         y, m, basis = parse_period(r["title_raw"])
         r["ref_year"], r["ref_month"], r["ref_basis"] = y, m, basis
         r["ref_period"] = (f"{y:04d}-{m:02d}" if y and m else (f"{y:04d}" if y else None))
@@ -495,7 +641,12 @@ def harvest(h: Harvester, cat: int, valid: set[str], max_pages: int | None,
     rep = {
         "category_id": cat, "category": label, "series": series,
         "items_reported": items_reported, "pages_reported": pages_reported,
-        "pages_fetched": n_pages, "rows_parsed": len(rows),
+        "sweep_rows": ";".join(str(x) for x in sweep_rows),
+        "duplicate_listings": items_reported - len(by_uuid),
+        "duplicate_uuids": ";".join(sorted(dup_uuids)),
+        "closure_new_docs": closure_new if closure_new is not None else -1,
+        "passes_used": passes_used, "pages_fetched": pages_fetched,
+        "rows_seen": rows_seen, "rows_parsed": len(rows),
         "uuids_unique": len({r["doc_uuid"] for r in rows}),
         "keys_unique": len({r["grid_key"] for r in rows if r["grid_key"]}),
         "pages_with_zero_rows": zero_pages,
