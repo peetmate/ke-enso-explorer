@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-11-14T16:13:28.759780+00:00",
+  "built_at": "2026-11-20T00:06:05.237632+00:00",
   "rows": 650,
   "columns": [
     "commodity_id",
@@ -40,7 +40,7 @@
     "cbk_export_unit_value_kes_t",
     "exchange_rate_kes_usd"
   ],
-  "source_rights_status": "Cleared display sources only: FAOSTAT and UN Comtrade (cut roses)",
+  "source_rights_status": "FAOSTAT and UN Comtrade (cut roses) only; external delivery remains subject to recorded output decisions and database-wide Comtrade limits",
   "sha256": "0c14b70fab54b9406e2248b52bd90b11c4c8beb49a76f7b5e5fb43521801b7db",
   "caveats": [
     "Year grid is not observed coverage. Missing values remain null wherever TCL has no observation; cut roses use Comtrade World totals.",
@@ -48,9 +48,8 @@
     "Sugar TCL code 164 is refined sugar, not raw sugar or sugarcane. FBS is raw equivalent.",
     "FBS is in 1000 tonnes, TCL quantities in tonnes, TCL values in 1000 USD. FBS aggregates are kept in separate columns.",
     "Signed apparent_balance_t retains negative accounting residuals. net_supply_t and dependency are null for negative balances, pending stock/calendar reconciliation. Supply excludes stocks; dependency ratio is computed only for maize, wheat, dry beans, green coffee and avocados with matching production. No unverified paddy/milled or green/made tea conversion.",
-    "CBK export values in KES remain separate from TCL USD. FX is mean of 12 monthly averages, not a transaction-weighted conversion.",
-    "Pink Sheet prices are benchmarks, not Kenya realized prices. Nominal values require price and exchange-rate controls before climate association analysis.",
-    "Horticulture totals are published separately in kenya_horticulture_exports.parquet; cannot be assigned to flowers/avocados."
+    "FX is the published IMF IFS annual period average via World Bank WDI PA.NUS.FCRF, not a transaction-weighted conversion.",
+    "Pink Sheet prices are benchmarks, not Kenya realized prices. Nominal values require price and exchange-rate controls before climate association analysis."
   ],
   "fields": {
     "commodity_id": {
@@ -257,5 +256,5 @@
       "lineage": "Derived from trade_observed boolean"
     }
   },
-  "licence": "Cleared display sources only: FAOSTAT bulk extracts under CC BY 4.0; UN Comtrade extracts under UN Comtrade data use policy."
+  "licence": "FAOSTAT bulk extracts under CC BY 4.0; UN Comtrade extracts subject to source terms and recorded output-specific decisions. Filtering columns does not establish public-file clearance."
 }

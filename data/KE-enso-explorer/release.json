@@ -3,9 +3,9 @@
   "title": "ENSO Explorer — Kenya",
   "version": "3.15.0",
   "versionDisplay": "v3.15.0",
-  "build": "303112302",
+  "build": "303112403",
   "releaseDate": "2026-11-21",
-  "lastUpdated": "2026-11-23",
+  "lastUpdated": "2026-11-24",
   "dataVintage": "2026-10",
   "authors": [
     "Pete Steward"
@@ -19,8 +19,8 @@
       "label": "v3.15.0 (Current — Nov 2026)",
       "url": "notebook_v3.html",
       "status": "active",
-      "date": "2026-11-23",
-      "build": "303112302",
+      "date": "2026-11-24",
+      "build": "303112403",
       "description": "County / Kenya Scope Filter & Maize Harvest-Import Lens Release: Introduces the global County / Kenya scope selector separating county-level analysis from national-level evidence; moves Kenya-wide Food Trade (Figures 4.7–4.10 and Table 4.6) into Kenya view alongside Cross-Border Trade and National Humanitarian Appeals; and adds a default maize Harvest and Imports view in Figure 4.7 pairing annual maize harvest anomalies with import dependency and NOAA RONI ocean telemetry.",
       "highlights": [
         "County / Kenya Scope Selector: Switches cleanly between County view (Sections 0–6 with 4 county impact pathways) and Kenya view (Overview, Ocean & Outlook, National Impacts across Cross-Border Trade, Humanitarian Appeals, and Food Trade, plus Methods & Science).",
@@ -577,63 +577,6 @@
         "D37",
         "D38"
       ]
-    },
-    {
-      "id": "v2",
-      "version": "v2.10",
-      "label": "v2.10 (Aug 2026 — v2 Release)",
-      "url": "notebook_v2.html",
-      "status": "archived",
-      "date": "2026-08-19",
-      "build": "a1b2c3d",
-      "description": "August milestone review edition with initial analogue ranking, historical climate trends, and baseline agricultural production statistics.",
-      "highlights": [
-        "Initial analogue ranking engine based on OND Niño 3.4 and DMI distance matching.",
-        "Section 1 County Context profile with basic population and agricultural statistics.",
-        "Section 3 Historical Climate trends with CHIRPS seasonal rainfall bars.",
-        "Section 4 Agricultural Impact analysis with preliminary KNBS NAPR production time series."
-      ],
-      "categories": [
-        {
-          "title": "Key Capabilities",
-          "icon": "",
-          "items": [
-            "Historical Analogue Engine v1: Euclidean distance matching against historical El Niño/La Niña seasons.",
-            "County Context Profiles: Basic demographic, area, and agricultural production summaries for all 47 counties.",
-            "CHIRPS v3 Seasonal Rainfall: Basic OND and MAM seasonal rainfall bar charts."
-          ]
-        }
-      ],
-      "decisions": [
-        "D1",
-        "D16"
-      ]
-    },
-    {
-      "id": "v1",
-      "version": "v1.0",
-      "label": "v1.0 (Jul 2026 — v1 Prototype)",
-      "url": "notebook.html",
-      "status": "archived",
-      "date": "2026-07-22",
-      "build": "0f9e8d7",
-      "description": "Initial exploratory baseline prototype demonstrating bimodal rainfall regimes and preliminary ENSO teleconnection correlations.",
-      "highlights": [
-        "First proof-of-concept interactive notebook.",
-        "Demonstrated OND Short Rains teleconnection to Pacific ENSO.",
-        "Established DuckDB-WASM browser-side parquet query architecture."
-      ],
-      "categories": [
-        {
-          "title": "Key Capabilities",
-          "icon": "",
-          "items": [
-            "DuckDB-WASM Client-Side Architecture: Validated zero-backend serverless querying of Parquet files directly in the browser.",
-            "Basic ENSO Teleconnection Plots: Exploratory scatter plots linking seasonal rainfall to Niño 3.4 indices."
-          ]
-        }
-      ],
-      "decisions": []
     }
   ]
 }

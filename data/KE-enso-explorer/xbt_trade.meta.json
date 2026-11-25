@@ -1,28 +1,240 @@
 {
   "dataset": "xbt_trade",
-  "title": "FEWS NET cross-border trade (XBT), Kenya — national context layer",
-  "source": "FEWS NET East Africa Cross-Border Trade (XBT) monitoring",
+  "title": "FEWS NET East Africa Cross-Border Trade: Kenya Imports and Exports by Border, Product and Month, 2010–2024",
+  "edition": "banked 2010–2024; permission/metadata review 2026-11-24",
+  "sha256": "b791f4c710129c33c567c2362c2f2a7bb85c4ded3227b4a976ec3cbc7d707420",
+  "rows": 24272,
+  "source": "FEWS NET East Africa Cross-Border Trade",
   "source_url": "https://fews.net/data/markets-and-trade",
-  "source_file": "fews_xbt_kenya_BANKED.csv (D409 project store)",
-  "license": "FEWS NET public",
-  "fetched_on": "2026-07-15",
-  "method": "Deterministic pass-through (_sources/parse_xbt.py): keeps Kenya-touching flows only (destination=Kenya -> Import, source=Kenya -> Export; transit/non-Kenya dropped). No LLM/transcription — the numeric qty is the banked value verbatim. partner_iso3 is a fixed reference code map (country ISO3, not data) so the notebook joins partners to the admin0 topojson and places flow arrows at d3.geoCentroid positions — no coordinates are typed by hand.",
-  "resolution": "NATIONAL / border-point — NOT county. A country-level supply/trade context layer for Block 4, identical for every county selection.",
-  "grain": "one row per partner x direction x trade_type x product x month",
-  "columns": {
-    "partner": "the non-Kenya country in the flow",
-    "partner_iso3": "ISO3 (joins the admin0 topojson iso3)",
-    "direction": "Import (into Kenya) | Export (from Kenya)",
-    "trade_type": "Formal | Informal (informal = field aggregation)",
-    "product": "traded commodity (FEWS product name)",
-    "border_point": "Kenyan crossing the flow was observed at (Moyale, Malaba, Namanga, ...)",
-    "period_date": "month-end date (YYYY-MM-DD)",
-    "year": "calendar year",
-    "month": "calendar month",
-    "qty": "quantity in qty_unit (banked value, not derived)",
-    "qty_unit": "kg | ea (head, livestock) | L"
+  "source_document": {
+    "id": 6824,
+    "source_organization_full_name": "Famine Early Warning Systems Network (FEWS NET)",
+    "source_organization_name": "FEWS NET",
+    "name": "Famine Early Warning Systems Network (FEWS NET), East Africa, Cross Border Trade (XBT)",
+    "description": "",
+    "display_name": "FEWS NET: Famine Early Warning Systems Network (FEWS NET), East Africa, Cross Border Trade (XBT)",
+    "country": null,
+    "datausagepolicy": "Public",
+    "datausage_notes": "Users are required to acknowledge original data source.",
+    "current_schedule": "Daily",
+    "source_type": "Web Service",
+    "document_type": "Trade Flow Quantities",
+    "topic": "markets_trade",
+    "data_domain": "TradeFlowQuantity",
+    "first_start_date": "2010-03-28",
+    "first_period_date": "2010-03-28",
+    "last_period_date": "2026-08-02",
+    "datacollectionperiod_count": 927,
+    "dataseries_count": 7465,
+    "datapoint_count": 179602,
+    "asset_count": 0,
+    "datacollection_count": 828,
+    "last_collection_date": "2026-08-02",
+    "file_formats": [],
+    "data_usage_policy_reason": null,
+    "data_usage_policy_justification": null
   },
-  "coverage": "24272 Kenya-touching rows, 2010-2024, 99 products, partners Ethiopia/Uganda/Tanzania/Somalia/South Sudan/Sudan/Rwanda/Malawi/Zambia/DRC/Congo. Imports dominate (Kenya is a maize-deficit importer; ASAL livestock trade is cross-border).",
-  "caveats": ["country/border-point resolution, not county", "informal trade = field aggregations", "context/supply layer only"],
-  "used_by": "notebook.qmd Block 4 (national-context trade-flow map + imports-by-partner chart)"
+  "source_file": "fews_xbt_kenya_BANKED.csv",
+  "input_sha256": {
+    "fews_xbt_kenya_BANKED.csv": "e9586cebd6ec6dd835cb641e38899e3b8785c87f06e9493ed5b5dc99f3c1ddc8"
+  },
+  "distributor": "Famine Early Warning Systems Network (FEWS NET)",
+  "original_source_labels": [
+    "FEWS NET XBT"
+  ],
+  "contributor_mapping": "No individual contributor identities in banked rows. Do not infer that FEWS NET collected every observation.",
+  "source_lineage": {
+    "file": "xbt_trade.lineage.csv",
+    "sha256": "7283e6e65483f07c52199e4730fb9e715b822bf7d2e64a51e9240ea700ce4ec6",
+    "row_locator": "output_row is zero-based position in exact unchanged Parquet; banked_csv_line counts header as line 1. Positional locator is not an observation identifier."
+  },
+  "license": "LicenseRef-FEWS-NET-Scoped-Permission",
+  "terms": [
+    "https://help.fews.net/fdp/data-and-information-use-and-attribution-policy"
+  ],
+  "credit": "Source: FEWS NET East Africa Cross-Border Trade (banked source label: FEWS NET XBT). Distributed by the Famine Early Warning Systems Network (FEWS NET), https://fews.net/. Kenya extract processed by the African Agriculture Adaptation Atlas. Retain any originating contributor identities and their additional conditions; no endorsement implied.",
+  "downstream_requirements": [
+    "Use the source credits specified in dataset metadata; preserve original source/contributor identities and FEWS NET distributor lineage.",
+    "Place source credit prominently on every chart or its legend and link https://fews.net/ where applicable.",
+    "Include this attribution policy URL with every generated file: https://help.fews.net/fdp/data-and-information-use-and-attribution-policy",
+    "Pass the same acknowledgment requirement to downstream users and require them to pass it on.",
+    "Retain any additional original-provider consent requirements and terms; do not imply FEWS NET endorsement.",
+    "This is scoped written hosting/download permission with incorporated attribution policy, not a CC BY grant, blanket licence, warehouse-replica permission or whole-report permission."
+  ],
+  "permission": {
+    "permission_received_at": "2026-11-24T16:32:32Z",
+    "requested_file": "xbt_trade.parquet",
+    "sha256": "b791f4c710129c33c567c2362c2f2a7bb85c4ded3227b4a976ec3cbc7d707420",
+    "request_year_scope": [
+      2010,
+      2024
+    ],
+    "observed_coverage": [
+      "2010-03-31",
+      "2024-09-30"
+    ],
+    "platform_and_download_basis": "Express approval in 24 November reply; specific underlying-border-record and same-file CDH/Amazon S3 scope interpreted against explicit 17 November request, not repeated names in the reply.",
+    "chart_basis": "Incorporated public attribution policy, separately from bespoke hosting/download approval.",
+    "excluded_scope": [
+      "mixed market prices",
+      "retail records 24339049, 40294236, 36112661, 40402474",
+      "other FEWS datasets",
+      "warehouse replica",
+      "whole reports"
+    ]
+  },
+  "rights_evidence": "data/KE-enso-explorer/governance/xbt_permission_2026-11-24/permission-binding.json",
+  "fields": {
+    "partner": {
+      "type": "string",
+      "description": "Non-Kenya partner country as recorded in the banked file.",
+      "unit": "name",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "partner_iso3": {
+      "type": "string",
+      "description": "ISO3 reference-code mapping for the partner; not a measured coordinate.",
+      "unit": "ISO3 code",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "direction": {
+      "type": "string",
+      "description": "Import into Kenya or Export from Kenya, derived from source/destination countries.",
+      "unit": "category",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "trade_type": {
+      "type": "string",
+      "description": "Formal or Informal classification retained from the banked source.",
+      "unit": "category",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "product": {
+      "type": "string",
+      "description": "Source commodity label; products must not be combined without compatible definitions.",
+      "unit": "name",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "border_point": {
+      "type": "string",
+      "description": "Named monitored border crossing; not a county assignment.",
+      "unit": "name",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "period_date": {
+      "type": "string",
+      "description": "Monthly date retained from the banked source; source observation identifiers are absent.",
+      "unit": "ISO date",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "year": {
+      "type": "int32",
+      "description": "Calendar year supplied in the banked source.",
+      "unit": "year",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "month": {
+      "type": "int32",
+      "description": "Month parsed from period_date.",
+      "unit": "month",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "qty": {
+      "type": "float64",
+      "description": "Unchanged banked quantity in qty_unit; duplicated observations remain unresolved.",
+      "unit": "qty_unit-dependent",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    },
+    "qty_unit": {
+      "type": "string",
+      "description": "kg for mass, ea for items/head, L for volume; never sum incompatible units.",
+      "unit": "unit code",
+      "null_semantics": "No nulls in this edition; missing source observations are not zero.",
+      "lineage": "Deterministic parse_xbt.extract of hashed banked CSV; exact output row mapped in banked-row-lineage.csv."
+    }
+  },
+  "columns": {
+    "partner": "Non-Kenya partner country as recorded in the banked file.",
+    "partner_iso3": "ISO3 reference-code mapping for the partner; not a measured coordinate.",
+    "direction": "Import into Kenya or Export from Kenya, derived from source/destination countries.",
+    "trade_type": "Formal or Informal classification retained from the banked source.",
+    "product": "Source commodity label; products must not be combined without compatible definitions.",
+    "border_point": "Named monitored border crossing; not a county assignment.",
+    "period_date": "Monthly date retained from the banked source; source observation identifiers are absent.",
+    "year": "Calendar year supplied in the banked source.",
+    "month": "Month parsed from period_date.",
+    "qty": "Unchanged banked quantity in qty_unit; duplicated observations remain unresolved.",
+    "qty_unit": "kg for mass, ea for items/head, L for volume; never sum incompatible units."
+  },
+  "primary_key": null,
+  "grain": "Monitored monthly border/product/partner/direction/trade-type/unit observations; repeated keys and identical rows remain.",
+  "coverage": [
+    "2010-03-31",
+    "2024-09-30"
+  ],
+  "null_counts": {
+    "partner": 0,
+    "partner_iso3": 0,
+    "direction": 0,
+    "trade_type": 0,
+    "product": 0,
+    "border_point": 0,
+    "period_date": 0,
+    "year": 0,
+    "month": 0,
+    "qty": 0,
+    "qty_unit": 0
+  },
+  "grid": null,
+  "grid_note": "Non-gridded national/border-point table; not county data.",
+  "method": "Unchanged deterministic banked-CSV pass-through; no value refresh or duplicate removal in this permission update.",
+  "maintenance": {
+    "builder": "data/KE-enso-explorer/_sources/parse_xbt.py",
+    "metadata_generator": "data/KE-enso-explorer/_sources/xbt_metadata.py",
+    "command": "python3 data/KE-enso-explorer/_sources/xbt_metadata.py --banked <fews_xbt_kenya_BANKED.csv>",
+    "watch_key": "fews_xbt",
+    "rollback": "Metadata-only review; original Parquet unchanged. Changed table hashes fail permission binding."
+  },
+  "validation": {
+    "edition_sha256": "b791f4c710129c33c567c2362c2f2a7bb85c4ded3227b4a976ec3cbc7d707420",
+    "rows": 24272,
+    "observed_coverage": [
+      "2010-03-31",
+      "2024-09-30"
+    ],
+    "source_reconstruction": "PASS: all rows and values match deterministic banked-CSV reconstruction",
+    "banked_csv_sha256": "e9586cebd6ec6dd835cb641e38899e3b8785c87f06e9493ed5b5dc99f3c1ddc8",
+    "source_metadata_sha256": "10c42a1218408bf259dcb57277fc848af5cdec169b7b43d44b204ddcac78f5b0",
+    "exact_duplicate_rows_beyond_first": 2977,
+    "repeated_nominal_keys_beyond_first": 5949,
+    "nominal_key": [
+      "partner",
+      "direction",
+      "trade_type",
+      "product",
+      "border_point",
+      "period_date",
+      "qty_unit"
+    ],
+    "primary_key": null,
+    "source_observation_ids": "not retained in banked CSV or legacy Parquet",
+    "skipped_unmapped_partners": [],
+    "status": "REVIEW_REQUIRED",
+    "release_blockers": [
+      "Resolve repeated observations against original source identifiers before treating totals as validated; do not silently deduplicate.",
+      "Banked input identifies only FEWS NET XBT. Source-document metadata identifies FEWS NET and requires original-source acknowledgment; it does not identify row-level contributors. Preserve this limitation and reconcile contributor-specific metadata before final release.",
+      "Catalogue review and a separately authorized upload/deployment remain outstanding."
+    ]
+  },
+  "release_ready": false
 }

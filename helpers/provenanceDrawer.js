@@ -72,7 +72,23 @@
 
   function link(url, text) {
     if (!url) return esc(text || '');
+    // Repository-relative paths and internal working files are never rendered as links.
+    if (!/^(https?:|mailto:)/i.test(url) || /\/_sources\//.test(url)) return esc(text || url);
     return '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(text || url) + '</a>';
+  }
+
+  // Datasets whose copies this project may redistribute (public licence or recorded clearance).
+  // For every other entry the drawer credits the original provider but does not offer our copy.
+  var REDISTRIBUTABLE = {
+    'enso-driver-indices': 1, 'africa-precipitation-monthly-seasonal': 1, 'africa-spei-drought': 1,
+    'eastafrica-flood-jrc': 1, 'kenya-flood-gfm': 1, 'eastafrica-ndvi-modis': 1, 'kenya-ndvi-county-wfp': 1,
+    'eastafrica-wrsi-fews': 1, 'kenya-population-worldpop': 1, 'kenya-roads-osm': 1,
+    'kenya-facilities-hotosm': 1, 'kenya-power-grid-kplc': 1, 'kenya-admin-codab': 1, 'crop-vop-intld15': 1,
+    'harveststat-crop-production': 1, 'kenya-wdi-exchange-rate': 1, 'kenya-trade-production': 1,
+    'kenya-faostat-trade-balances': 1, 'kenya-fews-retail-prices': 1
+  };
+  function isOwnCopy(u) {
+    return !/^https?:/i.test(u) || /digital-atlas|amazonaws\.com|github\.com\/AdaptationAtlas|githubusercontent|\/_sources\//i.test(u);
   }
 
   function badge(meta, extraTitle) {
@@ -98,7 +114,6 @@
   function resolve(key) {
     if (!key) return null;
     if (key === 'release_meta') return S.byKey['enso-driver-indices'] || S.entries[0] || null;
-    if (key === 'reliefweb') return S.byKey['kenya-food-insecurity-ipc'] || null;
     if (S.byKey[key]) return S.byKey[key];
     var real = S.doc && S.doc.aliases ? S.doc.aliases[key] : null;
     return real && S.byKey[real] ? S.byKey[real] : null;
@@ -228,16 +243,22 @@
 
   function renderAssets(e) {
     if (!has(e.assets)) return '';
+    var shareable = !!REDISTRIBUTABLE[e.key];
     return e.assets.map(function (a) {
       var locs = [];
-      if (a.https) locs.push(link(a.https, 'HTTPS'));
-      if (a.s3) locs.push('<code>' + esc(a.s3) + '</code>');
-      (a.other_locations || []).forEach(function (u) { locs.push(link(u, u)); });
+      if (shareable) {
+        if (a.https) locs.push(link(a.https, 'HTTPS'));
+        if (a.s3) locs.push('<code>' + esc(a.s3) + '</code>');
+      } else if (a.https && !isOwnCopy(a.https)) {
+        locs.push(link(a.https, 'Original source'));
+      }
+      var where = locs.length ? locs.join(' &middot; ') :
+        (shareable ? '' : 'Not distributed by this project. Obtain from the original provider credited above.');
       return '<div class="prov-asset"><div class="prov-asset-name">' + esc(a.name) + '</div>' +
         (a.description ? '<p>' + esc(a.description) + '</p>' : '') +
         dl([
-          ['Locations', locs.join(' &middot; ')],
-          ['Path template', a.href_template ? '<code>' + esc(a.href_template) + '</code>' : ''],
+          ['Locations', where],
+          ['Path template', shareable && a.href_template ? '<code>' + esc(a.href_template) + '</code>' : ''],
           ['Media type', esc(a.media_type)],
           ['Size', esc(a.file_size)],
           ['NoData', a.nodata === null || a.nodata === undefined ? '' : esc(a.nodata)]
@@ -291,12 +312,21 @@
     return html;
   }
 
+  function recordPathToUrl(p) {
+    if (!p) return '';
+    if (/^https?:\/\//i.test(p)) return p;
+    if (/^atlas_notebooks:/i.test(p)) {
+      return 'https://github.com/AdaptationAtlas/atlas_notebooks/blob/main/' + p.replace(/^atlas_notebooks:/i, '').replace(/^\/+/, '');
+    }
+    var clean = p.replace(/^hazards_prototype:/i, '').replace(/^\/+/, '');
+    return 'https://github.com/AdaptationAtlas/hazards_prototype/blob/main/' + clean;
+  }
+
   function renderRecordLinks(e) {
     var R = e.record || {};
-    var repo = 'https://github.com/AdaptationAtlas/hazards_prototype/blob/main/';
     return dl([
-      ['CDH record', R.cdh ? link(repo + R.cdh, R.cdh) : ''],
-      ['Catalogue record', R.catalogue ? link(repo + R.catalogue, R.catalogue) : ''],
+      ['CDH record', R.cdh ? link(recordPathToUrl(R.cdh), R.cdh) : ''],
+      ['Catalogue record', R.catalogue ? link(recordPathToUrl(R.catalogue), R.catalogue) : ''],
       ['CDH catalog', R.catalog_pr ? link(R.catalog_pr, R.catalog_pr.replace(/^.*\/pull\//, 'PR #')) +
         (R.catalog_pr_state ? ' — ' + esc(R.catalog_pr_state) : '') : ''],
       ['Published record', R.published_record ? link(R.published_record, 'cdh-catalog') : '']
